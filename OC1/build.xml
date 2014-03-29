@@ -73,7 +73,8 @@
 
     <target depends="compile-test" name="-do-test-run">        
         <!-- JavaSE.jar is added here since the test execution might fail otherwise for a pre-existing project -->
-        <java classpath="dist/unitTests.jar:${javac.test.classpath}:${file.reference.JavaSE.jar}" classname="com.codename1.impl.javase.TestRunner" excludes="${excludes}">
+        <java classpath="dist/unitTests.jar:${javac.test.classpath}:${file.reference.JavaSE.jar}"
+              classname="com.codename1.impl.javase.TestRunner">
             <arg value="${codename1.packageName}.${codename1.mainName}" />
         </java>
     </target>
