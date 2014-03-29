@@ -16,9 +16,21 @@ public final class ServiceProviders {
     final static List<ServiceProvider> list = new ArrayList();
     
     static {
-        list.add(newServiceProvider("Hotel 7",2.4,0.2));
-        list.add(newServiceProvider("Hotel 9",2.4,0.2));
-        list.add(newServiceProvider("Carlon Inn",2.4,0.2));
+        list.add(newServiceProvider("Arby's",2.4,0.2));
+        list.add(newServiceProvider("Bates Motel",2.4,0.2));
+        list.add(newServiceProvider("Chili's",2.4,0.2));
+        list.add(newServiceProvider("Denny's",2.4,0.2));
+        list.add(newServiceProvider("E Street Cafe",2.4,0.2));
+        list.add(newServiceProvider("Fast Eddie's",2.4,0.2));
+        list.add(newServiceProvider("Gym's Gym",2.4,0.2));
+        list.add(newServiceProvider("IHOP",2.4,0.2));
+        list.add(newServiceProvider("K-Mart",2.4,0.2));
+        list.add(newServiceProvider("Lone Star",2.4,0.2));
+        list.add(newServiceProvider("Monty's",2.4,0.2));
+        list.add(newServiceProvider("Popeye's",2.4,0.2));
+        list.add(newServiceProvider("Quiznos",2.4,0.2));
+        list.add(newServiceProvider("Regal 8",2.4,0.2));
+        list.add(newServiceProvider("Lone Star",2.4,0.2));
 
         list.add(newServiceProvider("What the Pho #1",2.4,0.2));
         list.add(newServiceProvider("Moe's",1.1,2.2));
