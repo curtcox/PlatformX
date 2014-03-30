@@ -3,6 +3,7 @@ package com.mycompany.myapp.screens;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
+import com.codename1.ui.Display;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.table.TableLayout;
@@ -28,10 +29,11 @@ final class RateScreen
     }
 
     private void addComponents() {
-        form.setLayout(new TableLayout(4,1));
+        form.setLayout(new TableLayout(5,1));
         form.addComponent(newProviderSummary());
         form.addComponent(new Label("Rating : Suitable for"));
         form.addComponent(newRatingTable());
+        form.addComponent(newAboutRatingButton());
         form.addComponent(newChangeLocationButton());
     }
 
@@ -57,6 +59,14 @@ final class RateScreen
     private void addRatingAndInfo(Container table, String rating, String description) {
         table.addComponent(newStarButton(rating));
         table.addComponent(new Label(description));
+    }
+
+    private Button newAboutRatingButton() {
+        return new ActionButton("more about this scheme") {
+            public void onTap() {
+                Display.getInstance().execute("http://www.sagetraveling.com/Rating-System-Explanation/");
+            }
+        };
     }
     
     private Button newStarButton(final String text) {
