@@ -10,6 +10,7 @@ import com.codename1.ui.table.TableLayout;
 import com.mycompany.myapp.domain.CurrentState;
 import com.mycompany.myapp.domain.Rating;
 import com.mycompany.myapp.ui.ActionButton;
+import com.mycompany.myapp.ui.TableContainer;
 
 /**
  * See
@@ -46,23 +47,17 @@ final class RateScreen
     }
     
     private Container newRatingTable() {
-        Container table = new Container();
-        table.setLayout(new TableLayout(5,2));
-        addRatingAndInfo(table,"*",    "people who can walk up a flight of stairs");
-        addRatingAndInfo(table,"**",   "slow walkers or wheelchair users who can get up a few steps");
-        addRatingAndInfo(table,"***",  "wheelchair users with full use of upper body (paraplegics)");
-        addRatingAndInfo(table,"****", "wheelchair users with limited arm/hand use");
-        addRatingAndInfo(table,"*****","wheelchair users with no arm/hand use (quadriplegics)");
-        return table;
+        return new TableContainer(5,2,
+            newStarButton("*"),    new Label("people who can walk up a flight of stairs"),
+            newStarButton("**"),   new Label("slow walkers or wheelchair users who can get up a few steps"),
+            newStarButton("***"),  new Label("wheelchair users with full use of upper body (paraplegics)"),
+            newStarButton("****"), new Label("wheelchair users with limited arm/hand use"),
+            newStarButton("*****"),new Label("wheelchair users with no arm/hand use (quadriplegics)")
+        );
     }
     
-    private void addRatingAndInfo(Container table, String rating, String description) {
-        table.addComponent(newStarButton(rating));
-        table.addComponent(new Label(description));
-    }
-
     private Button newAboutRatingButton() {
-        return new ActionButton("more about this scheme") {
+        return new ActionButton("More about this rating scheme") {
             public void onTap() {
                 Display.getInstance().execute("http://www.sagetraveling.com/Rating-System-Explanation/");
             }
