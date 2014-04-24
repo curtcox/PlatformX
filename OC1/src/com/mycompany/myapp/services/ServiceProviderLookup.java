@@ -11,18 +11,20 @@ import java.util.List;
  */
 public class ServiceProviderLookup {
 
+    final Locations locations = Locations.of();
+    final ServiceProviders serviceProviders = ServiceProviders.of();
     
-    public static ServiceProvider fromCurrentLocation() {
-        Location location = Locations.getCurrentLocation();
+    public ServiceProvider fromCurrentLocation() {
+        Location location = locations.getCurrentLocation();
         if (location!=null) {
-            return ServiceProviders.all().get(0);
+            return serviceProviders.all().get(0);
         }
         
         return closestServiceProvider(location);
     }
 
-    private static ServiceProvider closestServiceProvider(Location here) {
-        List<ServiceProvider> list = ServiceProviders.all();
+    private ServiceProvider closestServiceProvider(Location here) {
+        List<ServiceProvider> list = serviceProviders.all();
         ServiceProvider closest = list.get(0);
         for (ServiceProvider provider : list) {
             if (getProviderDistance(here,provider) < getProviderDistance(here,closest)) {
@@ -32,8 +34,8 @@ public class ServiceProviderLookup {
         return closest;
     }
 
-    private static double getProviderDistance(Location here, ServiceProvider provider) {
-        return Locations.calculateDistance(here,provider.location);
+    private double getProviderDistance(Location here, ServiceProvider provider) {
+        return locations.calculateDistance(here,provider.location);
     }
 
 }

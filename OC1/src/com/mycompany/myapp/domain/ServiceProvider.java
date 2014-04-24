@@ -14,6 +14,7 @@ public final class ServiceProvider {
     public final Location location;
     public Rating myRating;
     public final List<Rating> ratings;
+    private final Locations locations = Locations.of(); 
     
     public ServiceProvider(Name name, Location location, Rating myRating, List<Rating> ratings) {
         this.name = name;
@@ -28,7 +29,7 @@ public final class ServiceProvider {
     }
 
     private String distanceFromCurrentLocation() {
-        int miles = (int) Locations.calculateDistance(location,Locations.getCurrentLocation());
+        int miles = (int) locations.calculateDistance(location,locations.getCurrentLocation());
         return miles + " miles";
     }
 }

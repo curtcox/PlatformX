@@ -4,27 +4,25 @@ import com.codename1.ui.Container;
 import com.codename1.ui.List;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionListener;
-import com.codename1.ui.list.DefaultListModel;
 import com.codename1.ui.list.FilterProxyListModel;
-import java.util.Collection;
+import com.codename1.ui.list.ListModel;
+import com.mycompany.myapp.event.LiveList;
 
 /**
- *
- * @author Curt
- * @param <T>
+ * A wrapper for a searchable list component.
  */
 public final class SearchableList<T> {
 
     private final TextField searchTerm = new TextField();
-    private final DefaultListModel<T> underlyingListModel;
+    private final ListModel<T> underlyingListModel;
     private final FilterProxyListModel<T> filterProxyListModel;
     private final List<T> filteredList;
 
     public final Container component;
     
-    public SearchableList(Collection<T> items) {
+    public SearchableList(LiveList<T> items) {
         component = new Container();
-        underlyingListModel = new DefaultListModel(items);
+        underlyingListModel = VirtualListModel.of(items);
         filterProxyListModel = new FilterProxyListModel(underlyingListModel);
         filteredList = new List(filterProxyListModel);
         FilterProxyListModel.install(searchTerm, filteredList);

@@ -14,7 +14,8 @@ import com.mycompany.myapp.ui.SearchableList;
 final class SearchScreen
     extends Screen
 {
-    final SearchableList<ServiceProvider> searchList = new SearchableList(ServiceProviders.all());
+    final ServiceProviders serviceProviders = ServiceProviders.of();
+    final SearchableList<ServiceProvider> searchList = new SearchableList(serviceProviders.nearby());
     
     SearchScreen(Screen previous) { 
         super("Search",previous);

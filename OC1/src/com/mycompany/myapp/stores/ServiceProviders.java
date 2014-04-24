@@ -4,6 +4,11 @@ import com.codename1.location.Location;
 import com.mycompany.myapp.domain.Name;
 import com.mycompany.myapp.domain.Rating;
 import com.mycompany.myapp.domain.ServiceProvider;
+import com.mycompany.myapp.event.LiveList;
+import com.mycompany.myapp.event.SimpleLiveList;
+import com.mycompany.myapp.services.Locations;
+import google.Place;
+import google.PlacesSearch;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,39 +18,37 @@ import java.util.List;
  */
 public final class ServiceProviders {
     
-    final static List<ServiceProvider> list = new ArrayList();
+    private final Locations locations = Locations.of();
+    private final PlacesSearch places = new PlacesSearch();
+    private static final ServiceProviders singleton = new ServiceProviders();
     
-    static {
-        list.add(newServiceProvider("Arby's",2.4,0.2));
-        list.add(newServiceProvider("Bates Motel",2.4,0.2));
-        list.add(newServiceProvider("Chili's",2.4,0.2));
-        list.add(newServiceProvider("Denny's",2.4,0.2));
-        list.add(newServiceProvider("E Street Cafe",2.4,0.2));
-        list.add(newServiceProvider("Fast Eddie's",2.4,0.2));
-        list.add(newServiceProvider("Gym's Gym",2.4,0.2));
-        list.add(newServiceProvider("IHOP",2.4,0.2));
-        list.add(newServiceProvider("K-Mart",2.4,0.2));
-        list.add(newServiceProvider("Lone Star",2.4,0.2));
-        list.add(newServiceProvider("Monty's",2.4,0.2));
-        list.add(newServiceProvider("Popeye's",2.4,0.2));
-        list.add(newServiceProvider("Quiznos",2.4,0.2));
-        list.add(newServiceProvider("Regal 8",2.4,0.2));
-        list.add(newServiceProvider("Lone Star",2.4,0.2));
-
-        list.add(newServiceProvider("What the Pho #1",2.4,0.2));
-        list.add(newServiceProvider("Moe's",1.1,2.2));
-        list.add(newServiceProvider("Joe's",0.1,3.1));
-        list.add(newServiceProvider("Floe's",2.4,0.2));
-        list.add(newServiceProvider("Pizza Palace",2.4,0.2));
-        list.add(newServiceProvider("Burger Bar",2.4,0.2));
-        list.add(newServiceProvider("Wok Fast",2.4,0.2));
-        list.add(newServiceProvider("What the Pho #2",2.4,0.2));
+    private ServiceProviders() {}
+    
+    public static ServiceProviders of() {
+        return singleton;
     }
     
-    public static List<ServiceProvider> all() {
-        return list;
+    public LiveList<ServiceProvider> all() {
+        return nearby();
     }
 
+    public LiveList<ServiceProvider> nearby() {
+        Location currentLocation = locations.getCurrentLocation();
+        double latitude = currentLocation.getLatitude();
+        double longitude = currentLocation.getLongitude();
+        List<ServiceProvider> providers = new ArrayList<ServiceProvider>();
+        for (Place place : places.nearbySearch(latitude, longitude)) {
+            Name name = new Name(place.name);
+            Location placeLocation = new Location();
+            placeLocation.setLatitude(place.latitude);
+            placeLocation.setLongitude(place.longitude);
+            Rating myRating = new Rating("");
+            List<Rating> ratings = new ArrayList();
+            providers.add(new ServiceProvider(name,placeLocation,myRating,ratings));
+        }
+        return new SimpleLiveList(providers);
+    }
+    
     private static ServiceProvider newServiceProvider(String name, double lat, double lon) {
         Location location = new Location();
         location.setLatitude(lat);

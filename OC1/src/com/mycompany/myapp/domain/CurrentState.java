@@ -8,7 +8,9 @@ import com.mycompany.myapp.stores.ServiceProviders;
  */
 public final class CurrentState {
     
-    public ServiceProvider selected = ServiceProviders.all().get(0);
+    private final ServiceProviders serviceProviders = ServiceProviders.of();
+    
+    public ServiceProvider selected = serviceProviders.all().get(0);
     
     private static final CurrentState state = new CurrentState();
     
