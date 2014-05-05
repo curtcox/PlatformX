@@ -8,6 +8,8 @@ import java.net.URI;
  */
 public final class Place {
     public String name;
+    public String id;
+    public String reference;
     public Double latitude;
     public Double longitude;
     public URI icon;

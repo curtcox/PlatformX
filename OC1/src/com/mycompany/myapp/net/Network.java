@@ -18,9 +18,9 @@ public final class Network {
     public InputStream getStreamFor(String url) {
         String fileName = "temp";
         boolean showProgress = true;
-        if (!Util.downloadUrlToStorage(url, fileName, showProgress)) {
-            System.out.println("Download failed");            
-        }
+        //if (!Util.downloadUrlToStorage(url, fileName, showProgress)) {
+        //    System.out.println("Download failed");            
+        //}
         try {
             return storage.createInputStream(fileName);
         } catch (IOException e) {

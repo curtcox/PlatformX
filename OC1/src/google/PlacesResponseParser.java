@@ -48,6 +48,8 @@ public final class PlacesResponseParser {
         Place place = new Place();
         place.name = (String) map.get("name");
         place.address = "?";
+        place.id = (String) map.get("id");
+        place.reference = (String) map.get("reference");
         Geometry geometry = Geometry.of(map);
         place.latitude = geometry.latitude;
         place.longitude = geometry.longitude;

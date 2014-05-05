@@ -33,28 +33,28 @@ public final class ServiceProviders {
     }
 
     public LiveList<ServiceProvider> nearby() {
-        Location currentLocation = locations.getCurrentLocation();
-        double latitude = currentLocation.getLatitude();
-        double longitude = currentLocation.getLongitude();
         List<ServiceProvider> providers = new ArrayList<ServiceProvider>();
-        for (Place place : places.nearbySearch(latitude, longitude)) {
-            Name name = new Name(place.name);
-            Location placeLocation = new Location();
-            placeLocation.setLatitude(place.latitude);
-            placeLocation.setLongitude(place.longitude);
-            Rating myRating = new Rating("");
-            List<Rating> ratings = new ArrayList();
-            providers.add(new ServiceProvider(name,placeLocation,myRating,ratings));
+        for (Place place : placesNearHere()) {
+            providers.add(serviceProviderFromPlace(place));
         }
         return new SimpleLiveList(providers);
     }
-    
-    private static ServiceProvider newServiceProvider(String name, double lat, double lon) {
-        Location location = new Location();
-        location.setLatitude(lat);
-        location.setLongitude(lon);
-        List<Rating> ratings = new ArrayList();
-        Rating myRating = new Rating("?");
-        return new ServiceProvider(new Name(name),location,myRating,ratings);
+
+    public List<Place> placesNearHere() {
+        Location currentLocation = locations.getCurrentLocation();
+        double latitude = currentLocation.getLatitude();
+        double longitude = currentLocation.getLongitude();
+        return places.nearbySearch(latitude, longitude);
     }
+
+    private ServiceProvider serviceProviderFromPlace(Place place) {
+        Name name = new Name(place.name);
+        Location placeLocation = new Location();
+        placeLocation.setLatitude(place.latitude);
+        placeLocation.setLongitude(place.longitude);
+        Rating myRating = new Rating("");
+        List<Rating> ratings = new ArrayList();
+        return new ServiceProvider(name,placeLocation,myRating,ratings);
+    }
+
 }

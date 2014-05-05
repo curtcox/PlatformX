@@ -5,7 +5,7 @@ import com.codename1.ui.Container;
 import com.codename1.ui.table.TableLayout;
 
 /**
- *
+ * A container that contains components arranged by a TableLayout.
  * @author curt
  */
 public final class TableContainer

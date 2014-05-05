@@ -5,7 +5,7 @@ import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 
 /**
- *
+ * The entire UI, as presented to the user, at a specific time.
  * @author Curt
  */
 abstract class Screen {
@@ -15,7 +15,11 @@ abstract class Screen {
     final Command back;
 
     Screen(String name, final Screen previous) {
-        form = new Form(name);
+        this(new Form(name),previous);
+    }
+
+    Screen(Form form, final Screen previous) {
+        this.form = form;
         this.previous = previous;
         back = previous == null ? null : new Command("Back") {
             @Override

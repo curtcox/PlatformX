@@ -5,7 +5,8 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 
 /**
- *
+ * Skeletal implementation of a button that does something when you tap it.
+ * Implementors must provide onTap.
  * @author Curt
  */
 public abstract class ActionButton
