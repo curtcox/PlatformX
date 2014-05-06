@@ -8,7 +8,7 @@ import com.codename1.ui.events.ActionEvent;
  * The entire UI, as presented to the user, at a specific time.
  * @author Curt
  */
-abstract class Screen {
+public abstract class Screen {
 
     final Form form;
     final Screen previous;

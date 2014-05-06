@@ -31,6 +31,8 @@ final class FakeCodenameOneImplementation
     @Override public int getDisplayWidth() { return 0; }
     @Override public int getDisplayHeight() { return 0; }
     @Override public OutputStream createStorageOutputStream(String name) throws IOException { return new ByteArrayOutputStream(); }
+    @Override public void setClip(Object graphics, int x, int y, int width, int height) {}
+    @Override public int charWidth(Object nativeFont, char ch) { return 0; }
     
     // Stuff we needed to minimally do above.
     // Stuff we just throw exceptions for below.
@@ -156,11 +158,6 @@ final class FakeCodenameOneImplementation
     }
 
     @Override
-    public void setClip(Object graphics, int x, int y, int width, int height) {
-        throw never();
-    }
-
-    @Override
     public void clipRect(Object graphics, int x, int y, int width, int height) {
         throw never();
     }
@@ -227,11 +224,6 @@ final class FakeCodenameOneImplementation
 
     @Override
     public int stringWidth(Object nativeFont, String str) {
-        throw never();
-    }
-
-    @Override
-    public int charWidth(Object nativeFont, char ch) {
         throw never();
     }
 

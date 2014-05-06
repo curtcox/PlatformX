@@ -24,10 +24,10 @@ public final class HomeScreen
 
     private void layoutForm() {
         form.setLayout(new GridLayout(2,2));
-        form.addComponent(newRateButton());
-        form.addComponent(newSearchButton());
-        form.addComponent(newProfileButton());
-        form.addComponent(newHowToButton());
+        form.addComponent(ScreenButton.of("Rate",rateScreen));
+        form.addComponent(ScreenButton.of("Search",searchScreen));
+        form.addComponent(ScreenButton.of("Profile",profileScreen));
+        form.addComponent(ScreenButton.of("How To",howToScreen));
     }
     
     public static void showInitial() {
@@ -35,36 +35,4 @@ public final class HomeScreen
         home.show();
     }
 
-    private Button newRateButton() {
-        return new ActionButton("Rate") {
-            public void onTap() {
-                rateScreen.show();
-            }
-        };
-    }
-
-    private Button newSearchButton() {
-        return new ActionButton("Search") {
-            public void onTap() {
-                searchScreen.show();
-            }
-        };
-    }
-
-    private Button newHowToButton() {
-        return new ActionButton("How To") {
-            public void onTap() {
-                howToScreen.show();
-            }
-        };
-    }
-
-    private Button newProfileButton() {
-        return new ActionButton("Profile") {
-            public void onTap() {
-                profileScreen.show();
-            }
-        };
-    }
-    
 }
