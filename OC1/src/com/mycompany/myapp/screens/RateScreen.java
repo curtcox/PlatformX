@@ -74,11 +74,7 @@ final class RateScreen
     }
 
     private Component newChangeLocationButton() {
-        return new ActionButton("Pick a different location") {
-            public void onTap() {
-                new SearchScreen(RateScreen.this).show();
-            }
-        };
+        return ScreenButton.of("Pick a different location",new SearchScreen(RateScreen.this));
     }
 
     @Override
