@@ -8,5 +8,5 @@ As a starting point, the rating system from [Sage Traveling](http://www.sagetrav
 This repository contains all of the project code.  Right now, that is just a standalone client written using the http://www.codenameone.com framework.
 
 # People
-[Mike Hiles](www.linkedin.com/pub/michael-hiles/7/883/32) - founder, ideas, priorities, feedback
-[Curt Cox](www.curtcox.com) - code
+* [Mike Hiles](www.linkedin.com/pub/michael-hiles/7/883/32) - founder, ideas, priorities, feedback
+* [Curt Cox](www.curtcox.com) - code
