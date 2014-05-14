@@ -18,6 +18,7 @@ import org.junit.Test;
 public class CurrentStateTest {
     
     FakeListener listener = new FakeListener(); 
+    FakeListener listener2 = new FakeListener(); 
     CurrentState testObject;
     
     static class FakeListener implements Change.Listener {
@@ -47,6 +48,17 @@ public class CurrentStateTest {
         testObject.broadcastChange();
         
         assertTrue(listener.called);
+    }
+
+    @Test
+    public void notifies_listeners_when_there_is_a_change() {
+        testObject.addListener(listener);
+        testObject.addListener(listener2);
+        
+        testObject.broadcastChange();
+        
+        assertTrue(listener.called);
+        assertTrue(listener2.called);
     }
     
 }

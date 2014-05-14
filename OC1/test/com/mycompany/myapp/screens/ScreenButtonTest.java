@@ -16,8 +16,6 @@ import org.junit.Test;
  */
 public class ScreenButtonTest {
 
-    public ScreenButtonTest() {}
-
     private ActionButton createScreenButtonOnEDT(final String text, final Screen screen) throws Exception {
         return (ActionButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {

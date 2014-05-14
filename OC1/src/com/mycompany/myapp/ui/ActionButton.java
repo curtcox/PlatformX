@@ -16,12 +16,15 @@ public abstract class ActionButton
     public ActionButton(String name) {
         super(name);
         addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(ActionEvent event) {
                 ActionButton.this.onTap();
             }
         });
     }
 
+    /**
+     * Override this method to perform the button tap action.
+     */
     public abstract void onTap();
     
     public void updateTextOnChange(Change.Source change,final StringSource source) {

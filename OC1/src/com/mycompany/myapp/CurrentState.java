@@ -3,6 +3,8 @@ package com.mycompany.myapp;
 import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.event.Change;
 import com.mycompany.myapp.stores.ServiceProviders;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * The current state of the application.
@@ -11,7 +13,7 @@ import com.mycompany.myapp.stores.ServiceProviders;
 public final class CurrentState
     implements Change.Source
 {
-    private Change.Listener listener;
+    private final List<Change.Listener> listeners = new ArrayList<Change.Listener>();
     public ServiceProvider selected = firstProviderOrNull();
     
     public static final CurrentState get() {
@@ -19,11 +21,13 @@ public final class CurrentState
     }
 
     public void addListener(Change.Listener listener) {
-        this.listener = listener;
+        listeners.add(listener);
     }
 
     public void broadcastChange() {
-        listener.onChange();
+        for (Change.Listener listener : listeners) {
+            listener.onChange();
+        }
     }
 
     private ServiceProvider firstProviderOrNull() {

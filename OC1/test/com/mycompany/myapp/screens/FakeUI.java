@@ -37,10 +37,19 @@ public final class FakeUI {
         return Display.getInstance();
     }
     
-    static <T> T onEDT(Callable<T> callable) throws InterruptedException, ExecutionException {
+    public static <T> T onEDT(Callable<T> callable) throws InterruptedException, ExecutionException {
         FutureTask<T> future = new FutureTask(callable);
         FakeUI.display().invokeAndBlock(future);
         return future.get();
+    }
+
+    public static void flushEDT() throws InterruptedException, ExecutionException {
+        Callable callable = new Callable(){
+            public Object call() throws Exception {
+                return null;
+            }
+        };
+        onEDT(callable);
     }
 
     static void init() throws ExecutionException, InterruptedException {
