@@ -1,6 +1,8 @@
 package com.mycompany.myapp.screens;
 
+import com.mycompany.myapp.event.Change.*;
 import com.mycompany.myapp.ui.ActionButton;
+import com.mycompany.myapp.ui.StringSource;
 
 /**
  * A button that will go to the given screen when tapped.
@@ -16,4 +18,11 @@ public final class ScreenButton {
             }
         };
     }
+
+    public static ActionButton of(StringSource source,Source change,Screen screen) {
+        final ActionButton button = of(source.getString(),screen);
+        button.updateTextOnChange(change, source);
+        return button;
+    }
+
 }

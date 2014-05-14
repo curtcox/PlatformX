@@ -2,6 +2,7 @@ package com.mycompany.myapp.services;
 
 import com.codename1.location.Location;
 import com.codename1.location.LocationManager;
+import com.mycompany.myapp.Registry;
 
 /**
  *
@@ -9,21 +10,15 @@ import com.codename1.location.LocationManager;
  */
 public final class Locations {
 
-    private static final Locations singleton = new Locations();
-    
     public static Locations of() {
-        return singleton;
+        return Registry.get(Locations.class);
     }
 
     public Location getCurrentLocation() {
-        LocationManager locationManager = LocationManager.getLocationManager();
+        LocationManager locationManager = Registry.get(LocationManager.class);
         return locationManager.getLastKnownLocation();
     }
 
-    /**
-     * This distance calculation is completely broken and needs to be fixed.
-     * @deprecated 
-     */
     public double calculateDistance(Location a, Location b) {
         return distance(a.getLatitude(),a.getLongitude(),b.getLatitude(),b.getLongitude());
     }
@@ -53,6 +48,7 @@ public final class Locations {
 
     /**
      * Returns arccos x.  That is return y such that x = cos y.
+     * This is provided, because it isn't available on JME.
      */
     static double acos(double x) {
         final double epsilon=1.0E-60;

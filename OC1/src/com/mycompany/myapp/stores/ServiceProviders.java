@@ -1,7 +1,8 @@
 package com.mycompany.myapp.stores;
 
 import com.codename1.location.Location;
-import com.mycompany.myapp.domain.Name;
+import com.mycompany.myapp.Registry;
+import com.mycompany.myapp.domain.*;
 import com.mycompany.myapp.domain.Rating;
 import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.event.LiveList;
@@ -18,14 +19,10 @@ import java.util.List;
  */
 public final class ServiceProviders {
     
-    private final Locations locations = Locations.of();
     private final PlacesSearch places = new PlacesSearch();
-    private static final ServiceProviders singleton = new ServiceProviders();
-    
-    private ServiceProviders() {}
     
     public static ServiceProviders of() {
-        return singleton;
+        return Registry.get(ServiceProviders.class);
     }
     
     public LiveList<ServiceProvider> all() {
@@ -41,20 +38,21 @@ public final class ServiceProviders {
     }
 
     public List<Place> placesNearHere() {
-        Location currentLocation = locations.getCurrentLocation();
+        Location currentLocation = Registry.get(Locations.class).getCurrentLocation();
         double latitude = currentLocation.getLatitude();
         double longitude = currentLocation.getLongitude();
         return places.nearbySearch(latitude, longitude);
     }
 
     private ServiceProvider serviceProviderFromPlace(Place place) {
+        ID id = new ID(place.id);
         Name name = new Name(place.name);
         Location placeLocation = new Location();
         placeLocation.setLatitude(place.latitude);
         placeLocation.setLongitude(place.longitude);
         Rating myRating = new Rating("");
         List<Rating> ratings = new ArrayList();
-        return new ServiceProvider(name,placeLocation,myRating,ratings);
+        return new ServiceProvider(id,name,placeLocation,myRating,ratings);
     }
 
 }

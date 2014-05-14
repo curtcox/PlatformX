@@ -3,6 +3,7 @@ package com.mycompany.myapp.ui;
 import com.codename1.ui.Button;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import com.mycompany.myapp.event.Change;
 
 /**
  * Skeletal implementation of a button that does something when you tap it.
@@ -22,4 +23,13 @@ public abstract class ActionButton
     }
 
     public abstract void onTap();
+    
+    public void updateTextOnChange(Change.Source change,final StringSource source) {
+        change.addListener(new Change.Listener(){
+            public void onChange() {
+                setText(source.getString());
+            }
+        });
+    }
+
 }

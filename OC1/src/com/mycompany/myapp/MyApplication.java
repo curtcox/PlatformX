@@ -14,6 +14,7 @@ public class MyApplication {
     public void init(Object context) {
         try {
             loadTheme();
+            RegistryLoader.load();
         } catch(IOException e){
             e.printStackTrace();
         }

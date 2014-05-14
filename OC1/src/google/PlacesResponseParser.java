@@ -23,6 +23,8 @@ public final class PlacesResponseParser {
             return places;
         } catch (IOException e) {
             e.printStackTrace();
+        } catch (RuntimeException e) {
+            e.printStackTrace();
         }
         return places;
     } 

@@ -7,7 +7,7 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.table.TableLayout;
-import com.mycompany.myapp.domain.CurrentState;
+import com.mycompany.myapp.CurrentState;
 import com.mycompany.myapp.domain.Rating;
 import com.mycompany.myapp.ui.ActionButton;
 import com.mycompany.myapp.ui.TableContainer;
