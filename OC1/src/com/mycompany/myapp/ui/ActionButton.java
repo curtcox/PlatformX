@@ -3,6 +3,7 @@ package com.mycompany.myapp.ui;
 import com.codename1.ui.Button;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import com.mycompany.myapp.CurrentState;
 import com.mycompany.myapp.event.Change;
 
 /**
@@ -29,6 +30,14 @@ public abstract class ActionButton
     
     public void updateTextOnChange(Change.Source change,final StringSource source) {
         change.addListener(new Change.Listener(){
+            public void onChange() {
+                setText(source.getString());
+            }
+        });
+    }
+
+    public void updateTextOnChange(final StringSource source) {
+        CurrentState.get().addListener(new Change.Listener(){
             public void onChange() {
                 setText(source.getString());
             }

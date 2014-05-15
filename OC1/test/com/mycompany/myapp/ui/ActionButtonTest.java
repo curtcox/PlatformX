@@ -1,8 +1,16 @@
 package com.mycompany.myapp.ui;
 
+import com.codename1.io.Storage;
+import com.codename1.location.LocationManager;
 import com.codename1.ui.events.ActionListener;
+import com.mycompany.fake.FakeLocationManager;
+import com.mycompany.fake.FakeStorage;
+import com.mycompany.myapp.CurrentState;
+import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.event.Change;
 import com.mycompany.myapp.screens.FakeUI;
+import com.mycompany.myapp.services.Locations;
+import com.mycompany.myapp.stores.ServiceProviders;
 import java.util.concurrent.Callable;
 import static jdk.nashorn.internal.objects.NativeRegExp.source;
 import static org.junit.Assert.*;
@@ -46,24 +54,45 @@ public class ActionButtonTest {
     }
 
     @Test
-    public void updateTextOnChange_updates_text() throws Exception {
+    public void updateTextOnChange_with_speciified_source_updates_text() throws Exception {
         ActionButton button = createActionButtonOnEDT("");
-        final String newValue = "new";
+        String expected = stringSource().getString();
         Change.Source change = new Change.Source() {
             public void addListener(Change.Listener listener) {
                 ActionButtonTest.this.listener = listener;
             }
         };
-        StringSource source = new StringSource() {
-            public String getString() {
-                return newValue;
-            }
-        };
-        button.updateTextOnChange(change, source);
+        button.updateTextOnChange(change, stringSource());
         listener.onChange();
         FakeUI.flushEDT();
         
-        assertEquals(newValue,button.getText());
+        assertEquals(expected,button.getText());
+    }
+
+    StringSource stringSource() {
+        return new StringSource() {
+            public String getString() {
+                return ActionButtonTest.this.toString();
+            }
+        };
+    }
+    
+    @Test
+    public void updateTextOnChange_updates_text_when_current_state_changes() throws Exception {
+        Registry.put(Storage.class, new FakeStorage());
+        Registry.put(LocationManager.class, new FakeLocationManager());
+        Registry.put(Locations.class, new Locations());
+        Registry.put(ServiceProviders.class, new ServiceProviders());
+        Registry.put(CurrentState.class, new CurrentState());
+
+        ActionButton button = createActionButtonOnEDT("");
+        String expected = stringSource().getString();
+        button.updateTextOnChange(stringSource());
+        CurrentState.get().broadcastChange();
+        
+        FakeUI.flushEDT();
+        
+        assertEquals(expected,button.getText());
     }
 
 }
