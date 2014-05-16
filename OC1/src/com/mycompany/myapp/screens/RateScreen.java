@@ -9,6 +9,7 @@ import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.table.TableLayout;
 import com.mycompany.myapp.CurrentState;
 import com.mycompany.myapp.domain.Rating;
+import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.ui.ActionButton;
 import com.mycompany.myapp.ui.TableContainer;
 
@@ -21,7 +22,6 @@ final class RateScreen
     extends Screen
 {
     private final Label rating = new Label();
-    private final Label provider = new Label("Service Provider ???");
 
     RateScreen(Screen previous) {
         super("Rate",previous);
@@ -41,7 +41,7 @@ final class RateScreen
     private Component newProviderSummary() {
         Container container = new Container();
         container.setLayout(new GridLayout(1,2));
-        container.addComponent(provider);
+        container.addComponent(ProviderDetailsButton.of(this));
         container.addComponent(rating);
         return container;
     }
@@ -68,7 +68,8 @@ final class RateScreen
         return new ActionButton(text) {
             public void onTap() {
                 rating.setText(text);
-                CurrentState.get().selected.myRating = new Rating(text);
+                selectedServiceProvider().myRating = new Rating(text);
+                CurrentState.get().broadcastChange();
             }
         };
     }
@@ -77,13 +78,7 @@ final class RateScreen
         return ScreenButton.of("Pick a different location",new SearchScreen(RateScreen.this));
     }
 
-    @Override
-    protected void refresh() {
-        updateProviderCurrentState();
+    private ServiceProvider selectedServiceProvider() {
+        return ServiceProvider.getSelected();
     }
-    
-    private void updateProviderCurrentState() {
-        provider.setText(CurrentState.get().selected.name.toString());
-    }
-
 }

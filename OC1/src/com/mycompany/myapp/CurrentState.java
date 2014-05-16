@@ -14,7 +14,6 @@ public final class CurrentState
     implements Change.Source
 {
     private final List<Change.Listener> listeners = new ArrayList<Change.Listener>();
-    public ServiceProvider selected = firstProviderOrNull();
     
     public static final CurrentState get() {
         return Registry.get(CurrentState.class);
@@ -30,11 +29,12 @@ public final class CurrentState
         }
     }
 
-    private ServiceProvider firstProviderOrNull() {
-        ServiceProviders serviceProviders = Registry.get(ServiceProviders.class);
-        if (serviceProviders.all().size()<1) {
-            return null;
-        }
-        return serviceProviders.all().get(0);
-    }
+//    public ServiceProvider selected = firstProviderOrNull();
+//    private ServiceProvider firstProviderOrNull() {
+//        ServiceProviders serviceProviders = Registry.get(ServiceProviders.class);
+//        if (serviceProviders.all().size()<1) {
+//            return null;
+//        }
+//        return serviceProviders.all().get(0);
+//    }
 }

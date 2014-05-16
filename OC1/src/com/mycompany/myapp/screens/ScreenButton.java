@@ -1,6 +1,7 @@
 package com.mycompany.myapp.screens;
 
-import com.mycompany.myapp.event.Change.*;
+import com.mycompany.myapp.CurrentState;
+import com.mycompany.myapp.event.Change.Source;
 import com.mycompany.myapp.ui.ActionButton;
 import com.mycompany.myapp.ui.StringSource;
 
@@ -22,6 +23,12 @@ public final class ScreenButton {
     public static ActionButton of(StringSource source,Source change,Screen screen) {
         final ActionButton button = of(source.getString(),screen);
         button.updateTextOnChange(change, source);
+        return button;
+    }
+
+    public static ActionButton of(StringSource source,Screen screen) {
+        final ActionButton button = of(source.getString(),screen);
+        button.updateTextOnChange(CurrentState.get(), source);
         return button;
     }
 

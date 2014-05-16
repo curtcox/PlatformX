@@ -1,7 +1,9 @@
 package com.mycompany.myapp.domain;
 
 import com.codename1.location.Location;
+import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.services.Locations;
+import com.mycompany.myapp.ui.StringSource;
 import java.util.List;
 
 /**
@@ -15,7 +17,6 @@ public final class ServiceProvider {
     public final Location location;
     public Rating myRating;
     public final List<Rating> ratings;
-    private final Locations locations = Locations.of(); 
     
     public ServiceProvider(ID id, Name name, Location location, Rating myRating, List<Rating> ratings) {
         this.id = id;
@@ -31,7 +32,29 @@ public final class ServiceProvider {
     }
 
     private String distanceFromCurrentLocation() {
+        Locations locations = Locations.of();
         int miles = (int) locations.calculateDistance(location,locations.getCurrentLocation());
         return miles + " miles";
     }
+    
+    public static ServiceProvider getSelected() {
+        return Registry.get(ServiceProvider.class);
+    }
+    
+    public static StringSource getCurrentName() {
+        return new StringSource() {
+            public String getString() {
+                return ServiceProvider.getSelected().name.toString();
+            }
+        };
+    }
+
+    public static StringSource getCurrentRating() {
+        return new StringSource() {
+            public String getString() {
+                return ServiceProvider.getSelected().myRating.toString();
+            }
+        };
+    }
+
 }

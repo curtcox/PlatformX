@@ -38,7 +38,7 @@ public final class ServiceProviders {
     }
 
     public List<Place> placesNearHere() {
-        Location currentLocation = Registry.get(Locations.class).getCurrentLocation();
+        Location currentLocation = Locations.of().getCurrentLocation();
         double latitude = currentLocation.getLatitude();
         double longitude = currentLocation.getLongitude();
         return places.nearbySearch(latitude, longitude);
