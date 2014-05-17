@@ -1,6 +1,7 @@
 package com.mycompany.myapp.screens;
 
 import com.codename1.ui.layouts.GridLayout;
+import com.mycompany.myapp.ui.GridContainer;
 
 /**
  * The home screen of the application.
@@ -20,13 +21,17 @@ public final class HomeScreen
     }
 
     private void layoutForm() {
-        form.setLayout(new GridLayout(3,2));
-        form.addComponent(ProviderDetailsButton.of(this));
-        form.addComponent(ProviderRatingButton.of(rateScreen));
-        form.addComponent(ScreenButton.of("Rate",rateScreen));
-        form.addComponent(ScreenButton.of("Search",searchScreen));
-        form.addComponent(ScreenButton.of("Profile",profileScreen));
-        form.addComponent(ScreenButton.of("How To",howToScreen));
+        form.setLayout(new GridLayout(2,1));
+        form.addComponent(new GridContainer(2,1,
+             ProviderDetailsButton.of(this),
+             ProviderRatingButton.of(rateScreen)
+        ));
+        form.addComponent(new GridContainer(2,2,
+             ScreenButton.of("Rate",rateScreen),
+             ScreenButton.of("Search",searchScreen),
+             ScreenButton.of("Profile",profileScreen),
+             ScreenButton.of("How To",howToScreen)
+        ));
     }
     
     public static void showInitial() {

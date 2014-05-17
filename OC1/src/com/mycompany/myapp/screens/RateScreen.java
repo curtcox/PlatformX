@@ -11,6 +11,7 @@ import com.mycompany.myapp.CurrentState;
 import com.mycompany.myapp.domain.Rating;
 import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.ui.ActionButton;
+import com.mycompany.myapp.ui.GridContainer;
 import com.mycompany.myapp.ui.TableContainer;
 
 /**
@@ -39,11 +40,10 @@ final class RateScreen
     }
 
     private Component newProviderSummary() {
-        Container container = new Container();
-        container.setLayout(new GridLayout(1,2));
-        container.addComponent(ProviderDetailsButton.of(this));
-        container.addComponent(rating);
-        return container;
+        return new GridContainer(2,1,
+            ProviderDetailsButton.of(this),
+            rating
+        );
     }
     
     private Container newRatingTable() {
