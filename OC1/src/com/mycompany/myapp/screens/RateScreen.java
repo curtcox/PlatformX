@@ -5,7 +5,6 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Display;
 import com.codename1.ui.Label;
-import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.table.TableLayout;
 import com.mycompany.myapp.CurrentState;
 import com.mycompany.myapp.domain.Rating;
@@ -68,7 +67,7 @@ final class RateScreen
         return new ActionButton(text) {
             public void onTap() {
                 rating.setText(text);
-                selectedServiceProvider().myRating = new Rating(text);
+                selectedServiceProvider().rate(new Rating(text));
                 CurrentState.get().broadcastChange();
             }
         };

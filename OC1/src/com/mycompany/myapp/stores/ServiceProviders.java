@@ -51,8 +51,7 @@ public final class ServiceProviders {
         placeLocation.setLatitude(place.latitude);
         placeLocation.setLongitude(place.longitude);
         Rating myRating = new Rating("");
-        List<Rating> ratings = new ArrayList();
-        return new ServiceProvider(id,name,placeLocation,myRating,ratings);
+        return new ServiceProvider(id,name,placeLocation,myRating);
     }
 
 }

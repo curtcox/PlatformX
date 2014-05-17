@@ -4,7 +4,6 @@ import com.codename1.location.Location;
 import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.services.Locations;
 import com.mycompany.myapp.ui.StringSource;
-import java.util.List;
 
 /**
  *
@@ -15,17 +14,19 @@ public final class ServiceProvider {
     public final ID id;
     public final Name name;
     public final Location location;
-    public Rating myRating;
-    public final List<Rating> ratings;
+    private Rating myRating;
     
-    public ServiceProvider(ID id, Name name, Location location, Rating myRating, List<Rating> ratings) {
+    public ServiceProvider(ID id, Name name, Location location, Rating myRating) {
         this.id = id;
         this.name = name;
         this.location = location;
-        this.ratings = ratings;
         this.myRating = myRating;
     }
-    
+
+    public void rate(Rating rating) {
+        myRating = rating;
+    }
+
     @Override
     public String toString() {
         return name.toString() + " " + myRating + " - " + distanceFromCurrentLocation();

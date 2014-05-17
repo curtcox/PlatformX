@@ -18,7 +18,7 @@ final class RegistryLoader {
         put(Storage.class,          new Storage());
         put(LocationManager.class,  LocationManager.getLocationManager());
         put(Locations.class,        new Locations());
-        put(ServiceProvider.class,  new ServiceProvider(null,new Name(""),null,new Rating(""),null));
+        put(ServiceProvider.class,  new ServiceProvider(null,new Name(""),null,new Rating("")));
         put(ServiceProviders.class, new ServiceProviders());
         put(CurrentState.class,     new CurrentState());
     }
