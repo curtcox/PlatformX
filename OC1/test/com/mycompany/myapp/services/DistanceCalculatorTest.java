@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
  *
  * @author Curt
  */
-public class LocationsTest {
+public class DistanceCalculatorTest {
     
     @Test
     public void acos() {
@@ -20,7 +20,7 @@ public class LocationsTest {
     
     private void acos(double x1) {
         double delta = 0.00000001;
-        double y = Locations.acos(x1);
+        double y = DistanceCalculator.acos(x1);
         double x2 = Math.cos(y);
         assertTrue(x1 + " " + x2, Math.abs(x1-x2)<delta);
     }

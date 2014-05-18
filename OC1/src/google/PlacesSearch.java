@@ -19,7 +19,7 @@ public final class PlacesSearch {
     public List<Place> nearbySearch(double latitude, double longitude) {
         Map<String,String> parameters = new HashMap();
         parameters.put("key",API_key);
-        parameters.put("radius","50000");
+        parameters.put("radius","250");
         parameters.put("location",latitude + "," + longitude);
         parameters.put("sensor","true");
         String url = GoogleUrl.of("https://maps.googleapis.com/maps/api/place/nearbysearch/json?",parameters);
