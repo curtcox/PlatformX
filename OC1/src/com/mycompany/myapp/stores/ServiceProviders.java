@@ -50,7 +50,7 @@ public final class ServiceProviders {
         Location placeLocation = new Location();
         placeLocation.setLatitude(place.latitude);
         placeLocation.setLongitude(place.longitude);
-        Rating myRating = new Rating("");
+        Rating myRating = MyRatings.of().getFor(id);
         return new ServiceProvider(id,name,placeLocation,myRating);
     }
 

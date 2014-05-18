@@ -15,8 +15,7 @@ import com.mycompany.myapp.ui.SearchableList;
 final class SearchScreen
     extends Screen
 {
-    final ServiceProviders serviceProviders = ServiceProviders.of();
-    final SearchableList<ServiceProvider> searchList = new SearchableList(serviceProviders.nearby());
+    final SearchableList<ServiceProvider> searchList = new SearchableList(ServiceProviders.of().nearby());
     
     SearchScreen(Screen previous) { 
         super("Search",previous);
@@ -31,11 +30,14 @@ final class SearchScreen
     private void addSelectionListener() {
         searchList.onSelected(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
-                Registry.put(ServiceProvider.class,searchList.getSelected());
-                CurrentState.get().broadcastChange();
+                useSelectedProvider();
                 SearchScreen.this.back();
             }
         });
     }
 
+    private void useSelectedProvider() {
+        Registry.put(ServiceProvider.class,searchList.getSelected());
+        CurrentState.get().broadcastChange();
+    }
 }

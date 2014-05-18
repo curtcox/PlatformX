@@ -1,12 +1,8 @@
 package com.mycompany.myapp.screens;
 
-import com.codename1.ui.Display;
 import com.codename1.ui.Form;
-import com.codename1.ui.plaf.UIManager;
-import com.mycompany.fake.FakeUIManager;
 import com.mycompany.myapp.ui.ActionButton;
 import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutionException;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

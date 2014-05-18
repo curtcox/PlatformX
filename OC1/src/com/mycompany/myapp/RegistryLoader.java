@@ -6,6 +6,7 @@ import com.mycompany.myapp.domain.Name;
 import com.mycompany.myapp.domain.Rating;
 import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.services.Locations;
+import com.mycompany.myapp.stores.MyRatings;
 import com.mycompany.myapp.stores.ServiceProviders;
 
 /**
@@ -16,6 +17,7 @@ final class RegistryLoader {
     
     static void load() {
         put(Storage.class,          new Storage());
+        put(MyRatings.class,        new MyRatings());
         put(LocationManager.class,  LocationManager.getLocationManager());
         put(Locations.class,        new Locations());
         put(ServiceProvider.class,  new ServiceProvider(null,new Name(""),null,new Rating("")));

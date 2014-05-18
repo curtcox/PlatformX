@@ -9,6 +9,7 @@ import com.codename1.ui.table.TableLayout;
 import com.mycompany.myapp.CurrentState;
 import com.mycompany.myapp.domain.Rating;
 import com.mycompany.myapp.domain.ServiceProvider;
+import com.mycompany.myapp.stores.MyRatings;
 import com.mycompany.myapp.ui.ActionButton;
 import com.mycompany.myapp.ui.GridContainer;
 import com.mycompany.myapp.ui.TableContainer;
@@ -67,12 +68,18 @@ final class RateScreen
         return new ActionButton(text) {
             public void onTap() {
                 rating.setText(text);
-                selectedServiceProvider().rate(new Rating(text));
-                CurrentState.get().broadcastChange();
+                rateCurrentProvider(new Rating(text));
             }
         };
     }
 
+    private void rateCurrentProvider(Rating rating) {
+        ServiceProvider provider = selectedServiceProvider();
+        provider.rate(rating);
+        MyRatings.of().put(provider.id,rating);
+        CurrentState.get().broadcastChange();
+    }
+    
     private Component newChangeLocationButton() {
         return ScreenButton.of("Pick a different location",new SearchScreen(RateScreen.this));
     }

@@ -1,18 +1,11 @@
 package com.mycompany.myapp.ui;
 
-import com.codename1.io.Storage;
-import com.codename1.location.LocationManager;
 import com.codename1.ui.events.ActionListener;
-import com.mycompany.fake.FakeLocationManager;
-import com.mycompany.fake.FakeStorage;
+import com.mycompany.fake.*;
 import com.mycompany.myapp.CurrentState;
-import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.event.Change;
 import com.mycompany.myapp.screens.FakeUI;
-import com.mycompany.myapp.services.Locations;
-import com.mycompany.myapp.stores.ServiceProviders;
 import java.util.concurrent.Callable;
-import static jdk.nashorn.internal.objects.NativeRegExp.source;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -79,12 +72,7 @@ public class ActionButtonTest {
     
     @Test
     public void updateTextOnChange_updates_text_when_current_state_changes() throws Exception {
-        Registry.put(Storage.class, new FakeStorage());
-        Registry.put(LocationManager.class, new FakeLocationManager());
-        Registry.put(Locations.class, new Locations());
-        Registry.put(ServiceProviders.class, new ServiceProviders());
-        Registry.put(CurrentState.class, new CurrentState());
-
+        FakeRegistryLoader.load();
         ActionButton button = createActionButtonOnEDT("");
         String expected = stringSource().getString();
         button.updateTextOnChange(stringSource());

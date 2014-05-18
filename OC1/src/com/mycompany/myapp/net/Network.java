@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- *
+ * An abstraction for network requests that implements caching.
  * @author Curt
  */
 public final class Network {
