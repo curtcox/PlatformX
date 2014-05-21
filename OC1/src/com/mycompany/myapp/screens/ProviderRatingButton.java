@@ -9,8 +9,14 @@ import com.mycompany.myapp.ui.ActionButton;
  */
 public class ProviderRatingButton {
 
-    static ActionButton of(Screen returnScreen) {
-        return ScreenButton.of(ServiceProvider.getCurrentRating(),new RateScreen(returnScreen));
+    private ProviderRatingButton() {}
+    
+    static ActionButton of(final Screen returnScreen) {
+        return ScreenButton.lazy(ServiceProvider.getCurrentRating(),new ScreenFactory() {
+            public Screen create() {
+                return new RateScreen(returnScreen);
+            }
+        });
     }
 
 }

@@ -33,6 +33,13 @@ final class FakeCodenameOneImplementation
     @Override public OutputStream createStorageOutputStream(String name) throws IOException { return new ByteArrayOutputStream(); }
     @Override public void setClip(Object graphics, int x, int y, int width, int height) {}
     @Override public int charWidth(Object nativeFont, char ch) { return 0; }
+    @Override public Object connect(String url, boolean read, boolean write) throws IOException { return new Object(); }
+    @Override public int getHeight(Object nativeFont) { return 0; }
+    @Override public void setPostRequest(Object connection, boolean p) {}
+    @Override public int getClipX(Object graphics) { return 0; }
+    @Override public int stringWidth(Object nativeFont, String str) { return 0; }
+    @Override public int getClipY(Object graphics) { return 0; }
+    @Override public void setHeader(Object connection, String key, String val) {}
     
     // Stuff we needed to minimally do above.
     // Stuff we just throw exceptions for below.
@@ -138,16 +145,6 @@ final class FakeCodenameOneImplementation
     }
 
     @Override
-    public int getClipX(Object graphics) {
-        throw never();
-    }
-
-    @Override
-    public int getClipY(Object graphics) {
-        throw never();
-    }
-
-    @Override
     public int getClipWidth(Object graphics) {
         throw never();
     }
@@ -223,27 +220,7 @@ final class FakeCodenameOneImplementation
     }
 
     @Override
-    public int stringWidth(Object nativeFont, String str) {
-        throw never();
-    }
-
-    @Override
-    public int getHeight(Object nativeFont) {
-        throw never();
-    }
-
-    @Override
     public Object getDefaultFont() {
-        throw never();
-    }
-
-    @Override
-    public Object connect(String url, boolean read, boolean write) throws IOException {
-        throw never();
-    }
-
-    @Override
-    public void setHeader(Object connection, String key, String val) {
         throw never();
     }
 
@@ -264,11 +241,6 @@ final class FakeCodenameOneImplementation
 
     @Override
     public InputStream openInputStream(Object connection) throws IOException {
-        throw never();
-    }
-
-    @Override
-    public void setPostRequest(Object connection, boolean p) {
         throw never();
     }
 

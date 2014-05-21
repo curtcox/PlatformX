@@ -24,7 +24,6 @@ public class FakeLocationManager
 
     @Override
     protected void bindListener() {
-        throw never();
     }
 
     @Override

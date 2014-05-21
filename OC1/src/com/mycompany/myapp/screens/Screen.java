@@ -6,6 +6,7 @@ import com.codename1.ui.events.ActionEvent;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
+ * Implementors will need to override a constructor to layout the UI.
  * @author Curt
  */
 public abstract class Screen {
@@ -14,10 +15,16 @@ public abstract class Screen {
     final Screen previous;
     final Command back;
 
+    /**
+     * Override this constructor to create a new screen.
+     */
     Screen(String name, final Screen previous) {
         this(new Form(name),previous);
     }
 
+    /**
+     * This constructor is exposed mostly for testing.
+     */
     Screen(Form form, final Screen previous) {
         this.form = form;
         this.previous = previous;
@@ -42,5 +49,10 @@ public abstract class Screen {
         }
     }
 
+    /**
+     * This is called whenever the screen is shown.
+     * Override it in order to update any screen state that might have
+     * changed since the last showing.
+     */
     protected void refresh() {}
 }

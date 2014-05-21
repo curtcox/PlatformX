@@ -32,4 +32,19 @@ public final class ScreenButton {
         return button;
     }
 
+    public static ActionButton lazy(String text,final ScreenFactory screenFactory) {
+        return new ActionButton(text) {
+            @Override
+            public void onTap() {
+                screenFactory.create().show();
+            }
+        };
+    }
+
+    public static ActionButton lazy(StringSource source,ScreenFactory screen) {
+        final ActionButton button = lazy(source.getString(),screen);
+        button.updateTextOnChange(CurrentState.get(), source);
+        return button;
+    }
+
 }

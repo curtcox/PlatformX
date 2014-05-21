@@ -23,6 +23,10 @@ public final class ServiceProvider {
         this.myRating = myRating;
     }
 
+    public Rating myRating() {
+        return myRating;
+    }
+
     public void rate(Rating rating) {
         myRating = rating;
     }

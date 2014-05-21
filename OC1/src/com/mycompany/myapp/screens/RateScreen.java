@@ -23,7 +23,7 @@ final class RateScreen
     extends Screen
 {
     private final Label rating = new Label();
-
+    
     RateScreen(Screen previous) {
         super("Rate",previous);
         addComponents();
@@ -74,9 +74,8 @@ final class RateScreen
     }
 
     private void rateCurrentProvider(Rating rating) {
-        ServiceProvider provider = selectedServiceProvider();
-        provider.rate(rating);
-        MyRatings.of().put(provider.id,rating);
+        provider().rate(rating);
+        MyRatings.of().put(provider().id,rating);
         CurrentState.get().broadcastChange();
     }
     
@@ -84,7 +83,13 @@ final class RateScreen
         return ScreenButton.of("Pick a different location",new SearchScreen(RateScreen.this));
     }
 
-    private ServiceProvider selectedServiceProvider() {
+    private ServiceProvider provider() {
         return ServiceProvider.getSelected();
     }
+    
+    @Override
+    protected void refresh() {
+        rating.setText(provider().myRating().toString());
+    }
+
 }
