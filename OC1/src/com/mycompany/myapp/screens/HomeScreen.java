@@ -1,5 +1,6 @@
 package com.mycompany.myapp.screens;
 
+import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.layouts.GridLayout;
 import com.mycompany.myapp.domain.ServiceProvider;
@@ -12,34 +13,30 @@ import com.mycompany.myapp.ui.GridContainer;
 public final class HomeScreen
     extends Screen
 {
-    final Screen rateScreen    = new RateScreen(this);
-    final Screen searchScreen  = new SearchScreen(this);
-    final Screen howToScreen   = new HowToScreen(this);
-    final Screen profileScreen = new ProfileScreen(this);
-    final Container providerContainer;
-    final Container navigationContainer;
-    
+   
     HomeScreen() {
         super("Oyster Cracker",null);
-        providerContainer = newProviderContainer();
-        navigationContainer = newNavigationContainer();
         layoutForm();
     }
 
     private Container newProviderContainer() {
         return new GridContainer(2,1,
             ProviderDetailsButton.withReturnTo(this),
-            ProviderRatingButton.withReturnTo(rateScreen)
+            ProviderRatingButton.withReturnTo(this)
         );
     }
 
     private Container newNavigationContainer() {
         return new GridContainer(2,2,
-            ScreenButton.textAndLeadingTo("Rate",rateScreen),
-            ScreenButton.textAndLeadingTo("Search",searchScreen),
-            ScreenButton.textAndLeadingTo("Profile",profileScreen),
-            ScreenButton.textAndLeadingTo("How To",howToScreen)
+            buttonTo("Rate",new RateScreen(this)),
+            buttonTo("Search",new SearchScreen(this)),
+            buttonTo("Profile",new ProfileScreen(this)),
+            buttonTo("How To",new HowToScreen(this))
         );
+    }
+    
+    private Button buttonTo(String text, Screen leadingTo) {
+        return ScreenButton.textAndLeadingTo(text,leadingTo);
     }
     
     private void layoutForm() {
@@ -53,15 +50,15 @@ public final class HomeScreen
 
     private void layoutWithSelectedProvider() {
         form.setLayout(new GridLayout(2,1));
-        form.addComponent(providerContainer);
-        form.addComponent(navigationContainer);
+        form.addComponent(newProviderContainer());
+        form.addComponent(newNavigationContainer());
     }
 
     private void layoutWithNoSelectedProvider() {
         form.setLayout(new GridLayout(3,1));
-        form.addComponent(ScreenButton.textAndLeadingTo("Search",searchScreen));
-        form.addComponent(ScreenButton.textAndLeadingTo("Profile",profileScreen));
-        form.addComponent(ScreenButton.textAndLeadingTo("How To",howToScreen));
+        form.addComponent(buttonTo("Search",new SearchScreen(this)));
+        form.addComponent(buttonTo("Profile",new ProfileScreen(this)));
+        form.addComponent(buttonTo("How To",new HowToScreen(this)));
     }
 
     public static void showInitial() {
