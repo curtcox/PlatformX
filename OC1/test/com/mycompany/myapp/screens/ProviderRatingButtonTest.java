@@ -21,7 +21,7 @@ public class ProviderRatingButtonTest {
     private ActionButton createScreenButtonOnEDT() throws Exception {
         return (ActionButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return ProviderRatingButton.of(null);
+                return ProviderRatingButton.withReturnTo(null);
             }
         });
     }

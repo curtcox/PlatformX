@@ -41,7 +41,7 @@ final class RateScreen
 
     private Component newProviderSummary() {
         return new GridContainer(2,1,
-            ProviderDetailsButton.of(this),
+            ProviderDetailsButton.withReturnTo(this),
             rating
         );
     }
@@ -80,7 +80,7 @@ final class RateScreen
     }
     
     private Component newChangeLocationButton() {
-        return ScreenButton.of("Pick a different location",new SearchScreen(RateScreen.this));
+        return ScreenButton.textAndLeadingTo("Pick a different location",new SearchScreen(RateScreen.this));
     }
 
     private ServiceProvider provider() {

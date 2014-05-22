@@ -9,8 +9,8 @@ import com.mycompany.myapp.ui.ActionButton;
  */
 public class ProviderDetailsButton {
 
-    static ActionButton of(Screen returnScreen) {
-        return ScreenButton.of(ServiceProvider.getCurrentName(),new ProviderDetailsScreen(returnScreen));
+    static ActionButton withReturnTo(Screen returnScreen) {
+        return ScreenButton.textAndLeadingTo(ServiceProvider.getCurrentName(),new ProviderDetailsScreen(returnScreen));
     }
 
 }

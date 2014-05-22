@@ -11,8 +11,8 @@ public class ProviderRatingButton {
 
     private ProviderRatingButton() {}
     
-    static ActionButton of(final Screen returnScreen) {
-        return ScreenButton.lazy(ServiceProvider.getCurrentRating(),new ScreenFactory() {
+    static ActionButton withReturnTo(final Screen returnScreen) {
+        return ScreenButton.lazyWithTextAndLeadingTo(ServiceProvider.getCurrentRating(),new ScreenFactory() {
             public Screen create() {
                 return new RateScreen(returnScreen);
             }

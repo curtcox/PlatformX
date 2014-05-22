@@ -11,7 +11,7 @@ import com.mycompany.myapp.ui.StringSource;
  */
 public final class ScreenButton {
     
-    public static ActionButton of(String text,final Screen screen) {
+    public static ActionButton textAndLeadingTo(String text,final Screen screen) {
         return new ActionButton(text) {
             @Override
             public void onTap() {
@@ -20,19 +20,19 @@ public final class ScreenButton {
         };
     }
 
-    public static ActionButton of(StringSource source,Source change,Screen screen) {
-        final ActionButton button = of(source.getString(),screen);
+    public static ActionButton textWatchingAndLeadingTo(StringSource source,Source change,Screen screen) {
+        final ActionButton button = textAndLeadingTo(source.getString(),screen);
         button.updateTextOnChange(change, source);
         return button;
     }
 
-    public static ActionButton of(StringSource source,Screen screen) {
-        final ActionButton button = of(source.getString(),screen);
+    public static ActionButton textAndLeadingTo(StringSource source,Screen screen) {
+        final ActionButton button = textAndLeadingTo(source.getString(),screen);
         button.updateTextOnChange(CurrentState.get(), source);
         return button;
     }
 
-    public static ActionButton lazy(String text,final ScreenFactory screenFactory) {
+    public static ActionButton lazyWithTextAndLeadingTo(String text,final ScreenFactory screenFactory) {
         return new ActionButton(text) {
             @Override
             public void onTap() {
@@ -41,8 +41,8 @@ public final class ScreenButton {
         };
     }
 
-    public static ActionButton lazy(StringSource source,ScreenFactory screen) {
-        final ActionButton button = lazy(source.getString(),screen);
+    public static ActionButton lazyWithTextAndLeadingTo(StringSource source,ScreenFactory screen) {
+        final ActionButton button = lazyWithTextAndLeadingTo(source.getString(),screen);
         button.updateTextOnChange(CurrentState.get(), source);
         return button;
     }

@@ -18,7 +18,7 @@ final class ProviderDetailsScreen
         super("Provider Details",previous);
         form.setLayout(new GridLayout(2,1));
         form.addComponent(name);
-        form.addComponent(ProviderRatingButton.of(this));
+        form.addComponent(ProviderRatingButton.withReturnTo(this));
     }
     
     @Override
