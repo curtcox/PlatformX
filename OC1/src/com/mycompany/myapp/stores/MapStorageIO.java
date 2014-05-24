@@ -10,17 +10,19 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
+ * For making maps persistent.
  * @author Curt
  */
-public final class MapStreamIO {
+public final class MapStorageIO<K,V> {
 
+    private final PairIO<K,V> io;
     private final Storage storage;
     private final String file; 
     
-    MapStreamIO(Storage storage, String file) {
+    MapStorageIO(Storage storage, PairIO<K,V> io, String file) {
         this.storage = storage;
         this.file = file;
+        this.io = io;
     }
     
     private OutputStream toStorage() throws IOException {
@@ -31,17 +33,17 @@ public final class MapStreamIO {
         return storage.createInputStream(file);
     }
 
-    Map<String, String> readMap() {
-        Map map = new HashMap();
+    Map<K, V> readMap() {
+        Map<K,V> map = new HashMap();
         try {
-            readMap(map,new DataInputStream(fromStorage()));
+            readMap(map,io,new DataInputStream(fromStorage()));
         } catch (IOException e) {
             e.printStackTrace();
         } 
         return map;
     }
 
-    void writeMap(Map<String, String> map) {
+    void writeMap(Map<K, V> map) {
         try {
             writeMap(map,new DataOutputStream(toStorage()));
         } catch (IOException e) {
@@ -49,27 +51,26 @@ public final class MapStreamIO {
         } 
     }
 
-    void writeMap(Map<String, String> map, DataOutputStream data) throws IOException {
+    void writeMap(Map<K, V> map, DataOutputStream data) throws IOException {
         write(data,"Map");
         write(data,"size=");
         write(data,map.size());
         write(data,"keys=values");
-        for (String key : map.keySet()) {
-            write(data,key + "=" + map.get(key));
+        for (K key : map.keySet()) {
+            write(data,io.writePair(key, map.get(key)));
         }
         write(data,"end");
         data.close();
     }
 
-    private void readMap(Map map, DataInputStream data) throws IOException {
+    private void readMap(Map<K,V> map, PairIO<K,V> io, DataInputStream data) throws IOException {
         read(data,"Map");
         read(data,"size=");
         int size = readInt(data);
         read(data,"keys=values");
         for (int i=0; i<size; i++) {
             String pair = readString(data);
-            String[] parts = split(pair);
-            map.put(parts[0],parts[1]);
+            map.put(io.readKey(pair),io.readValue(pair));
         }
         read(data,"end");
         data.close();
@@ -97,13 +98,6 @@ public final class MapStreamIO {
     private String readString(DataInputStream data) throws IOException {
         String value = data.readUTF();
         return value;
-    }
-
-    private String[] split(String pair) {
-        int at = pair.indexOf("=");
-        String key = pair.substring(0,at);
-        String value = pair.substring(at+1, pair.length());
-        return new String[] {key,value};
     }
 
 }

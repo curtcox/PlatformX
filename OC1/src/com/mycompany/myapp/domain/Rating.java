@@ -1,5 +1,6 @@
 package com.mycompany.myapp.domain;
 
+
 /**
  *
  * @author Curt
@@ -7,6 +8,7 @@ package com.mycompany.myapp.domain;
 public final class Rating
     extends TypedString
 {
+    
     public Rating(String name) {
         super(name);
     }

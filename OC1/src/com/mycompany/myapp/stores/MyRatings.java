@@ -14,13 +14,15 @@ import java.util.Map;
 public final class MyRatings {
 
     private final Map<ID,Rating> ratings = new HashMap();
+    private final MapStorageIO io;
     private static final String MY_RATINGS = "my_ratings";
-    
+
     public static MyRatings of() {
         return Registry.get(MyRatings.class);
     }
     
     public MyRatings() {
+        io = new MapStorageIO(Registry.get(Storage.class),new MyRatingsIO(),MY_RATINGS);
         loadRatingsFromStorage();    
     }
     
@@ -37,25 +39,11 @@ public final class MyRatings {
     }
 
     private void loadRatingsFromStorage() {
-        Map<String,String> map = getMapStreamIO().readMap();
-        for (Object object : map.keySet()) {
-            String key = (String) object;
-            String value = map.get(key);
-            ratings.put(new ID(key), new Rating(value));
-        }
+        ratings.putAll(io.readMap());
     }
 
     private void saveRatingsToStorage() {
-        Map<String,String> map = new HashMap();
-        for (ID id : ratings.keySet()) {
-            Rating rating = ratings.get(id);
-            map.put(id.toString(), rating.toString());
-        }
-        getMapStreamIO().writeMap(map);
+        io.writeMap(ratings);
     }
 
-    private MapStreamIO getMapStreamIO() {
-        return new MapStreamIO(Registry.get(Storage.class),MY_RATINGS);
-    }
-    
 }
