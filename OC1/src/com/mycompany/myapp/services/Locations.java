@@ -21,7 +21,7 @@ public final class Locations
     }
 
     public void locationUpdated(Location location) {
-        this.location = location;
+        this.location = new LocationQuantizer().quantize(location);
     }
 
     public void providerStateChanged(int newState) {}
