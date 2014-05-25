@@ -21,7 +21,7 @@ public final class Locations
     }
 
     public void locationUpdated(Location location) {
-        this.location = new LocationQuantizer().quantize(location);
+        this.location = quantize(location);
     }
 
     public void providerStateChanged(int newState) {}
@@ -38,11 +38,16 @@ public final class Locations
         if (location!=null) {
             return location;
         }
-        return getManager().getLastKnownLocation();
+        location = quantize(getManager().getLastKnownLocation());
+        return location;
     }
 
     public double calculateDistance(Location a, Location b) {
         return DistanceCalculator.distance(a.getLatitude(),a.getLongitude(),b.getLatitude(),b.getLongitude());
+    }
+
+    private Location quantize(Location location) {
+        return new LocationQuantizer().quantize(location);
     }
 
 }
