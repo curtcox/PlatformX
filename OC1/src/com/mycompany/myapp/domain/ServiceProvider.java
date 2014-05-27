@@ -36,7 +36,7 @@ public final class ServiceProvider {
         return name.toString() + " " + myRating + " - " + distanceFromCurrentLocation();
     }
 
-    private String distanceFromCurrentLocation() {
+    public String distanceFromCurrentLocation() {
         Locations locations = Locations.of();
         int miles = (int) locations.calculateDistance(location,locations.getCurrentLocation());
         return miles + " miles";

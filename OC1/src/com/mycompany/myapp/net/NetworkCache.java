@@ -15,20 +15,11 @@ import java.util.Map;
  */
 final class NetworkCache {
 
-    final Map<String,CacheEntry> entries = new HashMap();
+    final Map<String,NetworkCacheEntry> entries = new HashMap();
 
-    static final class CacheEntry{
-        String url;
-        String fileName;
-        @Override
-        public String toString() {
-            return "url=>" + fileName;
-        }
-    }
-    
     public InputStream getStreamFor(String url) {
         try {
-            CacheEntry entry = newEntryFor(url);
+            NetworkCacheEntry entry = newEntryFor(url);
             if (entries.containsKey(url)) {
                 return getStreamFromStorage(entry);
             }
@@ -44,19 +35,16 @@ final class NetworkCache {
         }
     }
 
-    private CacheEntry newEntryFor(String url) {
-        CacheEntry entry = new CacheEntry();
-        entry.url = url;
-        entry.fileName = "u_" + Integer.toHexString(url.hashCode());
-        return entry;
+    private NetworkCacheEntry newEntryFor(String url) {
+        return new NetworkCacheEntry(url,"u_" + Integer.toHexString(url.hashCode()));
     }
 
-    boolean downloadToStorageWasOK(CacheEntry entry) {
+    boolean downloadToStorageWasOK(NetworkCacheEntry entry) {
         boolean showProgress = true;
         return Util.downloadUrlToStorage(entry.url, entry.fileName, showProgress);
     }
     
-    InputStream getStreamFromStorage(CacheEntry entry) throws IOException {
+    InputStream getStreamFromStorage(NetworkCacheEntry entry) throws IOException {
         return Registry.get(Storage.class).createInputStream(entry.fileName);
     }
 }

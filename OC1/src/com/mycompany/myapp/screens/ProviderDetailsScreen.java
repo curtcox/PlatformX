@@ -13,21 +13,31 @@ final class ProviderDetailsScreen
 {
 
     private final Label name = new Label("name");
+    private final Label distance = new Label("distance");
 
     ProviderDetailsScreen(Screen previous) {
         super("Provider Details",previous);
-        form.setLayout(new GridLayout(2,1));
+        form.setLayout(new GridLayout(3,1));
         form.addComponent(name);
+        form.addComponent(distance);
         form.addComponent(ProviderRatingButton.withReturnTo(this));
     }
     
     @Override
     protected void refresh() {
         updateName();
+        updateDistance();
     }
 
     private void updateName() {
-        name.setText(ServiceProvider.getSelected().name.toString());
+        name.setText(provider().name.toString());
     }
 
+    private void updateDistance() {
+        distance.setText(provider().distanceFromCurrentLocation());
+    }
+
+    private ServiceProvider provider() {
+        return ServiceProvider.getSelected();
+    }
 }

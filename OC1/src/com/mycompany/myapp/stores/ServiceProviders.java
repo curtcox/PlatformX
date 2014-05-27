@@ -25,23 +25,19 @@ public final class ServiceProviders {
         return Registry.get(ServiceProviders.class);
     }
     
-    public LiveList<ServiceProvider> all() {
-        return nearby();
-    }
-
-    public LiveList<ServiceProvider> nearby() {
+    public LiveList<ServiceProvider> nearby(int radius) {
         List<ServiceProvider> providers = new ArrayList<ServiceProvider>();
-        for (Place place : placesNearHere()) {
+        for (Place place : placesNearHere(radius)) {
             providers.add(serviceProviderFromPlace(place));
         }
         return new SimpleLiveList(providers);
     }
 
-    public List<Place> placesNearHere() {
+    public List<Place> placesNearHere(int radius) {
         Location currentLocation = Locations.of().getCurrentLocation();
         double latitude = currentLocation.getLatitude();
         double longitude = currentLocation.getLongitude();
-        return places.nearbySearch(latitude, longitude);
+        return places.nearbySearch(latitude, longitude, radius);
     }
 
     private ServiceProvider serviceProviderFromPlace(Place place) {

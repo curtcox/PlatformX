@@ -20,13 +20,14 @@ public final class SearchableList<T> {
 
     public final Container component;
     
-    public SearchableList(LiveList<T> items) {
+    public SearchableList(LiveList<T> items, ActionButton action) {
         component = new Container();
         underlyingListModel = VirtualListModel.of(items);
         filterProxyListModel = new FilterProxyListModel(underlyingListModel);
         filteredList = new List(filterProxyListModel);
         FilterProxyListModel.install(searchTerm, filteredList);
         component.addComponent(searchTerm);
+        component.addComponent(action);
         component.addComponent(filteredList);
     }
 
