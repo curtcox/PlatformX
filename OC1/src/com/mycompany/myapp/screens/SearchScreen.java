@@ -59,7 +59,7 @@ final class SearchScreen
 
     private ScreenFactory newZoomOutLink() {
         return new ScreenFactory() {
-            public Screen create() { return new SearchScreen(SearchScreen.this, radius * 4); }
+            public Screen create() { return new SearchScreen(SearchScreen.this.previous, radius * 4); }
         };
     }
 }
