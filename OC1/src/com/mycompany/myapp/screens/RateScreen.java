@@ -5,6 +5,7 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Display;
 import com.codename1.ui.Label;
+import com.codename1.ui.TextArea;
 import com.codename1.ui.table.TableLayout;
 import com.mycompany.myapp.CurrentState;
 import com.mycompany.myapp.domain.Rating;
@@ -23,18 +24,22 @@ final class RateScreen
     extends Screen
 {
     private final Label rating = new Label();
+    private final TextArea description = new TextArea(
+        "                                                                    ");
     
     RateScreen(Screen previous) {
         super("Rate",previous);
+        description.setEditable(false);
         addComponents();
         refresh();
     }
 
     private void addComponents() {
-        form.setLayout(new TableLayout(5,1));
+        form.setLayout(new TableLayout(6,1));
         form.addComponent(newProviderSummary());
         form.addComponent(new Label("Rating : Suitable for"));
         form.addComponent(newRatingTable());
+        form.addComponent(description);
         form.addComponent(newAboutRatingButton());
         form.addComponent(newChangeLocationButton());
     }
@@ -47,12 +52,12 @@ final class RateScreen
     }
     
     private Container newRatingTable() {
-        return new TableContainer(5,2,
-            newStarButton("*"),    new Label("people who can walk up a flight of stairs"),
-            newStarButton("**"),   new Label("slow walkers or wheelchair users who can get up a few steps"),
-            newStarButton("***"),  new Label("wheelchair users with full use of upper body (paraplegics)"),
-            newStarButton("****"), new Label("wheelchair users with limited arm/hand use"),
-            newStarButton("*****"),new Label("wheelchair users with no arm/hand use (quadriplegics)")
+        return new TableContainer(1,4,
+            newRatingButton("*",    "people who can walk up a flight of stairs"),
+            newRatingButton("**",   "slow walkers or wheelchair users who can get up a few steps"),
+            newRatingButton("***",  "wheelchair users with full use of upper body (paraplegics)"),
+            newRatingButton("****", "wheelchair users with limited arm/hand use"),
+            newRatingButton("*****","wheelchair users with no arm/hand use (quadriplegics)")
         );
     }
     
@@ -64,11 +69,12 @@ final class RateScreen
         };
     }
     
-    private Button newStarButton(final String text) {
-        return new ActionButton(text) {
+    private Button newRatingButton(final String ratingText, final String ratingDescription) {
+        return new ActionButton(" * ") {
             public void onTap() {
-                rating.setText(text);
-                rateCurrentProvider(new Rating(text));
+                rating.setText(ratingText);
+                description.setText(ratingDescription);
+                rateCurrentProvider(new Rating(ratingText));
             }
         };
     }
