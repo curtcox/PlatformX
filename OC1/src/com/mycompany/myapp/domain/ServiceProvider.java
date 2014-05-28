@@ -54,12 +54,17 @@ public final class ServiceProvider {
         };
     }
 
-    public static StringSource getCurrentRating() {
+    public static StringSource getCurrentRatingSource() {
         return new StringSource() {
             public String getString() {
-                return ServiceProvider.getSelected().myRating.toString();
+                String rating = getCurrentRating();
+                return rating.length()==0 ? "Rate" : rating;
             }
         };
+    }
+
+    public static String getCurrentRating() {
+        return ServiceProvider.getSelected().myRating.toString();
     }
 
 }

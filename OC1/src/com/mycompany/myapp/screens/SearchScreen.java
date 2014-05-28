@@ -39,7 +39,7 @@ final class SearchScreen
         searchList.onSelected(new ActionListener() {
             public void actionPerformed(ActionEvent evt) {
                 useSelectedProvider();
-                SearchScreen.this.back();
+                new ProviderDetailsScreen(SearchScreen.this).show();
             }
         });
     }
