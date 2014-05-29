@@ -18,19 +18,21 @@ public final class SearchableList<T> {
     private final FilterProxyListModel<T> filterProxyListModel;
     private final List<T> filteredList;
 
-    public final Container component;
+    public final BorderContainer component;
     
     public SearchableList(LiveList<T> items, ActionButton action) {
-        component = new Container();
         underlyingListModel = VirtualListModel.of(items);
         filterProxyListModel = new FilterProxyListModel(underlyingListModel);
         filteredList = new List(filterProxyListModel);
         FilterProxyListModel.install(searchTerm, filteredList);
-        component.addComponent(searchTerm);
-        component.addComponent(action);
-        component.addComponent(filteredList);
+        component = new BorderContainer(filteredList)
+             .addNorth(newNorthContainer(action));
     }
 
+    private Container newNorthContainer(ActionButton action) {
+        return new BorderContainer(searchTerm).addEast(action);
+    }
+    
     public void onSelected(ActionListener actionListener) {
         filteredList.addActionListener(actionListener);
     }
