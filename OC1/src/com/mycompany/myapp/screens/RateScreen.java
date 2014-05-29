@@ -52,7 +52,7 @@ final class RateScreen
     }
     
     private Container newRatingTable() {
-        return new TableContainer(1,4,
+        return new TableContainer(1,5,
             newRatingButton("*",    "people who can walk up a flight of stairs"),
             newRatingButton("**",   "slow walkers or wheelchair users who can get up a few steps"),
             newRatingButton("***",  "wheelchair users with full use of upper body (paraplegics)"),
