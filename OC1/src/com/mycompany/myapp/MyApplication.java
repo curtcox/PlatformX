@@ -22,9 +22,14 @@ public class MyApplication {
 
     private void loadTheme() throws IOException {
         Resources theme = Resources.openLayered("/theme");
+        setTheme(theme);
+        Registry.put(Resources.class, theme);
+    }
+
+    private void setTheme(Resources theme) throws IOException {
         UIManager.getInstance().setThemeProps(theme.getTheme(theme.getThemeResourceNames()[0]));
     }
-    
+
     public void start() {
         if (current != null){
             current.show();

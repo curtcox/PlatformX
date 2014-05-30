@@ -28,15 +28,31 @@ public final class HomeScreen
 
     private Container newNavigationContainer() {
         return new GridContainer(2,2,
-            buttonTo("Rate",new RateScreen(this)),
-            buttonTo("Search",new SearchScreen(this)),
-            buttonTo("Profile",new ProfileScreen(this)),
-            buttonTo("How To",new HowToScreen(this))
+            ratingScreenButton(),
+            searchScreenButton(),
+            profileScreenButton(),
+            howToScreenButton()
         );
     }
+
+    private Button ratingScreenButton() {
+        return buttonTo("Rate","rating.png",new RateScreen(this));
+    }
+
+    private Button searchScreenButton() {
+        return buttonTo("Search","system-search-4.png",new SearchScreen(this));
+    }
     
-    private Button buttonTo(String text, Screen leadingTo) {
-        return ScreenButton.textAndLeadingTo(text,leadingTo);
+    private Button profileScreenButton() {
+        return buttonTo("Profile","configure-4.png",new ProfileScreen(this));
+    }
+
+    private Button howToScreenButton() {
+        return buttonTo("How To","help.png",new HowToScreen(this));
+    }
+
+    private Button buttonTo(String text, String image, Screen leadingTo) {
+        return ScreenButton.textAndImageLeadingTo(text,image,leadingTo);
     }
     
     private void layoutForm() {
@@ -56,9 +72,9 @@ public final class HomeScreen
 
     private void layoutWithNoSelectedProvider() {
         form.setLayout(new GridLayout(3,1));
-        form.addComponent(buttonTo("Search",new SearchScreen(this)));
-        form.addComponent(buttonTo("Profile",new ProfileScreen(this)));
-        form.addComponent(buttonTo("How To",new HowToScreen(this)));
+        form.addComponent(searchScreenButton());
+        form.addComponent(profileScreenButton());
+        form.addComponent(howToScreenButton());
     }
 
     public static void showInitial() {

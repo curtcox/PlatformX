@@ -1,6 +1,8 @@
 package com.mycompany.myapp.screens;
 
+import com.codename1.ui.util.Resources;
 import com.mycompany.myapp.CurrentState;
+import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.event.Change.Source;
 import com.mycompany.myapp.ui.ActionButton;
 import com.mycompany.myapp.ui.StringSource;
@@ -10,7 +12,17 @@ import com.mycompany.myapp.ui.StringSource;
  * @author Curt
  */
 public final class ScreenButton {
-    
+
+    private static Resources resources() {
+        return Registry.get(Resources.class);
+    }
+
+    public static ActionButton textAndImageLeadingTo(String text,String image,final Screen screen) {
+        ActionButton button = textAndLeadingTo(text,screen);
+        button.setIcon(resources().getImage(image));
+        return button;
+    }
+
     public static ActionButton textAndLeadingTo(String text,final Screen screen) {
         return new ActionButton(text) {
             @Override
@@ -19,7 +31,7 @@ public final class ScreenButton {
             }
         };
     }
-
+   
     public static ActionButton textWatchingAndLeadingTo(StringSource source,Source change,Screen screen) {
         final ActionButton button = textAndLeadingTo(source.getString(),screen);
         button.updateTextOnChange(change, source);
