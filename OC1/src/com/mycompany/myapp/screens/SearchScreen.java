@@ -1,5 +1,7 @@
 package com.mycompany.myapp.screens;
 
+import com.codename1.ui.Component;
+import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.CurrentState;
@@ -7,6 +9,7 @@ import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.stores.ServiceProviders;
 import com.mycompany.myapp.ui.ActionButton;
+import com.mycompany.myapp.ui.BorderContainer;
 import com.mycompany.myapp.ui.SearchableList;
 
 /**
@@ -50,16 +53,33 @@ final class SearchScreen
     }
 
     private SearchableList<ServiceProvider> newSearchableList(int radius) {
-        return new SearchableList(ServiceProviders.of().nearby(radius),newZoomOutButton());
+        return new SearchableList(ServiceProviders.of().nearby(radius),newZoom());
+    }
+
+    private Component newZoom() {
+        return couldZoomOut() ? newZoomOutButton() : newZoomLabel();
+    }
+
+    private Label newZoomLabel() {
+        return new Label(friendlyMeters(radius) + " (Max)");
     }
 
     private ActionButton newZoomOutButton() {
-        return ScreenButton.lazyWithTextAndLeadingTo("+",newZoomOutLink());
+        return ScreenButton.lazyWithTextAndLeadingTo(friendlyMeters(radius) + " +",newZoomOutLink());
     }
 
     private ScreenFactory newZoomOutLink() {
         return new ScreenFactory() {
             public Screen create() { return new SearchScreen(SearchScreen.this.previous, radius * 4); }
         };
+    }
+
+    private String friendlyMeters(int radius) {
+        return (radius<1000) ? radius + "m" : radius / 1000 + "K";
+        
+    }
+
+    private boolean couldZoomOut() {
+        return radius * 4 < 30000;
     }
 }

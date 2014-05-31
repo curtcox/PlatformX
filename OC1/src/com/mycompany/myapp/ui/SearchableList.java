@@ -1,5 +1,6 @@
 package com.mycompany.myapp.ui;
 
+import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.List;
 import com.codename1.ui.TextField;
@@ -20,7 +21,7 @@ public final class SearchableList<T> {
 
     public final BorderContainer component;
     
-    public SearchableList(LiveList<T> items, ActionButton action) {
+    public SearchableList(LiveList<T> items, Component action) {
         underlyingListModel = VirtualListModel.of(items);
         filterProxyListModel = new FilterProxyListModel(underlyingListModel);
         filteredList = new List(filterProxyListModel);
@@ -29,7 +30,7 @@ public final class SearchableList<T> {
              .addNorth(newNorthContainer(action));
     }
 
-    private Container newNorthContainer(ActionButton action) {
+    private Container newNorthContainer(Component action) {
         return new BorderContainer(searchTerm).addEast(action);
     }
     
