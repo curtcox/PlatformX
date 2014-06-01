@@ -8,6 +8,7 @@ import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.services.Locations;
 import com.mycompany.myapp.stores.MyRatings;
 import com.mycompany.myapp.stores.ServiceProviders;
+import com.mycompany.myapp.ui.Icons;
 
 /**
  *
@@ -23,6 +24,7 @@ final class RegistryLoader {
         put(ServiceProvider.class,  new ServiceProvider(null,new Name(""),null,new Rating("")));
         put(ServiceProviders.class, new ServiceProviders());
         put(CurrentState.class,     new CurrentState());
+        put(Icons.class,            new Icons());
     }
 
     static void put(Class clazz, Object object) {
