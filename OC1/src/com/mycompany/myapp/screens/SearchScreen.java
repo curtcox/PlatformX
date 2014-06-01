@@ -1,14 +1,18 @@
 package com.mycompany.myapp.screens;
 
+import com.codename1.components.MultiButton;
 import com.codename1.ui.Component;
 import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.list.GenericListCellRenderer;
+import com.codename1.ui.list.ListCellRenderer;
 import com.mycompany.myapp.CurrentState;
 import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.stores.ServiceProviders;
 import com.mycompany.myapp.ui.ActionButton;
+import com.mycompany.myapp.ui.Icons;
 import com.mycompany.myapp.ui.SearchableList;
 
 /**
@@ -52,7 +56,7 @@ final class SearchScreen
     }
 
     private SearchableList<ServiceProvider> newSearchableList(int radius) {
-        return new SearchableList(ServiceProviders.of().nearby(radius),newZoom());
+        return new SearchableList(ServiceProviders.of().nearby(radius),newZoom(),new ServiceProviderListCellRenderer());
     }
 
     private Component newZoom() {
