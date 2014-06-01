@@ -33,8 +33,11 @@ public final class SimpleLiveList
         dataListeners.fireDataChangeEvent(index, type);
     }
 
-    public Object get(int location) {
-        return list.get(location);
+    public Object get(int index) {
+        if (index<0) {
+            return null;
+        }
+        return list.get(index);
     }
 
     public int size() {
