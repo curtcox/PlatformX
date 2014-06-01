@@ -13,7 +13,6 @@ import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.stores.MyRatings;
 import com.mycompany.myapp.ui.ActionButton;
 import com.mycompany.myapp.ui.GridContainer;
-import com.mycompany.myapp.ui.TableContainer;
 
 /**
  * See
@@ -52,7 +51,7 @@ final class RateScreen
     }
     
     private Container newRatingTable() {
-        return new TableContainer(1,5,
+        return new GridContainer(1,5,
             newRatingButton("*",    "people who can walk up a flight of stairs"),
             newRatingButton("**",   "slow walkers or wheelchair users who can get up a few steps"),
             newRatingButton("***",  "wheelchair users with full use of upper body (paraplegics)"),
@@ -70,13 +69,15 @@ final class RateScreen
     }
     
     private Button newRatingButton(final String ratingText, final String ratingDescription) {
-        return new ActionButton(" * ") {
+        ActionButton button = new ActionButton("") {
             public void onTap() {
                 rating.setText(ratingText);
                 description.setText(ratingDescription);
                 rateCurrentProvider(new Rating(ratingText));
             }
         };
+        button.setIcon("rating.png");
+        return button;
     }
 
     private void rateCurrentProvider(Rating rating) {

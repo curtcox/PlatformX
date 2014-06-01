@@ -9,7 +9,6 @@ import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.stores.ServiceProviders;
 import com.mycompany.myapp.ui.ActionButton;
-import com.mycompany.myapp.ui.BorderContainer;
 import com.mycompany.myapp.ui.SearchableList;
 
 /**

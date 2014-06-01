@@ -1,8 +1,6 @@
 package com.mycompany.myapp.screens;
 
-import com.codename1.ui.util.Resources;
 import com.mycompany.myapp.CurrentState;
-import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.event.Change.Source;
 import com.mycompany.myapp.ui.ActionButton;
 import com.mycompany.myapp.ui.StringSource;
@@ -13,13 +11,9 @@ import com.mycompany.myapp.ui.StringSource;
  */
 public final class ScreenButton {
 
-    private static Resources resources() {
-        return Registry.get(Resources.class);
-    }
-
     public static ActionButton textAndImageLeadingTo(String text,String image,final Screen screen) {
         ActionButton button = textAndLeadingTo(text,screen);
-        button.setIcon(resources().getImage(image));
+        button.setIcon(image);
         return button;
     }
 

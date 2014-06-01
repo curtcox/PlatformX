@@ -3,7 +3,9 @@ package com.mycompany.myapp.ui;
 import com.codename1.ui.Button;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.util.Resources;
 import com.mycompany.myapp.CurrentState;
+import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.event.Change;
 
 /**
@@ -14,6 +16,11 @@ import com.mycompany.myapp.event.Change;
 public abstract class ActionButton
     extends Button
 {
+
+    private static Resources resources() {
+        return Registry.get(Resources.class);
+    }
+
     public ActionButton(String name) {
         super(name);
         addActionListener(new ActionListener() {
@@ -44,4 +51,7 @@ public abstract class ActionButton
         });
     }
 
+    public void setIcon(String icon) {
+        setIcon(resources().getImage(icon));
+    }
 }
