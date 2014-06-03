@@ -1,5 +1,6 @@
 package google;
 
+import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.net.Network;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,7 +14,6 @@ import java.util.Map;
  */
 public final class PlacesSearch {
     
-    private final Network network = new Network();
     private static final String API_key = "";
     
     public List<Place> nearbySearch(double latitude, double longitude, int radius) {
@@ -35,7 +35,7 @@ public final class PlacesSearch {
     }
 
     private List<Place> searchForPlaces(String url) {
-        InputStream in = network.getStreamFor(url);
+        InputStream in = Registry.get(Network.class).getStreamFor(url);
         return parseJsonResponse(new InputStreamReader(in));
     } 
     
