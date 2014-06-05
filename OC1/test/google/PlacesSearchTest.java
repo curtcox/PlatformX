@@ -23,17 +23,28 @@ public class PlacesSearchTest {
     
     @Test
     public void can_create() {
-        new PlacesSearch();
+        assertNotNull(new PlacesSearch());
     }
 
     @Test
-    public void places_search_of_38_6269_neg_90_12697_conatins_arch() {
+    public void search_nearby_38_6269_neg_90_12697_contains_arch() {
         for (Place place : testObject.nearbySearch(38.6269d, -90.18697d, 100)) {
             if (place.name.contains("Jefferson National Expansion Memorial")) {
+                assertEquals("34bf6d6750168b338183d3ff4914768348d58374",place.id);
+                assertEquals("St Louis",place.vicinity);
                 return;
             }
         }
 
         fail();
+    }
+
+    Place getArchUsingNearbySearch() {
+        for (Place place : testObject.nearbySearch(38.6269d, -90.18697d, 100)) {
+            if (place.name.contains("Jefferson National Expansion Memorial")) {
+                return place;
+            }
+        }
+        throw new RuntimeException();
     }
 }

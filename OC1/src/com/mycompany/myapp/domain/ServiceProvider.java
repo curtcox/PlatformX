@@ -4,6 +4,7 @@ import com.codename1.location.Location;
 import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.services.Locations;
 import com.mycompany.myapp.ui.StringSource;
+import java.net.URI;
 
 /**
  *
@@ -14,13 +15,23 @@ public final class ServiceProvider {
     public final ID id;
     public final Name name;
     public final Location location;
+    public final String address;
+    public final Double priceLevel;
+    public final String[] types;
+    public final URI icon;
     private Rating myRating;
     
-    public ServiceProvider(ID id, Name name, Location location, Rating myRating) {
+    public static final ServiceProvider NULL = new ServiceProvider(null,new Name(""),null,null,null,null,null,new Rating(""));
+    
+    public ServiceProvider(ID id, Name name, Location location, String address, Double priceLevel, String[] types, URI icon, Rating myRating) {
         this.id = id;
         this.name = name;
         this.location = location;
+        this.address = address;
         this.myRating = myRating;
+        this.priceLevel = priceLevel;
+        this.types = types;
+        this.icon = icon;
     }
 
     public Rating myRating() {

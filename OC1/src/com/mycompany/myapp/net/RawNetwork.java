@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 /**
- *
+ * Network implementation that does not use cached responses. 
  * @author Curt
  */
 public final class RawNetwork
