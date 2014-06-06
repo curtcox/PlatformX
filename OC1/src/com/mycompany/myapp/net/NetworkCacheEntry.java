@@ -2,9 +2,13 @@ package com.mycompany.myapp.net;
 
 import com.codename1.io.Storage;
 import com.codename1.io.Util;
+import com.codename1.ui.EncodedImage;
+import com.codename1.ui.Image;
+import com.codename1.ui.URLImage;
 import com.mycompany.myapp.Registry;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 
 /**
  *
@@ -12,21 +16,21 @@ import java.io.InputStream;
  */
 final class NetworkCacheEntry {
     
-    final String url;
+    final URI url;
     final String fileName;
 
-    static NetworkCacheEntry newEntryFor(String url) {
+    static NetworkCacheEntry newEntryFor(URI url) {
         return new NetworkCacheEntry(url,"u_" + Integer.toHexString(url.hashCode()));
     }
 
-    NetworkCacheEntry(String url, String fileName) {
+    NetworkCacheEntry(URI url, String fileName) {
         this.url = url;
         this.fileName = fileName;
     }
 
     boolean downloadToStorageWasOK() {
         boolean showProgress = false;
-        return Util.downloadUrlToStorage(url, fileName, showProgress);
+        return Util.downloadUrlToStorage(url.toString(), fileName, showProgress);
     }
 
     InputStream getStreamFromStorage() throws IOException {
@@ -36,6 +40,11 @@ final class NetworkCacheEntry {
     @Override
     public String toString() {
         return url + " url=>" + fileName;
+    }
+
+    Image createImageToStorage() {
+        EncodedImage placeholder = new EncodedImage(71, 71){};
+        return URLImage.createToStorage(placeholder, fileName, url.toString(), URLImage.RESIZE_SCALE);
     }
 
 }

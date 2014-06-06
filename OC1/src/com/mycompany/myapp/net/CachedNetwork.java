@@ -1,8 +1,10 @@
 package com.mycompany.myapp.net;
 
+import com.codename1.ui.Image;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -14,9 +16,9 @@ public final class CachedNetwork
     implements Network
 {
 
-    final Map<String,NetworkCacheEntry> entries = new HashMap();
+    final Map<URI,NetworkCacheEntry> entries = new HashMap();
 
-    public InputStream getStreamFor(String url) {
+    public InputStream getStreamFor(URI url) {
         try {
             NetworkCacheEntry entry = NetworkCacheEntry.newEntryFor(url);
             if (entries.containsKey(url)) {
@@ -32,6 +34,10 @@ public final class CachedNetwork
             e.printStackTrace();
             return new ByteArrayInputStream(new byte[0]);
         }
+    }
+
+    public Image getImage(URI uri) {
+        return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
     }
 
 }

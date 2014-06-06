@@ -1,5 +1,7 @@
 package google;
 
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Map;
 
 /**
@@ -8,11 +10,15 @@ import java.util.Map;
  */
 final class GoogleUrl {
     
-    static String of(String base,Map<String,String> parameters) {
-        StringBuilder out = new StringBuilder(base);
-        for (String key : parameters.keySet()) {
-            out.append(key + "=" + parameters.get(key) + "&");
+    static URI of(String base,Map<String,String> parameters) {
+        try {
+            StringBuilder out = new StringBuilder(base);
+            for (String key : parameters.keySet()) {
+                out.append(key + "=" + parameters.get(key) + "&");
+            }
+            return new URI(out.toString());
+        } catch (URISyntaxException e) {
+            throw new RuntimeException();
         }
-        return out.toString();
     }
 }

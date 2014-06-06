@@ -1,8 +1,10 @@
 package j2se;
 
+import com.codename1.ui.Image;
 import com.mycompany.myapp.net.Network;
+import java.io.IOException;
 import java.io.InputStream;
-import java.net.URL;
+import java.net.URI;
 
 /**
  * Testing network implementation that uses J2SE.
@@ -12,13 +14,16 @@ public class J2seNetwork
     implements Network
 {
 
-    public InputStream getStreamFor(String urlString) {
+    public InputStream getStreamFor(URI uri) {
         try {
-            URL url = new URL(urlString);
-            return url.openStream();
-        } catch (Exception e) {
+            return uri.toURL().openStream();
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public Image getImage(URI uri) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
     
 }

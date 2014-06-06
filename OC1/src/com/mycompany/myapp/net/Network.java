@@ -1,6 +1,8 @@
 package com.mycompany.myapp.net;
 
+import com.codename1.ui.Image;
 import java.io.InputStream;
+import java.net.URI;
 
 /**
  *
@@ -8,6 +10,7 @@ import java.io.InputStream;
  */
 public interface Network {
 
-    InputStream getStreamFor(String url);
+    InputStream getStreamFor(URI uri);
 
+    Image getImage(URI uri);
 }

@@ -4,6 +4,7 @@ import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.net.Network;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,7 +23,7 @@ public final class PlacesSearch {
         parameters.put("radius",Integer.toString(radius));
         parameters.put("location",latitude + "," + longitude);
         parameters.put("sensor","true");
-        String url = GoogleUrl.of("https://maps.googleapis.com/maps/api/place/nearbysearch/json?",parameters);
+        URI url = GoogleUrl.of("https://maps.googleapis.com/maps/api/place/nearbysearch/json?",parameters);
         return searchForPlaces(url);
     }
 
@@ -34,7 +35,7 @@ public final class PlacesSearch {
         throw new RuntimeException();
     }
 
-    private List<Place> searchForPlaces(String url) {
+    private List<Place> searchForPlaces(URI url) {
         InputStream in = Registry.get(Network.class).getStreamFor(url);
         return parseJsonResponse(new InputStreamReader(in));
     } 
@@ -43,5 +44,18 @@ public final class PlacesSearch {
         PlacesResponseParser parser = new PlacesResponseParser();
         return parser.parseJsonResponse(reader);
     } 
-    
+
+    public Place details(String reference) {
+        Map<String,String> parameters = new HashMap();
+        parameters.put("key",API_key);
+        parameters.put("reference",reference);
+        parameters.put("sensor","true");
+        URI url = GoogleUrl.of("https://maps.googleapis.com/maps/api/place/details/json?",parameters);
+        return searchForDetails(url);
+    }
+
+    private Place searchForDetails(URI url) {
+        throw new RuntimeException();
+    } 
+
 }

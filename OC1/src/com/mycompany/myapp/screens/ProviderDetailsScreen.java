@@ -1,8 +1,9 @@
 package com.mycompany.myapp.screens;
 
 import com.codename1.ui.Label;
-import com.codename1.ui.layouts.GridLayout;
+import com.codename1.ui.table.TableLayout;
 import com.mycompany.myapp.domain.ServiceProvider;
+import com.mycompany.myapp.ui.Icons;
 import java.util.Arrays;
 
 /**
@@ -21,7 +22,7 @@ final class ProviderDetailsScreen
 
     ProviderDetailsScreen(Screen previous) {
         super("Provider Details",previous);
-        form.setLayout(new GridLayout(7,1));
+        form.setLayout(new TableLayout(7,1));
         form.addComponent(name);
         form.addComponent(distance);
         form.addComponent(vicinity);
@@ -46,11 +47,12 @@ final class ProviderDetailsScreen
     }
     
     private void updatePrice() {
-        price.setText("" + provider().priceLevel);
+        Double priceLevel = provider().priceLevel;
+        price.setText((priceLevel == null) ? "No price information" : "Price Level : " + priceLevel);
     }
 
     private void updateIcon() {
-        icon.setText("" + provider().icon);
+        icon.setIcon(Icons.of().getImage(provider().icon));
     }
     
     private void updateTypes() {
