@@ -35,6 +35,10 @@ public final class MapStorageIO<K,V> {
 
     Map<K, V> readMap() {
         Map<K,V> map = new HashMap();
+        if (!storage.exists(file)) {
+            System.out.println(file + " not found in storage");
+            return map;
+        }
         try {
             readMap(map,io,new DataInputStream(fromStorage()));
         } catch (IOException e) {
