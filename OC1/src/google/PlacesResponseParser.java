@@ -1,6 +1,7 @@
 package google;
 
 import com.codename1.io.JSONParser;
+import com.mycompany.myapp.ui.Icons;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
@@ -77,7 +78,9 @@ public final class PlacesResponseParser {
     URI uriFrom(Map<String,Object> map, String key) {
         String string = stringFrom(map,key);
         try {
-            return (string==null) ? null : new URI(string);
+            URI uri = (string==null) ? null : new URI(string);
+            Icons.of().getImage(uri);
+            return uri;
         } catch (URISyntaxException e) {
             e.printStackTrace();
             return null;

@@ -44,7 +44,9 @@ final class NetworkCacheEntry {
 
     Image createImageToStorage() {
         EncodedImage placeholder = new EncodedImage(71, 71){};
-        return URLImage.createToStorage(placeholder, fileName, url.toString(), URLImage.RESIZE_SCALE);
+        URLImage image = URLImage.createToStorage(placeholder, fileName, url.toString(), URLImage.RESIZE_SCALE);
+        image.fetch();
+        return image;
     }
 
 }

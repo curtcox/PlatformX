@@ -6,6 +6,7 @@ import com.codename1.ui.List;
 import com.codename1.ui.list.GenericListCellRenderer;
 import com.codename1.ui.list.ListCellRenderer;
 import com.mycompany.myapp.domain.ServiceProvider;
+import com.mycompany.myapp.ui.Icons;
 
 /**
  *
@@ -21,13 +22,18 @@ final class ServiceProviderListCellRenderer
 
     public Component getListCellRendererComponent(List list, Object value, int index, boolean isSelected) {
         ServiceProvider provider = (ServiceProvider) value;
-        MultiButton component = (MultiButton) renderer.getListCellRendererComponent(list, provider.name.toString(), index, isSelected);
+        MultiButton component = getMultiButton(list, provider, index, isSelected);
         configureButton(component,provider);
         return component;
     }
 
+    private MultiButton getMultiButton(List list, ServiceProvider provider, int index, boolean isSelected) {
+        return (MultiButton) renderer.getListCellRendererComponent(list, provider.name.toString(), index, isSelected);
+    }
+
     private void configureButton(MultiButton button, ServiceProvider provider) {
         button.setTextLine1(ratingAndDistance(provider));
+        button.setIcon(Icons.of().getImage(provider.icon));
     }
 
     private String ratingAndDistance(ServiceProvider provider) {

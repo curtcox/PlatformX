@@ -74,8 +74,7 @@ final class SearchScreen
     }
 
     private String friendlyMeters(int radius) {
-        return (radius<1000) ? radius + "m" : radius / 1000 + "K";
-        
+        return (radius<1000) ? radius + "m" : radius / 1000 + "K";     
     }
 
     private boolean couldZoomOut() {
