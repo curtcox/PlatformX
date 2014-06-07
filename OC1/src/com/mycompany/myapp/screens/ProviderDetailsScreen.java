@@ -64,7 +64,7 @@ final class ProviderDetailsScreen
     }
 
     private void updateVicinity() {
-        vicinity.setText(provider().address);
+        vicinity.setText(provider().address.toString());
     }
 
     private ServiceProvider provider() {

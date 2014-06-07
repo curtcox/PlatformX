@@ -15,7 +15,7 @@ public final class ServiceProvider {
     public final ID id;
     public final Name name;
     public final Location location;
-    public final String address;
+    public final Address address;
     public final Double priceLevel;
     public final String[] types;
     public final URI icon;
@@ -23,7 +23,7 @@ public final class ServiceProvider {
     
     public static final ServiceProvider NULL = new ServiceProvider(null,new Name(""),null,null,null,null,null,new Rating(""));
     
-    public ServiceProvider(ID id, Name name, Location location, String address, Double priceLevel, String[] types, URI icon, Rating myRating) {
+    public ServiceProvider(ID id, Name name, Location location, Address address, Double priceLevel, String[] types, URI icon, Rating myRating) {
         this.id = id;
         this.name = name;
         this.location = location;
