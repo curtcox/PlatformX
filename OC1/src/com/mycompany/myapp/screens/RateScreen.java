@@ -87,7 +87,7 @@ final class RateScreen
     }
     
     private Component newChangeLocationButton() {
-        return ScreenButton.textAndLeadingTo("Pick a different location",new SearchScreen(RateScreen.this));
+        return ScreenButton.textAndLeadingTo("Pick a different location",SearchScreen.of(RateScreen.this));
     }
 
     private ServiceProvider provider() {

@@ -1,14 +1,13 @@
 package com.mycompany.myapp.screens;
 
 import com.codename1.ui.Component;
-import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.CurrentState;
 import com.mycompany.myapp.Registry;
 import com.mycompany.myapp.domain.ServiceProvider;
+import com.mycompany.myapp.event.LiveList;
 import com.mycompany.myapp.stores.ServiceProviders;
-import com.mycompany.myapp.ui.ActionButton;
 import com.mycompany.myapp.ui.SearchableList;
 
 /**
@@ -21,18 +20,43 @@ final class SearchScreen
     final int radius;
     final SearchableList<ServiceProvider> searchList;
 
-    SearchScreen(Screen previous) { 
-        this(previous,100);
-    }
-    
-    SearchScreen(Screen previous,int radius) { 
+    private SearchScreen(Screen previous,int radius, SearchableList<ServiceProvider> searchList) { 
         super("Search",previous);
         this.radius = radius;
-        searchList = newSearchableList(radius);
+        this.searchList = searchList;
         layoutForm();
         addSelectionListener();
     }
+
+    static SearchScreen of(Screen previous) {
+        return of(previous,100);    
+    }
     
+    static SearchScreen of(Screen previous, int radius) {
+        ZoomOut zoomOut = new ZoomOut(previous,radius);
+        LiveList<ServiceProvider> providers = ServiceProviders.of().nearby(radius);
+        while (zoomOut.couldZoomOut() && providers.size()<2) {
+            radius *= 4;
+            providers = ServiceProviders.of().nearby(radius);
+        }
+        Component zoom = zoomOut.createComponent();
+        SearchableList<ServiceProvider> searchList = newSearchableList(providers,zoom);
+        return new SearchScreen(previous,radius,searchList);    
+    }
+
+    static LiveList<ServiceProvider> getProviders(ZoomOut zoomOut) {
+        LiveList<ServiceProvider> providers = ServiceProviders.of().nearby(zoomOut.radius);
+        while (zoomOut.couldZoomOut() && providers.size()<2) {
+            zoomOut = zoomOut.zoomOut();
+            providers = ServiceProviders.of().nearby(zoomOut.radius);
+        }
+        return providers;
+    }
+    
+    private static SearchableList<ServiceProvider> newSearchableList(LiveList providers,Component zoom) {
+        return new SearchableList(providers,zoom,new ServiceProviderListCellRenderer());
+    }
+
     private void layoutForm() {
         form.addComponent(searchList.component);
     }
@@ -49,35 +73,5 @@ final class SearchScreen
     private void useSelectedProvider() {
         Registry.put(ServiceProvider.class,searchList.getSelected());
         CurrentState.get().broadcastChange();
-    }
-
-    private SearchableList<ServiceProvider> newSearchableList(int radius) {
-        return new SearchableList(ServiceProviders.of().nearby(radius),newZoom(),new ServiceProviderListCellRenderer());
-    }
-
-    private Component newZoom() {
-        return couldZoomOut() ? newZoomOutButton() : newZoomLabel();
-    }
-
-    private Label newZoomLabel() {
-        return new Label(friendlyMeters(radius) + " (Max)");
-    }
-
-    private ActionButton newZoomOutButton() {
-        return ScreenButton.lazyWithTextAndLeadingTo(friendlyMeters(radius) + " +",newZoomOutLink());
-    }
-
-    private ScreenFactory newZoomOutLink() {
-        return new ScreenFactory() {
-            public Screen create() { return new SearchScreen(SearchScreen.this.previous, radius * 4); }
-        };
-    }
-
-    private String friendlyMeters(int radius) {
-        return (radius<1000) ? radius + "m" : radius / 1000 + "K";     
-    }
-
-    private boolean couldZoomOut() {
-        return radius * 4 < 30000;
     }
 }

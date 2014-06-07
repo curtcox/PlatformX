@@ -40,7 +40,7 @@ public final class HomeScreen
     }
 
     private Button searchScreenButton() {
-        return buttonTo("Search","system-search-4.png",new SearchScreen(this));
+        return buttonTo("Search","system-search-4.png",SearchScreen.of(this));
     }
     
     private Button profileScreenButton() {
