@@ -1,6 +1,8 @@
 package google;
 
 import com.codename1.io.JSONParser;
+import com.mycompany.myapp.log.Log;
+import com.mycompany.myapp.log.LogManager;
 import com.mycompany.myapp.ui.Icons;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -25,16 +27,16 @@ public final class PlacesResponseParser {
             }
             return places;
         } catch (IOException e) {
-            e.printStackTrace();
+            log(e);
         } catch (RuntimeException e) {
-            e.printStackTrace();
+            log(e);
         }
         return places;
     } 
     
     Iterable<Map<String,Object>> results(Map<String,Object> tree) {
         if (tree.isEmpty()) {
-            System.out.println("Places Response Parser -- No results found -- failed request");
+            log("Places Response Parser -- No results found -- failed request");
             return new ArrayList();
         }
         return (List)tree.get("results");
@@ -86,8 +88,21 @@ public final class PlacesResponseParser {
             Icons.of().getImage(uri);
             return uri;
         } catch (URISyntaxException e) {
-            e.printStackTrace();
+            log(e);
             return null;
         }
     }
+    
+    private void log(Exception e) {
+        getLog().log(e);    
+    }
+
+    private void log(String message) {
+        getLog().log(message);    
+    }
+
+    private Log getLog() {
+        return LogManager.of().getLog(PlacesResponseParser.class);    
+    }
+
 }

@@ -1,6 +1,8 @@
 package com.mycompany.myapp.stores;
 
 import com.codename1.io.Storage;
+import com.mycompany.myapp.log.Log;
+import com.mycompany.myapp.log.LogManager;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -36,13 +38,13 @@ public final class MapStorageIO<K,V> {
     public Map<K, V> readMap() {
         Map<K,V> map = new HashMap();
         if (!storage.exists(file)) {
-            System.out.println(file + " not found in storage");
+            log(file + " not found in storage");
             return map;
         }
         try {
             readMap(map,io,new DataInputStream(fromStorage()));
         } catch (IOException e) {
-            e.printStackTrace();
+            log(e);
         } 
         return map;
     }
@@ -51,7 +53,7 @@ public final class MapStorageIO<K,V> {
         try {
             writeMap(map,new DataOutputStream(toStorage()));
         } catch (IOException e) {
-            e.printStackTrace();
+            log(e);
         } 
     }
 
@@ -102,6 +104,18 @@ public final class MapStorageIO<K,V> {
     private String readString(DataInputStream data) throws IOException {
         String value = data.readUTF();
         return value;
+    }
+
+    private void log(Exception e) {
+        getLog().log(e);    
+    }
+
+    private void log(String message) {
+        getLog().log(message);    
+    }
+
+    private Log getLog() {
+        return LogManager.of().getLog(MapStorageIO.class);    
     }
 
 }

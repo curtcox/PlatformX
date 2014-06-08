@@ -3,6 +3,8 @@ package com.mycompany.myapp.net;
 import com.codename1.io.Storage;
 import com.codename1.ui.Image;
 import com.mycompany.myapp.Registry;
+import com.mycompany.myapp.log.Log;
+import com.mycompany.myapp.log.LogManager;
 import com.mycompany.myapp.stores.MapStorageIO;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -41,7 +43,7 @@ public final class CachedNetwork
             cacheOnDownloadOK(entry);
             return entry.getStreamFromStorage();
         } catch (IOException e) {
-            e.printStackTrace();
+            log(e);
             return emptyStream();
         }
     }
@@ -55,7 +57,7 @@ public final class CachedNetwork
             entries.put(entry.uri, entry);
             saveEntriesToStorage();
         } else {
-            System.out.println("Download failed");            
+            log("Download failed");
         }
     }
     
@@ -71,4 +73,15 @@ public final class CachedNetwork
         io.writeMap(entries);
     }
 
+    private void log(Exception e) {
+        getLog().log(e);    
+    }
+
+    private void log(String message) {
+        getLog().log(message);    
+    }
+
+    private Log getLog() {
+        return LogManager.of().getLog(CachedNetwork.class);    
+    }
 }

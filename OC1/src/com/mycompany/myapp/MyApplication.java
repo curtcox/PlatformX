@@ -1,10 +1,11 @@
 package com.mycompany.myapp;
 
-import com.mycompany.myapp.screens.HomeScreen;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import com.mycompany.myapp.log.LogManager;
+import com.mycompany.myapp.screens.HomeScreen;
 import java.io.IOException;
 
 public class MyApplication {
@@ -16,10 +17,14 @@ public class MyApplication {
             loadTheme();
             RegistryLoader.load();
         } catch(IOException e){
-            e.printStackTrace();
+            log(e);
         }
     }
 
+    private void log(Exception e) {
+        LogManager.of().getLog(MyApplication.class).log(e);    
+    }
+    
     private void loadTheme() throws IOException {
         Resources theme = Resources.openLayered("/theme");
         setTheme(theme);

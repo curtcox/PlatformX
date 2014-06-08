@@ -15,7 +15,7 @@ public final class HomeScreen
 {
    
     HomeScreen() {
-        super("Oyster Cracker",null);
+        super("Oyster Cracker 2014/6/8",null);
         layoutForm();
     }
 

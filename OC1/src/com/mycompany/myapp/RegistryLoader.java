@@ -3,6 +3,7 @@ package com.mycompany.myapp;
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import com.mycompany.myapp.domain.ServiceProvider;
+import com.mycompany.myapp.log.LogManager;
 import com.mycompany.myapp.net.CachedNetwork;
 import com.mycompany.myapp.net.Network;
 import com.mycompany.myapp.services.Locations;
@@ -17,6 +18,7 @@ import com.mycompany.myapp.ui.Icons;
 final class RegistryLoader {
     
     static void load() {
+        put(LogManager.class,       new LogManager());
         put(Storage.class,          new Storage());
         put(Network.class,          new CachedNetwork());
         put(MyRatings.class,        new MyRatings());
