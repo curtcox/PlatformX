@@ -2,8 +2,10 @@ package com.mycompany.myapp;
 
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
+import com.codename1.ui.Display;
 import com.mycompany.myapp.domain.ServiceProvider;
 import com.mycompany.myapp.log.LogManager;
+import com.mycompany.myapp.log.LogWriter;
 import com.mycompany.myapp.net.CachedNetwork;
 import com.mycompany.myapp.net.Network;
 import com.mycompany.myapp.services.Locations;
@@ -19,6 +21,8 @@ final class RegistryLoader {
     
     static void load() {
         put(LogManager.class,       new LogManager());
+        put(LogWriter.class,        new LogWriter());
+        put(Display.class,          Display.getInstance());
         put(Storage.class,          new Storage());
         put(Network.class,          new CachedNetwork());
         put(MyRatings.class,        new MyRatings());

@@ -22,7 +22,7 @@ public final class Log {
     }
 
     public void log(String message) {
-        System.out.println(now() + prefix + message);
+        getLogWriter().log(now() + prefix + message);
     }
     
     String now() {
@@ -31,5 +31,9 @@ public final class Log {
 
     private String hex(long value) {
         return "" + value;
+    }
+    
+    private LogWriter getLogWriter() {
+        return LogWriter.of();
     }
 }

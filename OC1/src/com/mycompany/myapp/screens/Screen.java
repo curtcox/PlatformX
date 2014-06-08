@@ -3,6 +3,7 @@ package com.mycompany.myapp.screens;
 import com.codename1.ui.Command;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
+import com.mycompany.myapp.log.LogManager;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
@@ -37,12 +38,14 @@ public abstract class Screen {
     }
 
     void show() {
+        log("show " + form.getTitle());
         refresh();
         form.show();
         form.setBackCommand(back);
     }
    
     void back() {
+        log("back " + form.getTitle());
         if (previous!=null) {
             previous.refresh();
             previous.form.showBack();
@@ -55,4 +58,9 @@ public abstract class Screen {
      * changed since the last showing.
      */
     protected void refresh() {}
+    
+    private void log(String message) {
+        LogManager.of().getLog(Screen.class).log(message);    
+    }
+
 }

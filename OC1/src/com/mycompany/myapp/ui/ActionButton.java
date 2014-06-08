@@ -4,7 +4,9 @@ import com.codename1.ui.Button;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.mycompany.myapp.CurrentState;
+import com.mycompany.myapp.MyApplication;
 import com.mycompany.myapp.event.Change;
+import com.mycompany.myapp.log.LogManager;
 
 /**
  * Skeletal implementation of a button that does something when you tap it.
@@ -15,10 +17,11 @@ public abstract class ActionButton
     extends Button
 {
 
-    public ActionButton(String name) {
+    public ActionButton(final String name) {
         super(name);
         addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
+                log("tapped " + name);
                 ActionButton.this.onTap();
             }
         });
@@ -48,4 +51,9 @@ public abstract class ActionButton
     public void setIcon(String icon) {
         setIcon(Icons.of().getImage(icon));
     }
+    
+    private void log(String message) {
+        LogManager.of().getLog(ActionButton.class).log(message);    
+    }
+
 }

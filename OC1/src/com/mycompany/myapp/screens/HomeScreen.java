@@ -14,8 +14,10 @@ public final class HomeScreen
     extends Screen
 {
    
+    public static final String VERSION = "Oyster Cracker 2014/6/8";
+    
     HomeScreen() {
-        super("Oyster Cracker 2014/6/8",null);
+        super(VERSION,null);
         layoutForm();
     }
 
