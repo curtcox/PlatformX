@@ -18,26 +18,34 @@ public final class CachedNetwork
 
     final Map<URI,NetworkCacheEntry> entries = new HashMap();
 
-    public InputStream getStreamFor(URI url) {
+    public InputStream getStreamFor(URI uri) {
         try {
-            NetworkCacheEntry entry = NetworkCacheEntry.newEntryFor(url);
-            if (entries.containsKey(url)) {
-                return entry.getStreamFromStorage();
+            if (entries.containsKey(uri)) {
+                return entries.get(uri).getStreamFromStorage();
             }
-            if (entry.downloadToStorageWasOK()) {
-                entries.put(url, entry);
-            } else {
-                System.out.println("Download failed");            
-            }
+            NetworkCacheEntry entry = NetworkCacheEntry.newEntryFor(uri);
+            cacheOnDownloadOK(entry);
             return entry.getStreamFromStorage();
         } catch (IOException e) {
             e.printStackTrace();
-            return new ByteArrayInputStream(new byte[0]);
+            return emptyStream();
         }
     }
 
     public Image getImage(URI uri) {
         return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
     }
+
+    private void cacheOnDownloadOK(NetworkCacheEntry entry) {
+        if (entry.downloadToStorageWasOK()) {
+            entries.put(entry.uri, entry);
+        } else {
+            System.out.println("Download failed");            
+        }
+    }
+    
+    private InputStream emptyStream() {
+        return new ByteArrayInputStream(new byte[0]);
+   }
 
 }
