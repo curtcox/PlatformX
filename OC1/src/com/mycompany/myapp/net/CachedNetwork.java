@@ -1,6 +1,9 @@
 package com.mycompany.myapp.net;
 
+import com.codename1.io.Storage;
 import com.codename1.ui.Image;
+import com.mycompany.myapp.Registry;
+import com.mycompany.myapp.stores.MapStorageIO;
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -16,7 +19,18 @@ public final class CachedNetwork
     implements Network
 {
 
-    final Map<URI,NetworkCacheEntry> entries = new HashMap();
+    private final Map<URI,NetworkCacheEntry> entries = new HashMap();
+    private final MapStorageIO io;
+    private static final String CACHE_ENTRIES = "network_cache_entries";
+    
+    public CachedNetwork() {
+        io = new MapStorageIO(getStorage(),new CachedNetworkEntriesIO(),CACHE_ENTRIES);
+        loadEntriesFromStorage();    
+    }
+
+    private Storage getStorage() {
+        return Registry.get(Storage.class);
+    }
 
     public InputStream getStreamFor(URI uri) {
         try {
@@ -39,6 +53,7 @@ public final class CachedNetwork
     private void cacheOnDownloadOK(NetworkCacheEntry entry) {
         if (entry.downloadToStorageWasOK()) {
             entries.put(entry.uri, entry);
+            saveEntriesToStorage();
         } else {
             System.out.println("Download failed");            
         }
@@ -46,6 +61,14 @@ public final class CachedNetwork
     
     private InputStream emptyStream() {
         return new ByteArrayInputStream(new byte[0]);
-   }
+    }
+
+    private void loadEntriesFromStorage() {
+        entries.putAll(io.readMap());
+    }
+
+    private void saveEntriesToStorage() {
+        io.writeMap(entries);
+    }
 
 }

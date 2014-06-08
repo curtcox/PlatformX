@@ -17,8 +17,8 @@ import com.mycompany.myapp.ui.Icons;
 final class RegistryLoader {
     
     static void load() {
-        put(Network.class,          new CachedNetwork());
         put(Storage.class,          new Storage());
+        put(Network.class,          new CachedNetwork());
         put(MyRatings.class,        new MyRatings());
         put(LocationManager.class,  LocationManager.getLocationManager());
         put(Locations.class,        new Locations());

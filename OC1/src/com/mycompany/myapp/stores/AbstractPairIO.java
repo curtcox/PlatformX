@@ -1,5 +1,7 @@
 package com.mycompany.myapp.stores;
 
+import com.mycompany.myapp.util.Strings;
+
 /**
  * A skeletal implementation of PairIO.
  * @author Curt
@@ -7,6 +9,12 @@ package com.mycompany.myapp.stores;
 public abstract class AbstractPairIO<K,V>
     implements PairIO<K,V>
 {
+    final String separator;
+    
+    public AbstractPairIO(String separator) {
+        this.separator = separator;    
+    }
+    
     public K readKey(String pair) {
         return keyFrom(split(pair)[0]);
     }
@@ -16,14 +24,11 @@ public abstract class AbstractPairIO<K,V>
     }
     
     public String writePair(K key,V value) {
-        return key + "=" + value;
+        return key + separator + value;
     }
 
     private String[] split(String pair) {
-        int at = pair.indexOf("=");
-        String key = pair.substring(0,at);
-        String value = pair.substring(at+1, pair.length());
-        return new String[] {key,value};
+        return Strings.split(pair,separator);
     }
 
     public abstract K keyFrom(String string);

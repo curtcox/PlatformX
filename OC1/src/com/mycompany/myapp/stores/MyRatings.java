@@ -22,8 +22,12 @@ public final class MyRatings {
     }
     
     public MyRatings() {
-        io = new MapStorageIO(Registry.get(Storage.class),new MyRatingsIO(),MY_RATINGS);
+        io = new MapStorageIO(getStorage(),new MyRatingsIO(),MY_RATINGS);
         loadRatingsFromStorage();    
+    }
+
+    private Storage getStorage() {
+        return Registry.get(Storage.class);
     }
     
     public Rating getFor(ID id) {

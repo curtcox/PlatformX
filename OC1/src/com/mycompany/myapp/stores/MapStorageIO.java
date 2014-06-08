@@ -19,7 +19,7 @@ public final class MapStorageIO<K,V> {
     private final Storage storage;
     private final String file; 
     
-    MapStorageIO(Storage storage, PairIO<K,V> io, String file) {
+    public MapStorageIO(Storage storage, PairIO<K,V> io, String file) {
         this.storage = storage;
         this.file = file;
         this.io = io;
@@ -33,7 +33,7 @@ public final class MapStorageIO<K,V> {
         return storage.createInputStream(file);
     }
 
-    Map<K, V> readMap() {
+    public Map<K, V> readMap() {
         Map<K,V> map = new HashMap();
         if (!storage.exists(file)) {
             System.out.println(file + " not found in storage");
@@ -47,7 +47,7 @@ public final class MapStorageIO<K,V> {
         return map;
     }
 
-    void writeMap(Map<K, V> map) {
+    public void writeMap(Map<K, V> map) {
         try {
             writeMap(map,new DataOutputStream(toStorage()));
         } catch (IOException e) {
@@ -55,7 +55,7 @@ public final class MapStorageIO<K,V> {
         } 
     }
 
-    void writeMap(Map<K, V> map, DataOutputStream data) throws IOException {
+    private void writeMap(Map<K, V> map, DataOutputStream data) throws IOException {
         write(data,"Map");
         write(data,"size=");
         write(data,map.size());

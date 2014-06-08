@@ -6,26 +6,30 @@ import com.codename1.ui.EncodedImage;
 import com.codename1.ui.Image;
 import com.codename1.ui.URLImage;
 import com.mycompany.myapp.Registry;
+import com.mycompany.myapp.util.Strings;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
+import java.net.URISyntaxException;
 
 /**
  *
  * @author Curt
  */
 final class NetworkCacheEntry {
-    
+
     final URI uri;
     final String fileName;
+    final long timeStamp;
 
     static NetworkCacheEntry newEntryFor(URI url) {
-        return new NetworkCacheEntry(url,"u_" + Integer.toHexString(url.hashCode()));
+        return new NetworkCacheEntry(url,"u_" + Integer.toHexString(url.hashCode()),System.currentTimeMillis());
     }
 
-    NetworkCacheEntry(URI url, String fileName) {
+    private NetworkCacheEntry(URI url, String fileName, long timeStamp) {
         this.uri = url;
         this.fileName = fileName;
+        this.timeStamp = timeStamp;
     }
 
     boolean downloadToStorageWasOK() {
@@ -43,7 +47,19 @@ final class NetworkCacheEntry {
     
     @Override
     public String toString() {
-        return uri + " url=>" + fileName;
+        return uri + " " + fileName + " " + timeStamp;
+    }
+
+    static NetworkCacheEntry parse(String string) {
+        try {
+            String[] parts = Strings.split(string," ");
+            URI uri = new URI(parts[0]);
+            String fileName = parts[1];
+            long timeStamp = Long.parseLong(parts[2]);
+            return new NetworkCacheEntry(uri,fileName,timeStamp);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException();
+        }
     }
 
     Image createImageToStorage() {

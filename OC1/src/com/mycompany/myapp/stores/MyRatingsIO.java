@@ -10,6 +10,9 @@ import com.mycompany.myapp.domain.Rating;
 final class MyRatingsIO
     extends AbstractPairIO
 {
+    MyRatingsIO() {
+        super("=");
+    }
     
     @Override
     public ID keyFrom(String string) {
