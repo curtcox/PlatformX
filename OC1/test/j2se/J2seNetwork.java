@@ -1,7 +1,7 @@
 package j2se;
 
 import com.codename1.ui.Image;
-import com.mycompany.myapp.net.Network;
+import myapp.net.Network;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;

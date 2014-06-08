@@ -1,7 +1,7 @@
 package google;
 
-import com.mycompany.myapp.Registry;
-import com.mycompany.myapp.net.Network;
+import myapp.Registry;
+import myapp.net.Network;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URI;
