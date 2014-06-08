@@ -1,9 +1,9 @@
 package google;
 
 import com.codename1.io.JSONParser;
-import myapp.log.Log;
-import myapp.log.LogManager;
-import myapp.ui.Icons;
+import oc1.log.Log;
+import oc1.log.LogManager;
+import oc1.ui.Icons;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;

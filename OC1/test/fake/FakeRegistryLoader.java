@@ -2,11 +2,11 @@ package fake;
 
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
-import myapp.CurrentState;
-import myapp.Registry;
-import myapp.domain.ServiceProvider;
-import myapp.services.Locations;
-import myapp.stores.ServiceProviders;
+import oc1.CurrentState;
+import oc1.Registry;
+import oc1.domain.ServiceProvider;
+import oc1.services.Locations;
+import oc1.stores.ServiceProviders;
 
 /**
  *
