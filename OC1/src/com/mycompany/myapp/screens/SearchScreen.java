@@ -36,12 +36,10 @@ final class SearchScreen
         ZoomOut zoomOut = new ZoomOut(previous,radius);
         LiveList<ServiceProvider> providers = ServiceProviders.of().nearby(radius);
         while (zoomOut.couldZoomOut() && providers.size()<2) {
-            radius *= 4;
+            zoomOut = zoomOut.zoomOut();
             providers = ServiceProviders.of().nearby(radius);
         }
-        Component zoom = zoomOut.createComponent();
-        SearchableList<ServiceProvider> searchList = newSearchableList(providers,zoom);
-        return new SearchScreen(previous,radius,searchList);    
+        return new SearchScreen(previous,radius,newSearchableList(providers,zoomOut.createComponent()));    
     }
 
     static LiveList<ServiceProvider> getProviders(ZoomOut zoomOut) {
