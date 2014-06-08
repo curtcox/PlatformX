@@ -33,6 +33,10 @@ public final class PlacesResponseParser {
     } 
     
     Iterable<Map<String,Object>> results(Map<String,Object> tree) {
+        if (tree.isEmpty()) {
+            System.out.println("Places Response Parser -- No results found -- failed request");
+            return new ArrayList();
+        }
         return (List)tree.get("results");
     }
     
