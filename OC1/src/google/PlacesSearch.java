@@ -1,6 +1,6 @@
 package google;
 
-import oc1.Registry;
+import oc1.app.Registry;
 import oc1.net.Network;
 import java.io.InputStream;
 import java.io.InputStreamReader;

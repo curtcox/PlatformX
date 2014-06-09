@@ -1,7 +1,7 @@
 package oc1.domain;
 
 import com.codename1.location.Location;
-import oc1.Registry;
+import oc1.app.Registry;
 import oc1.services.Locations;
 import oc1.ui.StringSource;
 import java.net.URI;

@@ -1,7 +1,7 @@
 package google;
 
 import j2se.J2seNetwork;
-import oc1.Registry;
+import oc1.app.Registry;
 import oc1.net.Network;
 import static org.junit.Assert.*;
 import org.junit.Before;

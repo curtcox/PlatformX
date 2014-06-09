@@ -1,4 +1,4 @@
-package oc1;
+package oc1.app;
 
 import oc1.domain.ServiceProvider;
 import oc1.event.Change;

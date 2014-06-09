@@ -3,7 +3,7 @@ package oc1.services;
 import com.codename1.location.Location;
 import com.codename1.location.LocationListener;
 import com.codename1.location.LocationManager;
-import oc1.Registry;
+import oc1.app.Registry;
 
 /**
  *

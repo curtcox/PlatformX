@@ -3,8 +3,8 @@ package oc1.ui;
 import com.codename1.ui.Button;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
-import oc1.CurrentState;
-import oc1.MyApplication;
+import oc1.app.CurrentState;
+import oc1.app.MyApplication;
 import oc1.event.Change;
 import oc1.log.LogManager;
 

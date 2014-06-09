@@ -2,7 +2,7 @@ package oc1.screens;
 
 import com.codename1.messaging.Message;
 import com.codename1.ui.Display;
-import oc1.Registry;
+import oc1.app.Registry;
 import oc1.log.LogWriter;
 
 /**

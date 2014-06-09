@@ -1,6 +1,6 @@
 package oc1.log;
 
-import oc1.Registry;
+import oc1.app.Registry;
 
 /**
  *

@@ -5,7 +5,7 @@ import com.codename1.io.Util;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.Image;
 import com.codename1.ui.URLImage;
-import oc1.Registry;
+import oc1.app.Registry;
 import oc1.util.Strings;
 import java.io.IOException;
 import java.io.InputStream;

@@ -1,6 +1,6 @@
 package oc1.screens;
 
-import oc1.CurrentState;
+import oc1.app.CurrentState;
 import oc1.event.Change.Source;
 import oc1.ui.ActionButton;
 import oc1.ui.StringSource;

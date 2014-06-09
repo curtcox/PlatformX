@@ -1,7 +1,7 @@
-package oc1test;
+package oc1.app;
 
-import oc1.Registry;
-import oc1.CurrentState;
+import oc1.app.Registry;
+import oc1.app.CurrentState;
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import fake.FakeLocationManager;

@@ -4,7 +4,7 @@ import oc1.domain.Address;
 import oc1.domain.ID;
 import oc1.domain.Name;
 import com.codename1.location.Location;
-import oc1.Registry;
+import oc1.app.Registry;
 import oc1.domain.Rating;
 import oc1.domain.ServiceProvider;
 import oc1.event.LiveList;

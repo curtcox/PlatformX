@@ -7,7 +7,7 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextArea;
 import com.codename1.ui.table.TableLayout;
-import oc1.CurrentState;
+import oc1.app.CurrentState;
 import oc1.domain.Rating;
 import oc1.domain.ServiceProvider;
 import oc1.stores.MyRatings;

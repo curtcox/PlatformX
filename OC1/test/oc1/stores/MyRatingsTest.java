@@ -3,7 +3,7 @@ package oc1.stores;
 import oc1.stores.MyRatings;
 import com.codename1.io.Storage;
 import fake.FakeStorage;
-import oc1.Registry;
+import oc1.app.Registry;
 import oc1.domain.ID;
 import oc1.domain.Rating;
 import java.io.ByteArrayInputStream;

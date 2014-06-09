@@ -1,4 +1,4 @@
-package oc1;
+package oc1.app;
 
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;

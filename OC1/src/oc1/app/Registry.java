@@ -1,4 +1,4 @@
-package oc1;
+package oc1.app;
 
 import java.util.HashMap;
 import java.util.Map;

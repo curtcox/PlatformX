@@ -4,7 +4,7 @@ import oc1.ui.StringSource;
 import oc1.ui.ActionButton;
 import fake.FakeRegistryLoader;
 import com.codename1.ui.events.ActionListener;
-import oc1.CurrentState;
+import oc1.app.CurrentState;
 import oc1.event.Change;
 import oc1.screens.FakeUI;
 import java.util.concurrent.Callable;

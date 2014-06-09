@@ -2,7 +2,7 @@ package oc1.net;
 
 import com.codename1.io.Storage;
 import com.codename1.ui.Image;
-import oc1.Registry;
+import oc1.app.Registry;
 import oc1.log.Log;
 import oc1.log.LogManager;
 import oc1.stores.MapStorageIO;

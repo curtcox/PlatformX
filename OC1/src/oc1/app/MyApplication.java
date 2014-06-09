@@ -1,4 +1,4 @@
-package oc1;
+package oc1.app;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
