@@ -33,22 +33,22 @@ final class SearchScreen
     }
     
     static SearchScreen of(Screen previous, int radius) {
+        ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(previous,radius);
+        return new SearchScreen(previous,zoomOut.radius,newSearchableList(getProviders(zoomOut),zoomOut.createComponent()));    
+    }
+
+    static ZoomOut zoomOutToSmallestRadiusWithMultipleHits(Screen previous,int radius) {
         ZoomOut zoomOut = new ZoomOut(previous,radius);
-        LiveList<ServiceProvider> providers = ServiceProviders.of().nearby(radius);
+        LiveList<ServiceProvider> providers = getProviders(zoomOut);
         while (zoomOut.couldZoomOut() && providers.size()<2) {
             zoomOut = zoomOut.zoomOut();
-            providers = ServiceProviders.of().nearby(radius);
+            providers = getProviders(zoomOut);
         }
-        return new SearchScreen(previous,radius,newSearchableList(providers,zoomOut.createComponent()));    
+        return zoomOut;
     }
 
     static LiveList<ServiceProvider> getProviders(ZoomOut zoomOut) {
-        LiveList<ServiceProvider> providers = ServiceProviders.of().nearby(zoomOut.radius);
-        while (zoomOut.couldZoomOut() && providers.size()<2) {
-            zoomOut = zoomOut.zoomOut();
-            providers = ServiceProviders.of().nearby(zoomOut.radius);
-        }
-        return providers;
+        return ServiceProviders.of().nearby(zoomOut.radius);
     }
     
     private static SearchableList<ServiceProvider> newSearchableList(LiveList providers,Component zoom) {
