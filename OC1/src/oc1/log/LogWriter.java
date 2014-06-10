@@ -26,7 +26,7 @@ public final class LogWriter {
     public String dump() {
         StringBuilder out = new StringBuilder();
         for (String line : log) {
-            out.append(line + "/r/n");
+            out.append(line + "\r\n");
         }
         return out.toString();
     }
