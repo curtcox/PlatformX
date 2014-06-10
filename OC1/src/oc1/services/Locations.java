@@ -42,6 +42,24 @@ public final class Locations
         return location;
     }
 
+//    public Location getCurrentLocation() {
+//        return arch();
+//    }
+//    
+//    private Location arch() {
+//        Location location = new Location();
+//        location.setLatitude(38.6269d);
+//        location.setLongitude(-90.18697d);
+//        return location;
+//    }
+//    
+//    private Location mike() {
+//        Location location = new Location();
+//        location.setLatitude(40.355d);
+//        location.setLongitude(-86.735d);
+//        return location;
+//    }
+    
     public double calculateDistance(Location a, Location b) {
         return DistanceCalculator.distance(a.getLatitude(),a.getLongitude(),b.getLatitude(),b.getLongitude());
     }
