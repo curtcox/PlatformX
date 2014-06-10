@@ -27,7 +27,8 @@ final class IssueReporter {
 
     private static String createContent() {
         StringBuilder out = new StringBuilder();
-        out.append(HomeScreen.VERSION + "/r/n");
+        out.append(HomeScreen.VERSION + "\r\n");
+        out.append(DeviceInfo.dump());
         out.append(getLogWriter().dump());
         return out.toString();
     }
