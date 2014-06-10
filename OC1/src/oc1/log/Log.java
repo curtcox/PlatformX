@@ -22,11 +22,15 @@ public final class Log {
     }
 
     public void log(String message) {
-        getLogWriter().log(now() + prefix + message);
+        getLogWriter().log(now() + ":" + thread() + prefix + message);
     }
     
     String now() {
         return hex(System.currentTimeMillis());
+    }
+
+    String thread() {
+        return Thread.currentThread().getName();
     }
 
     private String hex(long value) {
