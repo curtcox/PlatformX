@@ -35,6 +35,7 @@ public final class CachedNetwork
     }
 
     public InputStream getStreamFor(URI uri) {
+        log("getStreamFor " + uri);
         try {
             if (entries.containsKey(uri)) {
                 return entries.get(uri).getStreamFromStorage();
