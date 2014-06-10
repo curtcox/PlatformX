@@ -17,16 +17,18 @@ final class ProviderDetailsScreen
     private final Label distance = new Label();
     private final Label types = new Label();
     private final Label price = new Label();
+    private final Label rating = new Label();
     private final Label icon = new Label();
     private final Label vicinity = new Label();
 
     ProviderDetailsScreen(Screen previous) {
         super("Provider Details",previous);
-        form.setLayout(new TableLayout(7,1));
+        form.setLayout(new TableLayout(8,1));
         form.addComponent(name);
         form.addComponent(distance);
         form.addComponent(vicinity);
         form.addComponent(price);
+        form.addComponent(rating);
         form.addComponent(icon);
         form.addComponent(types);
         form.addComponent(ProviderRatingButton.withReturnTo(this));
@@ -35,6 +37,7 @@ final class ProviderDetailsScreen
     @Override
     protected void refresh() {
         updateName();
+        updateRating();
         updatePrice();
         updateIcon();
         updateTypes();
@@ -45,7 +48,12 @@ final class ProviderDetailsScreen
     private void updateName() {
         name.setText(provider().name.toString());
     }
-    
+
+    private void updateRating() {
+        Double rating = provider().rating;
+        this.rating.setText((rating == null) ? "No rating information" : "Rating : " + rating);
+    }
+
     private void updatePrice() {
         Double priceLevel = provider().priceLevel;
         price.setText((priceLevel == null) ? "No price information" : "Price Level : " + priceLevel);

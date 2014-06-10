@@ -49,7 +49,7 @@ public final class ServiceProviders {
         placeLocation.setLatitude(place.latitude);
         placeLocation.setLongitude(place.longitude);
         Rating myRating = MyRatings.of().getFor(id);
-        return new ServiceProvider(id,name,placeLocation,new Address(place.vicinity),place.price_level,place.types,place.icon,myRating);
+        return new ServiceProvider(id,name,placeLocation,new Address(place.vicinity),place.price_level,place.rating,place.types,place.icon,myRating);
     }
 
 }

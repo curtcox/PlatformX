@@ -17,19 +17,21 @@ public final class ServiceProvider {
     public final Location location;
     public final Address address;
     public final Double priceLevel;
+    public final Double rating;
     public final String[] types;
     public final URI icon;
     private Rating myRating;
     
-    public static final ServiceProvider NULL = new ServiceProvider(null,new Name(""),null,null,null,null,null,new Rating(""));
+    public static final ServiceProvider NULL = new ServiceProvider(null,new Name(""),null,null,null,null,null,null,new Rating(""));
     
-    public ServiceProvider(ID id, Name name, Location location, Address address, Double priceLevel, String[] types, URI icon, Rating myRating) {
+    public ServiceProvider(ID id, Name name, Location location, Address address, Double priceLevel, Double rating, String[] types, URI icon, Rating myRating) {
         this.id = id;
         this.name = name;
         this.location = location;
         this.address = address;
         this.myRating = myRating;
         this.priceLevel = priceLevel;
+        this.rating = rating;
         this.types = types;
         this.icon = icon;
     }
