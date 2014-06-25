@@ -1,10 +1,10 @@
-package oc1.screen.parts;
+package oc1.screenparts;
 
 import com.codename1.ui.Component;
 import com.codename1.ui.Label;
-import oc1.screens.Screen;
-import oc1.screens.ScreenButton;
-import oc1.screens.ScreenFactory;
+import oc1.screen.Screen;
+import oc1.screen.ScreenButton;
+import oc1.screen.ScreenFactory;
 import oc1.screens.SearchScreen;
 import oc1.ui.ActionButton;
 

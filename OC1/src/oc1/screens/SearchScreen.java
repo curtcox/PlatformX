@@ -1,7 +1,8 @@
 package oc1.screens;
 
-import oc1.screen.parts.ZoomOut;
-import oc1.screen.parts.ServiceProviderListCellRenderer;
+import oc1.screen.Screen;
+import oc1.screenparts.ZoomOut;
+import oc1.screenparts.ServiceProviderListCellRenderer;
 import com.codename1.ui.Component;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;

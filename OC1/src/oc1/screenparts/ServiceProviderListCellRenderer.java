@@ -1,4 +1,4 @@
-package oc1.screen.parts;
+package oc1.screenparts;
 
 import com.codename1.components.MultiButton;
 import com.codename1.ui.Component;

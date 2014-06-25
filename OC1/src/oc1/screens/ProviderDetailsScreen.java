@@ -1,6 +1,7 @@
 package oc1.screens;
 
-import oc1.screen.parts.ProviderRatingButton;
+import oc1.screen.Screen;
+import oc1.screenparts.ProviderRatingButton;
 import com.codename1.ui.Label;
 import com.codename1.ui.table.TableLayout;
 import oc1.domain.ServiceProvider;

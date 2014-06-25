@@ -1,6 +1,6 @@
 package oc1.screens;
 
-import oc1.screen.parts.ProviderRatingButton;
+import oc1.screenparts.ProviderRatingButton;
 import fake.FakeRegistryLoader;
 import oc1.ui.ActionButton;
 import java.util.concurrent.Callable;

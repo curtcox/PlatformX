@@ -24,7 +24,7 @@ public final class FakeUI {
         }
     }
     
-    static Form newForm() {
+    public static Form newForm() {
         return new Form() {
             @Override
             public UIManager getUIManager(){

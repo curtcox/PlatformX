@@ -1,5 +1,6 @@
 package oc1.screens;
 
+import oc1.screen.Screen;
 import oc1.log.IssueReporter;
 import com.codename1.ui.Button;
 import com.codename1.ui.layouts.GridLayout;

@@ -1,9 +1,9 @@
-package oc1.screen.parts;
+package oc1.screenparts;
 
 import oc1.domain.ServiceProvider;
 import oc1.screens.ProviderDetailsScreen;
-import oc1.screens.Screen;
-import oc1.screens.ScreenButton;
+import oc1.screen.Screen;
+import oc1.screen.ScreenButton;
 import oc1.ui.ActionButton;
 
 /**

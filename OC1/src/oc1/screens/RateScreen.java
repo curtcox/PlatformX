@@ -1,6 +1,8 @@
 package oc1.screens;
 
-import oc1.screen.parts.ProviderDetailsButton;
+import oc1.screen.ScreenButton;
+import oc1.screen.Screen;
+import oc1.screenparts.ProviderDetailsButton;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;

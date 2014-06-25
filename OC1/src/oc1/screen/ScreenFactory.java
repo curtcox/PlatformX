@@ -1,4 +1,6 @@
-package oc1.screens;
+package oc1.screen;
+
+import oc1.screen.Screen;
 
 /**
  *

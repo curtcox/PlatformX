@@ -1,4 +1,4 @@
-package oc1.screens;
+package oc1.screen;
 
 import com.codename1.ui.Command;
 import com.codename1.ui.Form;
@@ -13,21 +13,21 @@ import oc1.ui.FormFactory;
  */
 public abstract class Screen {
 
-    final Form form;
-    final Screen previous;
+    public final Form form;
+    public final Screen previous;
     final Command back;
 
     /**
      * Override this constructor to create a new screen.
      */
-    Screen(String name, final Screen previous) {
+    public Screen(String name, final Screen previous) {
         this(FormFactory.of().newForm(name),previous);
     }
     
     /**
      * This constructor is exposed mostly for testing.
      */
-    Screen(Form form, final Screen previous) {
+    public Screen(Form form, final Screen previous) {
         this.form = form;
         this.previous = previous;
         back = previous == null ? null : new Command("Back") {
@@ -38,14 +38,14 @@ public abstract class Screen {
         };
     }
 
-    void show() {
+    public void show() {
         log("show " + form.getTitle());
         refresh();
         form.show();
         form.setBackCommand(back);
     }
    
-    void back() {
+    public void back() {
         log("back " + form.getTitle());
         if (previous!=null) {
             previous.refresh();
