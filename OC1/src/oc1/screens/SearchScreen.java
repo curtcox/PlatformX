@@ -1,5 +1,7 @@
 package oc1.screens;
 
+import oc1.screen.parts.ZoomOut;
+import oc1.screen.parts.ServiceProviderListCellRenderer;
 import com.codename1.ui.Component;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
@@ -14,7 +16,7 @@ import oc1.ui.SearchableList;
  * The screen used to search for service providers.
  * @author Curt
  */
-final class SearchScreen
+public final class SearchScreen
     extends Screen
 {
     final int radius;
@@ -28,11 +30,11 @@ final class SearchScreen
         addSelectionListener();
     }
 
-    static SearchScreen of(Screen previous) {
+    public static SearchScreen of(Screen previous) {
         return of(previous,100);    
     }
     
-    static SearchScreen of(Screen previous, int radius) {
+    public static SearchScreen of(Screen previous, int radius) {
         ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(previous,radius);
         return new SearchScreen(previous,zoomOut.radius,newSearchableList(getProviders(zoomOut),zoomOut.createComponent()));    
     }

@@ -14,7 +14,7 @@ public final class Log {
         prefix = ":" + clazz.getCanonicalName() + ":";
     }
 
-    public void log(Exception e) {
+    public void log(Throwable e) {
         log("Caught exception");
         log("class=" + e.getClass());
         log("message=" + e.getMessage());

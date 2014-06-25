@@ -16,6 +16,7 @@ public class MyApplication {
         try {
             loadTheme();
             RegistryLoader.load();
+            ExceptionLogger.of().install();
         } catch(IOException e){
             log(e);
         }

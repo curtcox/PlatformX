@@ -1,5 +1,7 @@
 package oc1.screens;
 
+import oc1.screen.parts.ProviderDetailsButton;
+import oc1.screen.parts.ProviderRatingButton;
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.layouts.GridLayout;
@@ -14,7 +16,7 @@ public final class HomeScreen
     extends Screen
 {
    
-    public static final String VERSION = "Oyster Cracker 2014/6/9 9:51p";
+    public static final String VERSION = "Oyster Cracker 2014/6/22 8:31p";
     
     HomeScreen() {
         super(VERSION,null);

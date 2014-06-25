@@ -1,5 +1,6 @@
 package oc1.screens;
 
+import oc1.screen.parts.ProviderRatingButton;
 import com.codename1.ui.Label;
 import com.codename1.ui.table.TableLayout;
 import oc1.domain.ServiceProvider;
@@ -10,7 +11,7 @@ import java.util.Arrays;
  * For showing details about a particular provider.
  * @author Curt
  */
-final class ProviderDetailsScreen
+public final class ProviderDetailsScreen
     extends Screen
 {
     private final Label name = new Label();
@@ -21,7 +22,7 @@ final class ProviderDetailsScreen
     private final Label icon = new Label();
     private final Label vicinity = new Label();
 
-    ProviderDetailsScreen(Screen previous) {
+    public ProviderDetailsScreen(Screen previous) {
         super("Provider Details",previous);
         form.setLayout(new TableLayout(8,1));
         form.addComponent(name);

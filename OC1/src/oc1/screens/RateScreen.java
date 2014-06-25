@@ -1,5 +1,6 @@
 package oc1.screens;
 
+import oc1.screen.parts.ProviderDetailsButton;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
@@ -19,14 +20,14 @@ import oc1.ui.GridContainer;
  * http://www.sagetraveling.com/Rating-System-Explanation/
  * @author Curt
  */
-final class RateScreen
+public final class RateScreen
     extends Screen
 {
     private final Label rating = new Label();
     private final TextArea description = new TextArea(
         "                                                                    ");
     
-    RateScreen(Screen previous) {
+    public RateScreen(Screen previous) {
         super("Rate",previous);
         description.setEditable(false);
         addComponents();

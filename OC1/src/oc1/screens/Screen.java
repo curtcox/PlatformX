@@ -4,6 +4,7 @@ import com.codename1.ui.Command;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import oc1.log.LogManager;
+import oc1.ui.FormFactory;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
@@ -20,9 +21,9 @@ public abstract class Screen {
      * Override this constructor to create a new screen.
      */
     Screen(String name, final Screen previous) {
-        this(new Form(name),previous);
+        this(FormFactory.of().newForm(name),previous);
     }
-
+    
     /**
      * This constructor is exposed mostly for testing.
      */

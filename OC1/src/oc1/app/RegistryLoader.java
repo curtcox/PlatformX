@@ -11,6 +11,7 @@ import oc1.net.Network;
 import oc1.services.Locations;
 import oc1.stores.MyRatings;
 import oc1.stores.ServiceProviders;
+import oc1.ui.FormFactory;
 import oc1.ui.Icons;
 
 /**
@@ -20,8 +21,10 @@ import oc1.ui.Icons;
 final class RegistryLoader {
     
     static void load() {
+        put(ExceptionLogger.class,  new ExceptionLogger());
         put(LogManager.class,       new LogManager());
         put(LogWriter.class,        new LogWriter());
+        put(FormFactory.class,      new FormFactory());
         put(Display.class,          Display.getInstance());
         put(Storage.class,          new Storage());
         put(Network.class,          new CachedNetwork());
