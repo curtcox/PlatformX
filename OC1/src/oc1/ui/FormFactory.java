@@ -14,6 +14,7 @@ public final class FormFactory {
     }
 
     public Form newForm(String title) {
-        return new Form(title);
+        return new DebugForm(title);
     }
+
 }

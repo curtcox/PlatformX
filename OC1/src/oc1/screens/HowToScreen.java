@@ -12,9 +12,7 @@ import oc1.ui.ActionButton;
  */
 final class HowToScreen
     extends Screen
-{
-    
-    
+{   
     HowToScreen(Screen previous) {
         super("How To",previous);
         form.setLayout(new GridLayout(2,2));
