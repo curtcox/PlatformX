@@ -2,11 +2,12 @@ package oc1.app;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
+import com.codename1.ui.SideMenuBar;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
+import java.io.IOException;
 import oc1.log.LogManager;
 import oc1.screens.HomeScreen;
-import java.io.IOException;
 
 public class MyApplication {
 
@@ -15,6 +16,7 @@ public class MyApplication {
     public void init(Object context) {
         try {
             loadTheme();
+            configureSideNavigation();
             RegistryLoader.load();
             ExceptionLogger.of().install();
         } catch(IOException e){
@@ -28,12 +30,25 @@ public class MyApplication {
     
     private void loadTheme() throws IOException {
         Resources theme = Resources.openLayered("/theme");
-        setTheme(theme);
+        setThemeProps(theme);
         Registry.put(Resources.class, theme);
     }
 
-    private void setTheme(Resources theme) throws IOException {
-        UIManager.getInstance().setThemeProps(theme.getTheme(theme.getThemeResourceNames()[0]));
+    private void configureSideNavigation() {
+        getUIManager().getLookAndFeel().setMenuBarClass(SideMenuBar.class);
+        getDisplay().setCommandBehavior(Display.COMMAND_BEHAVIOR_SIDE_NAVIGATION);
+    }
+    
+    private UIManager getUIManager() {
+       return UIManager.getInstance();
+    }
+    
+    private Display getDisplay() {
+       return Display.getInstance();
+    }
+    
+    private void setThemeProps(Resources theme) throws IOException {
+        getUIManager().setThemeProps(theme.getTheme(theme.getThemeResourceNames()[0]));
     }
 
     public void start() {
@@ -45,7 +60,7 @@ public class MyApplication {
     }
 
     public void stop() {
-        current = Display.getInstance().getCurrent();
+        current = getDisplay().getCurrent();
     }
     
     public void destroy() {}
