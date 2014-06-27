@@ -15,20 +15,25 @@ public final class DebugForm
 {
     final String title;
 
-    DebugForm(String title) {
+    private DebugForm(String title) {
         super(title);
         this.title = title;
-        this.addCommand(submitIssue());
     }
 
+    public static DebugForm of(String title) {
+        DebugForm form = new DebugForm(title);
+        form.addCommand(submitIssue());
+        return form;
+    }
+    
     @Override protected void onShow() { log("onShow"); }
     @Override protected void onShowCompleted() { log("onShowCompleted"); }
     
     private void log(String message) {
         LogManager.of().getLog(DebugForm.class).log(title + ":" + message);    
     }
-
-    Command submitIssue() {
+    
+    private static Command submitIssue() {
         return new Command("Report") {
             @Override
             public void actionPerformed(ActionEvent event) {

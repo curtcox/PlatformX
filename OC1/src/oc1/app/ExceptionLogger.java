@@ -1,11 +1,12 @@
 package oc1.app;
 
 import com.codename1.ui.Display;
+import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import oc1.log.IssueReporter;
 import oc1.log.Log;
 import oc1.log.LogManager;
-import oc1.log.IssueReporter;
 
 /**
  *
@@ -38,13 +39,27 @@ final class ExceptionLogger
     }
 
     void log(ActionEvent event) {
-        log("Exception in AppName version " + getDisplay().getProperty("AppVersion", "Unknown"));
-        log("OS " + getDisplay().getPlatformName());
+        Display display = getDisplay();
+        if (display==null) {
+            log("Display==null");
+        } else {
+            log(display);
+        }
         log("Error " + event.getSource());
-        log("Current Form " + getDisplay().getCurrent().getName());
         log((Throwable)event.getSource());
     }
 
+    void log(Display display) {
+        log("Exception in AppName version " + display.getProperty("AppVersion", "Unknown"));
+        log("OS "                           + display.getPlatformName());
+        Form form = display.getCurrent();
+        if (form==null) {
+            log("Form==null");
+         } else {
+            log("Current Form "             + form.getName());
+        }
+    }
+    
     void log(String message) {
         getLog().log(message);
     }
