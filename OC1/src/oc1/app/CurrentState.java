@@ -1,8 +1,6 @@
 package oc1.app;
 
-import oc1.domain.ServiceProvider;
 import oc1.event.Change;
-import oc1.stores.ServiceProviders;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -28,13 +26,4 @@ public final class CurrentState
             listener.onChange();
         }
     }
-
-//    public ServiceProvider selected = firstProviderOrNull();
-//    private ServiceProvider firstProviderOrNull() {
-//        ServiceProviders serviceProviders = Registry.get(ServiceProviders.class);
-//        if (serviceProviders.all().size()<1) {
-//            return null;
-//        }
-//        return serviceProviders.all().get(0);
-//    }
 }

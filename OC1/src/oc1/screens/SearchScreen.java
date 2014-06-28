@@ -10,6 +10,7 @@ import oc1.app.CurrentState;
 import oc1.app.Registry;
 import oc1.domain.ServiceProvider;
 import oc1.event.LiveList;
+import oc1.log.LogManager;
 import oc1.stores.ServiceProviders;
 import oc1.ui.SearchableList;
 
@@ -64,7 +65,7 @@ public final class SearchScreen
 
     private void addSelectionListener() {
         searchList.onSelected(new ActionListener() {
-            public void actionPerformed(ActionEvent evt) {
+            public void actionPerformed(ActionEvent event) {
                 useSelectedProvider();
                 new ProviderDetailsScreen(SearchScreen.this).show();
             }
@@ -72,7 +73,14 @@ public final class SearchScreen
     }
 
     private void useSelectedProvider() {
-        Registry.put(ServiceProvider.class,searchList.getSelected());
+        ServiceProvider provider = searchList.getSelected();
+        log("selected " + provider);
+        Registry.put(ServiceProvider.class,provider);
         CurrentState.get().broadcastChange();
     }
+    
+    private void log(String message) {
+        LogManager.of().getLog(SearchScreen.class).log(message);    
+    }
+
 }

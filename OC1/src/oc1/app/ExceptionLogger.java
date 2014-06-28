@@ -35,16 +35,20 @@ final class ExceptionLogger
     public void actionPerformed(ActionEvent event) {
         event.consume();
         log(event);
+        logDisplay();
         IssueReporter.sendEmail();
     }
 
-    void log(ActionEvent event) {
+    void logDisplay() {
         Display display = getDisplay();
         if (display==null) {
             log("Display==null");
         } else {
             log(display);
         }
+    }
+    
+    void log(ActionEvent event) {
         log("Error " + event.getSource());
         log((Throwable)event.getSource());
     }
@@ -54,7 +58,7 @@ final class ExceptionLogger
         log("OS "                           + display.getPlatformName());
         Form form = display.getCurrent();
         if (form==null) {
-            log("Form==null");
+            log("Form=null");
          } else {
             log("Current Form "             + form.getName());
         }

@@ -52,13 +52,19 @@ public final class ProviderDetailsScreen
     }
 
     private void updateRating() {
-        Double rating = provider().rating;
-        this.rating.setText((rating == null) ? "No rating information" : "Rating : " + rating);
+        this.rating.setText(getRatingText());
     }
 
     private void updatePrice() {
-        Double priceLevel = provider().priceLevel;
-        price.setText((priceLevel == null) ? "No price information" : "Price Level : " + priceLevel);
+        price.setText(getPriceText());
+    }
+
+    private String getRatingText() {
+        return provider().rating == null ? "No rating information" : "Rating : " + provider().rating;
+    }
+
+    private String getPriceText() {
+        return provider().priceLevel == null ? "No price information" : "Price Level : " + provider().priceLevel;
     }
 
     private void updateIcon() {

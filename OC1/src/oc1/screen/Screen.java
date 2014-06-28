@@ -3,6 +3,7 @@ package oc1.screen;
 import com.codename1.ui.Command;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
+import oc1.command.LoggedCommand;
 import oc1.log.LogManager;
 import oc1.ui.FormFactory;
 
@@ -30,12 +31,12 @@ public abstract class Screen {
     public Screen(Form form, final Screen previous) {
         this.form = form;
         this.previous = previous;
-        back = previous == null ? null : new Command("Back") {
-            @Override
-            public void actionPerformed(ActionEvent event) {
+        back = previous == null ? null : new LoggedCommand("Back") {
+            @Override protected void go() {
                 back();
             }
         };
+        log("created " + form.getTitle());
     }
 
     public void show() {

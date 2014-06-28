@@ -2,7 +2,6 @@ package oc1.app;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
-import com.codename1.ui.SideMenuBar;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import java.io.IOException;
@@ -16,7 +15,6 @@ public class MyApplication {
     public void init(Object context) {
         try {
             loadTheme();
-            configureSideNavigation();
             RegistryLoader.load();
             ExceptionLogger.of().install();
         } catch(IOException e){
@@ -34,11 +32,6 @@ public class MyApplication {
         Registry.put(Resources.class, theme);
     }
 
-    private void configureSideNavigation() {
-        getUIManager().getLookAndFeel().setMenuBarClass(SideMenuBar.class);
-        getDisplay().setCommandBehavior(Display.COMMAND_BEHAVIOR_SIDE_NAVIGATION);
-    }
-    
     private UIManager getUIManager() {
        return UIManager.getInstance();
     }
