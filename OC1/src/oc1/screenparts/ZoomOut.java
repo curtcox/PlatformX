@@ -27,7 +27,7 @@ public final class ZoomOut {
     }
 
     public boolean couldZoomOut() {
-        return radius * 4 < 30000;
+        return bigger(radius) < 30000;
     }
 
     Label newZoomLabel() {
@@ -40,7 +40,7 @@ public final class ZoomOut {
 
     ScreenFactory newZoomOutLink() {
         return new ScreenFactory() {
-            public Screen create() { return SearchScreen.of(previous, radius * 4); }
+            public Screen create() { return SearchScreen.of(previous, bigger(radius)); }
         };
     }
 
@@ -49,7 +49,11 @@ public final class ZoomOut {
     }
 
     public ZoomOut zoomOut() {
-        return new ZoomOut(previous,radius*4);
+        return new ZoomOut(previous,bigger(radius));
+    }
+
+    private int bigger(int radius) {
+        return radius * 4;
     }
 
 }

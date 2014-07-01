@@ -49,7 +49,7 @@ public class MyApplication {
             current.show();
             return;
         }
-        EDTHeartbeat.start();
+        HeartbeatMonitor.install();
         HomeScreen.showInitial();
     }
 
