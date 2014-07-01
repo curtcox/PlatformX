@@ -1,5 +1,9 @@
 package oc1.log;
 
+import com.codename1.ui.Display;
+import com.codename1.ui.Form;
+import oc1.screen.Screen;
+
 /**
  *
  * @author Curt
@@ -22,7 +26,7 @@ public final class Log {
     }
 
     public void log(String message) {
-        getLogWriter().log(now() + ":" + thread() + prefix + message);
+        getLogWriter().log(now() + ":" + thread() + ":" + screen() + prefix + message);
     }
     
     String now() {
@@ -39,5 +43,14 @@ public final class Log {
     
     private LogWriter getLogWriter() {
         return LogWriter.of();
+    }
+
+    private String screen() {
+        Form form = form();
+        return (form==null) ? "null" : form.getTitle();
+    }
+    
+    private Form form() {
+        return Display.getInstance().getCurrent();
     }
 }
