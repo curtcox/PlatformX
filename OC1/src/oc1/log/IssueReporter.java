@@ -14,7 +14,7 @@ public final class IssueReporter {
 
     public static void sendEmail() {
         String[] recipients = new String[]{"curtcox@gmail.com"};
-        String subject = "Oyster Cracker Issue Report";
+        String subject = "Oyster Cracker Issue Report for version " + HomeScreen.VERSION;
         getDisplay().sendMessage(recipients, subject, createMessage());
     }
     
