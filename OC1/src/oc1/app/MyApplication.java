@@ -49,6 +49,7 @@ public class MyApplication {
             current.show();
             return;
         }
+        EDTHeartbeat.start();
         HomeScreen.showInitial();
     }
 
