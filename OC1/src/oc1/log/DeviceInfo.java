@@ -12,107 +12,112 @@ import com.codename1.ui.plaf.UIManager;
 final class DeviceInfo {
 
     static String dump() {
-        StringBuilder out = new StringBuilder();
-        addDisplay(out);
-        addRuntime(out);
-        addUIManager(out);
-        addLookAndFeel(out);
-        addAndroidProperties(out);
+        ReportBuilder out = new ReportBuilder();
+        out.section(displayInfo());
+        out.section(runtimeInfo());
+        out.section(UIManagerInfo());
+        out.section(LookAndFeelInfo());
+        out.section(AndroidProperties());
         return out.toString();
     }
 
-    private static void add(StringBuilder out, String string) {
-        out.append(string);
-        out.append("\r\n");
-    }
-
-    private static void addDisplay(StringBuilder out) {
+    static private String displayInfo() {
         Display display = Display.getInstance();
-        add(out,"Display");
-        add(out," get");
-        add(out,"platform name="           + display.getPlatformName());
-        add(out,"MSISDN="                  + display.getMsisdn());
-        add(out,"UDID="                    + display.getUdid());
-        add(out,"device density="          + display.getDeviceDensity());
-        add(out,"display height="          + display.getDisplayHeight());
-        add(out,"display width="           + display.getDisplayWidth());
-        add(out,"frame rate="              + display.getFrameRate());
-        add(out," are");
-        add(out,"are mutable images fast=" + display.areMutableImagesFast());
-        add(out," can");
-        add(out,"can force orientation="   + display.canForceOrientation());
-        add(out,"can dial="                + display.canDial());
-        add(out," is");
-        add(out," isAllowMinimizing="             + display.isAllowMinimizing());
-        add(out," isAutoFoldVKBOnFormSwitch="     + display.isAutoFoldVKBOnFormSwitch());
-        add(out," isBadgingSupported="            + display.isBadgingSupported());
-        add(out," isBidiAlgorithm="               + display.isBidiAlgorithm());
-        add(out," isBuiltinSoundsEnabled="        + display.isBuiltinSoundsEnabled());
-        add(out," isClickTouchScreen="            + display.isClickTouchScreen());
-        add(out," isContactsPermissionGranted="   + display.isContactsPermissionGranted());
-        add(out," isDesktop="                     + display.isDesktop());
-        add(out," isEdt="                         + display.isEdt());
-        add(out," isMinimized="                   + display.isMinimized());
-        add(out," isMultiKeyMode="                + display.isMultiKeyMode());
-        add(out," isMultiTouch="                  + display.isMultiTouch());
-        add(out," isNativeInputSupported="        + display.isNativeInputSupported());
-        add(out," isNativeShareSupported="        + display.isNativeShareSupported());
-        add(out," isNativeTitle="                 + display.isNativeTitle());
-        add(out," isNativeVideoPlayerControlsIncluded=" + display.isNativeVideoPlayerControlsIncluded());
-        add(out," isNotificationSupported="       + display.isNotificationSupported());
-        add(out," isOpenNativeNavigationAppSupported=" + display.isOpenNativeNavigationAppSupported());
-        add(out," isPortrait="                    + display.isPortrait());
-        add(out," isPureTouch="                   + display.isPureTouch());
-        add(out," isScreenSaverDisableSupported=" + display.isScreenSaverDisableSupported());
-        add(out," isTablet="                      + display.isTablet());
-        add(out," isTouchScreenDevice="           + display.isTouchScreenDevice());
-        add(out," isVirtualKeyboardShowing="      + display.isVirtualKeyboardShowing());
+        ReportBuilder out = new ReportBuilder();
+        out.heading("Display");
+        out.add(" get");
+        out.add("platform name="           + display.getPlatformName());
+        out.add("MSISDN="                  + display.getMsisdn());
+        out.add("UDID="                    + display.getUdid());
+        out.add("device density="          + display.getDeviceDensity());
+        out.add("display height="          + display.getDisplayHeight());
+        out.add("display width="           + display.getDisplayWidth());
+        out.add("frame rate="              + display.getFrameRate());
+        out.add(" are");
+        out.add("are mutable images fast=" + display.areMutableImagesFast());
+        out.add(" can");
+        out.add("can force orientation="   + display.canForceOrientation());
+        out.add("can dial="                + display.canDial());
+        out.add(" is");
+        out.add(" isAllowMinimizing="             + display.isAllowMinimizing());
+        out.add(" isAutoFoldVKBOnFormSwitch="     + display.isAutoFoldVKBOnFormSwitch());
+        out.add(" isBadgingSupported="            + display.isBadgingSupported());
+        out.add(" isBidiAlgorithm="               + display.isBidiAlgorithm());
+        out.add(" isBuiltinSoundsEnabled="        + display.isBuiltinSoundsEnabled());
+        out.add(" isClickTouchScreen="            + display.isClickTouchScreen());
+        out.add(" isContactsPermissionGranted="   + display.isContactsPermissionGranted());
+        out.add(" isDesktop="                     + display.isDesktop());
+        out.add(" isEdt="                         + display.isEdt());
+        out.add(" isMinimized="                   + display.isMinimized());
+        out.add(" isMultiKeyMode="                + display.isMultiKeyMode());
+        out.add(" isMultiTouch="                  + display.isMultiTouch());
+        out.add(" isNativeInputSupported="        + display.isNativeInputSupported());
+        out.add(" isNativeShareSupported="        + display.isNativeShareSupported());
+        out.add(" isNativeTitle="                 + display.isNativeTitle());
+        out.add(" isNativeVideoPlayerControlsIncluded=" + display.isNativeVideoPlayerControlsIncluded());
+        out.add(" isNotificationSupported="       + display.isNotificationSupported());
+        out.add(" isOpenNativeNavigationAppSupported=" + display.isOpenNativeNavigationAppSupported());
+        out.add(" isPortrait="                    + display.isPortrait());
+        out.add(" isPureTouch="                   + display.isPureTouch());
+        out.add(" isScreenSaverDisableSupported=" + display.isScreenSaverDisableSupported());
+        out.add(" isTablet="                      + display.isTablet());
+        out.add(" isTouchScreenDevice="           + display.isTouchScreenDevice());
+        out.add(" isVirtualKeyboardShowing="      + display.isVirtualKeyboardShowing());
         Form form = display.getCurrent();
         if (form==null) {
-            add(out,"form=null");
+            out.add("form=null");
          } else {
-            add(out,"form=" + form.getName());
+            out.add("form=" + form.getName());
         }
+        return out.toString();
     }
 
-    private static void addRuntime(StringBuilder out) {
+    private static String runtimeInfo() {
         Runtime runtime = Runtime.getRuntime();
-        add(out,"Runtime");
-        add(out,"free memory="  + runtime.freeMemory());
-        add(out,"total memory=" + runtime.totalMemory());
+        ReportBuilder out = new ReportBuilder();
+        out.heading("Runtime");
+        out.add("free memory="  + runtime.freeMemory());
+        out.add("total memory=" + runtime.totalMemory());
+        return out.toString();
     }
 
-    private static void addUIManager(StringBuilder out) {
+    private static String UIManagerInfo() {
         UIManager manager = UIManager.getInstance();
-        add(out,"UIManager");
-        add(out,"ThemeName="  + manager.getThemeName());
-    }
+        ReportBuilder out = new ReportBuilder();
+        out.heading("UIManager");
+        out.add("ThemeName="  + manager.getThemeName());
+        return out.toString();
+     }
 
-    private static void addLookAndFeel(StringBuilder out) {
+    private static String LookAndFeelInfo() {
         LookAndFeel laf = UIManager.getInstance().getLookAndFeel();
-        add(out,"LookAndFeel");
-        add(out,"isBackgroundImageDetermineSize="  + laf.isBackgroundImageDetermineSize());
-        add(out,"isDefaultAlwaysTensile="          + laf.isDefaultAlwaysTensile());
-        add(out,"isDefaultEndsWith3Points="        + laf.isDefaultEndsWith3Points());
-        add(out,"isDefaultSmoothScrolling="        + laf.isDefaultSmoothScrolling());
-        add(out,"isDefaultSnapToGrid="             + laf.isDefaultSnapToGrid());
-        add(out,"isDefaultTensileDrag="            + laf.isDefaultTensileDrag());
-        add(out,"isDefaultTensileHighlight="       + laf.isDefaultTensileHighlight());
-        add(out,"isFadeScrollBar="                 + laf.isFadeScrollBar());
-        add(out,"isFadeScrollEdge="                + laf.isFadeScrollEdge());
-        add(out,"isFocusScrolling="                + laf.isFocusScrolling());
-        add(out,"isRTL="                           + laf.isRTL());
-        add(out,"isReverseSoftButtons="            + laf.isReverseSoftButtons());
+        ReportBuilder out = new ReportBuilder();
+        out.heading("LookAndFeel");
+        out.add("isBackgroundImageDetermineSize="  + laf.isBackgroundImageDetermineSize());
+        out.add("isDefaultAlwaysTensile="          + laf.isDefaultAlwaysTensile());
+        out.add("isDefaultEndsWith3Points="        + laf.isDefaultEndsWith3Points());
+        out.add("isDefaultSmoothScrolling="        + laf.isDefaultSmoothScrolling());
+        out.add("isDefaultSnapToGrid="             + laf.isDefaultSnapToGrid());
+        out.add("isDefaultTensileDrag="            + laf.isDefaultTensileDrag());
+        out.add("isDefaultTensileHighlight="       + laf.isDefaultTensileHighlight());
+        out.add("isFadeScrollBar="                 + laf.isFadeScrollBar());
+        out.add("isFadeScrollEdge="                + laf.isFadeScrollEdge());
+        out.add("isFocusScrolling="                + laf.isFocusScrolling());
+        out.add("isRTL="                           + laf.isRTL());
+        out.add("isReverseSoftButtons="            + laf.isReverseSoftButtons());
+        return out.toString();
     }
 
-    private static void addAndroidProperties(StringBuilder out) {
-        add(out,"Android Properties");
+    private static String AndroidProperties() {
+        ReportBuilder out = new ReportBuilder();
+        out.heading("Android Properties");
         for (String key : androidPropertyKeys()) {
             String value = System.getProperty(key);
             if (value!=null) {
-                add(out,key + "=" + value);
+                out.add(key + "=" + value);
             }
         }
+        return out.toString();
     }
 
     private static String[] androidPropertyKeys() {
