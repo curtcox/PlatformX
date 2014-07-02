@@ -8,6 +8,7 @@ import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.list.FilterProxyListModel;
 import com.codename1.ui.list.ListCellRenderer;
 import com.codename1.ui.list.ListModel;
+import com.codename1.ui.list.MultiList;
 import oc1.event.LiveList;
 
 /**
@@ -32,7 +33,7 @@ public final class SearchableList<T> {
     }
     
     private static List newList(ListModel model,ListCellRenderer renderer) {
-        List list = new List(model);       
+        List list = new DebugList(model);       
         list.setRenderer(renderer);
         return list;
     }
