@@ -1,5 +1,6 @@
 package oc1.log;
 
+import com.codename1.io.NetworkManager;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.LookAndFeel;
@@ -15,6 +16,7 @@ final class DeviceInfo {
         ReportBuilder out = new ReportBuilder();
         out.section(displayInfo());
         out.section(runtimeInfo());
+        out.section(networkInfo());
         out.section(UIManagerInfo());
         out.section(LookAndFeelInfo());
         out.section(AndroidProperties());
@@ -25,7 +27,7 @@ final class DeviceInfo {
         Display display = Display.getInstance();
         ReportBuilder out = new ReportBuilder();
         out.heading("Display");
-        out.add(" get");
+        out.add("Get");
         out.add("platform name="           + display.getPlatformName());
         out.add("MSISDN="                  + display.getMsisdn());
         out.add("UDID="                    + display.getUdid());
@@ -33,42 +35,54 @@ final class DeviceInfo {
         out.add("display height="          + display.getDisplayHeight());
         out.add("display width="           + display.getDisplayWidth());
         out.add("frame rate="              + display.getFrameRate());
-        out.add(" are");
-        out.add("are mutable images fast=" + display.areMutableImagesFast());
-        out.add(" can");
-        out.add("can force orientation="   + display.canForceOrientation());
-        out.add("can dial="                + display.canDial());
-        out.add(" is");
-        out.add(" isAllowMinimizing="             + display.isAllowMinimizing());
-        out.add(" isAutoFoldVKBOnFormSwitch="     + display.isAutoFoldVKBOnFormSwitch());
-        out.add(" isBadgingSupported="            + display.isBadgingSupported());
-        out.add(" isBidiAlgorithm="               + display.isBidiAlgorithm());
-        out.add(" isBuiltinSoundsEnabled="        + display.isBuiltinSoundsEnabled());
-        out.add(" isClickTouchScreen="            + display.isClickTouchScreen());
-        out.add(" isContactsPermissionGranted="   + display.isContactsPermissionGranted());
-        out.add(" isDesktop="                     + display.isDesktop());
-        out.add(" isEdt="                         + display.isEdt());
-        out.add(" isMinimized="                   + display.isMinimized());
-        out.add(" isMultiKeyMode="                + display.isMultiKeyMode());
-        out.add(" isMultiTouch="                  + display.isMultiTouch());
-        out.add(" isNativeInputSupported="        + display.isNativeInputSupported());
-        out.add(" isNativeShareSupported="        + display.isNativeShareSupported());
-        out.add(" isNativeTitle="                 + display.isNativeTitle());
-        out.add(" isNativeVideoPlayerControlsIncluded=" + display.isNativeVideoPlayerControlsIncluded());
-        out.add(" isNotificationSupported="       + display.isNotificationSupported());
-        out.add(" isOpenNativeNavigationAppSupported=" + display.isOpenNativeNavigationAppSupported());
-        out.add(" isPortrait="                    + display.isPortrait());
-        out.add(" isPureTouch="                   + display.isPureTouch());
-        out.add(" isScreenSaverDisableSupported=" + display.isScreenSaverDisableSupported());
-        out.add(" isTablet="                      + display.isTablet());
-        out.add(" isTouchScreenDevice="           + display.isTouchScreenDevice());
-        out.add(" isVirtualKeyboardShowing="      + display.isVirtualKeyboardShowing());
+        out.add("Are?");
+        out.add("mutable images fast=" + display.areMutableImagesFast());
+        out.add("Can?");
+        out.add("force orientation="   + display.canForceOrientation());
+        out.add("dial="                + display.canDial());
+        out.add("Is?");
+        out.add("AllowMinimizing="             + display.isAllowMinimizing());
+        out.add("AutoFoldVKBOnFormSwitch="     + display.isAutoFoldVKBOnFormSwitch());
+        out.add("BadgingSupported="            + display.isBadgingSupported());
+        out.add("BidiAlgorithm="               + display.isBidiAlgorithm());
+        out.add("BuiltinSoundsEnabled="        + display.isBuiltinSoundsEnabled());
+        out.add("ClickTouchScreen="            + display.isClickTouchScreen());
+        out.add("ContactsPermissionGranted="   + display.isContactsPermissionGranted());
+        out.add("Desktop="                     + display.isDesktop());
+        out.add("Edt="                         + display.isEdt());
+        out.add("Minimized="                   + display.isMinimized());
+        out.add("MultiKeyMode="                + display.isMultiKeyMode());
+        out.add("MultiTouch="                  + display.isMultiTouch());
+        out.add("NativeInputSupported="        + display.isNativeInputSupported());
+        out.add("NativeShareSupported="        + display.isNativeShareSupported());
+        out.add("NativeTitle="                 + display.isNativeTitle());
+        out.add("NativeVideoPlayerControlsIncluded=" + display.isNativeVideoPlayerControlsIncluded());
+        out.add("NotificationSupported="             + display.isNotificationSupported());
+        out.add("OpenNativeNavigationAppSupported="  + display.isOpenNativeNavigationAppSupported());
+        out.add("Portrait="                    + display.isPortrait());
+        out.add("PureTouch="                   + display.isPureTouch());
+        out.add("ScreenSaverDisableSupported=" + display.isScreenSaverDisableSupported());
+        out.add("Tablet="                      + display.isTablet());
+        out.add("TouchScreenDevice="           + display.isTouchScreenDevice());
+        out.add("VirtualKeyboardShowing="      + display.isVirtualKeyboardShowing());
         Form form = display.getCurrent();
         if (form==null) {
             out.add("form=null");
          } else {
             out.add("form=" + form.getName());
         }
+        return out.toString();
+    }
+
+    static private String networkInfo() {
+        NetworkManager network = NetworkManager.getInstance();
+        ReportBuilder out = new ReportBuilder();
+        out.heading("Network");
+        out.add("CurrentAccessPoint=" + network.getCurrentAccessPoint());
+        out.add("ThreadCount="        + network.getThreadCount());
+        out.add("Timeout="            + network.getTimeout());
+        out.add("APSupported="        + network.isAPSupported());
+        out.add("QueueIdle="          + network.isQueueIdle());
         return out.toString();
     }
 
