@@ -47,23 +47,27 @@ final class DebugList<T> extends List<T> {
     }
 
     public int getSideGap() {
-        called("getSideGap");
-        return super.getSideGap();
+        int result = super.getSideGap();
+        debug("getSideGap=" + result);
+        return result;
     }
 
     public boolean isScrollableY() {
-        called("isScrollableY");
-        return super.isScrollableY();
+        boolean result = super.isScrollableY();
+        debug("isScrollableY="+result);
+        return result;
     }
 
     public boolean isScrollableX() {
-        called("isScrollableX");
-        return super.isScrollableX();
+        boolean result = super.isScrollableX();
+        debug("isScrollableX="+result);
+        return result;
     }
 
     public int getMaxElementHeight() {
-        called("getMaxElementHeight");
-        return super.getMaxElementHeight();
+        int result = super.getMaxElementHeight();
+        debug("getMaxElementHeight=" + result);
+        return result;
     }
 
     public void setMaxElementHeight(int maxElementHeight) {
@@ -72,8 +76,9 @@ final class DebugList<T> extends List<T> {
     }
 
     public int getMinElementHeight() {
-        called("getMinElementHeight");
-        return super.getMinElementHeight();
+        int result = super.getMinElementHeight();
+        debug("getMinElementHeight=" + result);
+        return result;
     }
 
     public void setMinElementHeight(int minElementHeight) {
@@ -82,18 +87,21 @@ final class DebugList<T> extends List<T> {
     }
 
     public int size() {
-        called("size");
-        return super.size();
+        int result = super.size();
+        debug("size="+result);
+        return result;
     }
 
     public int getCurrentSelected() {
-        called("getCurrentSelected");
-        return super.getCurrentSelected();
+        int result = super.getCurrentSelected();
+        debug("getCurrentSelected=" + result);
+        return result;
     }
 
     public int getSelectedIndex() {
-        called("getSelectedIndex");
-        return super.getSelectedIndex();
+        int result = super.getSelectedIndex();
+        debug("getSelectedIndex=" + result);
+        return result;
     }
 
     public void setSelectedIndex(int index) {
@@ -107,7 +115,7 @@ final class DebugList<T> extends List<T> {
     }
 
     protected int getDragRegionStatus(int x, int y) {
-        called("getDragRegionStatus");
+        called("getDragRegionStatus(" + x + "," + y + ")");
         return super.getDragRegionStatus(x, y);
     }
     
@@ -127,7 +135,7 @@ final class DebugList<T> extends List<T> {
     }
 
     public ListModel<T> getModel() {
-        called("getModel");
+        debug("getModel");
         return super.getModel();
     }
 
@@ -182,8 +190,9 @@ final class DebugList<T> extends List<T> {
     }
 
     public int getListSizeCalculationSampleCount() {
-        called("getListSizeCalculationSampleCount");
-        return super.getListSizeCalculationSampleCount();
+        int result = super.getListSizeCalculationSampleCount();
+        called("getListSizeCalculationSampleCount=" + result);
+        return result;
     }
 
     public void setListSizeCalculationSampleCount(int listSizeCalculationSampleCount) {
@@ -212,13 +221,14 @@ final class DebugList<T> extends List<T> {
     }
 
     public ListCellRenderer getRenderer() {
-        called("getRenderer");
+        debug("getRenderer");
         return super.getRenderer();
     }
 
     public int getOrientation() {
-        called("getOrientation");
-        return super.getOrientation();
+        int result = super.getOrientation();
+        debug("getOrientation=" + result);
+        return result;
     }
 
     public void refreshTheme(boolean merge) {
@@ -262,13 +272,14 @@ final class DebugList<T> extends List<T> {
     }
 
     public void paint(Graphics g) {
-        called("paint");
+        debug("paint");
         super.paint(g);
     }
 
     protected boolean shouldRenderSelection() {
-        called("shouldRenderSelection");
-        return super.shouldRenderSelection();
+        boolean result = super.shouldRenderSelection();
+        debug("shouldRenderSelection="+result);
+        return result;
     }
     
     public void addSelectionListener(SelectionListener l) {
@@ -322,8 +333,9 @@ final class DebugList<T> extends List<T> {
     }
 
     public int getItemGap() {
-        called("getItemGap");
-        return super.getItemGap();
+        int result = super.getItemGap();
+        debug("getItemGap=" + result);
+        return result;
     }
 
     public void setItemGap(int itemGap) {
@@ -347,7 +359,7 @@ final class DebugList<T> extends List<T> {
     }
 
     public void pointerPressed(int x, int y) {
-        called("pointerPressed");
+        called("pointerPressed(" + x + "," + y + ")");
         super.pointerPressed(x, y);
     }
 
@@ -357,7 +369,7 @@ final class DebugList<T> extends List<T> {
     }
 
     public void pointerDragged(int x, int y) {
-        called("pointerDragged");
+        debug("pointerDragged(" + x + "," + y + ")");
         super.pointerDragged(x, y);
     }
 
@@ -377,13 +389,14 @@ final class DebugList<T> extends List<T> {
     }
 
     public void pointerReleased(int x, int y) {
-        called("pointerReleased");
+        called("pointerReleased=(" + x + "," + y + ")");
         super.pointerReleased(x, y);
     }
 
     protected Dimension calcPreferredSize() {
-        called("calcPreferredSize");
-        return super.calcPreferredSize();
+        Dimension result = super.calcPreferredSize();
+        called("calcPreferredSize=" + result);
+        return result;
     }
 
     public void addItem(T item) {
@@ -402,7 +415,7 @@ final class DebugList<T> extends List<T> {
     }
 
     public boolean animate() {
-        called("animate");
+        debug("animate");
         return super.animate();
     }
 
@@ -454,6 +467,10 @@ final class DebugList<T> extends List<T> {
     public void setHint(String hint, Image icon){
         called("setHint");
         super.setHint(hint, icon);
+    }
+
+    private void debug(String method) {
+        //called(method);
     }
 
     private void called(String method) {
