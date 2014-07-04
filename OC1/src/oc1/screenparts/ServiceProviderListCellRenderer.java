@@ -7,28 +7,26 @@ import com.codename1.ui.list.GenericListCellRenderer;
 import com.codename1.ui.list.ListCellRenderer;
 import oc1.domain.ServiceProvider;
 import oc1.ui.Icons;
+import oc1.ui.MultiButtonListCellRenderer;
 
 /**
  *
  * @author Curt
  */
 public final class ServiceProviderListCellRenderer
-    implements ListCellRenderer
+    extends MultiButtonListCellRenderer
 {
 
-    final MultiButton selected = new MultiButton();
-    final MultiButton unselected = new MultiButton();
-    final ListCellRenderer renderer = new GenericListCellRenderer(selected, unselected);
-
-    public Component getListCellRendererComponent(List list, Object value, int index, boolean isSelected) {
-        ServiceProvider provider = (ServiceProvider) value;
-        MultiButton component = getMultiButton(list, provider, index, isSelected);
-        configureButton(component,provider);
-        return component;
+    public ServiceProviderListCellRenderer() {
+        super(new MultiButton(),new MultiButton());
     }
 
-    private MultiButton getMultiButton(List list, ServiceProvider provider, int index, boolean isSelected) {
-        return (MultiButton) renderer.getListCellRendererComponent(list, provider.name.toString(), index, isSelected);
+    @Override
+    public Component getListCellRendererComponent(List list, Object value, int index, boolean isSelected) {
+        MultiButton component = (MultiButton) super.getCellRendererComponent(list, value, value, index, isSelected);
+        ServiceProvider provider = (ServiceProvider) value;
+        configureButton(component,provider);
+        return component;
     }
 
     private void configureButton(MultiButton button, ServiceProvider provider) {
@@ -38,10 +36,6 @@ public final class ServiceProviderListCellRenderer
 
     private String ratingAndDistance(ServiceProvider provider) {
         return provider.myRating().toString() + " " + provider.distanceFromCurrentLocation();
-    }
-    
-    public Component getListFocusComponent(List list) {
-        return renderer.getListFocusComponent(list);
     }
     
 }
