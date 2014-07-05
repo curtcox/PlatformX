@@ -6,6 +6,7 @@ import oc1.screen.Screen;
 import oc1.screen.ScreenButton;
 import oc1.screen.ScreenFactory;
 import oc1.screens.SearchScreen;
+import oc1.screens.SearchScreenFactory;
 import oc1.ui.ActionButton;
 
 /**
@@ -40,7 +41,7 @@ public final class ZoomOut {
 
     ScreenFactory newZoomOutLink() {
         return new ScreenFactory() {
-            public Screen create() { return SearchScreen.of(previous, bigger(radius)); }
+            public Screen create() { return SearchScreenFactory.withPreviousAndRadius(previous, bigger(radius)); }
         };
     }
 

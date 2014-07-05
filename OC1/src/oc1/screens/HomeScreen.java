@@ -18,7 +18,7 @@ public final class HomeScreen
     extends Screen
 {
    
-    public static final String VERSION = "Oyster Cracker 2014/7/5 7:32a";
+    public static final String VERSION = "Oyster Cracker 2014/7/5 10:25a";
     
     HomeScreen() {
         super(VERSION,null);
@@ -46,7 +46,7 @@ public final class HomeScreen
     }
 
     private Button searchScreenButton() {
-        return buttonTo("Search","system-search-4.png",SearchScreen.of(this));
+        return buttonTo("Search","system-search-4.png",SearchScreenFactory.withPrevious(this));
     }
     
     private Button profileScreenButton() {
