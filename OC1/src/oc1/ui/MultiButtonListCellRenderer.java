@@ -24,143 +24,59 @@
 package oc1.ui;
 
 import com.codename1.components.MultiButton;
-import com.codename1.ui.Button;
 import com.codename1.ui.CheckBox;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.Display;
-import com.codename1.ui.EncodedImage;
 import com.codename1.ui.Form;
 import com.codename1.ui.Image;
 import com.codename1.ui.Label;
 import com.codename1.ui.List;
 import com.codename1.ui.RadioButton;
 import com.codename1.ui.TextArea;
-import com.codename1.ui.URLImage;
 import com.codename1.ui.list.CellRenderer;
 import com.codename1.ui.list.ListCellRenderer;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 /**
  */
 public class MultiButtonListCellRenderer<T>
     implements ListCellRenderer<T>, CellRenderer<T>
 {
-
-    /**
-     * The default adapter to use for image URLs
-     * @return the defaultAdapter
-     */
-    public static URLImage.ImageAdapter getDefaultAdapter() {
-        return defaultAdapter;
-    }
-
-    /**
-     * The default adapter to use for image URLs
-     * @param aDefaultAdapter the defaultAdapter to set
-     */
-    public static void setDefaultAdapter(URLImage.ImageAdapter aDefaultAdapter) {
-        defaultAdapter = aDefaultAdapter;
-    }
-    private Button lastClickedComponent;
     private ArrayList<Image> pendingAnimations;
 
     private final Label focusComponent = new Label();
-    private final MultiButton selected;
-    private final MultiButton unselected;
+    private final MultiButton selected = new MultiButton();
+    private final MultiButton unselected = new MultiButton();
 
-    private Component[] selectedEntries;
-    private Component[] unselectedEntries;
-    private Component[] selectedEntriesEven;
-    private Component[] unselectedEntriesEven;
+    private final Label selectedEntries;
+    private final Label unselectedEntries;
 
     private Component parentList;
-    private boolean selectionListener = true;
     private final boolean firstCharacterRTL;
     private boolean waitingForRegisterAnimation;
-    private final HashMap<String, EncodedImage> placeholders = new HashMap<String, EncodedImage>();
     
-    private static URLImage.ImageAdapter defaultAdapter = URLImage.RESIZE_SCALE;
-    private URLImage.ImageAdapter adapter = defaultAdapter;
-    
-    /**
-     * Constructs a generic renderer with the given selected/unselected components
-     *
-     * @param selected indicates the selected value for the renderer
-     * @param unselected indicates the unselected value for the renderer
-     */
-    public MultiButtonListCellRenderer(MultiButton selected, MultiButton unselected) {
+    public MultiButtonListCellRenderer() {
         if(selected == unselected) {
             throw new IllegalArgumentException("Must use distinct instances for renderer!");
         }
-        this.selected = selected;
-        this.unselected = unselected;
         focusComponent.setUIID(selected.getUIID() + "Focus");
         focusComponent.setFocus(true);
 
-        selectedEntries = initRenderer(selected);
-        unselectedEntries = initRenderer(unselected);
+        selectedEntries = (Label) initRenderer(selected)[0];
+        unselectedEntries = (Label) initRenderer(unselected)[0];
         firstCharacterRTL = selected.getUIManager().isThemeConstant("firstCharRTLBool", false);
-        addSelectedEntriesListener(selectedEntries);
-        addSelectedEntriesListener(unselectedEntries);
-    }
-
-    /**
-     * Updates the placeholder instances, this is useful for changing the URLImage placeholder in runtime as
-     * might happen in the designer
-     */
-    public void updateIconPlaceholders() {
-        updateIconPlaceholders(selectedEntries);
-        updateIconPlaceholders(unselectedEntries);
-    }
-    
-    private void updateIconPlaceholders(Component[] e) {
-        for (Component e1 : e) {
-            String n = e1.getName();
-            if (n != null) {
-                if (n.endsWith("_URLImage") && e1 instanceof Label) {
-                    placeholders.put(n, (EncodedImage) ((Label) e1).getIcon());
-                }
-            }
-        }
-    }
-    
-    private void addSelectedEntriesListener(Component[] e) {
-        for (Component e1 : e) {
-            String n = e1.getName();
-            if (n != null) {
-                if (n.endsWith("_URLImage") && e1 instanceof Label) {
-                    placeholders.put(n, (EncodedImage) ((Label) e1).getIcon());
-                }
-            }
-        }
     }
 
     private Component[] initRenderer(Component r) {
         r.setCellRenderer(true);
         if(r instanceof Container) {
-            ArrayList selectedVector = new ArrayList();
-            findComponentsOfInterest(r, selectedVector);
-            return vectorToComponentArray(selectedVector);
+            ArrayList list = new ArrayList();
+            findComponentsOfInterest(r, list);
+            return vectorToComponentArray(list);
         } else {
             return new Component[] {r};
         }
-    }
-
-    /**
-     * Allows partitioning the renderer into "areas" that can be clicked. When 
-     * receiving an action event in the list this method allows a developer to
-     * query the renderer to "see" whether a button within the component was "touched"
-     * by the user on a touch screen device. 
-     * This method will reset the value to null after returning a none-null value!
-     * 
-     * @return a button or null
-     */
-    public Button extractLastClickedComponent() {
-        Button c = lastClickedComponent;
-        lastClickedComponent = null;
-        return c;
     }
 
     private Component[] vectorToComponentArray(ArrayList v) {
@@ -200,23 +116,20 @@ public class MultiButtonListCellRenderer<T>
      * @inheritDoc
      */
     public MultiButton getCellRendererComponent(Component list, Object model, T value, int index, boolean isSelected) {
-        MultiButton cmp;
-        Component[] entries;
         if(!Display.getInstance().shouldRenderSelection(list)) {
             isSelected = false;
         }
         if(isSelected && list.hasFocus()) {
-            cmp = selected;
-            entries = selectedEntries;
-            cmp.setFocus(true);
-            setComponentValueWithTickering(entries[0], value, list, cmp);
-            entries[0].setFocus(entries[0].isFocusable());
-            return cmp;
+            Label entries = selectedEntries;
+            selected.setFocus(true);
+            setComponentValue(entries, value, list, selected);
+            entries.setFocus(entries.isFocusable());
+            return selected;
         } else {
-            cmp = unselected;
-            entries = unselectedEntries;
+            MultiButton cmp = unselected;
+            Label entries = unselectedEntries;
             cmp.setFocus(false);
-            setComponentValue(entries[0], value, list, cmp);
+            setComponentValue(entries, value, list, cmp);
             return cmp;
         }
     }
@@ -232,118 +145,89 @@ public class MultiButtonListCellRenderer<T>
         return v != null && "true".equalsIgnoreCase(v.toString());
     }
 
-    private void setComponentValueWithTickering(Component cmp, Object value, Component l, Component rootRenderer) {
-        setComponentValue(cmp, value, l, rootRenderer);
+    public void setComponentValue(Component cmp, Object value, Component parent, Component rootRenderer) {
         if(cmp instanceof Label) {
-            if(selectionListener) {
-                if(l instanceof List) {
-                }
-                parentList = l;
+            setLabelValue((Label)cmp,value,parent,rootRenderer);
+        }
+        if(cmp instanceof TextArea) {
+            setTextAreaValue((TextArea)cmp,value);
+        }
+    }
+
+    private void setLabelValue(Label label, Object value, Component parent, Component rootRenderer) {
+        if (value instanceof Image) {
+            setLabelImage(label,(Image)value,parent,rootRenderer);
+        } else {
+            label.setIcon(null);
+        }
+        if(label instanceof CheckBox) {
+            ((CheckBox)label).setSelected(isSelectedValue(value));
+            return;
+        }
+        if(label instanceof RadioButton) {
+            ((RadioButton)label).setSelected(isSelectedValue(value));
+            return;
+        }
+        if (value == null) {
+            label.setText("");
+        } else {
+            if(value instanceof Label){
+                label.setText(((Label)value).getText());
+                label.setIcon(((Label)value).getIcon());
+            }else{
+                label.setText(value.toString());
             }
-            Label label = (Label)cmp;
-            if(label.shouldTickerStart() && Display.getInstance().shouldRenderSelection()) {
-                if(!label.isTickerRunning()) {
-                    parentList = l;
-                    if(parentList != null) {
-                        Form f = parentList.getComponentForm();
-                        if(f != null) {
-                            label.startTicker(cmp.getUIManager().getLookAndFeel().getTickerSpeed(), true);
-                        }
-                    }
-                }
-            } else {
-                if(label.isTickerRunning()) {
-                    label.stopTicker();
-                }
-                label.setTextPosition(0);
+        }
+        if(firstCharacterRTL) {
+            String t = label.getText();
+            if(t.length() > 0) {
+                label.setRTL(Display.getInstance().isRTL(t.charAt(0)));
             }
         }
     }
 
-    /**
-     * Initializes the given component with the given value 
-     * 
-     * @param cmp one of the components that is or is a part of the renderer
-     * @param value the value to install into the component
-     */
-    private void setComponentValue(Component cmp, Object value, Component parent, Component rootRenderer) {
-        // fixed components shouldn't be modified by the renderer, this allows for
-        // hardcoded properties in the renderer. We still want them to go through the
-        // process so renderer selected/unselected styles are applied
-        if(cmp.getName().toLowerCase().endsWith("fixed")) {
-            return;
+    private void setLabelImage(Label label, Image value, Component parent, Component rootRenderer) {
+        if(value.isAnimation()) {
+            setLabelAnimation(value,parent,rootRenderer);
         }
-        if(cmp instanceof Label) {
-            if(value instanceof Image) {
-                Image i = (Image)value;
-                if(i.isAnimation()) {
-                    if(pendingAnimations == null) {
-                        pendingAnimations = new ArrayList<Image>();
-                    }
-                    if(!pendingAnimations.contains(i)) {
-                        pendingAnimations.add(i);
-                        if(parentList == null) {
-                            parentList = parent;
-                        }
-                        if(parentList != null) {
-                            Form f = parentList.getComponentForm();
-                            waitingForRegisterAnimation = f == null;
-                        }
-                    } else {
-                        if(waitingForRegisterAnimation) {
-                            if(parentList != null) {
-                                Form f = parentList.getComponentForm();
-                                if(f != null) {
-                                    waitingForRegisterAnimation = false;
-                                }
-                            }
-                        }
-                    }
-                }
-                Image oldImage = ((Label)cmp).getIcon();
-                ((Label)cmp).setIcon(i);
-                ((Label)cmp).setText("");
-                if(oldImage == null || oldImage.getWidth() != i.getWidth() || oldImage.getHeight() != i.getHeight()) {
-                    ((Container)rootRenderer).revalidate();
-                }
-                return;
-            } else {
-                ((Label)cmp).setIcon(null);
-            }
-            if(cmp instanceof CheckBox) {
-                ((CheckBox)cmp).setSelected(isSelectedValue(value));
-                return;
-            }
-            if(cmp instanceof RadioButton) {
-                ((RadioButton)cmp).setSelected(isSelectedValue(value));
-                return;
-            }
+        Image oldImage = label.getIcon();
+        label.setIcon(value);
+        label.setText("");
+        if(oldImage == null || oldImage.getWidth() != value.getWidth() || oldImage.getHeight() != value.getHeight()) {
+            ((Container)rootRenderer).revalidate();
+        }
+    }
 
-            Label l = (Label)cmp;
-            if(value == null) {
-                l.setText("");
-            } else {
-                if(value instanceof Label){
-                    l.setText(((Label)value).getText());
-                    l.setIcon(((Label)value).getIcon());
-                }else{
-                    l.setText(value.toString());
-                }
-            }
-            if(firstCharacterRTL) {
-                String t = l.getText();
-                if(t.length() > 0) {
-                    l.setRTL(Display.getInstance().isRTL(t.charAt(0)));
-                }
-            }
-            return;
+    private void setLabelAnimation(Image value, Component parent, Component rootRenderer) {
+        if(pendingAnimations == null) {
+            pendingAnimations = new ArrayList<Image>();
         }
-        if(cmp instanceof TextArea) {
-            if(value == null) {
-                ((TextArea)cmp).setText("");
-            } else {
-                ((TextArea)cmp).setText(value.toString());
+        if(!pendingAnimations.contains(value)) {
+            pendingAnimations.add(value);
+            if(parentList == null) {
+                parentList = parent;
             }
+            if(parentList != null) {
+                Form f = parentList.getComponentForm();
+                waitingForRegisterAnimation = f == null;
+            }
+        } else {
+            if(waitingForRegisterAnimation) {
+                if(parentList != null) {
+                    Form f = parentList.getComponentForm();
+                    if(f != null) {
+                        waitingForRegisterAnimation = false;
+                    }
+                }
+            }
+        }
+    }
+
+    private void setTextAreaValue(TextArea cmp, Object value) {
+        if(value == null) {
+            cmp.setText("");
+        } else {
+            cmp.setText(value.toString());
         }
     }
 
@@ -355,14 +239,6 @@ public class MultiButtonListCellRenderer<T>
         return focusComponent;
     }
 
-    public boolean isSelectionListener() {
-        return selectionListener;
-    }
-
-    public void setSelectionListener(boolean selectionListener) {
-        this.selectionListener = selectionListener;
-    }
-
     public Component getSelected() {
         return selected;
     }
@@ -370,13 +246,4 @@ public class MultiButtonListCellRenderer<T>
     public Component getUnselected() {
         return unselected;
     }
-
-    public URLImage.ImageAdapter getAdapter() {
-        return adapter;
-    }
-
-    public void setAdapter(URLImage.ImageAdapter adapter) {
-        this.adapter = adapter;
-    }
-
 }

@@ -18,7 +18,7 @@ public final class ServiceProviderListCellRenderer
 {
 
     public ServiceProviderListCellRenderer() {
-        super(new MultiButton(),new MultiButton());
+        super();
     }
 
     @Override
