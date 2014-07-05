@@ -31,8 +31,9 @@ public final class ServiceProviderListCellRenderer
     }
 
     private void configureButton(ListCell button, ServiceProvider provider) {
-        button.setTextLine1(ratingAndDistance(provider));
-        button.setIcon(Icons.of().getImage(provider.icon));
+        button.firstRow.setText(ratingAndDistance(provider));
+        button.secondRow.setText(provider.toString());
+        button.icon.setIcon(Icons.of().getImage(provider.icon));
     }
 
     private String ratingAndDistance(ServiceProvider provider) {
