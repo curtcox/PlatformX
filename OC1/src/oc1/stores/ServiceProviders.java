@@ -14,6 +14,7 @@ import google.Place;
 import google.PlacesSearch;
 import java.util.ArrayList;
 import java.util.List;
+import oc1.domain.Type;
 
 /**
  *
@@ -50,7 +51,7 @@ public final class ServiceProviders {
         return new ServiceProvider(
             id, new Name(place.name), locationFromPlace(place),
             new Address(place.vicinity),
-            place.price_level,place.rating,place.types,place.icon,
+            place.price_level,place.rating,typesFromPlace(place),place.icon,
             MyRatings.of().getFor(id)
         );
     }
@@ -60,5 +61,13 @@ public final class ServiceProviders {
         location.setLatitude(place.latitude);
         location.setLongitude(place.longitude);
         return location;
+    }
+
+    private Type[] typesFromPlace(Place place) {
+        List list = new ArrayList();
+        for (String type : place.types) {
+            list.add(new Type(type));
+        }
+        return (Type[]) list.toArray(new Type[0]);
     }
 }
