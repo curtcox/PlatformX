@@ -28,7 +28,15 @@ public final class DebugForm
         form.addCommand(submitIssue());
         return form;
     }
-    
+
+    private static Command submitIssue() {
+        return new LoggedCommand("Report") {
+            @Override protected void go() {
+                IssueReporter.sendEmail();
+            }
+        };
+    }
+
     @Override protected void onShow()          { log("onShow"); }
     @Override protected void onShowCompleted() { log("onShowCompleted"); }
     @Override public void show() {
@@ -60,14 +68,6 @@ public final class DebugForm
 
     private void log(String message) {
         //LogManager.of().getLog(DebugForm.class).log(title + ":" + message);    
-    }
-    
-    private static Command submitIssue() {
-        return new LoggedCommand("Report") {
-            @Override protected void go() {
-                IssueReporter.sendEmail();
-            }
-        };
     }
 
 }
