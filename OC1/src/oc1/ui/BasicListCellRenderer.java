@@ -23,7 +23,6 @@
  */
 package oc1.ui;
 
-import com.codename1.components.MultiButton;
 import com.codename1.ui.CheckBox;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
@@ -40,14 +39,14 @@ import java.util.ArrayList;
 
 /**
  */
-public class MultiButtonListCellRenderer<T>
+public class BasicListCellRenderer<T>
     implements ListCellRenderer<T>, CellRenderer<T>
 {
     private ArrayList<Image> pendingAnimations;
 
     private final Label focusComponent = new Label();
-    private final MultiButton selected = new MultiButton();
-    private final MultiButton unselected = new MultiButton();
+    private final ListCell selected = new ListCell();
+    private final ListCell unselected = new ListCell();
 
     private final Label selectedEntries;
     private final Label unselectedEntries;
@@ -56,7 +55,7 @@ public class MultiButtonListCellRenderer<T>
     private final boolean firstCharacterRTL;
     private boolean waitingForRegisterAnimation;
     
-    public MultiButtonListCellRenderer() {
+    public BasicListCellRenderer() {
         if(selected == unselected) {
             throw new IllegalArgumentException("Must use distinct instances for renderer!");
         }
@@ -115,7 +114,7 @@ public class MultiButtonListCellRenderer<T>
     /**
      * @inheritDoc
      */
-    public MultiButton getCellRendererComponent(Component list, Object model, T value, int index, boolean isSelected) {
+    public ListCell getCellRendererComponent(Component list, Object model, T value, int index, boolean isSelected) {
         if(!Display.getInstance().shouldRenderSelection(list)) {
             isSelected = false;
         }
@@ -126,7 +125,7 @@ public class MultiButtonListCellRenderer<T>
             entries.setFocus(entries.isFocusable());
             return selected;
         } else {
-            MultiButton cmp = unselected;
+            ListCell cmp = unselected;
             Label entries = unselectedEntries;
             cmp.setFocus(false);
             setComponentValue(entries, value, list, cmp);
