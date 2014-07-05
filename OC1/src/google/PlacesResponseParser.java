@@ -60,7 +60,7 @@ public final class PlacesResponseParser {
         place.name        = stringFrom(map,"name");
         place.address     = stringFrom(map,"formatted_address");
         place.vicinity    = stringFrom(map,"vicinity");
-        place.id          = stringFrom(map,"id");
+        place.id          = stringFrom(map,"place_id");
         place.reference   = stringFrom(map,"reference");
         Geometry geometry = Geometry.of(map);
         place.latitude    = geometry.latitude;

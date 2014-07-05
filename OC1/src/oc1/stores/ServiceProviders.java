@@ -47,12 +47,18 @@ public final class ServiceProviders {
 
     private ServiceProvider serviceProviderFromPlace(Place place) {
         ID id = new ID(place.id);
-        Name name = new Name(place.name);
-        Location placeLocation = new Location();
-        placeLocation.setLatitude(place.latitude);
-        placeLocation.setLongitude(place.longitude);
-        Rating myRating = MyRatings.of().getFor(id);
-        return new ServiceProvider(id,name,placeLocation,new Address(place.vicinity),place.price_level,place.rating,place.types,place.icon,myRating);
+        return new ServiceProvider(
+            id, new Name(place.name), locationFromPlace(place),
+            new Address(place.vicinity),
+            place.price_level,place.rating,place.types,place.icon,
+            MyRatings.of().getFor(id)
+        );
     }
 
+    private Location locationFromPlace(Place place) {
+        Location location = new Location();
+        location.setLatitude(place.latitude);
+        location.setLongitude(place.longitude);
+        return location;
+    }
 }
