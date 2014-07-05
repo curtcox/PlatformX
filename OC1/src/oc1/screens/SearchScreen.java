@@ -21,12 +21,10 @@ import oc1.ui.SearchableList;
 public final class SearchScreen
     extends Screen
 {
-    final int radius;
-    final SearchableList<ServiceProvider> searchList;
+    private final SearchableList<ServiceProvider> searchList;
 
-    private SearchScreen(Screen previous,int radius, SearchableList<ServiceProvider> searchList) { 
+    private SearchScreen(Screen previous,SearchableList<ServiceProvider> searchList) { 
         super("Search",previous);
-        this.radius = radius;
         this.searchList = searchList;
         layoutForm();
         addSelectionListener();
@@ -38,10 +36,10 @@ public final class SearchScreen
     
     public static SearchScreen of(Screen previous, int radius) {
         ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(previous,radius);
-        return new SearchScreen(previous,zoomOut.radius,newSearchableList(getProviders(zoomOut),zoomOut.createComponent()));    
+        return new SearchScreen(previous,newSearchableList(getProviders(zoomOut),zoomOut.createComponent()));    
     }
 
-    static ZoomOut zoomOutToSmallestRadiusWithMultipleHits(Screen previous,int radius) {
+    private static ZoomOut zoomOutToSmallestRadiusWithMultipleHits(Screen previous,int radius) {
         ZoomOut zoomOut = new ZoomOut(previous,radius);
         LiveList<ServiceProvider> providers = getProviders(zoomOut);
         while (zoomOut.couldZoomOut() && providers.size()<2) {
@@ -51,7 +49,7 @@ public final class SearchScreen
         return zoomOut;
     }
 
-    static LiveList<ServiceProvider> getProviders(ZoomOut zoomOut) {
+    private static LiveList<ServiceProvider> getProviders(ZoomOut zoomOut) {
         return ServiceProviders.of().nearby(zoomOut.radius);
     }
     
