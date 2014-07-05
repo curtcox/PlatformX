@@ -78,7 +78,6 @@ final class DeviceInfo {
         NetworkManager network = NetworkManager.getInstance();
         ReportBuilder out = new ReportBuilder();
         out.heading("Network");
-        out.add("CurrentAccessPoint=" + network.getCurrentAccessPoint());
         out.add("ThreadCount="        + network.getThreadCount());
         out.add("Timeout="            + network.getTimeout());
         out.add("APSupported="        + network.isAPSupported());
