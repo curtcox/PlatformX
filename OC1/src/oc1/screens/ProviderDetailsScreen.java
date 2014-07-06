@@ -1,12 +1,16 @@
 package oc1.screens;
 
+import com.codename1.ui.Button;
+import com.codename1.ui.Label;
+import com.codename1.ui.events.ActionEvent;
+import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.table.TableLayout;
+import java.util.Arrays;
+import oc1.domain.ServiceProvider;
+import oc1.domain.Type;
 import oc1.screen.Screen;
 import oc1.screenparts.ProviderRatingButton;
-import com.codename1.ui.Label;
-import com.codename1.ui.table.TableLayout;
-import oc1.domain.ServiceProvider;
 import oc1.ui.Icons;
-import java.util.Arrays;
 
 /**
  * For showing details about a particular provider.
@@ -20,11 +24,29 @@ public final class ProviderDetailsScreen
     private final Label types = new Label();
     private final Label price = new Label();
     private final Label rating = new Label();
-    private final Label icon = new Label();
+    private final Button icon = new Button();
     private final Label vicinity = new Label();
 
-    public ProviderDetailsScreen(Screen previous) {
+    private ProviderDetailsScreen(Screen previous) {
         super("Provider Details",previous);
+    }
+    
+    public static ProviderDetailsScreen linkBackTo(Screen previous) {
+        ProviderDetailsScreen screen = new ProviderDetailsScreen(previous);
+        screen.layoutForm();
+        screen.addButtonListener();
+        return screen;
+    }
+    
+    private void addButtonListener() {
+        icon.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent event) {
+                SearchScreen.withPreviousAndType(ProviderDetailsScreen.this, getType()).show();
+            }
+        });
+    }
+    
+    private void layoutForm() {
         form.setLayout(new TableLayout(8,1));
         form.addComponent(name);
         form.addComponent(distance);
@@ -59,6 +81,10 @@ public final class ProviderDetailsScreen
         price.setText(getPriceText());
     }
 
+    private Type[] getType() {
+        return new Type[] {provider().types[0]};
+    }
+    
     private String getRatingText() {
         return provider().rating == null ? "No rating information" : "Rating : " + provider().rating;
     }

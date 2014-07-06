@@ -27,12 +27,5 @@ public class FakeLocationManager
     }
 
     @Override
-    protected void clearListener() {
-        throw never();
-    }
-
-    private RuntimeException never() {
-        throw new RuntimeException("Not supported yet.");
-    }
-    
+    protected void clearListener() {}
 }

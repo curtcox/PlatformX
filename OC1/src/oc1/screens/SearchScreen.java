@@ -1,12 +1,13 @@
 package oc1.screens;
 
-import oc1.screen.Screen;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import oc1.app.CurrentState;
 import oc1.app.Registry;
 import oc1.domain.ServiceProvider;
+import oc1.domain.Type;
 import oc1.log.LogManager;
+import oc1.screen.Screen;
 import oc1.ui.SearchableList;
 
 /**
@@ -25,6 +26,14 @@ public final class SearchScreen
         addSelectionListener();
     }
 
+    public static SearchScreen withPreviousAndRadius(Screen previous, int radius) {
+        return SearchScreenFactory.withPreviousAndRadius(previous, radius);
+    }
+    
+    public static SearchScreen withPreviousAndType(Screen previous, Type[] types) {
+        return SearchScreenFactory.withPreviousAndType(previous, types);
+    }
+
     private void layoutForm() {
         form.addComponent(searchList.component);
     }
@@ -33,7 +42,7 @@ public final class SearchScreen
         searchList.onSelected(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
                 useSelectedProvider();
-                new ProviderDetailsScreen(SearchScreen.this).show();
+                ProviderDetailsScreen.linkBackTo(SearchScreen.this).show();
             }
         });
     }

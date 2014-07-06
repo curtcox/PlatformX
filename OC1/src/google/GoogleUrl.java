@@ -18,6 +18,7 @@ final class GoogleUrl {
             }
             return new URI(out.toString());
         } catch (URISyntaxException e) {
+            e.printStackTrace();
             throw new RuntimeException();
         }
     }

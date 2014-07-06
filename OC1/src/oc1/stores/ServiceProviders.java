@@ -5,7 +5,6 @@ import oc1.domain.ID;
 import oc1.domain.Name;
 import com.codename1.location.Location;
 import oc1.app.Registry;
-import oc1.domain.Rating;
 import oc1.domain.ServiceProvider;
 import oc1.event.LiveList;
 import oc1.event.SimpleLiveList;
@@ -28,24 +27,32 @@ public final class ServiceProviders {
         return Registry.get(ServiceProviders.class);
     }
     
-    public LiveList<ServiceProvider> nearby(int radius) {
+    public LiveList<ServiceProvider> nearby(int radius, Type[] types) {
         List<ServiceProvider> providers = new ArrayList<ServiceProvider>();
-        for (Place place : placesNearHere(radius)) {
+        for (Place place : placesNearHere(radius,types)) {
             providers.add(serviceProviderFromPlace(place));
         }
         return new SimpleLiveList(providers);
     }
 
-    public List<Place> placesNearHere(int radius) {
+    public List<Place> placesNearHere(int radius,Type[] types) {
         Location currentLocation = Locations.of().getCurrentLocation();
         if (currentLocation==null) {
             return new ArrayList<Place>();
         }
         double latitude = currentLocation.getLatitude();
         double longitude = currentLocation.getLongitude();
-        return places.nearbySearch(latitude, longitude, radius);
+        return places.nearbySearch(latitude, longitude, radius,asStrings(types));
     }
 
+    private String[] asStrings(Type[] types) {
+        List<String> list = new ArrayList();
+        for (Type type : types) {
+            list.add(type.toString());
+        }
+        return list.toArray(new String[0]);
+    }
+    
     private ServiceProvider serviceProviderFromPlace(Place place) {
         ID id = new ID(place.id);
         return new ServiceProvider(
@@ -64,10 +71,10 @@ public final class ServiceProviders {
     }
 
     private Type[] typesFromPlace(Place place) {
-        List list = new ArrayList();
+        List<Type> list = new ArrayList();
         for (String type : place.types) {
             list.add(new Type(type));
         }
-        return (Type[]) list.toArray(new Type[0]);
+        return list.toArray(new Type[0]);
     }
 }

@@ -13,8 +13,17 @@ import oc1.ui.ActionButton;
 final class HowToScreen
     extends Screen
 {   
-    HowToScreen(Screen previous) {
+    private HowToScreen(Screen previous) {
         super("How To",previous);
+    }
+    
+    static HowToScreen linkBackTo(Screen previous) {
+        HowToScreen screen = new HowToScreen(previous);
+        screen.init();
+        return screen;
+    }
+    
+    private void init() {
         form.setLayout(new GridLayout(2,2));
         form.addComponent(submitIssueButton());
     }

@@ -13,7 +13,7 @@ import oc1.ui.ActionButton;
 public class ProviderDetailsButton {
 
     public static ActionButton withReturnTo(Screen returnScreen) {
-        return ScreenButton.textAndLeadingTo(ServiceProvider.getCurrentName(),new ProviderDetailsScreen(returnScreen));
+        return ScreenButton.textAndLeadingTo(ServiceProvider.getCurrentName(),ProviderDetailsScreen.linkBackTo(returnScreen));
     }
 
 }

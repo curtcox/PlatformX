@@ -15,14 +15,21 @@ import java.util.Map;
  */
 public final class PlacesSearch {
     
+    private static final String OR = "%7C";
     private static final String API_key = "";
     
-    public List<Place> nearbySearch(double latitude, double longitude, int radius) {
+    public List<Place> nearbySearch(double latitude, double longitude, int radius, String[] types) {
         Map<String,String> parameters = new HashMap();
         parameters.put("key",API_key);
         parameters.put("radius",Integer.toString(radius));
         parameters.put("location",latitude + "," + longitude);
         parameters.put("sensor","true");
+        if (types.length == 1) {
+            parameters.put("types",types[0]);
+        }
+        if (types.length > 1) {
+            parameters.put("types",pipeSeparated(types));
+        }
         URI url = GoogleUrl.of("https://maps.googleapis.com/maps/api/place/nearbysearch/json?",parameters);
         return searchForPlaces(url);
     }
@@ -57,5 +64,14 @@ public final class PlacesSearch {
     private Place searchForDetails(URI url) {
         throw new RuntimeException();
     } 
+
+    private String pipeSeparated(String[] strings) {
+        StringBuilder out = new StringBuilder();
+        for (String string : strings) {
+            out.append(string);
+            out.append(OR);
+        }
+        return out.toString().substring(0, out.length() - OR.length());
+    }
 
 }

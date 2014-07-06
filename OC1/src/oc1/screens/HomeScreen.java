@@ -18,9 +18,9 @@ public final class HomeScreen
     extends Screen
 {
    
-    public static final String VERSION = "Oyster Cracker 2014/7/5 10:25a";
+    public static final String VERSION = "Oyster Cracker 2014/7/6 12:52a";
     
-    HomeScreen() {
+    private HomeScreen() {
         super(VERSION,null);
         layoutForm();
     }
@@ -42,7 +42,7 @@ public final class HomeScreen
     }
 
     private Button ratingScreenButton() {
-        return buttonTo("Rate","rating.png",new RateScreen(this));
+        return buttonTo("Rate","rating.png",RateScreen.withPrevious(this));
     }
 
     private Button searchScreenButton() {
@@ -54,7 +54,7 @@ public final class HomeScreen
     }
 
     private Button howToScreenButton() {
-        return buttonTo("How To","help.png",new HowToScreen(this));
+        return buttonTo("How To","help.png",HowToScreen.linkBackTo(this));
     }
 
     private Button buttonTo(String text, String image, Screen leadingTo) {

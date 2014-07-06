@@ -19,7 +19,7 @@ public class ProviderRatingButton {
     public static ActionButton withReturnTo(final Screen returnScreen) {
         return ScreenButton.lazyWithTextAndLeadingTo(buttonText(),new ScreenFactory() {
             public Screen create() {
-                return new RateScreen(returnScreen);
+                return RateScreen.withPrevious(returnScreen);
             }
         });
     }

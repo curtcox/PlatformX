@@ -1,6 +1,5 @@
 package oc1.screen;
 
-import oc1.screen.Screen;
 import oc1.app.CurrentState;
 import oc1.event.Change.Source;
 import oc1.ui.ActionButton;

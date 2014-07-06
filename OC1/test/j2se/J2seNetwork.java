@@ -1,10 +1,11 @@
 package j2se;
 
 import com.codename1.ui.Image;
-import oc1.net.Network;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
+import oc1.net.Network;
+import oc1.ui.EmptyImage;
 
 /**
  * Testing network implementation that uses J2SE.
@@ -23,7 +24,7 @@ public class J2seNetwork
     }
 
     public Image getImage(URI uri) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return new EmptyImage(0,0);
     }
     
 }

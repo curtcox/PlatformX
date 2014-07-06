@@ -2,7 +2,6 @@ package oc1.log;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
-import oc1.screen.Screen;
 
 /**
  *

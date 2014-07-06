@@ -143,8 +143,9 @@ final class DebugList<T> extends List<T> {
 
     @Override
     public T getSelectedItem() {
-        called("getSelectedItem");
-        return super.getSelectedItem();
+        T result = super.getSelectedItem();
+        called("getSelectedItem=" + result);
+        return result;
     }
 
     @Override
@@ -373,9 +374,9 @@ final class DebugList<T> extends List<T> {
     }
 
     @Override
-    protected void fireActionEvent(ActionEvent a) {
-        called("fireActionEvent");
-        super.fireActionEvent(a);
+    protected void fireActionEvent(ActionEvent event) {
+        called("fireActionEvent(" + event + ")");
+        super.fireActionEvent(event);
     }
 
     @Override

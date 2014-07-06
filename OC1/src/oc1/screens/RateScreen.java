@@ -29,13 +29,22 @@ public final class RateScreen
     private final TextArea description = new TextArea(
         "                                                                    ");
     
-    public RateScreen(Screen previous) {
+    private RateScreen(Screen previous) {
         super("Rate",previous);
+    }
+
+    public static RateScreen withPrevious(Screen previous) {
+        RateScreen screen = new RateScreen(previous);
+        screen.init();
+        return screen;
+    }
+
+    private void init() {
         description.setEditable(false);
         addComponents();
         refresh();
     }
-
+    
     private void addComponents() {
         form.setLayout(new TableLayout(6,1));
         form.addComponent(newProviderSummary());
