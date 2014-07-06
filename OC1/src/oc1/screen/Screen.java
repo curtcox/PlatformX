@@ -2,7 +2,6 @@ package oc1.screen;
 
 import com.codename1.ui.Command;
 import com.codename1.ui.Form;
-import com.codename1.ui.events.ActionEvent;
 import oc1.command.LoggedCommand;
 import oc1.log.LogManager;
 import oc1.ui.FormFactory;

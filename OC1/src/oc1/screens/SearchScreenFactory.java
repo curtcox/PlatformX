@@ -20,21 +20,21 @@ final class SearchScreenFactory {
     private static final Type[] ALL_TYPES = new Type[0];
     
     static SearchScreen withPrevious(Screen previous) {
-        return withPreviousAndRadius(previous,STARTING_RADIUS);    
+        return withPreviousTypesAndRadius(previous,ALL_TYPES,STARTING_RADIUS);    
     }
     
-    static SearchScreen withPreviousAndRadius(Screen previous, int radius) {
-        ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(previous,radius,ALL_TYPES);
-        return new SearchScreen(previous,newSearchableList(getProviders(zoomOut,ALL_TYPES),zoomOut.createComponent()));    
-    }
-
-    static SearchScreen withPreviousAndType(Screen previous, Type[] types) {
-        ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(previous,STARTING_RADIUS,types);
+    static SearchScreen withPreviousTypesAndRadius(Screen previous, Type[] types, int radius) {
+        ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(previous,types,radius);
         return new SearchScreen(previous,newSearchableList(getProviders(zoomOut,types),zoomOut.createComponent()));    
     }
 
-    private static ZoomOut zoomOutToSmallestRadiusWithMultipleHits(Screen previous,int radius, Type[] types) {
-        ZoomOut zoomOut = new ZoomOut(previous,radius);
+    static SearchScreen withPreviousAndTypes(Screen previous, Type[] types) {
+        ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(previous,types,STARTING_RADIUS);
+        return new SearchScreen(previous,newSearchableList(getProviders(zoomOut,types),zoomOut.createComponent()));    
+    }
+
+    private static ZoomOut zoomOutToSmallestRadiusWithMultipleHits(Screen previous, Type[] types, int radius) {
+        ZoomOut zoomOut = new ZoomOut(previous,types,radius);
         LiveList<ServiceProvider> providers = getProviders(zoomOut,types);
         while (zoomOut.couldZoomOut() && providers.size()<2) {
             zoomOut = zoomOut.zoomOut();
@@ -44,7 +44,7 @@ final class SearchScreenFactory {
     }
 
     private static LiveList<ServiceProvider> getProviders(ZoomOut zoomOut, Type[] types) {
-        return ServiceProviders.of().nearby(zoomOut.radius,types);
+        return ServiceProviders.of().nearby(types,zoomOut.radius);
     }
     
     private static SearchableList<ServiceProvider> newSearchableList(LiveList providers,Component zoom) {

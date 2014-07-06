@@ -27,15 +27,15 @@ public final class ServiceProviders {
         return Registry.get(ServiceProviders.class);
     }
     
-    public LiveList<ServiceProvider> nearby(int radius, Type[] types) {
+    public LiveList<ServiceProvider> nearby(Type[] types, int radius) {
         List<ServiceProvider> providers = new ArrayList<ServiceProvider>();
-        for (Place place : placesNearHere(radius,types)) {
+        for (Place place : placesNearHere(types,radius)) {
             providers.add(serviceProviderFromPlace(place));
         }
         return new SimpleLiveList(providers);
     }
 
-    public List<Place> placesNearHere(int radius,Type[] types) {
+    public List<Place> placesNearHere(Type[] types, int radius) {
         Location currentLocation = Locations.of().getCurrentLocation();
         if (currentLocation==null) {
             return new ArrayList<Place>();

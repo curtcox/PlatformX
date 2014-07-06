@@ -41,7 +41,7 @@ public final class ProviderDetailsScreen
     private void addButtonListener() {
         icon.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
-                SearchScreen.withPreviousAndType(ProviderDetailsScreen.this, getType()).show();
+                SearchScreen.withPreviousAndTypes(ProviderDetailsScreen.this, getType()).show();
             }
         });
     }

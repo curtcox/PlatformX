@@ -26,14 +26,14 @@ public final class SearchScreen
         addSelectionListener();
     }
 
-    public static SearchScreen withPreviousAndRadius(Screen previous, int radius) {
-        return SearchScreenFactory.withPreviousAndRadius(previous, radius);
-    }
-    
-    public static SearchScreen withPreviousAndType(Screen previous, Type[] types) {
-        return SearchScreenFactory.withPreviousAndType(previous, types);
+    public static SearchScreen withPreviousAndTypes(Screen previous, Type[] types) {
+        return SearchScreenFactory.withPreviousAndTypes(previous, types);
     }
 
+    public static SearchScreen withPreviousTypesAndRadius(Screen previous, Type[] types, int radius) {
+        return SearchScreenFactory.withPreviousTypesAndRadius(previous, types, radius);
+    }
+    
     private void layoutForm() {
         form.addComponent(searchList.component);
     }
