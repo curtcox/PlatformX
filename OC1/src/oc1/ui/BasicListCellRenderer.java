@@ -32,16 +32,17 @@ import com.codename1.ui.list.ListCellRenderer;
 
 /**
  */
-public class BasicListCellRenderer<T>
+public final class BasicListCellRenderer<T>
     implements ListCellRenderer<T>, CellRenderer<T>
 {
     private final Label focusComponent = new Label();
     private final ListCell selected = new ListCell();
     private final ListCell unselected = new ListCell();
-
     private final Label selectedEntries;
-
-    public BasicListCellRenderer() {
+    private final ListCellConfigurer configurer;
+    
+    public BasicListCellRenderer(ListCellConfigurer configurer) {
+        this.configurer = configurer;
         focusComponent.setUIID(selected.getUIID() + "Focus");
         focusComponent.setFocus(true);
         selectedEntries = selected.secondRow;
@@ -51,21 +52,29 @@ public class BasicListCellRenderer<T>
      * @inheritDoc
      */
     public ListCell getCellRendererComponent(Component list, Object model, T value, int index, boolean isSelected) {
-        if(!Display.getInstance().shouldRenderSelection(list)) {
-            isSelected = false;
-        }
-        if(isSelected && list.hasFocus()) {
+        if (shouldTreatAsSelected(list,isSelected)) {
             Label entries = selectedEntries;
             selected.setFocus(true);
             entries.setFocus(entries.isFocusable());
+            configure(selected,value);
             return selected;
         } else {
-            ListCell cmp = unselected;
-            cmp.setFocus(false);
-            return cmp;
+            unselected.setFocus(false);
+            configure(unselected,value);
+            return unselected;
         }
     }
 
+    private void configure(ListCell cell, T value) {
+        configurer.configureButton(cell, value);
+    }
+    
+    private boolean shouldTreatAsSelected(Component list, boolean isSelected) {
+        return isSelected &&
+               Display.getInstance().shouldRenderSelection(list) &&
+               list.hasFocus();
+    }
+    
     /**
      * @inheritDoc
      */

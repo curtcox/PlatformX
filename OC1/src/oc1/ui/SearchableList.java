@@ -2,7 +2,6 @@ package oc1.ui;
 
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
-import com.codename1.ui.List;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.list.FilterProxyListModel;
@@ -18,23 +17,21 @@ public final class SearchableList<T> {
     private final TextField searchTerm = new TextField();
     private final ListModel<T> underlyingListModel;
     private final FilterProxyListModel<T> filterProxyListModel;
-    private final List filteredList;
+    private final IList filteredList;
 
     public final BorderContainer component;
-    
-    public SearchableList(LiveList<T> items, Component action, ListCellRenderer renderer) {
+
+    private SearchableList(IList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer) {
         underlyingListModel = VirtualListModel.of(items);
         filterProxyListModel = new FilterProxyListModel(underlyingListModel);
-        filteredList = newList(filterProxyListModel,renderer);
-        FilterProxyListModel.install(searchTerm, filteredList);
-        component = new BorderContainer(filteredList)
+        filteredList = factory.of(filterProxyListModel,configurer);
+        SearchFieldInstaller.install(searchTerm, filteredList);
+        component = new BorderContainer((Component)filteredList)
              .addNorth(newNorthContainer(action));
     }
-    
-    private static List newList(ListModel model,ListCellRenderer renderer) {
-        List list = new DebugList(model);       
-        list.setRenderer(renderer);
-        return list;
+
+    public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
+        this(IList.UI,items,action,configurer);
     }
 
     private Container newNorthContainer(Component action) {

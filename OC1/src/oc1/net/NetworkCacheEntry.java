@@ -2,9 +2,7 @@ package oc1.net;
 
 import com.codename1.io.Storage;
 import com.codename1.io.Util;
-import com.codename1.ui.Display;
 import com.codename1.ui.EncodedImage;
-import com.codename1.ui.Graphics;
 import com.codename1.ui.Image;
 import com.codename1.ui.URLImage;
 import java.io.IOException;

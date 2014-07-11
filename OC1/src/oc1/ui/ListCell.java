@@ -30,7 +30,9 @@ import com.codename1.ui.layouts.BoxLayout;
 /**
  * A compound list cell.
  */
-public class ListCell extends Container {
+public final class ListCell
+    extends Container
+{
     public final Label firstRow = new Label("MultiButton");
     public final Label secondRow = new Label();
     public final Label icon = new Label();
