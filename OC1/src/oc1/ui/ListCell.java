@@ -22,6 +22,7 @@
  */
 package oc1.ui;
 
+import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BorderLayout;
@@ -33,9 +34,9 @@ import com.codename1.ui.layouts.BoxLayout;
 public final class ListCell
     extends Container
 {
-    public final Label firstRow = new Label("MultiButton");
-    public final Label secondRow = new Label();
-    public final Label icon = new Label();
+    public final Button firstRow = new Button("MultiButton");
+    public final Button secondRow = new Button();
+    public final Button icon = new Button();
     
     /**
      * Default constructor allowing the designer to create an instance of this class
@@ -63,5 +64,4 @@ public final class ListCell
         secondRow.setUIID("MultiLine2");
         return labelsBorder;
     }
-
 }
