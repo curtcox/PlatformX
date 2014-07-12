@@ -24,7 +24,7 @@ interface IList {
 
     static Factory BOX = new Factory() {
         public IList of(ListModel model,ListCellConfigurer configurer) {
-            return null;
+            return new BoxList(model,configurer);
         }
     };
 
