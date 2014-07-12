@@ -5,7 +5,6 @@ import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.list.FilterProxyListModel;
-import com.codename1.ui.list.ListCellRenderer;
 import com.codename1.ui.list.ListModel;
 import oc1.event.LiveList;
 
@@ -31,7 +30,7 @@ public final class SearchableList<T> {
     }
 
     public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
-        this(IList.UI,items,action,configurer);
+        this(IList.BOX,items,action,configurer);
     }
 
     private Container newNorthContainer(Component action) {
