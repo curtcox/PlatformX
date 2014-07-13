@@ -34,6 +34,7 @@ final class BoxList
         model.addDataChangedListener(new DataChangedListener() {
             public void dataChanged(int type, int index) {
                 addCellsFromModel();
+                BoxList.this.repaint();
             }
         });
     }
