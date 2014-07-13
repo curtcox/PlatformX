@@ -1,8 +1,7 @@
 package oc1.ui;
 
-import com.codename1.ui.List;
 import com.codename1.ui.TextField;
-import com.codename1.ui.list.FilterProxyListModel;
+import com.codename1.ui.events.DataChangedListener;
 
 /**
  *
@@ -10,9 +9,13 @@ import com.codename1.ui.list.FilterProxyListModel;
  */
 final class SearchFieldInstaller {
     
-    static void install(final TextField search, final IList list) {
-        if (list instanceof List) {
-            FilterProxyListModel.install(search, (List) list);
-        }
+    static void install(final TextField search, final FilterListModel list, final StringToListFilter stringToListFilter) {
+        search.addDataChangeListener(new DataChangedListener() {
+            public void dataChanged(int type, int index) {
+                list.setFilter(stringToListFilter.listFilterFor(search.getText()));
+                list.dataChanged(DataChangedListener.CHANGED, -1);
+            }
+        });        
     }
+
 }

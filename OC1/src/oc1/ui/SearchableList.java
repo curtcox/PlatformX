@@ -4,7 +4,6 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionListener;
-import com.codename1.ui.list.FilterProxyListModel;
 import com.codename1.ui.list.ListModel;
 import oc1.event.LiveList;
 
@@ -15,22 +14,22 @@ public final class SearchableList<T> {
 
     private final TextField searchTerm = new TextField();
     private final ListModel<T> underlyingListModel;
-    private final FilterProxyListModel<T> filterProxyListModel;
+    private final FilterListModel<T> filterListModel;
     private final IList filteredList;
 
     public final BorderContainer component;
 
-    private SearchableList(IList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer) {
+    private SearchableList(IList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer, StringToListFilter stringToListFilter) {
         underlyingListModel = VirtualListModel.of(items);
-        filterProxyListModel = new FilterProxyListModel(underlyingListModel);
-        filteredList = factory.of(filterProxyListModel,configurer);
-        SearchFieldInstaller.install(searchTerm, filteredList);
+        filterListModel = new FilterListModel(underlyingListModel);
+        filteredList = factory.of(filterListModel,configurer);
+        SearchFieldInstaller.install(searchTerm, filterListModel, stringToListFilter);
         component = new BorderContainer((Component)filteredList)
              .addNorth(newNorthContainer(action));
     }
 
-    public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
-        this(IList.BOX,items,action,configurer);
+    public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer, StringToListFilter stringToListFilter) {
+        this(IList.BOX,items,action,configurer,stringToListFilter);
     }
 
     private Container newNorthContainer(Component action) {
@@ -42,7 +41,7 @@ public final class SearchableList<T> {
     }
 
     public T getSelected() {
-        return filterProxyListModel.getItemAt(filteredList.getSelectedIndex());
+        return filterListModel.getItemAt(filteredList.getSelectedIndex());
     }
 
 }

@@ -4,11 +4,13 @@ import com.codename1.ui.Button;
 import com.codename1.ui.Container;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.ListModel;
 
 /**
- *
+ * For displaying items from a ListModel.
+ * This class exists as an attempt to bypass a UI freeze with List.
  * @author Curt
  */
 final class BoxList
@@ -16,26 +18,38 @@ final class BoxList
     implements IList
 {
     private final ListModel model;
-    private ActionListener listener;
+    private ActionListener actionListener;
+    private final ListCellConfigurer configurer;
     private int selectedIndex;
     
     BoxList(ListModel model, ListCellConfigurer configurer) {
         this.model = model;
-        addCellsFromModel(configurer);
+        this.configurer = configurer;
+        addCellsFromModel();
+        addDataChangedListener();
         setLayout(new BoxLayout(BoxLayout.Y_AXIS));
     }
     
-    public void addActionListener(ActionListener listener) {
-        this.listener = listener;
+    private void addDataChangedListener() {
+        model.addDataChangedListener(new DataChangedListener() {
+            public void dataChanged(int type, int index) {
+                addCellsFromModel();
+            }
+        });
+    }
+    
+    public void addActionListener(ActionListener actionListener) {
+        this.actionListener = actionListener;
     }
 
     public int getSelectedIndex() {
         return selectedIndex;
     }
 
-    private void addCellsFromModel(ListCellConfigurer configurer) {
+    private void addCellsFromModel() {
+        removeAll();
         for (int i=0; i<model.getSize(); i++) {
-            this.addComponent(newListCell(configurer,i));
+            addComponent(newListCell(configurer,i));
         }
     }
 
@@ -51,9 +65,8 @@ final class BoxList
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
                 selectedIndex = index;
-                listener.actionPerformed(event);
+                actionListener.actionPerformed(event);
             }
         });
     }
-
 }

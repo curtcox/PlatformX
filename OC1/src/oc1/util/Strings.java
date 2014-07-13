@@ -26,4 +26,8 @@ public final class Strings {
         return all;
     }
 
+    public static boolean contains(String containing, String contained) {
+        return containing.indexOf(contained) >= 0; 
+    }
+
 }

@@ -48,7 +48,7 @@ final class SearchScreenFactory {
     }
     
     private static SearchableList<ServiceProvider> newSearchableList(LiveList providers,Component zoom) {
-        return new SearchableList(providers,zoom,new ServiceProviderListCellConfigurer());
+        return new SearchableList(providers,zoom,new ServiceProviderListCellConfigurer(),new ServiceProviderTextFilter());
     }
 
 }
