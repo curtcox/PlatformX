@@ -62,7 +62,6 @@ public final class UIDebugForm
 
     @Override void sizeChangedInternal(int w, int h) {
         begin("sizeChangedInternal(" + w + "," + h + ")");
-        new Throwable().printStackTrace();
         super.sizeChangedInternal(w, h);
         end("sizeChangedInternal");
     }

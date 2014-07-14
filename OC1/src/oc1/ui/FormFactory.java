@@ -18,7 +18,7 @@ public final class FormFactory {
     }
 
     public Form newForm(String title) {
-        Form form = UIDebugForm.of(title);
+        Form form = new Form(title);
         form.addCommand(goHome());
         return form;
     }
