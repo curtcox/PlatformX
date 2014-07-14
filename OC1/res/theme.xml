@@ -2,6 +2,7 @@
 
 <resource majorVersion="1" minorVersion="6" useXmlUI="false">
     <image name="configure-4.png" type="multi"  />
+    <image name="edit-find-9.png" type="multi"  />
     <image name="help.png" type="multi"  />
     <image name="rating.png" type="multi"  />
     <image name="system-search-4.png" type="multi"  />
