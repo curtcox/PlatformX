@@ -1,7 +1,11 @@
 package oc1.screen;
 
 import com.codename1.ui.Command;
+import com.codename1.ui.Display;
 import com.codename1.ui.Form;
+import com.codename1.ui.events.ActionEvent;
+import com.codename1.ui.events.ActionListener;
+import oc1.app.Registry;
 import oc1.command.LoggedCommand;
 import oc1.log.LogManager;
 import oc1.ui.FormFactory;
@@ -35,6 +39,7 @@ public abstract class Screen {
                 back();
             }
         };
+        refreshOnOrientationChanage();
         log("created " + form.getTitle());
     }
 
@@ -63,5 +68,16 @@ public abstract class Screen {
     private void log(String message) {
         LogManager.of().getLog(Screen.class).log(message);    
     }
+    
+    public boolean isPortrait() {
+        return Registry.get(Display.class).isPortrait();
+    }
 
+    private void refreshOnOrientationChanage() {
+        form.addOrientationListener(new ActionListener(){
+            public void actionPerformed(ActionEvent event) {
+                refresh();
+            }
+        });
+    }
 }

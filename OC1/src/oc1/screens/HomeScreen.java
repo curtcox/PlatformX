@@ -1,13 +1,15 @@
 package oc1.screens;
 
-import oc1.screen.ScreenButton;
-import oc1.screen.Screen;
-import oc1.screenparts.ProviderDetailsButton;
-import oc1.screenparts.ProviderRatingButton;
 import com.codename1.ui.Button;
+import com.codename1.ui.Component;
 import com.codename1.ui.Container;
+import com.codename1.ui.Label;
 import com.codename1.ui.layouts.GridLayout;
 import oc1.domain.ServiceProvider;
+import oc1.screen.Screen;
+import oc1.screen.ScreenButton;
+import oc1.screenparts.ProviderDetailsButton;
+import oc1.screenparts.ProviderRatingButton;
 import oc1.ui.GridContainer;
 
 /**
@@ -34,19 +36,23 @@ public final class HomeScreen
 
     private Container newNavigationContainer() {
         return new GridContainer(2,2,
-            ratingScreenButton(),
-            searchScreenButton(),
+            searchElsewhereButton(),
+            searchNearbyScreenButton(),
             profileScreenButton(),
             howToScreenButton()
         );
     }
 
-    private Button ratingScreenButton() {
-        return buttonTo("Rate","rating.png",RateScreen.withPrevious(this));
+    private Button searchElsewhereButton() {
+        Button button = buttonTo("Search elsewhere","edit-find-9.png",SearchScreenFactory.withPrevious(this));
+        button.setTextPosition(Label.BOTTOM);
+        return button;
     }
 
-    private Button searchScreenButton() {
-        return buttonTo("Search","system-search-4.png",SearchScreenFactory.withPrevious(this));
+    private Button searchNearbyScreenButton() {
+        Button button = buttonTo("Search nearby","system-search-4.png",SearchScreenFactory.withPrevious(this));
+        button.setTextPosition(Label.BOTTOM);
+        return button;
     }
     
     private Button profileScreenButton() {
@@ -63,6 +69,22 @@ public final class HomeScreen
     
     private void layoutForm() {
         form.removeAll();
+        if (isPortrait()) {
+            layoutForPortrait();
+        } else {
+            layoutForLandscape();
+        }
+    }
+    
+    private void layoutForPortrait() {
+        if (thereIsASelectedProvider()) {
+            layoutWithSelectedProvider();
+        } else {
+            layoutWithNoSelectedProvider();
+        }
+    }
+
+    private void layoutForLandscape() {
         if (thereIsASelectedProvider()) {
             layoutWithSelectedProvider();
         } else {
@@ -71,18 +93,57 @@ public final class HomeScreen
     }
 
     private void layoutWithSelectedProvider() {
+        if (isPortrait()) {
+            layoutForPortraitWithSelectedProvider();
+        } else {
+            layoutForLandscapeWithSelectedProvider();
+        }
+    }
+
+    private void layoutForLandscapeWithSelectedProvider() {
+        form.setLayout(new GridLayout(3,2));
+        add(ProviderDetailsButton.withReturnTo(this));
+        add(ProviderRatingButton.withReturnTo(this));
+        add(searchElsewhereButton());
+        add(searchNearbyScreenButton());
+        add(profileScreenButton());
+        add(howToScreenButton());
+    }
+
+    private void layoutForPortraitWithSelectedProvider() {
         form.setLayout(new GridLayout(2,1));
-        form.addComponent(newProviderContainer());
-        form.addComponent(newNavigationContainer());
+        add(newProviderContainer());
+        add(newNavigationContainer());
     }
 
     private void layoutWithNoSelectedProvider() {
-        form.setLayout(new GridLayout(3,1));
-        form.addComponent(searchScreenButton());
-        form.addComponent(profileScreenButton());
-        form.addComponent(howToScreenButton());
+        if (isPortrait()) {
+            layoutPortraitWithNoSelectedProvider();
+        } else {
+            layoutLandscapeWithNoSelectedProvider();
+        }
     }
 
+    private void layoutLandscapeWithNoSelectedProvider() {
+        form.setLayout(new GridLayout(2,2));
+        add(searchNearbyScreenButton());
+        add(searchElsewhereButton());
+        add(profileScreenButton());
+        add(howToScreenButton());
+    }
+
+    private void layoutPortraitWithNoSelectedProvider() {
+        form.setLayout(new GridLayout(4,1));
+        add(searchNearbyScreenButton());
+        add(searchElsewhereButton());
+        add(profileScreenButton());
+        add(howToScreenButton());
+    }
+
+    private void add(Component component) {
+        form.addComponent(component);
+    }
+    
     public static void showInitial() {
         HomeScreen home = new HomeScreen();
         home.show();
@@ -96,4 +157,5 @@ public final class HomeScreen
     private boolean thereIsASelectedProvider() {
         return ServiceProvider.getSelected().id != null;
     }
+
 }
