@@ -24,7 +24,6 @@ public final class HomeScreen
     
     private HomeScreen() {
         super(VERSION,null);
-        layoutForm();
     }
 
     private Container newProviderContainer() {
@@ -67,16 +66,8 @@ public final class HomeScreen
         return ScreenButton.textAndImageLeadingTo(text,image,leadingTo);
     }
     
-    private void layoutForm() {
-        form.removeAll();
-        if (isPortrait()) {
-            layoutForPortrait();
-        } else {
-            layoutForLandscape();
-        }
-    }
-    
-    private void layoutForPortrait() {
+    @Override
+    protected void layoutForPortrait() {
         if (thereIsASelectedProvider()) {
             layoutWithSelectedProvider();
         } else {
@@ -84,7 +75,8 @@ public final class HomeScreen
         }
     }
 
-    private void layoutForLandscape() {
+    @Override
+    protected void layoutForLandscape() {
         if (thereIsASelectedProvider()) {
             layoutWithSelectedProvider();
         } else {

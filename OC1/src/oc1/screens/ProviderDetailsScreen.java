@@ -33,7 +33,6 @@ public final class ProviderDetailsScreen
     
     public static ProviderDetailsScreen linkBackTo(Screen previous) {
         ProviderDetailsScreen screen = new ProviderDetailsScreen(previous);
-        screen.layoutForm();
         screen.addButtonListener();
         return screen;
     }
@@ -46,7 +45,8 @@ public final class ProviderDetailsScreen
         });
     }
     
-    private void layoutForm() {
+    @Override
+    public void layoutForm() {
         form.setLayout(new TableLayout(8,1));
         form.addComponent(name);
         form.addComponent(distance);

@@ -2,7 +2,6 @@ package oc1.ui;
 
 import com.codename1.ui.Command;
 import com.codename1.ui.Form;
-import com.codename1.ui.UIDebugForm;
 import oc1.app.Registry;
 import oc1.command.LoggedCommand;
 import oc1.screens.HomeScreen;

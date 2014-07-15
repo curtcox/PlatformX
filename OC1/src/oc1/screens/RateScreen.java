@@ -41,18 +41,17 @@ public final class RateScreen
 
     private void init() {
         description.setEditable(false);
-        addComponents();
-        refresh();
     }
     
-    private void addComponents() {
+    @Override
+    public void layoutForm() {
         form.setLayout(new TableLayout(6,1));
-        form.addComponent(newProviderSummary());
-        form.addComponent(new Label("Rating : Suitable for"));
-        form.addComponent(newRatingTable());
-        form.addComponent(description);
-        form.addComponent(newAboutRatingButton());
-        form.addComponent(newChangeLocationButton());
+        add(newProviderSummary());
+        add(new Label("Rating : Suitable for"));
+        add(newRatingTable());
+        add(description);
+        add(newAboutRatingButton());
+        add(newChangeLocationButton());
     }
 
     private Component newProviderSummary() {
@@ -62,6 +61,10 @@ public final class RateScreen
         );
     }
     
+    private void add(Component component) {
+        form.addComponent(component);
+    }
+
     private Container newRatingTable() {
         return new GridContainer(1,5,
             newRatingButton("*",    "people who can walk up a flight of stairs"),

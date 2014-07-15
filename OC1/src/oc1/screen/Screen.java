@@ -3,6 +3,7 @@ package oc1.screen;
 import com.codename1.ui.Command;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
+import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import oc1.app.Registry;
@@ -46,6 +47,7 @@ public abstract class Screen {
     public void show() {
         log("show " + form.getTitle());
         refresh();
+        layoutForm();
         form.show();
         form.setBackCommand(back);
     }
@@ -54,6 +56,7 @@ public abstract class Screen {
         log("back " + form.getTitle());
         if (previous!=null) {
             previous.refresh();
+            previous.layoutForm();
             previous.form.showBack();
         }
     }
@@ -80,4 +83,22 @@ public abstract class Screen {
             }
         });
     }
+    
+    public void layoutForm() {
+        form.removeAll();
+        if (isPortrait()) {
+            layoutForPortrait();
+        } else {
+            layoutForLandscape();
+        }
+    }
+
+    protected void layoutForPortrait() {
+        form.addComponent(new Label("Override layoutForPortrait()."));
+    }
+
+    protected void layoutForLandscape() {
+        form.addComponent(new Label("Override layoutForLandscape()."));
+    }
+
 }

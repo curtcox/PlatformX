@@ -22,7 +22,6 @@ public final class SearchScreen
     SearchScreen(Screen previous,SearchableList<ServiceProvider> searchList) { 
         super("Search",previous);
         this.searchList = searchList;
-        layoutForm();
         addSelectionListener();
     }
 
@@ -34,7 +33,8 @@ public final class SearchScreen
         return SearchScreenFactory.withPreviousTypesAndRadius(previous, types, radius);
     }
     
-    private void layoutForm() {
+    @Override
+    public void layoutForm() {
         form.addComponent(searchList.component);
     }
 

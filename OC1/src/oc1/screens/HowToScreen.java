@@ -18,12 +18,11 @@ final class HowToScreen
     }
     
     static HowToScreen linkBackTo(Screen previous) {
-        HowToScreen screen = new HowToScreen(previous);
-        screen.init();
-        return screen;
+        return new HowToScreen(previous);
     }
     
-    private void init() {
+    @Override
+    public void layoutForm() {
         form.setLayout(new GridLayout(2,2));
         form.addComponent(submitIssueButton());
     }
