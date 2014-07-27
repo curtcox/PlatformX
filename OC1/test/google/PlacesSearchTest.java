@@ -3,8 +3,6 @@ package google;
 import fake.FakeRegistryLoader;
 import j2se.J2seNetwork;
 import oc1.app.Registry;
-import oc1.log.LogManager;
-import oc1.log.LogWriter;
 import oc1.net.Network;
 import static org.junit.Assert.*;
 import org.junit.Before;

@@ -1,14 +1,12 @@
 package oc1.app;
 
-import oc1.app.Registry;
-import oc1.app.CurrentState;
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import fake.FakeLocationManager;
 import fake.FakeStorage;
 import oc1.event.Change;
 import oc1.services.Locations;
-import oc1.stores.ServiceProviders;
+import oc1.services.ServiceProviders;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;

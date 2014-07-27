@@ -16,48 +16,41 @@ import java.util.Map;
  *
  * @author Curt
  */
-final class PlacesResponseParser {
+final class GeocodeResponseParser {
     
-    List<Place> parseJsonResponse(InputStreamReader reader) {
-        List<Place> places = new ArrayList<Place>();
+    List<Location> parseJsonResponse(InputStreamReader reader) {
+        List<Location> location = new ArrayList<Location>();
         try {
             JSONParser parser = new JSONParser();
             for (Map<String,Object> result : results(parser.parseJSON(reader))) {
-                places.add(construct(result));
+                location.add(construct(result));
             }
-            return places;
+            return location;
         } catch (IOException e) {
             log(e);
         } catch (RuntimeException e) {
             log(e);
         }
-        return places;
+        return location;
     } 
     
     Iterable<Map<String,Object>> results(Map<String,Object> tree) {
         if (tree.isEmpty()) {
-            log("Places Response Parser -- No results found -- failed request");
+            log("Geocode Response Parser -- No results found -- failed request");
             return new ArrayList();
         }
         return (List)tree.get("results");
     }
     
-    Place construct(Map<String,Object> map) {
-        Place place = new Place();
-        place.name        = stringFrom(map,"name");
-        place.address     = stringFrom(map,"formatted_address");
-        place.vicinity    = stringFrom(map,"vicinity");
-        place.id          = stringFrom(map,"place_id");
-        place.reference   = stringFrom(map,"reference");
-        Geometry geometry = Geometry.of(map);
-        place.latitude    = geometry.latitude;
-        place.longitude   = geometry.longitude;
-        place.open_now    = null;
-        place.icon        = uriFrom(map,"icon");
-        place.price_level = doubleFrom(map,"price_level");
-        place.rating      = doubleFrom(map,"rating");
-        place.types       = (String[]) ((List) map.get("types")).toArray(new String[0]);
-        return place;
+    Location construct(Map<String,Object> map) {
+        Location location  = new Location();
+        location.address   = stringFrom(map,"formatted_address");
+        Geometry geometry  = Geometry.of(map);
+        location.type      = geometry.locationType;
+        location.latitude  = geometry.latitude;
+        location.longitude = geometry.longitude;
+        location.types     = (String[]) ((List) map.get("types")).toArray(new String[0]);
+        return location;
     }
     
     String stringFrom(Map<String,Object> map, String key) {
@@ -89,7 +82,7 @@ final class PlacesResponseParser {
     }
 
     private Log getLog() {
-        return LogManager.of().getLog(PlacesResponseParser.class);    
+        return LogManager.of().getLog(GeocodeResponseParser.class);    
     }
 
 }

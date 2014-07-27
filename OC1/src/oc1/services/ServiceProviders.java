@@ -1,4 +1,4 @@
-package oc1.stores;
+package oc1.services;
 
 import oc1.domain.Address;
 import oc1.domain.ID;
@@ -8,12 +8,12 @@ import oc1.app.Registry;
 import oc1.domain.ServiceProvider;
 import oc1.event.LiveList;
 import oc1.event.SimpleLiveList;
-import oc1.services.Locations;
 import google.Place;
 import google.PlacesSearch;
 import java.util.ArrayList;
 import java.util.List;
 import oc1.domain.Type;
+import oc1.stores.MyRatings;
 
 /**
  *
@@ -35,7 +35,7 @@ public final class ServiceProviders {
         return new SimpleLiveList(providers);
     }
 
-    public List<Place> placesNearHere(Type[] types, int radius) {
+    private List<Place> placesNearHere(Type[] types, int radius) {
         Location currentLocation = Locations.of().getCurrentLocation();
         if (currentLocation==null) {
             return new ArrayList<Place>();

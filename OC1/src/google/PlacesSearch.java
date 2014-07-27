@@ -16,11 +16,10 @@ import java.util.Map;
 public final class PlacesSearch {
     
     private static final String OR = "%7C";
-    private static final String API_key = "";
     
     public List<Place> nearbySearch(double latitude, double longitude, int radius, String[] types) {
         Map<String,String> parameters = new HashMap();
-        parameters.put("key",API_key);
+        parameters.put("key",Google.API_key);
         parameters.put("radius",Integer.toString(radius));
         parameters.put("location",latitude + "," + longitude);
         parameters.put("sensor","true");
@@ -54,7 +53,7 @@ public final class PlacesSearch {
 
     public Place details(String reference) {
         Map<String,String> parameters = new HashMap();
-        parameters.put("key",API_key);
+        parameters.put("key",Google.API_key);
         parameters.put("reference",reference);
         parameters.put("sensor","true");
         URI url = GoogleUrl.of("https://maps.googleapis.com/maps/api/place/details/json?",parameters);

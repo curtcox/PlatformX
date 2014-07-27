@@ -10,7 +10,7 @@ import oc1.domain.ServiceProvider;
 import oc1.log.LogManager;
 import oc1.log.LogWriter;
 import oc1.services.Locations;
-import oc1.stores.ServiceProviders;
+import oc1.services.ServiceProviders;
 import oc1.ui.Icons;
 
 /**

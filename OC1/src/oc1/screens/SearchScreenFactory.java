@@ -7,7 +7,7 @@ import oc1.event.LiveList;
 import oc1.screen.Screen;
 import oc1.screenparts.ServiceProviderListCellConfigurer;
 import oc1.screenparts.ZoomOut;
-import oc1.stores.ServiceProviders;
+import oc1.services.ServiceProviders;
 import oc1.ui.SearchableList;
 
 /**

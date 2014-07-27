@@ -43,7 +43,7 @@ public final class HomeScreen
     }
 
     private Button searchElsewhereButton() {
-        Button button = buttonTo("Search elsewhere","edit-find-9.png",SearchScreenFactory.withPrevious(this));
+        Button button = buttonTo("Search elsewhere","edit-find-9.png",LocationSelectionScreen.withPrevious(this));
         button.setTextPosition(Label.BOTTOM);
         return button;
     }

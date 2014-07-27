@@ -10,7 +10,7 @@ import oc1.net.CachedNetwork;
 import oc1.net.Network;
 import oc1.services.Locations;
 import oc1.stores.MyRatings;
-import oc1.stores.ServiceProviders;
+import oc1.services.ServiceProviders;
 import oc1.ui.FormFactory;
 import oc1.ui.Icons;
 
