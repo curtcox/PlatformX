@@ -33,14 +33,6 @@ public final class PlacesSearch {
         return searchForPlaces(url);
     }
 
-    public List<Place> textSearch() {
-        throw new RuntimeException();
-    }
-
-    public List<Place> radarSearch(String query, double latitude, double longitude) {
-        throw new RuntimeException();
-    }
-
     private List<Place> searchForPlaces(URI url) {
         InputStream in = Registry.get(Network.class).getStreamFor(url);
         return parseJsonResponse(new InputStreamReader(in));
@@ -49,19 +41,6 @@ public final class PlacesSearch {
     private List<Place> parseJsonResponse(InputStreamReader reader) {
         PlacesResponseParser parser = new PlacesResponseParser();
         return parser.parseJsonResponse(reader);
-    } 
-
-    public Place details(String reference) {
-        Map<String,String> parameters = new HashMap();
-        parameters.put("key",Google.API_key);
-        parameters.put("reference",reference);
-        parameters.put("sensor","true");
-        URI url = GoogleUrl.of("https://maps.googleapis.com/maps/api/place/details/json?",parameters);
-        return searchForDetails(url);
-    }
-
-    private Place searchForDetails(URI url) {
-        throw new RuntimeException();
     } 
 
     private String pipeSeparated(String[] strings) {
