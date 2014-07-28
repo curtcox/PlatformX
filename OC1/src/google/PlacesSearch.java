@@ -1,10 +1,5 @@
 package google;
 
-import oc1.app.Registry;
-import oc1.net.Network;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.net.URI;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -13,35 +8,32 @@ import java.util.Map;
  * See https://developers.google.com/places/documentation/search
  * @author Curt
  */
-public final class PlacesSearch {
-    
+public final class PlacesSearch
+    extends WebServiceSearch
+{
     private static final String OR = "%7C";
     
+    public PlacesSearch() {
+        super("https://maps.googleapis.com/maps/api/place/nearbysearch/json?",new PlacesResponseParser());    
+    }
+    
     public List<Place> nearbySearch(double latitude, double longitude, int radius, String[] types) {
-        Map<String,String> parameters = new HashMap();
-        parameters.put("key",Google.API_key);
-        parameters.put("radius",Integer.toString(radius));
-        parameters.put("location",latitude + "," + longitude);
-        parameters.put("sensor","true");
-        if (types.length == 1) {
-            parameters.put("types",types[0]);
-        }
-        if (types.length > 1) {
-            parameters.put("types",pipeSeparated(types));
-        }
-        URI url = GoogleUrl.of("https://maps.googleapis.com/maps/api/place/nearbysearch/json?",parameters);
-        return searchForPlaces(url);
+        return searchForPlaces(getURI(mapParams(latitude,longitude,radius,types)));
     }
 
-    private List<Place> searchForPlaces(URI url) {
-        InputStream in = Registry.get(Network.class).getStreamFor(url);
-        return parseJsonResponse(new InputStreamReader(in));
-    } 
-    
-    private List<Place> parseJsonResponse(InputStreamReader reader) {
-        PlacesResponseParser parser = new PlacesResponseParser();
-        return parser.parseJsonResponse(reader);
-    } 
+    private Map<String,String> mapParams(double latitude, double longitude, int radius, String[] types) {
+        Map<String,String> map = new HashMap();
+        map.put("radius",Integer.toString(radius));
+        map.put("location",latitude + "," + longitude);
+        map.put("sensor","true");
+        if (types.length == 1) {
+            map.put("types",types[0]);
+        }
+        if (types.length > 1) {
+            map.put("types",pipeSeparated(types));
+        }
+        return map;
+    }
 
     private String pipeSeparated(String[] strings) {
         StringBuilder out = new StringBuilder();

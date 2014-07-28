@@ -1,14 +1,5 @@
 package google;
 
-import com.codename1.io.JSONParser;
-import oc1.log.Log;
-import oc1.log.LogManager;
-import oc1.ui.Icons;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.URI;
-import java.net.URISyntaxException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -16,33 +7,10 @@ import java.util.Map;
  *
  * @author Curt
  */
-final class PlacesResponseParser {
-    
-    List<Place> parseJsonResponse(InputStreamReader reader) {
-        List<Place> places = new ArrayList<Place>();
-        try {
-            JSONParser parser = new JSONParser();
-            for (Map<String,Object> result : results(parser.parseJSON(reader))) {
-                places.add(construct(result));
-            }
-            return places;
-        } catch (IOException e) {
-            log(e);
-        } catch (RuntimeException e) {
-            log(e);
-        }
-        return places;
-    } 
-    
-    Iterable<Map<String,Object>> results(Map<String,Object> tree) {
-        if (tree.isEmpty()) {
-            log("Places Response Parser -- No results found -- failed request");
-            return new ArrayList();
-        }
-        return (List)tree.get("results");
-    }
-    
-    Place construct(Map<String,Object> map) {
+final class PlacesResponseParser
+    extends JsonResponseParser
+{
+    Place construct(Map map) {
         Place place = new Place();
         place.name        = stringFrom(map,"name");
         place.address     = stringFrom(map,"formatted_address");
@@ -60,36 +28,4 @@ final class PlacesResponseParser {
         return place;
     }
     
-    String stringFrom(Map<String,Object> map, String key) {
-        return (String) map.get(key);
-    }
-
-    Double doubleFrom(Map<String,Object> map, String key) {
-        return (Double) map.get(key);
-    }
-
-    URI uriFrom(Map<String,Object> map, String key) {
-        String string = stringFrom(map,key);
-        try {
-            URI uri = (string==null) ? null : new URI(string);
-            Icons.of().getImage(uri);
-            return uri;
-        } catch (URISyntaxException e) {
-            log(e);
-            return null;
-        }
-    }
-    
-    private void log(Exception e) {
-        getLog().log(e);    
-    }
-
-    private void log(String message) {
-        getLog().log(message);    
-    }
-
-    private Log getLog() {
-        return LogManager.of().getLog(PlacesResponseParser.class);    
-    }
-
 }
