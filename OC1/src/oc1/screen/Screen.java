@@ -84,7 +84,7 @@ public abstract class Screen {
         });
     }
     
-    public void layoutForm() {
+    final public void layoutForm() {
         form.removeAll();
         if (isPortrait()) {
             layoutForPortrait();
@@ -93,12 +93,10 @@ public abstract class Screen {
         }
     }
 
-    protected void layoutForPortrait() {
-        form.addComponent(new Label("Override layoutForPortrait()."));
-    }
+    protected abstract void layoutForPortrait();
 
     protected void layoutForLandscape() {
-        form.addComponent(new Label("Override layoutForLandscape()."));
+        layoutForPortrait();
     }
 
 }

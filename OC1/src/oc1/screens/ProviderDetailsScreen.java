@@ -46,7 +46,7 @@ public final class ProviderDetailsScreen
     }
     
     @Override
-    public void layoutForm() {
+    public void layoutForPortrait() {
         form.setLayout(new TableLayout(8,1));
         form.addComponent(name);
         form.addComponent(distance);

@@ -22,7 +22,7 @@ final class HowToScreen
     }
     
     @Override
-    public void layoutForm() {
+    public void layoutForPortrait() {
         form.setLayout(new GridLayout(2,2));
         form.addComponent(submitIssueButton());
     }

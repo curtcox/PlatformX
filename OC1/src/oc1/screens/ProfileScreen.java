@@ -13,5 +13,8 @@ final class ProfileScreen
     ProfileScreen(Screen previous) {
         super("Profile",previous);
     }
+
+    @Override
+    protected void layoutForPortrait() {}
     
 }

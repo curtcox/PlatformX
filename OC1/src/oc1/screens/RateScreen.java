@@ -45,7 +45,7 @@ public final class RateScreen
     }
     
     @Override
-    public void layoutForm() {
+    public void layoutForPortrait() {
         form.setLayout(new TableLayout(6,1));
         add(newProviderSummary());
         add(new Label("Rating : Suitable for"));

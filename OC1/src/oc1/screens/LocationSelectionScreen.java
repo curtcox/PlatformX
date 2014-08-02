@@ -32,7 +32,7 @@ public final class LocationSelectionScreen
     }
 
     @Override
-    public void layoutForm() {
+    public void layoutForPortrait() {
         form.addComponent(searchList.component);
     }
 

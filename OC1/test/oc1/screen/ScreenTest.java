@@ -1,6 +1,5 @@
 package oc1.screen;
 
-import oc1.screen.Screen;
 import com.codename1.ui.Form;
 import java.util.concurrent.Callable;
 import oc1.screens.FakeUI;
@@ -20,7 +19,9 @@ public class ScreenTest {
     
     @Test
     public void can_create() {
-        new Screen(form,previous){};
+        new Screen(form,previous){
+            @Override protected void layoutForPortrait() {}
+        };
     }
     
     @Test
@@ -32,7 +33,9 @@ public class ScreenTest {
         return (Screen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
                 form = FakeUI.newForm();
-                return new Screen(form,previous){};
+                return new Screen(form,previous){
+                    @Override protected void layoutForPortrait() {}
+                };
             }
         });
     }

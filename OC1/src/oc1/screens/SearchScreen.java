@@ -35,7 +35,7 @@ public final class SearchScreen
     }
     
     @Override
-    public void layoutForm() {
+    public void layoutForPortrait() {
         form.addComponent(searchList.component);
     }
 

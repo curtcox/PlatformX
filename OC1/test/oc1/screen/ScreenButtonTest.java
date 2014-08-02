@@ -65,6 +65,9 @@ public class ScreenButtonTest {
         protected void refresh() {
             refreshed = true;
         }
+
+        @Override
+        protected void layoutForPortrait() {}
     }
     
     private TestScreen createScreenOnEDT() throws Exception {
