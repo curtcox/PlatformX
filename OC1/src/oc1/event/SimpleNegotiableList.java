@@ -13,7 +13,7 @@ import java.util.ListIterator;
  * @author Curt
  */
 public final class SimpleNegotiableList
-    implements NegotiableList 
+    implements SwappableList 
 {
     private List list = new ArrayList();
     private final EventDispatcher dataListeners = new EventDispatcher();

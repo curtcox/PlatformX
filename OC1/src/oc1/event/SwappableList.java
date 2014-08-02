@@ -6,7 +6,7 @@ import java.util.List;
  *
  * @author Curt
  */
-public interface NegotiableList<T> 
+public interface SwappableList<T> 
     extends LiveList<T>
 {    
     void become(List<T> list);
