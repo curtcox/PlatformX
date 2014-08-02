@@ -1,5 +1,6 @@
-package oc1.screens;
+package oc1.screenfactories;
 
+import oc1.screenparts.ServiceProviderTextFilter;
 import com.codename1.ui.Component;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
@@ -7,6 +8,7 @@ import oc1.event.LiveList;
 import oc1.screen.Screen;
 import oc1.screenparts.ServiceProviderListCellConfigurer;
 import oc1.screenparts.ZoomOut;
+import oc1.screens.SearchScreen;
 import oc1.services.ServiceProviders;
 import oc1.ui.SearchableList;
 
@@ -14,21 +16,21 @@ import oc1.ui.SearchableList;
  *
  * @author Curt
  */
-final class SearchScreenFactory {
+public final class SearchScreenFactory {
     
     private static final int STARTING_RADIUS = 100;
     private static final Type[] ALL_TYPES = new Type[0];
     
-    static SearchScreen withPrevious(Screen previous) {
+    public static SearchScreen withPrevious(Screen previous) {
         return withPreviousTypesAndRadius(previous,ALL_TYPES,STARTING_RADIUS);    
     }
     
-    static SearchScreen withPreviousTypesAndRadius(Screen previous, Type[] types, int radius) {
+    public static SearchScreen withPreviousTypesAndRadius(Screen previous, Type[] types, int radius) {
         ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(previous,types,radius);
         return new SearchScreen(previous,newSearchableList(getProviders(zoomOut,types),zoomOut.createComponent()));    
     }
 
-    static SearchScreen withPreviousAndTypes(Screen previous, Type[] types) {
+    public static SearchScreen withPreviousAndTypes(Screen previous, Type[] types) {
         ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(previous,types,STARTING_RADIUS);
         return new SearchScreen(previous,newSearchableList(getProviders(zoomOut,types),zoomOut.createComponent()));    
     }

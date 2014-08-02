@@ -10,8 +10,8 @@ import java.util.Map;
 final class GeocodeResponseParser
     extends JsonResponseParser
 {
-    Location construct(Map map) {
-        Location location  = new Location();
+    GoogleLocation construct(Map map) {
+        GoogleLocation location  = new GoogleLocation();
         location.address   = stringFrom(map,"formatted_address");
         Geometry geometry  = Geometry.of(map);
         location.type      = geometry.locationType;

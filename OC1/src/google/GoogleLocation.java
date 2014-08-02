@@ -4,7 +4,7 @@ package google;
  * https://developers.google.com/maps/documentation/geocoding/
  * @author Curt
  */
-public final class Location {
+public final class GoogleLocation {
     public String address;
     public String type;
     public Double latitude;

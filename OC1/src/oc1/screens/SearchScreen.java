@@ -1,5 +1,6 @@
 package oc1.screens;
 
+import oc1.screenfactories.SearchScreenFactory;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import oc1.app.CurrentState;
@@ -19,7 +20,7 @@ public final class SearchScreen
 {
     private final SearchableList<ServiceProvider> searchList;
 
-    SearchScreen(Screen previous,SearchableList<ServiceProvider> searchList) { 
+    public SearchScreen(Screen previous,SearchableList<ServiceProvider> searchList) { 
         super("Search",previous);
         this.searchList = searchList;
         addSelectionListener();

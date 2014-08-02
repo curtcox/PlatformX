@@ -1,5 +1,6 @@
 package oc1.screens;
 
+import oc1.screenfactories.SearchScreenFactory;
 import oc1.screen.ScreenButton;
 import oc1.screen.Screen;
 import oc1.screenparts.ProviderDetailsButton;

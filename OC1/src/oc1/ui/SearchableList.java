@@ -9,6 +9,7 @@ import oc1.event.LiveList;
 
 /**
  * A wrapper for a searchable list component.
+ * @param <T> list item type
  */
 public final class SearchableList<T> {
 

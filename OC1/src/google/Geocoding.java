@@ -15,7 +15,7 @@ public final class Geocoding
         super("https://maps.googleapis.com/maps/api/geocode/json?",new GeocodeResponseParser());
     }
     
-    public List<Location> searchFor(String place) {
+    public List<GoogleLocation> searchFor(String place) {
         return searchForPlaces(getURI(mapParams(place)));
     }
 

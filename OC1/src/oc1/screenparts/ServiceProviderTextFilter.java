@@ -1,4 +1,4 @@
-package oc1.screens;
+package oc1.screenparts;
 
 import oc1.domain.ServiceProvider;
 import oc1.ui.ListFilter;
@@ -9,7 +9,7 @@ import oc1.util.Strings;
  *
  * @author Curt
  */
-final class ServiceProviderTextFilter
+public final class ServiceProviderTextFilter
     implements StringToListFilter
 {
 

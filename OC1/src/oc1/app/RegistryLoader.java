@@ -8,9 +8,10 @@ import oc1.log.LogManager;
 import oc1.log.LogWriter;
 import oc1.net.CachedNetwork;
 import oc1.net.Network;
+import oc1.services.Geocoder;
 import oc1.services.Locations;
-import oc1.stores.MyRatings;
 import oc1.services.ServiceProviders;
+import oc1.stores.MyRatings;
 import oc1.ui.FormFactory;
 import oc1.ui.Icons;
 
@@ -33,6 +34,7 @@ final class RegistryLoader {
         put(Locations.class,        new Locations());
         put(ServiceProvider.class,  ServiceProvider.NULL);
         put(ServiceProviders.class, new ServiceProviders());
+        put(Geocoder.class,         new Geocoder());
         put(CurrentState.class,     new CurrentState());
         put(Icons.class,            new Icons());
     }

@@ -1,5 +1,7 @@
 package oc1.screens;
 
+import oc1.screenfactories.LocationSelectionScreenFactory;
+import oc1.screenfactories.SearchScreenFactory;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import oc1.app.CurrentState;
@@ -19,7 +21,7 @@ public final class LocationSelectionScreen
 
     private final SearchableList<LocationDescription> searchList;
 
-    LocationSelectionScreen(Screen previous, SearchableList<LocationDescription> searchList) { 
+    public LocationSelectionScreen(Screen previous, SearchableList<LocationDescription> searchList) { 
         super("Pick Location",previous);
         this.searchList = searchList;
         addSelectionListener();

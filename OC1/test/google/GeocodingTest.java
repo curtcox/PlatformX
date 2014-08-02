@@ -31,7 +31,7 @@ public class GeocodingTest {
 
     @Test
     public void search_for_Chicago_contains_Chicago() {
-        for (Location location : testObject.searchFor("Chicago")) {
+        for (GoogleLocation location : testObject.searchFor("Chicago")) {
             if (location.address.contains("Chicago, IL, USA")) {
                 double delta = 0.01;
                 assertEquals(41.8781136,   location.latitude,delta);
