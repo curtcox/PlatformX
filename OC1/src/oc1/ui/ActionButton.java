@@ -1,5 +1,6 @@
 package oc1.ui;
 
+import oc1.event.StringSource;
 import com.codename1.ui.Button;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;

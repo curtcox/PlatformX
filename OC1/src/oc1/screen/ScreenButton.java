@@ -3,7 +3,7 @@ package oc1.screen;
 import oc1.app.CurrentState;
 import oc1.event.Change.Source;
 import oc1.ui.ActionButton;
-import oc1.ui.StringSource;
+import oc1.event.StringSource;
 
 /**
  * A button that will go to the given screen when tapped.

@@ -6,7 +6,7 @@ import oc1.screen.Screen;
 import oc1.screen.ScreenButton;
 import oc1.screen.ScreenFactory;
 import oc1.ui.ActionButton;
-import oc1.ui.StringSource;
+import oc1.event.StringSource;
 
 /**
  * Navigates to the rating screen.

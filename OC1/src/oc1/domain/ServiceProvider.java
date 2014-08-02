@@ -3,7 +3,7 @@ package oc1.domain;
 import com.codename1.location.Location;
 import oc1.app.Registry;
 import oc1.services.Locations;
-import oc1.ui.StringSource;
+import oc1.event.StringSource;
 import java.net.URI;
 
 /**

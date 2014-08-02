@@ -1,6 +1,6 @@
 package oc1.ui;
 
-import oc1.ui.StringSource;
+import oc1.event.StringSource;
 import oc1.ui.ActionButton;
 import fake.FakeRegistryLoader;
 import com.codename1.ui.events.ActionListener;
