@@ -1,11 +1,14 @@
-package oc1.ui;
+package oc1.uilist;
 
+import oc1.uilist.ListCellConfigurer;
+import oc1.uilist.IList;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.list.ListModel;
 import oc1.event.LiveList;
+import oc1.ui.BorderContainer;
 
 /**
  * A wrapper for a searchable list component.

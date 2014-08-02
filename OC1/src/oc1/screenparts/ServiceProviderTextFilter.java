@@ -1,8 +1,8 @@
 package oc1.screenparts;
 
 import oc1.domain.ServiceProvider;
-import oc1.ui.ListFilter;
-import oc1.ui.StringToListFilter;
+import oc1.uilist.ListFilter;
+import oc1.uilist.StringToListFilter;
 import oc1.util.Strings;
 
 /**

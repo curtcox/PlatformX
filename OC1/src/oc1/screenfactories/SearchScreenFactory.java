@@ -10,7 +10,7 @@ import oc1.screenparts.ServiceProviderListCellConfigurer;
 import oc1.screenparts.ZoomOut;
 import oc1.screens.SearchScreen;
 import oc1.services.ServiceProviders;
-import oc1.ui.SearchableList;
+import oc1.uilist.SearchableList;
 
 /**
  *

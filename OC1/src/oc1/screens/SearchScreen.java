@@ -9,7 +9,7 @@ import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
 import oc1.log.LogManager;
 import oc1.screen.Screen;
-import oc1.ui.SearchableList;
+import oc1.uilist.SearchableList;
 
 /**
  * The screen used to search for service providers.

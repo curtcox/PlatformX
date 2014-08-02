@@ -9,8 +9,8 @@ import oc1.screen.Screen;
 import oc1.screenparts.LocationListCellConfigurer;
 import oc1.screens.LocationSelectionScreen;
 import oc1.services.Geocoder;
-import oc1.ui.SearchableList;
-import oc1.ui.StringToListFilter;
+import oc1.uilist.SearchableList;
+import oc1.uilist.StringToListFilter;
 
 /**
  *

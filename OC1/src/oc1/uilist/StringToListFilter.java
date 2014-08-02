@@ -1,4 +1,6 @@
-package oc1.ui;
+package oc1.uilist;
+
+import oc1.uilist.ListFilter;
 
 /**
  *

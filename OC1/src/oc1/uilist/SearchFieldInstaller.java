@@ -1,5 +1,7 @@
-package oc1.ui;
+package oc1.uilist;
 
+import oc1.uilist.StringToListFilter;
+import oc1.uilist.FilterListModel;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.DataChangedListener;
 

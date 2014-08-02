@@ -9,7 +9,7 @@ import oc1.app.Registry;
 import oc1.domain.LocationDescription;
 import oc1.log.LogManager;
 import oc1.screen.Screen;
-import oc1.ui.SearchableList;
+import oc1.uilist.SearchableList;
 
 /**
  * The screen used to search for locations.

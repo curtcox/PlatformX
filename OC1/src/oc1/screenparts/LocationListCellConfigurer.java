@@ -1,8 +1,8 @@
 package oc1.screenparts;
 
 import oc1.domain.LocationDescription;
-import oc1.ui.ListCell;
-import oc1.ui.ListCellConfigurer;
+import oc1.uilist.ListCell;
+import oc1.uilist.ListCellConfigurer;
 
 /**
  *

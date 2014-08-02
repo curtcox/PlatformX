@@ -20,7 +20,7 @@
  * Please contact Codename One through http://www.codenameone.com/ if you 
  * need additional information or have any questions.
  */
-package oc1.ui;
+package oc1.uilist;
 
 import com.codename1.ui.Button;
 import com.codename1.ui.Container;

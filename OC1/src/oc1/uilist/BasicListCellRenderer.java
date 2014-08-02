@@ -21,8 +21,10 @@
  * CA 94065 USA or visit www.oracle.com if you need additional information or
  * have any questions.
  */
-package oc1.ui;
+package oc1.uilist;
 
+import oc1.uilist.ListCellConfigurer;
+import oc1.uilist.ListCell;
 import com.codename1.ui.Component;
 import com.codename1.ui.Display;
 import com.codename1.ui.Label;

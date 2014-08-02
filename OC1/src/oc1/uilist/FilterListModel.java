@@ -1,4 +1,4 @@
-package oc1.ui;
+package oc1.uilist;
 
 /*
  * Copyright (c) 2012, Codename One and/or its affiliates. All rights reserved.
@@ -23,6 +23,7 @@ package oc1.ui;
  * need additional information or have any questions.
  */
 
+import oc1.uilist.ListFilter;
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;
