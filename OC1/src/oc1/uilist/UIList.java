@@ -1,6 +1,5 @@
 package oc1.uilist;
 
-import oc1.uilist.IList;
 import com.codename1.ui.List;
 import com.codename1.ui.list.ListCellRenderer;
 import com.codename1.ui.list.ListModel;

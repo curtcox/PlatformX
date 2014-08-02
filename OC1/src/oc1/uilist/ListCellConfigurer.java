@@ -1,7 +1,5 @@
 package oc1.uilist;
 
-import oc1.uilist.ListCell;
-
 /**
  * For configuring a ListCell, in order to display a value.
  * @author Curt

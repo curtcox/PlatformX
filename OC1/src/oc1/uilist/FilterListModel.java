@@ -23,7 +23,6 @@ package oc1.uilist;
  * need additional information or have any questions.
  */
 
-import oc1.uilist.ListFilter;
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;

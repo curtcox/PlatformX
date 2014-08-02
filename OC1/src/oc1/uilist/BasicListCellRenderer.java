@@ -23,8 +23,6 @@
  */
 package oc1.uilist;
 
-import oc1.uilist.ListCellConfigurer;
-import oc1.uilist.ListCell;
 import com.codename1.ui.Component;
 import com.codename1.ui.Display;
 import com.codename1.ui.Label;
