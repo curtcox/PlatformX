@@ -1,7 +1,5 @@
 package oc1.uilist;
 
-import oc1.uilist.ListCellConfigurer;
-import oc1.uilist.IList;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
@@ -27,13 +25,17 @@ public final class SearchableList<T> {
         underlyingListModel = VirtualListModel.of(items);
         filterListModel = new FilterListModel(underlyingListModel);
         filteredList = factory.of(filterListModel,configurer);
-        SearchFieldInstaller.install(searchTerm, filterListModel, stringToListFilter);
         component = new BorderContainer((Component)filteredList)
              .addNorth(newNorthContainer(action));
+        installFilter(stringToListFilter);
     }
 
     public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer, StringToListFilter stringToListFilter) {
         this(IList.BOX,items,action,configurer,stringToListFilter);
+    }
+
+    private void installFilter(StringToListFilter stringToListFilter) {
+        SearchFieldInstaller.install(searchTerm, filterListModel, stringToListFilter);
     }
 
     private Container newNorthContainer(Component action) {
