@@ -30,7 +30,7 @@ public final class Geocoder {
     }
 
     private LocationDescription locationFromGoogle(GoogleLocation place) {
-        return new LocationDescription(place.latitude, place.longitude );
+        return new LocationDescription(place.address,place.latitude, place.longitude );
     }
 
 }

@@ -13,8 +13,7 @@ public final class LocationListCellConfigurer
 {
 
     public void configureButton(ListCell button, LocationDescription location) {
-        button.firstRow.setText(location.toString());
-        button.secondRow.setText(location.toString());
+        button.firstRow.setText(location.address);
     }
 
 }
