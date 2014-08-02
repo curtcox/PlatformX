@@ -1,16 +1,15 @@
 package oc1.screenfactories;
 
 import com.codename1.ui.Label;
-import java.util.List;
 import oc1.domain.LocationDescription;
 import oc1.event.LiveList;
-import oc1.event.SimpleLiveList;
+import oc1.event.NegotiableList;
+import oc1.event.SimpleNegotiableList;
 import oc1.screen.Screen;
 import oc1.screenparts.LocationListCellConfigurer;
 import oc1.screens.LocationSelectionScreen;
-import oc1.services.Geocoder;
+import oc1.uilist.ListContentInstaller;
 import oc1.uilist.SearchableList;
-import oc1.uilist.StringToListFilter;
 
 /**
  *
@@ -24,12 +23,14 @@ public final class LocationSelectionScreenFactory {
     }
     
     private static SearchableList<LocationDescription> newSearchableList(LiveList locations) {
-        return new SearchableList(locations,new Label(),new LocationListCellConfigurer(),StringToListFilter.ALLOW_ALL);
+        return new SearchableList(locations,new Label(),new LocationListCellConfigurer());
     }
 
     private static SearchableList<LocationDescription> newSearchableList() {
-        List<LocationDescription> locations = Geocoder.of().searchFor("Portland");
-        return newSearchableList(new SimpleLiveList(locations));
+        NegotiableList<LocationDescription> locations = new SimpleNegotiableList();
+        SearchableList<LocationDescription> list = newSearchableList(locations);
+        ListContentInstaller.install(list, locations,new GeocoderStringToList());
+        return list;
     }
 
 }

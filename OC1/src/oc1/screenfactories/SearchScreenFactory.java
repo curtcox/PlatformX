@@ -1,15 +1,16 @@
 package oc1.screenfactories;
 
-import oc1.screenparts.ServiceProviderTextFilter;
 import com.codename1.ui.Component;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
 import oc1.event.LiveList;
 import oc1.screen.Screen;
 import oc1.screenparts.ServiceProviderListCellConfigurer;
+import oc1.screenparts.ServiceProviderTextFilter;
 import oc1.screenparts.ZoomOut;
 import oc1.screens.SearchScreen;
 import oc1.services.ServiceProviders;
+import oc1.uilist.SearchFilterInstaller;
 import oc1.uilist.SearchableList;
 
 /**
@@ -50,7 +51,9 @@ public final class SearchScreenFactory {
     }
     
     private static SearchableList<ServiceProvider> newSearchableList(LiveList providers,Component zoom) {
-        return new SearchableList(providers,zoom,new ServiceProviderListCellConfigurer(),new ServiceProviderTextFilter());
+        SearchableList list = new SearchableList(providers,zoom,new ServiceProviderListCellConfigurer());
+        SearchFilterInstaller.install(list, new ServiceProviderTextFilter());
+        return list;
     }
 
 }

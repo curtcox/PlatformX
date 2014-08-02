@@ -63,13 +63,11 @@ public final class VirtualListModel<T>
         selectionListeners.removeListener(listener);
     }
     
-    public void addItem(T item) {
-        throw new RuntimeException();
-    }
-    
-    public void removeItem(int index) {
-        throw new RuntimeException();
-    }
+    public void addItem(T item)       { throw unsupported(); }   
+    public void removeItem(int index) { throw unsupported(); }
 
+    private RuntimeException unsupported() {
+        return new RuntimeException("Not supported yet.");
+    }
 
 }

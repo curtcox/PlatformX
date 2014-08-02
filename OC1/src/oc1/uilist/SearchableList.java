@@ -14,28 +14,23 @@ import oc1.ui.BorderContainer;
  */
 public final class SearchableList<T> {
 
-    private final TextField searchTerm = new TextField();
+    final TextField searchTerm = new TextField();
+    final FilterListModel<T> filterListModel;
     private final ListModel<T> underlyingListModel;
-    private final FilterListModel<T> filterListModel;
     private final IList filteredList;
 
     public final BorderContainer component;
 
-    private SearchableList(IList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer, StringToListFilter stringToListFilter) {
+    private SearchableList(IList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer) {
         underlyingListModel = VirtualListModel.of(items);
         filterListModel = new FilterListModel(underlyingListModel);
         filteredList = factory.of(filterListModel,configurer);
         component = new BorderContainer((Component)filteredList)
              .addNorth(newNorthContainer(action));
-        installFilter(stringToListFilter);
     }
 
-    public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer, StringToListFilter stringToListFilter) {
-        this(IList.BOX,items,action,configurer,stringToListFilter);
-    }
-
-    private void installFilter(StringToListFilter stringToListFilter) {
-        SearchFieldInstaller.install(searchTerm, filterListModel, stringToListFilter);
+    public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
+        this(IList.BOX,items,action,configurer);
     }
 
     private Container newNorthContainer(Component action) {
