@@ -22,7 +22,7 @@ public final class HomeScreen
     extends Screen
 {
    
-    public static final String VERSION = "Oyster Cracker 2014/7/12 7:41a";
+    public static final String VERSION = "Oyster Cracker 2014/8/3 7:43a";
     
     private HomeScreen() {
         super(VERSION,null);
