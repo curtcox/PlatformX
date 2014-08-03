@@ -39,7 +39,7 @@ public final class HomeScreen
         return new GridContainer(2,2,
             searchElsewhereButton(),
             searchNearbyScreenButton(),
-            profileScreenButton(),
+            filterScreenButton(),
             howToScreenButton()
         );
     }
@@ -67,9 +67,13 @@ public final class HomeScreen
         };
     }
     
-    private Button profileScreenButton() {
-        return buttonTo("Profile","configure-4.png",new ProfileScreen(this));
+    private Button filterScreenButton() {
+        return buttonTo("Filter","filter.png",new FilterScreen(this));
     }
+
+//    private Button profileScreenButton() {
+//        return buttonTo("Profile","configure-4.png",new ProfileScreen(this));
+//    }
 
     private Button howToScreenButton() {
         return buttonTo("How To","help.png",HowToScreen.linkBackTo(this));
@@ -111,7 +115,7 @@ public final class HomeScreen
         add(ProviderRatingButton.withReturnTo(this));
         add(searchElsewhereButton());
         add(searchNearbyScreenButton());
-        add(profileScreenButton());
+        add(filterScreenButton());
         add(howToScreenButton());
     }
 
@@ -133,7 +137,7 @@ public final class HomeScreen
         form.setLayout(new GridLayout(2,2));
         add(searchNearbyScreenButton());
         add(searchElsewhereButton());
-        add(profileScreenButton());
+        add(filterScreenButton());
         add(howToScreenButton());
     }
 
@@ -141,7 +145,7 @@ public final class HomeScreen
         form.setLayout(new GridLayout(4,1));
         add(searchNearbyScreenButton());
         add(searchElsewhereButton());
-        add(profileScreenButton());
+        add(filterScreenButton());
         add(howToScreenButton());
     }
 
