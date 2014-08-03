@@ -11,6 +11,12 @@ import oc1.event.StringSource;
  */
 public final class ScreenButton {
 
+    public static ActionButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,Screen screen) {
+        ActionButton button = textActionAndLeadingTo(text,runnable,screen);
+        button.setIcon(image);
+        return button;
+    }
+
     public static ActionButton textAndImageLeadingTo(String text,String image,final Screen screen) {
         ActionButton button = textAndLeadingTo(text,screen);
         button.setIcon(image);
@@ -25,7 +31,17 @@ public final class ScreenButton {
             }
         };
     }
-   
+
+    public static ActionButton textActionAndLeadingTo(String text,final Runnable runnable, final Screen screen) {
+        return new ActionButton(text) {
+            @Override
+            public void onTap() {
+                runnable.run();
+                screen.show();
+            }
+        };
+    }
+
     public static ActionButton textWatchingAndLeadingTo(StringSource source,Source change,Screen screen) {
         final ActionButton button = textAndLeadingTo(source.getString(),screen);
         button.updateTextOnChange(change, source);

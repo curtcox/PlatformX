@@ -1,14 +1,13 @@
 package oc1.screens;
 
-import oc1.screenfactories.LocationSelectionScreenFactory;
-import oc1.screenfactories.SearchScreenFactory;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
-import oc1.app.CurrentState;
-import oc1.app.Registry;
 import oc1.domain.LocationDescription;
 import oc1.log.LogManager;
 import oc1.screen.Screen;
+import oc1.screenfactories.LocationSelectionScreenFactory;
+import oc1.screenfactories.SearchScreenFactory;
+import oc1.services.Locations;
 import oc1.uilist.SearchableList;
 
 /**
@@ -48,8 +47,7 @@ public final class LocationSelectionScreen
     private void useSelectedLocation() {
         LocationDescription location = searchList.getSelected();
         log("selected " + location);
-        Registry.put(LocationDescription.class,location);
-        CurrentState.get().broadcastChange();
+        Locations.of().selectLocation(location.toLocation());
     }
     
     private void log(String message) {

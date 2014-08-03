@@ -1,6 +1,5 @@
 package oc1.screens;
 
-import oc1.screenfactories.SearchScreenFactory;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
@@ -9,8 +8,10 @@ import com.codename1.ui.layouts.GridLayout;
 import oc1.domain.ServiceProvider;
 import oc1.screen.Screen;
 import oc1.screen.ScreenButton;
+import oc1.screenfactories.SearchScreenFactory;
 import oc1.screenparts.ProviderDetailsButton;
 import oc1.screenparts.ProviderRatingButton;
+import oc1.services.Locations;
 import oc1.ui.GridContainer;
 
 /**
@@ -50,9 +51,20 @@ public final class HomeScreen
     }
 
     private Button searchNearbyScreenButton() {
-        Button button = buttonTo("Search nearby","system-search-4.png",SearchScreenFactory.withPrevious(this));
+        Button button = ScreenButton.textImageActionAndLeadingTo(
+                "Search nearby","system-search-4.png",
+                clearLocationSelection(),
+                SearchScreenFactory.withPrevious(this));
         button.setTextPosition(Label.BOTTOM);
         return button;
+    }
+    
+    private Runnable clearLocationSelection() {
+        return new Runnable(){
+            public void run() {
+                Locations.of().selectLocation(null);
+            }
+        };
     }
     
     private Button profileScreenButton() {

@@ -1,5 +1,7 @@
 package oc1.domain;
 
+import com.codename1.location.Location;
+
 /**
  *
  * @author Curt
@@ -15,7 +17,14 @@ public final class LocationDescription {
         this.latitude = latitude;
         this.longitude = longitude;
     }
-    
+
+    public Location toLocation() {
+        Location location = new Location();
+        location.setLongitude(longitude);
+        location.setLatitude(latitude);
+        return location;
+    }
+
     @Override
     public String toString() {
         return 
