@@ -14,7 +14,7 @@ final class GoogleUrl {
         try {
             StringBuilder out = new StringBuilder(base);
             for (String key : parameters.keySet()) {
-                out.append(key + "=" + parameters.get(key) + "&");
+                out.append(key + "=" + URLEncoder.encode(parameters.get(key)) + "&");
             }
             return new URI(out.toString());
         } catch (URISyntaxException e) {
