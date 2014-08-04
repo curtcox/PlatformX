@@ -68,7 +68,7 @@ public final class HomeScreen
     }
     
     private Button filterScreenButton() {
-        return buttonTo("Filter","filter.png",new FilterScreen(this));
+        return buttonTo("Filter","filter.png",FilterScreen.withPrevious(this));
     }
 
 //    private Button profileScreenButton() {
