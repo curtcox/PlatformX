@@ -1,6 +1,5 @@
 package oc1.util;
 
-import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -34,6 +33,16 @@ public class StringsTest {
         assertEquals("x",Strings.split("x y z"," ")[0]);
         assertEquals("y",Strings.split("x y z"," ")[1]);
         assertEquals("z",Strings.split("x y z"," ")[2]);
+    }
+
+    @Test
+    public void replace_returns_original_when_text_not_in_string() {
+        assertEquals("fox",Strings.replace("fox", "_", "?"));
+    }
+
+    @Test
+    public void replace_replaced_text_with_replacement() {
+        assertEquals("what the fox",Strings.replace("what_the_fox", "_", " "));
     }
 
 }

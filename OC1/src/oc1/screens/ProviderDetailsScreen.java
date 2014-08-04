@@ -94,6 +94,7 @@ public final class ProviderDetailsScreen
     }
 
     private void updateIcon() {
+        System.out.println("icon=" + provider().icon);
         icon.setIcon(Icons.of().getImage(provider().icon));
     }
     
