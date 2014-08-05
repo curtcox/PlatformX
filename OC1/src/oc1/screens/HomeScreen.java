@@ -24,7 +24,7 @@ public final class HomeScreen
    
     public static final String VERSION = "Oyster Cracker 2014/8/4 6:31p";
     
-    private HomeScreen() {
+    public HomeScreen() {
         super(VERSION,null);
     }
 
@@ -153,11 +153,6 @@ public final class HomeScreen
         form.addComponent(component);
     }
     
-    public static void showInitial() {
-        HomeScreen home = new HomeScreen();
-        home.show();
-    }
-
     @Override
     protected void refresh() {
         layoutForm();

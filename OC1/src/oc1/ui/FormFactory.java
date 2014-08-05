@@ -25,7 +25,7 @@ public final class FormFactory {
     private static Command goHome() {
         return new LoggedCommand("Home") {
             @Override protected void go() {
-                HomeScreen.showInitial();
+                new HomeScreen().show();
             }
         };
     }

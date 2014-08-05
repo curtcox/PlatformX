@@ -8,6 +8,8 @@ import oc1.log.LogManager;
 import oc1.log.LogWriter;
 import oc1.net.CachedNetwork;
 import oc1.net.Network;
+import oc1.screen.ScreenFactory;
+import oc1.screen.SimpleScreenFactory;
 import oc1.services.Geocoder;
 import oc1.services.Locations;
 import oc1.services.ServiceProviders;
@@ -37,6 +39,7 @@ final class RegistryLoader {
         put(Geocoder.class,         new Geocoder());
         put(CurrentState.class,     new CurrentState());
         put(Icons.class,            new Icons());
+        put(ScreenFactory.class,    new SimpleScreenFactory());
     }
 
     static void put(Class clazz, Object object) {

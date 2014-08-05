@@ -6,6 +6,8 @@ import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import java.io.IOException;
 import oc1.log.LogManager;
+import oc1.screen.Screen;
+import oc1.screen.ScreenFactory;
 import oc1.screens.HomeScreen;
 
 public class MyApplication {
@@ -50,9 +52,14 @@ public class MyApplication {
             return;
         }
         HeartbeatMonitor.install();
-        HomeScreen.showInitial();
+        show();
     }
 
+    private void show() {
+        ScreenFactory factory = Registry.get(ScreenFactory.class);
+        factory.create().show();
+    }
+    
     public void stop() {
         current = getDisplay().getCurrent();
     }
