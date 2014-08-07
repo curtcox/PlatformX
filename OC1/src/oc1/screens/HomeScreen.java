@@ -45,7 +45,7 @@ public final class HomeScreen
     }
 
     private Button searchElsewhereButton() {
-        Button button = buttonTo("Search elsewhere","edit-find-9.png",LocationSelectionScreen.withPrevious(this));
+        Button button = buttonTo("Search elsewhere","edit-find-9.png","LocationSelectionScreen");
         button.setTextPosition(Label.BOTTOM);
         return button;
     }
@@ -54,7 +54,7 @@ public final class HomeScreen
         Button button = ScreenButton.textImageActionAndLeadingTo(
                 "Search nearby","system-search-4.png",
                 clearLocationSelection(),
-                SearchScreenFactory.withPrevious(this));
+                "SearchScreen",this);
         button.setTextPosition(Label.BOTTOM);
         return button;
     }
@@ -68,7 +68,7 @@ public final class HomeScreen
     }
     
     private Button filterScreenButton() {
-        return buttonTo("Filter","filter.png",FilterScreen.withPrevious(this));
+        return buttonTo("Filter","filter.png","FilterScreen");
     }
 
 //    private Button profileScreenButton() {
@@ -76,11 +76,11 @@ public final class HomeScreen
 //    }
 
     private Button howToScreenButton() {
-        return buttonTo("How To","help.png",HowToScreen.linkBackTo(this));
+        return buttonTo("How To","help.png","HowToScreen");
     }
 
-    private Button buttonTo(String text, String image, Screen leadingTo) {
-        return ScreenButton.textAndImageLeadingTo(text,image,leadingTo);
+    private Button buttonTo(String text, String image, String leadingTo) {
+        return ScreenButton.textAndImageLeadingTo(text,image,leadingTo,this);
     }
     
     @Override

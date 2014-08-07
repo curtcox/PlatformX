@@ -57,7 +57,7 @@ public class MyApplication {
 
     private void show() {
         ScreenFactory factory = Registry.get(ScreenFactory.class);
-        factory.create().show();
+        factory.create("",null).show();
     }
     
     public void stop() {

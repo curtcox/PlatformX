@@ -10,15 +10,11 @@ import oc1.ui.ActionButton;
  *
  * @author Curt
  */
-final class HowToScreen
+public final class HowToScreen
     extends Screen
 {   
-    private HowToScreen(Screen previous) {
+    public HowToScreen(Screen previous) {
         super("How To",previous);
-    }
-    
-    static HowToScreen linkBackTo(Screen previous) {
-        return new HowToScreen(previous);
     }
     
     @Override

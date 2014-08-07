@@ -38,13 +38,7 @@ public final class ZoomOut {
     }
 
     ActionButton newZoomOutButton() {
-        return ScreenButton.lazyWithTextAndLeadingTo(friendlyMeters() + " +",newZoomOutLink());
-    }
-
-    ScreenFactory newZoomOutLink() {
-        return new ScreenFactory() {
-            public Screen create() { return SearchScreen.withPreviousTypesAndRadius(previous, types, bigger(radius)); }
-        };
+        return ScreenButton.lazyWithTextAndLeadingTo(friendlyMeters() + " +","SearchScreen",previous,types,bigger(radius));
     }
 
     String friendlyMeters() {

@@ -1,6 +1,7 @@
 package oc1.screen;
 
 import oc1.app.CurrentState;
+import oc1.app.Registry;
 import oc1.event.Change.Source;
 import oc1.ui.ActionButton;
 import oc1.event.StringSource;
@@ -11,14 +12,20 @@ import oc1.event.StringSource;
  */
 public final class ScreenButton {
 
+    public static ActionButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,String screen, Screen previous) {
+        ActionButton button = textActionAndLeadingTo(text,runnable,screenFactory().create(screen,previous));
+        button.setIcon(image);
+        return button;
+    }
+
     public static ActionButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,Screen screen) {
         ActionButton button = textActionAndLeadingTo(text,runnable,screen);
         button.setIcon(image);
         return button;
     }
 
-    public static ActionButton textAndImageLeadingTo(String text,String image,final Screen screen) {
-        ActionButton button = textAndLeadingTo(text,screen);
+    public static ActionButton textAndImageLeadingTo(String text,String image,final String screen,final Screen previous) {
+        ActionButton button = textAndLeadingTo(text,screen,previous);
         button.setIcon(image);
         return button;
     }
@@ -32,6 +39,19 @@ public final class ScreenButton {
         };
     }
 
+    public static ActionButton textAndLeadingTo(String text,final String screen,final Screen previous) {
+        return new ActionButton(text) {
+            @Override
+            public void onTap() {
+                screenFactory().create(screen,previous).show();
+            }
+        };
+    }
+
+    private static ScreenFactory screenFactory() {
+        return Registry.get(ScreenFactory.class);
+    }
+    
     public static ActionButton textActionAndLeadingTo(String text,final Runnable runnable, final Screen screen) {
         return new ActionButton(text) {
             @Override
@@ -54,17 +74,17 @@ public final class ScreenButton {
         return button;
     }
 
-    public static ActionButton lazyWithTextAndLeadingTo(String text,final ScreenFactory screenFactory) {
+    public static ActionButton lazyWithTextAndLeadingTo(String text,final String screen, final Screen previous, final Object...args) {
         return new ActionButton(text) {
             @Override
             public void onTap() {
-                screenFactory.create().show();
+                screenFactory().create(screen,previous,args).show();
             }
         };
     }
 
-    public static ActionButton lazyWithTextAndLeadingTo(StringSource source,ScreenFactory screen) {
-        final ActionButton button = lazyWithTextAndLeadingTo(source.getString(),screen);
+    public static ActionButton lazyWithTextAndLeadingTo(StringSource source,String screen, final Screen previous) {
+        final ActionButton button = lazyWithTextAndLeadingTo(source.getString(),screen,previous);
         button.updateTextOnChange(CurrentState.get(), source);
         return button;
     }
