@@ -5,6 +5,7 @@ import oc1.app.Registry;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
 import oc1.screen.Screen;
+import oc1.screen.ScreenLink;
 import oc1.screen.SelectionListScreen;
 import oc1.screenfactories.SearchScreenFactory;
 import oc1.uilist.SearchableList;
@@ -34,9 +35,9 @@ public final class SearchScreen
     }
     
     @Override
-    protected void useSelectedItem(ServiceProvider item) {
+    protected ScreenLink useSelectedItem(ServiceProvider item) {
         useSelectedProvider(item);
-        ProviderDetailsScreen.linkBackTo(SearchScreen.this).show();
+        return new ScreenLink("ProviderDetails",this);
     }
 
 }

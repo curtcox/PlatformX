@@ -13,7 +13,7 @@ import oc1.event.StringSource;
 public final class ScreenButton {
 
     public static ActionButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,String screen, Screen previous) {
-        ActionButton button = textActionAndLeadingTo(text,runnable,screenFactory().create(screen,previous));
+        ActionButton button = textActionAndLeadingTo(text,runnable,screenFactory().create(new ScreenLink(screen,previous)));
         button.setIcon(image);
         return button;
     }
@@ -43,7 +43,7 @@ public final class ScreenButton {
         return new ActionButton(text) {
             @Override
             public void onTap() {
-                screenFactory().create(screen,previous).show();
+                screenFactory().create(new ScreenLink(screen,previous)).show();
             }
         };
     }
@@ -78,7 +78,7 @@ public final class ScreenButton {
         return new ActionButton(text) {
             @Override
             public void onTap() {
-                screenFactory().create(screen,previous,args).show();
+                screenFactory().create(new ScreenLink(screen,previous,args)).show();
             }
         };
     }

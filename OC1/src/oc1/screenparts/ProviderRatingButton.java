@@ -15,7 +15,7 @@ public class ProviderRatingButton {
     private ProviderRatingButton() {}
     
     public static ActionButton withReturnTo(final Screen returnScreen) {
-        return ScreenButton.lazyWithTextAndLeadingTo(buttonText(),"RateScreen",returnScreen);
+        return ScreenButton.lazyWithTextAndLeadingTo(buttonText(),"Rate",returnScreen);
     }
 
     private static StringSource buttonText() {

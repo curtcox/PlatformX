@@ -8,7 +8,6 @@ import com.codename1.ui.layouts.GridLayout;
 import oc1.domain.ServiceProvider;
 import oc1.screen.Screen;
 import oc1.screen.ScreenButton;
-import oc1.screenfactories.SearchScreenFactory;
 import oc1.screenparts.ProviderDetailsButton;
 import oc1.screenparts.ProviderRatingButton;
 import oc1.services.Locations;
@@ -45,7 +44,7 @@ public final class HomeScreen
     }
 
     private Button searchElsewhereButton() {
-        Button button = buttonTo("Search elsewhere","edit-find-9.png","LocationSelectionScreen");
+        Button button = buttonTo("Search elsewhere","edit-find-9.png","LocationSelection");
         button.setTextPosition(Label.BOTTOM);
         return button;
     }
@@ -54,7 +53,7 @@ public final class HomeScreen
         Button button = ScreenButton.textImageActionAndLeadingTo(
                 "Search nearby","system-search-4.png",
                 clearLocationSelection(),
-                "SearchScreen",this);
+                "Search",this);
         button.setTextPosition(Label.BOTTOM);
         return button;
     }
@@ -68,15 +67,11 @@ public final class HomeScreen
     }
     
     private Button filterScreenButton() {
-        return buttonTo("Filter","filter.png","FilterScreen");
+        return buttonTo("Filter","filter.png","Filter");
     }
 
-//    private Button profileScreenButton() {
-//        return buttonTo("Profile","configure-4.png",new ProfileScreen(this));
-//    }
-
     private Button howToScreenButton() {
-        return buttonTo("How To","help.png","HowToScreen");
+        return buttonTo("How To","help.png","HowTo");
     }
 
     private Button buttonTo(String text, String image, String leadingTo) {

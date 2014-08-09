@@ -2,6 +2,7 @@ package oc1.screens;
 
 import oc1.domain.LocationDescription;
 import oc1.screen.Screen;
+import oc1.screen.ScreenLink;
 import oc1.screen.SelectionListScreen;
 import oc1.screenfactories.LocationSelectionScreenFactory;
 import oc1.screenfactories.SearchScreenFactory;
@@ -25,9 +26,9 @@ public final class LocationSelectionScreen
     }
     
     @Override
-    protected void useSelectedItem(LocationDescription item) {
+    protected ScreenLink useSelectedItem(LocationDescription item) {
         Locations.of().selectLocation(item.toLocation());
-        SearchScreenFactory.withPrevious(LocationSelectionScreen.this).show();
+        return new ScreenLink("SearchScreen",this);
     }
 
 }
