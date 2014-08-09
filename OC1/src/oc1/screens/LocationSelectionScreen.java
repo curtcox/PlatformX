@@ -1,10 +1,8 @@
 package oc1.screens;
 
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
 import oc1.domain.LocationDescription;
-import oc1.log.LogManager;
 import oc1.screen.Screen;
+import oc1.screen.SelectionListScreen;
 import oc1.screenfactories.LocationSelectionScreenFactory;
 import oc1.screenfactories.SearchScreenFactory;
 import oc1.services.Locations;
@@ -15,43 +13,21 @@ import oc1.uilist.SearchableList;
  * @author Curt
  */
 public final class LocationSelectionScreen
-    extends Screen
+    extends SelectionListScreen<LocationDescription>
 {
 
-    private final SearchableList<LocationDescription> searchList;
-
     public LocationSelectionScreen(Screen previous, SearchableList<LocationDescription> searchList) { 
-        super("Pick Location",previous);
-        this.searchList = searchList;
-        addSelectionListener();
+        super("Pick Location",previous,searchList);
     }
 
     static LocationSelectionScreen withPrevious(Screen screen) {
         return LocationSelectionScreenFactory.withPrevious(screen);
     }
-
-    @Override
-    public void layoutForPortrait() {
-        form.addComponent(searchList.component);
-    }
-
-    private void addSelectionListener() {
-        searchList.onSelected(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                useSelectedLocation();
-                SearchScreenFactory.withPrevious(LocationSelectionScreen.this).show();
-            }
-        });
-    }
-
-    private void useSelectedLocation() {
-        LocationDescription location = searchList.getSelected();
-        log("selected " + location);
-        Locations.of().selectLocation(location.toLocation());
-    }
     
-    private void log(String message) {
-        LogManager.of().getLog(LocationSelectionScreen.class).log(message);    
+    @Override
+    protected void useSelectedItem(LocationDescription item) {
+        Locations.of().selectLocation(item.toLocation());
+        SearchScreenFactory.withPrevious(LocationSelectionScreen.this).show();
     }
 
 }

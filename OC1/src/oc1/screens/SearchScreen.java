@@ -1,14 +1,12 @@
 package oc1.screens;
 
-import oc1.screenfactories.SearchScreenFactory;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
 import oc1.app.CurrentState;
 import oc1.app.Registry;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
-import oc1.log.LogManager;
 import oc1.screen.Screen;
+import oc1.screen.SelectionListScreen;
+import oc1.screenfactories.SearchScreenFactory;
 import oc1.uilist.SearchableList;
 
 /**
@@ -16,14 +14,10 @@ import oc1.uilist.SearchableList;
  * @author Curt
  */
 public final class SearchScreen
-    extends Screen
+    extends SelectionListScreen<ServiceProvider>
 {
-    private final SearchableList<ServiceProvider> searchList;
-
     public SearchScreen(Screen previous,SearchableList<ServiceProvider> searchList) { 
-        super("Search",previous);
-        this.searchList = searchList;
-        addSelectionListener();
+        super("Search",previous,searchList);
     }
 
     public static SearchScreen withPreviousAndTypes(Screen previous, Type[] types) {
@@ -34,29 +28,15 @@ public final class SearchScreen
         return SearchScreenFactory.withPreviousTypesAndRadius(previous, types, radius);
     }
     
-    @Override
-    public void layoutForPortrait() {
-        form.addComponent(searchList.component);
-    }
-
-    private void addSelectionListener() {
-        searchList.onSelected(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                useSelectedProvider();
-                ProviderDetailsScreen.linkBackTo(SearchScreen.this).show();
-            }
-        });
-    }
-
-    private void useSelectedProvider() {
-        ServiceProvider provider = searchList.getSelected();
-        log("selected " + provider);
+    private void useSelectedProvider(ServiceProvider provider) {
         Registry.put(ServiceProvider.class,provider);
         CurrentState.get().broadcastChange();
     }
     
-    private void log(String message) {
-        LogManager.of().getLog(SearchScreen.class).log(message);    
+    @Override
+    protected void useSelectedItem(ServiceProvider item) {
+        useSelectedProvider(item);
+        ProviderDetailsScreen.linkBackTo(SearchScreen.this).show();
     }
 
 }
