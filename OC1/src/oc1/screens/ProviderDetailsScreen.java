@@ -2,15 +2,15 @@ package oc1.screens;
 
 import com.codename1.ui.Button;
 import com.codename1.ui.Label;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.table.TableLayout;
 import java.util.Arrays;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
 import oc1.screen.Screen;
+import oc1.screen.ScreenLink;
 import oc1.screenparts.ProviderRatingButton;
 import oc1.ui.Icons;
+import oc1.ui.LinkButton;
 
 /**
  * For showing details about a particular provider.
@@ -24,25 +24,18 @@ public final class ProviderDetailsScreen
     private final Label types = new Label();
     private final Label price = new Label();
     private final Label rating = new Label();
-    private final Button icon = new Button();
+    private final Button icon = new LinkButton("",new SearchLinkFactory());
+    
+    final class SearchLinkFactory implements ScreenLink.Factory {
+        public ScreenLink create() {
+            return new ScreenLink("Search",ProviderDetailsScreen.this,getType());
+        }
+    }
+
     private final Label vicinity = new Label();
 
-    private ProviderDetailsScreen(Screen previous) {
-        super("Provider Details",previous);
-    }
-    
-    public static ProviderDetailsScreen linkBackTo(Screen previous) {
-        ProviderDetailsScreen screen = new ProviderDetailsScreen(previous);
-        screen.addButtonListener();
-        return screen;
-    }
-    
-    private void addButtonListener() {
-        icon.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                SearchScreen.withPreviousAndTypes(ProviderDetailsScreen.this, getType()).show();
-            }
-        });
+    public ProviderDetailsScreen() {
+        super("Provider Details");
     }
     
     @Override

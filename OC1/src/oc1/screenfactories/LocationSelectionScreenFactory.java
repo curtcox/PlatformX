@@ -5,7 +5,6 @@ import oc1.domain.LocationDescription;
 import oc1.event.LiveList;
 import oc1.event.SwappableList;
 import oc1.event.SimpleNegotiableList;
-import oc1.screen.Screen;
 import oc1.screenparts.LocationListCellConfigurer;
 import oc1.screens.LocationSelectionScreen;
 import oc1.uilist.ListContentInstaller;
@@ -17,9 +16,9 @@ import oc1.uilist.SearchableList;
  */
 public final class LocationSelectionScreenFactory {
 
-    public static LocationSelectionScreen withPrevious(Screen previous) {
+    public static LocationSelectionScreen withPrevious() {
         SearchableList<LocationDescription> searchList = newSearchableList();
-        return new LocationSelectionScreen(previous,searchList);
+        return new LocationSelectionScreen(searchList);
     }
     
     private static SearchableList<LocationDescription> newSearchableList(LiveList locations) {

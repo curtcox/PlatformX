@@ -3,7 +3,6 @@ package oc1.screen;
 import com.codename1.ui.Command;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
-import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import oc1.app.Registry;
@@ -13,37 +12,46 @@ import oc1.ui.FormFactory;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
- * Implementors will need to override a constructor to layout the UI.
+ * Implementors will need to override at least one layout method to create the UI.
  * @author Curt
  */
 public abstract class Screen {
 
     public final Form form;
-    public final Screen previous;
-    final Command back;
+    private Screen previous; // set once
+    private Command back;    // set once
 
     /**
      * Override this constructor to create a new screen.
      */
-    public Screen(String name, final Screen previous) {
-        this(FormFactory.of().newForm(name),previous);
+    public Screen(String name) {
+        this(FormFactory.of().newForm(name));
     }
     
     /**
      * This constructor is exposed mostly for testing.
      */
-    public Screen(Form form, final Screen previous) {
+    public Screen(Form form) {
         this.form = form;
-        this.previous = previous;
-        back = previous == null ? null : new LoggedCommand("Back") {
-            @Override protected void go() {
-                back();
-            }
-        };
         refreshOnOrientationChanage();
         log("created " + form.getTitle());
     }
 
+    void setPrevious(Screen previous) {
+        verifyPreviousNotSet();
+        back = new LoggedCommand("Back") {
+            @Override protected void go() {
+                back();
+            }
+        };
+    }
+
+    private void verifyPreviousNotSet() {
+        if (previous!=null) {
+            throw new RuntimeException();
+        }
+    }
+    
     public void show() {
         log("show " + form.getTitle());
         refresh();
@@ -55,10 +63,14 @@ public abstract class Screen {
     public void back() {
         log("back " + form.getTitle());
         if (previous!=null) {
-            previous.refresh();
-            previous.layoutForm();
-            previous.form.showBack();
+            goBack();
         }
+    }
+    
+    private void goBack() {
+        previous.refresh();
+        previous.layoutForm();
+        previous.form.showBack();
     }
 
     /**
@@ -67,10 +79,6 @@ public abstract class Screen {
      * changed since the last showing.
      */
     protected void refresh() {}
-    
-    private void log(String message) {
-        LogManager.of().getLog(Screen.class).log(message);    
-    }
     
     public boolean isPortrait() {
         return Registry.get(Display.class).isPortrait();
@@ -99,4 +107,7 @@ public abstract class Screen {
         layoutForPortrait();
     }
 
+    private void log(String message) {
+        LogManager.of().getLog(Screen.class).log(message);    
+    }
 }

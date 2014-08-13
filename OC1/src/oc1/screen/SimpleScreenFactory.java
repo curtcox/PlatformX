@@ -19,19 +19,21 @@ public final class SimpleScreenFactory
     implements ScreenFactory
 {
     public Screen create(ScreenLink link) {
-        return create(link.screen,link.previous,link.args);
+        Screen screen = create(link.screen,link.args);
+        screen.setPrevious(link.previous);
+        return screen;
     }
 
-    private Screen create(String screen, Screen previous, Object[] args) {
+    private Screen create(String screen, Object[] args) {
         log("screen="+screen + "args=" + Arrays.asList(args));
         String lower = screen.toLowerCase();
         if ("".equals(lower))                  return new HomeScreen();
-        if ("search".equals(lower))            return searchScreenFromArgs(previous,args);
-        if ("locationselection".equals(lower)) return LocationSelectionScreenFactory.withPrevious(previous);
-        if ("filter".equals(lower))            return FilterScreenFactory.withPrevious(previous);
-        if ("howto".equals(lower))             return new HowToScreen(previous);
-        if ("providerdetails".equals(lower))   return ProviderDetailsScreen.linkBackTo(previous);
-        if ("rate".equals(lower))              return RateScreen.withPrevious(previous);
+        if ("search".equals(lower))            return searchScreenFromArgs(args);
+        if ("locationselection".equals(lower)) return LocationSelectionScreenFactory.withPrevious();
+        if ("filter".equals(lower))            return FilterScreenFactory.withPrevious();
+        if ("howto".equals(lower))             return new HowToScreen();
+        if ("providerdetails".equals(lower))   return new ProviderDetailsScreen();
+        if ("rate".equals(lower))              return RateScreen.withPrevious();
         throw new IllegalArgumentException(screen);
     }
     
@@ -39,10 +41,10 @@ public final class SimpleScreenFactory
         LogManager.of().getLog(ScreenFactory.class).log(message);    
     }
 
-    private Screen searchScreenFromArgs(Screen previous, Object[] args) {
-        if (args.length==0) return SearchScreenFactory.withPrevious(previous);
-        if (args.length==1) return SearchScreenFactory.withPreviousAndTypes(previous,(Type[])args);
-        if (args.length==2) return SearchScreenFactory.withPreviousTypesAndRadius(previous,(Type[])args[0],(Integer)args[1]);
+    private Screen searchScreenFromArgs(Object[] args) {
+        if (args.length==0) return SearchScreenFactory.withPrevious();
+        if (args.length==1) return SearchScreenFactory.withPreviousAndTypes((Type[])args);
+        if (args.length==2) return SearchScreenFactory.withPreviousTypesAndRadius((Type[])args[0],(Integer)args[1]);
         throw new IllegalArgumentException("args=" + Arrays.asList(args));
     }
 

@@ -4,7 +4,6 @@ import oc1.app.CurrentState;
 import oc1.app.Registry;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
-import oc1.screen.Screen;
 import oc1.screen.ScreenLink;
 import oc1.screen.SelectionListScreen;
 import oc1.screenfactories.SearchScreenFactory;
@@ -17,16 +16,16 @@ import oc1.uilist.SearchableList;
 public final class SearchScreen
     extends SelectionListScreen<ServiceProvider>
 {
-    public SearchScreen(Screen previous,SearchableList<ServiceProvider> searchList) { 
-        super("Search",previous,searchList);
+    public SearchScreen(SearchableList<ServiceProvider> searchList) { 
+        super("Search",searchList);
     }
 
-    public static SearchScreen withPreviousAndTypes(Screen previous, Type[] types) {
-        return SearchScreenFactory.withPreviousAndTypes(previous, types);
+    public static SearchScreen withPreviousAndTypes(Type[] types) {
+        return SearchScreenFactory.withPreviousAndTypes(types);
     }
 
-    public static SearchScreen withPreviousTypesAndRadius(Screen previous, Type[] types, int radius) {
-        return SearchScreenFactory.withPreviousTypesAndRadius(previous, types, radius);
+    public static SearchScreen withPreviousTypesAndRadius(Type[] types, int radius) {
+        return SearchScreenFactory.withPreviousTypesAndRadius(types, radius);
     }
     
     private void useSelectedProvider(ServiceProvider provider) {

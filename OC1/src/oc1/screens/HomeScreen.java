@@ -24,7 +24,7 @@ public final class HomeScreen
     public static final String VERSION = "Oyster Cracker 2014/8/4 6:31p";
     
     public HomeScreen() {
-        super(VERSION,null);
+        super(VERSION);
     }
 
     private Container newProviderContainer() {

@@ -10,8 +10,8 @@ final class ProfileScreen
     extends Screen
 {
 
-    ProfileScreen(Screen previous) {
-        super("Profile",previous);
+    ProfileScreen() {
+        super("Profile");
     }
 
     @Override

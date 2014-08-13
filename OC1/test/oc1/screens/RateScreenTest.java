@@ -20,7 +20,7 @@ public class RateScreenTest {
     private RateScreen createScreenOnEDT() throws Exception {
         return (RateScreen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return RateScreen.withPrevious(null);
+                return RateScreen.withPrevious();
             }
         });
     }

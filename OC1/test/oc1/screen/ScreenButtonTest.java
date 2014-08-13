@@ -1,7 +1,5 @@
 package oc1.screen;
 
-import oc1.screen.ScreenButton;
-import oc1.screen.Screen;
 import com.codename1.ui.Form;
 import oc1.ui.ActionButton;
 import java.util.concurrent.Callable;
@@ -51,8 +49,8 @@ public class ScreenButtonTest {
         boolean refreshed;
         boolean shown;
         
-        public TestScreen(Form form, Screen previous) {
-            super(form, previous);
+        public TestScreen(Form form) {
+            super(form);
         }
         
         @Override
@@ -74,7 +72,7 @@ public class ScreenButtonTest {
         return (TestScreen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
                 Form form = FakeUI.newForm();
-                return new TestScreen(form,null){};
+                return new TestScreen(form){};
             }
         });
     }

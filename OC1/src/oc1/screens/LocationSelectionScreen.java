@@ -1,11 +1,9 @@
 package oc1.screens;
 
 import oc1.domain.LocationDescription;
-import oc1.screen.Screen;
 import oc1.screen.ScreenLink;
 import oc1.screen.SelectionListScreen;
 import oc1.screenfactories.LocationSelectionScreenFactory;
-import oc1.screenfactories.SearchScreenFactory;
 import oc1.services.Locations;
 import oc1.uilist.SearchableList;
 
@@ -17,12 +15,12 @@ public final class LocationSelectionScreen
     extends SelectionListScreen<LocationDescription>
 {
 
-    public LocationSelectionScreen(Screen previous, SearchableList<LocationDescription> searchList) { 
-        super("Pick Location",previous,searchList);
+    public LocationSelectionScreen(SearchableList<LocationDescription> searchList) { 
+        super("Pick Location",searchList);
     }
 
-    static LocationSelectionScreen withPrevious(Screen screen) {
-        return LocationSelectionScreenFactory.withPrevious(screen);
+    static LocationSelectionScreen withPrevious() {
+        return LocationSelectionScreenFactory.withPrevious();
     }
     
     @Override

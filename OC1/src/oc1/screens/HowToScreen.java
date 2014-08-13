@@ -13,8 +13,8 @@ import oc1.ui.ActionButton;
 public final class HowToScreen
     extends Screen
 {   
-    public HowToScreen(Screen previous) {
-        super("How To",previous);
+    public HowToScreen() {
+        super("How To");
     }
     
     @Override

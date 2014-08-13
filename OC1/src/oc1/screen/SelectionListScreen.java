@@ -16,8 +16,8 @@ public abstract class SelectionListScreen<T>
 {
     private final SearchableList<T> searchList;
 
-    public SelectionListScreen(String name,Screen previous, SearchableList<T> searchList) { 
-        super(name,previous);
+    public SelectionListScreen(String name, SearchableList<T> searchList) { 
+        super(name);
         this.searchList = searchList;
         addSelectionListener();
     }

@@ -1,9 +1,5 @@
 package oc1.screens;
 
-import oc1.screenfactories.SearchScreenFactory;
-import oc1.screen.ScreenButton;
-import oc1.screen.Screen;
-import oc1.screenparts.ProviderDetailsButton;
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
@@ -14,6 +10,10 @@ import com.codename1.ui.table.TableLayout;
 import oc1.app.CurrentState;
 import oc1.domain.Rating;
 import oc1.domain.ServiceProvider;
+import oc1.screen.Screen;
+import oc1.screen.ScreenButton;
+import oc1.screen.ScreenLink;
+import oc1.screenparts.ProviderDetailsButton;
 import oc1.stores.MyRatings;
 import oc1.ui.ActionButton;
 import oc1.ui.GridContainer;
@@ -30,12 +30,12 @@ public final class RateScreen
     private final TextArea description = new TextArea(
         "                                                                    ");
     
-    private RateScreen(Screen previous) {
-        super("Rate",previous);
+    private RateScreen() {
+        super("Rate");
     }
 
-    public static RateScreen withPrevious(Screen previous) {
-        RateScreen screen = new RateScreen(previous);
+    public static RateScreen withPrevious() {
+        RateScreen screen = new RateScreen();
         screen.init();
         return screen;
     }
@@ -103,7 +103,7 @@ public final class RateScreen
     }
     
     private Component newChangeLocationButton() {
-        return ScreenButton.textAndLeadingTo("Pick a different location",SearchScreenFactory.withPrevious(RateScreen.this));
+        return ScreenButton.textAndLeadingTo("Pick a different location",new ScreenLink("Search",this));
     }
 
     private ServiceProvider provider() {

@@ -6,8 +6,6 @@ import java.util.List;
 import oc1.domain.Type;
 import oc1.event.LiveList;
 import oc1.event.SimpleLiveList;
-import oc1.screen.Screen;
-import oc1.screenparts.ServiceProviderTextFilter;
 import oc1.screenparts.TypeListCellConfigurer;
 import oc1.screenparts.TypeTextFilter;
 import oc1.screens.FilterScreen;
@@ -20,8 +18,8 @@ import oc1.uilist.SearchableList;
  */
 public final class FilterScreenFactory {
     
-    public static FilterScreen withPrevious(Screen previous) {
-        return new FilterScreen(previous,newSearchableList());    
+    public static FilterScreen withPrevious() {
+        return new FilterScreen(newSearchableList());    
     }
 
     private static LiveList<Type> getTypes() {

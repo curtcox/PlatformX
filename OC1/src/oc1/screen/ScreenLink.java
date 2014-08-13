@@ -6,6 +6,10 @@ package oc1.screen;
  */
 public final class ScreenLink {
     
+    public interface Factory {
+        ScreenLink create();    
+    }
+    
     public final String screen;
     public final Screen previous;
     public final Object[] args;

@@ -20,7 +20,7 @@ public class ProviderDetailsScreenTest {
     private ProviderDetailsScreen createScreenOnEDT() throws Exception {
         return (ProviderDetailsScreen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return ProviderDetailsScreen.linkBackTo(null);
+                return new ProviderDetailsScreen();
             }
         });
     }

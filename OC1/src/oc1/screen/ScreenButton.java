@@ -39,6 +39,15 @@ public final class ScreenButton {
         };
     }
 
+    public static ActionButton textAndLeadingTo(String text,final ScreenLink link) {
+        return new ActionButton(text) {
+            @Override
+            public void onTap() {
+                screenFactory().create(link).show();
+            }
+        };
+    }
+
     public static ActionButton textAndLeadingTo(String text,final String screen,final Screen previous) {
         return new ActionButton(text) {
             @Override
@@ -70,6 +79,12 @@ public final class ScreenButton {
 
     public static ActionButton textAndLeadingTo(StringSource source,Screen screen) {
         final ActionButton button = textAndLeadingTo(source.getString(),screen);
+        button.updateTextOnChange(CurrentState.get(), source);
+        return button;
+    }
+
+    public static ActionButton textAndLeadingTo(StringSource source,String screenName,Screen previous) {
+        final ActionButton button = textAndLeadingTo(source.getString(),screenName,previous);
         button.updateTextOnChange(CurrentState.get(), source);
         return button;
     }
