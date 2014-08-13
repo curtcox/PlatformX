@@ -1,4 +1,6 @@
-package oc1.domain;
+package oc2.domain;
+
+import oc1.domain.TypedString;
 
 
 /**

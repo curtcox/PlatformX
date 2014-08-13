@@ -13,7 +13,7 @@ import oc1.screen.SimpleScreenFactory;
 import oc1.services.Geocoder;
 import oc1.services.Locations;
 import oc1.services.ServiceProviders;
-import oc1.stores.MyRatings;
+import oc2.stores.MyRatings;
 import oc1.ui.FormFactory;
 import oc1.ui.Icons;
 

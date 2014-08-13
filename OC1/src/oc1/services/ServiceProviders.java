@@ -11,7 +11,7 @@ import oc1.domain.ID;
 import oc1.domain.Name;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
-import oc1.stores.MyRatings;
+import oc2.stores.MyRatings;
 
 /**
  *

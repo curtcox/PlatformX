@@ -1,11 +1,12 @@
-package oc1.stores;
+package oc2.stores;
 
 import com.codename1.io.Storage;
 import oc1.app.Registry;
 import oc1.domain.ID;
-import oc1.domain.Rating;
+import oc2.domain.Rating;
 import java.util.HashMap;
 import java.util.Map;
+import oc1.stores.MapStorageIO;
 
 /**
  * The ratings that I have given.

@@ -6,7 +6,7 @@ import fake.FakeRegistryLoader;
 import com.codename1.ui.events.ActionListener;
 import oc1.app.CurrentState;
 import oc1.event.Change;
-import oc1.screens.FakeUI;
+import oc2.screens.FakeUI;
 import java.util.concurrent.Callable;
 import static org.junit.Assert.*;
 import org.junit.Test;

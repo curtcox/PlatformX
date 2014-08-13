@@ -1,5 +1,6 @@
 package oc1.domain;
 
+import oc2.domain.Rating;
 import com.codename1.location.Location;
 import oc1.app.Registry;
 import oc1.services.Locations;

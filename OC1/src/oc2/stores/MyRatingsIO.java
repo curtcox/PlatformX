@@ -1,7 +1,8 @@
-package oc1.stores;
+package oc2.stores;
 
 import oc1.domain.ID;
-import oc1.domain.Rating;
+import oc2.domain.Rating;
+import oc1.stores.AbstractPairIO;
 
 /**
  * For reading and writing my ratings.

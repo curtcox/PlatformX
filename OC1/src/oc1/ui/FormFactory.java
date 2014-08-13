@@ -4,7 +4,7 @@ import com.codename1.ui.Command;
 import com.codename1.ui.Form;
 import oc1.app.Registry;
 import oc1.command.LoggedCommand;
-import oc1.screens.HomeScreen;
+import oc2.screens.HomeScreen;
 
 /**
  *

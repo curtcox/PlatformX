@@ -1,5 +1,6 @@
-package oc1.screens;
+package oc2.screens;
 
+import oc2.screens.ProviderDetailsScreen;
 import fake.FakeRegistryLoader;
 import java.util.concurrent.Callable;
 import org.junit.Test;
@@ -9,7 +10,7 @@ import static org.junit.Assert.*;
  *
  * @author Curt
  */
-public class RateScreenTest {
+public class ProviderDetailsScreenTest {
     
     @Test
     public void test_can_create() throws Exception {
@@ -17,10 +18,10 @@ public class RateScreenTest {
         assertNotNull(createScreenOnEDT());
     }
  
-    private RateScreen createScreenOnEDT() throws Exception {
-        return (RateScreen) FakeUI.onEDT(new Callable(){
+    private ProviderDetailsScreen createScreenOnEDT() throws Exception {
+        return (ProviderDetailsScreen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return RateScreen.withPrevious();
+                return new ProviderDetailsScreen();
             }
         });
     }

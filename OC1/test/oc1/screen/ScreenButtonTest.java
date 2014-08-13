@@ -3,7 +3,7 @@ package oc1.screen;
 import com.codename1.ui.Form;
 import oc1.ui.ActionButton;
 import java.util.concurrent.Callable;
-import oc1.screens.FakeUI;
+import oc2.screens.FakeUI;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

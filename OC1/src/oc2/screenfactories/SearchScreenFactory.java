@@ -1,4 +1,4 @@
-package oc1.screenfactories;
+package oc2.screenfactories;
 
 import java.util.List;
 import oc1.domain.ServiceProvider;
@@ -8,7 +8,7 @@ import oc1.event.SwappableList;
 import oc1.screenparts.SearchParams;
 import oc1.screenparts.ServiceProviderListCellConfigurer;
 import oc1.screenparts.ServiceProviderTextFilter;
-import oc1.screens.SearchScreen;
+import oc2.screens.SearchScreen;
 import oc1.services.ServiceProviders;
 import oc1.uilist.SearchFilterInstaller;
 import oc1.uilist.SearchableList;

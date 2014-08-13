@@ -1,4 +1,4 @@
-package oc1.screenfactories;
+package oc2.screenfactories;
 
 import com.codename1.ui.Label;
 import oc1.domain.LocationDescription;
@@ -6,7 +6,7 @@ import oc1.event.LiveList;
 import oc1.event.SwappableList;
 import oc1.event.SimpleSwappableList;
 import oc1.screenparts.LocationListCellConfigurer;
-import oc1.screens.LocationSelectionScreen;
+import oc2.screens.LocationSelectionScreen;
 import oc1.uilist.ListContentInstaller;
 import oc1.uilist.SearchableList;
 

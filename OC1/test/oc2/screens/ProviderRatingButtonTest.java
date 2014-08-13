@@ -1,4 +1,4 @@
-package oc1.screens;
+package oc2.screens;
 
 import oc1.screenparts.ProviderRatingButton;
 import fake.FakeRegistryLoader;

@@ -1,4 +1,4 @@
-package oc1.screenfactories;
+package oc2.screenfactories;
 
 import com.codename1.ui.Label;
 import java.util.ArrayList;
@@ -8,7 +8,7 @@ import oc1.event.LiveList;
 import oc1.event.SimpleLiveList;
 import oc1.screenparts.TypeListCellConfigurer;
 import oc1.screenparts.TypeTextFilter;
-import oc1.screens.FilterScreen;
+import oc2.screens.FilterScreen;
 import oc1.uilist.SearchFilterInstaller;
 import oc1.uilist.SearchableList;
 

@@ -1,4 +1,4 @@
-package oc1.screens;
+package oc2.screens;
 
 import com.codename1.ui.Button;
 import com.codename1.ui.Component;
@@ -8,13 +8,13 @@ import com.codename1.ui.Label;
 import com.codename1.ui.TextArea;
 import com.codename1.ui.table.TableLayout;
 import oc1.app.CurrentState;
-import oc1.domain.Rating;
+import oc2.domain.Rating;
 import oc1.domain.ServiceProvider;
 import oc1.screen.Screen;
 import oc1.screen.ScreenButton;
 import oc1.screen.ScreenLink;
 import oc1.screenparts.ProviderDetailsButton;
-import oc1.stores.MyRatings;
+import oc2.stores.MyRatings;
 import oc1.ui.ActionButton;
 import oc1.ui.GridContainer;
 

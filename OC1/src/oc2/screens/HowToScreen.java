@@ -1,4 +1,4 @@
-package oc1.screens;
+package oc2.screens;
 
 import oc1.screen.Screen;
 import oc1.log.IssueReporter;

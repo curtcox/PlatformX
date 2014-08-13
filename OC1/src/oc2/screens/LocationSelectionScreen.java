@@ -1,9 +1,9 @@
-package oc1.screens;
+package oc2.screens;
 
 import oc1.domain.LocationDescription;
 import oc1.screen.ScreenLink;
 import oc1.screen.SelectionListScreen;
-import oc1.screenfactories.LocationSelectionScreenFactory;
+import oc2.screenfactories.LocationSelectionScreenFactory;
 import oc1.services.Locations;
 import oc1.uilist.SearchableList;
 

@@ -3,13 +3,13 @@ package oc1.screen;
 import java.util.Arrays;
 import oc1.domain.Type;
 import oc1.log.LogManager;
-import oc1.screenfactories.FilterScreenFactory;
-import oc1.screenfactories.LocationSelectionScreenFactory;
-import oc1.screenfactories.SearchScreenFactory;
-import oc1.screens.HomeScreen;
-import oc1.screens.HowToScreen;
-import oc1.screens.ProviderDetailsScreen;
-import oc1.screens.RateScreen;
+import oc2.screenfactories.FilterScreenFactory;
+import oc2.screenfactories.LocationSelectionScreenFactory;
+import oc2.screenfactories.SearchScreenFactory;
+import oc2.screens.HomeScreen;
+import oc2.screens.HowToScreen;
+import oc2.screens.ProviderDetailsScreen;
+import oc2.screens.RateScreen;
 
 /**
  *
