@@ -5,7 +5,7 @@ import oc1.domain.Type;
 import oc1.event.LiveList;
 import oc1.screenparts.ServiceProviderListCellConfigurer;
 import oc1.screenparts.ServiceProviderTextFilter;
-import oc1.screenparts.ZoomOut;
+import oc1.screenparts.SearchParams;
 import oc1.screens.SearchScreen;
 import oc1.services.ServiceProviders;
 import oc1.ui.ActionButton;
@@ -26,17 +26,17 @@ public final class SearchScreenFactory {
     }
     
     public static SearchScreen withPreviousTypesAndRadius(Type[] types, int radius) {
-        ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(types,radius);
+        SearchParams zoomOut = zoomOutToSmallestRadiusWithMultipleHits(types,radius);
         return new SearchScreen(newSearchableList(getProviders(zoomOut,types),zoomOut));    
     }
 
     public static SearchScreen withPreviousAndTypes(Type[] types) {
-        ZoomOut zoomOut = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
+        SearchParams zoomOut = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
         return new SearchScreen(newSearchableList(getProviders(zoomOut,types),zoomOut));    
     }
 
-    private static ZoomOut zoomOutToSmallestRadiusWithMultipleHits(Type[] types, int radius) {
-        ZoomOut zoomOut = new ZoomOut(types,radius);
+    private static SearchParams zoomOutToSmallestRadiusWithMultipleHits(Type[] types, int radius) {
+        SearchParams zoomOut = new SearchParams(types,radius);
         LiveList<ServiceProvider> providers = getProviders(zoomOut,types);
         while (zoomOut.couldZoomOut() && providers.size()<2) {
             zoomOut = zoomOut.zoomOut();
@@ -45,11 +45,11 @@ public final class SearchScreenFactory {
         return zoomOut;
     }
 
-    private static LiveList<ServiceProvider> getProviders(ZoomOut zoomOut, Type[] types) {
+    private static LiveList<ServiceProvider> getProviders(SearchParams zoomOut, Type[] types) {
         return ServiceProviders.of().nearby(types,zoomOut.radius);
     }
     
-    private static SearchableList<ServiceProvider> newSearchableList(LiveList providers,ZoomOut zoomOut) {
+    private static SearchableList<ServiceProvider> newSearchableList(LiveList providers,SearchParams zoomOut) {
         ZoomButton zoomButton = new ZoomButton(zoomOut);
         SearchableList list = new SearchableList(providers,zoomButton,new ServiceProviderListCellConfigurer());
         SearchFilterInstaller.install(list, new ServiceProviderTextFilter());
@@ -60,7 +60,7 @@ public final class SearchScreenFactory {
         extends ActionButton
     {
 
-        public ZoomButton(ZoomOut zoom) {
+        public ZoomButton(SearchParams zoom) {
             super(zoom.zoomText());
         }
 

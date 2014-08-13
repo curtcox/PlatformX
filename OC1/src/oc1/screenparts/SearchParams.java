@@ -6,12 +6,12 @@ import oc1.domain.Type;
  *
  * @author Curt
  */
-public final class ZoomOut {
+public final class SearchParams {
     
     public final int radius;
     private final Type[] types;
 
-    public ZoomOut(Type[] types, int radius) {
+    public SearchParams(Type[] types, int radius) {
         this.radius = radius;
         this.types = types;
     }
@@ -36,8 +36,8 @@ public final class ZoomOut {
         return (radius<1000) ? radius + "m" : radius / 1000 + "K";     
     }
 
-    public ZoomOut zoomOut() {
-        return new ZoomOut(types,bigger(radius));
+    public SearchParams zoomOut() {
+        return new SearchParams(types,bigger(radius));
     }
 
     private int bigger(int radius) {
