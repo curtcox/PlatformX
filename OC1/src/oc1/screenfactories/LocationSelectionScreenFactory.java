@@ -4,7 +4,7 @@ import com.codename1.ui.Label;
 import oc1.domain.LocationDescription;
 import oc1.event.LiveList;
 import oc1.event.SwappableList;
-import oc1.event.SimpleNegotiableList;
+import oc1.event.SimpleSwappableList;
 import oc1.screenparts.LocationListCellConfigurer;
 import oc1.screens.LocationSelectionScreen;
 import oc1.uilist.ListContentInstaller;
@@ -26,7 +26,7 @@ public final class LocationSelectionScreenFactory {
     }
 
     private static SearchableList<LocationDescription> newSearchableList() {
-        SwappableList<LocationDescription> locations = new SimpleNegotiableList();
+        SwappableList<LocationDescription> locations = new SimpleSwappableList();
         SearchableList<LocationDescription> list = newSearchableList(locations);
         ListContentInstaller.install(list, locations,new GeocoderStringToList());
         return list;

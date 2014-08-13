@@ -12,13 +12,13 @@ import java.util.ListIterator;
  *
  * @author Curt
  */
-public final class SimpleNegotiableList
+public final class SimpleSwappableList
     implements SwappableList 
 {
     private List list = new ArrayList();
     private final EventDispatcher dataListeners = new EventDispatcher();
 
-    public SimpleNegotiableList() {}
+    public SimpleSwappableList() {}
 
     public void become(List list) {
         this.list = list;
