@@ -39,6 +39,7 @@ public abstract class Screen {
 
     void setPrevious(Screen previous) {
         verifyPreviousNotSet();
+        this.previous = previous;
         back = new LoggedCommand("Back") {
             @Override protected void go() {
                 back();

@@ -19,6 +19,9 @@ public final class SimpleSwappableList
     private final EventDispatcher dataListeners = new EventDispatcher();
 
     public SimpleSwappableList() {}
+    public SimpleSwappableList(List list) {
+        become(list);
+    }
 
     public void become(List list) {
         this.list = list;

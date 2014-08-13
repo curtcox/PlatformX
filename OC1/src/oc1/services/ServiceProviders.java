@@ -1,17 +1,15 @@
 package oc1.services;
 
-import oc1.domain.Address;
-import oc1.domain.ID;
-import oc1.domain.Name;
 import com.codename1.location.Location;
-import oc1.app.Registry;
-import oc1.domain.ServiceProvider;
-import oc1.event.LiveList;
-import oc1.event.SimpleLiveList;
 import google.Place;
 import google.PlacesSearch;
 import java.util.ArrayList;
 import java.util.List;
+import oc1.app.Registry;
+import oc1.domain.Address;
+import oc1.domain.ID;
+import oc1.domain.Name;
+import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
 import oc1.stores.MyRatings;
 
@@ -27,12 +25,12 @@ public final class ServiceProviders {
         return Registry.get(ServiceProviders.class);
     }
     
-    public LiveList<ServiceProvider> nearby(Type[] types, int radius) {
+    public List<ServiceProvider> nearby(Type[] types, int radius) {
         List<ServiceProvider> providers = new ArrayList<ServiceProvider>();
         for (Place place : placesNearHere(types,radius)) {
             providers.add(serviceProviderFromPlace(place));
         }
-        return new SimpleLiveList(providers);
+        return providers;
     }
 
     private List<Place> placesNearHere(Type[] types, int radius) {

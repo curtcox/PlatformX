@@ -9,7 +9,7 @@ import oc1.domain.Type;
 public final class SearchParams {
     
     public final int radius;
-    private final Type[] types;
+    public final Type[] types;
 
     public SearchParams(Type[] types, int radius) {
         this.radius = radius;
