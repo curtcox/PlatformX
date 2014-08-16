@@ -1,7 +1,6 @@
 package oc1.screenparts;
 
 import oc1.domain.ServiceProvider;
-import oc1.screen.Screen;
 import oc1.screen.ScreenButton;
 import oc1.ui.ActionButton;
 import oc1.event.StringSource;
@@ -14,8 +13,8 @@ public class ProviderRatingButton {
 
     private ProviderRatingButton() {}
     
-    public static ActionButton withReturnTo(final Screen returnScreen) {
-        return ScreenButton.lazyWithTextAndLeadingTo(buttonText(),"Rate",returnScreen);
+    public static ActionButton withReturnTo() {
+        return ScreenButton.lazyWithTextAndLeadingTo(buttonText(),"Rate");
     }
 
     private static StringSource buttonText() {

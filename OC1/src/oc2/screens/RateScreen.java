@@ -57,7 +57,7 @@ public final class RateScreen
 
     private Component newProviderSummary() {
         return new GridContainer(2,1,
-            ProviderDetailsButton.withReturnTo(this),
+            ProviderDetailsButton.withReturnTo(),
             rating
         );
     }

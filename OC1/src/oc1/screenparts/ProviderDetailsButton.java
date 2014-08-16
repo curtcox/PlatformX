@@ -1,7 +1,6 @@
 package oc1.screenparts;
 
 import oc1.domain.ServiceProvider;
-import oc1.screen.Screen;
 import oc1.screen.ScreenButton;
 import oc1.ui.ActionButton;
 
@@ -11,8 +10,8 @@ import oc1.ui.ActionButton;
  */
 public class ProviderDetailsButton {
 
-    public static ActionButton withReturnTo(Screen returnScreen) {
-        return ScreenButton.textAndLeadingTo(ServiceProvider.getCurrentName(),"ProviderDetails",returnScreen);
+    public static ActionButton withReturnTo() {
+        return ScreenButton.textAndLeadingTo(ServiceProvider.getCurrentName(),"ProviderDetails");
     }
 
 }

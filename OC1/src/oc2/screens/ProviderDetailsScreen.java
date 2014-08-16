@@ -48,7 +48,7 @@ public final class ProviderDetailsScreen
         form.addComponent(rating);
         form.addComponent(icon);
         form.addComponent(types);
-        form.addComponent(ProviderRatingButton.withReturnTo(this));
+        form.addComponent(ProviderRatingButton.withReturnTo());
     }
     
     @Override

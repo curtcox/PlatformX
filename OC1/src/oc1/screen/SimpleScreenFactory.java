@@ -15,7 +15,6 @@ public final class SimpleScreenFactory
     
     public Screen create(ScreenLink link) {
         Screen screen = factory.create(link);
-        screen.setPrevious(link.previous);
         return screen;
     }
 }

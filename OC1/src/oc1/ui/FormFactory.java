@@ -4,7 +4,8 @@ import com.codename1.ui.Command;
 import com.codename1.ui.Form;
 import oc1.app.Registry;
 import oc1.command.LoggedCommand;
-import oc2.screens.HomeScreen;
+import oc1.screen.ScreenFactory;
+import oc1.screen.ScreenLink;
 
 /**
  *
@@ -25,7 +26,7 @@ public final class FormFactory {
     private static Command goHome() {
         return new LoggedCommand("Home") {
             @Override protected void go() {
-                new HomeScreen().show();
+                ScreenFactory.DEFAULT.create(new ScreenLink("")).show();
             }
         };
     }

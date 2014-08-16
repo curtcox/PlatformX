@@ -37,7 +37,7 @@ public abstract class Screen {
         log("created " + form.getTitle());
     }
 
-    void setPrevious(Screen previous) {
+    private void setPrevious(Screen previous) {
         verifyPreviousNotSet();
         this.previous = previous;
         back = new LoggedCommand("Back") {
