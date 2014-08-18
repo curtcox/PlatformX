@@ -4,7 +4,8 @@ import java.util.Arrays;
 import oc1.app.Version;
 import oc1.domain.Type;
 import oc1.log.LogManager;
-import oc1.screen.LayoutScreen;
+import oc1.screen.CompositeScreenFactory;
+import oc1.screen.DynamicScreenFactory;
 import oc1.screen.Screen;
 import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
@@ -24,6 +25,14 @@ import oc2.screens.RateScreen;
 public final class OysterCrackerScreenFactory
     implements ScreenFactory
 {
+    public static ScreenFactory of() {
+        return new CompositeScreenFactory(
+                DynamicScreenFactory.builder()
+                    .map("",Version.VERSION,new HomeScreenController(),new HomeScreenLayout())
+                .build(),
+                new OysterCrackerScreenFactory());
+    }
+    
     public Screen create(ScreenLink link) {
         return create(link.screen,link.args);
     }
@@ -31,7 +40,6 @@ public final class OysterCrackerScreenFactory
     private Screen create(String screen, Object[] args) {
         log("screen="+screen + "args=" + Arrays.asList(args));
         String lower = screen.toLowerCase();
-        if ("".equals(lower))                  return new LayoutScreen(Version.VERSION,new HomeScreenController(),new HomeScreenLayout());
         if ("search".equals(lower))            return searchScreenFromArgs(args);
         if ("locationselection".equals(lower)) return LocationSelectionScreenFactory.withPrevious();
         if ("filter".equals(lower))            return FilterScreenFactory.withPrevious();

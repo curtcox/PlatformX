@@ -16,6 +16,10 @@ public final class ScreenLayout {
         ScreenLayout getLayout(ScreenContext context);
     }
     
+    public interface Lookup {
+        Provider lookup(ScreenLink link);
+    }
+
     public ScreenLayout(Layout layout, Component... components) {
         this.layout = layout;
         this.components = components;

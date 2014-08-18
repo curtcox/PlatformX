@@ -4,15 +4,17 @@ package oc1.screen;
  *
  * @author Curt
  */
-public class ScreenController {
+public abstract class ScreenController {
 
+    public interface Lookup {
+        ScreenController lookup(ScreenLink link);
+    }
+    
     public ScreenContext getContext() {
         ScreenContext context = new ScreenContext();
         addSpecifics(context);
         return context;
     }
     
-    public void addSpecifics(ScreenContext context) {
-        
-    }
+    public abstract void addSpecifics(ScreenContext context);
 }
