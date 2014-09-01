@@ -10,7 +10,6 @@ import oc1.net.CachedNetwork;
 import oc1.net.Network;
 import oc2.screen.OysterCrackerScreenFactory;
 import oc1.screen.ScreenFactory;
-import oc1.screen.CompositeScreenFactory;
 import oc1.services.Geocoder;
 import oc1.services.Locations;
 import oc1.services.ServiceProviders;

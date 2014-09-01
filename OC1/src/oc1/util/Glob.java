@@ -8,7 +8,11 @@ public final class Glob {
 
     private final String glob;
     
-    public Glob(String glob) {
+    public static Glob of(String glob) {
+        return new Glob(glob);    
+    }
+    
+    private Glob(String glob) {
         this.glob = glob.toLowerCase();
     }
 

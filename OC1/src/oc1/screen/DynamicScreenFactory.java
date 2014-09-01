@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import oc1.event.StringSource;
 import oc1.util.Glob;
 import oc1.util.GlobStringMap;
 import oc1.util.StringMap;
@@ -54,16 +55,15 @@ public final class DynamicScreenFactory
     }
     
     public static class Builder {
-
         final GlobStringMap names = new GlobStringMap();
         final GlobScreenControllerLookup controllers = new GlobScreenControllerLookup();
         final GlobScreenLayoutLookup layouts = new GlobScreenLayoutLookup();
 
-        public Builder map(String globString,String name,ScreenController controller,ScreenLayout.Provider layout) {
-            Glob glob = new Glob(globString);
+        public Builder map(String globString,String name,ScreenController controller,StringSource source) {
+            Glob glob = Glob.of(globString);
             names.add(glob,name);
             controllers.add(glob,controller);
-            layouts.add(glob,layout);
+            layouts.add(glob,new DynamicScreenLayout(source));
             return this;
         }
         

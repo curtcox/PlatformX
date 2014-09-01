@@ -4,6 +4,7 @@ import oc1.domain.ServiceProvider;
 import oc1.screen.Getter;
 import oc1.screen.ScreenContext;
 import oc1.screen.ScreenController;
+import oc1.services.Locations;
 
 /**
  * The home screen of the application.
@@ -18,4 +19,9 @@ public final class HomeScreenController
             return ServiceProvider.getSelected().id != null;
         }});
     }
+    
+    public void clearLocationSelection() {
+        Locations.of().selectLocation(null);
+    }
+
 }

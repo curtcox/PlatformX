@@ -35,11 +35,11 @@ public class GlobStringMapTest {
     }
 
     private void match(String glob,String string) {
-        assertTrue(new Glob(glob).matches(string));
+        assertTrue(Glob.of(glob).matches(string));
     }
 
     private void no_match(String glob,String string) {
-        assertFalse(new Glob(glob).matches(string));
+        assertFalse(Glob.of(glob).matches(string));
     }
 
 }

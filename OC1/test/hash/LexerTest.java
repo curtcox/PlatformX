@@ -1,0 +1,52 @@
+package hash;
+
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+/**
+ *
+ * @author Curt
+ */
+public class LexerTest {
+    
+    Lexer testObject = new Lexer();
+    
+    @Test
+    public void split_returns_proper_parts() {
+        split("");    
+        split("{}","{","}");    
+    }
+
+    @Test
+    public void split_empty_string() {
+        split("");    
+    }
+
+    @Test
+    public void split_empty_brackets() {
+        split("{}","{","}");    
+    }
+
+    @Test
+    public void split_empty_parens() {
+        split("()","(",")");    
+    }
+
+    @Test
+    public void split_a_word() {
+        split("word","word");    
+    }
+
+    @Test
+    public void split_words_with_single_spaces_between_them() {
+        split("one two three","one","two","three");    
+    }
+
+    private void split(String original,String... expected) {
+        String[] actual = testObject.split(original);
+        assertEquals(expected.length,actual.length);
+        for (int i=0; i<expected.length; i++) {
+            assertEquals(expected[i],actual[i]);
+        }
+    }
+}

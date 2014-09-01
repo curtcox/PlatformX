@@ -9,6 +9,10 @@ import oc1.screen.DynamicScreenFactory;
 import oc1.screen.Screen;
 import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
+import oc1.screen.StringMapStringSource;
+import oc1.util.Glob;
+import oc1.util.GlobStringMap;
+import oc1.util.StringMap;
 import oc2.screenfactories.FilterScreenFactory;
 import oc2.screenfactories.LocationSelectionScreenFactory;
 import oc2.screenfactories.SearchScreenFactory;
@@ -26,9 +30,15 @@ public final class OysterCrackerScreenFactory
     implements ScreenFactory
 {
     public static ScreenFactory of() {
+        GlobStringMap layouts = new GlobStringMap();
+        layouts.add(Glob.of("Home"),"Home Layout");
+        return of();    
+    }
+    
+    public static ScreenFactory of(StringMap layouts) {
         return new CompositeScreenFactory(
                 DynamicScreenFactory.builder()
-                    .map("",Version.VERSION,new HomeScreenController(),new HomeScreenLayout())
+                    .map("",Version.VERSION,new HomeScreenController(),new StringMapStringSource(layouts,"Home"))
                 .build(),
                 new OysterCrackerScreenFactory());
     }
