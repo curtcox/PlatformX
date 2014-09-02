@@ -18,6 +18,21 @@ public class LexerTest {
     }
 
     @Test
+    public void split_commas() {
+        split(",,",",",",");    
+    }
+
+    @Test
+    public void split_questionmark_and_colon() {
+        split("?:","?",":");    
+    }
+
+    @Test
+    public void split_ternary() {
+        split("(condition)?one:two","(","condition",")","?","one",":","two");    
+    }
+
+    @Test
     public void split_empty_string() {
         split("");    
     }
@@ -40,6 +55,11 @@ public class LexerTest {
     @Test
     public void split_words_with_single_spaces_between_them() {
         split("one two three","one","two","three");    
+    }
+
+    @Test
+    public void split_words_with_single_dots_between_them() {
+        split("one.two.three","one",".","two",".","three");    
     }
 
     private void split(String original,String... expected) {

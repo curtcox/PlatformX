@@ -22,7 +22,7 @@ public final class Lexer {
 
     private static String[] parts(String string) {
         return Tokenizer.tokenize(string,
-            " ",
+            " ", ".", "?", ":", ",",
             "{", "}",
             "(", ")"
         );
