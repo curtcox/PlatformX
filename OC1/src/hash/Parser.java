@@ -6,8 +6,9 @@ package hash;
  */
 public final class Parser {
 
-    Hash parse(String original) {
-        return null;
+    Hash parse(String source) {
+        Method method = new Method.Parser().parse(Tokens.from(source));
+        return new Hash(method);
     }
     
 }

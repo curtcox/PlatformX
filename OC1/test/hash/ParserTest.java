@@ -1,6 +1,7 @@
 package hash;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import org.junit.Test;
 
 /**
@@ -21,7 +22,7 @@ public class ParserTest {
     public void parse_hash_with_get_layout() {
         Hash hash = Hash(Method(
             "getLayout",
-            Return(Ternary(Expression("portrait"),Expression("layoutForPortrait"),Expression("layoutForLandscape"))
+            Return(Ternary(Invocation("portrait"),Invocation("layoutForPortrait"),Invocation("layoutForLandscape"))
         )));
         parse(
             lines(
@@ -30,6 +31,22 @@ public class ParserTest {
                 "}"),
             hash
         );
+    }
+    
+    @Test
+    public void parse_hash_method_definition_with_arguments() {
+//buttonTo(text,image,leadingTo) {
+//    return textAndImageLeadingTo(text,image,leadingTo);
+//}
+        fail();
+    }
+    
+    @Test
+    public void parse_hash_ivocation_with_arguments() {
+//layoutForPortraitWithSelectedProvider() {
+//    return Screen(Grid(2,1), newProviderContainer(), newNavigationContainer());
+//}
+        fail();
     }
     
     Hash Hash(Method...methods) {
@@ -48,8 +65,8 @@ public class ParserTest {
         return new Ternary(condition,pass,fail);
     }
 
-    Expression Expression(String text) {
-        return new Expression(text);
+    Invocation Invocation(String text) {
+        return new Invocation(text);
     }
 
     Constant Constant(String text) {

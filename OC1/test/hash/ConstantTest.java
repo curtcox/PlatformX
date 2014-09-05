@@ -15,7 +15,7 @@ public class ConstantTest {
     }
 
     @Test
-    public void equals_returns_false_for_hashes_with_different_values() {
+    public void equals_returns_false_for_constants_with_different_values() {
         assertNotEquals(new Constant("a"),new Constant("b"));
     }
 

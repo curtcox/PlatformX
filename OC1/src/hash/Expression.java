@@ -6,10 +6,9 @@ package hash;
  */
 public class Expression {
 
-    Expression() {
+    static final class Parser {
+        Expression parse(Tokens tokens) {
+            return new Constant.Parser().parse(tokens);
+        }    
     }
-    
-    Expression(String text) {
-    }
-    
 }
