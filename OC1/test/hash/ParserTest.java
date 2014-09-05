@@ -10,7 +10,13 @@ import org.junit.Test;
 public class ParserTest {
 
     Parser testObject = new Parser();
-    
+
+    @Test
+    public void parse_hash_with_return_foo() {
+        Hash hash = Hash(Method("foo", Return(Constant("foo"))));
+        parse("foo() { return \"foo\" }",hash);
+    }
+
     @Test
     public void parse_hash_with_get_layout() {
         Hash hash = Hash(Method(
@@ -44,6 +50,10 @@ public class ParserTest {
 
     Expression Expression(String text) {
         return new Expression(text);
+    }
+
+    Constant Constant(String text) {
+        return new Constant(text);
     }
     
     private void parse(String original,Hash expected) {

@@ -6,12 +6,16 @@ package hash;
  */
 public final class Hash {
     
+    final int size;
+    
     Hash(Method...methods) {
+        size = methods.length;
     }
     
     @Override
     public boolean equals(Object o) {
-        return true;
+        Hash that = (Hash) o;
+        return size == that.size;
     }
     
     @Override

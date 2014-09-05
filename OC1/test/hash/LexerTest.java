@@ -23,6 +23,11 @@ public class LexerTest {
     }
 
     @Test
+    public void split_double_quotes() {
+        split("\"\"","\"","\"");    
+    }
+
+    @Test
     public void split_questionmark_and_colon() {
         split("?:","?",":");    
     }

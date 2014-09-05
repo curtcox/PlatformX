@@ -10,7 +10,7 @@ import oc1.util.Tokenizer;
  */
 public final class Lexer {
 
-    String[] split(String string) {
+    static String[] split(String string) {
         List<String> parts = new ArrayList<String>();
         for (String part : parts(string)) {
             if (!part.trim().equals("")) {
@@ -22,7 +22,7 @@ public final class Lexer {
 
     private static String[] parts(String string) {
         return Tokenizer.tokenize(string,
-            " ", ".", "?", ":", ",",
+            " ", ".", "?", ":", ",", "\"",
             "{", "}",
             "(", ")"
         );
