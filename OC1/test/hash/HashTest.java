@@ -17,6 +17,7 @@ public class HashTest {
     @Test
     public void equals_returns_false_for_hashes_with_different_methods() {
         assertNotEquals(new Hash(new Method("a")),new Hash());
+        assertNotEquals(new Hash(new Method("a")),new Hash(new Method("b")));
     }
 
     private void assertEquals(Hash a, Hash b) {

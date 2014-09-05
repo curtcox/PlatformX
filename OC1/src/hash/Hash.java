@@ -1,21 +1,25 @@
 package hash;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 /**
  *
  * @author Curt
  */
 public final class Hash {
     
-    final int size;
+    final Set<Method> methods;
     
     Hash(Method...methods) {
-        size = methods.length;
+        this.methods = new HashSet<Method>(Arrays.asList(methods));
     }
     
     @Override
     public boolean equals(Object o) {
         Hash that = (Hash) o;
-        return size == that.size;
+        return methods.equals(that.methods);
     }
     
     @Override
