@@ -8,8 +8,10 @@ public final class Constant
     extends Expression
 {
 
-    static final class Parser {
-        Constant parse(Tokens tokens) {
+    static final class Parser 
+        implements IParser
+    {
+        public Constant parse(Tokens tokens) {
             verifyQuote(tokens.next());
             String value = tokens.next();
             if (value.equals("\"")) {
@@ -23,6 +25,10 @@ public final class Constant
             if (!string.equals("\"")) {
                 throw new IllegalArgumentException();
             }
+        }
+        
+        public boolean canParse(Tokens tokens) {
+            return false;
         }
     }
     

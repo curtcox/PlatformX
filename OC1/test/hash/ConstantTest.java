@@ -35,6 +35,18 @@ public class ConstantTest {
         parse(new Constant(""),"\"\"");
         parse(new Constant("foo"),"\"foo\"");
     }
+
+    @Test
+    public void can_parse_constants() {
+        assertTrue(new Constant.Parser().canParse(Tokens.from("\"\"")));
+        assertTrue(new Constant.Parser().canParse(Tokens.from("\"red\"")));
+    }
+
+    @Test
+    public void can_not_parse_constants() {
+        assertFalse(new Constant.Parser().canParse(Tokens.from("red")));
+        assertFalse(new Constant.Parser().canParse(Tokens.from("?")));
+    }
     
     private void parse(Constant constant,String string) {
         assertEquals(constant,new Constant.Parser().parse(Tokens.from(string)));

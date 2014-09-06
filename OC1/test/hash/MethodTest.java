@@ -55,7 +55,7 @@ public class MethodTest {
     }
 
     private void parse(Method method,String string) {
-        assertEquals(method,new Method.Parser().parse(Tokens.from(string)));
+        assertEquals(method,Method.parse(Tokens.from(string)));
     }
     
     @Test

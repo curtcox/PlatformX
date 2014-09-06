@@ -8,11 +8,22 @@ import oc1.util.Objects;
  */
 public final class Method {
 
-    static final class Parser {
-        Method parse(Tokens tokens) {
-            String value = tokens.next();
-            return new Method(value);
+    private static final class Parser
+        implements IParser
+    {
+        public Method parse(Tokens tokens) {
+            String name = tokens.next();
+            return new Method(name,new Expression.Parser().parse(tokens));
         }    
+        
+        public boolean canParse(Tokens tokens) {
+            return false;
+        }
+
+    }
+
+    static Method parse(Tokens tokens) {
+        return new Parser().parse(tokens);
     }
     
     final String name;
