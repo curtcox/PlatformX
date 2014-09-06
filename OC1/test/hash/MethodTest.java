@@ -1,5 +1,6 @@
 package hash;
 
+import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -41,4 +42,10 @@ public class MethodTest {
     private void parse(Method method,String string) {
         assertEquals(method,new Method.Parser().parse(Tokens.from(string)));
     }
+    
+    @Test
+    public void toString_contains_name() {
+        assertTrue(Strings.contains(new Method("nuts").toString(),"nuts"));
+    }
+
 }

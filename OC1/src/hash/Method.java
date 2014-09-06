@@ -35,4 +35,8 @@ public final class Method {
                Objects.areEqual(expressions,that.expressions);
     }
     
+    @Override
+    public String toString() {
+        return name;
+    }
 }

@@ -26,4 +26,10 @@ public final class Hash {
     public int hashCode() {
         return 0;
     }
+    
+    
+    @Override
+    public String toString() {
+        return methods.toString();
+    } 
 }

@@ -1,5 +1,6 @@
 package hash;
 
+import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -31,4 +32,8 @@ public class HashTest {
         assertFalse(b.equals(a));
     }
 
+    @Test
+    public void toString_contains_method_name() {
+        assertTrue(Strings.contains(new Hash(new Method("nuts")).toString(),"nuts"));
+    }
 }
