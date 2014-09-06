@@ -35,10 +35,25 @@ public class MethodTest {
     }
     
     @Test
-    public void parse_returns_correct_value() {
+    public void parse_returns_correct_value_for_empty_method() {
         parse(new Method("x"),"x{}");
     }
-    
+
+    @Test
+    public void parse_returns_correct_value_for_method_with_constant() {
+        parse(new Method("x",new Constant("word")),"x{ \"word\" }");
+    }
+
+    @Test
+    public void parse_returns_correct_value_for_method_with_invocation() {
+        parse(new Method("x",new Invocation("stuff")),"x{ stuff }");
+    }
+
+    @Test
+    public void parse_returns_correct_value_for_method_with_return() {
+        parse(new Method("x",new Return(new Constant("word"))),"x{ return \"word\" }");
+    }
+
     private void parse(Method method,String string) {
         assertEquals(method,new Method.Parser().parse(Tokens.from(string)));
     }
