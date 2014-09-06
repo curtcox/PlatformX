@@ -1,5 +1,7 @@
 package hash;
 
+import oc1.util.Objects;
+
 /**
  *
  * @author Curt
@@ -14,9 +16,11 @@ public final class Method {
     }
     
     final String name;
+    final Expression[] expressions;
     
     Method(String name,Expression...expressions) {
         this.name = name;
+        this.expressions = expressions;
     }
     
     @Override
@@ -27,7 +31,8 @@ public final class Method {
     @Override
     public boolean equals(Object o) {
         Method that = (Method) o;
-        return name.equals(that.name);
+        return name.equals(that.name) &&
+               Objects.areEqual(expressions,that.expressions);
     }
     
 }

@@ -12,11 +12,14 @@ public class MethodTest {
     @Test
     public void equals_returns_true_for_methods_with_the_same_values() {
         assertEquals(new Method(""),new Method(""));
+        assertEquals(new Method("a"),new Method("a"));
+        assertEquals(new Method("b",new Constant("!")),new Method("b",new Constant("!")));
     }
 
     @Test
     public void equals_returns_false_for_methods_with_different_values() {
         assertNotEquals(new Method("a"),new Method("b"));
+        assertNotEquals(new Method("b",new Constant("!")),new Method("b",new Constant("?")));
     }
 
     private void assertEquals(Method a, Method b) {

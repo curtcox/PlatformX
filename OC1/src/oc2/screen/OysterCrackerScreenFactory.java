@@ -17,7 +17,6 @@ import oc2.screenfactories.FilterScreenFactory;
 import oc2.screenfactories.LocationSelectionScreenFactory;
 import oc2.screenfactories.SearchScreenFactory;
 import oc2.screens.HomeScreenController;
-import oc2.screens.HomeScreenLayout;
 import oc2.screens.HowToScreen;
 import oc2.screens.ProviderDetailsScreen;
 import oc2.screens.RateScreen;
@@ -32,7 +31,7 @@ public final class OysterCrackerScreenFactory
     public static ScreenFactory of() {
         GlobStringMap layouts = new GlobStringMap();
         layouts.add(Glob.of("Home"),"Home Layout");
-        return of();    
+        return of(layouts);    
     }
     
     public static ScreenFactory of(StringMap layouts) {
