@@ -23,4 +23,26 @@ public class TokensTest {
         assertFalse(tokens.hasNext());
     }
 
+    @Test
+    public void copy_produces_equivalent_tokens() {
+        Tokens tokens = Tokens.from("one");
+        Tokens copy = tokens.copy();
+        
+        assertTrue(copy.hasNext());
+        assertEquals("one",copy.next());
+        assertFalse(copy.hasNext());
+    }
+
+    @Test
+    public void changes_to_copy_do_not_change_original() {
+        Tokens tokens = Tokens.from("one");
+
+        Tokens copy = tokens.copy();
+        copy.next();
+        
+        assertTrue(tokens.hasNext());
+        assertEquals("one",tokens.next());
+        assertFalse(tokens.hasNext());
+    }
+
 }

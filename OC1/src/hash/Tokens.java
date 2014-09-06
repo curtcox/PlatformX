@@ -27,5 +27,9 @@ public final class Tokens {
     String next() {
         return tokens.remove(0);
     }
+
+    Tokens copy() {
+        return new Tokens(tokens.toArray(new String[0]));
+    }
     
 }

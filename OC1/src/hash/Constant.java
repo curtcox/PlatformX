@@ -28,6 +28,12 @@ public final class Constant
         }
         
         public boolean canParse(Tokens tokens) {
+            Tokens copy = tokens.copy();
+            if (!copy.hasNext())           { return false; }
+            if (!copy.next().equals("\"")) { return false; }
+            while (copy.hasNext()) {
+                if (copy.next().equals("\"")) { return true; }
+            }
             return false;
         }
     }
