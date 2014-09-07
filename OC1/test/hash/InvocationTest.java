@@ -38,4 +38,17 @@ public class InvocationTest {
     private void parse(Invocation invocation,String string) {
         assertEquals(invocation,new Invocation.Parser().parse(Tokens.from(string)));
     }
+    
+    @Test
+    public void can_parse_invocations() {
+        assertTrue(new Invocation.Parser().canParse(Tokens.from("invocation")));
+        assertTrue(new Invocation.Parser().canParse(Tokens.from("doit")));
+    }
+
+    @Test
+    public void can_not_parse_non_invocations() {
+        assertFalse(new Invocation.Parser().canParse(Tokens.from("\"constant\"")));
+        assertFalse(new Invocation.Parser().canParse(Tokens.from("?")));
+    }
+
 }

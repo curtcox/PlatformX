@@ -23,8 +23,18 @@ public class LexerTest {
     }
 
     @Test
-    public void split_double_quotes() {
-        split("\"\"","\"","\"");    
+    public void split_returns_two_double_quotes_with_no_content_as_one_token() {
+        split("\"\"","\"\"");    
+    }
+
+    @Test
+    public void split_returns_two_double_quotes_with_content_as_one_token() {
+        split("\"stuff\"","\"stuff\"");    
+    }
+
+    @Test
+    public void split_returns_two_double_quotes_with_content_and_spaces_as_one_token() {
+        split("\"N E\"","\"N E\"");    
     }
 
     @Test
