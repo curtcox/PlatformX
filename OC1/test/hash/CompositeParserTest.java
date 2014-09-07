@@ -14,7 +14,7 @@ public class CompositeParserTest {
     @Test
     public void canParse_returns_true_if_any_component_can_parse() {
         assertTrue(testObject.canParse(Tokens.from("\"constant\"")));
-        assertTrue(testObject.canParse(Tokens.from("\"method\"")));
+        assertTrue(testObject.canParse(Tokens.from("method")));
     }
 
     @Test
@@ -25,8 +25,8 @@ public class CompositeParserTest {
 
     @Test
     public void parse_returns_results_from_first_parser_that_can_parse() {
-        assertEquals(new Constant("constant"),testObject.canParse(Tokens.from("\"constant\"")));
-        assertEquals(new Invocation("method"),testObject.canParse(Tokens.from("\"method\"")));
+        assertEquals(new Constant("constant"),testObject.parse(Tokens.from("\"constant\"")));
+        assertEquals(new Invocation("method"),testObject.parse(Tokens.from("method")));
     }
 
 }
