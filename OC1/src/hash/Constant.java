@@ -12,29 +12,20 @@ public final class Constant
         implements IParser
     {
         public Constant parse(Tokens tokens) {
-            verifyQuote(tokens.next());
             String value = tokens.next();
-            if (value.equals("\"")) {
-                return new Constant("");
-            }
-            verifyQuote(tokens.next());
-            return new Constant(value);
-        }    
-
-        private void verifyQuote(String string) {
-            if (!string.equals("\"")) {
+            if (!value.startsWith("\"") || !value.endsWith("\"")) {
                 throw new IllegalArgumentException();
             }
-        }
-        
+            return new Constant(value.substring(1,value.length()-1));
+        }    
+
         public boolean canParse(Tokens tokens) {
             Tokens copy = tokens.copy();
-            if (!copy.hasNext())           { return false; }
-            if (!copy.next().equals("\"")) { return false; }
-            while (copy.hasNext()) {
-                if (copy.next().equals("\"")) { return true; }
+            if (!copy.hasNext()) {
+                return false;
             }
-            return false;
+            String token = copy.next();
+            return token.startsWith("\"") && token.endsWith("\"");
         }
     }
     
