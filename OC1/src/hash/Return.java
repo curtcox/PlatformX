@@ -7,16 +7,23 @@ package hash;
 public final class Return
     extends Expression
 {
-    static final class Parser {
-        Return parse(Tokens tokens) {
+    static final class Parser
+        implements IParser
+    {
+        public Return parse(Tokens tokens) {
             verifyReturn(tokens.next());
             return new Return(new Expression.Parser().parse(tokens));
         }    
 
         private void verifyReturn(String string) {
-            if (!string.equals("return")) {
+            if (!string.equals("^")) {
                 throw new IllegalArgumentException();
             }
+        }
+
+        public boolean canParse(Tokens tokens) {
+            Tokens copy = tokens.copy();
+            return copy.hasNext() && copy.next().equals("^");
         }
     }
     

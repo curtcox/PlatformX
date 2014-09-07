@@ -23,6 +23,11 @@ public class LexerTest {
     }
 
     @Test
+    public void split_pointers() {
+        split("^^","^","^");    
+    }
+
+    @Test
     public void split_returns_two_double_quotes_with_no_content_as_one_token() {
         split("\"\"","\"\"");    
     }

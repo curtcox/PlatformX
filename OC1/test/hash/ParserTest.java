@@ -15,7 +15,7 @@ public class ParserTest {
     @Test
     public void parse_hash_with_return_foo() {
         Hash hash = Hash(Method("foo", Return(Constant("foo"))));
-        parse("foo() { return \"foo\" }",hash);
+        parse("foo() { ^ \"foo\" }",hash);
     }
 
     @Test
@@ -27,7 +27,7 @@ public class ParserTest {
         parse(
             lines(
                 "getLayout() {",
-	            "return (portrait) ? layoutForPortrait() : layoutForLandscape()",
+	            "^ (portrait) ? layoutForPortrait() : layoutForLandscape()",
                 "}"),
             hash
         );
@@ -36,7 +36,7 @@ public class ParserTest {
     @Test
     public void parse_hash_method_definition_with_arguments() {
 //buttonTo(text,image,leadingTo) {
-//    return textAndImageLeadingTo(text,image,leadingTo);
+//    ^ textAndImageLeadingTo(text,image,leadingTo);
 //}
         fail();
     }
@@ -44,7 +44,7 @@ public class ParserTest {
     @Test
     public void parse_hash_ivocation_with_arguments() {
 //layoutForPortraitWithSelectedProvider() {
-//    return Screen(Grid(2,1), newProviderContainer(), newNavigationContainer());
+//    ^ Screen(Grid(2,1), newProviderContainer(), newNavigationContainer());
 //}
         fail();
     }

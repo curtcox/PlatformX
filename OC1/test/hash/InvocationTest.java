@@ -51,6 +51,7 @@ public class InvocationTest {
         assertFalse(new Invocation.Parser().canParse(Tokens.from("?")));
         assertFalse(new Invocation.Parser().canParse(Tokens.from(":")));
         assertFalse(new Invocation.Parser().canParse(Tokens.from(".")));
+        assertFalse(new Invocation.Parser().canParse(Tokens.from("^")));
     }
 
 }

@@ -29,7 +29,7 @@ public final class Invocation
         }
 
         private boolean validIdentifier(String value) {
-            Set<String> reject = new HashSet(Arrays.asList("\"","?",":","."));
+            Set<String> reject = new HashSet(Arrays.asList("\"","?",":",".","^"));
             for (int i=0; i<value.length(); i++) {
                 String c = value.substring(i, i+1);
                 if (reject.contains(c)) {
