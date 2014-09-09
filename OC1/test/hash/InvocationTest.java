@@ -1,5 +1,6 @@
 package hash;
 
+import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -51,7 +52,15 @@ public class InvocationTest {
         assertFalse(new Invocation.Parser().canParse(Tokens.from("?")));
         assertFalse(new Invocation.Parser().canParse(Tokens.from(":")));
         assertFalse(new Invocation.Parser().canParse(Tokens.from(".")));
+        assertFalse(new Invocation.Parser().canParse(Tokens.from("{")));
+        assertFalse(new Invocation.Parser().canParse(Tokens.from("}")));
         assertFalse(new Invocation.Parser().canParse(Tokens.from("^")));
+    }
+
+    @Test
+    public void toString_contains_expressions() {
+        String string = new Invocation("evars").toString();
+        assertTrue(string,Strings.contains(string,"evars"));
     }
 
 }

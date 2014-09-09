@@ -1,5 +1,6 @@
 package hash;
 
+import java.util.Arrays;
 import oc1.util.Objects;
 
 /**
@@ -8,24 +9,43 @@ import oc1.util.Objects;
  */
 public final class Method {
 
-    private static final class Parser
+    static final class Parser
         implements IParser
     {
+        final Expression.Parser expressions = new Expression.Parser();
+        
         public Method parse(Tokens tokens) {
             String name = tokens.next();
-            return new Method(name,new Expression.Parser().parse(tokens));
+            verify(tokens.next(),"{");
+            Tokens copy = tokens.copy();
+            if (copy.hasNext() && copy.next().equals("}")) {
+                tokens.next();
+                return new Method(name);
+            }
+            Expression expression = expressions.parse(tokens);
+            verify(tokens.next(),"}");
+            return new Method(name,expression);
         }    
         
         public boolean canParse(Tokens tokens) {
-            return false;
+            Tokens copy = tokens.copy();
+            if (!copy.hasNext() || !Identifier.isValid(copy.next())) {return false;}
+            if (!copy.hasNext() || !copy.next().equals("{")) {return false;}
+            Tokens copy2 = copy.copy();
+            if (copy2.hasNext()  &&  copy2.next().equals("}")) {return true;}
+            if (!expressions.canParse(copy))                 {return false;}
+            expressions.parse(copy);
+            return copy.hasNext() && copy.next().equals("}");
+        }
+
+        private void verify(String actual, String expected) {
+            if (!expected.equals(actual)) {
+                throw new IllegalArgumentException(actual);
+            }
         }
 
     }
 
-    static Method parse(Tokens tokens) {
-        return new Parser().parse(tokens);
-    }
-    
     final String name;
     final Expression[] expressions;
     
@@ -48,6 +68,6 @@ public final class Method {
     
     @Override
     public String toString() {
-        return name;
+        return name + Arrays.asList(expressions);
     }
 }

@@ -26,6 +26,11 @@ public class ExpressionTest {
     }
 
     @Test
+    public void canParse_returns_false_for_closing_bracket() {
+        assertFalse(canParse("}"));
+    }
+
+    @Test
     public void parse_returns_correct_value_for_constant() {
         parse(new Constant(""),"\"\"");
         parse(new Constant("foo"),"\"foo\"");

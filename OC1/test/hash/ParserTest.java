@@ -15,7 +15,7 @@ public class ParserTest {
     @Test
     public void parse_hash_with_return_foo() {
         Hash hash = Hash(Method("foo", Return(Constant("foo"))));
-        parse("foo() { ^ \"foo\" }",hash);
+        parse("foo { ^ \"foo\" }",hash);
     }
 
     @Test

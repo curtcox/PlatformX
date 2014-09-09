@@ -46,6 +46,8 @@ public class ConstantTest {
     public void can_not_parse_non_constants() {
         assertFalse(new Constant.Parser().canParse(Tokens.from("red")));
         assertFalse(new Constant.Parser().canParse(Tokens.from("?")));
+        assertFalse(new Constant.Parser().canParse(Tokens.from("}")));
+        assertFalse(new Constant.Parser().canParse(Tokens.from("{")));
     }
     
     private void parse(Constant constant,String string) {
