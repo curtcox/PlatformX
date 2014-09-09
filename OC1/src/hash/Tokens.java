@@ -28,6 +28,10 @@ public final class Tokens {
         return tokens.remove(0);
     }
 
+    String peek() {
+        return tokens.get(0);
+    }
+
     Tokens copy() {
         return new Tokens(tokens.toArray(new String[0]));
     }

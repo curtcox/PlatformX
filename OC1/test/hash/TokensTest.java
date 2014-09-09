@@ -24,6 +24,14 @@ public class TokensTest {
     }
 
     @Test
+    public void peek_returns_one_element_without_removing_it() {
+        Tokens tokens = Tokens.from("one");
+        assertTrue(tokens.hasNext());
+        assertEquals("one",tokens.peek());
+        assertTrue(tokens.hasNext());
+    }
+
+    @Test
     public void copy_produces_equivalent_tokens() {
         Tokens tokens = Tokens.from("one");
         Tokens copy = tokens.copy();

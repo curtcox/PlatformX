@@ -17,9 +17,7 @@ public final class Method {
         public Method parse(Tokens tokens) {
             String name = tokens.next();
             verify(tokens.next(),"{");
-            Tokens copy = tokens.copy();
-            if (copy.hasNext() && copy.next().equals("}")) {
-                tokens.next();
+            if (tokens.hasNext() && tokens.peek().equals("}")) {
                 return new Method(name);
             }
             Expression expression = expressions.parse(tokens);
@@ -31,8 +29,7 @@ public final class Method {
             Tokens copy = tokens.copy();
             if (!copy.hasNext() || !Identifier.isValid(copy.next())) {return false;}
             if (!copy.hasNext() || !copy.next().equals("{")) {return false;}
-            Tokens copy2 = copy.copy();
-            if (copy2.hasNext()  &&  copy2.next().equals("}")) {return true;}
+            if (copy.hasNext()  &&  copy.peek().equals("}")) {return true;}
             if (!expressions.canParse(copy))                 {return false;}
             expressions.parse(copy);
             return copy.hasNext() && copy.next().equals("}");
