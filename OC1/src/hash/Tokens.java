@@ -35,5 +35,9 @@ public final class Tokens {
     Tokens copy() {
         return new Tokens(tokens.toArray(new String[0]));
     }
+
+    boolean nextIs(String value) {
+        return hasNext() && next().equals(value);
+    }
     
 }

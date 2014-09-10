@@ -28,11 +28,11 @@ public final class Method {
         public boolean canParse(Tokens tokens) {
             Tokens copy = tokens.copy();
             if (!copy.hasNext() || !Identifier.isValid(copy.next())) {return false;}
-            if (!copy.hasNext() || !copy.next().equals("{")) {return false;}
+            if (!copy.nextIs("{")) {return false;}
             if (copy.hasNext()  &&  copy.peek().equals("}")) {return true;}
             if (!expressions.canParse(copy))                 {return false;}
             expressions.parse(copy);
-            return copy.hasNext() && copy.next().equals("}");
+            return copy.nextIs("}");
         }
 
         private void verify(String actual, String expected) {

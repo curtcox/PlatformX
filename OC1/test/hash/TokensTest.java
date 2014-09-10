@@ -32,6 +32,31 @@ public class TokensTest {
     }
 
     @Test
+    public void nextIs_returns_true_if_string_matches_next_token() {
+        Tokens tokens = Tokens.from("one");
+        assertTrue(tokens.nextIs("one"));
+    }
+
+    @Test
+    public void nextIs_returns_false_if_there_are_no_more_tokens() {
+        Tokens tokens = Tokens.from("");
+        assertFalse(tokens.nextIs(""));
+    }
+
+    @Test
+    public void nextIs_returns_false_if_string_doesnt_matches_next_token() {
+        Tokens tokens = Tokens.from("one");
+        assertFalse(tokens.nextIs("thing"));
+    }
+
+    @Test
+    public void nextIs_consumes_token() {
+        Tokens tokens = Tokens.from("one");
+        tokens.nextIs("one");
+        assertFalse(tokens.hasNext());
+    }
+
+    @Test
     public void copy_produces_equivalent_tokens() {
         Tokens tokens = Tokens.from("one");
         Tokens copy = tokens.copy();
