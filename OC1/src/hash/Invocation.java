@@ -32,7 +32,7 @@ public final class Invocation
     
     final String value;
     
-    Invocation(String value) {
+    Invocation(String value,String...params) {
         this.value = value;
     }
     

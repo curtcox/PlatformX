@@ -52,11 +52,15 @@ public final class Method {
     }
 
     final String name;
-    final Expression[] expressions;
+    final Expression[] body;
     
-    Method(String name,Expression...expressions) {
+    Method(String name,Expression...body) {
+        this(name,new Args(),body);
+    }
+
+    Method(String name,Args params, Expression...body) {
         this.name = name;
-        this.expressions = expressions;
+        this.body = body;
     }
     
     @Override
@@ -68,11 +72,11 @@ public final class Method {
     public boolean equals(Object o) {
         Method that = (Method) o;
         return name.equals(that.name) &&
-               Objects.areEqual(expressions,that.expressions);
+               Objects.areEqual(body,that.body);
     }
     
     @Override
     public String toString() {
-        return name + Arrays.asList(expressions);
+        return name + Arrays.asList(body);
     }
 }
