@@ -1,5 +1,6 @@
 package hash;
 
+import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -53,4 +54,10 @@ public class ConstantTest {
     private void parse(Constant constant,String string) {
         assertEquals(constant,new Constant.Parser().parse(Tokens.from(string)));
     }
+    
+        @Test
+    public void toString_contains_condition() {
+        assertTrue(Strings.contains(new Constant("nuts").toString(),"nuts"));
+    }
+
 }

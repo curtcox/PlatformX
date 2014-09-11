@@ -43,5 +43,11 @@ public final class Tokens {
     boolean peekIs(String value) {
         return hasNext() && peek().equals(value);
     }
+
+    void verifyNextIs(String expected) {
+        if (!expected.equals(next())) {
+            throw new IllegalArgumentException();
+        }
+    }
     
 }

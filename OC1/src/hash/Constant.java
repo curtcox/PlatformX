@@ -45,4 +45,9 @@ public final class Constant
         Constant that = (Constant) o;
         return value.equals(that.value);
     }
+    
+    @Override
+    public String toString() {
+        return value;
+    }
 }
