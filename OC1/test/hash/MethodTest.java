@@ -11,17 +11,21 @@ import org.junit.Test;
  */
 public class MethodTest {
     
+    final Method.Parser parser = new Method.Parser();
+    
     @Test
     public void equals_returns_true_for_methods_with_the_same_values() {
         assertEquals(new Method(""),new Method(""));
         assertEquals(new Method("a"),new Method("a"));
         assertEquals(new Method("b",new Constant("!")),new Method("b",new Constant("!")));
+        assertEquals(new Method("b",new Args("a")),new Method("b",new Args("a")));
     }
 
     @Test
     public void equals_returns_false_for_methods_with_different_values() {
         assertNotEquals(new Method("a"),new Method("b"));
         assertNotEquals(new Method("b",new Constant("!")),new Method("b",new Constant("?")));
+        assertNotEquals(new Method("f",new Args("x")),new Method("f",new Args("y")));
     }
 
     private void assertEquals(Method a, Method b) {
@@ -46,6 +50,16 @@ public class MethodTest {
     }
 
     @Test
+    public void canParse_method_with_one_param() {
+        assertTrue(canParse("f(x){}"));
+    }
+
+    @Test
+    public void canParse_method_with_two_params() {
+        assertTrue(canParse("f(x y){}"));
+    }
+
+    @Test
     public void canParse_method_with_constant() {
         assertTrue(canParse("x{ \"word\" }"));
     }
@@ -66,6 +80,16 @@ public class MethodTest {
     }
 
     @Test
+    public void parse_returns_correct_value_for_method_with_one_param() {
+        parse(new Method("f",new Args("x")),"f(x){}");
+    }
+
+    @Test
+    public void parse_returns_correct_value_for_method_with_two_param() {
+        parse(new Method("f",new Args("x", "y")),"f(x y){}");
+    }
+
+    @Test
     public void parse_returns_correct_value_for_method_with_constant() {
         parse(new Method("x",new Constant("word")),"x{ \"word\" }");
     }
@@ -81,11 +105,11 @@ public class MethodTest {
     }
 
     private void parse(Method method,String string) {
-        assertEquals(method,new Method.Parser().parse(Tokens.from(string)));
+        assertEquals(method,parser.parse(Tokens.from(string)));
     }
 
     private boolean canParse(String string) {
-        return new Method.Parser().canParse(Tokens.from(string));
+        return parser.canParse(Tokens.from(string));
     }
     
     @Test
@@ -97,6 +121,13 @@ public class MethodTest {
     public void toString_contains_expressions() {
         String string = new Method("tinker",new Invocation("evars")).toString();
         assertTrue(string,Strings.contains(string,"evars"));
+    }
+
+    @Test
+    public void toString_contains_args() {
+        String string = new Method("tinker",new Args("evars","chance")).toString();
+        assertTrue(string,Strings.contains(string,"evars"));
+        assertTrue(string,Strings.contains(string,"chance"));
     }
 
 }

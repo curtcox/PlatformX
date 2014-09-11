@@ -44,4 +44,8 @@ public final class Return
         return expression.equals(that.expression);
     }
     
+    @Override
+    public String toString() {
+        return "^" + expression;
+    }
 }

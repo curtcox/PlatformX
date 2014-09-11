@@ -11,7 +11,7 @@ import oc1.util.Objects;
  */
 final class Args {
 
-        static final class Parser 
+    static final class Parser 
         implements IParser
     {
         public Args parse(Tokens tokens) {
@@ -38,25 +38,25 @@ final class Args {
         }
     }
     
-    final String[] params;
+    final String[] args;
     
-    Args(String... params) {
-        this.params = params;
+    Args(String... args) {
+        this.args = args;
     }
     
     @Override
     public int hashCode() {
-        return Arrays.asList(params).hashCode();
+        return Arrays.asList(args).hashCode();
     }
     
     @Override
     public boolean equals(Object o) {
         Args that = (Args) o;
-        return Objects.areEqual(params, that.params);
+        return Objects.areEqual(args, that.args);
     }
     
     @Override
     public String toString() {
-        return Arrays.asList(params).toString();
+        return Arrays.asList(args).toString();
     }
 }

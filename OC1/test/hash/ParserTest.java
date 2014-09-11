@@ -37,7 +37,7 @@ public class ParserTest {
     public void parse_hash_method_definition_and_invocation_with_arguments() {
         Hash hash = Hash(Method(
             "buttonTo",Args("text","image","leadingTo"),
-            Return(Invocation("textAndImageLeadingTo","text","image","leadinTo"))
+            Return(Invocation("textAndImageLeadingTo","text","image","leadingTo"))
         ));
         parse(
             lines(

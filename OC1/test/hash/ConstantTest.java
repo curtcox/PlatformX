@@ -55,7 +55,7 @@ public class ConstantTest {
         assertEquals(constant,new Constant.Parser().parse(Tokens.from(string)));
     }
     
-        @Test
+    @Test
     public void toString_contains_condition() {
         assertTrue(Strings.contains(new Constant("nuts").toString(),"nuts"));
     }

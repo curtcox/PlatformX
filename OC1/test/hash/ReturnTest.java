@@ -1,5 +1,6 @@
 package hash;
 
+import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -59,6 +60,16 @@ public class ReturnTest {
 
     private boolean canParse(String string) {
         return new Return.Parser().canParse(Tokens.from(string));
+    }
+
+    @Test
+    public void toString_contains_return_character() {
+        assertTrue(Strings.contains(new Return(new Constant("")).toString(),"^"));
+    }
+
+    @Test
+    public void toString_contains_expression() {
+        assertTrue(Strings.contains(new Return(new Constant("nuts")).toString(),"nuts"));
     }
 
 }
