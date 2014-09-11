@@ -39,5 +39,9 @@ public final class Tokens {
     boolean nextIs(String value) {
         return hasNext() && next().equals(value);
     }
+
+    boolean peekIs(String value) {
+        return hasNext() && peek().equals(value);
+    }
     
 }

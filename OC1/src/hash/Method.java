@@ -28,9 +28,9 @@ public final class Method {
         public boolean canParse(Tokens tokens) {
             Tokens copy = tokens.copy();
             if (!copy.hasNext() || !Identifier.isValid(copy.next())) {return false;}
-            if (!copy.nextIs("{")) {return false;}
-            if (copy.hasNext()  &&  copy.peek().equals("}")) {return true;}
-            if (!expressions.canParse(copy))                 {return false;}
+            if (!copy.nextIs("{"))                                   {return false;}
+            if (copy.peekIs("}"))                                    {return true;}
+            if (!expressions.canParse(copy))                         {return false;}
             expressions.parse(copy);
             return copy.nextIs("}");
         }
