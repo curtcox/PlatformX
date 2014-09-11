@@ -20,12 +20,12 @@ public final class Method {
                 tokens.next();
                 tokens.next();
             }
-            verify(tokens.next(),"{");
+            tokens.verifyNextIs("{");
             if (tokens.hasNext() && tokens.peek().equals("}")) {
                 return new Method(name);
             }
             Expression expression = expressions.parse(tokens);
-            verify(tokens.next(),"}");
+            tokens.verifyNextIs("}");
             return new Method(name,expression);
         }    
         
@@ -41,12 +41,6 @@ public final class Method {
             if (!expressions.canParse(copy))                         {return false;}
             expressions.parse(copy);
             return copy.nextIs("}");
-        }
-
-        private void verify(String actual, String expected) {
-            if (!expected.equals(actual)) {
-                throw new IllegalArgumentException(actual);
-            }
         }
 
     }

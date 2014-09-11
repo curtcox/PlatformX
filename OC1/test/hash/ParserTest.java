@@ -41,8 +41,8 @@ public class ParserTest {
         ));
         parse(
             lines(
-                "buttonTo(text,image,leadingTo) {",
-                    "^ textAndImageLeadingTo(text,image,leadingTo)",
+                "buttonTo(text image leadingTo) {",
+                    "^ textAndImageLeadingTo(text image leadingTo)",
                 "}"),
             hash
         );

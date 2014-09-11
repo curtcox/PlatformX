@@ -13,11 +13,13 @@ public class InvocationTest {
     @Test
     public void equals_returns_true_for_invocations_with_the_same_values() {
         assertEquals(new Invocation(""),new Invocation(""));
+        assertEquals(new Invocation("f","x"),new Invocation("f","x"));
     }
 
     @Test
     public void equals_returns_false_for_invocations_with_different_values() {
         assertNotEquals(new Invocation("a"),new Invocation("b"));
+        assertNotEquals(new Invocation("f","x"),new Invocation("f","y"));
     }
 
     private void assertEquals(Invocation a, Invocation b) {
@@ -35,12 +37,15 @@ public class InvocationTest {
     public void parse_returns_correct_value() {
         parse(new Invocation("foo"),"foo");
         parse(new Invocation("foo"),"foo()");
+        parse(new Invocation("f","x"),"f(x)");
+        parse(new Invocation("f","x","y"),"f(x y)");
     }
 
     @Test
     public void parse_consumes_trailing_parens() {
-        Tokens tokens = parse(new Invocation("foo"),"foo()");
-        assertFalse(tokens.hasNext());
+        assertFalse(parse(new Invocation("foo"),"foo()").hasNext());
+        assertFalse(parse(new Invocation("f","x"),"f(x)").hasNext());
+        assertFalse(parse(new Invocation("f","x","y"),"f(x y)").hasNext());
     }
     
     private Tokens parse(Invocation invocation,String string) {
@@ -51,26 +56,40 @@ public class InvocationTest {
     
     @Test
     public void can_parse_invocations() {
-        assertTrue(new Invocation.Parser().canParse(Tokens.from("invocation")));
-        assertTrue(new Invocation.Parser().canParse(Tokens.from("doit")));
-        assertTrue(new Invocation.Parser().canParse(Tokens.from("stuff()")));
+        Invocation.Parser parser = new Invocation.Parser();
+        assertTrue(parser.canParse(Tokens.from("invocation")));
+        assertTrue(parser.canParse(Tokens.from("doit")));
+        assertTrue(parser.canParse(Tokens.from("stuff()")));
+        assertTrue(parser.canParse(Tokens.from("f(x)")));
+        assertTrue(parser.canParse(Tokens.from("f(x y)")));
+        assertTrue(parser.canParse(Tokens.from("f }")));
     }
 
     @Test
     public void can_not_parse_non_invocations() {
-        assertFalse(new Invocation.Parser().canParse(Tokens.from("\"constant\"")));
-        assertFalse(new Invocation.Parser().canParse(Tokens.from("?")));
-        assertFalse(new Invocation.Parser().canParse(Tokens.from(":")));
-        assertFalse(new Invocation.Parser().canParse(Tokens.from(".")));
-        assertFalse(new Invocation.Parser().canParse(Tokens.from("{")));
-        assertFalse(new Invocation.Parser().canParse(Tokens.from("}")));
-        assertFalse(new Invocation.Parser().canParse(Tokens.from("^")));
+        Invocation.Parser parser = new Invocation.Parser();
+        assertFalse(parser.canParse(Tokens.from("\"constant\"")));
+        assertFalse(parser.canParse(Tokens.from("?")));
+        assertFalse(parser.canParse(Tokens.from(":")));
+        assertFalse(parser.canParse(Tokens.from(".")));
+        assertFalse(parser.canParse(Tokens.from("{")));
+        assertFalse(parser.canParse(Tokens.from("}")));
+        assertFalse(parser.canParse(Tokens.from("^")));
+        assertFalse(parser.canParse(Tokens.from("f(^)")));
+        assertFalse(parser.canParse(Tokens.from("f(}")));
     }
 
     @Test
-    public void toString_contains_expressions() {
+    public void toString_contains_invocation_name() {
         String string = new Invocation("evars").toString();
         assertTrue(string,Strings.contains(string,"evars"));
+    }
+
+    @Test
+    public void toString_contains_arg_names() {
+        String string = new Invocation("evars","tinker","chance").toString();
+        assertTrue(string,Strings.contains(string,"tinker"));
+        assertTrue(string,Strings.contains(string,"chance"));
     }
 
 }
