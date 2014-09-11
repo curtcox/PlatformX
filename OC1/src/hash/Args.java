@@ -1,6 +1,8 @@
 package hash;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import oc1.util.Objects;
 
 /**
@@ -13,11 +15,26 @@ final class Args {
         implements IParser
     {
         public Args parse(Tokens tokens) {
-            return new Args();
+            tokens.verifyNextIs("(");
+            List<String> args = new ArrayList<String>();
+            while (!tokens.peekIs(")")) {
+                args.add(tokens.next());
+            }
+            tokens.verifyNextIs(")");
+            return new Args(args.toArray(new String[0]));
         }    
 
         public boolean canParse(Tokens tokens) {
-            return false;
+            Tokens copy = tokens.copy();
+            if (!copy.nextIs("(")) { return false; }
+            while (!copy.peekIs(")")) {
+                if (!copy.hasNext()) { return false;}
+                String token = copy.next();
+                if (!Identifier.isValid(token)) {
+                    return false;
+                }
+            }
+            return copy.nextIs(")");
         }
     }
     

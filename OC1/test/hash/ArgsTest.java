@@ -40,7 +40,7 @@ public class ArgsTest {
 
     @Test
     public void can_parse_empty_params() {
-        assertTrue(new Args.Parser().canParse(Tokens.from("")));
+        assertTrue(new Args.Parser().canParse(Tokens.from("()")));
     }
 
     @Test
