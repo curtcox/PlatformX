@@ -16,6 +16,10 @@ public final class Method {
         
         public Method parse(Tokens tokens) {
             String name = tokens.next();
+            if (tokens.peekIs("(")) {
+                tokens.next();
+                tokens.next();
+            }
             verify(tokens.next(),"{");
             if (tokens.hasNext() && tokens.peek().equals("}")) {
                 return new Method(name);
@@ -28,6 +32,10 @@ public final class Method {
         public boolean canParse(Tokens tokens) {
             Tokens copy = tokens.copy();
             if (!copy.hasNext() || !Identifier.isValid(copy.next())) {return false;}
+            if (copy.peekIs("(")) {
+                copy.next();
+                copy.next();
+            }
             if (!copy.nextIs("{"))                                   {return false;}
             if (copy.peekIs("}"))                                    {return true;}
             if (!expressions.canParse(copy))                         {return false;}
