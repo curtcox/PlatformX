@@ -21,6 +21,11 @@ public class ExpressionTest {
     }
 
     @Test
+    public void canParse_ternary() {
+        assertTrue(canParse("(should)? do : it"));
+    }
+
+    @Test
     public void canParse_return() {
         assertTrue(canParse("^doit"));
     }
@@ -44,6 +49,11 @@ public class ExpressionTest {
     @Test
     public void parse_returns_correct_value_for_return_invocation() {
         parse(new Return(new Invocation("doit")),"^doit");
+    }
+
+    @Test
+    public void parse_returns_correct_value_for_ternary() {
+        parse(new Ternary(new Invocation("a"),new Invocation("b"),new Invocation("c")),"(a) ? b : c");
     }
     
     private void parse(Expression expression,String string) {

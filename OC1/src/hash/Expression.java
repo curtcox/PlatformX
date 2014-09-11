@@ -10,7 +10,11 @@ public class Expression {
         extends CompositeParser
     {
         Parser() {
-            super(new Constant.Parser(),new Invocation.Parser(),new Return.Parser());
+            super(
+                new Constant.Parser(),
+                new Invocation.Parser(),
+                new Ternary.Parser(),
+                new Return.Parser());
         }
         
         @Override

@@ -16,6 +16,10 @@ public final class Invocation
             if (!Identifier.isValid(value)) {
                 throw new IllegalArgumentException();
             }
+            if (tokens.peekIs("(")) {
+                tokens.next();
+                tokens.next();
+            }
             return new Invocation(value);
         }    
 
@@ -28,7 +32,7 @@ public final class Invocation
     
     final String value;
     
-    Invocation(String value) {
+    Invocation(String value,String...params) {
         this.value = value;
     }
     

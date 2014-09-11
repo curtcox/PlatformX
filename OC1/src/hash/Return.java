@@ -23,7 +23,7 @@ public final class Return
 
         public boolean canParse(Tokens tokens) {
             Tokens copy = tokens.copy();
-            return copy.hasNext() && copy.next().equals("^");
+            return copy.nextIs("^");
         }
     }
     

@@ -34,11 +34,18 @@ public class ParserTest {
     }
     
     @Test
-    public void parse_hash_method_definition_with_arguments() {
-//buttonTo(text,image,leadingTo) {
-//    ^ textAndImageLeadingTo(text,image,leadingTo);
-//}
-        fail();
+    public void parse_hash_method_definition_and_invocation_with_arguments() {
+        Hash hash = Hash(Method(
+            "buttonTo",Args("text","image","leadingTo"),
+            Return(Invocation("textAndImageLeadingTo","text","image","leadinTo"))
+        ));
+        parse(
+            lines(
+                "buttonTo(text,image,leadingTo) {",
+                    "^ textAndImageLeadingTo(text,image,leadingTo)",
+                "}"),
+            hash
+        );
     }
     
     @Test
@@ -56,6 +63,10 @@ public class ParserTest {
     Method Method(String name,Expression...expressions) {
         return new Method(name,expressions);
     }
+
+    Method Method(String name,Args params, Expression...expressions) {
+        return new Method(name,params,expressions);
+    }
     
     Return Return(Expression expression) {
         return new Return(expression);
@@ -65,8 +76,12 @@ public class ParserTest {
         return new Ternary(condition,pass,fail);
     }
 
-    Invocation Invocation(String text) {
-        return new Invocation(text);
+    Invocation Invocation(String text, String...params) {
+        return new Invocation(text,params);
+    }
+
+    Args Args(String...params) {
+        return new Args(params);
     }
 
     Constant Constant(String text) {

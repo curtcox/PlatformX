@@ -34,16 +34,26 @@ public class InvocationTest {
     @Test
     public void parse_returns_correct_value() {
         parse(new Invocation("foo"),"foo");
+        parse(new Invocation("foo"),"foo()");
+    }
+
+    @Test
+    public void parse_consumes_trailing_parens() {
+        Tokens tokens = parse(new Invocation("foo"),"foo()");
+        assertFalse(tokens.hasNext());
     }
     
-    private void parse(Invocation invocation,String string) {
-        assertEquals(invocation,new Invocation.Parser().parse(Tokens.from(string)));
+    private Tokens parse(Invocation invocation,String string) {
+        Tokens tokens = Tokens.from(string);
+        assertEquals(invocation,new Invocation.Parser().parse(tokens));
+        return tokens;
     }
     
     @Test
     public void can_parse_invocations() {
         assertTrue(new Invocation.Parser().canParse(Tokens.from("invocation")));
         assertTrue(new Invocation.Parser().canParse(Tokens.from("doit")));
+        assertTrue(new Invocation.Parser().canParse(Tokens.from("stuff()")));
     }
 
     @Test

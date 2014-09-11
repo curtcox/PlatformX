@@ -57,6 +57,25 @@ public class TokensTest {
     }
 
     @Test
+    public void peekIs_returns_false_if_there_are_no_more_tokens() {
+        Tokens tokens = Tokens.from("");
+        assertFalse(tokens.peekIs(""));
+    }
+
+    @Test
+    public void peekIs_returns_false_if_string_doesnt_matches_next_token() {
+        Tokens tokens = Tokens.from("one");
+        assertFalse(tokens.peekIs("thing"));
+    }
+
+    @Test
+    public void peekIs_doesn_not_consume_token() {
+        Tokens tokens = Tokens.from("one");
+        tokens.peekIs("one");
+        assertTrue(tokens.hasNext());
+    }
+
+    @Test
     public void copy_produces_equivalent_tokens() {
         Tokens tokens = Tokens.from("one");
         Tokens copy = tokens.copy();

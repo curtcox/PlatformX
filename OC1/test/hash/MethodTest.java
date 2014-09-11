@@ -34,9 +34,15 @@ public class MethodTest {
         assertFalse(a.equals(b));
         assertFalse(b.equals(a));
     }
+    
     @Test
     public void canParse_empty_method() {
         assertTrue(canParse("x{}"));
+    }
+
+    @Test
+    public void canParse_method_with_empty_params() {
+        assertTrue(canParse("x(){}"));
     }
 
     @Test
@@ -52,6 +58,11 @@ public class MethodTest {
     @Test
     public void parse_returns_correct_value_for_empty_method() {
         parse(new Method("x"),"x{}");
+    }
+
+    @Test
+    public void parse_returns_correct_value_for_method_with_empty_params() {
+        parse(new Method("x"),"x(){}");
     }
 
     @Test
