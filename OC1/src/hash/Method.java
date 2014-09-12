@@ -17,10 +17,7 @@ public final class Method {
         
         public Method parse(Tokens tokens) {
             String name = tokens.next();
-            Args args = new Args();
-            if (argsParser.canParse(tokens)) {
-                args = argsParser.parse(tokens);
-            }
+            Args args = parseArgs(tokens);
             tokens.verifyNextIs("{");
             if (tokens.hasNext() && tokens.peek().equals("}")) {
                 return new Method(name,args);
@@ -29,13 +26,19 @@ public final class Method {
             tokens.verifyNextIs("}");
             return new Method(name,args,expression);
         }    
+     
+        private Args parseArgs(Tokens tokens) {
+            if (argsParser.canParse(tokens)) {
+                return argsParser.parse(tokens);
+            } else {
+                return new Args();
+            }
+        }
         
         public boolean canParse(Tokens tokens) {
             Tokens copy = tokens.copy();
             if (!copy.hasNext() || !Identifier.isValid(copy.next())) {return false;}
-            if (argsParser.canParse(copy)) {
-                argsParser.parse(copy);
-            }
+            parseArgs(copy);
             if (!copy.nextIs("{"))                                   {return false;}
             if (copy.peekIs("}"))                                    {return true;}
             if (!expressions.canParse(copy))                         {return false;}
