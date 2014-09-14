@@ -69,7 +69,6 @@ public class ParserTest {
                 "}"),
             hash
         );
-        fail();
     }
     
     Hash Hash(Method...methods) {

@@ -50,4 +50,8 @@ public final class Tokens {
         }
     }
     
+    @Override
+    public String toString() {
+        return tokens.toString();
+    }
 }

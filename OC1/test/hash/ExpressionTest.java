@@ -21,6 +21,11 @@ public class ExpressionTest {
     }
 
     @Test
+    public void canParse_nested_invocation() {
+        assertTrue(canParse("sin(sqrt(x))"));
+    }
+
+    @Test
     public void canParse_ternary() {
         assertTrue(canParse("(should)? do : it"));
     }
@@ -59,6 +64,11 @@ public class ExpressionTest {
     @Test
     public void parse_returns_correct_value_for_return_invocation() {
         parse(new Return(new Invocation("doit")),"^doit");
+    }
+
+    @Test
+    public void parse_returns_correct_value_for_nested_invocation() {
+        parse(new Invocation("sin",new Args(new Invocation("sqrt",new Args(new Invocation("x"))))),"sin(sqrt(x))");
     }
 
     @Test

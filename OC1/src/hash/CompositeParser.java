@@ -28,7 +28,7 @@ class CompositeParser
                 return component.parse(tokens);
             }
         }
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException(tokens.toString());
     }
     
 }

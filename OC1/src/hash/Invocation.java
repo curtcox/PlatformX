@@ -19,6 +19,11 @@ public final class Invocation
             if (!Identifier.isValid(value)) {
                 throw new IllegalArgumentException();
             }
+            List<Expression> args = parseArgs(tokens);
+            return new Invocation(value,new Args(args.toArray(new Expression[0])));
+        }    
+
+        List<Expression> parseArgs(Tokens tokens) {
             List<Expression> args = new ArrayList<Expression>();
             if (tokens.peekIs("(")) {
                 tokens.next();
@@ -28,16 +33,21 @@ public final class Invocation
                 }
                 tokens.next();
             }
-            return new Invocation(value,new Args(args.toArray(new Expression[0])));
-        }    
-
+            return args;
+        }
+        
         public boolean canParse(Tokens tokens) {
             Tokens copy = tokens.copy();
             if (!copy.hasNext() || !Identifier.isValid(copy.next())) { return false; }
             if (!copy.nextIs("("))                                   { return true; }
+            Expression.Parser expressions = new Expression.Parser();
+            Return.Parser returns = new Return.Parser();
             while (!copy.peekIs(")")) {
-                String token = copy.next();
-                if (!Identifier.isValid(token))                      { return false; }
+                if (returns.canParse(copy))                          { return false;}
+                if (!expressions.canParse(copy))                     { return false; }
+                else {
+                    expressions.parse(copy);
+                }
             }
             return copy.nextIs(")");
         }

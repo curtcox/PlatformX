@@ -1,5 +1,6 @@
 package hash;
 
+import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -95,6 +96,11 @@ public class TokensTest {
         assertTrue(tokens.hasNext());
         assertEquals("one",tokens.next());
         assertFalse(tokens.hasNext());
+    }
+
+    @Test
+    public void toString_contains_string() {
+        assertTrue(Strings.contains(Tokens.from("nuts").toString(),"nuts"));
     }
 
 }
