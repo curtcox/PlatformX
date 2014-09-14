@@ -116,8 +116,8 @@ public class ParserTest {
         return new ArgNames(params);
     }
 
-    Constant Constant(String text) {
-        return new Constant(text);
+    StringConstant Constant(String text) {
+        return new StringConstant(text);
     }
 
     NumericConstant NumericConstant(long value) {

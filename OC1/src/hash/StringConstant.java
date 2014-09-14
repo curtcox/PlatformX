@@ -4,19 +4,19 @@ package hash;
  *
  * @author Curt
  */
-public final class Constant 
+public final class StringConstant 
     extends Expression
 {
 
     static final class Parser 
         implements IParser
     {
-        public Constant parse(Tokens tokens) {
+        public StringConstant parse(Tokens tokens) {
             String value = tokens.next();
             if (!value.startsWith("\"") || !value.endsWith("\"")) {
                 throw new IllegalArgumentException();
             }
-            return new Constant(value.substring(1,value.length()-1));
+            return new StringConstant(value.substring(1,value.length()-1));
         }    
 
         public boolean canParse(Tokens tokens) {
@@ -31,7 +31,7 @@ public final class Constant
     
     final String value;
     
-    Constant(String value) {
+    StringConstant(String value) {
         this.value = value;
     }
     
@@ -42,7 +42,7 @@ public final class Constant
     
     @Override
     public boolean equals(Object o) {
-        Constant that = (Constant) o;
+        StringConstant that = (StringConstant) o;
         return value.equals(that.value);
     }
     

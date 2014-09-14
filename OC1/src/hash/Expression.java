@@ -11,7 +11,7 @@ public class Expression {
     {
         Parser() {
             super(
-                new Constant.Parser(),
+                new StringConstant.Parser(),
                 new Invocation.Parser(),
                 new Ternary.Parser(),
                 new Return.Parser());

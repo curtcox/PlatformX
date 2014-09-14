@@ -12,12 +12,12 @@ public class ReturnTest {
     
     @Test
     public void equals_returns_true_for_returns_with_the_same_values() {
-        assertEquals(new Return(new Constant("")),new Return(new Constant("")));
+        assertEquals(new Return(new StringConstant("")),new Return(new StringConstant("")));
     }
 
     @Test
     public void equals_returns_false_for_returns_with_different_values() {
-        assertNotEquals(new Return(new Constant("a")),new Return(new Constant("b")));
+        assertNotEquals(new Return(new StringConstant("a")),new Return(new StringConstant("b")));
     }
 
     private void assertEquals(Return a, Return b) {
@@ -33,8 +33,8 @@ public class ReturnTest {
     
     @Test
     public void parse_returns_correct_value_for_constants() {
-        parse(new Return(new Constant("")),"^ \"\"");
-        parse(new Return(new Constant("foo")),"^ \"foo\"");
+        parse(new Return(new StringConstant("")),"^ \"\"");
+        parse(new Return(new StringConstant("foo")),"^ \"foo\"");
     }
 
     @Test
@@ -64,12 +64,12 @@ public class ReturnTest {
 
     @Test
     public void toString_contains_return_character() {
-        assertTrue(Strings.contains(new Return(new Constant("")).toString(),"^"));
+        assertTrue(Strings.contains(new Return(new StringConstant("")).toString(),"^"));
     }
 
     @Test
     public void toString_contains_expression() {
-        assertTrue(Strings.contains(new Return(new Constant("nuts")).toString(),"nuts"));
+        assertTrue(Strings.contains(new Return(new StringConstant("nuts")).toString(),"nuts"));
     }
 
 }

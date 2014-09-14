@@ -13,14 +13,14 @@ public class TernaryTest {
     
     @Test
     public void equals_returns_true_for_methods_with_the_same_values() {
-        assertEquals(new Ternary(new Constant("a"),new Constant("b"),new Constant("c")),
-                     new Ternary(new Constant("a"),new Constant("b"),new Constant("c")));
+        assertEquals(new Ternary(new StringConstant("a"),new StringConstant("b"),new StringConstant("c")),
+                     new Ternary(new StringConstant("a"),new StringConstant("b"),new StringConstant("c")));
     }
 
     @Test
     public void equals_returns_false_for_methods_with_different_values() {
-        assertNotEquals(new Ternary(new Constant("a"),new Constant("b"),new Constant("c")),
-                        new Ternary(new Constant("a"),new Constant("b"),new Constant("d")));
+        assertNotEquals(new Ternary(new StringConstant("a"),new StringConstant("b"),new StringConstant("c")),
+                        new Ternary(new StringConstant("a"),new StringConstant("b"),new StringConstant("d")));
     }
 
     private void assertEquals(Ternary a, Ternary b) {
@@ -50,7 +50,7 @@ public class TernaryTest {
 
     @Test
     public void parse_returns_correct_value_for_constant_alternatives() {
-        parse(new Ternary(new Invocation("a"),new Constant("b"),new Constant("c")),"(a) ? \"b\" : \"c\"");
+        parse(new Ternary(new Invocation("a"),new StringConstant("b"),new StringConstant("c")),"(a) ? \"b\" : \"c\"");
     }
 
     private void parse(Ternary ternary,String string) {
@@ -63,7 +63,7 @@ public class TernaryTest {
     
     @Test
     public void toString_contains_condition() {
-        assertTrue(Strings.contains(new Ternary(new Constant("nuts"),new Constant(""),new Constant("")).toString(),"nuts"));
+        assertTrue(Strings.contains(new Ternary(new StringConstant("nuts"),new StringConstant(""),new StringConstant("")).toString(),"nuts"));
     }
 
 }

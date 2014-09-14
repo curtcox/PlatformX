@@ -37,8 +37,8 @@ public class ExpressionTest {
 
     @Test
     public void parse_returns_correct_value_for_constant() {
-        parse(new Constant(""),"\"\"");
-        parse(new Constant("foo"),"\"foo\"");
+        parse(new StringConstant(""),"\"\"");
+        parse(new StringConstant("foo"),"\"foo\"");
     }
 
     @Test

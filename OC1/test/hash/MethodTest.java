@@ -17,14 +17,14 @@ public class MethodTest {
     public void equals_returns_true_for_methods_with_the_same_values() {
         assertEquals(new Method(""),new Method(""));
         assertEquals(new Method("a"),new Method("a"));
-        assertEquals(new Method("b",new Constant("!")),new Method("b",new Constant("!")));
+        assertEquals(new Method("b",new StringConstant("!")),new Method("b",new StringConstant("!")));
         assertEquals(new Method("b",new ArgNames("a")),new Method("b",new ArgNames("a")));
     }
 
     @Test
     public void equals_returns_false_for_methods_with_different_values() {
         assertNotEquals(new Method("a"),new Method("b"));
-        assertNotEquals(new Method("b",new Constant("!")),new Method("b",new Constant("?")));
+        assertNotEquals(new Method("b",new StringConstant("!")),new Method("b",new StringConstant("?")));
         assertNotEquals(new Method("f",new ArgNames("x")),new Method("f",new ArgNames("y")));
     }
 
@@ -91,7 +91,7 @@ public class MethodTest {
 
     @Test
     public void parse_returns_correct_value_for_method_with_constant() {
-        parse(new Method("x",new Constant("word")),"x{ \"word\" }");
+        parse(new Method("x",new StringConstant("word")),"x{ \"word\" }");
     }
 
     @Test
@@ -101,7 +101,7 @@ public class MethodTest {
 
     @Test
     public void parse_returns_correct_value_for_method_with_return() {
-        parse(new Method("x",new Return(new Constant("word"))),"x{ ^ \"word\" }");
+        parse(new Method("x",new Return(new StringConstant("word"))),"x{ ^ \"word\" }");
     }
 
     private void parse(Method method,String string) {

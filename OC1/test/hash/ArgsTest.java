@@ -80,7 +80,7 @@ public class ArgsTest {
     private Args Args(String... strings) {
         List<Expression> expressions = new ArrayList<Expression>();
         for (String string : strings) {
-            expressions.add(new Constant(string));
+            expressions.add(new StringConstant(string));
         }
         return new Args(expressions.toArray(new Expression[0]));
     }

@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
  */
 public class CompositeParserTest {
     
-    CompositeParser testObject = new CompositeParser(new Constant.Parser(),new Invocation.Parser());
+    CompositeParser testObject = new CompositeParser(new StringConstant.Parser(),new Invocation.Parser());
     
     @Test
     public void canParse_returns_true_if_any_component_can_parse() {
@@ -25,7 +25,7 @@ public class CompositeParserTest {
 
     @Test
     public void parse_returns_results_from_first_parser_that_can_parse() {
-        assertEquals(new Constant("constant"),testObject.parse(Tokens.from("\"constant\"")));
+        assertEquals(new StringConstant("constant"),testObject.parse(Tokens.from("\"constant\"")));
         assertEquals(new Invocation("method",new Args()),testObject.parse(Tokens.from("method")));
     }
 
