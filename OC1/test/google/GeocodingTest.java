@@ -4,6 +4,7 @@ import fake.FakeRegistryLoader;
 import j2se.J2seNetwork;
 import oc1.app.Registry;
 import oc1.net.Network;
+import oc1.util.Strings;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,7 +33,7 @@ public class GeocodingTest {
     @Test
     public void search_for_Chicago_contains_Chicago() {
         for (GoogleLocation location : testObject.searchFor("Chicago")) {
-            if (location.address.contains("Chicago, IL, USA")) {
+            if (Strings.contains(location.address,"Chicago, IL, USA")) {
                 double delta = 0.01;
                 assertEquals(41.8781136,   location.latitude,delta);
                 assertEquals(-87.6297982,  location.longitude,delta);

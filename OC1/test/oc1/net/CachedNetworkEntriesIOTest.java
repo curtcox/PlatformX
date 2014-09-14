@@ -1,9 +1,8 @@
 package oc1.net;
 
-import oc1.net.CachedNetworkEntriesIO;
-import oc1.net.NetworkCacheEntry;
 import java.net.URI;
 import java.net.URISyntaxException;
+import oc1.util.Strings;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
@@ -22,8 +21,8 @@ public class CachedNetworkEntriesIOTest {
     
         String written = testObject.writePair(key, value);
         
-        assertTrue(written.contains(key.toString()));
-        assertTrue(written.contains(value.toString()));
+        assertTrue(Strings.contains(written, key.toString()));
+        assertTrue(Strings.contains(written,value.toString()));
     }
 
     @Test

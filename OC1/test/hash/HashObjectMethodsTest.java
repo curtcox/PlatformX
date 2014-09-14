@@ -8,7 +8,7 @@ import static org.junit.Assert.*;
  *
  * @author Curt
  */
-public class HashTest {
+public class HashObjectMethodsTest {
     
     @Test
     public void equals_returns_true_for_hashes_with_the_same_methods() {

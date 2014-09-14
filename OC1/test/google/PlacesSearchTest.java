@@ -4,6 +4,7 @@ import fake.FakeRegistryLoader;
 import j2se.J2seNetwork;
 import oc1.app.Registry;
 import oc1.net.Network;
+import oc1.util.Strings;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,7 +33,7 @@ public class PlacesSearchTest {
     @Test
     public void search_nearby_38_6269_neg_90_12697_contains_arch() {
         for (Place place : testObject.nearbySearch(38.6269d, -90.18697d, 100,all)) {
-            if (place.name.contains("Jefferson National Expansion Memorial")) {
+            if (Strings.contains(place.name,"Jefferson National Expansion Memorial")) {
                 assertEquals("ChIJWwMk5eSy2IcR_VqVShp8iW0",place.id);
                 assertEquals("St Louis",place.vicinity);
                 return;
@@ -44,7 +45,7 @@ public class PlacesSearchTest {
 
     Place getArchUsingNearbySearch() {
         for (Place place : testObject.nearbySearch(38.6269d, -90.18697d, 100,all)) {
-            if (place.name.contains("Jefferson National Expansion Memorial")) {
+            if (Strings.contains(place.name,"Jefferson National Expansion Memorial")) {
                 return place;
             }
         }

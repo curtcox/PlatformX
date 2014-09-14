@@ -27,9 +27,13 @@ public final class Hash {
         return 0;
     }
     
-    
     @Override
     public String toString() {
         return methods.toString();
     } 
+
+    Object invoke(String method,Context context,Object... args) {
+        return null;
+    }
+
 }
