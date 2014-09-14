@@ -13,10 +13,10 @@ public final class NumericConstant
     {
         public NumericConstant parse(Tokens tokens) {
             String value = tokens.next();
-            if (!value.startsWith("\"") || !value.endsWith("\"")) {
+            if (!Number.isValid(value)) {
                 throw new IllegalArgumentException();
             }
-            String string = value.substring(1,value.length()-1);
+            String string = value.substring(0,value.length());
             Long number = Long.parseLong(string);
             return new NumericConstant(number);
         }    
@@ -26,8 +26,7 @@ public final class NumericConstant
             if (!copy.hasNext()) {
                 return false;
             }
-            String token = copy.next();
-            return token.startsWith("\"") && token.endsWith("\"");
+            return Number.isValid(copy.next());
         }
     }
     

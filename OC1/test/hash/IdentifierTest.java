@@ -16,4 +16,13 @@ public class IdentifierTest {
         }
     }
     
+    @Test
+    public void valid() {
+        assertTrue(Identifier.isValid("a_with_underscores"));
+    }
+
+    @Test
+    public void invalid() {
+        assertFalse(Identifier.isValid("a with spaces"));
+    }
 }
