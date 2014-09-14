@@ -9,7 +9,7 @@ public final class StringConstant
 {
 
     static final class Parser 
-        implements IParser
+        extends AbstractParser
     {
         public StringConstant parse(Tokens tokens) {
             String value = tokens.next();
@@ -19,12 +19,11 @@ public final class StringConstant
             return new StringConstant(value.substring(1,value.length()-1));
         }    
 
-        public boolean canParse(Tokens tokens) {
-            Tokens copy = tokens.copy();
-            if (!copy.hasNext()) {
+        public boolean canParseTokens(Tokens tokens) {
+            if (!tokens.hasNext()) {
                 return false;
             }
-            String token = copy.next();
+            String token = tokens.next();
             return token.startsWith("\"") && token.endsWith("\"");
         }
     }

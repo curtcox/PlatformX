@@ -9,7 +9,7 @@ public final class NumericConstant
 {
 
     static final class Parser 
-        implements IParser
+        extends AbstractParser
     {
         public NumericConstant parse(Tokens tokens) {
             String value = tokens.next();
@@ -21,12 +21,11 @@ public final class NumericConstant
             return new NumericConstant(number);
         }    
 
-        public boolean canParse(Tokens tokens) {
-            Tokens copy = tokens.copy();
-            if (!copy.hasNext()) {
+        public boolean canParseTokens(Tokens tokens) {
+            if (!tokens.hasNext()) {
                 return false;
             }
-            return Number.isValid(copy.next());
+            return Number.isValid(tokens.next());
         }
     }
     

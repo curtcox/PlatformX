@@ -9,7 +9,7 @@ public final class Ternary
 {
 
     static final class Parser
-        implements IParser
+        extends AbstractParser
     {
         
         public Ternary parse(Tokens tokens) {
@@ -24,18 +24,17 @@ public final class Ternary
             return new Ternary(condition,pass,fail);
         }    
 
-        public boolean canParse(Tokens tokens) {
-            Tokens copy = tokens.copy();
-            if (!copy.nextIs("("))           { return false; }
+        public boolean canParseTokens(Tokens tokens) {
+            if (!tokens.nextIs("("))           { return false; }
             Expression.Parser expressions = new Expression.Parser();
-            if (!expressions.canParse(copy)) { return false; }
-            expressions.parse(copy);
-            if (!copy.nextIs(")"))           { return false; }
-            if (!copy.nextIs("?"))           { return false; }
-            if (!expressions.canParse(copy)) { return false; }
-            expressions.parse(copy);
-            if (!copy.nextIs(":"))           { return false; }
-            return expressions.canParse(copy);
+            if (!expressions.canParse(tokens)) { return false; }
+            expressions.parse(tokens);
+            if (!tokens.nextIs(")"))           { return false; }
+            if (!tokens.nextIs("?"))           { return false; }
+            if (!expressions.canParse(tokens)) { return false; }
+            expressions.parse(tokens);
+            if (!tokens.nextIs(":"))           { return false; }
+            return expressions.canParse(tokens);
         }
     }
     

@@ -12,7 +12,7 @@ public final class Invocation
 {
 
     static final class Parser
-        implements IParser
+        extends AbstractParser
     {
         public Invocation parse(Tokens tokens) {
             String value = tokens.next();
@@ -36,20 +36,19 @@ public final class Invocation
             return args;
         }
         
-        public boolean canParse(Tokens tokens) {
-            Tokens copy = tokens.copy();
-            if (!copy.hasNext() || !Identifier.isValid(copy.next())) { return false; }
-            if (!copy.nextIs("("))                                   { return true; }
+        public boolean canParseTokens(Tokens tokens) {
+            if (!tokens.hasNext() || !Identifier.isValid(tokens.next())) { return false; }
+            if (!tokens.nextIs("("))                                   { return true; }
             Expression.Parser expressions = new Expression.Parser();
             Return.Parser returns = new Return.Parser();
-            while (!copy.peekIs(")")) {
-                if (returns.canParse(copy))                          { return false;}
-                if (!expressions.canParse(copy))                     { return false; }
+            while (!tokens.peekIs(")")) {
+                if (returns.canParse(tokens))                          { return false;}
+                if (!expressions.canParse(tokens))                     { return false; }
                 else {
-                    expressions.parse(copy);
+                    expressions.parse(tokens);
                 }
             }
-            return copy.nextIs(")");
+            return tokens.nextIs(")");
         }
 
     }

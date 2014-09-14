@@ -8,7 +8,7 @@ public final class Return
     extends Expression
 {
     static final class Parser
-        implements IParser
+        extends AbstractParser
     {
         public Return parse(Tokens tokens) {
             verifyReturn(tokens.next());
@@ -21,9 +21,8 @@ public final class Return
             }
         }
 
-        public boolean canParse(Tokens tokens) {
-            Tokens copy = tokens.copy();
-            return copy.nextIs("^");
+        public boolean canParseTokens(Tokens tokens) {
+            return tokens.nextIs("^");
         }
     }
     

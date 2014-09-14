@@ -12,7 +12,7 @@ import oc1.util.Objects;
 final class Args {
 
     static final class Parser 
-        implements IParser
+        extends AbstractParser
     {
         public Args parse(Tokens tokens) {
             tokens.verifyNextIs("(");
@@ -25,17 +25,16 @@ final class Args {
             return new Args(args.toArray(new Expression[0]));
         }    
 
-        public boolean canParse(Tokens tokens) {
-            Tokens copy = tokens.copy();
-            if (!copy.nextIs("(")) { return false; }
-            while (!copy.peekIs(")")) {
-                if (!copy.hasNext()) { return false;}
-                String token = copy.next();
+        public boolean canParseTokens(Tokens tokens) {
+            if (!tokens.nextIs("(")) { return false; }
+            while (!tokens.peekIs(")")) {
+                if (!tokens.hasNext()) { return false;}
+                String token = tokens.next();
                 if (!Identifier.isValid(token)) {
                     return false;
                 }
             }
-            return copy.nextIs(")");
+            return tokens.nextIs(")");
         }
     }
     

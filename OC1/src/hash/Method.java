@@ -10,7 +10,7 @@ import oc1.util.Objects;
 public final class Method {
 
     static final class Parser
-        implements IParser
+        extends AbstractParser
     {
         final ArgNames.Parser argsParser = new ArgNames.Parser();
         final Expression.Parser expressions = new Expression.Parser();
@@ -35,15 +35,14 @@ public final class Method {
             }
         }
         
-        public boolean canParse(Tokens tokens) {
-            Tokens copy = tokens.copy();
-            if (!copy.hasNext() || !Identifier.isValid(copy.next())) {return false;}
-            parseArgs(copy);
-            if (!copy.nextIs("{"))                                   {return false;}
-            if (copy.peekIs("}"))                                    {return true;}
-            if (!expressions.canParse(copy))                         {return false;}
-            expressions.parse(copy);
-            return copy.nextIs("}");
+        public boolean canParseTokens(Tokens tokens) {
+            if (!tokens.hasNext() || !Identifier.isValid(tokens.next())) {return false;}
+            parseArgs(tokens);
+            if (!tokens.nextIs("{"))                                   {return false;}
+            if (tokens.peekIs("}"))                                    {return true;}
+            if (!expressions.canParse(tokens))                         {return false;}
+            expressions.parse(tokens);
+            return tokens.nextIs("}");
         }
 
     }

@@ -5,7 +5,7 @@ package hash;
  * @author Curt
  */
 class CompositeParser
-    implements IParser
+    extends AbstractParser
 {
     final IParser[] components;
     
@@ -13,7 +13,7 @@ class CompositeParser
         this.components = components;            
     }
     
-    public boolean canParse(Tokens tokens) {
+    public boolean canParseTokens(Tokens tokens) {
         for (IParser component : components) {
             if (component.canParse(tokens)) {
                 return true;
