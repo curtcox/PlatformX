@@ -4,7 +4,9 @@ package hash;
  *
  * @author Curt
  */
-public class Expression {
+public class Expression
+    implements Invokable
+{
 
     static final class Parser
         extends CompositeParser
