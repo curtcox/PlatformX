@@ -18,14 +18,14 @@ public class MethodTest {
         assertEquals(new Method(""),new Method(""));
         assertEquals(new Method("a"),new Method("a"));
         assertEquals(new Method("b",new Constant("!")),new Method("b",new Constant("!")));
-        assertEquals(new Method("b",new Args("a")),new Method("b",new Args("a")));
+        assertEquals(new Method("b",new ArgNames("a")),new Method("b",new ArgNames("a")));
     }
 
     @Test
     public void equals_returns_false_for_methods_with_different_values() {
         assertNotEquals(new Method("a"),new Method("b"));
         assertNotEquals(new Method("b",new Constant("!")),new Method("b",new Constant("?")));
-        assertNotEquals(new Method("f",new Args("x")),new Method("f",new Args("y")));
+        assertNotEquals(new Method("f",new ArgNames("x")),new Method("f",new ArgNames("y")));
     }
 
     private void assertEquals(Method a, Method b) {
@@ -81,12 +81,12 @@ public class MethodTest {
 
     @Test
     public void parse_returns_correct_value_for_method_with_one_param() {
-        parse(new Method("f",new Args("x")),"f(x){}");
+        parse(new Method("f",new ArgNames("x")),"f(x){}");
     }
 
     @Test
     public void parse_returns_correct_value_for_method_with_two_param() {
-        parse(new Method("f",new Args("x", "y")),"f(x y){}");
+        parse(new Method("f",new ArgNames("x", "y")),"f(x y){}");
     }
 
     @Test
@@ -125,7 +125,7 @@ public class MethodTest {
 
     @Test
     public void toString_contains_args() {
-        String string = new Method("tinker",new Args("evars","chance")).toString();
+        String string = new Method("tinker",new ArgNames("evars","chance")).toString();
         assertTrue(string,Strings.contains(string,"evars"));
         assertTrue(string,Strings.contains(string,"chance"));
     }

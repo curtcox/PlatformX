@@ -1,9 +1,7 @@
 package hash;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import oc1.util.Objects;
 
 /**
  *
@@ -21,15 +19,16 @@ public final class Invocation
             if (!Identifier.isValid(value)) {
                 throw new IllegalArgumentException();
             }
-            List<String> args = new ArrayList<String>();
+            List<Expression> args = new ArrayList<Expression>();
             if (tokens.peekIs("(")) {
                 tokens.next();
+                Expression.Parser expressions = new Expression.Parser();
                 while (!tokens.peekIs(")")) {
-                    args.add(tokens.next());
+                    args.add(expressions.parse(tokens));
                 }
                 tokens.next();
             }
-            return new Invocation(value,args.toArray(new String[0]));
+            return new Invocation(value,new Args(args.toArray(new Expression[0])));
         }    
 
         public boolean canParse(Tokens tokens) {
@@ -46,11 +45,15 @@ public final class Invocation
     }
     
     final String value;
-    final String[] params;
+    final Args args;
     
-    Invocation(String value,String...params) {
+    Invocation(String value) {
+        this(value,new Args());
+    }
+
+    Invocation(String value,Args args) {
         this.value = value;
-        this.params = params;
+        this.args = args;
     }
     
     @Override
@@ -62,11 +65,11 @@ public final class Invocation
     public boolean equals(Object o) {
         Invocation that = (Invocation) o;
         return value.equals(that.value) &&
-               Objects.areEqual(params, that.params);
+               args.equals(that.args);
     }
     
     @Override
     public String toString() {
-        return value + Arrays.asList(params);
+        return value + args;
     }
 }

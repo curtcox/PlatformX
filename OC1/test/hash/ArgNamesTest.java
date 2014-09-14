@@ -1,7 +1,5 @@
 package hash;
 
-import java.util.ArrayList;
-import java.util.List;
 import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -10,36 +8,36 @@ import static org.junit.Assert.*;
  *
  * @author curt
  */
-public class ArgsTest {
+public class ArgNamesTest {
 
-    Args.Parser parser = new Args.Parser();
+    ArgNames.Parser parser = new ArgNames.Parser();
 
     @Test
     public void equals_returns_true_for_params_with_the_same_values() {
-        assertEquals(Args("a"),Args("a"));
+        assertEquals(new ArgNames("a"),new ArgNames("a"));
     }
 
     @Test
     public void equals_returns_false_for_params_with_different_values() {
-        assertNotEquals(Args("a"),Args("b"));
+        assertNotEquals(new ArgNames("a"),new ArgNames("b"));
     }
 
-    private void assertEquals(Args a, Args b) {
+    private void assertEquals(ArgNames a, ArgNames b) {
         assertTrue(a.equals(b));
         assertTrue(b.equals(a));
         assertTrue(a.hashCode()==b.hashCode());
     }
 
-    private void assertNotEquals(Args a, Args b) {
+    private void assertNotEquals(ArgNames a, ArgNames b) {
         assertFalse(a.equals(b));
         assertFalse(b.equals(a));
     }
     
     @Test
     public void parse_returns_correct_value() {
-        parse(Args(),"()");
-        parse(Args("a"),"(a)");
-        parse(Args("a","b"),"(a b)");
+        parse(new ArgNames(),"()");
+        parse(new ArgNames("a"),"(a)");
+        parse(new ArgNames("a","b"),"(a b)");
     }
 
     @Test
@@ -68,20 +66,13 @@ public class ArgsTest {
         assertFalse(parser.canParse(Tokens.from("(red")));
     }
 
-    private void parse(Args constant,String string) {
+    private void parse(ArgNames constant,String string) {
         assertEquals(constant,parser.parse(Tokens.from(string)));
     }
     
         @Test
     public void toString_contains_params() {
-        assertTrue(Strings.contains(Args("nuts").toString(),"nuts"));
+        assertTrue(Strings.contains(new ArgNames("nuts").toString(),"nuts"));
     }
-
-    private Args Args(String... strings) {
-        List<Expression> expressions = new ArrayList<Expression>();
-        for (String string : strings) {
-            expressions.add(new Constant(string));
-        }
-        return new Args(expressions.toArray(new Expression[0]));
-    }
+    
 }

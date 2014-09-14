@@ -13,13 +13,13 @@ public class InvocationTest {
     @Test
     public void equals_returns_true_for_invocations_with_the_same_values() {
         assertEquals(new Invocation(""),new Invocation(""));
-        assertEquals(new Invocation("f","x"),new Invocation("f","x"));
+        assertEquals(new Invocation("f",new Args(new Invocation("x"))),new Invocation("f",new Args(new Invocation("x"))));
     }
 
     @Test
     public void equals_returns_false_for_invocations_with_different_values() {
         assertNotEquals(new Invocation("a"),new Invocation("b"));
-        assertNotEquals(new Invocation("f","x"),new Invocation("f","y"));
+        assertNotEquals(new Invocation("f",new Args(new Invocation("x"))),new Invocation("f",new Args(new Invocation("y"))));
     }
 
     private void assertEquals(Invocation a, Invocation b) {
@@ -37,15 +37,15 @@ public class InvocationTest {
     public void parse_returns_correct_value() {
         parse(new Invocation("foo"),"foo");
         parse(new Invocation("foo"),"foo()");
-        parse(new Invocation("f","x"),"f(x)");
-        parse(new Invocation("f","x","y"),"f(x y)");
+        parse(new Invocation("f",new Args(new Invocation("x"))),"f(x)");
+        parse(new Invocation("f",new Args(new Invocation("x"),new Invocation("y"))),"f(x y)");
     }
 
     @Test
     public void parse_consumes_trailing_parens() {
         assertFalse(parse(new Invocation("foo"),"foo()").hasNext());
-        assertFalse(parse(new Invocation("f","x"),"f(x)").hasNext());
-        assertFalse(parse(new Invocation("f","x","y"),"f(x y)").hasNext());
+        assertFalse(parse(new Invocation("f",new Args(new Invocation("x"))),"f(x)").hasNext());
+        assertFalse(parse(new Invocation("f",new Args(new Invocation("x"),new Invocation("y"))),"f(x y)").hasNext());
     }
     
     private Tokens parse(Invocation invocation,String string) {
@@ -87,7 +87,7 @@ public class InvocationTest {
 
     @Test
     public void toString_contains_arg_names() {
-        String string = new Invocation("evars","tinker","chance").toString();
+        String string = new Invocation("evars",new Args(new Invocation("tinker"),new Invocation("chance"))).toString();
         assertTrue(string,Strings.contains(string,"tinker"));
         assertTrue(string,Strings.contains(string,"chance"));
     }

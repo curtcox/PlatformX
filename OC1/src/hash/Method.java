@@ -12,12 +12,12 @@ public final class Method {
     static final class Parser
         implements IParser
     {
-        final Args.Parser argsParser = new Args.Parser();
+        final ArgNames.Parser argsParser = new ArgNames.Parser();
         final Expression.Parser expressions = new Expression.Parser();
         
         public Method parse(Tokens tokens) {
             String name = tokens.next();
-            Args args = parseArgs(tokens);
+            ArgNames args = parseArgs(tokens);
             tokens.verifyNextIs("{");
             if (tokens.hasNext() && tokens.peek().equals("}")) {
                 return new Method(name,args);
@@ -27,11 +27,11 @@ public final class Method {
             return new Method(name,args,expression);
         }    
      
-        private Args parseArgs(Tokens tokens) {
+        private ArgNames parseArgs(Tokens tokens) {
             if (argsParser.canParse(tokens)) {
                 return argsParser.parse(tokens);
             } else {
-                return new Args();
+                return new ArgNames();
             }
         }
         
@@ -49,14 +49,14 @@ public final class Method {
     }
 
     final String name;
-    final Args args;
+    final ArgNames args;
     final Expression[] body;
     
     Method(String name,Expression...body) {
-        this(name,new Args(),body);
+        this(name,new ArgNames(),body);
     }
 
-    Method(String name,Args args, Expression...body) {
+    Method(String name,ArgNames args, Expression...body) {
         this.name = name;
         this.args = args;
         this.body = body;

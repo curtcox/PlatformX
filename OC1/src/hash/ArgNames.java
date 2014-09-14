@@ -9,20 +9,19 @@ import oc1.util.Objects;
  *
  * @author curt
  */
-final class Args {
+final class ArgNames {
 
     static final class Parser 
         implements IParser
     {
-        public Args parse(Tokens tokens) {
+        public ArgNames parse(Tokens tokens) {
             tokens.verifyNextIs("(");
-            List<Expression> args = new ArrayList<Expression>();
-            Expression.Parser expressions = new Expression.Parser();
+            List<String> args = new ArrayList<String>();
             while (!tokens.peekIs(")")) {
-                args.add(expressions.parse(tokens));
+                args.add(tokens.next());
             }
             tokens.verifyNextIs(")");
-            return new Args(args.toArray(new Expression[0]));
+            return new ArgNames(args.toArray(new String[0]));
         }    
 
         public boolean canParse(Tokens tokens) {
@@ -39,9 +38,9 @@ final class Args {
         }
     }
     
-    final Expression[] args;
+    final String[] args;
     
-    Args(Expression... args) {
+    ArgNames(String... args) {
         this.args = args;
     }
     
@@ -52,7 +51,7 @@ final class Args {
     
     @Override
     public boolean equals(Object o) {
-        Args that = (Args) o;
+        ArgNames that = (ArgNames) o;
         return Objects.areEqual(args, that.args);
     }
     

@@ -1,5 +1,7 @@
 package hash;
 
+import java.util.ArrayList;
+import java.util.List;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import org.junit.Test;
@@ -36,8 +38,9 @@ public class ParserTest {
     @Test
     public void parse_hash_method_definition_and_invocation_with_arguments() {
         Hash hash = Hash(Method(
-            "buttonTo",Args("text","image","leadingTo"),
-            Return(Invocation("textAndImageLeadingTo","text","image","leadingTo"))
+            "buttonTo",ArgNames("text","image","leadingTo"),
+            Return(Invocation("textAndImageLeadingTo",
+                    Args(Invocation("text"),Invocation("image"),Invocation("leadingTo"))))
         ));
         parse(
             lines(
@@ -49,10 +52,23 @@ public class ParserTest {
     }
     
     @Test
-    public void parse_hash_ivocation_with_arguments() {
-//layoutForPortraitWithSelectedProvider() {
-//    ^ Screen(Grid(2,1), newProviderContainer(), newNavigationContainer());
-//}
+    public void parse_hash_nested_ivocation_with_mixed_arguments() {
+        Hash hash = Hash(Method(
+            "layoutForPortraitWithSelectedProvider",ArgNames(),
+            Return(Invocation("Screen",
+                       Args(
+                           Invocation("Grid",Args(2,1)),
+                           Invocation("newProviderContainer"),
+                           Invocation("newNavigationContainer")) )
+                   )
+        ));
+        parse(
+            lines(
+                "layoutForPortraitWithSelectedProvider() {",
+                     "^ Screen(Grid(2,1), newProviderContainer(), newNavigationContainer())",
+                "}"),
+            hash
+        );
         fail();
     }
     
@@ -64,7 +80,7 @@ public class ParserTest {
         return new Method(name,expressions);
     }
 
-    Method Method(String name,Args params, Expression...expressions) {
+    Method Method(String name,ArgNames params, Expression...expressions) {
         return new Method(name,params,expressions);
     }
     
@@ -76,16 +92,36 @@ public class ParserTest {
         return new Ternary(condition,pass,fail);
     }
 
-    Invocation Invocation(String text, String...params) {
-        return new Invocation(text,params);
+    Invocation Invocation(String text, Args args) {
+        return new Invocation(text,args);
     }
 
-    Args Args(String...params) {
+    Invocation Invocation(String text) {
+        return new Invocation(text,new Args());
+    }
+
+    Args Args(Expression...params) {
         return new Args(params);
+    }
+
+    Args Args(long...args) {
+        List<NumericConstant> list = new ArrayList<NumericConstant>();
+        for (long arg : args) {
+            list.add(NumericConstant(arg));
+        }
+        return new Args(list.toArray(new NumericConstant[0]));
+    }
+
+    ArgNames ArgNames(String...params) {
+        return new ArgNames(params);
     }
 
     Constant Constant(String text) {
         return new Constant(text);
+    }
+
+    NumericConstant NumericConstant(long value) {
+        return new NumericConstant(value);
     }
     
     private void parse(String original,Hash expected) {
