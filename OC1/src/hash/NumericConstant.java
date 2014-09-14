@@ -44,7 +44,7 @@ public final class NumericConstant
     @Override
     public boolean equals(Object o) {
         NumericConstant that = (NumericConstant) o;
-        return value==that.value;
+        return value.equals(that.value);
     }
     
     @Override

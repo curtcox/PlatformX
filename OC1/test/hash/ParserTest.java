@@ -52,7 +52,7 @@ public class ParserTest {
     }
     
     @Test
-    public void parse_hash_nested_ivocation_with_mixed_arguments() {
+    public void parse_hash_nested_invocation_with_mixed_arguments() {
         Hash hash = Hash(Method(
             "layoutForPortraitWithSelectedProvider",ArgNames(),
             Return(Invocation("Screen",
@@ -65,7 +65,7 @@ public class ParserTest {
         parse(
             lines(
                 "layoutForPortraitWithSelectedProvider() {",
-                     "^ Screen(Grid(2,1), newProviderContainer(), newNavigationContainer())",
+                     "^ Screen(Grid(2 1) newProviderContainer() newNavigationContainer())",
                 "}"),
             hash
         );

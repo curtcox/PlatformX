@@ -24,5 +24,7 @@ public class IdentifierTest {
     @Test
     public void invalid() {
         assertFalse(Identifier.isValid("a with spaces"));
+        assertFalse(Identifier.isValid("0"));
+        assertFalse(Identifier.isValid("1"));
     }
 }

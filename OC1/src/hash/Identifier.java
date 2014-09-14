@@ -16,6 +16,9 @@ final class Identifier {
     
     private static final Set<String> reject = new HashSet(Arrays.asList(SPECIAL));
     static boolean isValid(String value) {
+        if (Number.isValid(value)) {
+            return false;
+        }
         for (int i=0; i<value.length(); i++) {
             String c = value.substring(i, i+1);
             if (reject.contains(c)) {

@@ -13,6 +13,7 @@ public class NumericConstantTest {
     @Test
     public void equals_returns_true_for_constants_with_the_same_values() {
         assertEquals(new NumericConstant(0),new NumericConstant(0));
+        assertEquals(new NumericConstant(63130),new NumericConstant(63130));
     }
 
     @Test
@@ -35,6 +36,7 @@ public class NumericConstantTest {
     public void parse_returns_correct_value() {
         parse(new NumericConstant(7),"7");
         parse(new NumericConstant(42),"42");
+        parse(new NumericConstant(63130),"63130");
     }
 
     @Test

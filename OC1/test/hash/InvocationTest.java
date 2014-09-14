@@ -69,6 +69,7 @@ public class InvocationTest {
     public void can_not_parse_non_invocations() {
         Invocation.Parser parser = new Invocation.Parser();
         assertFalse(parser.canParse(Tokens.from("\"constant\"")));
+        assertFalse(parser.canParse(Tokens.from("0")));
         assertFalse(parser.canParse(Tokens.from("?")));
         assertFalse(parser.canParse(Tokens.from(":")));
         assertFalse(parser.canParse(Tokens.from(".")));

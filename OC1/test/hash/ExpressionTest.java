@@ -26,6 +26,11 @@ public class ExpressionTest {
     }
 
     @Test
+    public void canParse_number() {
+        assertTrue(canParse("42"));
+    }
+
+    @Test
     public void canParse_return() {
         assertTrue(canParse("^doit"));
     }
@@ -36,9 +41,14 @@ public class ExpressionTest {
     }
 
     @Test
-    public void parse_returns_correct_value_for_constant() {
+    public void parse_returns_correct_value_for_string_constant() {
         parse(new StringConstant(""),"\"\"");
         parse(new StringConstant("foo"),"\"foo\"");
+    }
+
+    @Test
+    public void parse_returns_correct_value_for_numeric_constant() {
+        parse(new NumericConstant(63130),"63130");
     }
 
     @Test
