@@ -48,6 +48,10 @@ public final class Ternary
         this.fail = fail;
     }
     
+    public Object invokeIn(Context context) {
+        return null;
+    }
+
     @Override
     public int hashCode() {
         return condition.hashCode();

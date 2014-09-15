@@ -32,6 +32,10 @@ public final class Return
         this.expression = expression;
     }
     
+    public Object invokeIn(Context context) {
+        return null;
+    }
+
     @Override
     public int hashCode() {
         return expression.hashCode();

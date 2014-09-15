@@ -65,6 +65,10 @@ public final class Invocation
         this.args = args;
     }
     
+    public Object invokeIn(Context context) {
+        return null;
+    }
+
     @Override
     public int hashCode() {
         return value.hashCode();

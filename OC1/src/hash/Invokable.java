@@ -6,4 +6,5 @@ package hash;
  */
 public interface Invokable {
     
+    Object invokeIn(Context context);
 }

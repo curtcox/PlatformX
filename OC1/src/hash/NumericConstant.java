@@ -35,6 +35,10 @@ public final class NumericConstant
         this.value = value;
     }
     
+    public Object invokeIn(Context context) {
+        return null;
+    }
+
     @Override
     public int hashCode() {
         return value.hashCode();

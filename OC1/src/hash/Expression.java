@@ -4,7 +4,7 @@ package hash;
  *
  * @author Curt
  */
-public class Expression
+public abstract class Expression
     implements Invokable
 {
 

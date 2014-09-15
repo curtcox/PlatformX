@@ -4,7 +4,7 @@ package hash;
  *
  * @author Curt
  */
-final class Context {
+public final class Context {
 
     public Context(Invokable...invokables) {
         

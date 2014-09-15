@@ -33,7 +33,7 @@ public class HashInvokerTest {
         Hash hash = hash(
             "button(text image to) {^ textAndImageLeadingTo(text image to) }"
         );
-        Invokable invokable = new SimpleInvokable("textAndImageLeadingTo") {
+        Invokable invokable = new SimpleInvokable("textAndImageLeadingTo","text","image","to") {
             public Object invoke(Object[] args) {
                 return "button(" + args[0] + ",img:" + args[1] + "," + args[2] + ")";
             }
@@ -49,7 +49,7 @@ public class HashInvokerTest {
             "provider   {^ \"Provider!\"}",
             "navigation {^ \"NAV\"}"
         );
-        Invokable screen = new SimpleInvokable("screen") {
+        Invokable screen = new SimpleInvokable("screen", "grid") {
             public Object invoke(Object[] args) {
                 return "screen(" + args[0] + " " + args[1] + " " + args[2] + ")";
             }
