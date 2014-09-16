@@ -49,7 +49,9 @@ public final class Ternary
     }
     
     public Object invokeIn(Context context) {
-        return null;
+        return (Boolean) condition.invokeIn(context)
+               ? pass.invokeIn(context) 
+               : fail.invokeIn(context);
     }
 
     @Override

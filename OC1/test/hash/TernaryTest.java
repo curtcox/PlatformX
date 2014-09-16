@@ -1,7 +1,8 @@
 package hash;
 
+import java.util.HashMap;
+import java.util.Map;
 import oc1.util.Strings;
-import org.junit.Assert;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -11,10 +12,12 @@ import static org.junit.Assert.*;
  */
 public class TernaryTest {
     
+    Ternary.Parser parser =  new Ternary.Parser();
+    
     @Test
     public void equals_returns_true_for_methods_with_the_same_values() {
-        assertEquals(new Ternary(new StringConstant("a"),new StringConstant("b"),new StringConstant("c")),
-                     new Ternary(new StringConstant("a"),new StringConstant("b"),new StringConstant("c")));
+        assertAreEqual(new Ternary(new StringConstant("a"),new StringConstant("b"),new StringConstant("c")),
+                       new Ternary(new StringConstant("a"),new StringConstant("b"),new StringConstant("c")));
     }
 
     @Test
@@ -23,10 +26,10 @@ public class TernaryTest {
                         new Ternary(new StringConstant("a"),new StringConstant("b"),new StringConstant("d")));
     }
 
-    private void assertEquals(Ternary a, Ternary b) {
-        Assert.assertEquals(a,b);
-        Assert.assertEquals(b,a);
-        assertTrue(a.hashCode()==b.hashCode());
+    private void assertAreEqual(Ternary a, Ternary b) {
+        assertEquals(a,b);
+        assertEquals(b,a);
+        assertEquals(a.hashCode(),b.hashCode());
     }
 
     private void assertNotEquals(Ternary a, Ternary b) {
@@ -54,11 +57,11 @@ public class TernaryTest {
     }
 
     private void parse(Ternary ternary,String string) {
-        assertEquals(ternary,new Ternary.Parser().parse(Tokens.from(string)));
+        assertAreEqual(ternary,parser.parse(Tokens.from(string)));
     }
 
     private boolean canParse(String string) {
-        return new Ternary.Parser().canParse(Tokens.from(string));
+        return parser.canParse(Tokens.from(string));
     }
     
     @Test
@@ -66,4 +69,28 @@ public class TernaryTest {
         assertTrue(Strings.contains(new Ternary(new StringConstant("nuts"),new StringConstant(""),new StringConstant("")).toString(),"nuts"));
     }
 
+    @Test
+    public void invokeIn_returns_pass_constant() {
+        Ternary ternary = parser.parse(Tokens.from("(if) ? 7 : 9"));
+        Object value = ternary.invokeIn(Context(true));
+        assertEquals(value,7L);
+    }
+
+    @Test
+    public void invokeIn_returns_fail_constant() {
+        Ternary ternary = parser.parse(Tokens.from("(if) ? 7 : 9"));
+        Object value = ternary.invokeIn(Context(false));
+        assertEquals(value,9L);
+    }
+
+    private Context Context(final boolean condition) {
+        Map<String,Invokable> map = new HashMap<String,Invokable>();
+        SimpleInvokable invokable = new SimpleInvokable("if") {
+            public Object invoke(Object[] args) {
+                return condition;
+            }
+        };
+        map.put("if", invokable);
+        return new Context(map);
+    }
 }

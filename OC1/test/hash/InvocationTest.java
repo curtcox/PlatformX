@@ -1,5 +1,7 @@
 package hash;
 
+import java.util.HashMap;
+import java.util.Map;
 import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -14,8 +16,8 @@ public class InvocationTest {
     
     @Test
     public void equals_returns_true_for_invocations_with_the_same_values() {
-        assertEquals(new Invocation(""),new Invocation(""));
-        assertEquals(new Invocation("f",new Args(new Invocation("x"))),new Invocation("f",new Args(new Invocation("x"))));
+        assertAreEqual(new Invocation(""),new Invocation(""));
+        assertAreEqual(new Invocation("f",new Args(new Invocation("x"))),new Invocation("f",new Args(new Invocation("x"))));
     }
 
     @Test
@@ -24,10 +26,10 @@ public class InvocationTest {
         assertNotEquals(new Invocation("f",new Args(new Invocation("x"))),new Invocation("f",new Args(new Invocation("y"))));
     }
 
-    private void assertEquals(Invocation a, Invocation b) {
-        assertTrue(a.equals(b));
-        assertTrue(b.equals(a));
-        assertTrue(a.hashCode()==b.hashCode());
+    private void assertAreEqual(Invocation a, Invocation b) {
+        assertEquals(a,b);
+        assertEquals(b,a);
+        assertEquals(a.hashCode(),b.hashCode());
     }
 
     private void assertNotEquals(Invocation a, Invocation b) {
@@ -53,7 +55,7 @@ public class InvocationTest {
     
     private Tokens parse(Invocation invocation,String string) {
         Tokens tokens = Tokens.from(string);
-        assertEquals(invocation,new Invocation.Parser().parse(tokens));
+        assertAreEqual(invocation,new Invocation.Parser().parse(tokens));
         return tokens;
     }
     
@@ -111,4 +113,19 @@ public class InvocationTest {
         assertTrue(string,Strings.contains(string,"chance"));
     }
 
+    @Test
+    public void invokeIn_invokes_invokable_from_context() {
+        Invocation invocation = new Invocation("invokable");
+        Object value = invocation.invokeIn(Context(42L));
+        assertEquals(value,42L);
+    }
+
+    private Context Context(final Object value) {
+        SimpleInvokable invokable = new SimpleInvokable("invokable") {
+            public Object invoke(Object[] args) {
+                return value;
+            }
+        };
+        return SimpleInvokable.newContext(invokable);
+    }
 }
