@@ -10,9 +10,11 @@ import static org.junit.Assert.*;
  */
 public class StringConstantTest {
     
+    StringConstant.Parser parser = new StringConstant.Parser();
+    
     @Test
     public void equals_returns_true_for_constants_with_the_same_values() {
-        assertEquals(new StringConstant(""),new StringConstant(""));
+        assertAreEqual(new StringConstant(""),new StringConstant(""));
     }
 
     @Test
@@ -20,9 +22,9 @@ public class StringConstantTest {
         assertNotEquals(new StringConstant("a"),new StringConstant("b"));
     }
 
-    private void assertEquals(StringConstant a, StringConstant b) {
-        assertTrue(a.equals(b));
-        assertTrue(b.equals(a));
+    private void assertAreEqual(StringConstant a, StringConstant b) {
+        assertEquals(a,b);
+        assertEquals(b,a);
         assertTrue(a.hashCode()==b.hashCode());
     }
 
@@ -39,20 +41,20 @@ public class StringConstantTest {
 
     @Test
     public void can_parse_constants() {
-        assertTrue(new StringConstant.Parser().canParse(Tokens.from("\"\"")));
-        assertTrue(new StringConstant.Parser().canParse(Tokens.from("\"red\"")));
+        assertTrue(parser.canParse(Tokens.from("\"\"")));
+        assertTrue(parser.canParse(Tokens.from("\"red\"")));
     }
 
     @Test
     public void can_not_parse_non_constants() {
-        assertFalse(new StringConstant.Parser().canParse(Tokens.from("red")));
-        assertFalse(new StringConstant.Parser().canParse(Tokens.from("?")));
-        assertFalse(new StringConstant.Parser().canParse(Tokens.from("}")));
-        assertFalse(new StringConstant.Parser().canParse(Tokens.from("{")));
+        assertFalse(parser.canParse(Tokens.from("red")));
+        assertFalse(parser.canParse(Tokens.from("?")));
+        assertFalse(parser.canParse(Tokens.from("}")));
+        assertFalse(parser.canParse(Tokens.from("{")));
     }
     
     private void parse(StringConstant constant,String string) {
-        assertEquals(constant,new StringConstant.Parser().parse(Tokens.from(string)));
+        assertAreEqual(constant,parser.parse(Tokens.from(string)));
     }
     
     @Test
@@ -60,4 +62,9 @@ public class StringConstantTest {
         assertTrue(Strings.contains(new StringConstant("nuts").toString(),"nuts"));
     }
 
+    @Test
+    public void invokeIn_returns_constant_value() {
+        assertEquals("foo",new StringConstant("foo").invokeIn(null));
+        assertEquals("bar",new StringConstant("bar").invokeIn(null));
+    }
 }

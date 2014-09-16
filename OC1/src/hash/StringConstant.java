@@ -35,7 +35,7 @@ public final class StringConstant
     }
     
     public Object invokeIn(Context context) {
-        return null;
+        return value;
     }
 
     @Override
