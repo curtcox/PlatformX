@@ -36,7 +36,7 @@ public final class NumericConstant
     }
     
     public Object invokeIn(Context context) {
-        return null;
+        return value;
     }
 
     @Override
