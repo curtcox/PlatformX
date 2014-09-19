@@ -17,8 +17,8 @@ public class HashObjectMethodsTest {
 
     @Test
     public void equals_returns_false_for_hashes_with_different_methods() {
-        assertNotEquals(new Hash(new Method("a")),new Hash());
-        assertNotEquals(new Hash(new Method("a")),new Hash(new Method("b")));
+        assertNotEquals(new Hash(Method("a")),new Hash());
+        assertNotEquals(new Hash(Method("a")),new Hash(Method("b")));
     }
 
     private void assertEquals(Hash a, Hash b) {
@@ -34,6 +34,10 @@ public class HashObjectMethodsTest {
 
     @Test
     public void toString_contains_method_name() {
-        assertTrue(Strings.contains(new Hash(new Method("nuts")).toString(),"nuts"));
+        assertTrue(Strings.contains(new Hash(Method("nuts")).toString(),"nuts"));
+    }
+    
+    private Method Method(String name) {
+        return new Method(name,Expression.EMPTY);
     }
 }

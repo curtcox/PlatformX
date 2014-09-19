@@ -1,7 +1,5 @@
 package hash;
 
-import java.util.HashMap;
-import java.util.Map;
 import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -117,12 +115,12 @@ public class InvocationTest {
     public void invokeIn_invokes_invokable_from_context() {
         Invocation invocation = new Invocation("invokable");
         Object value = invocation.invokeIn(Context(42L));
-        assertEquals(value,42L);
+        assertEquals(42L,value);
     }
 
     private Context Context(final Object value) {
         SimpleInvokable invokable = new SimpleInvokable("invokable") {
-            public Object invoke(Object[] args) {
+            public Object invoke(Invokable[] args) {
                 return value;
             }
         };

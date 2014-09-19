@@ -12,7 +12,7 @@ public abstract class SimpleInvokable
 {
 
     static Context newContext(SimpleInvokable... invokables) {
-        Map map = new HashMap();
+        Map<String,Invokable> map = new HashMap<String,Invokable>();
         for (SimpleInvokable invokable : invokables) {
             map.put(invokable.name, invokable);
         }
@@ -28,9 +28,16 @@ public abstract class SimpleInvokable
     }
 
     public Object invokeIn(Context context) {
-        Object[] args = null;
-        return invoke(args);
+        return invoke(args(context));
+    }
+
+    private Invokable[] args(Context context) {
+        Invokable[] args = new Invokable[argNames.length];
+        for (int i=0; i<argNames.length; i++) {
+            args[i] = context.get(argNames[i]);
+        }
+        return args;
     }
     
-    public abstract Object invoke(Object[] args);
+    public abstract Object invoke(Invokable[] args);
 }

@@ -34,11 +34,11 @@ public class HashInvokerTest {
             "button(text image to) {^ textAndImageLeadingTo(text image to) }"
         );
         SimpleInvokable invokable = new SimpleInvokable("textAndImageLeadingTo","text","image","to") {
-            public Object invoke(Object[] args) {
+            public Object invoke(Invokable[] args) {
                 return "button(" + args[0] + ",img:" + args[1] + "," + args[2] + ")";
             }
         };
-        Object value = hash.invoke("button",Context(invokable),"exciting","beach","ftp:neato");
+        Object value = hash.invoke("button",Context(invokable),Const("exciting"),Const("beach"),Const("ftp:neato"));
         assertEquals("button(exciting,img:beach,ftp:neato)",value);
     }
     
@@ -50,12 +50,12 @@ public class HashInvokerTest {
             "navigation {^ \"NAV\"}"
         );
         SimpleInvokable screen = new SimpleInvokable("screen", "grid") {
-            public Object invoke(Object[] args) {
+            public Object invoke(Invokable[] args) {
                 return "screen(" + args[0] + " " + args[1] + " " + args[2] + ")";
             }
         };
         SimpleInvokable grid = new SimpleInvokable("grid") {
-            public Object invoke(Object[] args) {
+            public Object invoke(Invokable[] args) {
                 return "grid(" + args[0] + " " + args[1] + ")";
             }
         };
@@ -70,6 +70,10 @@ public class HashInvokerTest {
     
     private Context Context(SimpleInvokable... invokables) {
         return SimpleInvokable.newContext(invokables);
+    }
+
+    private StringConstant Const(String string) {
+        return new StringConstant(string);
     }
     
     private Hash parse(String original) {

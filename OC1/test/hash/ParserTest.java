@@ -74,12 +74,12 @@ public class ParserTest {
         return new Hash(methods);
     }
    
-    Method Method(String name,Expression...expressions) {
-        return new Method(name,expressions);
+    Method Method(String name,Expression expression) {
+        return new Method(name,expression);
     }
 
-    Method Method(String name,ArgNames params, Expression...expressions) {
-        return new Method(name,params,expressions);
+    Method Method(String name,ArgNames params, Expression expression) {
+        return new Method(name,params,expression);
     }
     
     Return Return(Expression expression) {

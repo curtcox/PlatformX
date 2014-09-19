@@ -53,7 +53,7 @@ public final class Invocation
 
     }
     
-    final String value;
+    final String name;
     final Args args;
     
     Invocation(String value) {
@@ -61,28 +61,28 @@ public final class Invocation
     }
 
     Invocation(String value,Args args) {
-        this.value = value;
+        this.name = value;
         this.args = args;
     }
     
     public Object invokeIn(Context context) {
-        return null;
+        return context.get(name).invokeIn(context);
     }
 
     @Override
     public int hashCode() {
-        return value.hashCode();
+        return name.hashCode();
     }
     
     @Override
     public boolean equals(Object o) {
         Invocation that = (Invocation) o;
-        return value.equals(that.value) &&
+        return name.equals(that.name) &&
                args.equals(that.args);
     }
     
     @Override
     public String toString() {
-        return value + args;
+        return name + args;
     }
 }

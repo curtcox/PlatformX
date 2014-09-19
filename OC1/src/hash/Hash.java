@@ -32,8 +32,19 @@ public final class Hash {
         return methods.toString();
     } 
 
-    Object invoke(String method,Context context,Object... args) {
-        return null;
+    Object invoke(String methodName,Context context,Invokable... args) {
+        Method method = getMethod(methodName);
+        Context contextWithArgs = context.withArgValues(method.args.args, args);
+        return method.invokeIn(contextWithArgs);
+    }
+
+    private Method getMethod(String name) {
+        for (Method method : methods) {
+            if (method.name.equals(name)) {
+                return method;
+            }
+        }
+        throw new IllegalArgumentException();
     }
 
 }

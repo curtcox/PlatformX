@@ -8,6 +8,12 @@ public abstract class Expression
     implements Invokable
 {
 
+    static final Expression EMPTY = new Expression() {
+        public Object invokeIn(Context context) {
+            return null;
+        }
+    };
+    
     static final class Parser
         extends CompositeParser
     {

@@ -1,5 +1,6 @@
 package hash;
 
+import java.util.HashMap;
 import oc1.util.Strings;
 import org.junit.Assert;
 import static org.junit.Assert.*;
@@ -11,21 +12,28 @@ import org.junit.Test;
  */
 public class MethodTest {
     
+    final Context[] expressionResult = new Context[1]; 
+    final Expression expression = new Expression() {
+        public Object invokeIn(Context context) {
+            expressionResult[0] = context;
+            return expressionResult;
+        }
+    };
     final Method.Parser parser = new Method.Parser();
     
     @Test
     public void equals_returns_true_for_methods_with_the_same_values() {
-        assertEquals(new Method(""),new Method(""));
-        assertEquals(new Method("a"),new Method("a"));
+        assertEquals(new Method("",Expression.EMPTY),new Method("",Expression.EMPTY));
+        assertEquals(new Method("a",Expression.EMPTY),new Method("a",Expression.EMPTY));
         assertEquals(new Method("b",new StringConstant("!")),new Method("b",new StringConstant("!")));
-        assertEquals(new Method("b",new ArgNames("a")),new Method("b",new ArgNames("a")));
+        assertEquals(new Method("b",new ArgNames("a"),Expression.EMPTY),new Method("b",new ArgNames("a"),Expression.EMPTY));
     }
 
     @Test
     public void equals_returns_false_for_methods_with_different_values() {
-        assertNotEquals(new Method("a"),new Method("b"));
+        assertNotEquals(new Method("a",Expression.EMPTY),new Method("b",Expression.EMPTY));
         assertNotEquals(new Method("b",new StringConstant("!")),new Method("b",new StringConstant("?")));
-        assertNotEquals(new Method("f",new ArgNames("x")),new Method("f",new ArgNames("y")));
+        assertNotEquals(new Method("f",new ArgNames("x"),Expression.EMPTY),new Method("f",new ArgNames("y"),Expression.EMPTY));
     }
 
     private void assertEquals(Method a, Method b) {
@@ -71,22 +79,22 @@ public class MethodTest {
     
     @Test
     public void parse_returns_correct_value_for_empty_method() {
-        parse(new Method("x"),"x{}");
+        parse(new Method("x",Expression.EMPTY),"x{}");
     }
 
     @Test
     public void parse_returns_correct_value_for_method_with_empty_params() {
-        parse(new Method("x"),"x(){}");
+        parse(new Method("x",Expression.EMPTY),"x(){}");
     }
 
     @Test
     public void parse_returns_correct_value_for_method_with_one_param() {
-        parse(new Method("f",new ArgNames("x")),"f(x){}");
+        parse(new Method("f",new ArgNames("x"),Expression.EMPTY),"f(x){}");
     }
 
     @Test
     public void parse_returns_correct_value_for_method_with_two_param() {
-        parse(new Method("f",new ArgNames("x", "y")),"f(x y){}");
+        parse(new Method("f",new ArgNames("x", "y"),Expression.EMPTY),"f(x y){}");
     }
 
     @Test
@@ -114,7 +122,7 @@ public class MethodTest {
     
     @Test
     public void toString_contains_name() {
-        assertTrue(Strings.contains(new Method("nuts").toString(),"nuts"));
+        assertTrue(Strings.contains(new Method("nuts",Expression.EMPTY).toString(),"nuts"));
     }
 
     @Test
@@ -125,9 +133,19 @@ public class MethodTest {
 
     @Test
     public void toString_contains_args() {
-        String string = new Method("tinker",new ArgNames("evars","chance")).toString();
+        String string = new Method("tinker",new ArgNames("evars","chance"),Expression.EMPTY).toString();
         assertTrue(string,Strings.contains(string,"evars"));
         assertTrue(string,Strings.contains(string,"chance"));
     }
 
+    @Test
+    public void invokeIn_invokes_expression_with_context_and_returns_result() {
+        Context context = new Context(new HashMap());
+        Method method = new Method("name",expression);
+        
+        Context[] result = (Context[]) method.invokeIn(context);
+        assertSame(result,expressionResult);
+        assertSame(result[0],context);
+    }
+    
 }
