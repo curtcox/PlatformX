@@ -1,5 +1,8 @@
 package hash;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author Curt
@@ -7,8 +10,13 @@ package hash;
 public final class Parser {
 
     Hash parse(String source) {
-        Method method = new Method.Parser().parse(Tokens.from(source));
-        return new Hash(method);
+        List<Method> methods = new ArrayList<Method>();
+        Method.Parser parser = new Method.Parser();
+        Tokens tokens = Tokens.from(source);
+        while (parser.canParse(tokens)) {
+            methods.add(parser.parse(tokens));
+        }
+        return new Hash(methods.toArray(new Method[0]));
     }
     
 }

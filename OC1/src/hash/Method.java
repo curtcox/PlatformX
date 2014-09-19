@@ -15,17 +15,20 @@ public final class Method
         final Expression.Parser expressions = new Expression.Parser();
         
         public Method parse(Tokens tokens) {
-            String name = tokens.next();
-            ArgNames args = parseArgs(tokens);
+            return new Method(tokens.next(),parseArgs(tokens),parseExpression(tokens));
+        }    
+     
+        private Expression parseExpression(Tokens tokens) {
             tokens.verifyNextIs("{");
             if (tokens.hasNext() && tokens.peek().equals("}")) {
-                return new Method(name,args,Expression.EMPTY);
+                tokens.verifyNextIs("}");
+                return Expression.EMPTY;
             }
             Expression expression = expressions.parse(tokens);
             tokens.verifyNextIs("}");
-            return new Method(name,args,expression);
-        }    
-     
+            return expression;
+        }
+        
         private ArgNames parseArgs(Tokens tokens) {
             if (argsParser.canParse(tokens)) {
                 return argsParser.parse(tokens);

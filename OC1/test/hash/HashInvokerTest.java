@@ -48,7 +48,7 @@ public class HashInvokerTest {
     @Test
     public void invoke_nested_with_mixed_arguments() {
         Hash hash = hash(
-            "layout     {^ Screen( Grid(2 1) provider navigation ) }",
+            "layout     {^ screen( grid(2 1) provider navigation ) }",
             "provider   {^ \"Provider!\"}",
             "navigation {^ \"NAV\"}"
         );
