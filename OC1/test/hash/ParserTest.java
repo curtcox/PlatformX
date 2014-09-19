@@ -69,6 +69,21 @@ public class ParserTest {
             hash
         );
     }
+
+    @Test
+    public void parse_hash_with_two_methods() {
+        Hash hash = Hash(
+            Method("layout",ArgNames(),Return(Ternary(Invocation("portrait"),Invocation("layout_portrait"),Invocation("layout_landscape")))),
+            Method("layout_landscape",ArgNames(),Return(Constant("Landscape!!")))
+        );
+        parse(
+            lines(
+                "layout           { ^ (portrait) ? layout_portrait : layout_landscape }",
+                "layout_landscape { ^ \"Landscape!!\" }"
+            ),
+            hash
+        );
+    }
     
     Hash Hash(Method...methods) {
         return new Hash(methods);

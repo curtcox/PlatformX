@@ -24,7 +24,10 @@ public class HashInvokerTest {
             "layout           { ^ (portrait) ? layout_portrait : layout_landscape }",
             "layout_landscape { ^ \"Landscape!!\" }"
         );
-        Object value = hash.invoke("layout",Context());
+        SimpleInvokable invokable = new SimpleInvokable("portrait") {
+            public Object invoke(Invokable[] args) { return false; }
+        };
+        Object value = hash.invoke("layout",Context(invokable));
         assertEquals("Landscape!!",value);
     }
     
