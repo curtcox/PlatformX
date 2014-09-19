@@ -33,7 +33,7 @@ public final class Return
     }
     
     public Object invokeIn(Context context) {
-        return null;
+        return expression.invokeIn(context);
     }
 
     @Override

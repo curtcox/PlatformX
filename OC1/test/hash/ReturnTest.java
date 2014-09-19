@@ -1,5 +1,6 @@
 package hash;
 
+import java.util.HashMap;
 import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -70,6 +71,32 @@ public class ReturnTest {
     @Test
     public void toString_contains_expression() {
         assertTrue(Strings.contains(new Return(new StringConstant("nuts")).toString(),"nuts"));
+    }
+
+    @Test
+    public void invokeIn_returns_result_from_constant_expression() {
+        Context context = new Context(new HashMap());
+        String value = "You don't say.";
+        Return testObject = new Return(new StringConstant(value));
+        
+        Object result = testObject.invokeIn(context);
+        
+        assertSame(value,result);
+    }
+
+    @Test
+    public void invokeIn_invokes_expression_with_context() {
+        Context context = new Context(new HashMap());
+        Expression expression = new Expression() {
+            public Object invokeIn(Context context) {
+                return context;
+            }
+        };
+        Return testObject = new Return(expression);
+        
+        Object result = testObject.invokeIn(context);
+        
+        assertSame(context,result);
     }
 
 }
