@@ -16,7 +16,7 @@ public class ContextTest {
             return null;
         }
     };
-    Context context = SimpleInvokable.newContext(invokable);
+    Context context = SimpleInvokable.newContext(new Hash(),invokable);
     
     @Test
     public void get_returns_named_invokable_from_context() {

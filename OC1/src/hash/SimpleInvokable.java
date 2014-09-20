@@ -11,10 +11,13 @@ public abstract class SimpleInvokable
     implements Invokable
 {
 
-    static Context newContext(SimpleInvokable... invokables) {
+    static Context newContext(Hash hash,SimpleInvokable... invokables) {
         Map<String,Invokable> map = new HashMap<String,Invokable>();
         for (SimpleInvokable invokable : invokables) {
             map.put(invokable.name, invokable);
+        }
+        for (Method method : hash.methods) {
+            map.put(method.name, method);
         }
         return new Context(map);        
     }

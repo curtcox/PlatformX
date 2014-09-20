@@ -1,5 +1,6 @@
 package hash;
 
+import java.util.Arrays;
 import java.util.Map;
 
 /**
@@ -23,6 +24,19 @@ public final class Context {
     }
 
     Invokable get(String name) {
+        Invokable invokable = get0(name);
+        if (invokable==null) {
+            throw exceptionForMissing(name);
+        }
+        return invokable; 
+    }
+
+    private IllegalArgumentException exceptionForMissing(String name) {
+        return new IllegalArgumentException(
+            "No value for " + name + " in " + Arrays.asList(names) + " or " + invokables.keySet());
+    }
+    
+    private Invokable get0(String name) {
         for (int i=0; i<names.length; i++) {
             if (name.equals(names[i])) {
                 return values[i];

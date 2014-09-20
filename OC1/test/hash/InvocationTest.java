@@ -124,6 +124,6 @@ public class InvocationTest {
                 return value;
             }
         };
-        return SimpleInvokable.newContext(invokable);
+        return SimpleInvokable.newContext(new Hash(),invokable);
     }
 }
