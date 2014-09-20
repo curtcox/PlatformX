@@ -31,16 +31,8 @@ public abstract class SimpleInvokable
     }
 
     public Object invokeIn(Context context) {
-        return invoke(args(context));
+        return invoke(context.values);
     }
 
-    private Invokable[] args(Context context) {
-        Invokable[] args = new Invokable[argNames.length];
-        for (int i=0; i<argNames.length; i++) {
-            args[i] = context.get(argNames[i]);
-        }
-        return args;
-    }
-    
-    public abstract Object invoke(Invokable[] args);
+    public abstract Object invoke(Invokable[] named);
 }
