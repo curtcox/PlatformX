@@ -26,6 +26,11 @@ public class ExpressionTest {
     }
 
     @Test
+    public void canParse_nested_invocation_with_multiple_args_at_each_level() {
+        assertTrue(canParse("screen( grid(2 1) provider navigation )"));
+    }
+
+    @Test
     public void canParse_ternary() {
         assertTrue(canParse("(should)? do : it"));
     }
@@ -58,17 +63,63 @@ public class ExpressionTest {
 
     @Test
     public void parse_returns_correct_value_for_invocation() {
-        parse(new Invocation("doit"),"doit");
+        parse(Invocation("doit"),"doit");
     }
 
     @Test
     public void parse_returns_correct_value_for_return_invocation() {
-        parse(new Return(new Invocation("doit")),"^doit");
+        parse(new Return(Invocation("doit")),"^doit");
     }
 
     @Test
     public void parse_returns_correct_value_for_nested_invocation() {
-        parse(new Invocation("sin",new Args(new Invocation("sqrt",new Args(new Invocation("x"))))),"sin(sqrt(x))");
+        parse(
+            Invocation("sin",Invocation("sqrt",Invocation("x"))),
+            "sin(sqrt(x))"
+        );
+    }
+
+    @Test
+    public void parse_returns_correct_value_for_nested_invocation_with_multiple_args_at_each_level() {
+        parse(
+            Invocation("screen",
+                Invocation("grid",new NumericConstant(2),new NumericConstant(1)),
+                Invocation("provider"),
+                Invocation("navigation")
+            ),
+            "screen( grid(2 1) provider navigation )"
+        );
+    }
+    
+    @Test
+    public void invokeIn_uses_values_from_context() {
+        Hash hash = hash(
+            "provider   {^ \"Provider!\"}",
+            "navigation {^ \"NAV\"}"
+        );
+        SimpleInvokable screen = new SimpleInvokable("screen") {
+            public Object invoke(Object[] args) {
+                return "X11(" + args[0] + " " + args[1] + " " + args[2] + ")";
+            }
+        };
+        SimpleInvokable grid = new SimpleInvokable("grid") {
+            public Object invoke(Object[] args) {
+                return "XxY(" + args[0] + " " + args[1] + ")";
+            }
+        };
+
+        Invocation invocation = Invocation("screen", 
+            Invocation("grid",new NumericConstant(2),new NumericConstant(1)),
+            Invocation("provider"),
+            Invocation("navigation")
+        );
+
+        Object value = invocation.invokeIn(Context(hash,screen,grid));
+        assertEquals("X11(XxY(2 1) Provider! NAV)",value);
+    }
+    
+    private Context Context(Hash hash,SimpleInvokable... invokables) {
+        return SimpleInvokable.newContext(hash,invokables);
     }
 
     @Test
@@ -80,8 +131,27 @@ public class ExpressionTest {
         assertEquals(expression,new Expression.Parser().parse(Tokens.from(string)));
     }
 
+    private Hash hash(String...lines) {
+        return parse(lines(lines));    
+    }
+
+    private Hash parse(String original) {
+        return new Parser().parse(original);
+    }
+
+    private String lines(String...lines) {
+        StringBuilder out = new StringBuilder();
+        for (String line : lines) {
+            out.append(line + " ");
+        }
+        return out.toString();
+    }
+
     private boolean canParse(String string) {
         return new Expression.Parser().canParse(Tokens.from(string));
     }
 
+    Invocation Invocation(String name, Expression...args) {
+        return new Invocation(name, new Args(args));
+    }
 }

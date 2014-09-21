@@ -66,7 +66,8 @@ public final class Invocation
     }
     
     public Object invokeIn(Context context) {
-        return context.get(name).invokeIn(context);
+        System.out.println("invokeIn " + name + " " + args);
+        return context.get(name).invokeIn(context.withArgValues(args));
     }
 
     @Override

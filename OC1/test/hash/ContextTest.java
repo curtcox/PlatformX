@@ -1,5 +1,8 @@
 package hash;
 
+import java.util.HashMap;
+import java.util.Map;
+import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -10,9 +13,11 @@ import static org.junit.Assert.*;
 public class ContextTest {
 
     String name = "foo";
+    Expression value = new StringConstant("Galore");
+    Args args = new Args(new Expression[] {value});
     SimpleInvokable invokable = new SimpleInvokable(name) {
         @Override
-        public Object invoke(Invokable[] args) {
+        public Object invoke(Object[] args) {
             return null;
         }
     };
@@ -25,9 +30,33 @@ public class ContextTest {
 
     @Test
     public void get_returns_arg_value_before_constructor_value() {
-        Invokable value = new StringConstant("");
-        Context withArgValues = context.withArgValues(new String[] {"foo"},new Invokable[] {value});
+        Context withArgValues = context
+                .withArgValues(args)
+                .withArgNames(new ArgNames("foo"));
         assertSame(value,withArgValues.get(name));
+    }
+
+    @Test
+    public void toString_contains_arg_names() {
+        Context testObject = new Context(new HashMap())
+                .withArgValues(args)
+                .withArgNames(new ArgNames("Kitty"));
+        assertTrue(Strings.contains(testObject.toString(),"Kitty"));
+    }
+
+    @Test
+    public void toString_contains_arg_values() {
+        Context testObject = new Context(new HashMap())
+                .withArgValues(args);
+        assertTrue(Strings.contains(testObject.toString(),"Galore"));
+    }
+
+    @Test
+    public void toString_contains_invokable_names() {
+        Map<String,Invokable> map = new HashMap<String,Invokable>();
+        map.put("Plenty",value);
+        Context testObject = new Context(map);
+        assertTrue(Strings.contains(testObject.toString(),"Plenty"));
     }
 
 }

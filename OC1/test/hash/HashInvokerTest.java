@@ -14,7 +14,7 @@ public class HashInvokerTest {
     @Test
     public void invoke_method_that_returns_constant() {
         Hash hash = hash("foo { ^ \"foo\" }");
-        Object value = hash.invoke("foo",Context(hash));
+        Object value = hash.invoke("foo",ArgNames(),Args(),Context(hash));
         assertEquals("foo",value);
     }
 
@@ -25,9 +25,9 @@ public class HashInvokerTest {
             "layout_landscape { ^ \"Landscape!!\" }"
         );
         SimpleInvokable invokable = new SimpleInvokable("portrait") {
-            public Object invoke(Invokable[] args) { return false; }
+            public Object invoke(Object[] args) { return false; }
         };
-        Object value = hash.invoke("layout",Context(hash,invokable));
+        Object value = hash.invoke("layout",ArgNames(),Args(),Context(hash,invokable));
         assertEquals("Landscape!!",value);
     }
     
@@ -36,13 +36,13 @@ public class HashInvokerTest {
         Hash hash = hash(
             "button(text image to) {^ textAndImageLeadingTo(text image to) }"
         );
-        SimpleInvokable invokable = new SimpleInvokable("textAndImageLeadingTo","text","image","to") {
-            public Object invoke(Invokable[] args) {
-                return "button(" + args[0] + ",img:" + args[1] + "," + args[2] + ")";
+        SimpleInvokable invokable = new SimpleInvokable("textAndImageLeadingTo") {
+            public Object invoke(Object[] args) {
+                return "clickable(" + args[0] + ",img:" + args[1] + "," + args[2] + ")";
             }
         };
-        Object value = hash.invoke("button",Context(hash,invokable),Const("exciting"),Const("beach"),Const("ftp:neato"));
-        assertEquals("button(exciting,img:beach,ftp:neato)",value);
+        Object value = hash.invoke("button",ArgNames("text","image","to"),Args(Const("exciting"),Const("beach"),Const("ftp:neato")),Context(hash,invokable));
+        assertEquals("clickable(exciting,img:beach,ftp:neato)",value);
     }
     
     @Test
@@ -52,23 +52,31 @@ public class HashInvokerTest {
             "provider   {^ \"Provider!\"}",
             "navigation {^ \"NAV\"}"
         );
-        SimpleInvokable screen = new SimpleInvokable("screen", "grid") {
-            public Object invoke(Invokable[] args) {
+        SimpleInvokable screen = new SimpleInvokable("screen") {
+            public Object invoke(Object[] args) {
                 return "screen(" + args[0] + " " + args[1] + " " + args[2] + ")";
             }
         };
         SimpleInvokable grid = new SimpleInvokable("grid") {
-            public Object invoke(Invokable[] args) {
+            public Object invoke(Object[] args) {
                 return "grid(" + args[0] + " " + args[1] + ")";
             }
         };
 
-        Object value = hash.invoke("layout",Context(hash,screen,grid));
-        assertEquals("screen( grid(2 1) Provider! NAV))",value);
+        Object value = hash.invoke("layout",ArgNames(),Args(),Context(hash,screen,grid));
+        assertEquals("screen(grid(2 1) Provider! NAV)",value);
     }
     
     private Hash hash(String...lines) {
         return parse(lines(lines));    
+    }
+    
+    private ArgNames ArgNames(String... names) {
+        return new ArgNames(names);
+    }
+    
+    private Args Args(Expression...expressions) {
+        return new Args(expressions);
     }
     
     private Context Context(Hash hash,SimpleInvokable... invokables) {

@@ -77,7 +77,7 @@ public final class Method
     }
 
     public Object invokeIn(Context context) {
-        return body.invokeIn(context);
+        return body.invokeIn(context.withArgNames(args));
     }
 
     @Override

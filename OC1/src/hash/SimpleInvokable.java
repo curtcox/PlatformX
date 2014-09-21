@@ -23,16 +23,19 @@ public abstract class SimpleInvokable
     }
 
     final String name;
-    final String[] argNames;
     
-    SimpleInvokable(String name, String... argNames) {
+    SimpleInvokable(String name) {
         this.name = name;
-        this.argNames = argNames;
     }
 
     public Object invokeIn(Context context) {
-        return invoke(context.values);
+        System.out.println("SimpleInvokable " + context);
+        Object[] values = new Object[context.values.length];
+        for (int i=0; i<values.length; i++) {
+            values[i] = context.values[i].invokeIn(context);
+        }
+        return invoke(values);
     }
 
-    public abstract Object invoke(Invokable[] named);
+    public abstract Object invoke(Object[] values);
 }

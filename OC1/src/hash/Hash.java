@@ -32,10 +32,9 @@ public final class Hash {
         return methods.toString();
     } 
 
-    Object invoke(String methodName,Context context,Invokable... args) {
-        Method method = getMethod(methodName);
-        Context contextWithArgs = context.withArgValues(method.args.args, args);
-        return method.invokeIn(contextWithArgs);
+    Object invoke(String methodName,ArgNames argNames, Args args, Context context) {
+        Context withArgs = context.withArgNames(argNames).withArgValues(args);
+        return getMethod(methodName).invokeIn(withArgs);
     }
 
     private Method getMethod(String name) {
