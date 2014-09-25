@@ -23,7 +23,7 @@ public class SimpleInvokableTest {
     };
 
     Map<String,Invokable> contextMap = new HashMap<String,Invokable>();
-    Context context = new Context(contextMap);
+    Context context = new Context("#",contextMap);
 
     @Test
     public void constructor_uses_values() {
@@ -32,7 +32,7 @@ public class SimpleInvokableTest {
     
     @Test
     public void invokeIn_uses_context_args() {
-        Context contextWithArgs = context.withArgValues(new Args(new Expression[] { argValue1, argValue2}));
+        Context contextWithArgs = context.withArgValues("#",new Args(new Expression[] { argValue1, argValue2}));
         
         Object[] args = (Object[]) testObject.invokeIn(contextWithArgs);
         

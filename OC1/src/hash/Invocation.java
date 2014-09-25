@@ -38,12 +38,12 @@ public final class Invocation
         
         public boolean canParseTokens(Tokens tokens) {
             if (!tokens.hasNext() || !Identifier.isValid(tokens.next())) { return false; }
-            if (!tokens.nextIs("("))                                   { return true; }
+            if (!tokens.nextIs("("))                                     { return true; }
             Expression.Parser expressions = new Expression.Parser();
             Return.Parser returns = new Return.Parser();
             while (!tokens.peekIs(")")) {
-                if (returns.canParse(tokens))                          { return false;}
-                if (!expressions.canParse(tokens))                     { return false; }
+                if (returns.canParse(tokens))                            { return false;}
+                if (!expressions.canParse(tokens))                       { return false; }
                 else {
                     expressions.parse(tokens);
                 }
@@ -56,18 +56,17 @@ public final class Invocation
     final String name;
     final Args args;
     
-    Invocation(String value) {
-        this(value,new Args());
+    Invocation(String name) {
+        this(name,new Args());
     }
 
-    Invocation(String value,Args args) {
-        this.name = value;
+    Invocation(String name,Args args) {
+        this.name = name;
         this.args = args;
     }
     
     public Object invokeIn(Context context) {
-        System.out.println("invokeIn " + name + " " + args);
-        return context.get(name).invokeIn(context.withArgValues(args));
+        return context.get(name).invokeIn(context.withArgValues(name,args.valuesFor(context)));
     }
 
     @Override

@@ -31,23 +31,23 @@ public class ContextTest {
     @Test
     public void get_returns_arg_value_before_constructor_value() {
         Context withArgValues = context
-                .withArgValues(args)
-                .withArgNames(new ArgNames("foo"));
+                .withArgValues("#",args)
+                .withArgNames("invoked",new ArgNames("foo"));
         assertSame(value,withArgValues.get(name));
     }
 
     @Test
     public void toString_contains_arg_names() {
-        Context testObject = new Context(new HashMap())
-                .withArgValues(args)
-                .withArgNames(new ArgNames("Kitty"));
+        Context testObject = new Context("#",new HashMap())
+                .withArgValues("#",args)
+                .withArgNames("invoked",new ArgNames("Kitty"));
         assertTrue(Strings.contains(testObject.toString(),"Kitty"));
     }
 
     @Test
     public void toString_contains_arg_values() {
-        Context testObject = new Context(new HashMap())
-                .withArgValues(args);
+        Context testObject = new Context("#",new HashMap())
+                .withArgValues("#",args);
         assertTrue(Strings.contains(testObject.toString(),"Galore"));
     }
 
@@ -55,7 +55,7 @@ public class ContextTest {
     public void toString_contains_invokable_names() {
         Map<String,Invokable> map = new HashMap<String,Invokable>();
         map.put("Plenty",value);
-        Context testObject = new Context(map);
+        Context testObject = new Context("#",map);
         assertTrue(Strings.contains(testObject.toString(),"Plenty"));
     }
 

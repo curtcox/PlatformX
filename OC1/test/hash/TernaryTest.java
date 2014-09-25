@@ -91,6 +91,6 @@ public class TernaryTest {
             }
         };
         map.put("if", invokable);
-        return new Context(map);
+        return new Context("#",map);
     }
 }

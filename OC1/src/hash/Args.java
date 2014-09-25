@@ -43,7 +43,15 @@ final class Args {
     Args(Expression... args) {
         this.args = args;
     }
-    
+
+    Args valuesFor(Context context) {
+        Value[] values = new Value[args.length];
+        for (int i=0; i<values.length; i++) {
+            values[i] = new Value(args[i].invokeIn(context));
+        }
+        return new Args(values);
+    }
+
     @Override
     public int hashCode() {
         return Arrays.asList(args).hashCode();

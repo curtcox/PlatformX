@@ -33,7 +33,7 @@ public final class Hash {
     } 
 
     Object invoke(String methodName,ArgNames argNames, Args args, Context context) {
-        Context withArgs = context.withArgNames(argNames).withArgValues(args);
+        Context withArgs = context.withArgValues("#",args).withArgNames(methodName,argNames);
         return getMethod(methodName).invokeIn(withArgs);
     }
 

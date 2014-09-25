@@ -19,7 +19,7 @@ public abstract class SimpleInvokable
         for (Method method : hash.methods) {
             map.put(method.name, method);
         }
-        return new Context(map);        
+        return new Context("#",map);        
     }
 
     final String name;
@@ -29,7 +29,6 @@ public abstract class SimpleInvokable
     }
 
     public Object invokeIn(Context context) {
-        System.out.println("SimpleInvokable " + context);
         Object[] values = new Object[context.values.length];
         for (int i=0; i<values.length; i++) {
             values[i] = context.values[i].invokeIn(context);

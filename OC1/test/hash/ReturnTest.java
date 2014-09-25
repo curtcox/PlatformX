@@ -75,7 +75,7 @@ public class ReturnTest {
 
     @Test
     public void invokeIn_returns_result_from_constant_expression() {
-        Context context = new Context(new HashMap());
+        Context context = new Context("#",new HashMap());
         String value = "You don't say.";
         Return testObject = new Return(new StringConstant(value));
         
@@ -86,7 +86,7 @@ public class ReturnTest {
 
     @Test
     public void invokeIn_invokes_expression_with_context() {
-        Context context = new Context(new HashMap());
+        Context context = new Context("#",new HashMap());
         Expression expression = new Expression() {
             public Object invokeIn(Context context) {
                 return context;

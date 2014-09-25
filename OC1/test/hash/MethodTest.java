@@ -164,7 +164,7 @@ public class MethodTest {
 
     @Test
     public void invokeIn_invokes_expression_with_context_and_values_and_returns_result_for_method_with_0_args() {
-        Context context = new Context(new HashMap());
+        Context context = new Context("#",new HashMap());
         String[] names = new String[0];
         ArgNames args = new ArgNames(names);
         Method method = new Method("name",args,expression);
@@ -177,7 +177,7 @@ public class MethodTest {
 
     @Test
     public void invokeIn_invokes_expression_with_context_and_values_and_returns_result_for_method_with_1_arg() {
-        Context context = new Context(new HashMap());
+        Context context = new Context("#",new HashMap());
         String[] names = new String[] { "x" };
         ArgNames args = new ArgNames(names);
         Method method = new Method("f",args,expression);

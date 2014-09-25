@@ -9,19 +9,20 @@ import java.util.Map;
  */
 public final class Context {
 
-    final Map<String,Invokable> invokables;
+    final String name;
     final String[] names;
     final Invokable[] values;
+    final Map<String,Invokable> invokables;
     
-    public Context(Map<String,Invokable> invokables) {
-        this(invokables,new String[0],new Invokable[0]);
+    public Context(String name, Map<String,Invokable> invokables) {
+        this(name,invokables,new String[0],new Invokable[0]);
     }
 
-    private Context(Map<String,Invokable> invokables,String[] names,Invokable[] values) {
+    private Context(String name,Map<String,Invokable> invokables,String[] names,Invokable[] values) {
+        this.name = name;
         this.invokables = invokables;
         this.names = names;
         this.values = values;
-        System.out.println("Created " + this);
     }
 
     Invokable get(String name) {
@@ -54,17 +55,18 @@ public final class Context {
         return invokables.get(name);
     }
 
-    Context withArgNames(ArgNames names) {
-        return new Context(invokables,names.args,values);
+    Context withArgNames(String name, ArgNames names) {
+        return new Context(name,invokables,names.args,values);
     }
 
-    Context withArgValues(Args values) {
-        return new Context(invokables,names,values.args);
+    Context withArgValues(String name, Args values) {
+        return new Context(name,invokables,names,values.args);
     }
 
     @Override
     public String toString() {
-        return " names = " + Arrays.asList(names) +
+        return " name = " + name +
+               " names = " + Arrays.asList(names) +
                " values = " + Arrays.asList(values) + 
                " keys = " + invokables.keySet();
     }

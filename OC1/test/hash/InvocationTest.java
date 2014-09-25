@@ -115,14 +115,15 @@ public class InvocationTest {
 
     @Test
     public void invokeIn_invokes_invokable_from_context_with_invocation_arg_values() {
-        StringConstant arg = new StringConstant("value1");
+        String value = "value1";
+        StringConstant arg = new StringConstant(value);
         Expression[] args = new Expression[] { arg };
         Invocation invocation = new Invocation("invokable",new Args(args));
         
         Context context = (Context) invocation.invokeIn(Context());
         Invokable[] values = context.values;
         assertEquals(1,values.length);
-        assertSame(arg,values[0]);
+        assertSame(value,values[0].invokeIn(context));
     }
 
     private Context Context() {
@@ -133,6 +134,6 @@ public class InvocationTest {
         };
         Map<String,Invokable> map = new HashMap<String,Invokable>();
         map.put("invokable", invokable);
-        return new Context(map);
+        return new Context("#",map);
     }
 }
