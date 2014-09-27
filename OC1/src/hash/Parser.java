@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author Curt
  */
-public final class Parser {
+final class Parser {
 
     Hash parse(String source) {
         List<Method> methods = new ArrayList<Method>();

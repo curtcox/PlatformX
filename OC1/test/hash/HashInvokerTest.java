@@ -14,7 +14,7 @@ public class HashInvokerTest {
     @Test
     public void invoke_method_that_returns_constant() {
         Hash hash = hash("foo { ^ \"foo\" }");
-        Object value = hash.invoke("foo",ArgNames(),Args(),Context(hash));
+        Object value = hash.invoke("foo",Args(),Context(hash));
         assertEquals("foo",value);
     }
 
@@ -27,7 +27,7 @@ public class HashInvokerTest {
         SimpleInvokable invokable = new SimpleInvokable("portrait") {
             public Object invoke(Object[] args) { return false; }
         };
-        Object value = hash.invoke("layout",ArgNames(),Args(),Context(hash,invokable));
+        Object value = hash.invoke("layout",Args(),Context(hash,invokable));
         assertEquals("Landscape!!",value);
     }
     
@@ -41,7 +41,7 @@ public class HashInvokerTest {
                 return "clickable(" + args[0] + ",img:" + args[1] + "," + args[2] + ")";
             }
         };
-        Object value = hash.invoke("button",ArgNames("text","image","to"),Args(Const("exciting"),Const("beach"),Const("ftp:neato")),Context(hash,invokable));
+        Object value = hash.invoke("button",Args(Const("exciting"),Const("beach"),Const("ftp:neato")),Context(hash,invokable));
         assertEquals("clickable(exciting,img:beach,ftp:neato)",value);
     }
     
@@ -63,7 +63,7 @@ public class HashInvokerTest {
             }
         };
 
-        Object value = hash.invoke("layout",ArgNames(),Args(),Context(hash,screen,grid));
+        Object value = hash.invoke("layout",Args(),Context(hash,screen,grid));
         assertEquals("screen(grid(2 1) Provider! NAV)",value);
     }
     

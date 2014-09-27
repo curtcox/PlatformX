@@ -52,6 +52,14 @@ final class Args {
         return new Args(values);
     }
 
+    static Args valuesFor(Object... objects) {
+        Value[] values = new Value[objects.length];
+        for (int i=0; i<values.length; i++) {
+            values[i] = new Value(objects[i]);
+        }
+        return new Args(values);
+    }
+
     @Override
     public int hashCode() {
         return Arrays.asList(args).hashCode();
