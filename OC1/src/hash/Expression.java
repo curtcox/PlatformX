@@ -12,6 +12,11 @@ public abstract class Expression
         public Object invokeIn(Context context) {
             return null;
         }
+        
+        @Override
+        public String toString() {
+            return "{}";
+        }
     };
     
     static final class Parser

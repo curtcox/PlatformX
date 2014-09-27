@@ -51,7 +51,7 @@ public final class Hash {
                 return method;
             }
         }
-        throw new IllegalArgumentException();
+        throw new IllegalArgumentException(name + " not found in " + methods);
     }
 
 }

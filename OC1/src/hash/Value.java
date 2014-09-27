@@ -4,12 +4,12 @@ package hash;
  *
  * @author Curt
  */
-final class Value
+public final class Value
     extends Expression
 {
     final Object value;
 
-    Value(Object value) {
+    public Value(Object value) {
         this.value = value;
     }
 

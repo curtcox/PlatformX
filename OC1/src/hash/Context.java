@@ -2,30 +2,38 @@ package hash;
 
 import java.util.Arrays;
 import java.util.Map;
+import oc1.util.NamedValueProvider;
+import oc1.util.SimpleNamedValueProvider;
 
 /**
  *
  * @author Curt
  */
-public final class Context {
+public final class Context
+    implements NamedValueProvider<Invokable>
+{
 
     final String name;
     final String[] names;
     final Invokable[] values;
-    final Map<String,Invokable> invokables;
+    final NamedValueProvider<Invokable> invokables;
     
-    public Context(String name, Map<String,Invokable> invokables) {
+    public Context(String name, NamedValueProvider<Invokable> invokables) {
         this(name,invokables,new String[0],new Invokable[0]);
     }
 
-    private Context(String name,Map<String,Invokable> invokables,String[] names,Invokable[] values) {
+    public Context(String name, Map<String,Invokable> invokables) {
+        this(name,new SimpleNamedValueProvider(invokables),new String[0],new Invokable[0]);
+    }
+
+    private Context(String name,NamedValueProvider<Invokable> invokables,String[] names,Invokable[] values) {
         this.name = name;
         this.invokables = invokables;
         this.names = names;
         this.values = values;
     }
 
-    Invokable get(String name) {
+    public Invokable get(String name) {
         verifyThereAreEnoughArgs();
         Invokable invokable = get0(name);
         if (invokable==null) {
@@ -43,7 +51,7 @@ public final class Context {
     
     private IllegalArgumentException exceptionForMissing(String name) {
         return new IllegalArgumentException(
-            "No value for " + name + " in context " + Arrays.asList(names) + " or args " + invokables.keySet());
+            "No value for " + name + " in context " + Arrays.asList(names) + " or args " + invokables);
     }
     
     private Invokable get0(String name) {
@@ -68,6 +76,6 @@ public final class Context {
         return " name = " + name +
                " names = " + Arrays.asList(names) +
                " values = " + Arrays.asList(values) + 
-               " keys = " + invokables.keySet();
+               " keys = " + invokables;
     }
 }

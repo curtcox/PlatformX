@@ -22,6 +22,6 @@ public class DynamicScreenLayout
     }
 
     private Context context(ScreenContext context) {
-        return null;
+        return new Context("#",new ScreenContextAsNamedInvokableProvider(context));
     }
 }

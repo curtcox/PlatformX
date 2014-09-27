@@ -30,7 +30,7 @@ public final class OysterCrackerScreenFactory
 {
     public static ScreenFactory of() {
         GlobStringMap layouts = new GlobStringMap();
-        layouts.add(Glob.of("Home"),"Home Layout");
+        layouts.add(Glob.of("Home"),"layout { ^(portrait) ? portrait : landscape }");
         return of(layouts);    
     }
     
