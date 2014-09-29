@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * A StringMap that uses GlobS as keys.
  * @author Curt
  */
 public final class GlobStringMap
