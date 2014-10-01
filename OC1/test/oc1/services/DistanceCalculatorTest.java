@@ -1,6 +1,5 @@
 package oc1.services;
 
-import oc1.services.DistanceCalculator;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

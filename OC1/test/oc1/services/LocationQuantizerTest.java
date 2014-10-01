@@ -1,6 +1,5 @@
 package oc1.services;
 
-import oc1.services.LocationQuantizer;
 import com.codename1.location.Location;
 import static org.junit.Assert.*;
 import org.junit.Test;

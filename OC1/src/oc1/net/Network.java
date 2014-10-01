@@ -11,6 +11,10 @@ import java.net.URI;
  */
 public interface Network {
 
+    /**
+     * Return the data from the requested URI, or an empty stream, if something
+     * went wrong.
+     */
     InputStream getStreamFor(URI uri);
 
     Image getImage(URI uri);
