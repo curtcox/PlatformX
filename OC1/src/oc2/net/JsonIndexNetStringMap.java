@@ -4,7 +4,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import oc1.net.Network;
 import oc1.io.IO;
-import oc1.io.JSON;
+import oc1.net.URIs;
 import oc1.util.StringMap;
 
 /**
@@ -30,7 +30,7 @@ public final class JsonIndexNetStringMap
     }
     
     URI pageURI(String key) {
-        URI uri = URI(index().get(key));
+        URI uri = URIs.URI(index().get(key));
         return uri.isAbsolute() ? uri : indexURI.resolve(uri);
     }
     
@@ -42,11 +42,4 @@ public final class JsonIndexNetStringMap
         return IO.stringOrEmptyFrom(network.getStreamFor(uri));
     }
 
-    private URI URI(String string) {
-        try {
-            return new URI(string);
-        } catch (URISyntaxException e) {
-            throw new IllegalArgumentException(string);
-        }
-    }
 }
