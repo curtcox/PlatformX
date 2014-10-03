@@ -6,6 +6,7 @@ import java.io.InputStream;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
+import oc1.io.JSON;
 import oc1.net.Network;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -15,7 +16,7 @@ import org.junit.Before;
  *
  * @author Curt
  */
-public class NetStringMapTest {
+public class JsonIndexNetStringMapTest {
 
     Map<URI,String> pages = new HashMap<URI,String>();
     
@@ -33,7 +34,7 @@ public class NetStringMapTest {
     String relativeValueKey = "Spencer";
     String absoluteValue = "0 Kelvin";
     String relativeValue = "warmish";
-    NetStringMap testObject = new NetStringMap(index,network);
+    JsonIndexNetStringMap testObject = new JsonIndexNetStringMap(index,JSON.STRING_MAP_PARSER,network);
     
     @Before
     public void setUp() {

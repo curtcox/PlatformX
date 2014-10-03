@@ -11,7 +11,7 @@ import oc1.util.StringMap;
  * A StringMap that gets values from the network.
  * @author Curt
  */
-public final class NetStringMap
+public final class JsonIndexNetStringMap
     implements StringMap
 {
 
@@ -19,13 +19,7 @@ public final class NetStringMap
     final Network network;
     final StringMap.Parser indexParser;
 
-    NetStringMap(URI index, Network network) {
-        this.indexURI = index;
-        this.network = network;
-        this.indexParser = JSON.STRING_MAP_PARSER;
-    }
-
-    NetStringMap(URI index, StringMap.Parser indexParser, Network network) {
+    JsonIndexNetStringMap(URI index, StringMap.Parser indexParser, Network network) {
         this.indexURI = index;
         this.network = network;
         this.indexParser = indexParser;

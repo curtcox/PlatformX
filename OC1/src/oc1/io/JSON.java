@@ -17,9 +17,11 @@ import oc1.util.StringMap;
  */
 public final class JSON {
 
-    public static StringMap stringMapFrom(String string) {
-        return new SimpleStringMap(parseJsonResponse(new InputStreamReader(new ByteArrayInputStream(string.getBytes()))));
-    }
+    public static final StringMap.Parser STRING_MAP_PARSER = new StringMap.Parser() {
+        public StringMap parse(String string) {
+            return new SimpleStringMap(parseJsonResponse(new InputStreamReader(new ByteArrayInputStream(string.getBytes()))));
+        }
+    };
     
     static final Map<String,String> parseJsonResponse(InputStreamReader reader) {
         Map<String,String> map = new HashMap<String,String>();
