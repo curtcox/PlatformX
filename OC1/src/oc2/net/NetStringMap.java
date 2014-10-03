@@ -8,7 +8,7 @@ import oc1.io.JSON;
 import oc1.util.StringMap;
 
 /**
- *
+ * A StringMap that gets values from the network.
  * @author Curt
  */
 public final class NetStringMap
@@ -17,10 +17,18 @@ public final class NetStringMap
 
     final URI indexURI;
     final Network network;
-    
+    final StringMap.Parser indexParser;
+
     NetStringMap(URI index, Network network) {
         this.indexURI = index;
         this.network = network;
+        this.indexParser = JSON.STRING_MAP_PARSER;
+    }
+
+    NetStringMap(URI index, StringMap.Parser indexParser, Network network) {
+        this.indexURI = index;
+        this.network = network;
+        this.indexParser = indexParser;
     }
 
     public String get(String key) {
@@ -33,7 +41,7 @@ public final class NetStringMap
     }
     
     StringMap index() {
-        return JSON.stringMapFrom(stringFrom(indexURI));
+        return indexParser.parse(stringFrom(indexURI));
     }
     
     private String stringFrom(URI uri) {

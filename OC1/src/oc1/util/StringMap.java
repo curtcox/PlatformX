@@ -8,6 +8,10 @@ import java.util.HashMap;
  */
 public interface StringMap {
 
+    interface Parser {
+        StringMap parse(String string);    
+    }
+    
     String get(String string);
     
     static final StringMap EMPTY = new SimpleStringMap(new HashMap());
