@@ -27,23 +27,49 @@ public class NetStringMapTest {
     };
     
     URI index = URI("http://example.com/");
-    URI valuePage = URI("http://value_page/");
-    String key = "key";
-    String value = "value";
+    URI absoulteUrlValuePage = URI("http://absolute/value_page");
+    URI relativeUrlValuePage = URI("relative_value_page");
+    String absoluteValueKey = "Vodka";
+    String relativeValueKey = "Spencer";
+    String absoluteValue = "0 Kelvin";
+    String relativeValue = "warmish";
     NetStringMap testObject = new NetStringMap(index,network);
     
     @Before
     public void setUp() {
-        String indexJSON = "{ 'key':'http://value_page/'}".replaceAll("'", "\""); 
+        String indexJSON = JSON(
+            "{",
+                "'Vodka':'http://absolute/value_page' ,",
+                "'Spencer':'relative_value_page' ",
+            "}"
+        ); 
         pages.put(index, indexJSON);
-        pages.put(valuePage, value);
+        pages.put(absoulteUrlValuePage, absoluteValue);
+        pages.put(URI("http://example.com/relative_value_page"), relativeValue);
+    }
+    
+    private String JSON(String... lines) {
+        StringBuilder out = new StringBuilder();
+        for (String line : lines) {
+            out.append(line);
+        }
+        return out.toString().replaceAll("'", "\"");
     }
     
     @Test
-    public void get_uses_network_to_return_value() {
-        String expected = "value";
+    public void get_uses_network_to_return_value_from_absolute_URL() {
+        String expected = absoluteValue;
         
-        String actual = testObject.get(key);
+        String actual = testObject.get(absoluteValueKey);
+        
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void get_uses_network_to_return_value_from_relative_URL() {
+        String expected = relativeValue;
+        
+        String actual = testObject.get(relativeValueKey);
         
         assertEquals(expected,actual);
     }

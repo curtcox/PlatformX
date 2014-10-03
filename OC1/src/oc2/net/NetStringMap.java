@@ -24,7 +24,12 @@ public final class NetStringMap
     }
 
     public String get(String key) {
-        return stringFrom(URI(index().get(key)));
+        return stringFrom(pageURI(key));
+    }
+    
+    URI pageURI(String key) {
+        URI uri = URI(index().get(key));
+        return uri.isAbsolute() ? uri : indexURI.resolve(uri);
     }
     
     StringMap index() {
