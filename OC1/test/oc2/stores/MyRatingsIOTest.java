@@ -1,6 +1,5 @@
 package oc2.stores;
 
-import oc2.stores.MyRatingsIO;
 import oc1.domain.ID;
 import oc2.domain.Rating;
 import static org.junit.Assert.*;

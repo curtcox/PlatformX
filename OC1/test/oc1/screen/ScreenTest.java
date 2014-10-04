@@ -1,9 +1,11 @@
 package oc1.screen;
 
 import com.codename1.ui.Form;
+import fake.FakeRegistryLoader;
 import java.util.concurrent.Callable;
 import oc2.screens.FakeUI;
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -17,6 +19,11 @@ public class ScreenTest {
     
     Screen testObject;
     
+    @Before
+    public void setUp() {
+        FakeRegistryLoader.load();
+    }
+
     @Test
     public void can_create() {
         new Screen(form){

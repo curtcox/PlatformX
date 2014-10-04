@@ -1,6 +1,5 @@
 package oc2.stores;
 
-import oc2.stores.MyRatings;
 import com.codename1.io.Storage;
 import fake.FakeStorage;
 import oc1.app.Registry;

@@ -7,7 +7,6 @@ import hash.Hash;
 import oc1.event.StringSource;
 import oc1.log.Log;
 import oc1.log.LogManager;
-import oc1.net.RawNetwork;
 
 /**
  *
@@ -23,22 +22,37 @@ public class DynamicScreenLayout
     }
 
     public ScreenLayout getLayout(ScreenContext context) {
-        Object result = getLayoutFromHash(context);
+        String hashSourceCode = source.getString();
+        if (!isValidHash(hashSourceCode)) {
+            return messageScreen("Source is not valid Hash");
+        }
+        return screenForResult(getLayoutFromHash(hashSourceCode,context));
+    }
+
+    private boolean isValidHash(String sourceCode) {
+        return sourceCode!=null && sourceCode.length()>0;
+    }
+
+    private ScreenLayout screenForResult(Object result) {
         if (result instanceof ScreenLayout) {
             return (ScreenLayout) result;
         }
         if (result==null) {
-            result = "(null)";            
+            return messageScreen("(null)");
         }
         if (result instanceof String) {
-            return new ScreenLayout(new GridLayout(1,1),new Label((String)result));
+            return messageScreen((String)result);
         }
         throw new IllegalArgumentException("result="+result);
     }
+    
+    private ScreenLayout messageScreen(String message) {
+        return new ScreenLayout(new GridLayout(1,1),new Label(message));
+    }
 
-    private Object getLayoutFromHash(ScreenContext context) {
+    private Object getLayoutFromHash(String hashSourceCode,ScreenContext context) {
         try {
-            return Hash.invoke(source.getString(),"layout",context(context));
+            return Hash.invoke(hashSourceCode,"layout",context(context));
         } catch (Exception e) {
             log(e);
             return e.toString();
@@ -54,7 +68,7 @@ public class DynamicScreenLayout
     }
 
     private Log getLog() {
-        return LogManager.of().getLog(RawNetwork.class);    
+        return LogManager.of().getLog(DynamicScreenLayout.class);    
     }
 
 }

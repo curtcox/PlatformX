@@ -1,10 +1,12 @@
 package oc1.screen;
 
 import com.codename1.ui.Form;
+import fake.FakeRegistryLoader;
 import oc1.ui.ActionButton;
 import java.util.concurrent.Callable;
 import oc2.screens.FakeUI;
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -19,6 +21,11 @@ public class ScreenButtonTest {
                 return ScreenButton.textAndLeadingTo(text, screen);
             }
         });
+    }
+
+    @Before
+    public void setUp() {
+        FakeRegistryLoader.load();
     }
 
     @Test
