@@ -10,8 +10,12 @@ import java.util.Set;
  */
 final class Identifier {
 
+    /**
+     * Characters that cannot be part of an identifier
+     */
     static final String[] SPECIAL = new String[] {
-        " ", ".", "?", ":", ",", "\"", "^", "{", "}", "(", ")", "^"
+        " ", "\t", "\r", "\n", 
+        ".", "?", ":", ",", "\"", "^", "{", "}", "(", ")"
     };
     
     private static final Set<String> reject = new HashSet(Arrays.asList(SPECIAL));

@@ -78,6 +78,26 @@ public class LexerTest {
     }
 
     @Test
+    public void split_words_with_double_spaces_between_them() {
+        split("one  two  three","one","two","three");    
+    }
+
+    @Test
+    public void split_words_with_carriage_returns_between_them() {
+        split("one\rtwo\rthree","one","two","three");    
+    }
+
+    @Test
+    public void split_words_with_new_lines_between_them() {
+        split("one\ntwo\nthree","one","two","three");    
+    }
+
+    @Test
+    public void split_words_with_tabs_between_them() {
+        split("one\ntwo\nthree","one","two","three");    
+    }
+
+    @Test
     public void split_words_with_single_dots_between_them() {
         split("one.two.three","one",".","two",".","three");    
     }
