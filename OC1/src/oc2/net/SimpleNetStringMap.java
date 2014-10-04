@@ -1,8 +1,11 @@
 package oc2.net;
 
+import java.io.InputStream;
 import java.net.URI;
+import oc1.app.Registry;
 import oc1.io.IO;
 import oc1.net.Network;
+import oc1.net.RawNetwork;
 import oc1.net.URIs;
 import oc1.util.StringMap;
 
@@ -16,6 +19,10 @@ public final class SimpleNetStringMap
     final URI base;
     final Network network;
     
+    public SimpleNetStringMap(URI base) {
+        this(base,new RawNetwork());
+    }
+
     SimpleNetStringMap(URI base, Network network) {
         this.base = base;
         this.network = network;

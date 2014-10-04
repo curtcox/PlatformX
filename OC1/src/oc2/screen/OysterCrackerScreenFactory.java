@@ -4,15 +4,15 @@ import java.util.Arrays;
 import oc1.app.Version;
 import oc1.domain.Type;
 import oc1.log.LogManager;
+import oc1.net.URIs;
 import oc1.screen.CompositeScreenFactory;
 import oc1.screen.DynamicScreenFactory;
 import oc1.screen.Screen;
 import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
 import oc1.screen.StringMapStringSource;
-import oc1.util.Glob;
-import oc1.util.GlobStringMap;
 import oc1.util.StringMap;
+import oc2.net.SimpleNetStringMap;
 import oc2.screenfactories.FilterScreenFactory;
 import oc2.screenfactories.LocationSelectionScreenFactory;
 import oc2.screenfactories.SearchScreenFactory;
@@ -29,9 +29,7 @@ public final class OysterCrackerScreenFactory
     implements ScreenFactory
 {
     public static ScreenFactory of() {
-        GlobStringMap layouts = new GlobStringMap();
-        layouts.add(Glob.of("Home"),"layout { ^(portrait) ? portrait : landscape }");
-        return of(layouts);    
+        return of(new SimpleNetStringMap(URIs.URI("http://localhost:8000/")));    
     }
     
     public static ScreenFactory of(StringMap layouts) {
