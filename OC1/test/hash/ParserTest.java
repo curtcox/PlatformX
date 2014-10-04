@@ -145,7 +145,7 @@ public class ParserTest {
     private String lines(String...lines) {
         StringBuilder out = new StringBuilder();
         for (String line : lines) {
-            out.append(line + " ");
+            out.append(line + " \r\n");
         }
         return out.toString();
     }

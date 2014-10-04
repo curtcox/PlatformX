@@ -30,7 +30,17 @@ public class HashInvokerTest {
         Object value = hash.invoke("layout",Args(),Context(hash,invokable));
         assertEquals("Landscape!!",value);
     }
-    
+
+    @Test
+    public void invoke_method_that_is_not_defined_first() {
+        Hash hash = hash(
+            "first  { ^ 1 }",
+            "second { ^ 2 }"
+        );
+        Object value = hash.invoke("second",Args(),Context(hash));
+        assertEquals(2L,value);
+    }
+
     @Test
     public void invoke_method_with_arguments() {
         Hash hash = hash(
@@ -71,10 +81,6 @@ public class HashInvokerTest {
         return parse(lines(lines));    
     }
     
-    private ArgNames ArgNames(String... names) {
-        return new ArgNames(names);
-    }
-    
     private Args Args(Expression...expressions) {
         return new Args(expressions);
     }
@@ -94,7 +100,7 @@ public class HashInvokerTest {
     private String lines(String...lines) {
         StringBuilder out = new StringBuilder();
         for (String line : lines) {
-            out.append(line + " ");
+            out.append(line + " \r\n");
         }
         return out.toString();
     }

@@ -20,4 +20,8 @@ public final class SimpleNamedValueProvider<V>
         return map.get(name);
     }
     
+    @Override
+    public String toString() {
+        return map.toString();
+    }
 }
