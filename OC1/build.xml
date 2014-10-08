@@ -34,7 +34,33 @@
             <arg value="${codename1.packageName}.${codename1.mainName}" />
         </java>
     </target>
-    
+
+    <target name="unit-test" depends="compile-test">
+        <mkdir dir="${build.test.results.dir}" />
+        <junit>
+          <classpath>
+            <pathelement path="${run.test.classpath}"/>
+          </classpath>    
+          <batchtest todir="${build.test.results.dir}">
+             <fileset dir="${build.test.classes.dir}">
+                  <include name="**/*Test*" />
+             </fileset>
+          </batchtest>
+          <formatter type="brief"/>
+          <formatter type="plain"/>
+          <formatter type="xml"/>
+        </junit>
+    </target>   
+
+    <target name="unit-test-report" depends="unit-test">
+        <junitreport todir="${build.test.results.dir}">
+            <fileset dir="${build.test.results.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${build.test.results.dir}"/>
+        </junitreport>
+    </target>   
+
     <target depends="-do-test-run" description="Run unit tests." name="test"/>
 
     <target name="-pre-compile">
@@ -157,7 +183,6 @@
             <fileset dir="${build.classes.dir}" includes="**/*.class"/>
         </delete>
     </target>
-
     
     <target name="build-for-ios-device-release" depends="clean,copy-ios-override,copy-libs,jar,clean-override">
         <codeNameOne 
