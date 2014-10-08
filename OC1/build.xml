@@ -44,6 +44,7 @@
           <batchtest todir="${build.test.results.dir}">
              <fileset dir="${build.test.classes.dir}">
                   <include name="**/*Test*" />
+                  <exclude name="**/*$*" />
              </fileset>
           </batchtest>
           <formatter type="brief"/>
