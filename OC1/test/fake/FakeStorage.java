@@ -1,12 +1,13 @@
 package fake;
 
 import com.codename1.io.Storage;
-import com.codename1.io.Util;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  *
@@ -15,6 +16,7 @@ import java.io.OutputStream;
 public class FakeStorage 
     extends Storage
 {
+    public Set<String> names = new HashSet<String>();
     public ByteArrayInputStream inputStream = new ByteArrayInputStream(new byte[0]);
     public ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
     
@@ -37,8 +39,14 @@ public class FakeStorage
      * @return an output stream of limited capacity
      * @throws java.io.IOException
      */
+    @Override
     public OutputStream createOutputStream(String name) throws IOException {
+        names.add(name);
         return outputStream;
     }
 
+    @Override
+    public boolean exists(String name) {
+        return names.contains(name);
+    }
 }

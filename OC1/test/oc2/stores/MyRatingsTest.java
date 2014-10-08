@@ -1,6 +1,7 @@
 package oc2.stores;
 
 import com.codename1.io.Storage;
+import fake.FakeRegistryLoader;
 import fake.FakeStorage;
 import oc1.app.Registry;
 import oc1.domain.ID;
@@ -16,12 +17,11 @@ import org.junit.Test;
  */
 public class MyRatingsTest {
     
-    FakeStorage storage = new FakeStorage();
     MyRatings ratings1;
     
     @Before
     public void setUp() {
-        Registry.put(Storage.class, storage);
+        FakeRegistryLoader.load();
         ratings1 = new MyRatings();
     }
     
@@ -30,6 +30,7 @@ public class MyRatingsTest {
         ID id = new ID("" + hashCode());
         Rating rating = new Rating(toString());
         ratings1.put(id, rating);
+        FakeStorage storage = (FakeStorage) Registry.get(Storage.class);
         storage.inputStream = new ByteArrayInputStream(storage.outputStream.toByteArray());
         
         MyRatings ratings2 = new MyRatings();
