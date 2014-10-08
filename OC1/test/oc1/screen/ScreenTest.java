@@ -26,7 +26,7 @@ public class ScreenTest {
 
     @Test
     public void can_create() {
-        new Screen(form){
+        new Screen(FakeUI.newForm()){
             @Override protected void layoutForPortrait() {}
         };
     }

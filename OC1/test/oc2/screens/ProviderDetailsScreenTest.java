@@ -5,12 +5,18 @@ import fake.FakeRegistryLoader;
 import java.util.concurrent.Callable;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
  * @author Curt
  */
 public class ProviderDetailsScreenTest {
+    
+    @Before
+    public void setUp() {
+        FakeRegistryLoader.load();
+    }
     
     @Test
     public void test_can_create() throws Exception {

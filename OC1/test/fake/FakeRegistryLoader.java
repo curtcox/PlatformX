@@ -34,9 +34,10 @@ public class FakeRegistryLoader {
     }
     
     static void initDisplay() {
-        Display.getInstance();
+        Display display = Display.getInstance();
         ImplementationFactory.setInstance(new FakeImplementationFactory());
         Display.init(null);
+        put(Display.class,display);
     }
     
     static void put(Class clazz, Object object) {

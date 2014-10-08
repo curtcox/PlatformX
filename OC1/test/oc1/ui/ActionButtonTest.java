@@ -9,6 +9,7 @@ import oc1.event.Change;
 import oc2.screens.FakeUI;
 import java.util.concurrent.Callable;
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -19,6 +20,11 @@ public class ActionButtonTest {
 
     boolean tapped;
     Change.Listener listener;
+    
+    @Before
+    public void setUp() {
+        FakeRegistryLoader.load();
+    }
     
     private ActionButton createActionButtonOnEDT(final String text) throws Exception {
         return (ActionButton) FakeUI.onEDT(new Callable(){
