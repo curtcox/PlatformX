@@ -45,6 +45,7 @@
              <fileset dir="${build.test.classes.dir}">
                   <include name="**/*Test*" />
                   <exclude name="**/*$*" />
+                  <exclude name="**/*C1Test*" />
              </fileset>
           </batchtest>
           <formatter type="brief"/>

@@ -2,7 +2,7 @@ package tests;
 
 import com.codename1.testing.AbstractTest;
 
-public class MainScreenTest extends AbstractTest {
+public class MainScreenC1Test extends AbstractTest {
     
     public boolean runTest() throws Exception {
         assertTitle();
