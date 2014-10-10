@@ -1,6 +1,7 @@
 package hash;
 
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.Map;
 import oc1.util.NamedValueProvider;
 import oc1.util.SimpleNamedValueProvider;
@@ -18,6 +19,10 @@ public final class Context
     final Invokable[] values;
     final NamedValueProvider<Invokable> invokables;
     
+    public Context(String name) {
+        this(name,new SimpleNamedValueProvider(new HashMap()),new String[0],new Invokable[0]);
+    }
+
     public Context(String name, NamedValueProvider<Invokable> invokables) {
         this(name,invokables,new String[0],new Invokable[0]);
     }

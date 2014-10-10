@@ -13,16 +13,48 @@ public class HashInvokerTest {
 
     @Test
     public void invoke_method_that_returns_constant() {
-        Hash hash = hash("foo { ^ \"foo\" }");
+        Hash hash = hash("foo { ^ 'foo' }");
         Object value = hash.invoke("foo",Args(),Context(hash));
         assertEquals("foo",value);
     }
 
     @Test
-    public void invoke_method_with_ternary() {
+    public void static_invoke_method_that_returns_constant() {
+        Object value = Hash.invoke(lines("foo { ^ 'foo' }"),"foo",Context());
+        assertEquals("foo",value);
+    }
+
+    @Test
+    public void static_invoke_method_with_true_ternary() {
+        String source = lines(
+            "layout          { ^ (portrait) ? layout_portrait : layout_landscape }",
+            "layout_portrait { ^ 'Portrait?' }"
+        );
+        SimpleInvokable invokable = new SimpleInvokable("portrait") {
+            public Object invoke(Object[] args) { return true; }
+        };
+        Object value = Hash.invoke(source,"layout",Context(invokable));
+        assertEquals("Portrait?",value);
+    }
+
+    @Test
+    public void invoke_method_with_true_ternary() {
+        Hash hash = hash(
+            "layout          { ^ (portrait) ? layout_portrait : layout_landscape }",
+            "layout_portrait { ^ 'Portrait?' }"
+        );
+        SimpleInvokable invokable = new SimpleInvokable("portrait") {
+            public Object invoke(Object[] args) { return true; }
+        };
+        Object value = hash.invoke("layout",Args(),Context(hash,invokable));
+        assertEquals("Portrait?",value);
+    }
+
+    @Test
+    public void invoke_method_with_false_ternary() {
         Hash hash = hash(
             "layout           { ^ (portrait) ? layout_portrait : layout_landscape }",
-            "layout_landscape { ^ \"Landscape!!\" }"
+            "layout_landscape { ^ 'Landscape!!' }"
         );
         SimpleInvokable invokable = new SimpleInvokable("portrait") {
             public Object invoke(Object[] args) { return false; }
@@ -59,8 +91,8 @@ public class HashInvokerTest {
     public void invoke_nested_with_mixed_arguments() {
         Hash hash = hash(
             "layout     {^ screen( grid(2 1) provider navigation ) }",
-            "provider   {^ \"Provider!\"}",
-            "navigation {^ \"NAV\"}"
+            "provider   {^ 'Provider!'}",
+            "navigation {^ 'NAV'}"
         );
         SimpleInvokable screen = new SimpleInvokable("screen") {
             public Object invoke(Object[] args) {
@@ -89,6 +121,10 @@ public class HashInvokerTest {
         return SimpleInvokable.newContext(hash,invokables);
     }
 
+    private Context Context(SimpleInvokable... invokables) {
+        return SimpleInvokable.newContext(invokables);
+    }
+
     private StringConstant Const(String string) {
         return new StringConstant(string);
     }
@@ -102,7 +138,7 @@ public class HashInvokerTest {
         for (String line : lines) {
             out.append(line + " \r\n");
         }
-        return out.toString();
+        return out.toString().replaceAll("'", "\"");
     }
 
 }

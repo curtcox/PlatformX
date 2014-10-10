@@ -22,6 +22,14 @@ public abstract class SimpleInvokable
         return new Context("#",map);        
     }
 
+    static Context newContext(SimpleInvokable... invokables) {
+        Map<String,Invokable> map = new HashMap<String,Invokable>();
+        for (SimpleInvokable invokable : invokables) {
+            map.put(invokable.name, invokable);
+        }
+        return new Context("#",map);        
+    }
+
     final String name;
     
     SimpleInvokable(String name) {
