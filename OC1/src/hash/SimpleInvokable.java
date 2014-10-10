@@ -44,5 +44,10 @@ public abstract class SimpleInvokable
         return invoke(values);
     }
 
+    @Override
+    public String toString() {
+        return name;
+    }
+    
     public abstract Object invoke(Object[] values);
 }

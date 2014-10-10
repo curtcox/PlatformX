@@ -3,7 +3,7 @@ package oc1.screen;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.GridLayout;
 import hash.Context;
-import hash.Hash;
+import hash.Run;
 import oc1.event.StringSource;
 import oc1.log.Log;
 import oc1.log.LogManager;
@@ -50,9 +50,13 @@ public class DynamicScreenLayout
         return new ScreenLayout(new GridLayout(1,1),new Label(message));
     }
 
-    private Object getLayoutFromHash(String hashSourceCode,ScreenContext context) {
+    private Object getLayoutFromHash(String sourceCode,ScreenContext context) {
         try {
-            return Hash.invoke(hashSourceCode,"layout",context(context));
+            return Run
+                .source(sourceCode)
+                .method("layout")
+                .context(context(context))
+                .args();
         } catch (Exception e) {
             log(e);
             return e.toString();

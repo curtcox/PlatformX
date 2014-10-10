@@ -19,25 +19,6 @@ public class HashInvokerTest {
     }
 
     @Test
-    public void static_invoke_method_that_returns_constant() {
-        Object value = Hash.invoke(lines("foo { ^ 'foo' }"),"foo",Context());
-        assertEquals("foo",value);
-    }
-
-    @Test
-    public void static_invoke_method_with_true_ternary() {
-        String source = lines(
-            "layout          { ^ (portrait) ? layout_portrait : layout_landscape }",
-            "layout_portrait { ^ 'Portrait?' }"
-        );
-        SimpleInvokable invokable = new SimpleInvokable("portrait") {
-            public Object invoke(Object[] args) { return true; }
-        };
-        Object value = Hash.invoke(source,"layout",Context(invokable));
-        assertEquals("Portrait?",value);
-    }
-
-    @Test
     public void invoke_method_with_true_ternary() {
         Hash hash = hash(
             "layout          { ^ (portrait) ? layout_portrait : layout_landscape }",
@@ -121,9 +102,6 @@ public class HashInvokerTest {
         return SimpleInvokable.newContext(hash,invokables);
     }
 
-    private Context Context(SimpleInvokable... invokables) {
-        return SimpleInvokable.newContext(invokables);
-    }
 
     private StringConstant Const(String string) {
         return new StringConstant(string);

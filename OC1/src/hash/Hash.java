@@ -8,7 +8,7 @@ import java.util.Set;
  *
  * @author Curt
  */
-public final class Hash {
+final class Hash {
     
     final Set<Method> methods;
     
@@ -16,14 +16,6 @@ public final class Hash {
         this.methods = new HashSet<Method>(Arrays.asList(methods));
     }
 
-    public static Object invoke(String source, String methodName,Context context, Object... args) {
-        return parse(source).invoke(methodName, Args.valuesFor(args), context);
-    }
-    
-    static Hash parse(String source) {
-        return new Parser().parse(source);
-    }
-    
     @Override
     public boolean equals(Object o) {
         Hash that = (Hash) o;
