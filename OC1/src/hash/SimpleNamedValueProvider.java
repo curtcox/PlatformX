@@ -1,4 +1,4 @@
-package oc1.util;
+package hash;
 
 import java.util.Map;
 
@@ -6,7 +6,7 @@ import java.util.Map;
  *
  * @author Curt
  */
-public final class SimpleNamedValueProvider<V>
+final class SimpleNamedValueProvider<V>
     implements NamedValueProvider<V>
 {
 

@@ -1,4 +1,4 @@
-package oc1.util;
+package hash;
 
 /**
  *

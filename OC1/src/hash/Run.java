@@ -43,11 +43,15 @@ public final class Run {
         return builder;
     }
     
-    Object invoke(Object... args) {
-        return parse().invoke(method, Args.valuesFor(args), context);
+    private Object invoke(Object... args) {
+        return hash().invoke(method, Args.valuesFor(args), context());
     }
     
-    Hash parse() {
+    private Context context() {
+        return context;
+    }
+    
+    private Hash hash() {
         return new Parser().parse(source);
     }
 

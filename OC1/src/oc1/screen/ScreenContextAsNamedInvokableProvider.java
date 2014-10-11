@@ -2,7 +2,7 @@ package oc1.screen;
 
 import hash.Invokable;
 import hash.Value;
-import oc1.util.NamedValueProvider;
+import hash.NamedValueProvider;
 
 /**
  *

@@ -3,8 +3,6 @@ package hash;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
-import oc1.util.NamedValueProvider;
-import oc1.util.SimpleNamedValueProvider;
 
 /**
  * Context for hash expression evaluation.
