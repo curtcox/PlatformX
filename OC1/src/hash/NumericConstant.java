@@ -5,7 +5,7 @@ package hash;
  * @author Curt
  */
 final class NumericConstant 
-    extends Expression
+    implements Invokable
 {
 
     static final class Parser 

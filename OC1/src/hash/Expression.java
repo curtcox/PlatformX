@@ -1,24 +1,11 @@
 package hash;
 
 /**
- *
+ * 
  * @author Curt
  */
-abstract class Expression
-    implements Invokable
-{
+final class Expression {
 
-    static final Expression EMPTY = new Expression() {
-        public Object invokeIn(Context context) {
-            return null;
-        }
-        
-        @Override
-        public String toString() {
-            return "{}";
-        }
-    };
-    
     static final class Parser
         extends CompositeParser
     {
@@ -32,8 +19,8 @@ abstract class Expression
         }
         
         @Override
-        public Expression parse(Tokens tokens) {
-            return (Expression) super.parse(tokens);
+        public Invokable parse(Tokens tokens) {
+            return (Invokable) super.parse(tokens);
         } 
     }
     

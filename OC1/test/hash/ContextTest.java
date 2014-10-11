@@ -13,8 +13,8 @@ import static org.junit.Assert.*;
 public class ContextTest {
 
     String name = "foo";
-    Expression value = new StringConstant("Galore");
-    Args args = new Args(new Expression[] {value});
+    Invokable value = new StringConstant("Galore");
+    Args args = new Args(new Invokable[] {value});
     SimpleInvokable invokable = new SimpleInvokable(name) {
         @Override
         public Object invoke(Object[] args) {

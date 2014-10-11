@@ -7,5 +7,16 @@ package hash;
  */
 public interface Invokable {
     
+    static final Invokable EMPTY = new Invokable() {
+        public Object invokeIn(Context context) {
+            return null;
+        }
+        
+        @Override
+        public String toString() {
+            return "{}";
+        }
+    };
+
     Object invokeIn(Context context);
 }

@@ -5,7 +5,7 @@ package hash;
  * @author Curt
  */
 public final class Value
-    extends Expression
+    implements Invokable
 {
     final Object value;
 

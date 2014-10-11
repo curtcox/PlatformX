@@ -16,13 +16,13 @@ final class Args {
     {
         public Args parse(Tokens tokens) {
             tokens.verifyNextIs("(");
-            List<Expression> args = new ArrayList<Expression>();
+            List<Invokable> args = new ArrayList<Invokable>();
             Expression.Parser expressions = new Expression.Parser();
             while (!tokens.peekIs(")")) {
                 args.add(expressions.parse(tokens));
             }
             tokens.verifyNextIs(")");
-            return new Args(args.toArray(new Expression[0]));
+            return new Args(args.toArray(new Invokable[0]));
         }    
 
         public boolean canParseTokens(Tokens tokens) {
@@ -38,9 +38,9 @@ final class Args {
         }
     }
     
-    final Expression[] args;
+    final Invokable[] args;
     
-    Args(Expression... args) {
+    Args(Invokable... args) {
         this.args = args;
     }
 

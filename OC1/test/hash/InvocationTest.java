@@ -117,7 +117,7 @@ public class InvocationTest {
     public void invokeIn_invokes_invokable_from_context_with_invocation_arg_values() {
         String value = "value1";
         StringConstant arg = new StringConstant(value);
-        Expression[] args = new Expression[] { arg };
+        Invokable[] args = new Invokable[] { arg };
         Invocation invocation = new Invocation("invokable",new Args(args));
         
         Context context = (Context) invocation.invokeIn(Context());

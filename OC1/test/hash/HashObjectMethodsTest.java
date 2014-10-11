@@ -38,6 +38,6 @@ public class HashObjectMethodsTest {
     }
     
     private Method Method(String name) {
-        return new Method(name,Expression.EMPTY);
+        return new Method(name,Invokable.EMPTY);
     }
 }

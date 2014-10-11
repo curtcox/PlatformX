@@ -87,7 +87,7 @@ public class ReturnTest {
     @Test
     public void invokeIn_invokes_expression_with_context() {
         Context context = new Context("#",new HashMap());
-        Expression expression = new Expression() {
+        Invokable expression = new Invokable() {
             public Object invokeIn(Context context) {
                 return context;
             }

@@ -32,7 +32,7 @@ public class SimpleInvokableTest {
     
     @Test
     public void invokeIn_uses_context_args() {
-        Context contextWithArgs = context.withArgValues("#",new Args(new Expression[] { argValue1, argValue2}));
+        Context contextWithArgs = context.withArgValues("#",new Args(new Invokable[] { argValue1, argValue2}));
         
         Object[] args = (Object[]) testObject.invokeIn(contextWithArgs);
         

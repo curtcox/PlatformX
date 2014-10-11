@@ -94,7 +94,7 @@ public class HashInvokerTest {
         return parse(lines(lines));    
     }
     
-    private Args Args(Expression...expressions) {
+    private Args Args(Invokable...expressions) {
         return new Args(expressions);
     }
     

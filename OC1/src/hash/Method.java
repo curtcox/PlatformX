@@ -19,13 +19,13 @@ final class Method
             return new Method(tokens.next(),parseArgs(tokens),parseExpression(tokens));
         }    
      
-        private Expression parseExpression(Tokens tokens) {
+        private Invokable parseExpression(Tokens tokens) {
             tokens.verifyNextIs("{");
             if (tokens.hasNext() && tokens.peek().equals("}")) {
                 tokens.verifyNextIs("}");
-                return Expression.EMPTY;
+                return Invokable.EMPTY;
             }
-            Expression expression = expressions.parse(tokens);
+            Invokable expression = expressions.parse(tokens);
             tokens.verifyNextIs("}");
             return expression;
         }
@@ -52,13 +52,13 @@ final class Method
 
     final String name;
     final ArgNames args;
-    final Expression body;
+    final Invokable body;
     
-    Method(String name,Expression body) {
+    Method(String name,Invokable body) {
         this(name,new ArgNames(),body);
     }
 
-    Method(String name,ArgNames args, Expression body) {
+    Method(String name,ArgNames args, Invokable body) {
         this.name = name;
         this.args = args;
         this.body = body;

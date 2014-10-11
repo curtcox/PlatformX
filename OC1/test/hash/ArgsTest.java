@@ -78,10 +78,10 @@ public class ArgsTest {
     }
 
     private Args Args(String... strings) {
-        List<Expression> expressions = new ArrayList<Expression>();
+        List<Invokable> expressions = new ArrayList<Invokable>();
         for (String string : strings) {
             expressions.add(new Invocation(string));
         }
-        return new Args(expressions.toArray(new Expression[0]));
+        return new Args(expressions.toArray(new Invokable[0]));
     }
 }

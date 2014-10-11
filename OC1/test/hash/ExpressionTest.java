@@ -127,7 +127,7 @@ public class ExpressionTest {
         parse(new Ternary(new Invocation("a"),new Invocation("b"),new Invocation("c")),"(a) ? b : c");
     }
     
-    private void parse(Expression expression,String string) {
+    private void parse(Invokable expression,String string) {
         assertEquals(expression,new Expression.Parser().parse(Tokens.from(string)));
     }
 
@@ -151,7 +151,7 @@ public class ExpressionTest {
         return new Expression.Parser().canParse(Tokens.from(string));
     }
 
-    Invocation Invocation(String name, Expression...args) {
+    Invocation Invocation(String name, Invokable...args) {
         return new Invocation(name, new Args(args));
     }
 }
