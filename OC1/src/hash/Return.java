@@ -12,7 +12,7 @@ final class Return
     {
         public Return parse(Tokens tokens) {
             verifyReturn(tokens.next());
-            return new Return(new Expression.Parser().parse(tokens));
+            return new Return(new ExpressionParser().parse(tokens));
         }    
 
         private void verifyReturn(String string) {

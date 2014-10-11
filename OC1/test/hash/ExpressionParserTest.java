@@ -7,7 +7,7 @@ import static org.junit.Assert.*;
  *
  * @author Curt
  */
-public class ExpressionTest {
+public class ExpressionParserTest {
 
     @Test
     public void canParse_constant() {
@@ -128,7 +128,7 @@ public class ExpressionTest {
     }
     
     private void parse(Invokable expression,String string) {
-        assertEquals(expression,new Expression.Parser().parse(Tokens.from(string)));
+        assertEquals(expression,new ExpressionParser().parse(Tokens.from(string)));
     }
 
     private Hash hash(String...lines) {
@@ -148,7 +148,7 @@ public class ExpressionTest {
     }
 
     private boolean canParse(String string) {
-        return new Expression.Parser().canParse(Tokens.from(string));
+        return new ExpressionParser().canParse(Tokens.from(string));
     }
 
     Invocation Invocation(String name, Invokable...args) {

@@ -13,7 +13,7 @@ final class Method
         extends AbstractParser
     {
         final ArgNames.Parser argsParser = new ArgNames.Parser();
-        final Expression.Parser expressions = new Expression.Parser();
+        final ExpressionParser expressions = new ExpressionParser();
         
         public Method parse(Tokens tokens) {
             return new Method(tokens.next(),parseArgs(tokens),parseExpression(tokens));

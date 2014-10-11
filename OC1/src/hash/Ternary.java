@@ -14,7 +14,7 @@ final class Ternary
         
         public Ternary parse(Tokens tokens) {
             tokens.verifyNextIs("(");
-            Expression.Parser expressions = new Expression.Parser();
+            ExpressionParser expressions = new ExpressionParser();
             Invokable condition = expressions.parse(tokens);
             tokens.verifyNextIs(")");
             tokens.verifyNextIs("?");
@@ -26,7 +26,7 @@ final class Ternary
 
         public boolean canParseTokens(Tokens tokens) {
             if (!tokens.nextIs("("))           { return false; }
-            Expression.Parser expressions = new Expression.Parser();
+            ExpressionParser expressions = new ExpressionParser();
             if (!expressions.canParse(tokens)) { return false; }
             expressions.parse(tokens);
             if (!tokens.nextIs(")"))           { return false; }

@@ -17,7 +17,7 @@ final class Args {
         public Args parse(Tokens tokens) {
             tokens.verifyNextIs("(");
             List<Invokable> args = new ArrayList<Invokable>();
-            Expression.Parser expressions = new Expression.Parser();
+            ExpressionParser expressions = new ExpressionParser();
             while (!tokens.peekIs(")")) {
                 args.add(expressions.parse(tokens));
             }

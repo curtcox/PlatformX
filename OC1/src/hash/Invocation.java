@@ -30,7 +30,7 @@ final class Invocation
             List<Invokable> args = new ArrayList<Invokable>();
             if (tokens.peekIs("(")) {
                 tokens.next();
-                Expression.Parser expressions = new Expression.Parser();
+                ExpressionParser expressions = new ExpressionParser();
                 while (!tokens.peekIs(")")) {
                     args.add(expressions.parse(tokens));
                 }
@@ -42,7 +42,7 @@ final class Invocation
         public boolean canParseTokens(Tokens tokens) {
             if (!tokens.hasNext() || !Identifier.isValid(tokens.next())) { return false; }
             if (!tokens.nextIs("("))                                     { return true; }
-            Expression.Parser expressions = new Expression.Parser();
+            ExpressionParser expressions = new ExpressionParser();
             Return.Parser returns = new Return.Parser();
             while (!tokens.peekIs(")")) {
                 if (returns.canParse(tokens))                            { return false;}
