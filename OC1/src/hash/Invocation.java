@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author Curt
  */
-public final class Invocation 
+final class Invocation 
     extends Expression
 {
 

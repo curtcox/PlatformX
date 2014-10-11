@@ -4,7 +4,7 @@ package hash;
  *
  * @author Curt
  */
-public final class Ternary
+final class Ternary
     extends Expression
 {
 

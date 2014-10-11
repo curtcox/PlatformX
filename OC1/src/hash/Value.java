@@ -1,7 +1,7 @@
 package hash;
 
 /**
- *
+ * Something that has a value.  Contrast with Invokable.
  * @author Curt
  */
 public final class Value
@@ -24,7 +24,7 @@ public final class Value
     
     @Override
     public boolean equals(Object o) {
-        StringConstant that = (StringConstant) o;
+        Value that = (Value) o;
         return value.equals(that.value);
     }
     

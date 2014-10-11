@@ -8,7 +8,7 @@ import oc1.util.Tokenizer;
  *
  * @author Curt
  */
-public final class Lexer {
+final class Lexer {
 
     static String[] split(String string) {
         List<String> parts = new ArrayList<String>();

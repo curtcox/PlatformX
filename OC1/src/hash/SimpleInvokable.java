@@ -7,7 +7,7 @@ import java.util.Map;
  *
  * @author Curt
  */
-public abstract class SimpleInvokable
+abstract class SimpleInvokable
     implements Invokable
 {
 

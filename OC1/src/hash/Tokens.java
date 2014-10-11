@@ -8,7 +8,7 @@ import java.util.List;
  *
  * @author Curt
  */
-public final class Tokens {
+final class Tokens {
 
     final List<String>tokens;
     

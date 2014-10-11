@@ -4,7 +4,7 @@ package hash;
  *
  * @author Curt
  */
-public final class NumericConstant 
+final class NumericConstant 
     extends Expression
 {
 

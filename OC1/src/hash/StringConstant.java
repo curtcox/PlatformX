@@ -4,7 +4,7 @@ package hash;
  *
  * @author Curt
  */
-public final class StringConstant 
+final class StringConstant 
     extends Expression
 {
 

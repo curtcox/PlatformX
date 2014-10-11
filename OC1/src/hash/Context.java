@@ -7,7 +7,7 @@ import oc1.util.NamedValueProvider;
 import oc1.util.SimpleNamedValueProvider;
 
 /**
- *
+ * Context for hash expression evaluation.
  * @author Curt
  */
 public final class Context

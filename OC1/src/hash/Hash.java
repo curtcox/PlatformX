@@ -5,7 +5,9 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- *
+ * A set of named methods.
+ * This class is named Hash, rather than NamedMethods, to underscore the
+ * central concept of this language as a simple set of named methods.
  * @author Curt
  */
 final class Hash {

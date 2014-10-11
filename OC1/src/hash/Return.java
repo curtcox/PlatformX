@@ -4,7 +4,7 @@ package hash;
  *
  * @author Curt
  */
-public final class Return
+final class Return
     extends Expression
 {
     static final class Parser
