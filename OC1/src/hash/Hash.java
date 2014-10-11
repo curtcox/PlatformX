@@ -11,7 +11,7 @@ import java.util.Set;
  * @author Curt
  */
 final class Hash
-    implements NamedValueProvider
+    implements NamedValues
 {
     
     final Set<Method> methods;

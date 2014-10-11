@@ -4,17 +4,17 @@ package hash;
  *
  * @author Curt
  */
-final class CompositeNamedValueProvider
-    implements NamedValueProvider
+final class CompositeNamedValues
+    implements NamedValues
 {
-    final NamedValueProvider[] providers;
+    final NamedValues[] providers;
     
-    CompositeNamedValueProvider(NamedValueProvider... providers) {
+    CompositeNamedValues(NamedValues... providers) {
         this.providers = providers;
     }
     
     public Object get(String name) {
-        for (NamedValueProvider provider : providers) {
+        for (NamedValues provider : providers) {
             Object value = provider.get(name);
             if (value!=null) {
                 return value;

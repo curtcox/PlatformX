@@ -5,7 +5,7 @@ package hash;
  * @author Curt
  * @param <V>
  */
-public interface NamedValueProvider<V> {
+public interface NamedValues<V> {
     /**
     * Returns the value.
     * @param name

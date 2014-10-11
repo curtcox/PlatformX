@@ -8,9 +8,9 @@ public final class Run {
     
     private final String source;
     private final String method;
-    private final NamedValueProvider values;
+    private final NamedValues values;
 
-    Run(String source, String method,NamedValueProvider values) {
+    Run(String source, String method,NamedValues values) {
         this.source = source;
         this.method = method;
         this.values = values;
@@ -19,14 +19,14 @@ public final class Run {
     public static final class Builder {
         private String source;
         private String method;
-        private NamedValueProvider context;
+        private NamedValues context;
         
         public Builder method(String method) {
             this.method = method;
             return this;
         }
 
-        public Builder context(NamedValueProvider context) {
+        public Builder context(NamedValues context) {
             this.context = context;
             return this;
         }
@@ -48,7 +48,7 @@ public final class Run {
     }
     
     private Context combinedHashAndSuppliedContext() {
-        return new Context("#",new CompositeNamedValueProvider(values,hash()));
+        return new Context("#",new CompositeNamedValues(values,hash()));
     }
     
     private Hash hash() {

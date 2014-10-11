@@ -11,8 +11,8 @@ abstract class SimpleExpression
     implements Expression
 {
 
-    static NamedValueProvider newContext(final Hash hash,final SimpleExpression... expressions) {
-        return new NamedValueProvider() {
+    static NamedValues newContext(final Hash hash,final SimpleExpression... expressions) {
+        return new NamedValues() {
             public Object get(String name) {
                 for (SimpleExpression expression : expressions) {
                     if (expression.name.equals(name)) {
@@ -24,8 +24,8 @@ abstract class SimpleExpression
         };
     }
 
-    static NamedValueProvider newContext(final SimpleExpression... expressions) {
-        return new NamedValueProvider() {
+    static NamedValues newContext(final SimpleExpression... expressions) {
+        return new NamedValues() {
             public Object get(String name) {
                 for (SimpleExpression expression : expressions) {
                     if (expression.name.equals(name)) {

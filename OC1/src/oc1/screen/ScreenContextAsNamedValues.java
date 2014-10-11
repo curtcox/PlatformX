@@ -2,18 +2,18 @@ package oc1.screen;
 
 import hash.Expression;
 import hash.Value;
-import hash.NamedValueProvider;
+import hash.NamedValues;
 
 /**
  *
  * @author Curt
  */
-final class ScreenContextAsNamedValueProvider
-    implements NamedValueProvider<Expression>
+final class ScreenContextAsNamedValues
+    implements NamedValues<Expression>
 {
     private final ScreenContext context;
     
-    public ScreenContextAsNamedValueProvider(ScreenContext context) {
+    public ScreenContextAsNamedValues(ScreenContext context) {
         this.context = context;
     }
 

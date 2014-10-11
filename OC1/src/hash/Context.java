@@ -9,27 +9,27 @@ import java.util.Map;
  * @author Curt
  */
 final class Context
-    implements NamedValueProvider<Expression>
+    implements NamedValues<Expression>
 {
 
     final String name;
     final String[] names;
     final Expression[] values;
-    final NamedValueProvider<Expression> expressions;
+    final NamedValues<Expression> expressions;
     
     public Context(String name) {
-        this(name,new SimpleNamedValueProvider(new HashMap()),new String[0],new Expression[0]);
+        this(name,new SimpleNamedValues(new HashMap()),new String[0],new Expression[0]);
     }
 
-    public Context(String name, NamedValueProvider<Expression> expressions) {
+    public Context(String name, NamedValues<Expression> expressions) {
         this(name,expressions,new String[0],new Expression[0]);
     }
 
     public Context(String name, Map<String,Expression> expressions) {
-        this(name,new SimpleNamedValueProvider(expressions),new String[0],new Expression[0]);
+        this(name,new SimpleNamedValues(expressions),new String[0],new Expression[0]);
     }
 
-    private Context(String name,NamedValueProvider<Expression> invokables,String[] names,Expression[] values) {
+    private Context(String name,NamedValues<Expression> invokables,String[] names,Expression[] values) {
         this.name = name;
         this.expressions = invokables;
         this.names = names;
