@@ -70,6 +70,9 @@ public final class Context
         return new Context(name,invokables,names.args,values);
     }
 
+    /**
+     * Used at the start of an invocation to provide a new context with the given values
+     */
     Context withArgValues(String name, Args values) {
         return new Context(name,invokables,names,values.args);
     }

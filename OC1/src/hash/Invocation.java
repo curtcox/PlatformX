@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * A named runtime invocation, possibly with arguments.
+ * Invocations can be used as part of a method definition.
+ * Depending on the number of arguments and the context used for invocation,
+ * this could be thought of as method invocation or a variable lookup.
  * @author Curt
  */
 final class Invocation 
@@ -52,7 +55,7 @@ final class Invocation
         }
 
     }
-    
+   
     final String name;
     final Args args;
     
@@ -66,9 +69,13 @@ final class Invocation
     }
     
     public Object invokeIn(Context context) {
-        return context.get(name).invokeIn(context.withArgValues(name,args.valuesFor(context)));
+        return context.get(name).invokeIn(contextWithArgValues(context));
     }
 
+    private Context contextWithArgValues(Context context) {
+        return context.withArgValues(name,args.valuesFor(context));
+    }
+    
     @Override
     public int hashCode() {
         return name.hashCode();
@@ -77,8 +84,7 @@ final class Invocation
     @Override
     public boolean equals(Object o) {
         Invocation that = (Invocation) o;
-        return name.equals(that.name) &&
-               args.equals(that.args);
+        return name.equals(that.name) && args.equals(that.args);
     }
     
     @Override

@@ -1,7 +1,8 @@
 package hash;
 
 /**
- *
+ * A method definition.
+ * Contrast with Invocation.
  * @author Curt
  */
 final class Method
