@@ -8,30 +8,30 @@ import java.util.Map;
  * Context for hash expression evaluation.
  * @author Curt
  */
-public final class Context
+final class Context
     implements NamedValueProvider<Expression>
 {
 
     final String name;
     final String[] names;
     final Expression[] values;
-    final NamedValueProvider<Expression> invokables;
+    final NamedValueProvider<Expression> expressions;
     
     public Context(String name) {
         this(name,new SimpleNamedValueProvider(new HashMap()),new String[0],new Expression[0]);
     }
 
-    public Context(String name, NamedValueProvider<Expression> invokables) {
-        this(name,invokables,new String[0],new Expression[0]);
+    public Context(String name, NamedValueProvider<Expression> expressions) {
+        this(name,expressions,new String[0],new Expression[0]);
     }
 
-    public Context(String name, Map<String,Expression> invokables) {
-        this(name,new SimpleNamedValueProvider(invokables),new String[0],new Expression[0]);
+    public Context(String name, Map<String,Expression> expressions) {
+        this(name,new SimpleNamedValueProvider(expressions),new String[0],new Expression[0]);
     }
 
     private Context(String name,NamedValueProvider<Expression> invokables,String[] names,Expression[] values) {
         this.name = name;
-        this.invokables = invokables;
+        this.expressions = invokables;
         this.names = names;
         this.values = values;
     }
@@ -54,7 +54,7 @@ public final class Context
     
     private IllegalArgumentException exceptionForMissing(String name) {
         return new IllegalArgumentException(
-            "No value for " + name + " in context " + Arrays.asList(names) + " or args " + invokables);
+            "No value for " + name + " in context " + Arrays.asList(names) + " or args " + expressions);
     }
     
     private Expression get0(String name) {
@@ -63,18 +63,18 @@ public final class Context
                 return values[i];
             }
         }
-        return invokables.get(name);
+        return expressions.get(name);
     }
 
     Context withArgNames(String name, ArgNames names) {
-        return new Context(name,invokables,names.args,values);
+        return new Context(name,expressions,names.args,values);
     }
 
     /**
      * Used at the start of an invocation to provide a new context with the given values
      */
     Context withArgValues(String name, Args values) {
-        return new Context(name,invokables,names,values.args);
+        return new Context(name,expressions,names,values.args);
     }
 
     @Override
@@ -82,6 +82,6 @@ public final class Context
         return " name = " + name +
                " names = " + Arrays.asList(names) +
                " values = " + Arrays.asList(values) + 
-               " keys = " + invokables;
+               " keys = " + expressions;
     }
 }

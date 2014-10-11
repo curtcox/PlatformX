@@ -99,7 +99,7 @@ public class HashInvokerTest {
     }
     
     private Context Context(Hash hash,SimpleExpression... invokables) {
-        return SimpleExpression.newContext(hash,invokables);
+        return new Context("#",SimpleExpression.newContext(hash,invokables));
     }
 
 

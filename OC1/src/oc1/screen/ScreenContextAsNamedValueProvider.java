@@ -8,12 +8,12 @@ import hash.NamedValueProvider;
  *
  * @author Curt
  */
-final class ScreenContextAsNamedInvokableProvider
+final class ScreenContextAsNamedValueProvider
     implements NamedValueProvider<Expression>
 {
     private final ScreenContext context;
     
-    public ScreenContextAsNamedInvokableProvider(ScreenContext context) {
+    public ScreenContextAsNamedValueProvider(ScreenContext context) {
         this.context = context;
     }
 

@@ -36,7 +36,7 @@ public class RunTest {
         assertEquals("Portrait?",value);
     }
 
-    private Context Context(SimpleExpression... invokables) {
+    private NamedValueProvider Context(SimpleExpression... invokables) {
         return SimpleExpression.newContext(invokables);
     }
 

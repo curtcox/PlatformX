@@ -8,25 +8,25 @@ public final class Run {
     
     private final String source;
     private final String method;
-    private final Context context;
+    private final NamedValueProvider values;
 
-    Run(String source, String method,Context context) {
+    Run(String source, String method,NamedValueProvider values) {
         this.source = source;
         this.method = method;
-        this.context = context;
+        this.values = values;
     }
     
     public static final class Builder {
         private String source;
         private String method;
-        private Context context;
+        private NamedValueProvider context;
         
         public Builder method(String method) {
             this.method = method;
             return this;
         }
 
-        public Builder context(Context context) {
+        public Builder context(NamedValueProvider context) {
             this.context = context;
             return this;
         }
@@ -44,11 +44,11 @@ public final class Run {
     }
     
     private Object invoke(Object... args) {
-        return hash().invoke(method, Args.valuesFor(args), context());
+        return hash().invoke(method, Args.valuesFor(args), combinedHashAndSuppliedContext());
     }
     
-    private Context context() {
-        return context;
+    private Context combinedHashAndSuppliedContext() {
+        return new Context("#",new CompositeNamedValueProvider(values,hash()));
     }
     
     private Hash hash() {

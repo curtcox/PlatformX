@@ -2,7 +2,7 @@ package oc1.screen;
 
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.GridLayout;
-import hash.Context;
+import hash.NamedValueProvider;
 import hash.Run;
 import oc1.event.StringSource;
 import oc1.log.Log;
@@ -63,8 +63,8 @@ public class DynamicScreenLayout
         }
     }
 
-    private Context context(ScreenContext context) {
-        return new Context("#",new ScreenContextAsNamedInvokableProvider(context));
+    private NamedValueProvider context(ScreenContext context) {
+        return new ScreenContextAsNamedValueProvider(context);
     }
     
     private void log(Exception e) {

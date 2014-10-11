@@ -10,7 +10,9 @@ import java.util.Set;
  * central concept of this language as a simple set of named methods.
  * @author Curt
  */
-final class Hash {
+final class Hash
+    implements NamedValueProvider
+{
     
     final Set<Method> methods;
     
@@ -36,10 +38,10 @@ final class Hash {
 
     Object invoke(String methodName,Args args, Context context) {
         Context withArgs = context.withArgValues("#",args);
-        return getMethod(methodName).invokeIn(withArgs);
+        return get(methodName).invokeIn(withArgs);
     }
 
-    private Method getMethod(String name) {
+    public Method get(String name) {
         for (Method method : methods) {
             if (method.name.equals(name)) {
                 return method;

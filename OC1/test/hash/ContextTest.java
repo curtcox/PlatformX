@@ -21,7 +21,7 @@ public class ContextTest {
             return null;
         }
     };
-    Context context = SimpleExpression.newContext(new Hash(),invokable);
+    Context context = new Context("#",SimpleExpression.newContext(new Hash(),invokable));
     
     @Test
     public void get_returns_named_invokable_from_context() {

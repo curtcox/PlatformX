@@ -11,23 +11,30 @@ abstract class SimpleExpression
     implements Expression
 {
 
-    static Context newContext(Hash hash,SimpleExpression... invokables) {
-        Map<String,Expression> map = new HashMap<String,Expression>();
-        for (SimpleExpression invokable : invokables) {
-            map.put(invokable.name, invokable);
-        }
-        for (Method method : hash.methods) {
-            map.put(method.name, method);
-        }
-        return new Context("#",map);        
+    static NamedValueProvider newContext(final Hash hash,final SimpleExpression... expressions) {
+        return new NamedValueProvider() {
+            public Object get(String name) {
+                for (SimpleExpression expression : expressions) {
+                    if (expression.name.equals(name)) {
+                        return expression;
+                    }
+                }
+                return hash.get(name);
+            }
+        };
     }
 
-    static Context newContext(SimpleExpression... invokables) {
-        Map<String,Expression> map = new HashMap<String,Expression>();
-        for (SimpleExpression invokable : invokables) {
-            map.put(invokable.name, invokable);
-        }
-        return new Context("#",map);        
+    static NamedValueProvider newContext(final SimpleExpression... expressions) {
+        return new NamedValueProvider() {
+            public Object get(String name) {
+                for (SimpleExpression expression : expressions) {
+                    if (expression.name.equals(name)) {
+                        return expression;
+                    }
+                }
+                return null;
+            }
+        };
     }
 
     final String name;
