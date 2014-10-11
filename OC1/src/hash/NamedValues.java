@@ -5,12 +5,12 @@ package hash;
  * @author Curt
  * @param <V>
  */
-public interface NamedValues<V> {
+public interface NamedValues {
     /**
     * Returns the value.
     * @param name
     * @return the value
     */
-   V get(String name);
+   Expression get(String name);
 
 }

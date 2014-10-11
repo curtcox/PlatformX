@@ -13,9 +13,9 @@ final class CompositeNamedValues
         this.providers = providers;
     }
     
-    public Object get(String name) {
+    public Expression get(String name) {
         for (NamedValues provider : providers) {
-            Object value = provider.get(name);
+            Expression value = provider.get(name);
             if (value!=null) {
                 return value;
             }

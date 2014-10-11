@@ -9,7 +9,7 @@ import hash.NamedValues;
  * @author Curt
  */
 final class ScreenContextAsNamedValues
-    implements NamedValues<Expression>
+    implements NamedValues
 {
     private final ScreenContext context;
     

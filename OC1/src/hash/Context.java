@@ -9,19 +9,19 @@ import java.util.Map;
  * @author Curt
  */
 final class Context
-    implements NamedValues<Expression>
+    implements NamedValues
 {
 
     final String name;
     final String[] names;
     final Expression[] values;
-    final NamedValues<Expression> expressions;
+    final NamedValues expressions;
     
     public Context(String name) {
         this(name,new SimpleNamedValues(new HashMap()),new String[0],new Expression[0]);
     }
 
-    public Context(String name, NamedValues<Expression> expressions) {
+    public Context(String name, NamedValues expressions) {
         this(name,expressions,new String[0],new Expression[0]);
     }
 
@@ -29,7 +29,7 @@ final class Context
         this(name,new SimpleNamedValues(expressions),new String[0],new Expression[0]);
     }
 
-    private Context(String name,NamedValues<Expression> invokables,String[] names,Expression[] values) {
+    private Context(String name,NamedValues invokables,String[] names,Expression[] values) {
         this.name = name;
         this.expressions = invokables;
         this.names = names;

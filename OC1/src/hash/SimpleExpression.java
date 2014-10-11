@@ -1,8 +1,5 @@
 package hash;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  *
  * @author Curt
@@ -13,7 +10,7 @@ abstract class SimpleExpression
 
     static NamedValues newContext(final Hash hash,final SimpleExpression... expressions) {
         return new NamedValues() {
-            public Object get(String name) {
+            public Expression get(String name) {
                 for (SimpleExpression expression : expressions) {
                     if (expression.name.equals(name)) {
                         return expression;
@@ -26,7 +23,7 @@ abstract class SimpleExpression
 
     static NamedValues newContext(final SimpleExpression... expressions) {
         return new NamedValues() {
-            public Object get(String name) {
+            public Expression get(String name) {
                 for (SimpleExpression expression : expressions) {
                     if (expression.name.equals(name)) {
                         return expression;

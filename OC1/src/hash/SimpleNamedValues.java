@@ -6,17 +6,17 @@ import java.util.Map;
  *
  * @author Curt
  */
-final class SimpleNamedValues<V>
-    implements NamedValues<V>
+final class SimpleNamedValues
+    implements NamedValues
 {
 
-    final Map<String, V> map;
+    final Map<String, Expression> map;
     
-    public SimpleNamedValues(Map<String, V> map) {
+    public SimpleNamedValues(Map<String, Expression> map) {
         this.map = map;
     }
 
-    public V get(String name) {
+    public Expression get(String name) {
         return map.get(name);
     }
     
