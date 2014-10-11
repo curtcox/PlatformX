@@ -5,7 +5,7 @@ package hash;
  * @author Curt
  */
 final class Return
-    implements Invokable
+    implements Expression
 {
     static final class Parser
         extends AbstractParser
@@ -26,9 +26,9 @@ final class Return
         }
     }
     
-    final Invokable expression;
+    final Expression expression;
     
-    Return(Invokable expression) {
+    Return(Expression expression) {
         this.expression = expression;
     }
     

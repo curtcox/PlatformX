@@ -89,19 +89,19 @@ public class ParserTest {
         return new Hash(methods);
     }
    
-    Method Method(String name,Invokable expression) {
+    Method Method(String name,Expression expression) {
         return new Method(name,expression);
     }
 
-    Method Method(String name,ArgNames params, Invokable expression) {
+    Method Method(String name,ArgNames params, Expression expression) {
         return new Method(name,params,expression);
     }
     
-    Return Return(Invokable expression) {
+    Return Return(Expression expression) {
         return new Return(expression);
     }
 
-    Ternary Ternary(Invokable condition, Invokable pass, Invokable fail) {
+    Ternary Ternary(Expression condition, Expression pass, Expression fail) {
         return new Ternary(condition,pass,fail);
     }
 
@@ -113,7 +113,7 @@ public class ParserTest {
         return new Invocation(text,new Args());
     }
 
-    Args Args(Invokable...params) {
+    Args Args(Expression...params) {
         return new Args(params);
     }
 

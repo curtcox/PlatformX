@@ -5,7 +5,7 @@ package hash;
  * @author Curt
  */
 final class Ternary
-    implements Invokable
+    implements Expression
 {
 
     static final class Parser
@@ -15,12 +15,12 @@ final class Ternary
         public Ternary parse(Tokens tokens) {
             tokens.verifyNextIs("(");
             ExpressionParser expressions = new ExpressionParser();
-            Invokable condition = expressions.parse(tokens);
+            Expression condition = expressions.parse(tokens);
             tokens.verifyNextIs(")");
             tokens.verifyNextIs("?");
-            Invokable pass = expressions.parse(tokens);
+            Expression pass = expressions.parse(tokens);
             tokens.verifyNextIs(":");
-            Invokable fail = expressions.parse(tokens);
+            Expression fail = expressions.parse(tokens);
             return new Ternary(condition,pass,fail);
         }    
 
@@ -38,11 +38,11 @@ final class Ternary
         }
     }
     
-    final Invokable condition;
-    final Invokable pass;
-    final Invokable fail;
+    final Expression condition;
+    final Expression pass;
+    final Expression fail;
     
-    Ternary(Invokable condition, Invokable pass, Invokable fail) {
+    Ternary(Expression condition, Expression pass, Expression fail) {
         this.condition = condition;
         this.pass = pass;
         this.fail = fail;

@@ -5,9 +5,9 @@ package hash;
  * Contrast with Value.
  * @author Curt
  */
-public interface Invokable {
+public interface Expression {
     
-    static final Invokable EMPTY = new Invokable() {
+    static final Expression EMPTY = new Expression() {
         public Object invokeIn(Context context) {
             return null;
         }

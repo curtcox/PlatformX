@@ -1,6 +1,6 @@
 package oc1.screen;
 
-import hash.Invokable;
+import hash.Expression;
 import hash.Value;
 import hash.NamedValueProvider;
 
@@ -9,7 +9,7 @@ import hash.NamedValueProvider;
  * @author Curt
  */
 final class ScreenContextAsNamedInvokableProvider
-    implements NamedValueProvider<Invokable>
+    implements NamedValueProvider<Expression>
 {
     private final ScreenContext context;
     
@@ -17,10 +17,10 @@ final class ScreenContextAsNamedInvokableProvider
         this.context = context;
     }
 
-    public Invokable get(String name) {
+    public Expression get(String name) {
         Object value = context.get(name);
-        if (value instanceof Invokable) {
-            return (Invokable) value;
+        if (value instanceof Expression) {
+            return (Expression) value;
         }
         return new Value(value);
     }

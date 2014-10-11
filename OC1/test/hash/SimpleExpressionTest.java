@@ -9,12 +9,12 @@ import static org.junit.Assert.*;
  *
  * @author Curt
  */
-public class SimpleInvokableTest {
+public class SimpleExpressionTest {
 
     String name = "name";
     StringConstant argValue1 = new StringConstant("value1");
     StringConstant argValue2 = new StringConstant("value2");
-    SimpleInvokable testObject = new SimpleInvokable(name) {
+    SimpleExpression testObject = new SimpleExpression(name) {
 
         @Override
         public Object invoke(Object[] args) {
@@ -22,7 +22,7 @@ public class SimpleInvokableTest {
         }
     };
 
-    Map<String,Invokable> contextMap = new HashMap<String,Invokable>();
+    Map<String,Expression> contextMap = new HashMap<String,Expression>();
     Context context = new Context("#",contextMap);
 
     @Test
@@ -32,7 +32,7 @@ public class SimpleInvokableTest {
     
     @Test
     public void invokeIn_uses_context_args() {
-        Context contextWithArgs = context.withArgValues("#",new Args(new Invokable[] { argValue1, argValue2}));
+        Context contextWithArgs = context.withArgValues("#",new Args(new Expression[] { argValue1, argValue2}));
         
         Object[] args = (Object[]) testObject.invokeIn(contextWithArgs);
         

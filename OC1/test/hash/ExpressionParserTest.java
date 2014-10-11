@@ -97,12 +97,12 @@ public class ExpressionParserTest {
             "provider   {^ \"Provider!\"}",
             "navigation {^ \"NAV\"}"
         );
-        SimpleInvokable screen = new SimpleInvokable("screen") {
+        SimpleExpression screen = new SimpleExpression("screen") {
             public Object invoke(Object[] args) {
                 return "X11(" + args[0] + " " + args[1] + " " + args[2] + ")";
             }
         };
-        SimpleInvokable grid = new SimpleInvokable("grid") {
+        SimpleExpression grid = new SimpleExpression("grid") {
             public Object invoke(Object[] args) {
                 return "XxY(" + args[0] + " " + args[1] + ")";
             }
@@ -118,8 +118,8 @@ public class ExpressionParserTest {
         assertEquals("X11(XxY(2 1) Provider! NAV)",value);
     }
     
-    private Context Context(Hash hash,SimpleInvokable... invokables) {
-        return SimpleInvokable.newContext(hash,invokables);
+    private Context Context(Hash hash,SimpleExpression... invokables) {
+        return SimpleExpression.newContext(hash,invokables);
     }
 
     @Test
@@ -127,7 +127,7 @@ public class ExpressionParserTest {
         parse(new Ternary(new Invocation("a"),new Invocation("b"),new Invocation("c")),"(a) ? b : c");
     }
     
-    private void parse(Invokable expression,String string) {
+    private void parse(Expression expression,String string) {
         assertEquals(expression,new ExpressionParser().parse(Tokens.from(string)));
     }
 
@@ -151,7 +151,7 @@ public class ExpressionParserTest {
         return new ExpressionParser().canParse(Tokens.from(string));
     }
 
-    Invocation Invocation(String name, Invokable...args) {
+    Invocation Invocation(String name, Expression...args) {
         return new Invocation(name, new Args(args));
     }
 }

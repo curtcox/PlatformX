@@ -13,7 +13,7 @@ import org.junit.Test;
 public class MethodTest {
     
     final Context[] expressionResult = new Context[1]; 
-    final Invokable expression = new Invokable() {
+    final Expression expression = new Expression() {
         public Object invokeIn(Context context) {
             expressionResult[0] = context;
             return expressionResult;
@@ -23,17 +23,17 @@ public class MethodTest {
     
     @Test
     public void equals_returns_true_for_methods_with_the_same_values() {
-        assertEquals(new Method("",Invokable.EMPTY),new Method("",Invokable.EMPTY));
-        assertEquals(new Method("a",Invokable.EMPTY),new Method("a",Invokable.EMPTY));
+        assertEquals(new Method("",Expression.EMPTY),new Method("",Expression.EMPTY));
+        assertEquals(new Method("a",Expression.EMPTY),new Method("a",Expression.EMPTY));
         assertEquals(new Method("b",new StringConstant("!")),new Method("b",new StringConstant("!")));
-        assertEquals(new Method("b",new ArgNames("a"),Invokable.EMPTY),new Method("b",new ArgNames("a"),Invokable.EMPTY));
+        assertEquals(new Method("b",new ArgNames("a"),Expression.EMPTY),new Method("b",new ArgNames("a"),Expression.EMPTY));
     }
 
     @Test
     public void equals_returns_false_for_methods_with_different_values() {
-        assertNotEquals(new Method("a",Invokable.EMPTY),new Method("b",Invokable.EMPTY));
+        assertNotEquals(new Method("a",Expression.EMPTY),new Method("b",Expression.EMPTY));
         assertNotEquals(new Method("b",new StringConstant("!")),new Method("b",new StringConstant("?")));
-        assertNotEquals(new Method("f",new ArgNames("x"),Invokable.EMPTY),new Method("f",new ArgNames("y"),Invokable.EMPTY));
+        assertNotEquals(new Method("f",new ArgNames("x"),Expression.EMPTY),new Method("f",new ArgNames("y"),Expression.EMPTY));
     }
 
     private void assertEquals(Method a, Method b) {
@@ -96,29 +96,29 @@ public class MethodTest {
     
     @Test
     public void parse_returns_correct_value_for_empty_method() {
-        parse(new Method("x",Invokable.EMPTY),"x{}");
+        parse(new Method("x",Expression.EMPTY),"x{}");
     }
 
     @Test
     public void parse_returns_correct_values_for_multiple_methods() {
         Tokens tokens = Tokens.from("x{} y{}");
-        assertEquals(new Method("x",Invokable.EMPTY),parser.parse(tokens));
-        assertEquals(new Method("y",Invokable.EMPTY),parser.parse(tokens));
+        assertEquals(new Method("x",Expression.EMPTY),parser.parse(tokens));
+        assertEquals(new Method("y",Expression.EMPTY),parser.parse(tokens));
     }
 
     @Test
     public void parse_returns_correct_value_for_method_with_empty_params() {
-        parse(new Method("x",Invokable.EMPTY),"x(){}");
+        parse(new Method("x",Expression.EMPTY),"x(){}");
     }
 
     @Test
     public void parse_returns_correct_value_for_method_with_one_param() {
-        parse(new Method("f",new ArgNames("x"),Invokable.EMPTY),"f(x){}");
+        parse(new Method("f",new ArgNames("x"),Expression.EMPTY),"f(x){}");
     }
 
     @Test
     public void parse_returns_correct_value_for_method_with_two_param() {
-        parse(new Method("f",new ArgNames("x", "y"),Invokable.EMPTY),"f(x y){}");
+        parse(new Method("f",new ArgNames("x", "y"),Expression.EMPTY),"f(x y){}");
     }
 
     @Test
@@ -146,7 +146,7 @@ public class MethodTest {
     
     @Test
     public void toString_contains_name() {
-        assertTrue(Strings.contains(new Method("nuts",Invokable.EMPTY).toString(),"nuts"));
+        assertTrue(Strings.contains(new Method("nuts",Expression.EMPTY).toString(),"nuts"));
     }
 
     @Test
@@ -157,7 +157,7 @@ public class MethodTest {
 
     @Test
     public void toString_contains_args() {
-        String string = new Method("tinker",new ArgNames("evars","chance"),Invokable.EMPTY).toString();
+        String string = new Method("tinker",new ArgNames("evars","chance"),Expression.EMPTY).toString();
         assertTrue(string,Strings.contains(string,"evars"));
         assertTrue(string,Strings.contains(string,"chance"));
     }

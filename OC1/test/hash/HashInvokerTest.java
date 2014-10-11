@@ -24,7 +24,7 @@ public class HashInvokerTest {
             "layout          { ^ (portrait) ? layout_portrait : layout_landscape }",
             "layout_portrait { ^ 'Portrait?' }"
         );
-        SimpleInvokable invokable = new SimpleInvokable("portrait") {
+        SimpleExpression invokable = new SimpleExpression("portrait") {
             public Object invoke(Object[] args) { return true; }
         };
         Object value = hash.invoke("layout",Args(),Context(hash,invokable));
@@ -37,7 +37,7 @@ public class HashInvokerTest {
             "layout           { ^ (portrait) ? layout_portrait : layout_landscape }",
             "layout_landscape { ^ 'Landscape!!' }"
         );
-        SimpleInvokable invokable = new SimpleInvokable("portrait") {
+        SimpleExpression invokable = new SimpleExpression("portrait") {
             public Object invoke(Object[] args) { return false; }
         };
         Object value = hash.invoke("layout",Args(),Context(hash,invokable));
@@ -59,7 +59,7 @@ public class HashInvokerTest {
         Hash hash = hash(
             "button(text image to) {^ textAndImageLeadingTo(text image to) }"
         );
-        SimpleInvokable invokable = new SimpleInvokable("textAndImageLeadingTo") {
+        SimpleExpression invokable = new SimpleExpression("textAndImageLeadingTo") {
             public Object invoke(Object[] args) {
                 return "clickable(" + args[0] + ",img:" + args[1] + "," + args[2] + ")";
             }
@@ -75,12 +75,12 @@ public class HashInvokerTest {
             "provider   {^ 'Provider!'}",
             "navigation {^ 'NAV'}"
         );
-        SimpleInvokable screen = new SimpleInvokable("screen") {
+        SimpleExpression screen = new SimpleExpression("screen") {
             public Object invoke(Object[] args) {
                 return "screen(" + args[0] + " " + args[1] + " " + args[2] + ")";
             }
         };
-        SimpleInvokable grid = new SimpleInvokable("grid") {
+        SimpleExpression grid = new SimpleExpression("grid") {
             public Object invoke(Object[] args) {
                 return "grid(" + args[0] + " " + args[1] + ")";
             }
@@ -94,12 +94,12 @@ public class HashInvokerTest {
         return parse(lines(lines));    
     }
     
-    private Args Args(Invokable...expressions) {
+    private Args Args(Expression...expressions) {
         return new Args(expressions);
     }
     
-    private Context Context(Hash hash,SimpleInvokable... invokables) {
-        return SimpleInvokable.newContext(hash,invokables);
+    private Context Context(Hash hash,SimpleExpression... invokables) {
+        return SimpleExpression.newContext(hash,invokables);
     }
 
 

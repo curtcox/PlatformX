@@ -17,7 +17,7 @@ final class ExpressionParser
     }
 
     @Override
-    public Invokable parse(Tokens tokens) {
-        return (Invokable) super.parse(tokens);
+    public Expression parse(Tokens tokens) {
+        return (Expression) super.parse(tokens);
     } 
 }

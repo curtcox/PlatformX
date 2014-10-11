@@ -84,8 +84,8 @@ public class TernaryTest {
     }
 
     private Context Context(final boolean condition) {
-        Map<String,Invokable> map = new HashMap<String,Invokable>();
-        SimpleInvokable invokable = new SimpleInvokable("if") {
+        Map<String,Expression> map = new HashMap<String,Expression>();
+        SimpleExpression invokable = new SimpleExpression("if") {
             public Object invoke(Object[] args) {
                 return condition;
             }

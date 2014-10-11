@@ -7,13 +7,13 @@ import java.util.Map;
  *
  * @author Curt
  */
-abstract class SimpleInvokable
-    implements Invokable
+abstract class SimpleExpression
+    implements Expression
 {
 
-    static Context newContext(Hash hash,SimpleInvokable... invokables) {
-        Map<String,Invokable> map = new HashMap<String,Invokable>();
-        for (SimpleInvokable invokable : invokables) {
+    static Context newContext(Hash hash,SimpleExpression... invokables) {
+        Map<String,Expression> map = new HashMap<String,Expression>();
+        for (SimpleExpression invokable : invokables) {
             map.put(invokable.name, invokable);
         }
         for (Method method : hash.methods) {
@@ -22,9 +22,9 @@ abstract class SimpleInvokable
         return new Context("#",map);        
     }
 
-    static Context newContext(SimpleInvokable... invokables) {
-        Map<String,Invokable> map = new HashMap<String,Invokable>();
-        for (SimpleInvokable invokable : invokables) {
+    static Context newContext(SimpleExpression... invokables) {
+        Map<String,Expression> map = new HashMap<String,Expression>();
+        for (SimpleExpression invokable : invokables) {
             map.put(invokable.name, invokable);
         }
         return new Context("#",map);        
@@ -32,7 +32,7 @@ abstract class SimpleInvokable
 
     final String name;
     
-    SimpleInvokable(String name) {
+    SimpleExpression(String name) {
         this.name = name;
     }
 

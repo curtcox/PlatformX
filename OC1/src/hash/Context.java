@@ -9,36 +9,36 @@ import java.util.Map;
  * @author Curt
  */
 public final class Context
-    implements NamedValueProvider<Invokable>
+    implements NamedValueProvider<Expression>
 {
 
     final String name;
     final String[] names;
-    final Invokable[] values;
-    final NamedValueProvider<Invokable> invokables;
+    final Expression[] values;
+    final NamedValueProvider<Expression> invokables;
     
     public Context(String name) {
-        this(name,new SimpleNamedValueProvider(new HashMap()),new String[0],new Invokable[0]);
+        this(name,new SimpleNamedValueProvider(new HashMap()),new String[0],new Expression[0]);
     }
 
-    public Context(String name, NamedValueProvider<Invokable> invokables) {
-        this(name,invokables,new String[0],new Invokable[0]);
+    public Context(String name, NamedValueProvider<Expression> invokables) {
+        this(name,invokables,new String[0],new Expression[0]);
     }
 
-    public Context(String name, Map<String,Invokable> invokables) {
-        this(name,new SimpleNamedValueProvider(invokables),new String[0],new Invokable[0]);
+    public Context(String name, Map<String,Expression> invokables) {
+        this(name,new SimpleNamedValueProvider(invokables),new String[0],new Expression[0]);
     }
 
-    private Context(String name,NamedValueProvider<Invokable> invokables,String[] names,Invokable[] values) {
+    private Context(String name,NamedValueProvider<Expression> invokables,String[] names,Expression[] values) {
         this.name = name;
         this.invokables = invokables;
         this.names = names;
         this.values = values;
     }
 
-    public Invokable get(String name) {
+    public Expression get(String name) {
         verifyThereAreEnoughArgs();
-        Invokable invokable = get0(name);
+        Expression invokable = get0(name);
         if (invokable==null) {
             throw exceptionForMissing(name);
         }
@@ -57,7 +57,7 @@ public final class Context
             "No value for " + name + " in context " + Arrays.asList(names) + " or args " + invokables);
     }
     
-    private Invokable get0(String name) {
+    private Expression get0(String name) {
         for (int i=0; i<names.length; i++) {
             if (name.equals(names[i])) {
                 return values[i];

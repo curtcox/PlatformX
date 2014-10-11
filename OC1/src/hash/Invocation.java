@@ -11,7 +11,7 @@ import java.util.List;
  * @author Curt
  */
 final class Invocation 
-    implements Invokable
+    implements Expression
 {
 
     static final class Parser
@@ -22,12 +22,12 @@ final class Invocation
             if (!Identifier.isValid(value)) {
                 throw new IllegalArgumentException();
             }
-            List<Invokable> args = parseArgs(tokens);
-            return new Invocation(value,new Args(args.toArray(new Invokable[0])));
+            List<Expression> args = parseArgs(tokens);
+            return new Invocation(value,new Args(args.toArray(new Expression[0])));
         }    
 
-        List<Invokable> parseArgs(Tokens tokens) {
-            List<Invokable> args = new ArrayList<Invokable>();
+        List<Expression> parseArgs(Tokens tokens) {
+            List<Expression> args = new ArrayList<Expression>();
             if (tokens.peekIs("(")) {
                 tokens.next();
                 ExpressionParser expressions = new ExpressionParser();

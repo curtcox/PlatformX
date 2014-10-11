@@ -13,15 +13,15 @@ import static org.junit.Assert.*;
 public class ContextTest {
 
     String name = "foo";
-    Invokable value = new StringConstant("Galore");
-    Args args = new Args(new Invokable[] {value});
-    SimpleInvokable invokable = new SimpleInvokable(name) {
+    Expression value = new StringConstant("Galore");
+    Args args = new Args(new Expression[] {value});
+    SimpleExpression invokable = new SimpleExpression(name) {
         @Override
         public Object invoke(Object[] args) {
             return null;
         }
     };
-    Context context = SimpleInvokable.newContext(new Hash(),invokable);
+    Context context = SimpleExpression.newContext(new Hash(),invokable);
     
     @Test
     public void get_returns_named_invokable_from_context() {
@@ -53,7 +53,7 @@ public class ContextTest {
 
     @Test
     public void toString_contains_invokable_names() {
-        Map<String,Invokable> map = new HashMap<String,Invokable>();
+        Map<String,Expression> map = new HashMap<String,Expression>();
         map.put("Plenty",value);
         Context testObject = new Context("#",map);
         assertTrue(Strings.contains(testObject.toString(),"Plenty"));
