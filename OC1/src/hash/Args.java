@@ -47,7 +47,7 @@ final class Args {
     Args valuesFor(Context context) {
         Value[] values = new Value[args.length];
         for (int i=0; i<values.length; i++) {
-            values[i] = new Value(args[i].invokeIn(context));
+            values[i] = Value.of(args[i].invokeIn(context));
         }
         return new Args(values);
     }
@@ -55,7 +55,7 @@ final class Args {
     static Args valuesFor(Object... objects) {
         Value[] values = new Value[objects.length];
         for (int i=0; i<values.length; i++) {
-            values[i] = new Value(objects[i]);
+            values[i] = Value.of(objects[i]);
         }
         return new Args(values);
     }

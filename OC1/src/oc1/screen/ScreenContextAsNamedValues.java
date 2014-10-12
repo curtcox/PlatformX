@@ -22,7 +22,7 @@ final class ScreenContextAsNamedValues
         if (value instanceof Expression) {
             return (Expression) value;
         }
-        return new Value(value);
+        return Value.of(value);
     }
     
 }

@@ -14,7 +14,7 @@ public class RunTest {
         Object value = Run
             .source(lines("foo { ^ 'foo' }"))
             .method("foo")
-            .context(Context())
+            .namedValues(Context())
             .args();
         assertEquals("foo",value);
     }
@@ -31,13 +31,13 @@ public class RunTest {
         Object value = Run
             .source(source)
             .method("layout")
-            .context(Context(invokable))
+            .namedValues(Context(invokable))
             .args();
         assertEquals("Portrait?",value);
     }
 
-    private NamedValues Context(SimpleExpression... invokables) {
-        return SimpleExpression.newContext(invokables);
+    private NamedValues Context(SimpleExpression... expressions) {
+        return SimpleExpression.newContext(expressions);
     }
 
     private String lines(String...lines) {

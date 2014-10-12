@@ -22,11 +22,11 @@ public class DynamicScreenLayout
     }
 
     public ScreenLayout getLayout(ScreenContext context) {
-        String hashSourceCode = source.getString();
-        if (!isValidHash(hashSourceCode)) {
+        String sourceCode = source.getString();
+        if (!isValidHash(sourceCode)) {
             return messageScreen("Source is not valid Hash");
         }
-        return screenForResult(getLayoutFromHash(hashSourceCode,context));
+        return screenForResult(getLayoutFromHash(sourceCode,context));
     }
 
     private boolean isValidHash(String sourceCode) {
@@ -55,7 +55,7 @@ public class DynamicScreenLayout
             return Run
                 .source(sourceCode)
                 .method("layout")
-                .context(context(context))
+                .namedValues(context(context))
                 .args();
         } catch (Exception e) {
             log(e);

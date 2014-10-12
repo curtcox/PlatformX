@@ -1,7 +1,7 @@
 package hash;
 
 /**
- * Something that has a value.  Contrast with Invokable.
+ * Something that has a value.  Contrast with Expression.
  * @author Curt
  */
 public final class Value
@@ -9,10 +9,14 @@ public final class Value
 {
     final Object value;
 
-    public Value(Object value) {
+    private Value(Object value) {
         this.value = value;
     }
 
+    public static Value of(Object value) {
+        return value==null ? null : new Value(value);    
+    }
+    
     public Object invokeIn(Context context) {
         return value;
     }

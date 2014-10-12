@@ -26,8 +26,8 @@ public final class Run {
             return this;
         }
 
-        public Builder context(NamedValues context) {
-            this.context = context;
+        public Builder namedValues(NamedValues namedValues) {
+            this.context = namedValues;
             return this;
         }
 
@@ -44,10 +44,10 @@ public final class Run {
     }
     
     private Object invoke(Object... args) {
-        return hash().invoke(method, Args.valuesFor(args), combinedHashAndSuppliedContext());
+        return hash().invoke(method, Args.valuesFor(args), combinedHashAndNamedValues());
     }
     
-    private Context combinedHashAndSuppliedContext() {
+    private Context combinedHashAndNamedValues() {
         return new Context("#",new CompositeNamedValues(values,hash()));
     }
     
