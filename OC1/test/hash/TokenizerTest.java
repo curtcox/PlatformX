@@ -1,5 +1,6 @@
-package oc1.util;
+package hash;
 
+import hash.Tokenizer;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

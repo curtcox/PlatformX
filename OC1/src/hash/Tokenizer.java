@@ -1,10 +1,10 @@
-package oc1.util;
+package hash;
 
 /**
  *
  * @author Curt
  */
-public final class Tokenizer {
+final class Tokenizer {
 
     public static String[] tokenize(String string,String... tokens) {
         int at = startOfFirst(string,tokens);
