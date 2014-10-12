@@ -4,7 +4,7 @@ package hash;
  *
  * @author Curt
  */
-public abstract class AbstractParser
+abstract class AbstractParser
     implements IParser
 {
     public final boolean canParse(Tokens tokens) {

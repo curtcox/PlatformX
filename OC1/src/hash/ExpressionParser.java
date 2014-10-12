@@ -1,7 +1,7 @@
 package hash;
 
 /**
- * 
+ * For parsing expressions.
  * @author Curt
  */
 final class ExpressionParser
