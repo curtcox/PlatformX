@@ -4,14 +4,14 @@ package hash;
  *
  * @author Curt
  */
-abstract class SimpleExpression
+abstract class NamedExpression
     implements Expression
 {
 
-    static NamedValues newContext(final Hash hash,final SimpleExpression... expressions) {
+    static NamedValues namedValues(final Hash hash,final NamedExpression... expressions) {
         return new NamedValues() {
             public Expression get(String name) {
-                for (SimpleExpression expression : expressions) {
+                for (NamedExpression expression : expressions) {
                     if (expression.name.equals(name)) {
                         return expression;
                     }
@@ -21,10 +21,10 @@ abstract class SimpleExpression
         };
     }
 
-    static NamedValues newContext(final SimpleExpression... expressions) {
+    static NamedValues namedValues(final NamedExpression... expressions) {
         return new NamedValues() {
             public Expression get(String name) {
-                for (SimpleExpression expression : expressions) {
+                for (NamedExpression expression : expressions) {
                     if (expression.name.equals(name)) {
                         return expression;
                     }
@@ -36,7 +36,7 @@ abstract class SimpleExpression
 
     final String name;
     
-    SimpleExpression(String name) {
+    NamedExpression(String name) {
         this.name = name;
     }
 

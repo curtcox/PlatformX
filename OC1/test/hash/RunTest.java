@@ -25,7 +25,7 @@ public class RunTest {
             "layout          { ^ (portrait) ? layout_portrait : layout_landscape }",
             "layout_portrait { ^ 'Portrait?' }"
         );
-        SimpleExpression invokable = new SimpleExpression("portrait") {
+        NamedExpression invokable = new NamedExpression("portrait") {
             public Object invoke(Object[] args) { return true; }
         };
         Object value = Run
@@ -36,8 +36,8 @@ public class RunTest {
         assertEquals("Portrait?",value);
     }
 
-    private NamedValues Context(SimpleExpression... expressions) {
-        return SimpleExpression.newContext(expressions);
+    private NamedValues Context(NamedExpression... expressions) {
+        return NamedExpression.namedValues(expressions);
     }
 
     private String lines(String...lines) {

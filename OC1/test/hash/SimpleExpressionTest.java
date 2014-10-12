@@ -14,7 +14,7 @@ public class SimpleExpressionTest {
     String name = "name";
     StringConstant argValue1 = new StringConstant("value1");
     StringConstant argValue2 = new StringConstant("value2");
-    SimpleExpression testObject = new SimpleExpression(name) {
+    NamedExpression testObject = new NamedExpression(name) {
 
         @Override
         public Object invoke(Object[] args) {

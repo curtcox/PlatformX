@@ -97,12 +97,12 @@ public class ExpressionParserTest {
             "provider   {^ \"Provider!\"}",
             "navigation {^ \"NAV\"}"
         );
-        SimpleExpression screen = new SimpleExpression("screen") {
+        NamedExpression screen = new NamedExpression("screen") {
             public Object invoke(Object[] args) {
                 return "X11(" + args[0] + " " + args[1] + " " + args[2] + ")";
             }
         };
-        SimpleExpression grid = new SimpleExpression("grid") {
+        NamedExpression grid = new NamedExpression("grid") {
             public Object invoke(Object[] args) {
                 return "XxY(" + args[0] + " " + args[1] + ")";
             }
@@ -118,8 +118,8 @@ public class ExpressionParserTest {
         assertEquals("X11(XxY(2 1) Provider! NAV)",value);
     }
     
-    private Context Context(Hash hash,SimpleExpression... invokables) {
-        return new Context("#",SimpleExpression.newContext(hash,invokables));
+    private Context Context(Hash hash,NamedExpression... invokables) {
+        return new Context("#",NamedExpression.namedValues(hash,invokables));
     }
 
     @Test

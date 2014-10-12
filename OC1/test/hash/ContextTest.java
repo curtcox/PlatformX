@@ -15,13 +15,13 @@ public class ContextTest {
     String name = "foo";
     Expression value = new StringConstant("Galore");
     Args args = new Args(new Expression[] {value});
-    SimpleExpression invokable = new SimpleExpression(name) {
+    NamedExpression invokable = new NamedExpression(name) {
         @Override
         public Object invoke(Object[] args) {
             return null;
         }
     };
-    Context context = new Context("#",SimpleExpression.newContext(new Hash(),invokable));
+    Context context = new Context("#",NamedExpression.namedValues(new Hash(),invokable));
     
     @Test
     public void get_returns_named_invokable_from_context() {
