@@ -4,35 +4,56 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- *
+ * For splitting a string into tokens.
+ * See also Tokenizer, which it uses under-the-covers.
  * @author Curt
  */
 final class Lexer {
 
-    static String[] split(String string) {
-        List<String> parts = new ArrayList<String>();
-        boolean quoting = false;
-        StringBuilder quoted = new StringBuilder();
+    private final List<String> parts = new ArrayList<String>();
+    private boolean quoting = false;
+    private StringBuilder quoted = new StringBuilder();
+
+    private Lexer() {}
+    
+    private String[] splitIntoParts(String string) {
         for (String part : parts(string)) {
             if (quoting) {
                 quoted.append(part);
                 if (quote(part)) {
-                    parts.add(quoted.toString());
-                    quoting = false;
-                    quoted = new StringBuilder();
+                    endQuote();
                 }
             } else {
                 if (quote(part)) {
-                    quoting = true;
-                    quoted.append(part);
+                    beginQuote(part);
                 } else {
-                    if (!part.trim().equals("")) {
+                    if (!whitespace(part)) {
                         parts.add(part);
                     }
                 }
             }
         }
         return parts.toArray(new String[0]);
+    }
+
+    private void beginQuote(String part) {
+        quoting = true;
+        quoted.append(part);
+    }
+    
+    private void endQuote() {
+        parts.add(quoted.toString());
+        quoting = false;
+        quoted = new StringBuilder();
+    }
+
+    private boolean whitespace(String string) {
+        return string.trim().equals("");
+    }
+    
+    static String[] split(String string) {
+        Lexer lexer = new Lexer();
+        return lexer.splitIntoParts(string);
     }
 
     private static boolean quote(String string) {

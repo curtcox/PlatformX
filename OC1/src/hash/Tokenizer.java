@@ -1,7 +1,8 @@
 package hash;
 
 /**
- *
+ * For splitting a string into tokens.
+ * See also Lexer, which wraps Tokenizer to correctly handle quotes.
  * @author Curt
  */
 final class Tokenizer {

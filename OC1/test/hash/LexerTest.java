@@ -9,8 +9,6 @@ import static org.junit.Assert.*;
  */
 public class LexerTest {
     
-    Lexer testObject = new Lexer();
-    
     @Test
     public void split_returns_proper_parts() {
         split("");    
@@ -103,7 +101,7 @@ public class LexerTest {
     }
 
     private void split(String original,String... expected) {
-        String[] actual = testObject.split(original);
+        String[] actual = Lexer.split(original);
         assertEquals(expected.length,actual.length);
         for (int i=0; i<expected.length; i++) {
             assertEquals(expected[i],actual[i]);
