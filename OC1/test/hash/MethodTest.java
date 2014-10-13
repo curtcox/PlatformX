@@ -1,5 +1,6 @@
 package hash;
 
+import hash.lex.Tokens;
 import java.util.HashMap;
 import oc1.util.Strings;
 import org.junit.Assert;

@@ -1,5 +1,7 @@
 package hash;
 
+import hash.lex.Tokens;
+
 /**
  *
  * @author Curt

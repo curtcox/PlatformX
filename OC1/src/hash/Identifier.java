@@ -4,22 +4,19 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- *
- * @author Curt
- */
-final class Identifier {
+public final class Identifier {
 
     /**
      * Characters that cannot be part of an identifier
      */
-    static final String[] SPECIAL = new String[] {
+    public static final String[] SPECIAL = new String[] {
         " ", "\t", "\r", "\n", 
         ".", "?", ":", ",", "\"", "^", "{", "}", "(", ")"
     };
     
     private static final Set<String> reject = new HashSet(Arrays.asList(SPECIAL));
-    static boolean isValid(String value) {
+    
+    public static boolean isValid(String value) {
         if (Number.isValid(value)) {
             return false;
         }

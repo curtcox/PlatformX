@@ -1,9 +1,7 @@
 package hash;
 
-/**
- *
- * @author Curt
- */
+import hash.lex.Tokens;
+
 abstract class AbstractParser
     implements IParser
 {

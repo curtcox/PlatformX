@@ -1,4 +1,4 @@
-package hash;
+package hash.lex;
 
 /**
  * For splitting a string into tokens.

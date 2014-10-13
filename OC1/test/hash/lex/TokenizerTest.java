@@ -1,5 +1,6 @@
-package hash;
+package hash.lex;
 
+import hash.lex.Tokenizer;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

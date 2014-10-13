@@ -1,4 +1,4 @@
-package hash;
+package hash.lex;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -8,11 +8,11 @@ import java.util.List;
  *
  * @author Curt
  */
-final class Tokens {
+public final class Tokens {
 
     final List<String>tokens;
     
-    static Tokens from(String string) {
+    public static Tokens from(String string) {
         return new Tokens(Lexer.split(string));
     }
 
@@ -20,31 +20,31 @@ final class Tokens {
         this.tokens = new ArrayList(Arrays.asList(tokens));
     }
 
-    boolean hasNext() {
+    public boolean hasNext() {
         return !tokens.isEmpty();
     }
 
-    String next() {
+    public String next() {
         return tokens.remove(0);
     }
 
-    String peek() {
+    public String peek() {
         return tokens.get(0);
     }
 
-    Tokens copy() {
+    public Tokens copy() {
         return new Tokens(tokens.toArray(new String[0]));
     }
 
-    boolean nextIs(String value) {
+    public boolean nextIs(String value) {
         return hasNext() && next().equals(value);
     }
 
-    boolean peekIs(String value) {
+    public boolean peekIs(String value) {
         return hasNext() && peek().equals(value);
     }
 
-    void verifyNextIs(String expected) {
+    public void verifyNextIs(String expected) {
         if (!expected.equals(next())) {
             throw new IllegalArgumentException();
         }

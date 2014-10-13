@@ -1,5 +1,7 @@
 package hash;
 
+import hash.lex.Tokens;
+
 /**
  * For parsing expressions.
  * @author Curt
