@@ -1,6 +1,7 @@
 package oc1.screen;
 
 import com.codename1.ui.Label;
+import com.codename1.ui.layouts.GridLayout;
 import fake.FakeRegistryLoader;
 import oc1.event.StringSource;
 import oc1.util.Strings;
@@ -8,10 +9,6 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
-/**
- *
- * @author Curt
- */
 public class DynamicScreenLayoutTest {
 
     String sourceCode;
@@ -55,6 +52,17 @@ public class DynamicScreenLayoutTest {
         ScreenLayout actual = testObject.getLayout(context);
         Label label = (Label) actual.components[0];
         assertEquals("Whatever",label.getText());
+    }
+
+    @Test
+    public void getLayout_returns_grid_with_components_when_layout_specifies_a_grid() {
+        sourceCode = lines("layout { ^grid(1 2 'one' 'two') }");
+        ScreenLayout actual = testObject.getLayout(context);
+        assertEquals(new GridLayout(1,2),actual.layout);
+        Label label1 = (Label) actual.components[0];
+        Label label2 = (Label) actual.components[1];
+        assertEquals("one",label1.getText());
+        assertEquals("two",label2.getText());
     }
 
     @Test

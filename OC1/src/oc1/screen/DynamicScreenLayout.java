@@ -8,10 +8,6 @@ import oc1.event.StringSource;
 import oc1.log.Log;
 import oc1.log.LogManager;
 
-/**
- *
- * @author Curt
- */
 public class DynamicScreenLayout
     implements ScreenLayout.Provider
 {
