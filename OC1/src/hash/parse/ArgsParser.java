@@ -7,10 +7,6 @@ import hash.lex.Tokens;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author curt
- */
 final class ArgsParser
     extends AbstractParser
 {

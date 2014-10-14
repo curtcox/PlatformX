@@ -1,6 +1,6 @@
 package hash;
 
-import hash.parse.Parser;
+import hash.parse.HashParser;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
@@ -10,7 +10,7 @@ import org.junit.Test;
  */
 public class HashInvokerTest {
 
-    Parser parser = new Parser();
+    HashParser parser = new HashParser();
 
     @Test
     public void invoke_method_that_returns_constant() {

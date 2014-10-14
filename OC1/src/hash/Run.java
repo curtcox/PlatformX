@@ -1,6 +1,6 @@
 package hash;
 
-import hash.parse.Parser;
+import hash.parse.HashParser;
 
 /**
  * For running a method from source in a given context.
@@ -54,7 +54,7 @@ public final class Run {
     }
     
     private Hash hash() {
-        return new Parser().parse(source);
+        return new HashParser().parse(source);
     }
 
 }

@@ -2,10 +2,6 @@ package hash.parse;
 
 import hash.lex.Tokens;
 
-/**
- *
- * @author Curt
- */
 class CompositeParser
     extends AbstractParser
 {

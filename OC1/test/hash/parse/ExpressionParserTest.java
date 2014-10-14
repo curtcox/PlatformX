@@ -103,7 +103,7 @@ public class ExpressionParserTest {
     }
 
     private Hash parse(String original) {
-        return new Parser().parse(original);
+        return new HashParser().parse(original);
     }
 
     private String lines(String...lines) {

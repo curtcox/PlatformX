@@ -3,10 +3,6 @@ package hash;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
 public class RunTest {
     
     @Test

@@ -1,6 +1,5 @@
 package hash.parse;
 
-import hash.parse.IParser;
 import hash.lex.Tokens;
 
 abstract class AbstractParser

@@ -4,10 +4,6 @@ import hash.NumericConstant;
 import hash.Number;
 import hash.lex.Tokens;
 
-/**
- *
- * @author Curt
- */
 final class NumericConstantParser 
     extends AbstractParser
 {

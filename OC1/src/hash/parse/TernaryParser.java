@@ -4,10 +4,6 @@ import hash.Expression;
 import hash.Ternary;
 import hash.lex.Tokens;
 
-/**
- *
- * @author Curt
- */
 final class TernaryParser
     extends AbstractParser
 {

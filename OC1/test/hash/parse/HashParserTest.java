@@ -10,7 +10,7 @@ import hash.NumericConstant;
 import hash.Return;
 import hash.StringConstant;
 import hash.Ternary;
-import hash.parse.Parser;
+import hash.parse.HashParser;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
@@ -20,9 +20,9 @@ import org.junit.Test;
  *
  * @author Curt
  */
-public class ParserTest {
+public class HashParserTest {
 
-    Parser testObject = new Parser();
+    HashParser testObject = new HashParser();
 
     @Test
     public void parse_hash_with_return_foo() {

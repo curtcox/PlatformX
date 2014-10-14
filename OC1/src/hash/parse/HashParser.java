@@ -6,11 +6,7 @@ import hash.lex.Tokens;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author Curt
- */
-public final class Parser {
+public final class HashParser {
 
     public Hash parse(String source) {
         List<Method> methods = new ArrayList<Method>();
