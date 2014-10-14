@@ -1,5 +1,16 @@
-package hash;
+package hash.parse;
 
+import hash.ArgNames;
+import hash.Args;
+import hash.Expression;
+import hash.Hash;
+import hash.Invocation;
+import hash.Method;
+import hash.NumericConstant;
+import hash.Return;
+import hash.StringConstant;
+import hash.Ternary;
+import hash.parse.Parser;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.assertEquals;

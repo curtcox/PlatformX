@@ -1,5 +1,7 @@
-package hash;
+package hash.parse;
 
+import hash.Hash;
+import hash.Method;
 import hash.lex.Tokens;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,11 +10,11 @@ import java.util.List;
  *
  * @author Curt
  */
-final class Parser {
+public final class Parser {
 
-    Hash parse(String source) {
+    public Hash parse(String source) {
         List<Method> methods = new ArrayList<Method>();
-        Method.Parser parser = new Method.Parser();
+        MethodParser parser = new MethodParser();
         Tokens tokens = Tokens.from(source);
         while (parser.canParse(tokens)) {
             methods.add(parser.parse(tokens));

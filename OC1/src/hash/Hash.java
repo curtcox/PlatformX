@@ -10,13 +10,13 @@ import java.util.Set;
  * central concept of this language as a simple set of named methods.
  * @author Curt
  */
-final class Hash
+public final class Hash
     implements NamedValues
 {
     
     final Set<Method> methods;
     
-    Hash(Method...methods) {
+    public Hash(Method...methods) {
         this.methods = new HashSet<Method>(Arrays.asList(methods));
     }
 

@@ -1,5 +1,6 @@
 package hash;
 
+import hash.parse.Parser;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
@@ -89,7 +90,42 @@ public class HashInvokerTest {
         Object value = hash.invoke("layout",Args(),Context(hash,screen,grid));
         assertEquals("screen(grid(2 1) Provider! NAV)",value);
     }
+
+    @Test
+    public void invokeIn_uses_values_from_context() {
+        Hash hash = hash(
+            "provider   {^ \"Provider!\"}",
+            "navigation {^ \"NAV\"}"
+        );
+        NamedExpression screen = new NamedExpression("screen") {
+            public Object invoke(Object[] args) {
+                return "X11(" + args[0] + " " + args[1] + " " + args[2] + ")";
+            }
+        };
+        NamedExpression grid = new NamedExpression("grid") {
+            public Object invoke(Object[] args) {
+                return "XxY(" + args[0] + " " + args[1] + ")";
+            }
+        };
+
+        Invocation invocation = Invocation("screen", 
+            Invocation("grid",new NumericConstant(2),new NumericConstant(1)),
+            Invocation("provider"),
+            Invocation("navigation")
+        );
+
+        Object value = invocation.invokeIn(Context(hash,screen,grid));
+        assertEquals("X11(XxY(2 1) Provider! NAV)",value);
+    }
     
+    private Context Context(Hash hash,NamedExpression... invokables) {
+        return new Context("#",NamedExpression.namedValues(hash,invokables));
+    }
+
+    Invocation Invocation(String name, Expression...args) {
+        return new Invocation(name, new Args(args));
+    }
+
     private Hash hash(String...lines) {
         return parse(lines(lines));    
     }
@@ -98,11 +134,6 @@ public class HashInvokerTest {
         return new Args(expressions);
     }
     
-    private Context Context(Hash hash,NamedExpression... invokables) {
-        return new Context("#",NamedExpression.namedValues(hash,invokables));
-    }
-
-
     private StringConstant Const(String string) {
         return new StringConstant(string);
     }

@@ -6,10 +6,6 @@ import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
 public class ContextTest {
 
     String name = "foo";

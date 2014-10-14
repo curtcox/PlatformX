@@ -1,15 +1,10 @@
 package hash;
 
-import hash.lex.Tokens;
 import java.util.HashMap;
 import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
 public class ReturnTest {
     
     @Test
@@ -33,37 +28,6 @@ public class ReturnTest {
         assertFalse(b.equals(a));
     }
     
-    @Test
-    public void parse_returns_correct_value_for_constants() {
-        parse(new Return(new StringConstant("")),"^ \"\"");
-        parse(new Return(new StringConstant("foo")),"^ \"foo\"");
-    }
-
-    @Test
-    public void parse_returns_correct_value_for_invocations() {
-        parse(new Return(new Invocation("foo")),"^ foo");
-    }
-
-    @Test
-    public void canParse_returns_true_when_starts_with_return() {
-        assertTrue(canParse("^ foo"));
-    }
-
-    @Test
-    public void canParse_returns_false_when_does_not_start_with_return() {
-        assertFalse(canParse(""));
-        assertFalse(canParse("?"));
-        assertFalse(canParse(":"));
-    }
-    
-    private void parse(Return ret,String string) {
-        assertEquals(ret,new Return.Parser().parse(Tokens.from(string)));
-    }
-
-    private boolean canParse(String string) {
-        return new Return.Parser().canParse(Tokens.from(string));
-    }
-
     @Test
     public void toString_contains_return_character() {
         assertTrue(Strings.contains(new Return(new StringConstant("")).toString(),"^"));

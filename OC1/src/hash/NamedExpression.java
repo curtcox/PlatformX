@@ -1,14 +1,10 @@
 package hash;
 
-/**
- *
- * @author Curt
- */
-abstract class NamedExpression
+public abstract class NamedExpression
     implements Expression
 {
 
-    static NamedValues namedValues(final Hash hash,final NamedExpression... expressions) {
+    public static NamedValues namedValues(final Hash hash,final NamedExpression... expressions) {
         return new NamedValues() {
             public Expression get(String name) {
                 for (NamedExpression expression : expressions) {
@@ -21,7 +17,7 @@ abstract class NamedExpression
         };
     }
 
-    static NamedValues namedValues(final NamedExpression... expressions) {
+    public static NamedValues namedValues(final NamedExpression... expressions) {
         return new NamedValues() {
             public Expression get(String name) {
                 for (NamedExpression expression : expressions) {
@@ -36,7 +32,7 @@ abstract class NamedExpression
 
     final String name;
     
-    NamedExpression(String name) {
+    public NamedExpression(String name) {
         this.name = name;
     }
 

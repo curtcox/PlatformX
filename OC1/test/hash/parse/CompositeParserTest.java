@@ -1,5 +1,8 @@
-package hash;
+package hash.parse;
 
+import hash.Args;
+import hash.Invocation;
+import hash.StringConstant;
 import hash.lex.Tokens;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -10,7 +13,7 @@ import static org.junit.Assert.*;
  */
 public class CompositeParserTest {
     
-    CompositeParser testObject = new CompositeParser(new StringConstant.Parser(),new Invocation.Parser());
+    CompositeParser testObject = new CompositeParser(new StringConstantParser(),new InvocationParser());
     
     @Test
     public void canParse_returns_true_if_any_component_can_parse() {

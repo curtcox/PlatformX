@@ -1,4 +1,4 @@
-package hash;
+package hash.parse;
 
 import hash.lex.Tokens;
 

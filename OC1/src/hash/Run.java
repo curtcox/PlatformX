@@ -1,5 +1,7 @@
 package hash;
 
+import hash.parse.Parser;
+
 /**
  * For running a method from source in a given context.
  * @author Curt

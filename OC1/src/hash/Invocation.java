@@ -1,9 +1,5 @@
 package hash;
 
-import hash.lex.Tokens;
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * A named runtime invocation, possibly with arguments.
  * Invocations can be used as part of a method definition.
@@ -11,60 +7,17 @@ import java.util.List;
  * this could be thought of as method invocation or a variable lookup.
  * @author Curt
  */
-final class Invocation 
+public final class Invocation 
     implements Expression
 {
-
-    static final class Parser
-        extends AbstractParser
-    {
-        public Invocation parse(Tokens tokens) {
-            String value = tokens.next();
-            if (!Identifier.isValid(value)) {
-                throw new IllegalArgumentException();
-            }
-            List<Expression> args = parseArgs(tokens);
-            return new Invocation(value,new Args(args.toArray(new Expression[0])));
-        }    
-
-        List<Expression> parseArgs(Tokens tokens) {
-            List<Expression> args = new ArrayList<Expression>();
-            if (tokens.peekIs("(")) {
-                tokens.next();
-                ExpressionParser expressions = new ExpressionParser();
-                while (!tokens.peekIs(")")) {
-                    args.add(expressions.parse(tokens));
-                }
-                tokens.next();
-            }
-            return args;
-        }
-        
-        public boolean canParseTokens(Tokens tokens) {
-            if (!tokens.hasNext() || !Identifier.isValid(tokens.next())) { return false; }
-            if (!tokens.nextIs("("))                                     { return true; }
-            ExpressionParser expressions = new ExpressionParser();
-            Return.Parser returns = new Return.Parser();
-            while (!tokens.peekIs(")")) {
-                if (returns.canParse(tokens))                            { return false;}
-                if (!expressions.canParse(tokens))                       { return false; }
-                else {
-                    expressions.parse(tokens);
-                }
-            }
-            return tokens.nextIs(")");
-        }
-
-    }
-   
     final String name;
     final Args args;
     
-    Invocation(String name) {
+    public Invocation(String name) {
         this(name,new Args());
     }
 
-    Invocation(String name,Args args) {
+    public Invocation(String name,Args args) {
         this.name = name;
         this.args = args;
     }

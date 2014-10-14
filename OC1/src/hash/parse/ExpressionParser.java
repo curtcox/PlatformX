@@ -1,5 +1,6 @@
-package hash;
+package hash.parse;
 
+import hash.Expression;
 import hash.lex.Tokens;
 
 /**
@@ -11,11 +12,11 @@ final class ExpressionParser
 {
     ExpressionParser() {
         super(
-            new NumericConstant.Parser(),
-            new StringConstant.Parser(),
-            new Invocation.Parser(),
-            new Ternary.Parser(),
-            new Return.Parser());
+            new NumericConstantParser(),
+            new StringConstantParser(),
+            new InvocationParser(),
+            new TernaryParser(),
+            new ReturnParser());
     }
 
     @Override

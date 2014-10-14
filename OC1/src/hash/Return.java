@@ -1,36 +1,11 @@
 package hash;
 
-import hash.lex.Tokens;
-
-/**
- *
- * @author Curt
- */
-final class Return
+public final class Return
     implements Expression
 {
-    static final class Parser
-        extends AbstractParser
-    {
-        public Return parse(Tokens tokens) {
-            verifyReturn(tokens.next());
-            return new Return(new ExpressionParser().parse(tokens));
-        }    
-
-        private void verifyReturn(String string) {
-            if (!string.equals("^")) {
-                throw new IllegalArgumentException();
-            }
-        }
-
-        public boolean canParseTokens(Tokens tokens) {
-            return tokens.nextIs("^");
-        }
-    }
-    
     final Expression expression;
     
-    Return(Expression expression) {
+    public Return(Expression expression) {
         this.expression = expression;
     }
     

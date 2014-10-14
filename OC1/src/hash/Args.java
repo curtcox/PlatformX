@@ -1,47 +1,17 @@
 package hash;
 
-import hash.lex.Tokens;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 import oc1.util.Objects;
 
 /**
  *
  * @author curt
  */
-final class Args {
-
-    static final class Parser 
-        extends AbstractParser
-    {
-        public Args parse(Tokens tokens) {
-            tokens.verifyNextIs("(");
-            List<Expression> args = new ArrayList<Expression>();
-            ExpressionParser expressions = new ExpressionParser();
-            while (!tokens.peekIs(")")) {
-                args.add(expressions.parse(tokens));
-            }
-            tokens.verifyNextIs(")");
-            return new Args(args.toArray(new Expression[0]));
-        }    
-
-        public boolean canParseTokens(Tokens tokens) {
-            if (!tokens.nextIs("(")) { return false; }
-            while (!tokens.peekIs(")")) {
-                if (!tokens.hasNext()) { return false;}
-                String token = tokens.next();
-                if (!Identifier.isValid(token)) {
-                    return false;
-                }
-            }
-            return tokens.nextIs(")");
-        }
-    }
+public final class Args {
     
     final Expression[] args;
     
-    Args(Expression... args) {
+    public Args(Expression... args) {
         this.args = args;
     }
 

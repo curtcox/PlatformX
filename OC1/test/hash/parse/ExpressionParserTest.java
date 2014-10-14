@@ -1,13 +1,10 @@
-package hash;
+package hash.parse;
 
+import hash.*;
 import hash.lex.Tokens;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
 public class ExpressionParserTest {
 
     @Test
@@ -92,37 +89,6 @@ public class ExpressionParserTest {
         );
     }
     
-    @Test
-    public void invokeIn_uses_values_from_context() {
-        Hash hash = hash(
-            "provider   {^ \"Provider!\"}",
-            "navigation {^ \"NAV\"}"
-        );
-        NamedExpression screen = new NamedExpression("screen") {
-            public Object invoke(Object[] args) {
-                return "X11(" + args[0] + " " + args[1] + " " + args[2] + ")";
-            }
-        };
-        NamedExpression grid = new NamedExpression("grid") {
-            public Object invoke(Object[] args) {
-                return "XxY(" + args[0] + " " + args[1] + ")";
-            }
-        };
-
-        Invocation invocation = Invocation("screen", 
-            Invocation("grid",new NumericConstant(2),new NumericConstant(1)),
-            Invocation("provider"),
-            Invocation("navigation")
-        );
-
-        Object value = invocation.invokeIn(Context(hash,screen,grid));
-        assertEquals("X11(XxY(2 1) Provider! NAV)",value);
-    }
-    
-    private Context Context(Hash hash,NamedExpression... invokables) {
-        return new Context("#",NamedExpression.namedValues(hash,invokables));
-    }
-
     @Test
     public void parse_returns_correct_value_for_ternary() {
         parse(new Ternary(new Invocation("a"),new Invocation("b"),new Invocation("c")),"(a) ? b : c");

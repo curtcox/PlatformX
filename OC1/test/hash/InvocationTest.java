@@ -13,8 +13,6 @@ import static org.junit.Assert.*;
  */
 public class InvocationTest {
 
-    Invocation.Parser parser = new Invocation.Parser();
-    
     @Test
     public void equals_returns_true_for_invocations_with_the_same_values() {
         assertAreEqual(new Invocation(""),new Invocation(""));
@@ -38,69 +36,6 @@ public class InvocationTest {
         assertFalse(b.equals(a));
     }
     
-    @Test
-    public void parse_returns_correct_value() {
-        parse(new Invocation("foo"),"foo");
-        parse(new Invocation("foo"),"foo()");
-        parse(new Invocation("f",new Args(new Invocation("x"))),"f(x)");
-        parse(new Invocation("f",new Args(new Invocation("x"),new Invocation("y"))),"f(x y)");
-        parse(new Invocation("sin",new Args(new Invocation("sqrt",new Args(new Invocation("x"))))),"sin(sqrt(x))");
-    }
-
-    @Test
-    public void parse_consumes_trailing_parens() {
-        assertFalse(parse(new Invocation("foo"),"foo()").hasNext());
-        assertFalse(parse(new Invocation("f",new Args(new Invocation("x"))),"f(x)").hasNext());
-        assertFalse(parse(new Invocation("f",new Args(new Invocation("x"),new Invocation("y"))),"f(x y)").hasNext());
-    }
-    
-    private Tokens parse(Invocation invocation,String string) {
-        Tokens tokens = Tokens.from(string);
-        assertAreEqual(invocation,new Invocation.Parser().parse(tokens));
-        return tokens;
-    }
-    
-    @Test
-    public void can_parse_simple_invocations() {
-        assertTrue(parser.canParse(Tokens.from("invocation")));
-        assertTrue(parser.canParse(Tokens.from("doit")));
-    }
-
-    @Test
-    public void can_parse_invocations_with_empty_parens() {
-        assertTrue(parser.canParse(Tokens.from("stuff()")));
-    }
-
-    @Test
-    public void can_parse_invocations_with_args() {
-        assertTrue(parser.canParse(Tokens.from("f(x)")));
-        assertTrue(parser.canParse(Tokens.from("f(x y)")));
-    }
-
-    @Test
-    public void can_parse_nested_invocations() {
-        assertTrue(parser.canParse(Tokens.from("sin(sqrt(x))")));
-    }
-
-    @Test
-    public void can_parse_invocations() {
-        assertTrue(parser.canParse(Tokens.from("f }")));
-    }
-
-    @Test
-    public void can_not_parse_non_invocations() {
-        assertFalse(parser.canParse(Tokens.from("\"constant\"")));
-        assertFalse(parser.canParse(Tokens.from("0")));
-        assertFalse(parser.canParse(Tokens.from("?")));
-        assertFalse(parser.canParse(Tokens.from(":")));
-        assertFalse(parser.canParse(Tokens.from(".")));
-        assertFalse(parser.canParse(Tokens.from("{")));
-        assertFalse(parser.canParse(Tokens.from("}")));
-        assertFalse(parser.canParse(Tokens.from("^")));
-        assertFalse(parser.canParse(Tokens.from("f(^)")));
-        assertFalse(parser.canParse(Tokens.from("f(}")));
-    }
-
     @Test
     public void toString_contains_invocation_name() {
         String string = new Invocation("evars").toString();

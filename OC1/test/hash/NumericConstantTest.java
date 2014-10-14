@@ -1,17 +1,10 @@
 package hash;
 
-import hash.lex.Tokens;
 import oc1.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
 public class NumericConstantTest {
-    
-    NumericConstant.Parser parser = new NumericConstant.Parser();
     
     @Test
     public void equals_returns_true_for_constants_with_the_same_values() {
@@ -33,31 +26,6 @@ public class NumericConstantTest {
     private void assertNotEquals(NumericConstant a, NumericConstant b) {
         assertFalse(a.equals(b));
         assertFalse(b.equals(a));
-    }
-    
-    @Test
-    public void parse_returns_correct_value() {
-        parse(new NumericConstant(7),"7");
-        parse(new NumericConstant(42),"42");
-        parse(new NumericConstant(63130),"63130");
-    }
-
-    @Test
-    public void can_parse_constants() {
-        assertTrue(parser.canParse(Tokens.from("9")));
-        assertTrue(parser.canParse(Tokens.from("10")));
-    }
-
-    @Test
-    public void can_not_parse_non_constants() {
-        assertFalse(parser.canParse(Tokens.from("red")));
-        assertFalse(parser.canParse(Tokens.from("?")));
-        assertFalse(parser.canParse(Tokens.from("}")));
-        assertFalse(parser.canParse(Tokens.from("{")));
-    }
-    
-    private void parse(NumericConstant constant,String string) {
-        assertAreEqual(constant,parser.parse(Tokens.from(string)));
     }
     
     @Test
