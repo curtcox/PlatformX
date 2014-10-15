@@ -4,8 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- *
- * @author Curt
+ * The context for a screen.
  */
 public final class ScreenContext {
 
@@ -13,6 +12,10 @@ public final class ScreenContext {
     
     public void put(String key, Object value) {
         values.put(key, value);
+    }
+
+    public void putAll(Map<String,Object> map) {
+        values.putAll(map);
     }
     
     public Object get(String key) {

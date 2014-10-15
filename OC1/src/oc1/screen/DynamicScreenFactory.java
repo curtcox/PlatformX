@@ -5,10 +5,6 @@ import oc1.util.Glob;
 import oc1.util.GlobStringMap;
 import oc1.util.StringMap;
 
-/**
- *
- * @author Curt
- */
 public final class DynamicScreenFactory
     implements ScreenFactory
 {

@@ -56,9 +56,15 @@ public class DynamicScreenLayoutTest {
 
     @Test
     public void getLayout_returns_grid_with_components_when_layout_specifies_a_grid() {
+        context.putAll(new ScreenLayouts());
+        
         sourceCode = lines("layout { ^grid(1 2 'one' 'two') }");
+        
         ScreenLayout actual = testObject.getLayout(context);
-        assertEquals(new GridLayout(1,2),actual.layout);
+        assertTrue(actual.layout instanceof GridLayout);
+        GridLayout layout = (GridLayout) actual.layout;
+        assertEquals(1,layout.getRows());
+        assertEquals(2,layout.getColumns());
         Label label1 = (Label) actual.components[0];
         Label label2 = (Label) actual.components[1];
         assertEquals("one",label1.getText());

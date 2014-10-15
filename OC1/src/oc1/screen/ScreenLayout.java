@@ -4,8 +4,7 @@ import com.codename1.ui.Component;
 import com.codename1.ui.layouts.Layout;
 
 /**
- *
- * @author Curt
+ * The layout and components for a single screen.
  */
 public final class ScreenLayout {
 

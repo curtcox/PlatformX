@@ -1,9 +1,5 @@
 package oc1.screen;
 
-/**
- *
- * @author Curt
- */
 public final class CompositeScreenFactory
     implements ScreenFactory
 {

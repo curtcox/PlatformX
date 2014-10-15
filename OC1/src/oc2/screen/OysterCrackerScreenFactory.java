@@ -21,10 +21,6 @@ import oc2.screens.HowToScreen;
 import oc2.screens.ProviderDetailsScreen;
 import oc2.screens.RateScreen;
 
-/**
- *
- * @author Curt
- */
 public final class OysterCrackerScreenFactory
     implements ScreenFactory
 {

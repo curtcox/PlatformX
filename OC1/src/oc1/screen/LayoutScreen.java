@@ -3,10 +3,9 @@ package oc1.screen;
 import com.codename1.ui.Component;
 
 /**
- *
- * @author Curt
+ * A screen that is created by a dynamic layout method.
  */
-public final class LayoutScreen
+final class LayoutScreen
     extends Screen
 {
     final ScreenController controller;
@@ -32,9 +31,10 @@ public final class LayoutScreen
         ScreenContext context = controller.getContext();
         context.put("portrait",portraitGetter());
         context.put("landscape",landscapeGetter());
+        context.putAll(new ScreenLayouts());
         return context;
     }
-    
+
     private Getter portraitGetter() {
         return new Getter() {
             public Object get() {
