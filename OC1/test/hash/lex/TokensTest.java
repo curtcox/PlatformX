@@ -13,8 +13,28 @@ public class TokensTest {
     }
 
     @Test
+    public void from_creates_empty_tokens_for_empty_comment_line() {
+        Tokens tokens = Tokens.from("#");
+        assertFalse(tokens.hasNext());
+    }
+
+    @Test
+    public void from_creates_empty_tokens_for_comment_line_with_comment() {
+        Tokens tokens = Tokens.from("# line with only a comment");
+        assertFalse(tokens.hasNext());
+    }
+
+    @Test
     public void from_creates_token_with_one_element_for_one_element() {
         Tokens tokens = Tokens.from("one");
+        assertTrue(tokens.hasNext());
+        assertEquals("one",tokens.next());
+        assertFalse(tokens.hasNext());
+    }
+
+    @Test
+    public void from_creates_token_with_one_element_for_one_element_with_comment() {
+        Tokens tokens = Tokens.from("one#");
         assertTrue(tokens.hasNext());
         assertEquals("one",tokens.next());
         assertFalse(tokens.hasNext());

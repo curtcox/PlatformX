@@ -13,19 +13,26 @@ final class Lexer {
 
     private final List<String> parts = new ArrayList<String>();
     private boolean quoting = false;
+    private boolean commenting = false;
     private StringBuilder quoted = new StringBuilder();
 
     private Lexer() {}
     
     private String[] splitIntoParts(String string) {
         for (String part : parts(string)) {
-            if (quoting) {
+            if (commenting) {
+               if (commentEnd(part)) {
+                   commenting = false;
+               }
+            } else if (quoting) {
                 quoted.append(part);
                 if (quote(part)) {
                     endQuote();
                 }
             } else {
-                if (quote(part)) {
+                if (commentStart(part)) {
+                    commenting = true;
+                } else if (quote(part)) {
                     beginQuote(part);
                 } else {
                     if (!whitespace(part)) {
@@ -59,6 +66,14 @@ final class Lexer {
 
     private static boolean quote(String string) {
         return string.equals("\"");
+    }
+
+    private static boolean commentStart(String string) {
+        return string.equals("#");
+    }
+
+    private static boolean commentEnd(String string) {
+        return string.equals("\r") || string.equals("\n");
     }
     
     private static String[] parts(String string) {

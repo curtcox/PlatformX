@@ -52,6 +52,16 @@ public class LexerTest {
     }
 
     @Test
+    public void split_comment_string() {
+        split("#");    
+    }
+
+    @Test
+    public void split_word_between_two_comments() {
+        split("# first comment\nword# second comment","word");    
+    }
+
+    @Test
     public void split_empty_brackets() {
         split("{}","{","}");    
     }

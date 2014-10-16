@@ -11,7 +11,8 @@ public final class Identifier {
      */
     public static final String[] SPECIAL = new String[] {
         " ", "\t", "\r", "\n", 
-        ".", "?", ":", ",", "\"", "^", "{", "}", "(", ")"
+        ".", "?", ":", ",", "\"", "^", "{", "}", "(", ")",
+        "#"
     };
     
     private static final Set<String> reject = new HashSet(Arrays.asList(SPECIAL));
