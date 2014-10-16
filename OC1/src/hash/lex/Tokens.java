@@ -5,7 +5,13 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- *
+ * Tokenized source code.
+ * Tokens are produced from a String.
+ * There are operations that consume tokens (next, nextIs, verifyNextIs)
+ * and those that don't (everything else).
+ * There are no operations that restore tokens.
+ * You can always make a copy.
+ * Operations made on the copy don't change the original, and vice-versa.
  * @author Curt
  */
 public final class Tokens {
