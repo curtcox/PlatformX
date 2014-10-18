@@ -1,19 +1,22 @@
 package oc2.screens;
 
-import oc1.screen.Screen;
+import oc1.screen.*;
 import oc1.log.IssueReporter;
 import com.codename1.ui.Button;
 import com.codename1.ui.layouts.GridLayout;
+import oc1.screen.ScreenLink;
 import oc1.ui.ActionButton;
 
-/**
- *
- * @author Curt
- */
 public final class HowToScreen
     extends Screen
 {   
-    public HowToScreen() {
+    public static ScreenFactory FACTORY = new GlobScreenFactory("HowTo") {
+        public Screen doCreate(ScreenLink link) {
+            return new HowToScreen();
+        }     
+    };
+    
+    HowToScreen() {
         super("How To");
     }
     

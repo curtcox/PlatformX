@@ -6,19 +6,25 @@ import java.util.List;
 import oc1.domain.Type;
 import oc1.event.LiveList;
 import oc1.event.SimpleLiveList;
+import oc1.screen.GlobScreenFactory;
+import oc1.screen.Screen;
+import oc1.screen.ScreenFactory;
+import oc1.screen.ScreenLink;
 import oc1.screenparts.TypeListCellConfigurer;
 import oc1.screenparts.TypeTextFilter;
 import oc2.screens.FilterScreen;
 import oc1.uilist.SearchFilterInstaller;
 import oc1.uilist.SearchableList;
 
-/**
- *
- * @author Curt
- */
 public final class FilterScreenFactory {
-    
-    public static FilterScreen withPrevious() {
+
+    public static ScreenFactory FACTORY = new GlobScreenFactory("Filter") {
+        public Screen doCreate(ScreenLink link) {
+            return of();
+        }     
+    };
+
+    static FilterScreen of() {
         return new FilterScreen(newSearchableList());    
     }
 

@@ -19,14 +19,10 @@ public final class LocationSelectionScreen
         super("Pick Location",searchList);
     }
 
-    static LocationSelectionScreen withPrevious() {
-        return LocationSelectionScreenFactory.withPrevious();
-    }
-    
     @Override
     protected ScreenLink useSelectedItem(LocationDescription item) {
         Locations.of().selectLocation(item.toLocation());
-        return new ScreenLink("Search",this);
+        return new ScreenLink("ProviderDetails",this);
     }
 
 }

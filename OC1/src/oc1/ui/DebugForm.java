@@ -7,13 +7,12 @@ import com.codename1.ui.Graphics;
 import com.codename1.ui.animations.Transition;
 import oc1.command.LoggedCommand;
 import oc1.log.IssueReporter;
-import oc1.log.LogManager;
 
 /**
- *
+ * A Form with lots of extra debugging.
  * @author Curt
  */
-public final class DebugForm
+final class DebugForm
     extends Form
 {
     final String title;

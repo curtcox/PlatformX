@@ -1,5 +1,9 @@
 package oc1.screen;
 
+/**
+ * A ScreenFactory that delegates to other ScreenFactories.
+ * @author Curt
+ */
 public final class CompositeScreenFactory
     implements ScreenFactory
 {

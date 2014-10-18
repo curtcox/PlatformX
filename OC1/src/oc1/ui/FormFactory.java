@@ -8,7 +8,9 @@ import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
 
 /**
- *
+ * For creating new FormS.
+ * This exists to provide a single spot for Form configuration.
+ * See DebugForm.
  * @author Curt
  */
 public final class FormFactory {

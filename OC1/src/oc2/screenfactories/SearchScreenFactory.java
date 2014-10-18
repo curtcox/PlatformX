@@ -1,37 +1,42 @@
 package oc2.screenfactories;
 
-import java.util.List;
-import oc1.domain.ServiceProvider;
-import oc1.domain.Type;
-import oc1.event.SimpleSwappableList;
-import oc1.event.SwappableList;
-import oc1.screenparts.SearchParams;
-import oc1.screenparts.ServiceProviderListCellConfigurer;
-import oc1.screenparts.ServiceProviderTextFilter;
+import java.util.*;
+import oc1.domain.*;
+import oc1.event.*;
+import oc1.screen.*;
+import oc1.screenparts.*;
 import oc2.screens.SearchScreen;
 import oc1.services.ServiceProviders;
-import oc1.uilist.SearchFilterInstaller;
-import oc1.uilist.SearchableList;
+import oc1.uilist.*;
 
-/**
- *
- * @author Curt
- */
 public final class SearchScreenFactory {
     
     private static final int STARTING_RADIUS = 100;
     private static final Type[] ALL_TYPES = new Type[0];
-    
-    public static SearchScreen withPrevious() {
-        return withPreviousTypesAndRadius(ALL_TYPES,STARTING_RADIUS);    
+
+    public static ScreenFactory FACTORY = new GlobScreenFactory("Search") {
+        public Screen doCreate(ScreenLink link) {
+            return searchScreenFromArgs(link.args);
+        }     
+    };
+        
+    private static SearchScreen of() {
+        return withTypesAndRadius(ALL_TYPES,STARTING_RADIUS);    
     }
     
-    public static SearchScreen withPreviousTypesAndRadius(Type[] types, int radius) {
+    private static Screen searchScreenFromArgs(Object[] args) {
+        if (args.length==0) return SearchScreenFactory.of();
+        if (args.length==1) return SearchScreenFactory.withTypes((Type[])args);
+        if (args.length==2) return SearchScreenFactory.withTypesAndRadius((Type[])args[0],(Integer)args[1]);
+        throw new IllegalArgumentException("args=" + Arrays.asList(args));
+    }
+
+    public static SearchScreen withTypesAndRadius(Type[] types, int radius) {
         SearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,radius);
         return new SearchScreen(newSearchableList(getProviders(searchParams),searchParams));    
     }
 
-    public static SearchScreen withPreviousAndTypes(Type[] types) {
+    public static SearchScreen withTypes(Type[] types) {
         SearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
         return new SearchScreen(newSearchableList(getProviders(searchParams),searchParams));    
     }

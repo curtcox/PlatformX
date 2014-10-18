@@ -23,6 +23,7 @@ public abstract class Screen {
 
     /**
      * Override this constructor to create a new screen.
+     * @param name name of the Screen and title of the underlying Form
      */
     public Screen(String name) {
         this(FormFactory.of().newForm(name));
@@ -30,6 +31,7 @@ public abstract class Screen {
     
     /**
      * This constructor is exposed mostly for testing.
+     * @param form 
      */
     public Screen(Form form) {
         this.form = form;

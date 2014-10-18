@@ -5,10 +5,9 @@ import com.codename1.ui.layouts.GridLayout;
 import hash.NamedValues;
 import hash.Run;
 import oc1.event.StringSource;
-import oc1.log.Log;
-import oc1.log.LogManager;
+import oc1.log.*;
 
-public class DynamicScreenLayout
+public final class DynamicScreenLayout
     implements ScreenLayout.Provider
 {
     final StringSource source;
@@ -30,11 +29,11 @@ public class DynamicScreenLayout
     }
 
     private ScreenLayout screenForResult(Object result) {
-        if (result instanceof ScreenLayout) {
-            return (ScreenLayout) result;
-        }
         if (result==null) {
             return messageScreen("(null)");
+        }
+        if (result instanceof ScreenLayout) {
+            return (ScreenLayout) result;
         }
         if (result instanceof String) {
             return messageScreen((String)result);

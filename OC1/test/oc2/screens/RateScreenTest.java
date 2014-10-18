@@ -1,6 +1,5 @@
 package oc2.screens;
 
-import oc2.screens.RateScreen;
 import fake.FakeRegistryLoader;
 import java.util.concurrent.Callable;
 import org.junit.Test;
@@ -21,7 +20,7 @@ public class RateScreenTest {
     private RateScreen createScreenOnEDT() throws Exception {
         return (RateScreen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return RateScreen.withPrevious();
+                return RateScreen.of();
             }
         });
     }

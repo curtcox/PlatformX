@@ -3,7 +3,7 @@ package oc1.screen;
 import oc1.app.Registry;
 
 /**
- *
+ * For creating ScreenS from ScreenLinkS.
  * @author Curt
  */
 public interface ScreenFactory {

@@ -1,5 +1,9 @@
 package oc1.screen;
 
+/**
+ * A link to a screen.  This is analogous to an HTML link.
+ * @author Curt
+ */
 public final class ScreenLink {
     
     public interface Factory {

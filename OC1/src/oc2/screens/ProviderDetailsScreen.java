@@ -6,7 +6,9 @@ import com.codename1.ui.table.TableLayout;
 import java.util.Arrays;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
+import oc1.screen.GlobScreenFactory;
 import oc1.screen.Screen;
+import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
 import oc1.screenparts.ProviderRatingButton;
 import oc1.ui.Icons;
@@ -26,15 +28,21 @@ public final class ProviderDetailsScreen
     private final Label rating = new Label();
     private final Button icon = new LinkButton("",new SearchLinkFactory());
     
-    final class SearchLinkFactory implements ScreenLink.Factory {
+    private final class SearchLinkFactory implements ScreenLink.Factory {
         public ScreenLink create() {
             return new ScreenLink("Search",ProviderDetailsScreen.this,getType());
         }
     }
 
+    public static ScreenFactory FACTORY = new GlobScreenFactory("ProviderDetails") {
+        public Screen doCreate(ScreenLink link) {
+            return new ProviderDetailsScreen();
+        }     
+    };
+
     private final Label vicinity = new Label();
 
-    public ProviderDetailsScreen() {
+    ProviderDetailsScreen() {
         super("Provider Details");
     }
     

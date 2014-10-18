@@ -10,8 +10,10 @@ import com.codename1.ui.table.TableLayout;
 import oc1.app.CurrentState;
 import oc2.domain.Rating;
 import oc1.domain.ServiceProvider;
+import oc1.screen.GlobScreenFactory;
 import oc1.screen.Screen;
 import oc1.screen.ScreenButton;
+import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
 import oc1.screenparts.ProviderDetailsButton;
 import oc2.stores.MyRatings;
@@ -34,7 +36,13 @@ public final class RateScreen
         super("Rate");
     }
 
-    public static RateScreen withPrevious() {
+    public static ScreenFactory FACTORY = new GlobScreenFactory("Rate") {
+        public Screen doCreate(ScreenLink link) {
+            return of();
+        }     
+    };
+
+    static RateScreen of() {
         RateScreen screen = new RateScreen();
         screen.init();
         return screen;

@@ -5,18 +5,25 @@ import oc1.domain.LocationDescription;
 import oc1.event.LiveList;
 import oc1.event.SwappableList;
 import oc1.event.SimpleSwappableList;
+import oc1.screen.GlobScreenFactory;
+import oc1.screen.Screen;
+import oc1.screen.ScreenFactory;
+import oc1.screen.ScreenLink;
 import oc1.screenparts.LocationListCellConfigurer;
 import oc2.screens.LocationSelectionScreen;
 import oc1.uilist.ListContentInstaller;
 import oc1.uilist.SearchableList;
 
-/**
- *
- * @author Curt
- */
 public final class LocationSelectionScreenFactory {
 
-    public static LocationSelectionScreen withPrevious() {
+    public static ScreenFactory FACTORY = new GlobScreenFactory("LocationSelection") {
+        @Override
+        protected Screen doCreate(ScreenLink link) {
+            return of(); 
+        }
+    };
+            
+    static LocationSelectionScreen of() {
         SearchableList<LocationDescription> searchList = newSearchableList();
         return new LocationSelectionScreen(searchList);
     }
