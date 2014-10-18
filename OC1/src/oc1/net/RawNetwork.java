@@ -19,7 +19,7 @@ public final class RawNetwork
         try {
             NetworkCacheEntry entry = NetworkCacheEntry.newEntryFor(url);
             if (!entry.downloadToStorageWasOK()) {
-                log("Download failed");            
+                log("Download failed for " + url);            
             }
             return entry.getStreamFromStorage();
         } catch (IOException e) {

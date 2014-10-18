@@ -13,10 +13,6 @@ import oc1.app.Registry;
 import oc1.ui.EmptyImage;
 import oc1.util.Strings;
 
-/**
- *
- * @author Curt
- */
 final class NetworkCacheEntry {
 
     final URI uri;
