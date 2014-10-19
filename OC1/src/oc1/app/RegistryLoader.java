@@ -4,21 +4,16 @@ import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import com.codename1.ui.Display;
 import oc1.domain.ServiceProvider;
-import oc1.log.LogManager;
-import oc1.log.LogWriter;
-import oc1.net.CachedNetwork;
-import oc1.net.Network;
-import oc2.screen.OysterCrackerScreenFactory;
+import oc1.log.*;
+import oc1.net.*;
 import oc1.screen.ScreenFactory;
-import oc1.services.Geocoder;
-import oc1.services.Locations;
-import oc1.services.ServiceProviders;
-import oc1.ui.FormFactory;
-import oc1.ui.Icons;
+import oc2.screen.*;
+import oc1.services.*;
+import oc1.ui.*;
 import oc2.stores.MyRatings;
 
 /**
- *
+ * Loads the registry with all of the instances needed for startup.
  * @author Curt
  */
 final class RegistryLoader {
