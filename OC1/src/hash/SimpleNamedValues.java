@@ -3,8 +3,7 @@ package hash;
 import java.util.Map;
 
 /**
- *
- * @author Curt
+ * A map from names to expressions.
  */
 final class SimpleNamedValues
     implements NamedValues

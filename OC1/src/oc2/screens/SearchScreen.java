@@ -26,7 +26,7 @@ public final class SearchScreen
     @Override
     protected ScreenLink useSelectedItem(ServiceProvider item) {
         useSelectedProvider(item);
-        return new ScreenLink("ProviderDetails",this);
+        return new ScreenLink("ProviderDetails",item);
     }
 
 }
