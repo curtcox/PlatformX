@@ -49,12 +49,12 @@ public final class DynamicScreenLayoutProvider
         return new ScreenLayout(new GridLayout(1,1),new Label(message));
     }
 
-    private Object getLayoutFromHash(String sourceCode,ScreenContext context) {
+    private Object getLayoutFromHash(String sourceCode,ScreenContext screenContext) {
         try {
             return Run
                 .source(sourceCode)
                 .method("layout")
-                .namedValues(context(context))
+                .namedValues(asNamedValues(screenContext))
                 .args();
         } catch (Exception e) {
             log(e);
@@ -62,8 +62,8 @@ public final class DynamicScreenLayoutProvider
         }
     }
 
-    private NamedValues context(ScreenContext context) {
-        return new ScreenContextAsNamedValues(context);
+    private NamedValues asNamedValues(ScreenContext screenContext) {
+        return new ScreenContextAsNamedValues(screenContext);
     }
     
     private void log(Exception e) {
