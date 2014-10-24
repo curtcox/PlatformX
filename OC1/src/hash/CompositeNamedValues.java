@@ -5,7 +5,7 @@ import oc1.log.Log;
 import oc1.log.LogManager;
 
 /**
- *
+ * For checking a series of NamedValues until a match is found.
  * @author Curt
  */
 final class CompositeNamedValues

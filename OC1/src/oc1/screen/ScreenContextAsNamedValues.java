@@ -4,10 +4,6 @@ import hash.Expression;
 import hash.Value;
 import hash.NamedValues;
 
-/**
- *
- * @author Curt
- */
 final class ScreenContextAsNamedValues
     implements NamedValues
 {

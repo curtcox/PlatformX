@@ -50,11 +50,14 @@ public final class Run {
     }
     
     private Context combinedHashAndNamedValues() {
-        return new Context("#",new CompositeNamedValues(values,hash()));
+        return new Context("#",new CompositeNamedValues(values,hash(),identity()));
     }
     
     private Hash hash() {
         return new HashParser().parse(source);
     }
 
+    private NamedValues identity() {
+        return new IdentityNamedValues();
+    }
 }

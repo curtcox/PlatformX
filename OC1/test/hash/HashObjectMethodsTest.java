@@ -5,8 +5,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
- * @author Curt
+ * For methods that Hash inherits from Object. 
  */
 public class HashObjectMethodsTest {
     
