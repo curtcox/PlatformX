@@ -8,9 +8,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
-public class ScreenLayoutsTest {
+public class DynamicScreenLayoutMethodsTest {
     
-    ScreenLayouts testObject = new ScreenLayouts();
+    DynamicScreenLayoutMethods testObject = new DynamicScreenLayoutMethods();
     
     @Before
     public void setUp() {

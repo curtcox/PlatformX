@@ -31,7 +31,7 @@ final class LayoutScreen
         ScreenContext context = controller.getContext();
         context.put("portrait",portraitGetter());
         context.put("landscape",landscapeGetter());
-        context.putAll(new ScreenLayouts());
+        context.putAll(new DynamicScreenLayoutMethods());
         return context;
     }
 

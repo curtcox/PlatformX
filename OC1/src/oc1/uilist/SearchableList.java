@@ -19,7 +19,10 @@ public final class SearchableList<T> {
     private final ListModel<T> underlyingListModel;
     private final IList filteredList;
 
-    public final BorderContainer component;
+    /**
+     * The component itself, for embedding in a Screen.
+     */
+    public final Component component;
 
     private SearchableList(IList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer) {
         underlyingListModel = VirtualListModel.of(items);

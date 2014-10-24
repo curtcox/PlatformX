@@ -56,7 +56,7 @@ public class DynamicScreenLayoutTest {
 
     @Test
     public void getLayout_returns_grid_with_components_when_layout_specifies_a_grid() {
-        context.putAll(new ScreenLayouts());
+        context.putAll(new DynamicScreenLayoutMethods());
         
         sourceCode = lines("layout { ^grid(1 2 'one' 'two') }");
         

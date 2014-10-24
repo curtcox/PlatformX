@@ -4,10 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import oc1.util.Glob;
 
-/**
- *
- * @author Curt
- */
 final class GlobScreenControllerLookup
     implements ScreenController.Lookup
 {

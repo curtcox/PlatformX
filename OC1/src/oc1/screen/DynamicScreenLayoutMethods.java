@@ -6,10 +6,14 @@ import com.codename1.ui.layouts.GridLayout;
 import hash.NamedExpression;
 import java.util.HashMap;
 
-final class ScreenLayouts
+/**
+ * A map of layout methods for adding to a ScreenContext.
+ * @author Curt
+ */
+final class DynamicScreenLayoutMethods
     extends HashMap
 {
-    ScreenLayouts() {
+    DynamicScreenLayoutMethods() {
         put("grid",grid());        
     }   
     
