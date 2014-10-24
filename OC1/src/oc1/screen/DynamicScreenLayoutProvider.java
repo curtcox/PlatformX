@@ -7,12 +7,16 @@ import hash.Run;
 import oc1.event.StringSource;
 import oc1.log.*;
 
-public final class DynamicScreenLayout
+/**
+ * Provides a ScreenLayout that is dynamically generated at runtime.
+ * @author Curt
+ */
+public final class DynamicScreenLayoutProvider
     implements ScreenLayout.Provider
 {
     final StringSource source;
     
-    DynamicScreenLayout(StringSource source) {
+    DynamicScreenLayoutProvider(StringSource source) {
         this.source = source;    
     }
 
@@ -67,7 +71,7 @@ public final class DynamicScreenLayout
     }
 
     private Log getLog() {
-        return LogManager.of().getLog(DynamicScreenLayout.class);    
+        return LogManager.of().getLog(DynamicScreenLayoutProvider.class);    
     }
 
 }

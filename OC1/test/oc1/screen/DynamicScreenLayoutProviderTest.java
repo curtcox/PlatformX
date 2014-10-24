@@ -9,7 +9,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
-public class DynamicScreenLayoutTest {
+public class DynamicScreenLayoutProviderTest {
 
     String sourceCode;
     ScreenContext context = new ScreenContext();
@@ -18,7 +18,7 @@ public class DynamicScreenLayoutTest {
             return sourceCode;
         }
     };
-    DynamicScreenLayout testObject = new DynamicScreenLayout(source);
+    DynamicScreenLayoutProvider testObject = new DynamicScreenLayoutProvider(source);
     
     @Before
     public void setUp() {

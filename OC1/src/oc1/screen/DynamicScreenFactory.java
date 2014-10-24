@@ -59,7 +59,7 @@ public final class DynamicScreenFactory
             Glob glob = Glob.of(globString);
             names.add(glob,name);
             controllers.add(glob,controller);
-            layouts.add(glob,new DynamicScreenLayout(source));
+            layouts.add(glob,new DynamicScreenLayoutProvider(source));
             return this;
         }
         
