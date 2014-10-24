@@ -121,6 +121,7 @@ public final class RateScreen
     @Override
     protected void refresh() {
         rating.setText(provider().myRating().toString());
+        super.refresh();
     }
 
 }

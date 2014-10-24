@@ -81,7 +81,9 @@ public abstract class Screen {
      * Override it in order to update any screen state that might have
      * changed since the last showing.
      */
-    protected void refresh() {}
+    protected void refresh() {
+        layoutForm();
+    }
     
     public boolean isPortrait() {
         return Registry.get(Display.class).isPortrait();

@@ -68,6 +68,7 @@ public final class ProviderDetailsScreen
         updateTypes();
         updateDistance();
         updateVicinity();
+        super.refresh();
     }
 
     private void updateName() {
