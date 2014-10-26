@@ -37,6 +37,9 @@ public final class Hash
     } 
 
     Object invoke(String methodName,Args args, Context context) {
+        if (get(methodName)==null) {
+            throw new RuntimeException(methodName + " not found");
+        }
         Context withArgs = context.withArgValues("#",args);
         return get(methodName).invokeIn(withArgs);
     }

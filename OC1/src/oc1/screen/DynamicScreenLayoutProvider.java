@@ -15,6 +15,7 @@ public final class DynamicScreenLayoutProvider
     implements ScreenLayout.Provider
 {
     final StringSource source;
+    static final String layout = "layout";
     
     DynamicScreenLayoutProvider(StringSource source) {
         this.source = source;    
@@ -53,7 +54,7 @@ public final class DynamicScreenLayoutProvider
         try {
             return Run
                 .source(sourceCode)
-                .method("layout")
+                .method(layout)
                 .namedValues(asNamedValues(screenContext))
                 .args();
         } catch (Exception e) {
