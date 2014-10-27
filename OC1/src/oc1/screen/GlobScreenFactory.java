@@ -13,7 +13,7 @@ public abstract class GlobScreenFactory
     
     public final Screen create(ScreenLink link) {
         if (glob.matches(link.screen)) {
-                
+            return doCreate(link);        
         }
         return null;
     }

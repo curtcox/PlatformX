@@ -32,6 +32,7 @@ final class LayoutScreen
         context.put("portrait",portraitGetter());
         context.put("landscape",landscapeGetter());
         context.putAll(new DynamicScreenLayoutMethods());
+        context.putAll(new DynamicScreenComponentMethods());
         return context;
     }
 

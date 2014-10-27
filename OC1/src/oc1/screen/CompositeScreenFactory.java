@@ -1,5 +1,7 @@
 package oc1.screen;
 
+import java.util.Arrays;
+
 /**
  * A ScreenFactory that delegates to other ScreenFactories.
  * @author Curt
@@ -20,6 +22,7 @@ public final class CompositeScreenFactory
                 return screen;
             }
         }
-        throw new IllegalArgumentException();
+        String message = "No screen for " + link + " in " + Arrays.asList(factories);
+        throw new IllegalArgumentException(message);
     }
 }
