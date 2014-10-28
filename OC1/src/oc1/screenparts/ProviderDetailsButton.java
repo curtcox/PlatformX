@@ -8,9 +8,9 @@ import oc1.ui.ActionButton;
  * Navigates to a detailed screen for the current provider.
  * @author Curt
  */
-public class ProviderDetailsButton {
+public final class ProviderDetailsButton {
 
-    public static ActionButton withReturnTo() {
+    public static ActionButton of() {
         return ScreenButton.textAndLeadingTo(ServiceProvider.getCurrentName(),"ProviderDetails");
     }
 

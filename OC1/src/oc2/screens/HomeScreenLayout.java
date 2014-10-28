@@ -28,8 +28,8 @@ public final class HomeScreenLayout
 
     private Container newProviderContainer() {
         return new GridContainer(2,1,
-            ProviderDetailsButton.withReturnTo(),
-            ProviderRatingButton.withReturnTo()
+            ProviderDetailsButton.of(),
+            ProviderRatingButton.of()
         );
     }
 
@@ -103,8 +103,8 @@ public final class HomeScreenLayout
 
     private ScreenLayout layoutForLandscapeWithSelectedProvider() {
         return new ScreenLayout(new GridLayout(3,2),
-           ProviderDetailsButton.withReturnTo(),
-           ProviderRatingButton.withReturnTo(),
+           ProviderDetailsButton.of(),
+           ProviderRatingButton.of(),
            searchElsewhereButton(),
            searchNearbyScreenButton(),
            filterScreenButton(),

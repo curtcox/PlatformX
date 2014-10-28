@@ -9,11 +9,11 @@ import oc1.event.StringSource;
  * Navigates to the rating screen.
  * @author Curt
  */
-public class ProviderRatingButton {
+public final class ProviderRatingButton {
 
     private ProviderRatingButton() {}
     
-    public static ActionButton withReturnTo() {
+    public static ActionButton of() {
         return ScreenButton.lazyWithTextAndLeadingTo(buttonText(),"Rate");
     }
 
