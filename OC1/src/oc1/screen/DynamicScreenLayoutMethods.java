@@ -44,7 +44,8 @@ final class DynamicScreenLayoutMethods
         if (o instanceof String) {
             return new Label(o.toString());
         }
-        throw new IllegalArgumentException();
+        String message = "Argument " + o;
+        throw new IllegalArgumentException(message);
     }
     
     private int integer(Object o) {

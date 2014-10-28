@@ -33,6 +33,7 @@ final class LayoutScreen
         context.put("landscape",landscapeGetter());
         context.putAll(new DynamicScreenLayoutMethods());
         context.putAll(new DynamicScreenComponentMethods());
+        context.putAll(new DynamicScreenMethodInvocations());
         return context;
     }
 
