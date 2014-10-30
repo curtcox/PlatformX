@@ -1,6 +1,7 @@
 package oc1.screen;
 
 import com.codename1.ui.Component;
+import com.codename1.ui.Container;
 import com.codename1.ui.layouts.Layout;
 
 /**
@@ -10,7 +11,7 @@ public final class ScreenLayout {
 
     final Layout layout;
     final Component[] components;
-    
+
     public interface Provider {
         ScreenLayout getLayout(ScreenContext context);
     }
@@ -23,4 +24,15 @@ public final class ScreenLayout {
         this.layout = layout;
         this.components = components;
     }
+
+    Component toComponent() {
+        Container container = new Container();
+        container.setLayout(layout);
+        for (Component component : components) {
+            container.addComponent(component);
+        }
+        return container;
+    }
+    
+
 }

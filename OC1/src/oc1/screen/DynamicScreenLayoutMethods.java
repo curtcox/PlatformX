@@ -44,6 +44,9 @@ final class DynamicScreenLayoutMethods
         if (o instanceof String) {
             return new Label(o.toString());
         }
+        if (o instanceof ScreenLayout) {
+            return ((ScreenLayout)o).toComponent();
+        }
         String message = "Argument " + o;
         throw new IllegalArgumentException(message);
     }
