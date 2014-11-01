@@ -16,7 +16,6 @@ public final class OysterCrackerScreenFactory {
     
     public static ScreenFactory of(StringMap layouts) {
         return new CompositeScreenFactory(
-                //HowToScreen.FACTORY,
                 LocationSelectionScreenFactory.FACTORY,
                 RateScreen.FACTORY,
                 ProviderDetailsScreen.FACTORY,
