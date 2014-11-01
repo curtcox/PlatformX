@@ -3,6 +3,10 @@ package oc1.screen;
 import oc1.event.StringSource;
 import oc1.util.StringMap;
 
+/**
+ * For using a StringMap as a StringSource
+ * @author Curt
+ */
 public final class StringMapStringSource
     implements StringSource
 {
