@@ -4,10 +4,6 @@ import java.util.List;
 import oc1.services.Geocoder;
 import oc1.uilist.StringToList;
 
-/**
- *
- * @author Curt
- */
 final class GeocoderStringToList
     implements StringToList
 {

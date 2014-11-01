@@ -7,10 +7,6 @@ import oc1.screenparts.SearchParams;
 import oc1.services.ServiceProviders;
 import oc1.ui.ActionButton;
 
-/**
- *
- * @author Curt
- */
 final class ZoomOutSearchButton
     extends ActionButton
 {

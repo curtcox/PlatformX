@@ -5,11 +5,6 @@ import com.codename1.ui.Display;
 import oc1.app.Registry;
 import oc1.app.Version;
 
-/**import oc1.screens.HomeScreen;
-
- *
- * @author Curt
- */
 public final class IssueReporter {
 
     public static void sendEmail() {

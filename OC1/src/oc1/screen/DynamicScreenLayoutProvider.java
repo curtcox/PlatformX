@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import com.codename1.ui.Component;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.GridLayout;
 import hash.NamedValues;
@@ -43,11 +44,18 @@ public final class DynamicScreenLayoutProvider
         if (result instanceof String) {
             return messageScreen((String)result);
         }
+        if (result instanceof Component) {
+            return componentScreen((Component)result);
+        }
         throw new IllegalArgumentException("result="+result);
     }
     
+    private ScreenLayout componentScreen(Component component) {
+        return new ScreenLayout(new GridLayout(1,1),component);
+    }
+
     private ScreenLayout messageScreen(String message) {
-        return new ScreenLayout(new GridLayout(1,1),new Label(message));
+        return componentScreen(new Label(message));
     }
 
     private Object getLayoutFromHash(String sourceCode,ScreenContext screenContext) {

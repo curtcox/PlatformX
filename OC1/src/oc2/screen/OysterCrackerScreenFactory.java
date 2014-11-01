@@ -16,7 +16,7 @@ public final class OysterCrackerScreenFactory {
     
     public static ScreenFactory of(StringMap layouts) {
         return new CompositeScreenFactory(
-                HowToScreen.FACTORY,
+                //HowToScreen.FACTORY,
                 LocationSelectionScreenFactory.FACTORY,
                 RateScreen.FACTORY,
                 ProviderDetailsScreen.FACTORY,
@@ -28,7 +28,8 @@ public final class OysterCrackerScreenFactory {
     
     private static ScreenFactory dynamicScreens(StringMap layouts) {
         return DynamicScreenFactory.builder()
-                    .map("",Version.VERSION,new HomeScreenController(),new StringMapStringSource(layouts,"Home"))
+                    .map(""     ,Version.VERSION, new HomeScreenController(), new StringMapStringSource(layouts,"Home"))
+                    .map("HowTo","How To"       , new HowToScreenController(),new StringMapStringSource(layouts,"HowTo"))
                 .build();
     }
 }
