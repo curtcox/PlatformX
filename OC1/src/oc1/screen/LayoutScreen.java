@@ -54,10 +54,15 @@ final class LayoutScreen
     }
     
     private void layout() {
-        ScreenLayout layout = layoutProvider.getLayout(getContext());
+        ScreenLayout layout = getLayout();
         form.setLayout(layout.layout);
         for(Component component : layout.components) {
+            Components.removeFromParentIfAny(component);
             form.addComponent(component);
         }
+    }
+    
+    ScreenLayout getLayout() {
+        return layoutProvider.getLayout(getContext());
     }
 }

@@ -56,4 +56,8 @@ public abstract class ActionButton
         LogManager.of().getLog(ActionButton.class).log(message);    
     }
 
+    @Override
+    public String toString() {
+        return "ActionButton:" + getName();
+    }
 }

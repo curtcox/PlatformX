@@ -29,10 +29,10 @@ public final class ScreenLayout {
         Container container = new Container();
         container.setLayout(layout);
         for (Component component : components) {
+            Components.removeFromParentIfAny(component);
             container.addComponent(component);
         }
         return container;
     }
     
-
 }

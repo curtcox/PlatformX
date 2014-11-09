@@ -26,8 +26,8 @@ public final class SearchScreenFactory {
     
     private static Screen searchScreenFromArgs(Object[] args) {
         if (args.length==0) return SearchScreenFactory.of();
-        if (args.length==1) return SearchScreenFactory.withTypes((Type[])args);
-        if (args.length==2) return SearchScreenFactory.withTypesAndRadius((Type[])args[0],(Integer)args[1]);
+        if (args.length==1) return SearchScreenFactory.withTypes(types(args));
+        if (args.length==2) return SearchScreenFactory.withTypesAndRadius(types((Objects[])args[0]),(Integer)args[1]);
         throw new IllegalArgumentException("args=" + Arrays.asList(args));
     }
 
@@ -36,6 +36,14 @@ public final class SearchScreenFactory {
         return new SearchScreen(newSearchableList(getProviders(searchParams),searchParams));    
     }
 
+    private static Type[] types(Object[] objects) {
+        Type[] types = new Type[objects.length];
+        for (int i=0; i<objects.length; i++) {
+            types[i] = (Type) objects[i];
+        }
+        return types;
+    }
+    
     public static SearchScreen withTypes(Type[] types) {
         SearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
         return new SearchScreen(newSearchableList(getProviders(searchParams),searchParams));    

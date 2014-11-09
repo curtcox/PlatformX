@@ -1,8 +1,10 @@
 package oc2.screens;
 
 import com.codename1.ui.Button;
+import com.codename1.ui.Label;
 import oc1.domain.ServiceProvider;
 import oc1.screen.Getter;
+import oc1.screen.ScreenButton;
 import oc1.screen.ScreenContext;
 import oc1.screen.ScreenController;
 import oc1.screenparts.ProviderDetailsButton;
@@ -27,10 +29,22 @@ public final class HomeScreenController
         context.put("provider_rating", new Getter() { public Button get() {
             return ProviderRatingButton.of();
         }});
+        context.put("search_nearby", new Getter() { public Button get() {
+            return searchNearbyButton();
+        }});
     }
     
-    public void clearLocationSelection() {
-        Locations.of().selectLocation(null);
+    private Runnable clearLocationSelection() {
+        return new Runnable() {
+            public void run() {
+                Locations.of().selectLocation(null);
+            }
+        };
     }
-
+    
+    private Button searchNearbyButton() {
+        Button button = ScreenButton.textImageActionAndLeadingTo("Search nearby", "system-search-4.png", clearLocationSelection(), "Search");
+        button.setTextPosition(Label.BOTTOM);
+        return button;
+    }
 }
