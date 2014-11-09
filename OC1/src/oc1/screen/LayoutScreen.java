@@ -57,8 +57,7 @@ final class LayoutScreen
         ScreenLayout layout = getLayout();
         form.setLayout(layout.layout);
         for(Component component : layout.components) {
-            Components.removeFromParentIfAny(component);
-            form.addComponent(component);
+            Components.addToContainer(component, form);
         }
     }
     
