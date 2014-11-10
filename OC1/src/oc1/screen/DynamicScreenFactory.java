@@ -55,10 +55,10 @@ public final class DynamicScreenFactory
         final GlobScreenControllerLookup controllers = new GlobScreenControllerLookup();
         final GlobScreenLayoutLookup layouts = new GlobScreenLayoutLookup();
 
-        public Builder map(String globString,String name,ScreenController controller,StringSource source) {
+        public Builder map(String globString,String name,Object controller,StringSource source) {
             Glob glob = Glob.of(globString);
             names.add(glob,name);
-            controllers.add(glob,controller);
+            controllers.add(glob,new ScreenController(controller));
             layouts.add(glob,new DynamicScreenLayoutProvider(source));
             return this;
         }
