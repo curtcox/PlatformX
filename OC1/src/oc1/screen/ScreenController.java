@@ -4,15 +4,21 @@ import hash.NamedExpression;
 import oc1.util.Mirror;
 import oc1.util.Mirrors;
 
-public abstract class ScreenController {
+public final class ScreenController {
 
     public interface Lookup {
         ScreenController lookup(ScreenLink link);
     }
+
+    private final Object target;
+    
+    public ScreenController(Object target) {
+        this.target = target;
+    }
     
     public ScreenContext getContext() {
         ScreenContext context = new ScreenContext();
-        addSpecifics(context,Mirrors.of(this));
+        addSpecifics(context,Mirrors.of(target));
         return context;
     }
     

@@ -8,7 +8,6 @@ import com.codename1.ui.TextArea;
 import oc1.app.CurrentState;
 import oc1.domain.ServiceProvider;
 import oc1.screen.ScreenButton;
-import oc1.screen.ScreenController;
 import oc1.screen.ScreenLink;
 import oc1.screenparts.ProviderDetailsButton;
 import oc1.ui.ActionButton;
@@ -20,9 +19,7 @@ import oc2.stores.MyRatings;
  * http://www.sagetraveling.com/Rating-System-Explanation/
  * @author Curt
  */
-public final class RateScreenController
-    extends ScreenController
-{
+public final class RateScreenController {
     final Label rating = new Label();
     final TextArea description = new TextArea(
         "                                                                    ");

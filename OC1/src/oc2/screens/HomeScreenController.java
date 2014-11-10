@@ -4,7 +4,6 @@ import com.codename1.ui.Button;
 import com.codename1.ui.Label;
 import oc1.domain.ServiceProvider;
 import oc1.screen.ScreenButton;
-import oc1.screen.ScreenController;
 import oc1.screenparts.ProviderDetailsButton;
 import oc1.screenparts.ProviderRatingButton;
 import oc1.services.Locations;
@@ -13,9 +12,7 @@ import oc1.services.Locations;
  * The home screen of the application.
  * @author Curt
  */
-public final class HomeScreenController
-    extends ScreenController
-{
+public final class HomeScreenController {
     
     Boolean there_is_a_selected_provider() {
         return ServiceProvider.getSelected().id != null;
