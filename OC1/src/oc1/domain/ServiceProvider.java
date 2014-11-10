@@ -7,10 +7,6 @@ import oc1.services.Locations;
 import oc1.event.StringSource;
 import java.net.URI;
 
-/**
- *
- * @author Curt
- */
 public final class ServiceProvider {
     
     public final ID id;

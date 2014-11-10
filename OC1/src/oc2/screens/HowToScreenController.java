@@ -9,14 +9,7 @@ public final class HowToScreenController
     extends ScreenController
 {   
     
-    @Override
-    public void addSpecifics(ScreenContext context) {
-        context.put("submit_issue",new Getter() { public Object get() {
-            return submitIssueButton();
-        }});
-    }
-    
-    private Button submitIssueButton() {
+    Button submitIssueButton() {
         return new ActionButton("Submit Issue") {
             @Override public void onTap() { IssueReporter.sendEmail(); }
         };
