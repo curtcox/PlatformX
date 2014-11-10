@@ -3,13 +3,13 @@ package oc2.screens;
 import java.util.Arrays;
 import oc1.util.Mirror;
 
-public final class HowToScreenControllerMirror
+public final class HowToMirror
     implements Mirror
 {   
-    HowToScreenController target;
+    HowTo target;
     
     public void setTarget(Object target) {
-        this.target = (HowToScreenController) target;
+        this.target = (HowTo) target;
     }
 
     public Object invoke(String method, Object[] args) {

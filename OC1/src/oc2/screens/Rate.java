@@ -19,12 +19,12 @@ import oc2.stores.MyRatings;
  * http://www.sagetraveling.com/Rating-System-Explanation/
  * @author Curt
  */
-public final class RateScreenController {
+public final class Rate {
     final Label rating = new Label();
     final TextArea description = new TextArea(
         "                                                                    ");
     
-    public RateScreenController() {
+    public Rate() {
         description.setEditable(false);
     }
 

@@ -2,12 +2,12 @@ package oc1.util;
 
 import java.util.HashMap;
 import java.util.Map;
-import oc2.screens.HomeScreenController;
-import oc2.screens.HomeScreenControllerMirror;
-import oc2.screens.HowToScreenController;
-import oc2.screens.HowToScreenControllerMirror;
-import oc2.screens.RateScreenController;
-import oc2.screens.RateScreenControllerMirror;
+import oc2.screens.Home;
+import oc2.screens.HomeMirror;
+import oc2.screens.HowTo;
+import oc2.screens.HowToMirror;
+import oc2.screens.Rate;
+import oc2.screens.RateMirror;
 
 /**
  * For finding the Mirror for a given object.
@@ -16,9 +16,9 @@ import oc2.screens.RateScreenControllerMirror;
 public final class Mirrors {
     
     private static final Map<Class,Mirror> mirrors = new HashMap<Class,Mirror>(){{
-        put(HomeScreenController.class, new HomeScreenControllerMirror());
-        put(RateScreenController.class,new RateScreenControllerMirror());
-        put(HowToScreenController.class, new HowToScreenControllerMirror());
+        put(Home.class, new HomeMirror());
+        put(Rate.class,new RateMirror());
+        put(HowTo.class, new HowToMirror());
     }};
     
     public static Mirror of(Object o) {

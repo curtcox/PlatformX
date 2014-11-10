@@ -12,7 +12,7 @@ import oc1.services.Locations;
  * The home screen of the application.
  * @author Curt
  */
-public final class HomeScreenController {
+public final class Home {
     
     Boolean there_is_a_selected_provider() {
         return ServiceProvider.getSelected().id != null;

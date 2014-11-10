@@ -3,13 +3,13 @@ package oc2.screens;
 import java.util.Arrays;
 import oc1.util.Mirror;
 
-public final class RateScreenControllerMirror
+public final class RateMirror
     implements Mirror
 {
-    private RateScreenController target;
+    private Rate target;
     
     public void setTarget(Object target) {
-        this.target = (RateScreenController) target;
+        this.target = (Rate) target;
     }
     
     @Override

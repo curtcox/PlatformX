@@ -26,9 +26,9 @@ public final class OysterCrackerScreenFactory {
     
     private static ScreenFactory dynamicScreens(StringMap layouts) {
         return DynamicScreenFactory.builder()
-                    .map(""     ,Version.VERSION, new HomeScreenController(), new StringMapStringSource(layouts,"Home"))
-                    .map("HowTo","How To"       , new HowToScreenController(),new StringMapStringSource(layouts,"HowTo"))
-                    .map("Rate" ,"Rate"         , new RateScreenController(),new StringMapStringSource(layouts ,"Rate"))
+                    .map(""     ,Version.VERSION, new Home(), new StringMapStringSource(layouts,"Home"))
+                    .map("HowTo","How To"       , new HowTo(),new StringMapStringSource(layouts,"HowTo"))
+                    .map("Rate" ,"Rate"         , new Rate(),new StringMapStringSource(layouts ,"Rate"))
                 .build();
     }
 }

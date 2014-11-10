@@ -4,7 +4,7 @@ import oc1.log.IssueReporter;
 import com.codename1.ui.Button;
 import oc1.ui.ActionButton;
 
-public final class HowToScreenController {   
+public final class HowTo {   
     
     Button submitIssueButton() {
         return new ActionButton("Submit Issue") {
