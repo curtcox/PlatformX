@@ -1,26 +1,19 @@
 package oc2.screens;
 
-import java.util.Arrays;
-import oc1.util.Mirror;
+import oc1.util.AbstractMirror;
 
 public final class HomeMirror
-    implements Mirror
+    extends AbstractMirror<Home>
 {
-    Home target;
-    
-    public void setTarget(Object target) {
-        this.target = (Home) target;
+    public HomeMirror() {
+        super(Home.class,"there_is_a_selected_provider","provider_details","provider_rating","search_nearby");    
     }
-
+    
     public Object invoke(String method, Object[] args) {
         if (method.equals("there_is_a_selected_provider")) { return target.there_is_a_selected_provider(); }
         if (method.equals("provider_details")) { return target.provider_details(); }
         if (method.equals("provider_rating")) { return target.provider_rating(); }
         if (method.equals("search_nearby")) { return target.searchNearbyButton();}
-        throw new IllegalArgumentException(method + Arrays.asList(args));
-    }
-
-    public String[] getMethods() {
-        return new String[] {"there_is_a_selected_provider","provider_details","provider_rating","search_nearby"};
+        throw methodNotFound(method,args);
     }
 }

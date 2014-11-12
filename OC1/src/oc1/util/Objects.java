@@ -3,7 +3,7 @@ package oc1.util;
 import java.util.Arrays;
 
 /**
- *
+ * Useful methods for ObjectS.
  * @author Curt
  */
 public final class Objects {

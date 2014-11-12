@@ -27,7 +27,7 @@ public final class SearchScreenFactory {
     private static Screen searchScreenFromArgs(Object[] args) {
         if (args.length==0) return SearchScreenFactory.of();
         if (args.length==1) return SearchScreenFactory.withTypes(types(args));
-        if (args.length==2) return SearchScreenFactory.withTypesAndRadius(types((Objects[])args[0]),(Integer)args[1]);
+        if (args.length==2) return SearchScreenFactory.withTypesAndRadius(types((Object[])args[0]),(Integer)args[1]);
         throw new IllegalArgumentException("args=" + Arrays.asList(args));
     }
 

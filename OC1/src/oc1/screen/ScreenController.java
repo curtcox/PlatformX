@@ -1,6 +1,7 @@
 package oc1.screen;
 
 import hash.NamedExpression;
+import oc1.util.Check;
 import oc1.util.Mirror;
 import oc1.util.Mirrors;
 
@@ -13,7 +14,7 @@ public final class ScreenController {
     private final Object target;
     
     public ScreenController(Object target) {
-        this.target = target;
+        this.target = Check.notNull(target);
     }
     
     public ScreenContext getContext() {

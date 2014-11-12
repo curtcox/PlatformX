@@ -1,24 +1,17 @@
 package oc2.screens;
 
-import java.util.Arrays;
-import oc1.util.Mirror;
+import oc1.util.AbstractMirror;
 
 public final class HowToMirror
-    implements Mirror
+    extends AbstractMirror<HowTo>
 {   
-    HowTo target;
-    
-    public void setTarget(Object target) {
-        this.target = (HowTo) target;
+    public HowToMirror() {
+        super(HowTo.class,"submit_issue");
     }
-
+    
     public Object invoke(String method, Object[] args) {
         if (method.equals("submit_issue")) { return target.submitIssueButton();}
-        throw new IllegalArgumentException(method + Arrays.asList(args));
-    }
-
-    public String[] getMethods() {
-        return new String[] {"submit_issue"};
+        throw methodNotFound(method, args);
     }
 
 }

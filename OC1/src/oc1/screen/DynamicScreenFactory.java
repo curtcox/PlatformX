@@ -5,6 +5,10 @@ import oc1.util.Glob;
 import oc1.util.GlobStringMap;
 import oc1.util.StringMap;
 
+/**
+ * A ScreenFactory that dynamically creates screens.
+ * @author Curt
+ */
 public final class DynamicScreenFactory
     implements ScreenFactory
 {
@@ -34,15 +38,15 @@ public final class DynamicScreenFactory
         return new LayoutScreen(name,controller,layout);
     }
     
-    String name(ScreenLink link) {
+    private String name(ScreenLink link) {
         return names.get(link.screen);
     } 
     
-    ScreenController controller(ScreenLink link) {
+    private ScreenController controller(ScreenLink link) {
         return controllers.lookup(link);
     }
     
-    ScreenLayout.Provider layoutProvider(ScreenLink link) {
+    private ScreenLayout.Provider layoutProvider(ScreenLink link) {
         return layouts.lookup(link);
     }
     

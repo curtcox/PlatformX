@@ -20,15 +20,14 @@ public final class OysterCrackerScreenFactory {
                 ProviderDetailsScreen.FACTORY,
                 FilterScreenFactory.FACTORY,
                 SearchScreenFactory.FACTORY,
-                dynamicScreens(layouts)
+                dynamicScreens(layouts),
+                new LazyScreenFactory(layouts)
         );
     }
     
     private static ScreenFactory dynamicScreens(StringMap layouts) {
         return DynamicScreenFactory.builder()
                     .map(""     ,Version.VERSION, new Home(), new StringMapStringSource(layouts,"Home"))
-                    .map("HowTo","How To"       , new HowTo(),new StringMapStringSource(layouts,"HowTo"))
-                    .map("Rate" ,"Rate"         , new Rate(),new StringMapStringSource(layouts ,"Rate"))
                 .build();
     }
 }

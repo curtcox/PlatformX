@@ -1,15 +1,15 @@
 package oc2.screens;
 
-import java.util.Arrays;
-import oc1.util.Mirror;
+import oc1.util.AbstractMirror;
 
 public final class RateMirror
-    implements Mirror
+    extends AbstractMirror<Rate>
 {
-    private Rate target;
-    
-    public void setTarget(Object target) {
-        this.target = (Rate) target;
+    public RateMirror() {
+        super(Rate.class,
+            "rating", "description", "provider_details_button",
+            "change_location_button", "about_rating_button", "rating_button"
+        );
     }
     
     @Override
@@ -20,14 +20,7 @@ public final class RateMirror
         if (method.equals("change_location_button"))  { return target.change_location_button(); } 
         if (method.equals("about_rating_button"))     { return target.about_rating_button(); }
         if (method.equals("rating_button"))           { return target.rating_button((String)args[0],(String)args[1]); }
-        throw new IllegalArgumentException(method + Arrays.asList(args));
-    }
-
-    public String[] getMethods() {
-        return new String[] {
-            "rating", "description", "provider_details_button",
-            "change_location_button", "about_rating_button", "rating_button"
-        };
+        throw methodNotFound(method, args);
     }
 
 }
