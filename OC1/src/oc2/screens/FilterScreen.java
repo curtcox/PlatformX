@@ -19,6 +19,6 @@ public final class FilterScreen
 
     @Override
     protected ScreenLink useSelectedItem(Type type) {
-        return new ScreenLink("Search",this,new Type[]{type});
+        return new ScreenLink("Search",(Object[])new Type[]{type});
     }
 }

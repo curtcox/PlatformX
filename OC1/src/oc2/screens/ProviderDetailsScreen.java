@@ -30,7 +30,7 @@ public final class ProviderDetailsScreen
     
     private final class SearchLinkFactory implements ScreenLink.Factory {
         public ScreenLink create() {
-            return new ScreenLink("Search",ProviderDetailsScreen.this,getType());
+            return new ScreenLink("Search",getType());
         }
     }
 
