@@ -5,7 +5,9 @@ import oc1.util.Check;
 import oc1.util.Mirror;
 import oc1.util.Mirrors;
 
-public final class ScreenController {
+public final class ScreenController
+    implements ScreenContext.Provider
+{
 
     public interface Lookup {
         ScreenController lookup(ScreenLink link);

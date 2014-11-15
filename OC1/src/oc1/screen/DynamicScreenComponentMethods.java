@@ -12,8 +12,13 @@ final class DynamicScreenComponentMethods
     extends HashMap
 {
     DynamicScreenComponentMethods() {
-        put("button",button());        
+        put(button());        
+        put(link());        
     }   
+    
+    private void put(NamedExpression expression) {
+        put(expression.name,expression);
+    }
     
     private NamedExpression button() {
         return new NamedExpression("button") {
@@ -29,6 +34,18 @@ final class DynamicScreenComponentMethods
         };
     }
 
+    private NamedExpression link() {
+        return new NamedExpression("link") {
+            
+            @Override
+            public Object invoke(Object[] values) {
+                String text = string(values[0]);
+                return link(text);
+            }
+
+        };
+    }
+
     private String string(Object value) {
         return (String) value;
     }
@@ -37,4 +54,8 @@ final class DynamicScreenComponentMethods
         return ScreenButton.textAndImageLeadingTo(text,image,leadingTo);
     }
 
+    private Button link(String text) {
+        return ScreenButton.textAndLeadingTo(text, text);
+    }
+    
 }

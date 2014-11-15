@@ -6,6 +6,10 @@ import hash.lex.Tokens;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * For parsing a string into a Hash.
+ * @author Curt
+ */
 public final class HashParser {
 
     public Hash parse(String source) {

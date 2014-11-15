@@ -27,7 +27,7 @@ public final class DynamicScreenFactory
         if (name==null) {
             return null;
         }
-        ScreenController controller = controller(link);
+        ScreenContext.Provider controller = controller(link);
         if (controller==null) {
             return null;
         }
@@ -42,7 +42,7 @@ public final class DynamicScreenFactory
         return names.get(link.screen);
     } 
     
-    private ScreenController controller(ScreenLink link) {
+    private ScreenContext.Provider controller(ScreenLink link) {
         return controllers.lookup(link);
     }
     

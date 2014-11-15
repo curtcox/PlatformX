@@ -39,7 +39,6 @@ public final class Mirrors {
 
     public static Mirror of(String className) {
         Class clazz = names.get(className);
-        Check.notNull(clazz,className + " not found");
         return mirrors.get(clazz);
     }
 

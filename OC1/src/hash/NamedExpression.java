@@ -30,7 +30,7 @@ public abstract class NamedExpression
         };
     }
 
-    final String name;
+    public final String name;
     
     public NamedExpression(String name) {
         this.name = name;

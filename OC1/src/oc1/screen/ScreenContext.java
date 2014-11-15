@@ -8,6 +8,10 @@ import java.util.Map;
  */
 public final class ScreenContext {
 
+    interface Provider {
+        ScreenContext getContext();
+    }
+    
     private final Map<String,Object> values = new HashMap();
     
     public void put(String key, Object value) {

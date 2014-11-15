@@ -10,16 +10,11 @@ import hash.NumericConstant;
 import hash.Return;
 import hash.StringConstant;
 import hash.Ternary;
-import hash.parse.HashParser;
 import java.util.ArrayList;
 import java.util.List;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class HashParserTest {
 
     HashParser testObject = new HashParser();

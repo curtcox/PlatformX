@@ -2,6 +2,7 @@ package oc1.screen;
 
 import com.codename1.ui.Component;
 import com.codename1.ui.Label;
+import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.layouts.Layout;
 import com.codename1.ui.table.TableLayout;
@@ -18,6 +19,7 @@ final class DynamicScreenLayoutMethods
     DynamicScreenLayoutMethods() {
         put("grid",grid());        
         put("table",table());        
+        put("flow",flow());        
     }   
     
     private NamedExpression grid() {
@@ -26,7 +28,7 @@ final class DynamicScreenLayoutMethods
             public Object invoke(Object[] values) {
                 int rows    = integer(values[0]);
                 int columns = integer(values[1]);
-                return grid(rows,columns,components(values));
+                return grid(rows,columns,components(values,2));
             }
         };
     }
@@ -37,15 +39,24 @@ final class DynamicScreenLayoutMethods
             public Object invoke(Object[] values) {
                 int rows    = integer(values[0]);
                 int columns = integer(values[1]);
-                return table(rows,columns,components(values));
+                return table(rows,columns,components(values,2));
             }
         };
     }
 
-    private Component[] components(Object[] values) {
-        Component[] components = new Component[values.length-2];
+    private NamedExpression flow() {
+        return new NamedExpression("flow") {
+            @Override
+            public Object invoke(Object[] values) {
+                return flow(components(values,0));
+            }
+        };
+    }
+
+    private Component[] components(Object[] values, int offset) {
+        Component[] components = new Component[values.length-offset];
         for (int i=0; i<components.length; i++) {
-            components[i] = component(values[i+2]);
+            components[i] = component(values[i+offset]);
         }
         return components;
     }
@@ -81,6 +92,10 @@ final class DynamicScreenLayoutMethods
 
     private ScreenLayout table(int rows,int columns,Component[] components) {
         return screen(new TableLayout(rows,columns),components);
+    }
+
+    private ScreenLayout flow(Component[] components) {
+        return screen(new FlowLayout(),components);
     }
 
     private ScreenLayout screen(Layout layout, Component... components) {

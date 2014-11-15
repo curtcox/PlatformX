@@ -8,10 +8,10 @@ import com.codename1.ui.Component;
 final class LayoutScreen
     extends Screen
 {
-    final ScreenController controller;
+    final ScreenContext.Provider controller;
     final ScreenLayout.Provider layoutProvider;
     
-    public LayoutScreen(String name, ScreenController controller, ScreenLayout.Provider layoutProvider) {
+    public LayoutScreen(String name, ScreenContext.Provider controller, ScreenLayout.Provider layoutProvider) {
         super(name);
         this.controller = controller;
         this.layoutProvider = layoutProvider;

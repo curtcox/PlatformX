@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import oc1.util.Mirror;
 import oc1.util.Mirrors;
 import oc1.util.StringMap;
 
@@ -18,19 +19,16 @@ public final class LazyScreenFactory
     
     public Screen create(ScreenLink link) {
         String name = link.screen;
-        ScreenController controller = controller(link);
-        if (controller==null) {
-            return null;
-        }
         ScreenLayout.Provider layout = layoutProvider(link);
         if (layout==null) {
             return null;
         }
-        return new LayoutScreen(name,controller,layout);
+        return new LayoutScreen(name,controller(link),layout);
     }
     
-    private ScreenController controller(ScreenLink link) {
-        return new ScreenController(Mirrors.of(link.screen).getTarget());
+    private ScreenContext.Provider controller(ScreenLink link) {
+        Mirror mirror = Mirrors.of(link.screen);
+        return (mirror==null) ? new EmptyScreenContextProvider() : new ScreenController(mirror.getTarget());
     }
     
     private ScreenLayout.Provider layoutProvider(ScreenLink link) {
