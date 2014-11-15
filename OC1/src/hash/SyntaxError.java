@@ -4,7 +4,9 @@ package hash;
  * For reporting syntax errors to the user.
  * @author Curt
  */
-public class SyntaxError {
+public final class SyntaxError
+    implements Expression
+{
 
     public enum Type {
         INVALID_METHOD_BODY,
@@ -14,6 +16,11 @@ public class SyntaxError {
         DUPLICATE_METHOD_NAME
     }
 
-    SyntaxError(String methodSource, String errorSource, Type type) {
+    public SyntaxError(String methodSource, String errorSource, Type type) {
     }
+
+    public Object invokeIn(Context context) {
+        return null;
+    }
+
 }

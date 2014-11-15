@@ -7,8 +7,8 @@ import hash.Method;
 import hash.lex.Tokens;
 
 /**
- * A method definition.
- * Contrast with Invocation.
+ * A parser for MethodS.
+ * Contrast with InvocationS.
  * @author Curt
  */
 final class MethodParser

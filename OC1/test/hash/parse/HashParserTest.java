@@ -9,6 +9,8 @@ import hash.Invocation;
 import hash.Method;
 import hash.NumericConstant;
 import hash.StringConstant;
+import hash.SyntaxError;
+import static hash.SyntaxError.Type.*;
 import hash.Ternary;
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +20,30 @@ import org.junit.Test;
 public class HashParserTest {
 
     HashParser testObject = new HashParser();
+
+        @Test
+    public void parse_method_body_with_syntax_error() {
+        Hash hash = Hash(Method("foo",new SyntaxError("foo { ? }","{ ? }",INVALID_METHOD_BODY)));
+        parse("foo { ? }",hash);
+    }
+
+    @Test
+    public void parse_malformed_method() {
+        Hash hash = Hash(Method("foo",new SyntaxError("foo }","foo }",MALFORMED_METHOD)));
+        parse("foo }",hash);
+    }
+
+    @Test
+    public void parse_method_params_with_syntax_error() {
+        Hash hash = Hash(Method("foo",new SyntaxError("foo(a,b) { }", "(a,b)",INVALID_METHOD_PARAMS)));
+        parse("foo(a,b) { }",hash);
+    }
+
+    @Test
+    public void parse_method_name_with_syntax_error() {
+        Hash hash = Hash(Method("",new SyntaxError("f?o { }","f?o",INVALID_METHOD_NAME)));
+        parse("f?o { }",hash);
+    }
 
     @Test
     public void parse_hash_with_return_foo() {
