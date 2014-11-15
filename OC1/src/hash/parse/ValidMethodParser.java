@@ -11,7 +11,7 @@ import hash.lex.Tokens;
  * Contrast with InvocationS.
  * @author Curt
  */
-final class MethodParser
+final class ValidMethodParser
     extends AbstractParser
 {
     final ArgNamesParser argsParser = new ArgNamesParser();

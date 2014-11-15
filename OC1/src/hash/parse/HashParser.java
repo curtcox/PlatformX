@@ -14,7 +14,7 @@ public final class HashParser {
 
     public Hash parse(String source) {
         List<Method> methods = new ArrayList<Method>();
-        MethodParser parser = new MethodParser();
+        ValidMethodParser parser = new ValidMethodParser();
         Tokens tokens = Tokens.from(source);
         while (parser.canParse(tokens)) {
             methods.add(parser.parse(tokens));

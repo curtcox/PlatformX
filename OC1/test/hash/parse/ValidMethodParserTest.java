@@ -5,13 +5,9 @@ import hash.lex.Tokens;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
-public class MethodParserTest {
+public class ValidMethodParserTest {
     
-    final MethodParser parser = new MethodParser();
+    final ValidMethodParser parser = new ValidMethodParser();
     
     @Test
     public void canParse_empty_method() {
