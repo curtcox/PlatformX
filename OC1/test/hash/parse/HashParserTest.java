@@ -21,7 +21,7 @@ public class HashParserTest {
 
     HashParser testObject = new HashParser();
 
-        @Test
+    @Test
     public void parse_method_body_with_syntax_error() {
         Hash hash = Hash(Method("foo",new SyntaxError("foo { ? }","{ ? }",INVALID_METHOD_BODY)));
         parse("foo { ? }",hash);
