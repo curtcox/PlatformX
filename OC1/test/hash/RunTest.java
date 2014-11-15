@@ -8,7 +8,7 @@ public class RunTest {
     @Test
     public void run_method_that_returns_constant() {
         Object value = Run
-            .source(lines("foo { ^ 'foo' }"))
+            .source(lines("foo { 'foo' }"))
             .method("foo")
             .namedValues(Context())
             .args();
@@ -18,8 +18,8 @@ public class RunTest {
     @Test
     public void run_method_with_true_ternary() {
         String source = lines(
-            "layout          { ^ (portrait) ? layout_portrait : layout_landscape }",
-            "layout_portrait { ^ 'Portrait?' }"
+            "layout          { (portrait) ? layout_portrait : layout_landscape }",
+            "layout_portrait { 'Portrait?' }"
         );
         NamedExpression invokable = new NamedExpression("portrait") {
             public Object invoke(Object[] args) { return true; }

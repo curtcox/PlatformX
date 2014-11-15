@@ -18,7 +18,7 @@ public class HashTests {
             hash.invoke(methodName,null,null);
             fail();
         } catch (RuntimeException e) {
-            assertEquals("foo not found",e.getMessage());
+            assertEquals("foo not found in []",e.getMessage());
         }
     }
 

@@ -97,11 +97,6 @@ public class MethodParserTest {
         parse(new Method("x",new Invocation("stuff")),"x{ stuff }");
     }
 
-    @Test
-    public void parse_returns_correct_value_for_method_with_return() {
-        parse(new Method("x",new Return(new StringConstant("word"))),"x{ ^ \"word\" }");
-    }
-
     private void parse(Method method,String string) {
         assertEquals(method,parser.parse(Tokens.from(string)));
     }

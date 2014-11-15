@@ -39,11 +39,6 @@ public class ExpressionParserTest {
     }
 
     @Test
-    public void canParse_return() {
-        assertTrue(canParse("^doit"));
-    }
-
-    @Test
     public void canParse_returns_false_for_closing_bracket() {
         assertFalse(canParse("}"));
     }
@@ -62,11 +57,6 @@ public class ExpressionParserTest {
     @Test
     public void parse_returns_correct_value_for_invocation() {
         parse(Invocation("doit"),"doit");
-    }
-
-    @Test
-    public void parse_returns_correct_value_for_return_invocation() {
-        parse(new Return(Invocation("doit")),"^doit");
     }
 
     @Test
@@ -96,22 +86,6 @@ public class ExpressionParserTest {
     
     private void parse(Expression expression,String string) {
         assertEquals(expression,new ExpressionParser().parse(Tokens.from(string)));
-    }
-
-    private Hash hash(String...lines) {
-        return parse(lines(lines));    
-    }
-
-    private Hash parse(String original) {
-        return new HashParser().parse(original);
-    }
-
-    private String lines(String...lines) {
-        StringBuilder out = new StringBuilder();
-        for (String line : lines) {
-            out.append(line + " ");
-        }
-        return out.toString();
     }
 
     private boolean canParse(String string) {

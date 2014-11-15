@@ -7,7 +7,6 @@ import hash.Hash;
 import hash.Invocation;
 import hash.Method;
 import hash.NumericConstant;
-import hash.Return;
 import hash.StringConstant;
 import hash.Ternary;
 import java.util.ArrayList;
@@ -21,20 +20,20 @@ public class HashParserTest {
 
     @Test
     public void parse_hash_with_return_foo() {
-        Hash hash = Hash(Method("foo", Return(Constant("foo"))));
-        parse("foo { ^ \"foo\" }",hash);
+        Hash hash = Hash(Method("foo", Constant("foo")));
+        parse("foo { \"foo\" }",hash);
     }
 
     @Test
     public void parse_hash_with_get_layout() {
         Hash hash = Hash(Method(
             "getLayout",
-            Return(Ternary(Invocation("portrait"),Invocation("layoutForPortrait"),Invocation("layoutForLandscape"))
+            Ternary(Invocation("portrait"),Invocation("layoutForPortrait"),Invocation("layoutForLandscape")
         )));
         parse(
             lines(
                 "getLayout() {",
-	            "^ (portrait) ? layoutForPortrait() : layoutForLandscape()",
+	            " (portrait) ? layoutForPortrait() : layoutForLandscape()",
                 "}"),
             hash
         );
@@ -44,13 +43,13 @@ public class HashParserTest {
     public void parse_hash_method_definition_and_invocation_with_arguments() {
         Hash hash = Hash(Method(
             "buttonTo",ArgNames("text","image","leadingTo"),
-            Return(Invocation("textAndImageLeadingTo",
+                Invocation("textAndImageLeadingTo",
                     Args(Invocation("text"),Invocation("image"),Invocation("leadingTo"))))
-        ));
+        );
         parse(
             lines(
                 "buttonTo(text image leadingTo) {",
-                    "^ textAndImageLeadingTo(text image leadingTo)",
+                    " textAndImageLeadingTo(text image leadingTo)",
                 "}"),
             hash
         );
@@ -60,17 +59,16 @@ public class HashParserTest {
     public void parse_hash_nested_invocation_with_mixed_arguments() {
         Hash hash = Hash(Method(
             "layoutForPortraitWithSelectedProvider",ArgNames(),
-            Return(Invocation("Screen",
+                   Invocation("Screen",
                        Args(
                            Invocation("Grid",Args(2,1)),
                            Invocation("newProviderContainer"),
                            Invocation("newNavigationContainer")) )
-                   )
         ));
         parse(
             lines(
                 "layoutForPortraitWithSelectedProvider() {",
-                     "^ Screen(Grid(2 1) newProviderContainer() newNavigationContainer())",
+                     " Screen(Grid(2 1) newProviderContainer() newNavigationContainer())",
                 "}"),
             hash
         );
@@ -79,13 +77,13 @@ public class HashParserTest {
     @Test
     public void parse_hash_with_two_methods() {
         Hash hash = Hash(
-            Method("layout",ArgNames(),Return(Ternary(Invocation("portrait"),Invocation("layout_portrait"),Invocation("layout_landscape")))),
-            Method("layout_landscape",ArgNames(),Return(Constant("Landscape!!")))
+            Method("layout",ArgNames(),Ternary(Invocation("portrait"),Invocation("layout_portrait"),Invocation("layout_landscape"))),
+            Method("layout_landscape",ArgNames(),Constant("Landscape!!"))
         );
         parse(
             lines(
-                "layout           { ^ (portrait) ? layout_portrait : layout_landscape }",
-                "layout_landscape { ^ \"Landscape!!\" }"
+                "layout           { (portrait) ? layout_portrait : layout_landscape }",
+                "layout_landscape { \"Landscape!!\" }"
             ),
             hash
         );
@@ -103,10 +101,6 @@ public class HashParserTest {
         return new Method(name,params,expression);
     }
     
-    Return Return(Expression expression) {
-        return new Return(expression);
-    }
-
     Ternary Ternary(Expression condition, Expression pass, Expression fail) {
         return new Ternary(condition,pass,fail);
     }

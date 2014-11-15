@@ -4,17 +4,13 @@ import hash.parse.HashParser;
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class HashInvokerTest {
 
     HashParser parser = new HashParser();
 
     @Test
     public void invoke_method_that_returns_constant() {
-        Hash hash = hash("foo { ^ 'foo' }");
+        Hash hash = hash("foo { 'foo' }");
         Object value = hash.invoke("foo",Args(),Context(hash));
         assertEquals("foo",value);
     }
@@ -22,8 +18,8 @@ public class HashInvokerTest {
     @Test
     public void invoke_method_with_true_ternary() {
         Hash hash = hash(
-            "layout          { ^ (portrait) ? layout_portrait : layout_landscape }",
-            "layout_portrait { ^ 'Portrait?' }"
+            "layout          { (portrait) ? layout_portrait : layout_landscape }",
+            "layout_portrait { 'Portrait?' }"
         );
         NamedExpression invokable = new NamedExpression("portrait") {
             public Object invoke(Object[] args) { return true; }
@@ -35,8 +31,8 @@ public class HashInvokerTest {
     @Test
     public void invoke_method_with_false_ternary() {
         Hash hash = hash(
-            "layout           { ^ (portrait) ? layout_portrait : layout_landscape }",
-            "layout_landscape { ^ 'Landscape!!' }"
+            "layout           { (portrait) ? layout_portrait : layout_landscape }",
+            "layout_landscape { 'Landscape!!' }"
         );
         NamedExpression invokable = new NamedExpression("portrait") {
             public Object invoke(Object[] args) { return false; }
@@ -48,8 +44,8 @@ public class HashInvokerTest {
     @Test
     public void invoke_method_that_is_not_defined_first() {
         Hash hash = hash(
-            "first  { ^ 1 }",
-            "second { ^ 2 }"
+            "first  { 1 }",
+            "second { 2 }"
         );
         Object value = hash.invoke("second",Args(),Context(hash));
         assertEquals(2L,value);
@@ -58,7 +54,7 @@ public class HashInvokerTest {
     @Test
     public void invoke_method_with_arguments() {
         Hash hash = hash(
-            "button(text image to) {^ textAndImageLeadingTo(text image to) }"
+            "button(text image to) { textAndImageLeadingTo(text image to) }"
         );
         NamedExpression invokable = new NamedExpression("textAndImageLeadingTo") {
             public Object invoke(Object[] args) {
@@ -72,9 +68,9 @@ public class HashInvokerTest {
     @Test
     public void invoke_nested_with_mixed_arguments() {
         Hash hash = hash(
-            "layout     {^ screen( grid(2 1) provider navigation ) }",
-            "provider   {^ 'Provider!'}",
-            "navigation {^ 'NAV'}"
+            "layout     { screen( grid(2 1) provider navigation ) }",
+            "provider   { 'Provider!'}",
+            "navigation { 'NAV'}"
         );
         NamedExpression screen = new NamedExpression("screen") {
             public Object invoke(Object[] args) {
@@ -94,8 +90,8 @@ public class HashInvokerTest {
     @Test
     public void invokeIn_uses_values_from_context() {
         Hash hash = hash(
-            "provider   {^ \"Provider!\"}",
-            "navigation {^ \"NAV\"}"
+            "provider   { \"Provider!\"}",
+            "navigation { \"NAV\"}"
         );
         NamedExpression screen = new NamedExpression("screen") {
             public Object invoke(Object[] args) {

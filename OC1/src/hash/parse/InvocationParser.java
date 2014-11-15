@@ -44,9 +44,7 @@ final class InvocationParser
         if (!tokens.hasNext() || !Identifier.isValid(tokens.next())) { return false; }
         if (!tokens.nextIs("("))                                     { return true; }
         ExpressionParser expressions = new ExpressionParser();
-        ReturnParser returns = new ReturnParser();
         while (!tokens.peekIs(")")) {
-            if (returns.canParse(tokens))                            { return false;}
             if (!expressions.canParse(tokens))                       { return false; }
             else {
                 expressions.parse(tokens);

@@ -48,7 +48,7 @@ public class DynamicScreenLayoutProviderTest {
 
     @Test
     public void getLayout_returns_layout_with_label_when_layout_returns_a_string() {
-        sourceCode = lines("layout { ^'Whatever' }");
+        sourceCode = lines("layout { 'Whatever' }");
         ScreenLayout actual = testObject.getLayout(context);
         Label label = (Label) actual.components[0];
         assertEquals("Whatever",label.getText());
@@ -58,7 +58,7 @@ public class DynamicScreenLayoutProviderTest {
     public void getLayout_returns_grid_with_components_when_layout_specifies_a_grid() {
         context.putAll(new DynamicScreenLayoutMethods());
         
-        sourceCode = lines("layout { ^grid(1 2 'one' 'two') }");
+        sourceCode = lines("layout { grid(1 2 'one' 'two') }");
         
         ScreenLayout actual = testObject.getLayout(context);
         assertTrue(actual.layout instanceof GridLayout);
@@ -74,8 +74,8 @@ public class DynamicScreenLayoutProviderTest {
     @Test
     public void getLayout_uses_context_to_return_portrait_layout_when_portrait() {
         sourceCode = lines(
-            "layout { ^ (portrait) ? layout_portrait : layout_landscape }",
-            "layout_portrait { ^ 'Family' }"
+            "layout { (portrait) ? layout_portrait : layout_landscape }",
+            "layout_portrait { 'Family' }"
         );
         context.put("portrait", true);
         ScreenLayout actual = testObject.getLayout(context);

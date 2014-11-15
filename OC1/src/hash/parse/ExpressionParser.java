@@ -15,8 +15,7 @@ final class ExpressionParser
             new NumericConstantParser(),
             new StringConstantParser(),
             new InvocationParser(),
-            new TernaryParser(),
-            new ReturnParser());
+            new TernaryParser());
     }
 
     @Override
