@@ -1,6 +1,5 @@
 package hash;
 
-import hash.lex.Tokens;
 import java.util.HashMap;
 import java.util.Map;
 import oc1.util.Strings;

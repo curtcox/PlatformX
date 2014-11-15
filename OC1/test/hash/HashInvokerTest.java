@@ -90,8 +90,8 @@ public class HashInvokerTest {
     @Test
     public void invokeIn_uses_values_from_context() {
         Hash hash = hash(
-            "provider   { \"Provider!\"}",
-            "navigation { \"NAV\"}"
+            "provider   { 'Provider!'}",
+            "navigation { 'NAV'}"
         );
         NamedExpression screen = new NamedExpression("screen") {
             public Object invoke(Object[] args) {
@@ -123,7 +123,7 @@ public class HashInvokerTest {
     }
 
     private Hash hash(String...lines) {
-        return parse(lines(lines));    
+        return parse(HashLines.from(lines));    
     }
     
     private Args Args(Expression...expressions) {
@@ -138,12 +138,5 @@ public class HashInvokerTest {
         return parser.parse(original);
     }
     
-    private String lines(String...lines) {
-        StringBuilder out = new StringBuilder();
-        for (String line : lines) {
-            out.append(line + " \r\n");
-        }
-        return out.toString().replaceAll("'", "\"");
-    }
 
 }

@@ -4,6 +4,7 @@ import hash.ArgNames;
 import hash.Args;
 import hash.Expression;
 import hash.Hash;
+import hash.HashLines;
 import hash.Invocation;
 import hash.Method;
 import hash.NumericConstant;
@@ -21,7 +22,7 @@ public class HashParserTest {
     @Test
     public void parse_hash_with_return_foo() {
         Hash hash = Hash(Method("foo", Constant("foo")));
-        parse("foo { \"foo\" }",hash);
+        parse("foo { 'foo' }",hash);
     }
 
     @Test
@@ -83,7 +84,7 @@ public class HashParserTest {
         parse(
             lines(
                 "layout           { (portrait) ? layout_portrait : layout_landscape }",
-                "layout_landscape { \"Landscape!!\" }"
+                "layout_landscape { 'Landscape!!' }"
             ),
             hash
         );
@@ -138,15 +139,11 @@ public class HashParserTest {
     }
     
     private void parse(String original,Hash expected) {
-        Hash actual = testObject.parse(original);
+        Hash actual = testObject.parse(lines(original));
         assertEquals(expected,actual);
     }
     
     private String lines(String...lines) {
-        StringBuilder out = new StringBuilder();
-        for (String line : lines) {
-            out.append(line + " \r\n");
-        }
-        return out.toString();
+        return HashLines.from(lines);
     }
 }

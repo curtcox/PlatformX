@@ -8,7 +8,7 @@ public class RunTest {
     @Test
     public void run_method_that_returns_constant() {
         Object value = Run
-            .source(lines("foo { 'foo' }"))
+            .source(HashLines.from("foo { 'foo' }"))
             .method("foo")
             .namedValues(Context())
             .args();
@@ -17,7 +17,7 @@ public class RunTest {
 
     @Test
     public void run_method_with_true_ternary() {
-        String source = lines(
+        String source = HashLines.from(
             "layout          { (portrait) ? layout_portrait : layout_landscape }",
             "layout_portrait { 'Portrait?' }"
         );
@@ -34,14 +34,6 @@ public class RunTest {
 
     private NamedValues Context(NamedExpression... expressions) {
         return NamedExpression.namedValues(expressions);
-    }
-
-    private String lines(String...lines) {
-        StringBuilder out = new StringBuilder();
-        for (String line : lines) {
-            out.append(line + " \r\n");
-        }
-        return out.toString().replaceAll("'", "\"");
     }
 
 }
