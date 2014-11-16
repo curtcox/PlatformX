@@ -119,4 +119,18 @@ public class TokensTest {
         assertTrue(Strings.contains(Tokens.from("nuts").toString(),"nuts"));
     }
 
+    @Test
+    public void toString_contains_original_string() {
+        assertTrue(Strings.contains(Tokens.from("f{}").toString(),"f{}"));
+    }
+
+    @Test
+    public void toStrings_contains_token_strings() {
+        Tokens tokens = Tokens.from("one two");
+        String[] actual = tokens.toStrings();
+        assertEquals(2,actual.length);
+        assertEquals("one",actual[0]);
+        assertEquals("two",actual[1]);
+    }
+
 }

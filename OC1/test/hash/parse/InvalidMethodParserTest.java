@@ -1,7 +1,6 @@
 package hash.parse;
 
 import hash.Expression;
-import hash.Hash;
 import hash.HashLines;
 import hash.Method;
 import hash.SyntaxError;
@@ -19,26 +18,26 @@ public class InvalidMethodParserTest {
     
     @Test
     public void parse_method_body_with_syntax_error() {
-        Method method = Method("foo",new SyntaxError("foo { ? }","{ ? }",INVALID_METHOD_BODY));
-        parse("foo { ? }",method);
+        Method method = Method("foo",new SyntaxError("foo{?}","{?}",INVALID_METHOD_BODY));
+        parse("foo{?}",method);
     }
 
     @Test
     public void parse_malformed_method() {
-        Method method = Method("foo",new SyntaxError("foo }","foo }",MALFORMED_METHOD));
-        parse("foo }",method);
+        Method method = Method("foo",new SyntaxError("foo}","foo}",MALFORMED_METHOD));
+        parse("foo}",method);
     }
 
     @Test
     public void parse_method_params_with_syntax_error() {
-        Method method = Method("foo",new SyntaxError("foo(a,b) { }", "(a,b)",INVALID_METHOD_PARAMS));
-        parse("foo(a,b) { }",method);
+        Method method = Method("foo",new SyntaxError("foo(a,b){}", "(a,b)",INVALID_METHOD_PARAMS));
+        parse("foo(a,b){}",method);
     }
 
     @Test
     public void parse_method_name_with_syntax_error() {
-        Method method = Method("",new SyntaxError("f?o { }","f?o",INVALID_METHOD_NAME));
-        parse("f?o { }",method);
+        Method method = Method("f?o",new SyntaxError("f?o{}","f?o",INVALID_METHOD_NAME));
+        parse("f?o{}",method);
     }
  
     private void parse(String original,Method expected) {

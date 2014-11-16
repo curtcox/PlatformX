@@ -58,6 +58,14 @@ public final class Tokens {
     
     @Override
     public String toString() {
-        return tokens.toString();
+        StringBuilder out = new StringBuilder();
+        for (String token : tokens) {
+            out.append(token);
+        }
+        return out.toString();
+    }
+
+    public String[] toStrings() {
+        return tokens.toArray(new String[0]);
     }
 }
