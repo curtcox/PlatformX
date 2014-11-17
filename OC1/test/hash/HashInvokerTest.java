@@ -1,8 +1,9 @@
 package hash;
 
 import hash.parse.HashParser;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import static hash.SyntaxError.Type.*;
+import oc1.util.Strings;
 import org.junit.Test;
 
 public class HashInvokerTest {
@@ -11,37 +12,41 @@ public class HashInvokerTest {
 
     @Test
     public void invoke_method_body_that_returns_syntax_error() {
-        Hash hash = hash("foo { ? }");
+        Hash hash = hash("foo{?}");
         Object value = hash.invoke("foo",Args(),Context(hash));
-        assertEquals(new SyntaxError("foo { ? }","{ ? }",INVALID_METHOD_BODY),value);
+        assertEquals(new SyntaxError("foo{?}","{?}",INVALID_METHOD_BODY),value);
     }
 
     @Test
     public void invoke_malformed_method_that_returns_syntax_error() {
-        Hash hash = hash("foo }");
+        Hash hash = hash("foo}");
         Object value = hash.invoke("foo",Args(),Context(hash));
-        assertEquals(new SyntaxError("foo }","foo }",MALFORMED_METHOD),value);
+        assertEquals(new SyntaxError("foo}","foo}",MALFORMED_METHOD),value);
     }
 
     @Test
     public void invoke_method_params_that_returns_syntax_error() {
-        Hash hash = hash("foo(a,b) { }");
+        Hash hash = hash("foo(a,b){}");
         Object value = hash.invoke("foo",Args(),Context(hash));
-        assertEquals(new SyntaxError("foo(a,b) { }", "(a,b)",INVALID_METHOD_PARAMS),value);
+        assertEquals(new SyntaxError("foo(a,b){}", "(a,b)",INVALID_METHOD_PARAMS),value);
     }
 
     @Test
     public void invoke_method_name_that_returns_syntax_error() {
-        Hash hash = hash("f?o { }");
-        Object value = hash.invoke("foo",Args(),Context(hash));
-        assertEquals(new SyntaxError("f?o { }","f?o",INVALID_METHOD_NAME),value);
+        Hash hash = hash("f?o{}");
+        try {
+            hash.invoke("foo",Args(),Context(hash));
+            fail();
+        } catch (RuntimeException e) {
+            assertTrue(Strings.contains(e.getMessage(),"foo not found"));
+        }
     }
 
     @Test
     public void invoke_duplicate_method_name_that_returns_syntax_error() {
         Hash hash = hash("f{} f{}");
         Object value = hash.invoke("f",Args(),Context(hash));
-        assertEquals(new SyntaxError("f?o { }","f?o",DUPLICATE_METHOD_NAME),value);
+        assertEquals(new SyntaxError("f?o{}","f?o",DUPLICATE_METHOD_NAME),value);
     }
 
     @Test

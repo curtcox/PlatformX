@@ -23,32 +23,32 @@ public class HashParserTest {
 
     @Test
     public void parse_method_body_with_syntax_error() {
-        Hash hash = Hash(Method("foo",new SyntaxError("foo { ? }","{ ? }",INVALID_METHOD_BODY)));
-        parse("foo { ? }",hash);
+        Hash hash = Hash(Method("foo",new SyntaxError("foo{?}","{?}",INVALID_METHOD_BODY)));
+        parse("foo{?}",hash);
     }
 
     @Test
     public void parse_malformed_method() {
-        Hash hash = Hash(Method("foo",new SyntaxError("foo }","foo }",MALFORMED_METHOD)));
-        parse("foo }",hash);
+        Hash hash = Hash(Method("foo",new SyntaxError("foo}","foo}",MALFORMED_METHOD)));
+        parse("foo}",hash);
     }
 
     @Test
     public void parse_method_params_with_syntax_error() {
-        Hash hash = Hash(Method("foo",new SyntaxError("foo(a,b) { }", "(a,b)",INVALID_METHOD_PARAMS)));
-        parse("foo(a,b) { }",hash);
+        Hash hash = Hash(Method("foo",new SyntaxError("foo(a,b){}", "(a,b)",INVALID_METHOD_PARAMS)));
+        parse("foo(a,b){}",hash);
     }
 
     @Test
     public void parse_method_name_with_syntax_error() {
-        Hash hash = Hash(Method("",new SyntaxError("f?o { }","f?o",INVALID_METHOD_NAME)));
-        parse("f?o { }",hash);
+        Hash hash = Hash(Method("f?o",new SyntaxError("f?o{}","f?o",INVALID_METHOD_NAME)));
+        parse("f?o{}",hash);
     }
 
     @Test
     public void parse_hash_with_return_foo() {
         Hash hash = Hash(Method("foo", Constant("foo")));
-        parse("foo { 'foo' }",hash);
+        parse("foo{ 'foo' }",hash);
     }
 
     @Test
