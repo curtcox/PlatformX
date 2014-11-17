@@ -17,6 +17,16 @@ public class InvalidMethodParserTest {
     InvalidMethodParser testObject = new InvalidMethodParser();
     
     @Test
+    public void canParseTokens_returns_false_when_there_are_no_tokens() {
+        assertFalse(testObject.canParseTokens(Tokens.from("")));
+    }
+
+    @Test
+    public void canParseTokens_returns_true_when_there_are_tokens() {
+        assertTrue(testObject.canParseTokens(Tokens.from("x")));
+    }
+    
+    @Test
     public void parse_method_body_with_syntax_error() {
         Method method = Method("foo",new SyntaxError("foo{?}","{?}",INVALID_METHOD_BODY));
         parse("foo{?}",method);
@@ -41,8 +51,10 @@ public class InvalidMethodParserTest {
     }
  
     private void parse(String original,Method expected) {
-        Method actual = testObject.parse(lines(original));
+        Tokens tokens = lines(original);
+        Method actual = testObject.parse(tokens);
         assertEquals(expected,actual);
+        assertFalse(tokens.hasNext());
     }
 
     Method Method(String name,Expression expression) {

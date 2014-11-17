@@ -16,23 +16,29 @@ final class InvalidMethodParser
 
     @Override
     public boolean canParseTokens(Tokens tokens) {
-        return true;
+        return tokens.hasNext();
     }
 
     public Method parse(Tokens tokens) {
-        String methodSource = tokens.toString();
         if (!Identifier.isValid(methodName(tokens))) {
-            return new Method(methodName(tokens),new SyntaxError(methodSource,methodName(tokens),INVALID_METHOD_NAME));
+            return method(tokens,methodName(tokens),INVALID_METHOD_NAME);
         }
         if (methodBody(tokens).length()==0) {
-            return new Method(tokens.peek(),new SyntaxError(methodSource,methodSource,MALFORMED_METHOD));
+            return method(tokens,tokens.toString(),MALFORMED_METHOD);
         }
         if (methodParams(tokens).length()!=0) {
-            return new Method(tokens.peek(),new SyntaxError(methodSource,methodParams(tokens),INVALID_METHOD_PARAMS));
+            return method(tokens,methodParams(tokens),INVALID_METHOD_PARAMS);
         }
-        return new Method(tokens.peek(),new SyntaxError(methodSource,methodBody(tokens),INVALID_METHOD_BODY));
+        return method(tokens,methodBody(tokens),INVALID_METHOD_BODY);
     }
 
+    Method method(Tokens tokens, String errorSource,SyntaxError.Type type) {
+        String methodSource = tokens.toString();
+        String methodName = methodName(tokens);
+        for (;tokens.hasNext();tokens.next()){}
+        return new Method(methodName,new SyntaxError(methodSource,errorSource,type));
+    }
+    
     String methodName(Tokens tokens) {
         StringBuilder out = new StringBuilder();
         for (String token : tokens.toStrings()) {
