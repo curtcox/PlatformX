@@ -35,8 +35,14 @@ final class InvalidMethodParser
     Method method(Tokens tokens, String errorSource,SyntaxError.Type type) {
         String methodSource = tokens.toString();
         String methodName = methodName(tokens);
-        for (;tokens.hasNext();tokens.next()){}
+        consumeAll(tokens);
         return new Method(methodName,new SyntaxError(methodSource,errorSource,type));
+    }
+    
+    void consumeAll(Tokens tokens) {
+        while(tokens.hasNext()) {
+            tokens.next();
+        }
     }
     
     String methodName(Tokens tokens) {
