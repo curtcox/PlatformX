@@ -9,9 +9,9 @@ public final class Method
     implements Expression
 {
 
-    final String name;
-    final ArgNames args;
-    final Expression body;
+    public final String name;
+    public final ArgNames args;
+    public final Expression body;
     
     public Method(String name,Expression body) {
         this(name,new ArgNames(),body);

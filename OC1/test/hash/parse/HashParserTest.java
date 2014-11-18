@@ -14,7 +14,7 @@ import static hash.SyntaxError.Type.*;
 import hash.Ternary;
 import java.util.ArrayList;
 import java.util.List;
-import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class HashParserTest {
@@ -31,6 +31,16 @@ public class HashParserTest {
     public void parse_malformed_method() {
         Hash hash = Hash(Method("foo",new SyntaxError("foo}","foo}",MALFORMED_METHOD)));
         parse("foo}",hash);
+    }
+
+    @Test
+    public void parse_duplicate_method() {
+        try {
+            testObject.parse(lines("f{} f{}"));
+            fail();
+        } catch (RuntimeException e) {
+            assertEquals("Duplicate method : f",e.getMessage());
+        }
     }
 
     @Test

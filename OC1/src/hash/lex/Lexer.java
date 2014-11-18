@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * For splitting a string into tokens.
+ * For splitting a source string into tokens.
  * See also Tokenizer, which it uses under-the-covers.
  * @author Curt
  */
@@ -59,6 +59,10 @@ final class Lexer {
         return string.trim().equals("");
     }
     
+    /**
+     * Return the given source string as an array of one-token StringS.
+     * The given tokens will not contain any whitespace or comments.
+     */
     static String[] split(String string) {
         Lexer lexer = new Lexer();
         return lexer.splitIntoParts(string);
