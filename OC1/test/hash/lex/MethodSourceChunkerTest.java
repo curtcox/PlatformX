@@ -1,5 +1,6 @@
 package hash.lex;
 
+import hash.HashLines;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -18,6 +19,21 @@ public class MethodSourceChunkerTest {
     @Test
     public void split_returns_2_valid_methods() {
         splitsAs("f{}","f{}");    
+    }
+
+    @Test
+    public void split_does_not_consider_a_chunk_to_end_when_end_is_in_a_comment() {
+        String source = HashLines.from("f { # fake end}","real end}");
+        String[] parts = MethodSourceChunker.split(source);
+        assertEquals(1,parts.length);
+        assertEquals("f { # fake end} \r\nreal end}",parts[0]);
+    }
+
+    @Test
+    public void split_returns_no_lines_for_just_a_comment_line() {
+        String source = "#just a comment}";
+        String[] parts = MethodSourceChunker.split(source);
+        assertEquals(0,parts.length);
     }
 
     private void splitsAs(String... parts) {

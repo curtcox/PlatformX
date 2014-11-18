@@ -43,13 +43,6 @@ public class HashInvokerTest {
     }
 
     @Test
-    public void invoke_duplicate_method_name_that_returns_syntax_error() {
-        Hash hash = hash("f{} f{}");
-        Object value = hash.invoke("f",Args(),Context(hash));
-        assertEquals(new SyntaxError("f?o{}","f?o",DUPLICATE_METHOD_NAME),value);
-    }
-
-    @Test
     public void invoke_method_that_returns_constant() {
         Hash hash = hash("foo { 'foo' }");
         Object value = hash.invoke("foo",Args(),Context(hash));

@@ -7,12 +7,19 @@ package hash.lex;
  */
 final class Tokenizer {
 
-    public static String[] tokenize(String string,String... tokens) {
-        int at = startOfFirst(string,tokens);
+    /**
+     * Use the separators to split the string into tokens.
+     * The separators are included in the returned tokens.
+     * @param string the string to be spilt
+     * @param separators the separator tokens to split on
+     * @return the separator tokens and the strings between them.
+     */
+    public static String[] tokenize(String string,String... separators) {
+        int at = startOfFirst(string,separators);
         if (at<0) {
             return (string.length()==0) ? new String[0] : new String[] {string};
         }
-        return join(before(string,at),at(string,at),tokenize(after(string,at),tokens));
+        return join(before(string,at),at(string,at),tokenize(after(string,at),separators));
     }
 
     private static int startOfFirst(String string, String... tokens) {
