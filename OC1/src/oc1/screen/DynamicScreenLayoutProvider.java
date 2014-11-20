@@ -1,10 +1,8 @@
 package oc1.screen;
 
-import com.codename1.ui.Component;
-import com.codename1.ui.Label;
+import com.codename1.ui.*;
 import com.codename1.ui.layouts.GridLayout;
-import hash.NamedValues;
-import hash.Run;
+import hash.*;
 import oc1.event.StringSource;
 import oc1.log.*;
 
@@ -47,6 +45,9 @@ public final class DynamicScreenLayoutProvider
         if (result instanceof Component) {
             return componentScreen((Component)result);
         }
+        if (result instanceof SyntaxError) {
+            return errorScreen((SyntaxError) result);
+        }
         throw new IllegalArgumentException("result="+result);
     }
     
@@ -56,6 +57,14 @@ public final class DynamicScreenLayoutProvider
 
     private ScreenLayout messageScreen(String message) {
         return componentScreen(new Label(message));
+    }
+
+    private ScreenLayout errorScreen(SyntaxError error) {
+        return new ScreenLayout(new GridLayout(3,1),
+                new Label(error.type.toString()),
+                new Label(error.errorSource),
+                new Label(error.methodSource)
+        );
     }
 
     private Object getLayoutFromHash(String sourceCode,ScreenContext screenContext) {

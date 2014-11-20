@@ -16,9 +16,9 @@ public final class SyntaxError
         DUPLICATE_METHOD_NAME
     }
 
-    final String methodSource;
-    final String errorSource;
-    final Type type;
+    public final String methodSource;
+    public final String errorSource;
+    public final Type type;
     
     public SyntaxError(String methodSource, String errorSource, Type type) {
         this.errorSource = errorSource;
@@ -45,6 +45,8 @@ public final class SyntaxError
     
     @Override
     public String toString() {
-        return methodSource + " " + errorSource + " " + type;
+        return type + 
+               " method source = (" + methodSource + ")" +
+               " error source = (" + errorSource + ")";
     }
 }
