@@ -33,21 +33,11 @@ public final class DynamicScreenLayoutProvider
     }
 
     private ScreenLayout screenForResult(Object result) {
-        if (result==null) {
-            return messageScreen("(null)");
-        }
-        if (result instanceof ScreenLayout) {
-            return (ScreenLayout) result;
-        }
-        if (result instanceof String) {
-            return messageScreen((String)result);
-        }
-        if (result instanceof Component) {
-            return componentScreen((Component)result);
-        }
-        if (result instanceof SyntaxError) {
-            return errorScreen((SyntaxError) result);
-        }
+        if (result==null)                   { return messageScreen("(null)");            }
+        if (result instanceof ScreenLayout) { return (ScreenLayout) result;              }
+        if (result instanceof String)       { return messageScreen((String)result);      }
+        if (result instanceof Component)    { return componentScreen((Component)result); }
+        if (result instanceof SyntaxError)  { return errorScreen((SyntaxError) result);  }
         throw new IllegalArgumentException("result="+result);
     }
     
