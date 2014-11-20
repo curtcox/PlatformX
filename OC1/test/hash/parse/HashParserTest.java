@@ -28,6 +28,12 @@ public class HashParserTest {
     }
 
     @Test
+    public void parse_method_body_with_multiple_method_invocations() {
+        Hash hash = Hash(Method("f",new SyntaxError("f{g h}","{g h}",MULTIPLE_METHOD_INVOCATIONS)));
+        parse("f{g h}",hash);
+    }
+
+    @Test
     public void parse_malformed_method() {
         Hash hash = Hash(Method("foo",new SyntaxError("foo}","foo}",MALFORMED_METHOD)));
         parse("foo}",hash);

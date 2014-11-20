@@ -10,6 +10,7 @@ public final class SyntaxError
 
     public enum Type {
         INVALID_METHOD_BODY,
+        MULTIPLE_METHOD_INVOCATIONS,
         MALFORMED_METHOD,
         INVALID_METHOD_PARAMS,
         INVALID_METHOD_NAME,
