@@ -1,7 +1,8 @@
 package oc1.screen;
 
+import com.codename1.components.*;
 import com.codename1.ui.*;
-import com.codename1.ui.layouts.GridLayout;
+import com.codename1.ui.layouts.*;
 import hash.*;
 import oc1.event.StringSource;
 import oc1.log.*;
@@ -50,17 +51,17 @@ public final class DynamicScreenLayoutProvider
     }
 
     private ScreenLayout errorScreen(SyntaxError error) {
-        return new ScreenLayout(new GridLayout(3,1),
-                new Label(error.type.toString()),
-                new Label(error.errorSource),
-                new Label(error.methodSource)
+        return new ScreenLayout(new BoxLayout(BoxLayout.Y_AXIS),
+                label(error.type.toString()),
+                label(error.errorSource),
+                label(error.methodSource)
         );
     }
 
     private ScreenLayout exception(Exception e) {
         return new ScreenLayout(new GridLayout(2,1),
-                new Label(e.getClass().toString()),
-                new Label(e.getMessage())
+                label(e.getClass().toString()),
+                label(e.getMessage())
         );
     }
 
@@ -77,6 +78,10 @@ public final class DynamicScreenLayoutProvider
         }
     }
 
+    private SpanLabel label(String text) {
+        return new SpanLabel(text);
+    }
+    
     private NamedValues asNamedValues(ScreenContext screenContext) {
         return new ScreenContextAsNamedValues(screenContext);
     }
