@@ -1,10 +1,7 @@
 package oc1.screen;
 
-import com.codename1.ui.Component;
-import com.codename1.ui.Label;
-import com.codename1.ui.layouts.FlowLayout;
-import com.codename1.ui.layouts.GridLayout;
-import com.codename1.ui.layouts.Layout;
+import com.codename1.ui.*;
+import com.codename1.ui.layouts.*;
 import com.codename1.ui.table.TableLayout;
 import hash.NamedExpression;
 import java.util.HashMap;
@@ -19,6 +16,8 @@ final class DynamicScreenLayoutMethods
     DynamicScreenLayoutMethods() {
         put("grid",grid());        
         put("table",table());        
+        put("row",row());        
+        put("column",column());        
         put("flow",flow());        
     }   
     
@@ -53,6 +52,24 @@ final class DynamicScreenLayoutMethods
         };
     }
 
+    private NamedExpression row() {
+        return new NamedExpression("row") {
+            @Override
+            public Object invoke(Object[] values) {
+                return row(components(values,0));
+            }
+        };
+    }
+
+    private NamedExpression column() {
+        return new NamedExpression("column") {
+            @Override
+            public Object invoke(Object[] values) {
+                return column(components(values,0));
+            }
+        };
+    }
+
     private Component[] components(Object[] values, int offset) {
         Component[] components = new Component[values.length-offset];
         for (int i=0; i<components.length; i++) {
@@ -62,17 +79,10 @@ final class DynamicScreenLayoutMethods
     }
 
     private Component component(Object o) {
-        if (o instanceof Component) {
-            return (Component) o;
-        }    
-        if (o instanceof String) {
-            return new Label(o.toString());
-        }
-        if (o instanceof ScreenLayout) {
-            return ((ScreenLayout)o).toComponent();
-        }
-        String message = "Argument " + o;
-        throw new IllegalArgumentException(message);
+        if (o == null)                 { return new Label(""); }
+        if (o instanceof Component)    { return (Component) o; }    
+        if (o instanceof ScreenLayout) { return ((ScreenLayout)o).toComponent(); }
+        return new Label(o.toString());
     }
     
     private int integer(Object o) {
@@ -96,6 +106,14 @@ final class DynamicScreenLayoutMethods
 
     private ScreenLayout flow(Component[] components) {
         return screen(new FlowLayout(),components);
+    }
+
+    private ScreenLayout column(Component[] components) {
+        return screen(new BoxLayout(BoxLayout.Y_AXIS),components);
+    }
+
+    private ScreenLayout row(Component[] components) {
+        return screen(new BoxLayout(BoxLayout.X_AXIS),components);
     }
 
     private ScreenLayout screen(Layout layout, Component... components) {

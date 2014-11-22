@@ -47,7 +47,7 @@ final class DynamicScreenComponentMethods
     }
 
     private String string(Object value) {
-        return (String) value;
+        return (value==null) ? "" : value.toString();
     }
 
     private Button button(String text, String image, String leadingTo) {
