@@ -1,15 +1,7 @@
 package hash.parse;
 
-import hash.Expression;
-import hash.Hash;
-import hash.HashLines;
-import hash.Method;
-import hash.SyntaxError;
-import static hash.SyntaxError.Type.INVALID_METHOD_BODY;
-import static hash.SyntaxError.Type.INVALID_METHOD_NAME;
-import static hash.SyntaxError.Type.INVALID_METHOD_PARAMS;
-import static hash.SyntaxError.Type.MALFORMED_METHOD;
-import static hash.SyntaxError.Type.MULTIPLE_METHOD_INVOCATIONS;
+import hash.*;
+import static hash.SyntaxError.Type.*;
 import hash.lex.Tokens;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -30,31 +22,31 @@ public class InvalidMethodParserTest {
     
     @Test
     public void parse_method_body_with_syntax_error() {
-        Method method = Method("foo",new SyntaxError("foo{?}","{?}",INVALID_METHOD_BODY));
+        Method method = Method("foo",new SyntaxError("foo { ? }","{ ? }",INVALID_METHOD_BODY));
         parse("foo{?}",method);
     }
 
     @Test
     public void parse_method_body_with_multiple_method_invocations() {
-        Method method = Method("f",new SyntaxError("f{g h}","{g h}",MULTIPLE_METHOD_INVOCATIONS));
+        Method method = Method("f",new SyntaxError("f { g h }","{ g h }",INVALID_METHOD_BODY));
         parse("f{g h}",method);
     }
 
     @Test
     public void parse_malformed_method() {
-        Method method = Method("foo",new SyntaxError("foo}","foo}",MALFORMED_METHOD));
+        Method method = Method("foo",new SyntaxError("foo }","foo }",MALFORMED_METHOD));
         parse("foo}",method);
     }
 
     @Test
     public void parse_method_params_with_syntax_error() {
-        Method method = Method("foo",new SyntaxError("foo(a,b){}", "(a,b)",INVALID_METHOD_PARAMS));
+        Method method = Method("foo",new SyntaxError("foo ( a , b ) { }", "( a , b )",INVALID_METHOD_PARAMS));
         parse("foo(a,b){}",method);
     }
 
     @Test
     public void parse_method_name_with_syntax_error() {
-        Method method = Method("f?o",new SyntaxError("f?o{}","f?o",INVALID_METHOD_NAME));
+        Method method = Method("f?o",new SyntaxError("f ? o { }","f?o",INVALID_METHOD_NAME));
         parse("f?o{}",method);
     }
  

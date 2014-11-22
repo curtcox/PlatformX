@@ -14,21 +14,21 @@ public class HashInvokerTest {
     public void invoke_method_body_that_returns_syntax_error() {
         Hash hash = hash("foo{?}");
         Object value = hash.invoke("foo",Args(),Context(hash));
-        assertEquals(new SyntaxError("foo{?}","{?}",INVALID_METHOD_BODY),value);
+        assertEquals(new SyntaxError("foo { ? }","{ ? }",INVALID_METHOD_BODY),value);
     }
 
     @Test
     public void invoke_malformed_method_that_returns_syntax_error() {
         Hash hash = hash("foo}");
         Object value = hash.invoke("foo",Args(),Context(hash));
-        assertEquals(new SyntaxError("foo}","foo}",MALFORMED_METHOD),value);
+        assertEquals(new SyntaxError("foo }","foo }",MALFORMED_METHOD),value);
     }
 
     @Test
     public void invoke_method_params_that_returns_syntax_error() {
         Hash hash = hash("foo(a,b){}");
         Object value = hash.invoke("foo",Args(),Context(hash));
-        assertEquals(new SyntaxError("foo(a,b){}", "(a,b)",INVALID_METHOD_PARAMS),value);
+        assertEquals(new SyntaxError("foo ( a , b ) { }", "( a , b )",INVALID_METHOD_PARAMS),value);
     }
 
     @Test

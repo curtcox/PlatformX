@@ -120,8 +120,13 @@ public class TokensTest {
     }
 
     @Test
-    public void toString_contains_original_string() {
-        assertTrue(Strings.contains(Tokens.from("f{}").toString(),"f{}"));
+    public void toString_contains_strings_separated_by_spaces() {
+        assertTrue(Strings.contains(Tokens.from("tinker evars chance").toString(),"tinker evars chance"));
+    }
+
+    @Test
+    public void toString_contains_original_tokens() {
+        assertTrue(Strings.contains(Tokens.from("f{}").toString(),"f { }"));
     }
 
     @Test

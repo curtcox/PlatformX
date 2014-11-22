@@ -48,13 +48,13 @@ final class InvalidMethodParser
     String methodName(Tokens tokens) {
         StringBuilder out = new StringBuilder();
         for (String token : tokens.toStrings()) {
-            if (token.equals("(") || tokens.equals(")") ||
+            if (token.equals("(") || token.equals(")") ||
                 token.equals("{") || token.equals("}")) {
                 break;
             }
             out.append(token);
         }
-        return out.toString();
+        return out.toString().trim();
     }
 
     String methodParams(Tokens tokens) {
@@ -62,31 +62,32 @@ final class InvalidMethodParser
         boolean started = false;
         for (String token : tokens.toStrings()) {
             if (started) {
-                out.append(token);
+                out.append(token + " ");
             }
             if (token.equals("(")) {
                 started = true;
-                out.append("(");
+                out.append("( ");
             }
             if (token.equals(")")) {
                 break;
             }
         }
-        return out.toString();
+        return out.toString().trim();
     }
 
     String methodBody(Tokens tokens) {
         StringBuilder out = new StringBuilder();
         boolean started = false;
+        int i=0;
         for (String token : tokens.toStrings()) {
             if (started) {
-                out.append(token);
+                out.append(token + " ");
             }
             if (token.equals("{")) {
                 started = true;
-                out.append("{");
+                out.append("{ ");
             }
         }
-        return out.toString();
+        return out.toString().trim();
     }
 }

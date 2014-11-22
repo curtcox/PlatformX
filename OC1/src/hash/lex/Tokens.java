@@ -60,9 +60,9 @@ public final class Tokens {
     public String toString() {
         StringBuilder out = new StringBuilder();
         for (String token : tokens) {
-            out.append(token);
+            out.append(token + " ");
         }
-        return out.toString();
+        return out.toString().trim();
     }
 
     public String[] toStrings() {
