@@ -48,8 +48,7 @@ final class InvalidMethodParser
     String methodName(Tokens tokens) {
         StringBuilder out = new StringBuilder();
         for (String token : tokens.toStrings()) {
-            if (token.equals("(") || token.equals(")") ||
-                token.equals("{") || token.equals("}")) {
+            if (isOneOf(token,"(",")","{","}")) {
                 break;
             }
             out.append(token);
@@ -68,7 +67,7 @@ final class InvalidMethodParser
                 started = true;
                 out.append("( ");
             }
-            if (token.equals(")")) {
+            if (isOneOf(token,")","{")) {
                 break;
             }
         }
@@ -78,7 +77,6 @@ final class InvalidMethodParser
     String methodBody(Tokens tokens) {
         StringBuilder out = new StringBuilder();
         boolean started = false;
-        int i=0;
         for (String token : tokens.toStrings()) {
             if (started) {
                 out.append(token + " ");
@@ -89,5 +87,14 @@ final class InvalidMethodParser
             }
         }
         return out.toString().trim();
+    }
+    
+    boolean isOneOf(String string, String... choices) {
+        for (String choice : choices) {
+            if (string.equals(choice)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

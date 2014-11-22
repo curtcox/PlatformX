@@ -33,6 +33,12 @@ public class InvalidMethodParserTest {
     }
 
     @Test
+    public void parse_method_body_with_multiple_method_invocations_and_parameters() {
+        Method method = Method("f",new SyntaxError("f { g h ( 2 ) }","{ g h ( 2 ) }",INVALID_METHOD_BODY));
+        parse("f{g h(2)}",method);
+    }
+
+    @Test
     public void parse_malformed_method() {
         Method method = Method("foo",new SyntaxError("foo }","foo }",MALFORMED_METHOD));
         parse("foo}",method);
