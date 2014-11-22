@@ -57,6 +57,13 @@ public final class DynamicScreenLayoutProvider
         );
     }
 
+    private ScreenLayout exception(Exception e) {
+        return new ScreenLayout(new GridLayout(2,1),
+                new Label(e.getClass().toString()),
+                new Label(e.getMessage())
+        );
+    }
+
     private Object getLayoutFromHash(String sourceCode,ScreenContext screenContext) {
         try {
             return Run
@@ -66,7 +73,7 @@ public final class DynamicScreenLayoutProvider
                 .args();
         } catch (Exception e) {
             log(e);
-            return e.toString();
+            return exception(e);
         }
     }
 
