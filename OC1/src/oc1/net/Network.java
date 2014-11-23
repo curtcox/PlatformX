@@ -18,4 +18,6 @@ public interface Network {
     InputStream getStreamFor(URI uri);
 
     Image getImage(URI uri);
+
+    Image getImage(URI uri, int w, int h);
 }

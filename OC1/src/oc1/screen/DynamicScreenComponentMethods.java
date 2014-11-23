@@ -1,8 +1,15 @@
 package oc1.screen;
 
+import com.codename1.components.*;
 import com.codename1.ui.Button;
+import com.codename1.ui.Display;
+import com.codename1.ui.Form;
+import com.codename1.ui.Image;
 import hash.NamedExpression;
-import java.util.HashMap;
+import java.net.*;
+import java.util.*;
+import oc1.app.Registry;
+import oc1.ui.Icons;
 
 /**
  * A map of component methods for adding to a ScreenContext.
@@ -12,6 +19,7 @@ final class DynamicScreenComponentMethods
     extends HashMap
 {
     DynamicScreenComponentMethods() {
+        put(image());        
         put(button());        
         put(link());        
     }   
@@ -34,6 +42,26 @@ final class DynamicScreenComponentMethods
         };
     }
 
+    private NamedExpression image() {
+        return new NamedExpression("image") {
+            
+            @Override
+            public Object invoke(Object[] values) {
+                URI uri = uri(values[0]);
+                SpanLabel button = new SpanLabel();
+                button.setIcon(image(uri));
+                return button;
+            }
+
+        };
+    }
+
+    Image image(URI uri) {
+        Display display = Registry.get(Display.class);
+        Form form = display.getCurrent();
+        return Icons.of().getImage(uri,form.getWidth(),form.getHeight());
+    }
+
     private NamedExpression link() {
         return new NamedExpression("link") {
             
@@ -44,6 +72,14 @@ final class DynamicScreenComponentMethods
             }
 
         };
+    }
+
+    private URI uri(Object value) {
+        try {
+            return new URI(string(value));
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e.getMessage());
+        }
     }
 
     private String string(Object value) {

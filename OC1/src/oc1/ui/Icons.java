@@ -6,11 +6,7 @@ import oc1.app.Registry;
 import oc1.net.Network;
 import java.net.URI;
 
-/**
- *
- * @author Curt
- */
-public class Icons {
+public final class Icons {
 
     private static Resources resources() {
         return Registry.get(Resources.class);
@@ -26,6 +22,10 @@ public class Icons {
 
     public Image getImage(URI uri) {
         return Registry.get(Network.class).getImage(uri);
+    }
+
+    public Image getImage(URI uri, int w, int h) {
+        return Registry.get(Network.class).getImage(uri,w,h);
     }
 
 }

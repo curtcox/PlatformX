@@ -53,6 +53,10 @@ public final class CachedNetwork
         return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
     }
 
+    public Image getImage(URI uri,int w, int h) {
+        return NetworkCacheEntry.newEntryFor(uri).createImageToStorage(w,h);
+    }
+
     private void cacheOnDownloadOK(NetworkCacheEntry entry) {
         if (entry.downloadToStorageWasOK()) {
             entries.put(entry.uri, entry);

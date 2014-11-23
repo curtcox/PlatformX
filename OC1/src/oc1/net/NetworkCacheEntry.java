@@ -60,8 +60,12 @@ final class NetworkCacheEntry {
     }
 
     Image createImageToStorage() {
-        EncodedImage placeholder = new EmptyImage(71, 71);
-        URLImage image = URLImage.createToStorage(placeholder, fileName, uri.toString(), URLImage.RESIZE_SCALE);
+        return createImageToStorage(71,71);
+    }
+
+    Image createImageToStorage(int w, int h) {
+        EncodedImage placeholder = new EmptyImage(w, h);
+        URLImage image = URLImage.createToStorage(placeholder, fileName, uri.toString(), URLImage.RESIZE_SCALE_TO_FILL);
         image.fetch();
         return image;
     }

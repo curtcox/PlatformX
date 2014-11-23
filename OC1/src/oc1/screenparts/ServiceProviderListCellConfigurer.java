@@ -2,13 +2,8 @@ package oc1.screenparts;
 
 import oc1.domain.ServiceProvider;
 import oc1.ui.Icons;
-import oc1.uilist.ListCell;
-import oc1.uilist.ListCellConfigurer;
+import oc1.uilist.*;
 
-/**
- *
- * @author Curt
- */
 public final class ServiceProviderListCellConfigurer
     implements ListCellConfigurer<ServiceProvider>
 {

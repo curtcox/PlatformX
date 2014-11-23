@@ -32,6 +32,10 @@ public final class RawNetwork
         return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
     }
 
+    public Image getImage(URI uri, int w, int h) {
+        return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
+    }
+
     private void log(Exception e) {
         getLog().log(e);    
     }

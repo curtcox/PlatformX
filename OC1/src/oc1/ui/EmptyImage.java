@@ -3,10 +3,6 @@ package oc1.ui;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.Graphics;
 
-/**
- *
- * @author Curt
- */
 public final class EmptyImage
     extends EncodedImage
 {
