@@ -26,5 +26,9 @@ public class J2seNetwork
     public Image getImage(URI uri) {
         return new EmptyImage(0,0);
     }
+
+    public Image getImage(URI uri, int w, int h) {
+        return new EmptyImage(0,0);
+    }
     
 }

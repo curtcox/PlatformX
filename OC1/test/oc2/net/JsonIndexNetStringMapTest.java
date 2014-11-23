@@ -24,7 +24,8 @@ public class JsonIndexNetStringMapTest {
         public InputStream getStreamFor(URI uri) {
             return new ByteArrayInputStream(pages.get(uri).getBytes());
         }
-        public Image getImage(URI uri) { throw new UnsupportedOperationException(""); }
+        public Image getImage(URI uri)               { throw new UnsupportedOperationException(); }
+        public Image getImage(URI uri, int w, int h) { throw new UnsupportedOperationException(); }
     };
     
     URI index = URI("http://example.com/");

@@ -1,6 +1,7 @@
 package oc1.screen;
 
-import com.codename1.ui.Label;
+import com.codename1.components.SpanLabel;
+import com.codename1.ui.*;
 import com.codename1.ui.layouts.GridLayout;
 import fake.FakeRegistryLoader;
 import oc1.event.StringSource;
@@ -42,10 +43,16 @@ public class DynamicScreenLayoutProviderTest {
     public void getLayout_returns_layout_with_message_when_layout_not_defined() {
         sourceCode = "layover {}";
         ScreenLayout actual = testObject.getLayout(context);
-        String string = actual.components[0].toString();
-        assertTrue(string,Strings.contains(string,"layout not found"));
+        assertSpanLabelTextContains(actual.components[0],"RuntimeException");
+        assertSpanLabelTextContains(actual.components[1],"layout not found");
     }
 
+    private void assertSpanLabelTextContains(Component component, String target) {
+        SpanLabel label = (SpanLabel) component;
+        String string = label.getText();
+        assertTrue(string,Strings.contains(string,target));
+    }
+    
     @Test
     public void getLayout_returns_layout_with_label_when_layout_returns_a_string() {
         sourceCode = lines("layout { 'Whatever' }");
