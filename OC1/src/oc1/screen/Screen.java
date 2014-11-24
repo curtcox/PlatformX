@@ -20,7 +20,8 @@ public abstract class Screen {
     public final Form form;
     private Screen previous; // set once
     private Command back;    // set once
-
+    private static Screen showing; // the currently showing screen
+    
     /**
      * Override this constructor to create a new screen.
      * @param name name of the Screen and title of the underlying Form
@@ -39,9 +40,11 @@ public abstract class Screen {
         log("created " + form.getTitle());
     }
 
-    private void setPrevious(Screen previous) {
-        verifyPreviousNotSet();
-        this.previous = previous;
+    private void setPrevious() {
+        if (previous!=null || showing==null) {
+            return;
+        }
+        previous = showing;
         back = new LoggedCommand("Back") {
             @Override protected void go() {
                 back();
@@ -49,14 +52,10 @@ public abstract class Screen {
         };
     }
 
-    private void verifyPreviousNotSet() {
-        if (previous!=null) {
-            throw new RuntimeException();
-        }
-    }
-    
     public void show() {
         log("show " + form.getTitle());
+        setPrevious();
+        showing = this;
         refresh();
         layoutForm();
         form.show();
