@@ -1,10 +1,7 @@
 package oc1.screen;
 
 import com.codename1.components.*;
-import com.codename1.ui.Button;
-import com.codename1.ui.Display;
-import com.codename1.ui.Form;
-import com.codename1.ui.Image;
+import com.codename1.ui.*;
 import hash.NamedExpression;
 import java.net.*;
 import java.util.*;
