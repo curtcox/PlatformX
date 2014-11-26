@@ -1,11 +1,9 @@
 package oc1.ui;
 
-import com.codename1.ui.Command;
-import com.codename1.ui.Form;
+import com.codename1.ui.*;
 import oc1.app.Registry;
 import oc1.command.LoggedCommand;
-import oc1.screen.ScreenFactory;
-import oc1.screen.ScreenLink;
+import oc1.screen.*;
 
 /**
  * For creating new FormS.

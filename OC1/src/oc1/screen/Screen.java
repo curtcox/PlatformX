@@ -1,10 +1,7 @@
 package oc1.screen;
 
-import com.codename1.ui.Command;
-import com.codename1.ui.Display;
-import com.codename1.ui.Form;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.*;
+import com.codename1.ui.events.*;
 import oc1.app.Registry;
 import oc1.command.LoggedCommand;
 import oc1.log.LogManager;
@@ -37,6 +34,7 @@ public abstract class Screen {
     public Screen(Form form) {
         this.form = form;
         refreshOnOrientationChanage();
+        refreshOnPull();
         log("created " + form.getTitle());
     }
 
@@ -62,6 +60,10 @@ public abstract class Screen {
         form.setBackCommand(back);
     }
    
+    public static Screen getShowing() {
+        return showing;
+    }
+    
     public void back() {
         log("back " + form.getTitle());
         if (previous!=null) {
@@ -95,7 +97,15 @@ public abstract class Screen {
             }
         });
     }
-    
+
+    private void refreshOnPull() {
+        form.getContentPane().addPullToRefresh(new Runnable(){
+            public void run() {
+                Screen.getShowing().refresh();
+            }
+        });
+    }
+
     final public void layoutForm() {
         form.removeAll();
         if (isPortrait()) {
