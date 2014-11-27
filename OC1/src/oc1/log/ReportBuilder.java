@@ -1,15 +1,20 @@
 package oc1.log;
 
 /**
- *
+ * For building a plain-text report.
  * @author Curt
  */
 final class ReportBuilder {
 
     final StringBuilder out = new StringBuilder();
 
-    void add(String string) {
-        out.append("\t" + string);
+    void add(String note) {
+        out.append("\t" + note);
+        out.append("\r\n");
+    }
+
+    void add(String key, Object value) {
+        out.append("\t" + key + "=" + value);
         out.append("\r\n");
     }
 
