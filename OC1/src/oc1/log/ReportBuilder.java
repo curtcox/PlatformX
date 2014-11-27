@@ -8,12 +8,12 @@ final class ReportBuilder {
 
     final StringBuilder out = new StringBuilder();
 
-    void add(String note) {
+    void note(String note) {
         out.append("\t" + note);
         out.append("\r\n");
     }
 
-    void add(String key, Object value) {
+    void value(String key, Object value) {
         out.append("\t" + key + "=" + value);
         out.append("\r\n");
     }
