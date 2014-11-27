@@ -1,17 +1,16 @@
 package oc2.screen;
 
+import oc1.app.Registry;
 import oc1.app.Version;
-import oc1.net.URIs;
 import oc1.screen.*;
 import oc1.util.StringMap;
-import oc2.net.SimpleNetStringMap;
 import oc2.screenfactories.*;
 import oc2.screens.*;
 
 public final class RootScreenFactory {
     
     public static ScreenFactory of() {
-        return of(new SimpleNetStringMap(URIs.URI("http://localhost:8000/")));    
+        return of(Registry.get(StringMap.class));    
     }
     
     public static ScreenFactory of(StringMap layouts) {

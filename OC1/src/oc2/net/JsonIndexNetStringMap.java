@@ -1,7 +1,6 @@
 package oc2.net;
 
 import java.net.URI;
-import java.net.URISyntaxException;
 import oc1.net.Network;
 import oc1.io.IO;
 import oc1.net.URIs;

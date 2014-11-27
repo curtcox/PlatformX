@@ -6,10 +6,12 @@ import com.codename1.ui.Display;
 import oc1.domain.ServiceProvider;
 import oc1.log.*;
 import oc1.net.*;
-import oc1.screen.ScreenFactory;
+import oc1.screen.*;
 import oc2.screen.*;
 import oc1.services.*;
 import oc1.ui.*;
+import oc1.util.StringMap;
+import oc2.net.SimpleNetStringMap;
 import oc2.stores.MyRatings;
 
 /**
@@ -34,6 +36,7 @@ final class RegistryLoader {
         put(Geocoder.class,         new Geocoder());
         put(CurrentState.class,     new CurrentState());
         put(Icons.class,            new Icons());
+        put(StringMap.class,        new SimpleNetStringMap(URIs.URI("http://localhost:8000/")));
         put(ScreenFactory.class,    RootScreenFactory.of());
     }
 

@@ -5,6 +5,8 @@ import java.util.Map;
 
 /**
  * Global parts bin.
+ * The Registry acts as a layer of indirection, so that clients can use things
+ * without needing to know how to construct them or their exact implementation. 
  * @author Curt
  */
 public final class Registry {
