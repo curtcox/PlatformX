@@ -34,7 +34,7 @@ final class RegistryLoader {
         put(Geocoder.class,         new Geocoder());
         put(CurrentState.class,     new CurrentState());
         put(Icons.class,            new Icons());
-        put(ScreenFactory.class,    OysterCrackerScreenFactory.of());
+        put(ScreenFactory.class,    RootScreenFactory.of());
     }
 
     static void put(Class clazz, Object object) {

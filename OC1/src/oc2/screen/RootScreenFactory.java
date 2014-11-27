@@ -8,7 +8,7 @@ import oc2.net.SimpleNetStringMap;
 import oc2.screenfactories.*;
 import oc2.screens.*;
 
-public final class OysterCrackerScreenFactory {
+public final class RootScreenFactory {
     
     public static ScreenFactory of() {
         return of(new SimpleNetStringMap(URIs.URI("http://localhost:8000/")));    
