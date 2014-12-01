@@ -6,9 +6,8 @@ import com.codename1.ui.layouts.GridLayout;
 import fake.FakeRegistryLoader;
 import oc1.event.StringSource;
 import oc1.util.Strings;
-import org.junit.Test;
+import org.junit.*;
 import static org.junit.Assert.*;
-import org.junit.Before;
 
 public class DynamicScreenLayoutProviderTest {
 

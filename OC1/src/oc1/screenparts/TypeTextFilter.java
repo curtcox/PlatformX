@@ -5,10 +5,6 @@ import oc1.uilist.ListFilter;
 import oc1.uilist.StringToListFilter;
 import oc1.util.Strings;
 
-/**
- *
- * @author Curt
- */
 public final class TypeTextFilter
     implements StringToListFilter
 {

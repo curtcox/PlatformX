@@ -17,6 +17,7 @@ public final class RootScreenFactory {
         return new CompositeScreenFactory(
                 LocationSelectionScreenFactory.FACTORY,
                 ProviderDetailsScreen.FACTORY,
+                DeviceInfoScreenFactory.FACTORY,
                 FilterScreenFactory.FACTORY,
                 SearchScreenFactory.FACTORY,
                 dynamicScreens(layouts),

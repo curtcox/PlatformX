@@ -5,14 +5,9 @@ import oc1.uilist.ListCell;
 import oc1.uilist.ListCellConfigurer;
 import oc1.util.Strings;
 
-/**
- *
- * @author Curt
- */
 public final class TypeListCellConfigurer
     implements ListCellConfigurer<Type>
 {
-
     public void configureButton(ListCell button, Type type) {
         button.firstRow.setText(friendly(type.toString()));
     }

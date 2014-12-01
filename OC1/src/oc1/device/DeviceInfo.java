@@ -1,33 +1,40 @@
-package oc1.log;
+package oc1.device;
 
 import com.codename1.io.NetworkManager;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.LookAndFeel;
 import com.codename1.ui.plaf.UIManager;
+import java.util.List;
 
 /**
  * For generating a dump of device-specific info.
  * @author Curt
  */
-final class DeviceInfo {
+public final class DeviceInfo {
 
-    static String dump() {
-        ReportBuilder out = new ReportBuilder();
-        out.section(displayInfo());
-        out.section(runtimeInfo());
-        out.section(networkInfo());
-        out.section(UIManagerInfo());
-        out.section(LookAndFeelInfo());
-        out.section(AndroidProperties());
-        return out.toString();
+    public static List asDeviceKeyValuePairs() {
+        return buildReport().toKeyValuePairs();
     }
 
-    static private String displayInfo() {
+    public static String dump() {
+        return buildReport().toString();
+    }
+
+    static ReportBuilder buildReport() {
+        ReportBuilder out = new ReportBuilder();
+        out.section("Display",displayInfo());
+        out.section("Runtime",runtimeInfo());
+        out.section("Network",networkInfo());
+        out.section("UIManager",UIManagerInfo());
+        out.section("LookAndFeel",LookAndFeelInfo());
+        out.section("Android",AndroidProperties());
+        return out;
+    }
+
+    static private List<DeviceKeyValuePair> displayInfo() {
         Display display = Display.getInstance();
         ReportBuilder out = new ReportBuilder();
-        out.heading("Display");
-        out.note("Get");
         out.value("platform name"           , display.getPlatformName());
         out.value("MSISDN"                  , display.getMsisdn());
         out.value("UDID"                    , display.getUdid());
@@ -35,12 +42,9 @@ final class DeviceInfo {
         out.value("display height"          , display.getDisplayHeight());
         out.value("display width"           , display.getDisplayWidth());
         out.value("frame rate"              , display.getFrameRate());
-        out.note("Are?");
         out.value("mutable images fast" , display.areMutableImagesFast());
-        out.note("Can?");
         out.value("force orientation"   , display.canForceOrientation());
         out.value("dial"                , display.canDial());
-        out.note("Is?");
         out.value("AllowMinimizing"             , display.isAllowMinimizing());
         out.value("AutoFoldVKBOnFormSwitch"     , display.isAutoFoldVKBOnFormSwitch());
         out.value("BadgingSupported"            , display.isBadgingSupported());
@@ -71,41 +75,37 @@ final class DeviceInfo {
          } else {
             out.value("form" , form.getName());
         }
-        return out.toString();
+        return out.toKeyValuePairs();
     }
 
-    static private String networkInfo() {
+    static private List<DeviceKeyValuePair> networkInfo() {
         NetworkManager network = NetworkManager.getInstance();
         ReportBuilder out = new ReportBuilder();
-        out.heading("Network");
         out.value("ThreadCount"        , network.getThreadCount());
         out.value("Timeout"            , network.getTimeout());
         out.value("APSupported"        , network.isAPSupported());
         out.value("QueueIdle"          , network.isQueueIdle());
-        return out.toString();
+        return out.toKeyValuePairs();
     }
 
-    private static String runtimeInfo() {
+    private static List<DeviceKeyValuePair> runtimeInfo() {
         Runtime runtime = Runtime.getRuntime();
         ReportBuilder out = new ReportBuilder();
-        out.heading("Runtime");
         out.value("free memory"  , runtime.freeMemory());
         out.value("total memory" , runtime.totalMemory());
-        return out.toString();
+        return out.toKeyValuePairs();
     }
 
-    private static String UIManagerInfo() {
+    private static List<DeviceKeyValuePair> UIManagerInfo() {
         UIManager manager = UIManager.getInstance();
         ReportBuilder out = new ReportBuilder();
-        out.heading("UIManager");
         out.value("ThemeName="  , manager.getThemeName());
-        return out.toString();
+        return out.toKeyValuePairs();
      }
 
-    private static String LookAndFeelInfo() {
+    private static List<DeviceKeyValuePair> LookAndFeelInfo() {
         LookAndFeel laf = UIManager.getInstance().getLookAndFeel();
         ReportBuilder out = new ReportBuilder();
-        out.heading("LookAndFeel");
         out.value("isBackgroundImageDetermineSize"  , laf.isBackgroundImageDetermineSize());
         out.value("isDefaultAlwaysTensile"          , laf.isDefaultAlwaysTensile());
         out.value("isDefaultEndsWith3Points"        , laf.isDefaultEndsWith3Points());
@@ -118,19 +118,18 @@ final class DeviceInfo {
         out.value("isFocusScrolling"                , laf.isFocusScrolling());
         out.value("isRTL"                           , laf.isRTL());
         out.value("isReverseSoftButtons"            , laf.isReverseSoftButtons());
-        return out.toString();
+        return out.toKeyValuePairs();
     }
 
-    private static String AndroidProperties() {
+    private static List<DeviceKeyValuePair> AndroidProperties() {
         ReportBuilder out = new ReportBuilder();
-        out.heading("Android Properties");
         for (String key : androidPropertyKeys()) {
             String value = System.getProperty(key);
             if (value!=null) {
                 out.value(key + "=" , value);
             }
         }
-        return out.toString();
+        return out.toKeyValuePairs();
     }
 
     private static String[] androidPropertyKeys() {
@@ -177,4 +176,5 @@ final class DeviceInfo {
             "user.region",
         };
     }
+
 }
