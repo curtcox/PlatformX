@@ -37,6 +37,11 @@ public class LexerTest {
     }
 
     @Test
+    public void split_returns_two_double_quotes_with_content_and_line_feeds_as_one_token() {
+        split("\"N\r\nE\"","\"N\r\nE\"");    
+    }
+
+    @Test
     public void split_questionmark_and_colon() {
         split("?:","?",":");    
     }

@@ -47,7 +47,7 @@ public final class DynamicScreenLayoutProvider
     }
 
     private ScreenLayout messageScreen(String message) {
-        return componentScreen(new Label(message));
+        return componentScreen(label(message));
     }
 
     private ScreenLayout errorScreen(SyntaxError error) {
