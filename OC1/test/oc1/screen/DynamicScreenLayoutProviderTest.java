@@ -28,15 +28,17 @@ public class DynamicScreenLayoutProviderTest {
 
     @Test
     public void getLayout_returns_layout_with_message_when_source_is_null() {
+        sourceCode = null;
         ScreenLayout actual = testObject.getLayout(context);
-        assertTrue(Strings.contains(actual.components[0].toString(),"Source is not valid Hash"));
+        Component component = actual.components[0];
+        assertSpanLabelTextContains(component,"Source is not valid Hash");
     }
 
     @Test
     public void getLayout_returns_layout_with_message_when_source_is_empty() {
         sourceCode = "";
         ScreenLayout actual = testObject.getLayout(context);
-        assertTrue(Strings.contains(actual.components[0].toString(),"Source is not valid Hash"));
+        assertTrue(Strings.contains(actual.components[0].toString(),""));
     }
 
     @Test
@@ -57,7 +59,7 @@ public class DynamicScreenLayoutProviderTest {
     public void getLayout_returns_layout_with_label_when_layout_returns_a_string() {
         sourceCode = lines("layout { 'Whatever' }");
         ScreenLayout actual = testObject.getLayout(context);
-        Label label = (Label) actual.components[0];
+        SpanLabel label = (SpanLabel) actual.components[0];
         assertEquals("Whatever",label.getText());
     }
 
@@ -86,7 +88,7 @@ public class DynamicScreenLayoutProviderTest {
         );
         context.put("portrait", true);
         ScreenLayout actual = testObject.getLayout(context);
-        Label label = (Label) actual.components[0];
+        SpanLabel label = (SpanLabel) actual.components[0];
         assertEquals("Family",label.getText());
     }
 

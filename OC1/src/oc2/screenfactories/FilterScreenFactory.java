@@ -20,13 +20,9 @@ public final class FilterScreenFactory {
 
     public static ScreenFactory FACTORY = new GlobScreenFactory("Filter") {
         public Screen doCreate(ScreenLink link) {
-            return of();
+            return new FilterScreen(newSearchableList());    
         }     
     };
-
-    static FilterScreen of() {
-        return new FilterScreen(newSearchableList());    
-    }
 
     private static LiveList<Type> getTypes() {
         List<Type> list = new ArrayList<Type>();
