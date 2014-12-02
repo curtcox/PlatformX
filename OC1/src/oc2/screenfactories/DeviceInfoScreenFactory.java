@@ -21,7 +21,6 @@ public final class DeviceInfoScreenFactory {
 
     private static SearchableList<DeviceKeyValuePair> newSearchableList() {
         SearchableList list = new SearchableList(getValues(),new Label(),new CellConfigurer());
-        System.out.println("list=" + list);
         SearchFilterInstaller.install(list, new TextFilter());
         return list;
     }

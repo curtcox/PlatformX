@@ -1,5 +1,7 @@
 package oc2.screen;
 
+import java.util.Arrays;
+import java.util.List;
 import oc1.app.Registry;
 import oc1.app.Version;
 import oc1.screen.*;
@@ -7,7 +9,16 @@ import oc1.util.StringMap;
 import oc2.screenfactories.*;
 import oc2.screens.*;
 
+/**
+ * The top-level ScreenFactory.
+ * @author Curt
+ */
 public final class RootScreenFactory {
+    public static List<String> index = Arrays.asList(
+        "Device_Info",
+        "LocationSelection","ProviderDetails",
+        "Filter","Search"
+    );
     
     public static ScreenFactory of() {
         return of(Registry.get(StringMap.class));    
@@ -15,12 +26,13 @@ public final class RootScreenFactory {
     
     public static ScreenFactory of(StringMap layouts) {
         return new CompositeScreenFactory(
+                DeviceInfoScreenFactory.FACTORY,
                 LocationSelectionScreenFactory.FACTORY,
                 ProviderDetailsScreen.FACTORY,
-                DeviceInfoScreenFactory.FACTORY,
                 FilterScreenFactory.FACTORY,
                 SearchScreenFactory.FACTORY,
                 dynamicScreens(layouts),
+                IndexScreenFactory.FACTORY,
                 new LazyScreenFactory(layouts)
         );
     }

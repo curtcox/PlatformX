@@ -3,6 +3,7 @@ package oc2.screens;
 import com.codename1.ui.Button;
 import com.codename1.ui.Label;
 import com.codename1.ui.table.TableLayout;
+import java.net.URI;
 import java.util.Arrays;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
@@ -96,8 +97,10 @@ public final class ProviderDetailsScreen
     }
 
     private void updateIcon() {
-        System.out.println("icon=" + provider().icon);
-        icon.setIcon(Icons.of().getImage(provider().icon));
+        URI uri = provider().icon;
+        if (uri!=null) {
+            icon.setIcon(Icons.of().getImage(uri));
+        }
     }
     
     private void updateTypes() {

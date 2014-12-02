@@ -6,6 +6,7 @@ import oc1.util.StringMap;
 
 /**
  * A ScreenFactory that lazily creates screens.
+ * See DynamicScreenFactory.
  * @author Curt
  */
 public final class LazyScreenFactory
