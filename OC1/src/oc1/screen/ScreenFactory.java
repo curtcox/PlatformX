@@ -14,6 +14,11 @@ public interface ScreenFactory {
         }
     };
             
+    /**
+     * Return the Screen for the given link.
+     * If this factory doesn't support the given link, it will generally
+     * return null.
+     */
     Screen create(ScreenLink link);
 
 }

@@ -15,6 +15,10 @@ public final class CompositeScreenFactory
         this.factories = factories;
     }
     
+    /**
+     * Return a Screen from the first containing factory that matches the link,
+     * or throw an IllegalArgumentException if none exists.
+     */
     public Screen create(ScreenLink link) {
         for (ScreenFactory factory : factories) {
             Screen screen = factory.create(link);
