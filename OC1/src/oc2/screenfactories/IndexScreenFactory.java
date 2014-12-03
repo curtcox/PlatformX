@@ -7,13 +7,17 @@ import oc1.uilist.*;
 import oc1.util.Strings;
 import oc2.screen.RootScreenFactory;
 
-public final class IndexScreenFactory {
+public final class IndexScreenFactory 
+    extends GlobScreenFactory
+{
 
-    public static ScreenFactory FACTORY = new GlobScreenFactory("Index") {
-        public Screen doCreate(ScreenLink link) {
-            return new IndexScreen(newSearchableList());    
-        }     
-    };
+    public IndexScreenFactory() {
+        super("Index");
+    }
+
+    public Screen doCreate(ScreenLink link) {
+        return new IndexScreen(newSearchableList());    
+    }     
 
     private static LiveList<String> getValues() {
         return new SimpleLiveList(RootScreenFactory.index);

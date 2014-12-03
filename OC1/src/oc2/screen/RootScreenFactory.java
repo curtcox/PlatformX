@@ -14,6 +14,7 @@ import oc2.screens.*;
  * @author Curt
  */
 public final class RootScreenFactory {
+    
     public static List<String> index = Arrays.asList(
         "Device_Info",
         "LocationSelection","ProviderDetails",
@@ -26,13 +27,13 @@ public final class RootScreenFactory {
     
     public static ScreenFactory of(StringMap layouts) {
         return new CompositeScreenFactory(
-                DeviceInfoScreenFactory.FACTORY,
+                new DeviceInfoScreenFactory(),
                 LocationSelectionScreenFactory.FACTORY,
                 ProviderDetailsScreen.FACTORY,
                 FilterScreenFactory.FACTORY,
                 SearchScreenFactory.FACTORY,
                 dynamicScreens(layouts),
-                IndexScreenFactory.FACTORY,
+                new IndexScreenFactory(),
                 new LazyScreenFactory(layouts)
         );
     }

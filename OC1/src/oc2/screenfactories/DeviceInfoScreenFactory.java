@@ -7,13 +7,17 @@ import oc1.screen.*;
 import oc1.uilist.*;
 import oc1.util.Strings;
 
-public final class DeviceInfoScreenFactory {
+public final class DeviceInfoScreenFactory 
+    extends GlobScreenFactory
+{
 
-    public static ScreenFactory FACTORY = new GlobScreenFactory("Device_Info") {
-        public Screen doCreate(ScreenLink link) {
-            return new DeviceInfoScreen(newSearchableList());    
-        }     
-    };
+    public DeviceInfoScreenFactory() {
+        super("Device_Info");
+    }
+    
+    public Screen doCreate(ScreenLink link) {
+        return new DeviceInfoScreen(newSearchableList());    
+    }
 
     private static LiveList<DeviceKeyValuePair> getValues() {
         return new SimpleLiveList(DeviceInfo.asDeviceKeyValuePairs());
