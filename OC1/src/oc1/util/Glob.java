@@ -1,7 +1,7 @@
 package oc1.util;
 
 /**
- *
+ * A glob in the file system filename sense.
  * @author Curt
  */
 public final class Glob {
