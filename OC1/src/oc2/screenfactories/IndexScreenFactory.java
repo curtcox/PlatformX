@@ -8,7 +8,7 @@ import oc1.util.Strings;
 import oc2.screen.RootScreenFactory;
 
 public final class IndexScreenFactory 
-    extends GlobScreenFactory
+    extends AbstractItemListScreenFactory
 {
 
     public IndexScreenFactory() {

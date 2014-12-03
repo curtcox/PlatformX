@@ -8,7 +8,7 @@ import oc1.uilist.*;
 import oc1.util.Strings;
 
 public final class DeviceInfoScreenFactory 
-    extends GlobScreenFactory
+    extends AbstractItemListScreenFactory
 {
 
     public DeviceInfoScreenFactory() {
