@@ -2,12 +2,7 @@ package oc1.util;
 
 import java.util.HashMap;
 import java.util.Map;
-import oc2.screens.Home;
-import oc2.screens.HomeMirror;
-import oc2.screens.HowTo;
-import oc2.screens.HowToMirror;
-import oc2.screens.Rate;
-import oc2.screens.RateMirror;
+import oc2.screens.*;
 
 /**
  * For finding the Mirror for a given object.
@@ -19,6 +14,7 @@ public final class Mirrors {
     private static final Map<Class,Mirror> mirrors = new HashMap<Class,Mirror>();
     
     static {
+        put("Graphics", new GraphicsMirror());
         put("Home",  new Home(), new HomeMirror());
         put("Rate",  new Rate(), new RateMirror());
         put("HowTo", new HowTo(), new HowToMirror());
