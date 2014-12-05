@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import com.codename1.components.SpanLabel;
 import com.codename1.ui.*;
 import com.codename1.ui.layouts.*;
 import com.codename1.ui.table.TableLayout;
@@ -82,7 +83,7 @@ final class DynamicScreenLayoutMethods
         if (o == null)                 { return new Label(""); }
         if (o instanceof Component)    { return (Component) o; }    
         if (o instanceof ScreenLayout) { return ((ScreenLayout)o).toComponent(); }
-        return new Label(o.toString());
+        return new SpanLabel(o.toString());
     }
     
     private int integer(Object o) {
