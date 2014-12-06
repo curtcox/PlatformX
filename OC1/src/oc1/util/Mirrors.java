@@ -14,7 +14,6 @@ public final class Mirrors {
     private static final Map<Class,Mirror> mirrors = new HashMap<Class,Mirror>();
     
     static {
-        put("Graphics", new GraphicsMirror());
         put("Home",  new Home(), new HomeMirror());
         put("Rate",  new Rate(), new RateMirror());
         put("HowTo", new HowTo(), new HowToMirror());

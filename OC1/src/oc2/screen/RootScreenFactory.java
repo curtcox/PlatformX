@@ -18,7 +18,7 @@ public final class RootScreenFactory {
     public static List<String> index = Arrays.asList(
         "Device_Info",
         "LocationSelection","ProviderDetails",
-        "Filter","Search"
+        "Filter","Search","Custom"
     );
     
     public static ScreenFactory of() {
@@ -32,6 +32,7 @@ public final class RootScreenFactory {
                 ProviderDetailsScreen.FACTORY,
                 FilterScreenFactory.FACTORY,
                 SearchScreenFactory.FACTORY,
+                CustomComponentScreen.FACTORY,
                 dynamicScreens(layouts),
                 new IndexScreenFactory(),
                 new LazyScreenFactory(layouts)
