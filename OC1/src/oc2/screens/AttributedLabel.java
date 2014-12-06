@@ -2,48 +2,33 @@ package oc2.screens;
 
 import com.codename1.ui.Component;
 import com.codename1.ui.Graphics;
+import static com.codename1.ui.plaf.Style.*;
 import java.awt.Color;
 
-final class CustomComponent
+final class AttributedLabel
     extends Component
 {
-    int px;
-    int py;
     
     @Override
     public void paint(Graphics g) {
         drawBackground(g);
-        drawPointer(g);
+        drawText(g);
     }
 
+    void drawText(Graphics g) {
+        g.setColor(Color.BLACK.getRGB());
+        g.drawString("text", 0, 0);
+        g.drawString("TEXT_DECORATION_NONE", 0, 20, TEXT_DECORATION_NONE);
+        g.drawString("TEXT_DECORATION_UNDERLINE", 0, 40, TEXT_DECORATION_UNDERLINE);
+        g.drawString("TEXT_DECORATION_STRIKETHRU", 0, 60, TEXT_DECORATION_STRIKETHRU);
+        g.drawString("TEXT_DECORATION_OVERLINE", 0, 80, TEXT_DECORATION_OVERLINE);
+        g.drawString("TEXT_DECORATION_3D_SHADOW_NORTH", 0, 100, TEXT_DECORATION_3D_SHADOW_NORTH);
+        g.drawString("TEXT_DECORATION_3D", 0, 120, TEXT_DECORATION_3D);
+        g.drawString("TEXT_DECORATION_3D_LOWERED", 0, 140, TEXT_DECORATION_3D_LOWERED);
+    }
+    
     void drawBackground(Graphics g) {
-        g.setColor(Color.PINK.getRGB());
-        g.fillRect(0,0, getWidth()/2, getHeight()/2);
-        g.fillRect(getWidth()/2, getHeight()/2, getWidth()/2, getHeight()/2);
-        g.setColor(Color.GREEN.getRGB());
+        g.setColor(Color.WHITE.getRGB());
+        g.fillRect(0,0, getWidth(), getHeight());
     }
-
-    void drawPointer(Graphics g) {
-        int r = 10;
-        int d = r * 2;
-        g.fillArc(px - r,py - r,d,d,0,360);
-    }
-
-    @Override
-    public void pointerPressed(int x, int y) {
-        recordPointer(x,y);
-    }
-
-    @Override
-    public void pointerDragged(int x, int y) {
-        recordPointer(x,y);
-    }
-
-    void recordPointer(int x, int y) {
-        int dx = getAbsoluteX() - getX();
-        int dy = getAbsoluteY() - getY();
-        px = x - dx;
-        py = y - dy;
-    }
-
 }
