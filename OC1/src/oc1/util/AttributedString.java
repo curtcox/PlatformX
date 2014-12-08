@@ -3,43 +3,38 @@ package oc1.util;
 import com.codename1.ui.Font;
 import java.awt.Color;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 /**
  * A String with fonts, colors, and markup.
- * An attributed string will either have homogenous attributes, or defined in
- * terms of other attributed strings.
  * @author Curt
  */
 public final class AttributedString
-    implements Iterable<AttributedString>
+    implements Iterable<AttributedString.Part>
 {
-    
+    /**
+     * The parts of this string.
+     */
+    public final List<Part> parts;
     private final String text;
-    
-    /**
-     * The (possibly null) attributes of this string.
-     */
-    public final Attributes attributes;
  
-    /**
-     * True if the string has entirely homogenous attributes and false otherwise.
-     */
-    public final boolean simple;
-    private final List<AttributedString> parts;
-
-    public Iterator<AttributedString> iterator() {
+    public Iterator<Part> iterator() {
         return parts.iterator();
     }
     
-    public static final class Attributes {
+    public static final class Part {
         public final Font font;
         public final Color color;
+        public final String text;
         
-        Attributes(Font font, Color color) {
+        Part(Font font, Color color, String text) {
             this.font = font;
             this.color = color;
+            this.text = text;
         }
         
         @Override
@@ -49,46 +44,38 @@ public final class AttributedString
         
         @Override
         public boolean equals(Object o) {
-            Attributes that = (Attributes) o;
+            Part that = (Part) o;
             return Objects.areEqual(font, that.font) &&
-                   Objects.areEqual(color, that.color);
+                   Objects.areEqual(color, that.color) &&
+                   Objects.areEqual(text,that.text);
         }
     }
             
     private AttributedString(Builder builder) {
-        this.simple = builder.simple;
-        this.text = builder.text.toString();
-        this.attributes = builder.attributes();
         this.parts = builder.parts;
+        this.text = builder.text.toString();
     }
     
     public static final class Builder {
         StringBuilder text = new StringBuilder();
-        List<AttributedString> parts = new ArrayList<AttributedString>();
-        Attributes current;
-        Attributes prior;
+        List<Part> parts = new ArrayList<Part>();
+        Set current;
+        Set prior;
         Color color;
         Font font;
-        boolean simple = true;
 
         AttributedString build() {
-            if (simple || parts.size() < 2) {
-                parts.clear();
-            }
             return new AttributedString(this);
         }
 
         Builder append(String text) {
             this.text.append(text);
             if (parts.isEmpty()) {
-                parts.add(new AttributedString(this));
+                parts.add(new Part(font,color,text));
             } else if (Objects.areEqual(prior,current)) {
-                parts.set(parts.size()-1, new AttributedString(this));
+                parts.set(parts.size()-1, new Part(font,color,text));
             } else {
-                parts.add(new AttributedString(this));
-            }
-            if (parts.size()>1) {
-                simple = false;
+                parts.add(new Part(font,color,text));
             }
             prior = current;
             current = currentAttributes();
@@ -106,19 +93,13 @@ public final class AttributedString
             return this;
         }
 
-        private Attributes currentAttributes() {
+        private Set currentAttributes() {
             if (color==null && font==null) {
                 return null;
             }
-            return new Attributes(font,color);
+            return new HashSet(Arrays.asList(font,color));
         }
         
-        private Attributes attributes() {
-            if (color==null && font==null || !parts.isEmpty()) {
-                return null;
-            }
-            return new Attributes(font,color);
-        }
     }
     
     public static final Builder builder() {
