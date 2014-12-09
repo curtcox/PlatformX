@@ -25,16 +25,32 @@ public final class AttributedString
     public Iterator<Part> iterator() {
         return parts.iterator();
     }
+
+
+    public static final Builder builder() {
+        return new Builder();
+    }
     
+    @Override
+    public String toString() {
+        return text;
+    }
+
+    public enum Decoration {
+        None,Underline,Strikethru,Overline,ShadowNorth3D,Normal3D,Lowered3D
+    }
+
     public static final class Part {
         public final Font font;
         public final Color color;
         public final String text;
+        public final Decoration decoration;
         
-        Part(Font font, Color color, String text) {
+        Part(Font font, Color color, Decoration decoration, String text) {
             this.font = font;
             this.color = color;
             this.text = text;
+            this.decoration = decoration;
         }
         
         @Override
@@ -47,6 +63,7 @@ public final class AttributedString
             Part that = (Part) o;
             return Objects.areEqual(font, that.font) &&
                    Objects.areEqual(color, that.color) &&
+                   Objects.areEqual(decoration, that.decoration) &&
                    Objects.areEqual(text,that.text);
         }
     }
@@ -63,6 +80,7 @@ public final class AttributedString
         Set prior;
         Color color;
         Font font;
+        Decoration decoration;
 
         AttributedString build() {
             return new AttributedString(this);
@@ -70,12 +88,11 @@ public final class AttributedString
 
         Builder append(String text) {
             this.text.append(text);
-            if (parts.isEmpty()) {
-                parts.add(new Part(font,color,text));
-            } else if (Objects.areEqual(prior,current)) {
-                parts.set(parts.size()-1, new Part(font,color,text));
+            Part part = new Part(font,color,decoration,text);
+            if (parts.isEmpty() || !(Objects.areEqual(prior,current))) {
+                parts.add(part);
             } else {
-                parts.add(new Part(font,color,text));
+                parts.set(parts.size()-1, part);
             }
             prior = current;
             current = currentAttributes();
@@ -84,6 +101,13 @@ public final class AttributedString
 
         Builder font(Font font) {
             this.font = font;
+            current = currentAttributes();
+            return this;
+        }
+
+        Builder decoration(Decoration decoration) {
+            this.decoration = decoration;
+            current = currentAttributes();
             return this;
         }
 
@@ -94,20 +118,12 @@ public final class AttributedString
         }
 
         private Set currentAttributes() {
-            if (color==null && font==null) {
+            if (color==null && font==null && decoration==null) {
                 return null;
             }
-            return new HashSet(Arrays.asList(font,color));
+            return new HashSet(Arrays.asList(font,color,decoration));
         }
         
     }
     
-    public static final Builder builder() {
-        return new Builder();
-    }
-    
-    @Override
-    public String toString() {
-        return text;
-    }
 }

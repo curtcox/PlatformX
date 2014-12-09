@@ -3,6 +3,7 @@ package oc1.util;
 import java.awt.Color;
 import org.junit.Test;
 import oc1.util.AttributedString.Part;
+import static oc1.util.AttributedString.Decoration.*;
 import static org.junit.Assert.*;
 
 public class AttributedStringTest {
@@ -69,13 +70,13 @@ public class AttributedStringTest {
 
     @Test
     public void parts_are_equal() {
-        assertEqualAttributes(new Part(null,null,null),new Part(null,null,null));    
-        assertEqualAttributes(new Part(null,Color.BLACK,""),new Part(null,Color.BLACK,""));    
+        assertEqualAttributes(new Part(null,null,null,null),new Part(null,null,null,null));    
+        assertEqualAttributes(new Part(null,Color.BLACK,None,""),new Part(null,Color.BLACK,None,""));    
     }
 
     @Test
     public void parts_are_not_equal() {
-        assertUnequalAttributes(new Part(null,Color.BLACK,""),new Part(null,Color.WHITE,""));    
+        assertUnequalAttributes(new Part(null,Color.BLACK,None,""),new Part(null,Color.WHITE,None,""));    
     }
 
     private void assertEqualAttributes(Part a, Part b) {
