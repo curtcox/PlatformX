@@ -14,58 +14,104 @@ public class AttributedStringTest {
     }
 
     @Test
-    public void empty_string_is_simple_by_default() {
+    public void toString_with_no_parts() {
         AttributedString string = AttributedString.builder().build(); 
         assertEquals("",string.toString());
     }
 
     @Test
-    public void empty_string_has_no_parts() {
+    public void no_parts() {
         AttributedString string = AttributedString.builder().build(); 
         assertEquals(0,string.parts.size());
     }
 
     @Test
-    public void empty_string_iteratable_returns_false_for_hasNext() {
+    public void iteratable_hasNext_returns_false_for_no_parts() {
         AttributedString string = AttributedString.builder().build(); 
         assertFalse(string.iterator().hasNext());
     }
 
     @Test
-    public void homogenous_unattributed_text_string_is_simple() {
+    public void simple_text_with_no_attributes() {
         AttributedString string = AttributedString.builder()
                 .append("text")
                 .build(); 
-        assertEquals("text",string.toString());
+        assertParts(string,new Part(null,null,null,"text"));
    }
 
     @Test
-    public void homogenous_attributed_text_string_has_one_part() {
+    public void one_part_red_text() {
         AttributedString string = AttributedString.builder()
                 .color(Color.RED)
                 .append("text")
                 .build(); 
         assertEquals("text",string.toString());
-        assertEquals(Color.RED,string.parts.get(0).color);
+        assertParts(string,new Part(null,Color.RED,null,"text"));
     }
 
     @Test
-    public void appended_text_accumulates() {
+    public void appended_text_with_2_parts_and_no_markup() {
         AttributedString string = AttributedString.builder()
                 .append("text ")
                 .append("more text")
                 .build(); 
         assertEquals("text more text",string.toString());
+        assertParts(string,new Part(null,null,null,"text more text"));
     }
 
     @Test
-    public void a_color_change_produces_a_compound_string() {
+    public void appended_text_with_3_parts_and_no_markup() {
+        AttributedString string = AttributedString.builder()
+                .append("tinker ")
+                .append("evars ")
+                .append("chance")
+                .build(); 
+        assertEquals("tinker evars chance",string.toString());
+        assertParts(string,new Part(null,null,null,"tinker evars chance"));
+    }
+
+    @Test
+    public void appended_text_with_a_color_change_1() {
         AttributedString string = AttributedString.builder()
                 .append("text ")
                 .color(Color.RED)
                 .append("more text")
                 .build(); 
         assertEquals("text more text",string.toString());
+        assertParts(string,
+            new Part(null,null,null,"text "),
+            new Part(null,Color.RED,null,"more text"));
+    }
+
+    @Test
+    public void appended_text_with_a_color_change_2() {
+        AttributedString string = AttributedString.builder()
+                .append("text ")
+                .color(Color.RED)
+                .append("more ")
+                .append("text")
+                .build(); 
+        assertEquals("text more text",string.toString());
+        assertParts(string,
+            new Part(null,null,null,"text "),
+            new Part(null,Color.RED,null,"more text"));
+    }
+
+    @Test
+    public void appended_text_with_2_color_changes() {
+        AttributedString string = AttributedString.builder()
+                .append("USA ")
+                .color(Color.RED)
+                .append("Red ")
+                .color(Color.BLUE)
+                .append("Blue")
+                .build(); 
+        assertEquals("USA Red Blue",string.toString());
+        assertParts(string,
+            new Part(null,null,null,"USA "),
+            new Part(null,Color.RED,null,"Red "),
+            new Part(null,Color.BLUE,null,"Blue")
+        );
     }
 
     @Test
@@ -91,4 +137,10 @@ public class AttributedStringTest {
         assertFalse(b.equals(a));
     }
 
+    private void assertParts(AttributedString string, Part... parts) {
+        assertEquals(parts.length,string.parts.size());
+        for (int i=0; i<parts.length; i++) {
+            assertEquals(parts[i],string.parts.get(i));
+        }
+    }
 }

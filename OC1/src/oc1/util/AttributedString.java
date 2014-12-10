@@ -66,6 +66,15 @@ public final class AttributedString
                    Objects.areEqual(decoration, that.decoration) &&
                    Objects.areEqual(text,that.text);
         }
+        
+        @Override
+        public String toString() {
+            return  "text=" + text +
+                    " color=" + color +
+                    " decoration=" + decoration +
+                    " font=" + font
+            ;
+        }
     }
             
     private AttributedString(Builder builder) {
@@ -76,6 +85,7 @@ public final class AttributedString
     public static final class Builder {
         StringBuilder text = new StringBuilder();
         List<Part> parts = new ArrayList<Part>();
+        List<String> partsText = new ArrayList<String>();
         Set current;
         Set prior;
         Color color;
@@ -86,19 +96,30 @@ public final class AttributedString
             return new AttributedString(this);
         }
 
-        Builder append(String text) {
-            this.text.append(text);
-            Part part = new Part(font,color,decoration,text);
+        Builder append(String string) {
+            this.text.append(string);
+            if (!(Objects.areEqual(prior,current))) {
+                partsText = new ArrayList<String>();
+            }
+            partsText.add(string);
             if (parts.isEmpty() || !(Objects.areEqual(prior,current))) {
-                parts.add(part);
+                parts.add(newPart());
             } else {
-                parts.set(parts.size()-1, part);
+                parts.set(parts.size()-1, newPart());
             }
             prior = current;
             current = currentAttributes();
             return this;
         }
 
+        Part newPart() {
+            StringBuilder out = new StringBuilder();
+            for (String string : partsText) {
+                out.append(string);
+            }
+            return new Part(font,color,decoration,out.toString());
+        }
+        
         Builder font(Font font) {
             this.font = font;
             current = currentAttributes();
