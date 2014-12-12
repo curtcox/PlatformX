@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="OC1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/OC1/JavaSE.jar!/" />
+      <root url="jar://$PROJECT_DIR$/OC1/CodeNameOneBuildClient.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
