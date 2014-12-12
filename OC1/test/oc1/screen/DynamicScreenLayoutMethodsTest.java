@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import com.codename1.components.SpanLabel;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.table.TableLayout;
@@ -27,8 +28,8 @@ public class DynamicScreenLayoutMethodsTest {
         GridLayout grid = (GridLayout) screen.layout;
         assertEquals(4,grid.getRows());
         assertEquals(2,grid.getColumns());
-        Label red = (Label) screen.components[0];
-        Label green = (Label) screen.components[1];
+        SpanLabel red = (SpanLabel) screen.components[0];
+        SpanLabel green = (SpanLabel) screen.components[1];
         assertEquals("red",red.getText());
         assertEquals("green",green.getText());
     }
@@ -42,8 +43,8 @@ public class DynamicScreenLayoutMethodsTest {
         TableLayout grid = (TableLayout) screen.layout;
         assertEquals(4,grid.getRows());
         assertEquals(2,grid.getColumns());
-        Label red = (Label) screen.components[0];
-        Label green = (Label) screen.components[1];
+        SpanLabel red = (SpanLabel) screen.components[0];
+        SpanLabel green = (SpanLabel) screen.components[1];
         assertEquals("red",red.getText());
         assertEquals("green",green.getText());
     }

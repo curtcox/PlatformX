@@ -73,8 +73,8 @@ public class DynamicScreenLayoutProviderTest {
         GridLayout layout = (GridLayout) actual.layout;
         assertEquals(1,layout.getRows());
         assertEquals(2,layout.getColumns());
-        Label label1 = (Label) actual.components[0];
-        Label label2 = (Label) actual.components[1];
+        SpanLabel label1 = (SpanLabel) actual.components[0];
+        SpanLabel label2 = (SpanLabel) actual.components[1];
         assertEquals("one",label1.getText());
         assertEquals("two",label2.getText());
     }
