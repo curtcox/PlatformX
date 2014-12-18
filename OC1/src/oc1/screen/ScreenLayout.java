@@ -2,6 +2,7 @@ package oc1.screen;
 
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
+import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.Layout;
 
 /**
@@ -18,6 +19,10 @@ public final class ScreenLayout {
     
     public interface Lookup {
         Provider lookup(ScreenLink link);
+    }
+
+    public ScreenLayout(Component... components) {
+        this(new BorderLayout(),components);
     }
 
     public ScreenLayout(Layout layout, Component... components) {

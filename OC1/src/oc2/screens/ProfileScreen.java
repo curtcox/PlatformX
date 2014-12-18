@@ -1,6 +1,7 @@
 package oc2.screens;
 
 import oc1.screen.Screen;
+import oc1.screen.ScreenLayout;
 
 /**
  * For viewing and manipulating the user profile.
@@ -15,6 +16,8 @@ final class ProfileScreen
     }
 
     @Override
-    protected void layoutForPortrait() {}
+    protected ScreenLayout layoutForPortrait() {
+        return new ScreenLayout();
+    }
     
 }

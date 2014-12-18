@@ -72,7 +72,7 @@ public class ScreenButtonTest {
         }
 
         @Override
-        protected void layoutForPortrait() {}
+        protected ScreenLayout layoutForPortrait() { return new ScreenLayout();}
     }
     
     private TestScreen createScreenOnEDT() throws Exception {

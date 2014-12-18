@@ -20,7 +20,7 @@ public class GlobScreenFactoryTest {
         FakeRegistryLoader.load();
         screen = new Screen("whatever") {
             @Override
-            protected void layoutForPortrait() {}
+            protected ScreenLayout layoutForPortrait() { return null; }
         };
     }
     

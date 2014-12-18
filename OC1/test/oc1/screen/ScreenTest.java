@@ -27,7 +27,7 @@ public class ScreenTest {
     @Test
     public void can_create() {
         new Screen(FakeUI.newForm()){
-            @Override protected void layoutForPortrait() {}
+            @Override protected ScreenLayout layoutForPortrait() { return null;}
         };
     }
     
@@ -41,7 +41,7 @@ public class ScreenTest {
             public Object call() throws Exception {
                 form = FakeUI.newForm();
                 return new Screen(form){
-                    @Override protected void layoutForPortrait() {}
+                    @Override protected ScreenLayout layoutForPortrait() { return null; }
                 };
             }
         });

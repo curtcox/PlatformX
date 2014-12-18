@@ -18,13 +18,13 @@ final class LayoutScreen
     }
 
     @Override
-    protected void layoutForPortrait() {
-        layout();
+    protected ScreenLayout layoutForPortrait() {
+        return getLayout();
     }
 
     @Override
-    protected void layoutForLandscape() {
-        layout();
+    protected ScreenLayout layoutForLandscape() {
+        return getLayout();
     }
     
     private ScreenContext getContext() {
@@ -52,14 +52,6 @@ final class LayoutScreen
                 return !isPortrait();
             }
         };    
-    }
-    
-    private void layout() {
-        ScreenLayout layout = getLayout();
-        form.setLayout(layout.layout);
-        for(Component component : layout.components) {
-            Components.addToContainer(component, form);
-        }
     }
     
     ScreenLayout getLayout() {

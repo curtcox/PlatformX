@@ -18,9 +18,8 @@ public final class CustomComponentScreen
     }
     
     @Override
-    public void layoutForPortrait() {
-        form.setLayout(new BorderLayout());
-        form.addComponent(BorderLayout.CENTER,new CustomComponent());
+    public ScreenLayout layoutForPortrait() {
+        return new ScreenLayout(new CustomComponent());
     }
     
     @Override

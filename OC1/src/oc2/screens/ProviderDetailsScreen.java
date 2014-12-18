@@ -7,10 +7,7 @@ import java.net.URI;
 import java.util.Arrays;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
-import oc1.screen.GlobScreenFactory;
-import oc1.screen.Screen;
-import oc1.screen.ScreenFactory;
-import oc1.screen.ScreenLink;
+import oc1.screen.*;
 import oc1.screenparts.ProviderRatingButton;
 import oc1.ui.Icons;
 import oc1.ui.LinkButton;
@@ -48,16 +45,16 @@ public final class ProviderDetailsScreen
     }
     
     @Override
-    public void layoutForPortrait() {
-        form.setLayout(new TableLayout(8,1));
-        form.addComponent(name);
-        form.addComponent(distance);
-        form.addComponent(vicinity);
-        form.addComponent(price);
-        form.addComponent(rating);
-        form.addComponent(icon);
-        form.addComponent(types);
-        form.addComponent(ProviderRatingButton.of());
+    public ScreenLayout layoutForPortrait() {
+        return new ScreenLayout(new TableLayout(8,1),
+                                    name,
+                                    distance,
+                                    vicinity,
+                                    price,
+                                    rating,
+                                    icon,
+                                    types,
+                                    ProviderRatingButton.of());
     }
     
     @Override

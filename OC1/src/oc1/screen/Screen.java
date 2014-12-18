@@ -33,7 +33,7 @@ public abstract class Screen {
      */
     public Screen(Form form) {
         this.form = form;
-        refreshOnOrientationChanage();
+        refreshOnOrientationChange();
         refreshOnPull();
         log("created " + form.getTitle());
     }
@@ -90,7 +90,7 @@ public abstract class Screen {
         return Registry.get(Display.class).isPortrait();
     }
 
-    private void refreshOnOrientationChanage() {
+    private void refreshOnOrientationChange() {
         form.addOrientationListener(new ActionListener(){
             public void actionPerformed(ActionEvent event) {
                 refresh();
@@ -109,16 +109,23 @@ public abstract class Screen {
     final public void layoutForm() {
         form.removeAll();
         if (isPortrait()) {
-            layoutForPortrait();
+            layout(layoutForPortrait());
         } else {
-            layoutForLandscape();
+            layout(layoutForLandscape());
         }
     }
 
-    protected abstract void layoutForPortrait();
+    protected abstract ScreenLayout layoutForPortrait();
 
-    protected void layoutForLandscape() {
-        layoutForPortrait();
+    protected ScreenLayout layoutForLandscape() {
+        return layoutForPortrait();
+    }
+
+    private void layout(ScreenLayout layout) {
+        form.setLayout(layout.layout);
+        for(Component component : layout.components) {
+            Components.addToContainer(component, form);
+        }
     }
 
     private void log(String message) {
