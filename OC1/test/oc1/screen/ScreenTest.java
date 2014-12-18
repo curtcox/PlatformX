@@ -3,18 +3,16 @@ package oc1.screen;
 import com.codename1.ui.Form;
 import fake.FakeRegistryLoader;
 import java.util.concurrent.Callable;
+
+import oc1.ui.IForm;
 import oc2.screens.FakeUI;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class ScreenTest {
     
-    Form form;
+    IForm form;
     Screen previous;
     
     Screen testObject;
@@ -26,7 +24,7 @@ public class ScreenTest {
 
     @Test
     public void can_create() {
-        new Screen(FakeUI.newForm()){
+        new Screen(FakeUI.newForm(),"name"){
             @Override protected ScreenLayout layoutForPortrait() { return null;}
         };
     }
@@ -40,7 +38,7 @@ public class ScreenTest {
         return (Screen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
                 form = FakeUI.newForm();
-                return new Screen(form){
+                return new Screen(form,"name"){
                     @Override protected ScreenLayout layoutForPortrait() { return null; }
                 };
             }

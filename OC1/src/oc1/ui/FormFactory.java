@@ -17,18 +17,8 @@ public final class FormFactory {
         return Registry.get(FormFactory.class);
     }
 
-    public Form newForm(String title) {
-        Form form = new Form(title);
-        form.addCommand(goHome());
-        return form;
-    }
-
-    private static Command goHome() {
-        return new LoggedCommand("Home") {
-            @Override protected void go() {
-                ScreenFactory.DEFAULT.create(new ScreenLink("")).show();
-            }
-        };
+    public IForm newForm(String title) {
+        return new C1Form(title);
     }
 
 }

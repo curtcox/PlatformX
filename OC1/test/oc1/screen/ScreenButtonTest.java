@@ -4,6 +4,8 @@ import com.codename1.ui.Form;
 import fake.FakeRegistryLoader;
 import oc1.ui.ActionButton;
 import java.util.concurrent.Callable;
+
+import oc1.ui.IForm;
 import oc2.screens.FakeUI;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -56,8 +58,8 @@ public class ScreenButtonTest {
         boolean refreshed;
         boolean shown;
         
-        public TestScreen(Form form) {
-            super(form);
+        public TestScreen(IForm form) {
+            super(form,"test");
         }
         
         @Override
@@ -67,7 +69,7 @@ public class ScreenButtonTest {
         }
         
         @Override
-        protected void refresh() {
+        public void refresh() {
             refreshed = true;
         }
 
@@ -78,7 +80,7 @@ public class ScreenButtonTest {
     private TestScreen createScreenOnEDT() throws Exception {
         return (TestScreen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                Form form = FakeUI.newForm();
+                IForm form = FakeUI.newForm();
                 return new TestScreen(form){};
             }
         });

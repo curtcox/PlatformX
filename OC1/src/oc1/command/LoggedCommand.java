@@ -4,11 +4,7 @@ import com.codename1.ui.Command;
 import com.codename1.ui.events.ActionEvent;
 import oc1.log.LogManager;
 
-/**
- *
- * @author Curt
- */
-public abstract class LoggedCommand 
+public abstract class LoggedCommand
     extends Command
 {
     public LoggedCommand(String command) {

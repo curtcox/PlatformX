@@ -10,8 +10,8 @@ import com.codename1.ui.layouts.Layout;
  */
 public final class ScreenLayout {
 
-    final Layout layout;
-    final Component[] components;
+    public final Layout layout;
+    public final Component[] components;
 
     public interface Provider {
         ScreenLayout getLayout(ScreenContext context);

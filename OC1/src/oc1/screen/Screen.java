@@ -1,20 +1,21 @@
 package oc1.screen;
 
 import com.codename1.ui.*;
-import com.codename1.ui.events.*;
 import oc1.app.Registry;
 import oc1.command.LoggedCommand;
 import oc1.log.LogManager;
 import oc1.ui.FormFactory;
+import oc1.ui.IForm;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
- * Implementors will need to override at least one layout method to create the UI.
+ * Implementers will need to override at least one layout method to create the UI.
  * @author Curt
  */
 public abstract class Screen {
 
-    public final Form form;
+    public final IForm form;
+    private final String name;
     private Screen previous; // set once
     private Command back;    // set once
     private static Screen showing; // the currently showing screen
@@ -24,18 +25,17 @@ public abstract class Screen {
      * @param name name of the Screen and title of the underlying Form
      */
     public Screen(String name) {
-        this(FormFactory.of().newForm(name));
+        this(FormFactory.of().newForm(name),name);
     }
     
     /**
      * This constructor is exposed mostly for testing.
      * @param form 
      */
-    public Screen(Form form) {
+    public Screen(IForm form, String name) {
         this.form = form;
-        refreshOnOrientationChange();
-        refreshOnPull();
-        log("created " + form.getTitle());
+        this.name = name;
+        log("created " + name);
     }
 
     private void setPrevious() {
@@ -51,7 +51,7 @@ public abstract class Screen {
     }
 
     public void show() {
-        log("show " + form.getTitle());
+        log("show " + name);
         setPrevious();
         showing = this;
         refresh();
@@ -65,7 +65,7 @@ public abstract class Screen {
     }
     
     public void back() {
-        log("back " + form.getTitle());
+        log("back " + name);
         if (previous!=null) {
             goBack();
         }
@@ -82,7 +82,7 @@ public abstract class Screen {
      * Override it in order to update any screen state that might have
      * changed since the last showing.
      */
-    protected void refresh() {
+    public void refresh() {
         layoutForm();
     }
     
@@ -90,24 +90,8 @@ public abstract class Screen {
         return Registry.get(Display.class).isPortrait();
     }
 
-    private void refreshOnOrientationChange() {
-        form.addOrientationListener(new ActionListener(){
-            public void actionPerformed(ActionEvent event) {
-                refresh();
-            }
-        });
-    }
-
-    private void refreshOnPull() {
-        form.getContentPane().addPullToRefresh(new Runnable(){
-            public void run() {
-                Screen.getShowing().refresh();
-            }
-        });
-    }
 
     final public void layoutForm() {
-        form.removeAll();
         if (isPortrait()) {
             layout(layoutForPortrait());
         } else {
@@ -122,10 +106,7 @@ public abstract class Screen {
     }
 
     private void layout(ScreenLayout layout) {
-        form.setLayout(layout.layout);
-        for(Component component : layout.components) {
-            Components.addToContainer(component, form);
-        }
+        form.layout(layout);
     }
 
     private void log(String message) {

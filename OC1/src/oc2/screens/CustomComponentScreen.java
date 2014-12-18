@@ -21,10 +21,5 @@ public final class CustomComponentScreen
     public ScreenLayout layoutForPortrait() {
         return new ScreenLayout(new CustomComponent());
     }
-    
-    @Override
-    protected void refresh() {
-        super.refresh();
-    }
 
 }

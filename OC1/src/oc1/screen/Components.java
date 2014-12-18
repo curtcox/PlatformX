@@ -3,7 +3,7 @@ package oc1.screen;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 
-final class Components {
+public final class Components {
 
     private static Component removeFromParentIfAny(Component component) {
         Container parent = component.getParent();
@@ -13,7 +13,7 @@ final class Components {
         return component;
     }
 
-    static void addToContainer(Component component, Container container) {
+    public static void addToContainer(Component component, Container container) {
         removeFromParentIfAny(component);
         container.addComponent(component);
     }

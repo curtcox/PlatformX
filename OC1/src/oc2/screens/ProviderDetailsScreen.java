@@ -58,7 +58,7 @@ public final class ProviderDetailsScreen
     }
     
     @Override
-    protected void refresh() {
+    public void refresh() {
         updateName();
         updateRating();
         updatePrice();

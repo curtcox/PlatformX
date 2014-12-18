@@ -4,14 +4,13 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.UIManager;
 import fake.FakeUIManager;
+import oc1.ui.C1Form;
+import oc1.ui.IForm;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-/**
- *
- * @author Curt
- */
 public final class FakeUI {
     
     static {
@@ -24,8 +23,8 @@ public final class FakeUI {
         }
     }
     
-    public static Form newForm() {
-        return new Form() {
+    public static IForm newForm() {
+        return new C1Form("test") {
             @Override
             public UIManager getUIManager(){
                 return FakeUIManager.of();
