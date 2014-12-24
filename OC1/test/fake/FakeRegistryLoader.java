@@ -11,7 +11,7 @@ import oc1.log.LogManager;
 import oc1.log.LogWriter;
 import oc1.services.Locations;
 import oc1.services.ServiceProviders;
-import oc1.ui.FormFactory;
+import oc1.ui.C1FormFactory;
 import oc1.ui.IDisplay;
 import oc1.ui.IFormFactory;
 import oc1.ui.Icons;
@@ -28,7 +28,7 @@ public class FakeRegistryLoader {
         put(ServiceProviders.class, new ServiceProviders());
         put(CurrentState.class,     new CurrentState());
         put(Icons.class,            new Icons());
-        put(IFormFactory.class,     new FormFactory());
+        put(IFormFactory.class,     new C1FormFactory());
         put(IDisplay.class,         new FakeDisplay());
         initDisplay();
     }

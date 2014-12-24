@@ -3,7 +3,6 @@ package oc1.screen;
 import oc1.app.Registry;
 import oc1.command.*;
 import oc1.log.LogManager;
-import oc1.ui.FormFactory;
 import oc1.ui.IDisplay;
 import oc1.ui.IForm;
 import oc1.ui.IFormFactory;

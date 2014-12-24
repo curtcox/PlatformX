@@ -2,7 +2,6 @@ package oc1.app;
 
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
-import com.codename1.ui.Display;
 import oc1.domain.ServiceProvider;
 import oc1.log.*;
 import oc1.net.*;
@@ -24,7 +23,7 @@ final class RegistryLoader {
         put(ExceptionLogger.class,  new ExceptionLogger());
         put(LogManager.class,       new LogManager());
         put(LogWriter.class,        new LogWriter());
-        put(IFormFactory.class,     new FormFactory());
+        put(IFormFactory.class,     new C1FormFactory());
         put(IDisplay.class,         new C1Display());
         put(Storage.class,          new Storage());
         put(Network.class,          new CachedNetwork());

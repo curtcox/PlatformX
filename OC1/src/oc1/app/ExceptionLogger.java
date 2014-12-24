@@ -8,10 +8,6 @@ import oc1.log.IssueReporter;
 import oc1.log.Log;
 import oc1.log.LogManager;
 
-/**
- *
- * @author Curt
- */
 final class ExceptionLogger
     implements ActionListener
 {
