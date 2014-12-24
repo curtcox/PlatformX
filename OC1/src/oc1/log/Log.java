@@ -1,12 +1,9 @@
 package oc1.log;
 
-import com.codename1.ui.Display;
-import com.codename1.ui.Form;
+import oc1.app.Registry;
+import oc1.ui.IDisplay;
+import oc1.ui.IForm;
 
-/**
- *
- * @author Curt
- */
 public final class Log {
 
     final Class clazz;
@@ -45,11 +42,16 @@ public final class Log {
     }
 
     private String screen() {
-        Form form = form();
+        IForm form = form();
         return (form==null) ? "null" : form.getTitle();
     }
     
-    private Form form() {
-        return Display.getInstance().getCurrent();
+    private IForm form() {
+        return display().getCurrent();
     }
+
+    private IDisplay display() {
+        return Registry.get(IDisplay.class);
+    }
+
 }

@@ -9,11 +9,7 @@ import java.io.OutputStream;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- *
- * @author Curt
- */
-public class FakeStorage 
+public class FakeStorage
     extends Storage
 {
     public Set<String> names = new HashSet<String>();

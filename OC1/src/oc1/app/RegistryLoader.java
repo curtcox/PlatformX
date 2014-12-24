@@ -25,7 +25,7 @@ final class RegistryLoader {
         put(LogManager.class,       new LogManager());
         put(LogWriter.class,        new LogWriter());
         put(FormFactory.class,      new FormFactory());
-        put(Display.class,          Display.getInstance());
+        put(IDisplay.class,         new C1Display());
         put(Storage.class,          new Storage());
         put(Network.class,          new CachedNetwork());
         put(MyRatings.class,        new MyRatings());

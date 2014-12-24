@@ -18,11 +18,6 @@ public class FakeRegistryLoaderTest {
     }
 
     @Test
-    public void can_initDisplay() {
-        FakeRegistryLoader.initDisplay();
-    }
-
-    @Test
     public void load_puts_LogManager_in_Registry() {
         FakeRegistryLoader.load();
         assertTrue(Registry.get(LogManager.class) instanceof LogManager);

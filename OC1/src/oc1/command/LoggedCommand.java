@@ -6,6 +6,7 @@ import oc1.log.LogManager;
 
 public abstract class LoggedCommand
     extends Command
+    implements ICommand
 {
     public LoggedCommand(String command) {
         super(command);

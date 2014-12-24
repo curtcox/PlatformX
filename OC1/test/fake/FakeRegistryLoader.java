@@ -12,12 +12,9 @@ import oc1.log.LogWriter;
 import oc1.services.Locations;
 import oc1.services.ServiceProviders;
 import oc1.ui.FormFactory;
+import oc1.ui.IDisplay;
 import oc1.ui.Icons;
 
-/**
- *
- * @author Curt
- */
 public class FakeRegistryLoader {
     
     public static void load() {
@@ -31,15 +28,7 @@ public class FakeRegistryLoader {
         put(CurrentState.class,     new CurrentState());
         put(Icons.class,            new Icons());
         put(FormFactory.class,      new FormFactory());
-
-        initDisplay();
-    }
-    
-    static void initDisplay() {
-        Display display = Display.getInstance();
-        ImplementationFactory.setInstance(new FakeImplementationFactory());
-        Display.init(null);
-        put(Display.class,display);
+        put(IDisplay.class,         new FakeDisplay());
     }
     
     static void put(Class clazz, Object object) {

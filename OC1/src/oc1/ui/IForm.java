@@ -1,6 +1,6 @@
 package oc1.ui;
 
-import com.codename1.ui.Command;
+import oc1.command.ICommand;
 import oc1.screen.ScreenLayout;
 
 public interface IForm {
@@ -8,7 +8,9 @@ public interface IForm {
 
     void show();
 
-    void setBackCommand(Command back);
+    void setBackCommand(ICommand back);
 
     void showBack();
+
+    String getTitle();
 }

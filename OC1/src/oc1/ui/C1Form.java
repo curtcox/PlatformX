@@ -5,6 +5,7 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import oc1.command.ICommand;
 import oc1.command.LoggedCommand;
 import oc1.screen.*;
 
@@ -53,6 +54,11 @@ public class C1Form
         for(Component component : layout.components) {
             Components.addToContainer(component, this);
         }
+    }
+
+    @Override
+    public void setBackCommand(ICommand back) {
+        super.setBackCommand((Command) back);
     }
 
 }

@@ -1,10 +1,10 @@
 package oc1.screen;
 
-import com.codename1.ui.*;
 import oc1.app.Registry;
-import oc1.command.LoggedCommand;
+import oc1.command.*;
 import oc1.log.LogManager;
 import oc1.ui.FormFactory;
+import oc1.ui.IDisplay;
 import oc1.ui.IForm;
 
 /**
@@ -17,7 +17,7 @@ public abstract class Screen {
     public final IForm form;
     private final String name;
     private Screen previous; // set once
-    private Command back;    // set once
+    private ICommand back;    // set once
     private static Screen showing; // the currently showing screen
     
     /**
@@ -87,9 +87,8 @@ public abstract class Screen {
     }
     
     public boolean isPortrait() {
-        return Registry.get(Display.class).isPortrait();
+        return Registry.get(IDisplay.class).isPortrait();
     }
-
 
     final public void layoutForm() {
         if (isPortrait()) {
