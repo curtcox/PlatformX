@@ -1,6 +1,6 @@
 package oc1.app;
 
-import oc1.app.Registry;
+import common.Registry;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

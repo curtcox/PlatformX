@@ -13,12 +13,12 @@ import com.codename1.ui.list.ListModel;
 import com.codename1.ui.plaf.UIManager;
 import java.util.Collection;
 import java.util.Vector;
+
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.LogManager;
 
-/**
- *
- * @author Curt
- */
 final class DebugList<T> extends List<T> {
 
     DebugList(ListModel model) {
@@ -564,7 +564,11 @@ final class DebugList<T> extends List<T> {
     }
     
     private void log(String message) {
-        LogManager.of().getLog(DebugList.class).log(message);    
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(DebugList.class);
     }
 
 }

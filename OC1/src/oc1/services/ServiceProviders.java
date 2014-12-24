@@ -5,7 +5,7 @@ import google.Place;
 import google.PlacesSearch;
 import java.util.ArrayList;
 import java.util.List;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.domain.Address;
 import oc1.domain.ID;
 import oc1.domain.Name;

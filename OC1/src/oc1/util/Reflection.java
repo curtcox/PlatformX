@@ -2,6 +2,9 @@ package oc1.util;
 
 import com.codename1.ui.Button;
 import com.codename1.ui.Label;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.LogManager;
 
 public final class Reflection {
@@ -13,7 +16,11 @@ public final class Reflection {
     }
 
     private static void log(String message) {
-        LogManager.of().getLog(Reflection.class).log(message);    
+        getLog().log(message);
+    }
+
+    private static ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(Reflection.class);
     }
 
 }

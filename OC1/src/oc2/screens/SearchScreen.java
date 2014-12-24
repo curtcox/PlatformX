@@ -1,7 +1,7 @@
 package oc2.screens;
 
 import oc1.app.CurrentState;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.domain.ServiceProvider;
 import oc1.screen.ScreenLink;
 import oc1.screen.SelectionListScreen;

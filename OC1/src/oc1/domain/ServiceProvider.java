@@ -2,7 +2,7 @@ package oc1.domain;
 
 import oc2.domain.Rating;
 import com.codename1.location.Location;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.services.Locations;
 import oc1.event.StringSource;
 import java.net.URI;

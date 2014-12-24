@@ -2,6 +2,7 @@ package oc1.app;
 
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
+import common.Registry;
 import oc1.domain.ServiceProvider;
 import oc1.log.*;
 import oc1.net.*;
@@ -40,6 +41,6 @@ final class RegistryLoader {
     }
 
     static void put(Class clazz, Object object) {
-        Registry.put(clazz,object);
+        Registry.put(clazz, object);
     }
 }

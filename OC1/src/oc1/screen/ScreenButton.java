@@ -1,7 +1,7 @@
 package oc1.screen;
 
 import oc1.app.CurrentState;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.event.Change.Source;
 import oc1.ui.ActionButton;
 import oc1.event.StringSource;

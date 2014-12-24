@@ -3,7 +3,7 @@ package oc1.ui;
 import com.codename1.ui.Button;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
 

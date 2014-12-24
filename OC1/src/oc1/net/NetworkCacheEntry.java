@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.ui.EmptyImage;
 import oc1.util.Strings;
 

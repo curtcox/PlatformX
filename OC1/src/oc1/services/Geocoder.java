@@ -4,7 +4,7 @@ import google.Geocoding;
 import google.GoogleLocation;
 import java.util.ArrayList;
 import java.util.List;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.domain.LocationDescription;
 import oc1.event.LiveList;
 import oc1.event.SimpleLiveList;

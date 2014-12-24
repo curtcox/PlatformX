@@ -8,6 +8,10 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
+
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.Log;
 import oc1.log.LogManager;
 import oc1.ui.Icons;
@@ -72,7 +76,8 @@ abstract class JsonResponseParser<T>
         getLog().log(message);    
     }
 
-    private Log getLog() {
-        return LogManager.of().getLog(JsonResponseParser.class);    
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(JsonResponseParser.class);
     }
+
 }

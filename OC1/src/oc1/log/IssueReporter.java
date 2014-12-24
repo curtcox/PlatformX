@@ -2,7 +2,7 @@ package oc1.log;
 
 import com.codename1.messaging.Message;
 import com.codename1.ui.Display;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.app.Version;
 import oc1.device.DeviceInfo;
 

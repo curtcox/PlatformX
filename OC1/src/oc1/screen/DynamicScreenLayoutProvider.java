@@ -3,6 +3,9 @@ package oc1.screen;
 import com.codename1.components.*;
 import com.codename1.ui.*;
 import com.codename1.ui.layouts.*;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import hash.*;
 import oc1.event.StringSource;
 import oc1.log.*;
@@ -90,8 +93,8 @@ public final class DynamicScreenLayoutProvider
         getLog().log(e);    
     }
 
-    private Log getLog() {
-        return LogManager.of().getLog(DynamicScreenLayoutProvider.class);    
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(DynamicScreenLayoutProvider.class);
     }
 
 }

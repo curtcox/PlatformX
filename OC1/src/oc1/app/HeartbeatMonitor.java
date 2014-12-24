@@ -1,6 +1,9 @@
 package oc1.app;
 
 import com.codename1.ui.Display;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.LogManager;
 
 public final class HeartbeatMonitor
@@ -55,11 +58,15 @@ public final class HeartbeatMonitor
     }
     
     private void log(String message) {
-        LogManager.of().getLog(HeartbeatMonitor.class).log(message);    
+        getLog().log(message);
     }
 
     private void log(Throwable t) {
-        LogManager.of().getLog(HeartbeatMonitor.class).log(t);    
+        getLog().log(t);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(HeartbeatMonitor.class);
     }
 
 }

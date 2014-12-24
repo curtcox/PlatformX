@@ -1,6 +1,9 @@
 package oc1.net;
 
 import com.codename1.ui.Image;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.Log;
 import oc1.log.LogManager;
 import java.io.ByteArrayInputStream;
@@ -44,8 +47,8 @@ public final class RawNetwork
         getLog().log(message);    
     }
 
-    private Log getLog() {
-        return LogManager.of().getLog(RawNetwork.class);    
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(RawNetwork.class);
     }
 
 }

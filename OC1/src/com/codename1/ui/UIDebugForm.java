@@ -1,9 +1,11 @@
 package com.codename1.ui;
 
 import com.codename1.ui.animations.Transition;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.command.LoggedCommand;
 import oc1.log.IssueReporter;
-import oc1.log.LogManager;
 
 /**
  * DebugForm in the same package, so we can intercept more methods.
@@ -75,7 +77,11 @@ public final class UIDebugForm
     }
 
     private void log(String message) {
-        LogManager.of().getLog(UIDebugForm.class).log(title + ":" + message);    
+        getLog().log(title + ":" + message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(UIDebugForm.class);
     }
 
 }

@@ -1,6 +1,8 @@
 package oc1.screen;
 
-import oc1.app.Registry;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.command.*;
 import oc1.log.LogManager;
 import oc1.ui.IDisplay;
@@ -113,6 +115,11 @@ public abstract class Screen {
     }
 
     private void log(String message) {
-        LogManager.of().getLog(Screen.class).log(message);    
+        getLog().log(message);
     }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(Screen.class);
+    }
+
 }

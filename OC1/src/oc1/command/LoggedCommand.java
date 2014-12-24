@@ -2,6 +2,9 @@ package oc1.command;
 
 import com.codename1.ui.Command;
 import com.codename1.ui.events.ActionEvent;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.LogManager;
 
 public abstract class LoggedCommand
@@ -21,7 +24,11 @@ public abstract class LoggedCommand
     abstract protected void go();
     
     private void log(String message) {
-        LogManager.of().getLog(LoggedCommand.class).log(message);    
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(LoggedCommand.class);
     }
 
 }

@@ -2,7 +2,7 @@ package oc1.ui;
 
 import com.codename1.ui.Image;
 import com.codename1.ui.util.Resources;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.net.Network;
 import java.net.URI;
 

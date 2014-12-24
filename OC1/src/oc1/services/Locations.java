@@ -3,13 +3,11 @@ package oc1.services;
 import com.codename1.location.Location;
 import com.codename1.location.LocationListener;
 import com.codename1.location.LocationManager;
-import oc1.app.Registry;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.LogManager;
 
-/**
- *
- * @author Curt
- */
 public final class Locations
     implements LocationListener
 {
@@ -69,7 +67,11 @@ public final class Locations
     }
 
     private void log(Throwable t) {
-        LogManager.of().getLog(Locations.class).log(t);    
+        getLog().log(t);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(Locations.class);
     }
 
 }

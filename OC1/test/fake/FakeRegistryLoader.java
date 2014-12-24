@@ -4,8 +4,9 @@ import com.codename1.impl.ImplementationFactory;
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import com.codename1.ui.Display;
+import common.ILogManager;
 import oc1.app.CurrentState;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.domain.ServiceProvider;
 import oc1.log.LogManager;
 import oc1.log.LogWriter;
@@ -19,7 +20,7 @@ import oc1.ui.Icons;
 public class FakeRegistryLoader {
     
     public static void load() {
-        put(LogManager.class,       new LogManager());
+        put(ILogManager.class,      new LogManager());
         put(LogWriter.class,        new LogWriter());
         put(Storage.class,          new FakeStorage());
         put(LocationManager.class,  new FakeLocationManager());

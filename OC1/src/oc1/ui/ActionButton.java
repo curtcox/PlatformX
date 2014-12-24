@@ -1,5 +1,8 @@
 package oc1.ui;
 
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.event.StringSource;
 import com.codename1.ui.Button;
 import com.codename1.ui.events.ActionEvent;
@@ -10,7 +13,7 @@ import oc1.log.LogManager;
 
 /**
  * Skeletal implementation of a button that does something when you tap it.
- * Implementors must provide onTap.
+ * Implementers must provide onTap.
  * @author Curt
  */
 public abstract class ActionButton
@@ -53,7 +56,11 @@ public abstract class ActionButton
     }
     
     private void log(String message) {
-        LogManager.of().getLog(ActionButton.class).log(message);    
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(ActionButton.class);
     }
 
     @Override

@@ -5,7 +5,7 @@ import com.codename1.ui.*;
 import hash.NamedExpression;
 import java.net.*;
 import java.util.*;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.ui.Icons;
 
 /**

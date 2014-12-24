@@ -1,8 +1,10 @@
 package hash;
 
 import java.util.Arrays;
-import oc1.log.Log;
-import oc1.log.LogManager;
+
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 
 /**
  * For checking a series of NamedValues until a match is found.
@@ -38,8 +40,8 @@ final class CompositeNamedValues
         getLog().log(message);    
     }
 
-    private Log getLog() {
-        return LogManager.of().getLog(CompositeNamedValues.class);    
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(CompositeNamedValues.class);
     }
 
 }

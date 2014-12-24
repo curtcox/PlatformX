@@ -1,4 +1,4 @@
-package oc1.log;
+package se1.log;
 
 import common.ILog;
 import common.ILogManager;
@@ -8,7 +8,7 @@ public final class LogManager
     implements ILogManager
 {
 
-    static LogManager of() {
+    public static LogManager of() {
         return Registry.get(LogManager.class);
     }
     

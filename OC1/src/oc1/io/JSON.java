@@ -6,15 +6,15 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
+
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.Log;
 import oc1.log.LogManager;
 import oc1.util.SimpleStringMap;
 import oc1.util.StringMap;
 
-/**
- *
- * @author Curt
- */
 public final class JSON {
 
     public static final StringMap.Parser STRING_MAP_PARSER = new StringMap.Parser() {
@@ -51,7 +51,8 @@ public final class JSON {
         getLog().log(e);    
     }
 
-    private static Log getLog() {
-        return LogManager.of().getLog(JSON.class);    
+    private static ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(JSON.class);
     }
+
 }

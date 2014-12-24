@@ -1,6 +1,7 @@
-package oc1.log;
+package se1.log;
 
 import common.Registry;
+
 import java.util.LinkedList;
 
 public final class LogWriter {

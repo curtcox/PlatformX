@@ -2,7 +2,7 @@ package google;
 
 import fake.FakeRegistryLoader;
 import j2se.J2seNetwork;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.net.Network;
 import oc1.util.Strings;
 import static org.junit.Assert.*;

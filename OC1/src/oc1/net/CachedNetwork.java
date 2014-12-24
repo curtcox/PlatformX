@@ -2,7 +2,9 @@ package oc1.net;
 
 import com.codename1.io.Storage;
 import com.codename1.ui.Image;
-import oc1.app.Registry;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.Log;
 import oc1.log.LogManager;
 import oc1.stores.MapStorageIO;
@@ -86,7 +88,7 @@ public final class CachedNetwork
         getLog().log(message);    
     }
 
-    private Log getLog() {
-        return LogManager.of().getLog(CachedNetwork.class);    
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(CachedNetwork.class);
     }
 }

@@ -1,7 +1,5 @@
 package oc1.screen;
 
-import com.codename1.ui.Component;
-
 /**
  * A screen that is created by a dynamic layout method.
  */

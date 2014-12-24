@@ -1,5 +1,6 @@
 package oc1.app;
 
+import common.Registry;
 import oc1.event.Change;
 import java.util.ArrayList;
 import java.util.List;

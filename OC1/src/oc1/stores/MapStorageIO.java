@@ -1,6 +1,9 @@
 package oc1.stores;
 
 import com.codename1.io.Storage;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.Log;
 import oc1.log.LogManager;
 import java.io.DataInputStream;
@@ -114,8 +117,8 @@ public final class MapStorageIO<K,V> {
         getLog().log(message);    
     }
 
-    private Log getLog() {
-        return LogManager.of().getLog(MapStorageIO.class);    
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(MapStorageIO.class);
     }
 
 }

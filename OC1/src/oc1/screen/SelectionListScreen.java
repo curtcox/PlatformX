@@ -1,7 +1,9 @@
 package oc1.screen;
 
 import com.codename1.ui.events.*;
-import oc1.app.Registry;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.LogManager;
 import oc1.uilist.SearchableList;
 
@@ -55,7 +57,11 @@ public abstract class SelectionListScreen<T>
     protected abstract ScreenLink useSelectedItem(T item);
     
     private void log(String message) {
-        LogManager.of().getLog(SelectionListScreen.class).log(message);    
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(SelectionListScreen.class);
     }
 
     private static ScreenFactory screenFactory() {

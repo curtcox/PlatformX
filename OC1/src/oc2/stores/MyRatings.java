@@ -1,7 +1,7 @@
 package oc2.stores;
 
 import com.codename1.io.Storage;
-import oc1.app.Registry;
+import common.Registry;
 import oc1.domain.ID;
 import oc2.domain.Rating;
 import java.util.HashMap;

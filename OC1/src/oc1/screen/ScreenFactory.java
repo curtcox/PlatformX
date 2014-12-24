@@ -1,6 +1,6 @@
 package oc1.screen;
 
-import oc1.app.Registry;
+import common.Registry;
 
 /**
  * For creating ScreenS from ScreenLinkS.

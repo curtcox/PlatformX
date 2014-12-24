@@ -1,5 +1,8 @@
 package oc1.app;
 
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.LogManager;
 
 public final class Heartbeat
@@ -22,7 +25,7 @@ public final class Heartbeat
     }
     
     private void log(String message) {
-        LogManager.of().getLog(Heartbeat.class).log(message);    
+        getLog().log(message);
     }
 
     private void log() {
@@ -31,6 +34,10 @@ public final class Heartbeat
 
     synchronized boolean executed() {
         return executed != 0;
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(Heartbeat.class);
     }
 
 }

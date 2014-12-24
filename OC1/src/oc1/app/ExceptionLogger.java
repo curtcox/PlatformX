@@ -4,9 +4,10 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import common.ILog;
+import common.ILogManager;
+import common.Registry;
 import oc1.log.IssueReporter;
-import oc1.log.Log;
-import oc1.log.LogManager;
 
 final class ExceptionLogger
     implements ActionListener
@@ -20,8 +21,8 @@ final class ExceptionLogger
         return Registry.get(Display.class);
     }
 
-    Log getLog() {
-        return Registry.get(LogManager.class).getLog(ExceptionLogger.class);
+    ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(ExceptionLogger.class);
     }
 
     static ExceptionLogger of() {

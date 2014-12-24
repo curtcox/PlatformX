@@ -1,9 +1,8 @@
 package se1.app;
 
-import oc1.app.Registry;
+import common.Registry;
 import oc1.screen.*;
 
-import javax.swing.*;
 import java.awt.*;
 
 public final class Application {
