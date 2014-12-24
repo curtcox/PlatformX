@@ -24,7 +24,7 @@ final class RegistryLoader {
         put(ExceptionLogger.class,  new ExceptionLogger());
         put(LogManager.class,       new LogManager());
         put(LogWriter.class,        new LogWriter());
-        put(FormFactory.class,      new FormFactory());
+        put(IFormFactory.class,     new FormFactory());
         put(IDisplay.class,         new C1Display());
         put(Storage.class,          new Storage());
         put(Network.class,          new CachedNetwork());

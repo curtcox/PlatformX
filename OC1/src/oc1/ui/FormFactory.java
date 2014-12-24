@@ -11,11 +11,9 @@ import oc1.screen.*;
  * See DebugForm.
  * @author Curt
  */
-public final class FormFactory {
-
-    public static FormFactory of() {
-        return Registry.get(FormFactory.class);
-    }
+public final class FormFactory
+    implements IFormFactory
+{
 
     public IForm newForm(String title) {
         return new C1Form(title);

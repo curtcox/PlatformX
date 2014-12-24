@@ -6,6 +6,7 @@ import oc1.log.LogManager;
 import oc1.ui.FormFactory;
 import oc1.ui.IDisplay;
 import oc1.ui.IForm;
+import oc1.ui.IFormFactory;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
@@ -25,9 +26,9 @@ public abstract class Screen {
      * @param name name of the Screen and title of the underlying Form
      */
     public Screen(String name) {
-        this(FormFactory.of().newForm(name),name);
+        this(formFactory().newForm(name),name);
     }
-    
+
     /**
      * This constructor is exposed mostly for testing.
      * @param form 
@@ -36,6 +37,10 @@ public abstract class Screen {
         this.form = form;
         this.name = name;
         log("created " + name);
+    }
+
+    private static IFormFactory formFactory() {
+        return Registry.get(IFormFactory.class);
     }
 
     private void setPrevious() {
