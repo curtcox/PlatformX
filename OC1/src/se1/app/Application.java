@@ -1,5 +1,8 @@
 package se1.app;
 
+import oc1.app.Registry;
+import oc1.screen.*;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -15,9 +18,13 @@ public final class Application {
     }
 
     private static void launch() {
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setVisible(true);
-        frame.setSize(400,400);
+        RegistryLoader.load();
+        show();
     }
+
+    private static void show() {
+        ScreenFactory factory = Registry.get(ScreenFactory.class);
+        factory.create(new ScreenLink("")).show();
+    }
+
 }

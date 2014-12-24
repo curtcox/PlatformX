@@ -2,10 +2,6 @@ package oc1.app;
 
 import oc1.log.LogManager;
 
-/**
- *
- * @author Curt
- */
 public final class Heartbeat
     implements Runnable
 {

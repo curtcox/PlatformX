@@ -3,10 +3,6 @@ package oc1.app;
 import com.codename1.ui.Display;
 import oc1.log.LogManager;
 
-/**
- *
- * @author Curt
- */
 public final class HeartbeatMonitor
     extends Thread
 {

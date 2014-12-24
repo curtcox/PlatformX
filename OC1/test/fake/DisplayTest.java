@@ -4,10 +4,6 @@ import com.codename1.ui.Display;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
 public class DisplayTest {
 
     @Test
