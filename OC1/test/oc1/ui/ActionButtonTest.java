@@ -43,19 +43,11 @@ public class ActionButtonTest {
     public void sets_text_to_constructor_value() throws Exception {
         String random = this.toString();
         ActionButton button = createActionButtonOnEDT(random);
-        assertSame(random,button.getText());
+        assertSame(random, button.getText());
     }
 
     @Test
-    public void performs_action_when_pressed() throws Exception {
-        ActionButton button = createActionButtonOnEDT("");
-        ActionListener buttonListener = (ActionListener) button.getActionListeners().get(0);
-        buttonListener.actionPerformed(null);
-        assertTrue(tapped);
-    }
-
-    @Test
-    public void updateTextOnChange_with_speciified_source_updates_text() throws Exception {
+    public void updateTextOnChange_with_specified_source_updates_text() throws Exception {
         ActionButton button = createActionButtonOnEDT("");
         String expected = stringSource().getString();
         Change.Source change = new Change.Source() {

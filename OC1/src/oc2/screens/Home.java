@@ -1,12 +1,12 @@
 package oc2.screens;
 
-import com.codename1.ui.Button;
 import com.codename1.ui.Label;
 import oc1.domain.ServiceProvider;
 import oc1.screen.ScreenButton;
 import oc1.screenparts.ProviderDetailsButton;
 import oc1.screenparts.ProviderRatingButton;
 import oc1.services.Locations;
+import oc1.ui.ActionButton;
 
 /**
  * The home screen of the application.
@@ -18,16 +18,16 @@ public final class Home {
         return ServiceProvider.getSelected().id != null;
     }
 
-    Button provider_details() {
+    ActionButton provider_details() {
         return ProviderDetailsButton.of();
     }
 
-    Button provider_rating() {
+    ActionButton provider_rating() {
         return ProviderRatingButton.of();
     }
 
-    Button searchNearbyButton() {
-        Button button = ScreenButton.textImageActionAndLeadingTo("Search nearby", "system-search-4.png", clearLocationSelection(), "Search");
+    ActionButton searchNearbyButton() {
+        ActionButton button = ScreenButton.textImageActionAndLeadingTo("Search nearby", "system-search-4.png", clearLocationSelection(), "Search");
         button.setTextPosition(Label.BOTTOM);
         return button;
     }

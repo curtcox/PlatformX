@@ -22,21 +22,21 @@ public final class SearchableList<T> {
     /**
      * The component itself, for embedding in a Screen.
      */
-    public final Component component;
+    public final Object component;
 
-    private SearchableList(IList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer) {
+    private SearchableList(IList.Factory factory, LiveList<T> items, Object action, ListCellConfigurer configurer) {
         underlyingListModel = VirtualListModel.of(items);
         filterListModel = new FilterListModel(underlyingListModel);
         filteredList = factory.of(filterListModel,configurer);
-        component = new BorderContainer((Component)filteredList)
+        component = new BorderContainer(filteredList)
              .addNorth(newNorthContainer(action));
     }
 
-    public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
+    public SearchableList(LiveList<T> items, Object action, ListCellConfigurer configurer) {
         this(IList.BOX,items,action,configurer);
     }
 
-    private Container newNorthContainer(Component action) {
+    private BorderContainer newNorthContainer(Object action) {
         return new BorderContainer(searchTerm).addEast(action);
     }
     

@@ -11,7 +11,7 @@ import com.codename1.ui.layouts.Layout;
 public final class ScreenLayout {
 
     public final Layout layout;
-    public final Component[] components;
+    public final Object[] components;
 
     public interface Provider {
         ScreenLayout getLayout(ScreenContext context);
@@ -21,22 +21,13 @@ public final class ScreenLayout {
         Provider lookup(ScreenLink link);
     }
 
-    public ScreenLayout(Component... components) {
+    public ScreenLayout(Object... components) {
         this(new BorderLayout(),components);
     }
 
-    public ScreenLayout(Layout layout, Component... components) {
+    public ScreenLayout(Layout layout, Object... components) {
         this.layout = layout;
         this.components = components;
     }
 
-    Component toComponent() {
-        Container container = new Container();
-        container.setLayout(layout);
-        for (Component component : components) {
-            Components.addToContainer(component, container);
-        }
-        return container;
-    }
-    
 }

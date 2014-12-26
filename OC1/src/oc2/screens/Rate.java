@@ -28,11 +28,11 @@ public final class Rate {
         description.setEditable(false);
     }
 
-    Component change_location_button() {
+    ActionButton change_location_button() {
         return ScreenButton.textAndLeadingTo("Pick a different location",new ScreenLink("Search"));
     }
 
-    Button about_rating_button() {
+    ActionButton about_rating_button() {
         return new ActionButton("More about this rating scheme") {
             public void onTap() {
                 Display.getInstance().execute("http://www.sagetraveling.com/Rating-System-Explanation/");
@@ -40,7 +40,7 @@ public final class Rate {
         };
     }
     
-    Button rating_button(final String ratingText, final String ratingDescription) {
+    ActionButton rating_button(final String ratingText, final String ratingDescription) {
         ActionButton button = new ActionButton("") {
             public void onTap() {
                 rating.setText(ratingText);
@@ -58,7 +58,7 @@ public final class Rate {
         CurrentState.get().broadcastChange();
     }
 
-    Button provider_details_button() {
+    ActionButton provider_details_button() {
         return ProviderDetailsButton.of();
     }
     

@@ -29,7 +29,7 @@ public class DynamicScreenLayoutProviderTest {
     public void getLayout_returns_layout_with_message_when_source_is_null() {
         sourceCode = null;
         ScreenLayout actual = testObject.getLayout(context);
-        Component component = actual.components[0];
+        Object component = actual.components[0];
         assertSpanLabelTextContains(component,"Source is not valid Hash");
     }
 
@@ -48,7 +48,7 @@ public class DynamicScreenLayoutProviderTest {
         assertSpanLabelTextContains(actual.components[1],"layout not found");
     }
 
-    private void assertSpanLabelTextContains(Component component, String target) {
+    private void assertSpanLabelTextContains(Object component, String target) {
         SpanLabel label = (SpanLabel) component;
         String string = label.getText();
         assertTrue(string,Strings.contains(string,target));

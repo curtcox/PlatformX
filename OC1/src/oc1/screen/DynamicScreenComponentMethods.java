@@ -6,6 +6,7 @@ import hash.NamedExpression;
 import java.net.*;
 import java.util.*;
 import common.Registry;
+import oc1.ui.ActionButton;
 import oc1.ui.Icons;
 
 /**
@@ -83,11 +84,11 @@ final class DynamicScreenComponentMethods
         return (value==null) ? "" : value.toString();
     }
 
-    private Button button(String text, String image, String leadingTo) {
+    private ActionButton button(String text, String image, String leadingTo) {
         return ScreenButton.textAndImageLeadingTo(text,image,leadingTo);
     }
 
-    private Button link(String text) {
+    private ActionButton link(String text) {
         return ScreenButton.textAndLeadingTo(text, text);
     }
     

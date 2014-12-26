@@ -2,6 +2,7 @@ package oc1.ui;
 
 import com.codename1.ui.Command;
 import com.codename1.ui.Component;
+import com.codename1.ui.Container;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
@@ -51,9 +52,13 @@ public class C1Form
     public void layout(ScreenLayout layout) {
         removeAll();
         setLayout(layout.layout);
-        for(Component component : layout.components) {
-            Components.addToContainer(component, this);
+        for(Object object : layout.components) {
+            Components.addToContainer(component(object), this);
         }
+    }
+
+    private Component component(Object object) {
+        return null;
     }
 
     @Override

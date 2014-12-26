@@ -82,10 +82,19 @@ final class DynamicScreenLayoutMethods
     private Component component(Object o) {
         if (o == null)                 { return new Label(""); }
         if (o instanceof Component)    { return (Component) o; }    
-        if (o instanceof ScreenLayout) { return ((ScreenLayout)o).toComponent(); }
+        if (o instanceof ScreenLayout) { return toComponent((ScreenLayout)o); }
         return new SpanLabel(o.toString());
     }
-    
+
+    Component toComponent(ScreenLayout screenLayout) {
+        Container container = new Container();
+        container.setLayout(screenLayout.layout);
+        for (Object object : screenLayout.components) {
+            Components.addToContainer(component(object), container);
+        }
+        return container;
+    }
+
     private int integer(Object o) {
         if (o instanceof Long) {
             long value = (Long) o;

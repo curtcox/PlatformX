@@ -16,18 +16,16 @@ import oc1.log.LogManager;
  * Implementers must provide onTap.
  * @author Curt
  */
-public abstract class ActionButton
-    extends Button
-{
+public abstract class ActionButton {
+
+    final String name;
+    String text;
+    String icon;
+    int textPosition;
 
     public ActionButton(final String name) {
-        super(name);
-        addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                log("tapped " + name);
-                ActionButton.this.onTap();
-            }
-        });
+        this.name = name;
+        this.text = name;
     }
 
     /**
@@ -36,9 +34,9 @@ public abstract class ActionButton
     public abstract void onTap();
     
     public void updateTextOnChange(Change.Source change,final StringSource source) {
-        change.addListener(new Change.Listener(){
+        change.addListener(new Change.Listener() {
             public void onChange() {
-                setText(source.getString());
+                text = source.getString();
             }
         });
     }
@@ -46,25 +44,29 @@ public abstract class ActionButton
     public void updateTextOnChange(final StringSource source) {
         CurrentState.get().addListener(new Change.Listener(){
             public void onChange() {
-                setText(source.getString());
+                text = source.getString();
             }
         });
     }
 
     public void setIcon(String icon) {
-        setIcon(Icons.of().getImage(icon));
-    }
-    
-    private void log(String message) {
-        getLog().log(message);
+        this.icon = icon;
     }
 
-    private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(ActionButton.class);
+    public void setText(String text) {
+        this.text = text;
     }
 
     @Override
     public String toString() {
-        return "ActionButton:" + getName();
+        return "ActionButton:" + name;
+    }
+
+    public void setTextPosition(int textPosition) {
+        this.textPosition = textPosition;
+    }
+
+    public String getText() {
+        return text;
     }
 }
