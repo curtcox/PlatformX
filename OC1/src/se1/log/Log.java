@@ -2,7 +2,6 @@ package se1.log;
 
 import common.ILog;
 import common.Registry;
-import oc1.log.LogWriter;
 import oc1.ui.IDisplay;
 import oc1.ui.IForm;
 

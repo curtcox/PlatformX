@@ -13,7 +13,7 @@ public final class SEDisplay
     private static SEDisplay singleton;
 
     public static SEDisplay of() {
-        if (singleton!=null) {
+        if (singleton==null) {
             singleton = newDisplay();
         }
         return singleton;
@@ -46,6 +46,7 @@ public final class SEDisplay
     }
 
     void show(SEForm form) {
+        this.form = form;
         frame.getContentPane().add(form);
     }
 }
