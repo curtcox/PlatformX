@@ -1,4 +1,4 @@
-package oc1.screen;
+package oc1;
 
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;

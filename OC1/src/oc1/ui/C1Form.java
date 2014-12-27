@@ -11,8 +11,8 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
+import oc1.Components;
 import oc1.command.LoggedCommand;
-import oc1.screen.*;
 
 public class C1Form
     extends Form
