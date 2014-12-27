@@ -1,5 +1,8 @@
 package oc1.screen;
 
+import common.screen.Screen;
+import common.screen.ScreenLayout;
+
 /**
  * A screen that is created by a dynamic layout method.
  */

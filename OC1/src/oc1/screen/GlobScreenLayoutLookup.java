@@ -2,6 +2,9 @@ package oc1.screen;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import common.screen.ScreenLayout;
+import common.screen.ScreenLink;
 import oc1.util.Glob;
 
 /**

@@ -3,6 +3,7 @@ package oc2.screen;
 import java.util.Arrays;
 import java.util.List;
 import common.Registry;
+import common.screen.ScreenFactory;
 import oc1.app.Version;
 import oc1.screen.*;
 import oc1.util.StringMap;

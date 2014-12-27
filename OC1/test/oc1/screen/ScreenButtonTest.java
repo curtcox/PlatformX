@@ -1,6 +1,7 @@
 package oc1.screen;
 
-import com.codename1.ui.Form;
+import common.screen.Screen;
+import common.screen.ScreenLayout;
 import fake.FakeRegistryLoader;
 import oc1.ui.ActionButton;
 import java.util.concurrent.Callable;

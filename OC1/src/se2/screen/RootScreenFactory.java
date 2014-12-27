@@ -1,6 +1,7 @@
 package se2.screen;
 
 import common.Registry;
+import common.screen.ScreenFactory;
 import oc1.app.Version;
 import oc1.screen.*;
 import oc1.util.StringMap;

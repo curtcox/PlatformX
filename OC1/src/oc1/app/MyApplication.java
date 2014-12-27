@@ -9,8 +9,8 @@ import java.io.IOException;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import oc1.screen.ScreenFactory;
-import oc1.screen.ScreenLink;
+import common.screen.ScreenFactory;
+import common.screen.ScreenLink;
 
 public class MyApplication {
 

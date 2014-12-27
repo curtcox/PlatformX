@@ -1,7 +1,8 @@
 package se1.app;
 
 import common.Registry;
-import oc1.screen.*;
+import common.screen.ScreenFactory;
+import common.screen.ScreenLink;
 
 import java.awt.*;
 

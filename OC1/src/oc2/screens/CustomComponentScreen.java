@@ -1,6 +1,9 @@
 package oc2.screens;
 
-import com.codename1.ui.layouts.BorderLayout;
+import common.screen.Screen;
+import common.screen.ScreenFactory;
+import common.screen.ScreenLayout;
+import common.screen.ScreenLink;
 import oc1.screen.*;
 
 public final class CustomComponentScreen

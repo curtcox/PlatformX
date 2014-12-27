@@ -2,6 +2,9 @@ package oc2.screenfactories;
 
 import com.codename1.ui.Label;
 import java.util.List;
+
+import common.screen.Screen;
+import common.screen.ScreenLink;
 import oc1.event.*;
 import oc1.screen.*;
 import oc1.uilist.*;

@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import common.screen.ScreenLayout;
 import common.ui.UIGridLayout;
 import common.ui.UILabel;
 import fake.FakeRegistryLoader;

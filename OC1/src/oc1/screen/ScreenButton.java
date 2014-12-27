@@ -1,5 +1,8 @@
 package oc1.screen;
 
+import common.screen.Screen;
+import common.screen.ScreenFactory;
+import common.screen.ScreenLink;
 import oc1.app.CurrentState;
 import common.Registry;
 import common.event.Change.Source;

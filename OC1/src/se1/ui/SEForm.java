@@ -1,7 +1,7 @@
 package se1.ui;
 
 import common.ICommand;
-import oc1.screen.ScreenLayout;
+import common.screen.ScreenLayout;
 import oc1.ui.IForm;
 
 import javax.swing.*;

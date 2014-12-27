@@ -1,7 +1,7 @@
 package oc2.screens;
 
-import oc1.screen.Screen;
-import oc1.screen.ScreenLayout;
+import common.screen.Screen;
+import common.screen.ScreenLayout;
 
 /**
  * For viewing and manipulating the user profile.

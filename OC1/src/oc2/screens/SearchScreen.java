@@ -3,7 +3,7 @@ package oc2.screens;
 import oc1.app.CurrentState;
 import common.Registry;
 import common.domain.ServiceProvider;
-import oc1.screen.ScreenLink;
+import common.screen.ScreenLink;
 import oc1.screen.SelectionListScreen;
 import oc1.uilist.SearchableList;
 

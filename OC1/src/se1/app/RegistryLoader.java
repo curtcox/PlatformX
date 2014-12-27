@@ -3,7 +3,7 @@ package se1.app;
 import common.log.ILogManager;
 import common.Registry;
 import se1.log.*;
-import oc1.screen.ScreenFactory;
+import common.screen.ScreenFactory;
 import oc1.ui.IDisplay;
 import oc1.ui.IFormFactory;
 import oc1.util.StringMap;

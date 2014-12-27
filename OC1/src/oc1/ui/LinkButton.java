@@ -2,8 +2,8 @@ package oc1.ui;
 
 import common.Registry;
 import common.ui.UIButton;
-import oc1.screen.ScreenFactory;
-import oc1.screen.ScreenLink;
+import common.screen.ScreenFactory;
+import common.screen.ScreenLink;
 
 /**
  * A button that follows a link when you tap it.

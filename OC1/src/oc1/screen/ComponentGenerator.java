@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import common.screen.ScreenLayout;
 import common.ui.UIComponent;
 
 final class ComponentGenerator {

@@ -1,8 +1,9 @@
-package oc1.screen;
+package common.screen;
 
 import common.ui.UIBorderLayout;
 import common.ui.UIComponent;
 import common.ui.UILayout;
+import oc1.screen.ScreenContext;
 
 /**
  * The layout and components for a single screen.

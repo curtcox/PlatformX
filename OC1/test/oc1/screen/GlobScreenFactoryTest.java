@@ -1,5 +1,8 @@
 package oc1.screen;
 
+import common.screen.Screen;
+import common.screen.ScreenLayout;
+import common.screen.ScreenLink;
 import fake.FakeRegistryLoader;
 import org.junit.Test;
 import static org.junit.Assert.*;

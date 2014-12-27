@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import common.screen.ScreenLayout;
 import common.ui.*;
 import hash.NamedExpression;
 import java.util.HashMap;

@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import common.screen.ScreenLink;
 import hash.NamedExpression;
 import oc1.util.Check;
 import oc1.util.Mirror;
