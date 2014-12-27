@@ -1,9 +1,5 @@
 package common.domain;
 
-/**
- *
- * @author Curt
- */
 public final class ID
     extends TypedString
 {

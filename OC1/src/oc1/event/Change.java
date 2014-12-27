@@ -1,9 +1,5 @@
 package oc1.event;
 
-/**
- *
- * @author Curt
- */
 public final class Change {
     
     public interface Listener {

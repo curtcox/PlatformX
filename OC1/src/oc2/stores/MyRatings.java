@@ -3,7 +3,7 @@ package oc2.stores;
 import com.codename1.io.Storage;
 import common.Registry;
 import common.domain.ID;
-import oc2.domain.Rating;
+import common.domain.Rating;
 import java.util.HashMap;
 import java.util.Map;
 import oc1.stores.MapStorageIO;

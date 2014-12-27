@@ -1,6 +1,5 @@
 package common.domain;
 
-import oc2.domain.Rating;
 import com.codename1.location.Location;
 import common.Registry;
 import oc1.services.Locations;

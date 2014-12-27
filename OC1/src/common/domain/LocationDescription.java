@@ -2,10 +2,6 @@ package common.domain;
 
 import com.codename1.location.Location;
 
-/**
- *
- * @author Curt
- */
 public final class LocationDescription {
 
     public final String address;

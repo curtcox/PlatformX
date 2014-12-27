@@ -1,7 +1,7 @@
 package oc2.stores;
 
 import common.domain.ID;
-import oc2.domain.Rating;
+import common.domain.Rating;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

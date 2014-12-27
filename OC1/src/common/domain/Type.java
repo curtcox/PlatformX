@@ -1,10 +1,6 @@
 package common.domain;
 
-/**
- *
- * @author Curt
- */
-public final class Type 
+public final class Type
     extends TypedString
 {
     public Type(String name) {

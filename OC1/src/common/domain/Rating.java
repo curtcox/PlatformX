@@ -1,12 +1,5 @@
-package oc2.domain;
+package common.domain;
 
-import common.domain.TypedString;
-
-
-/**
- *
- * @author Curt
- */
 public final class Rating
     extends TypedString
 {

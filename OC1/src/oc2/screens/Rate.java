@@ -9,7 +9,7 @@ import oc1.screen.ScreenButton;
 import oc1.screen.ScreenLink;
 import oc1.screenparts.ProviderDetailsButton;
 import oc1.ui.ActionButton;
-import oc2.domain.Rating;
+import common.domain.Rating;
 import oc2.stores.MyRatings;
 
 /**
