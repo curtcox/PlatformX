@@ -1,7 +1,7 @@
 package common.screen.dynamic;
 
 import common.event.StringSource;
-import oc1.util.StringMap;
+import common.util.StringMap;
 
 /**
  * For using a StringMap as a StringSource

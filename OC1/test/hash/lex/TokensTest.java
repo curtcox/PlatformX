@@ -1,6 +1,6 @@
 package hash.lex;
 
-import oc1.util.Strings;
+import common.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

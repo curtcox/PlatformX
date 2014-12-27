@@ -5,9 +5,9 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
-import oc1.util.Glob;
-import oc1.util.GlobStringMap;
-import oc1.util.StringMap;
+import common.util.Glob;
+import common.util.GlobStringMap;
+import common.util.StringMap;
 
 /**
  * A ScreenFactory that dynamically creates screens.

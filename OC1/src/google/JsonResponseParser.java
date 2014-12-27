@@ -12,7 +12,7 @@ import java.util.Map;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import oc1.ui.Icons;
+import c1.ui.Icons;
 
 /**
  *

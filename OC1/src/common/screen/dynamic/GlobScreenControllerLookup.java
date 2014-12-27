@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import common.screen.ScreenLink;
-import oc1.util.Glob;
+import common.util.Glob;
 
 final class GlobScreenControllerLookup
     implements ScreenController.Lookup

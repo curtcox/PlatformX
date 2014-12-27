@@ -4,7 +4,7 @@ import hash.*;
 import hash.lex.Tokens;
 import java.util.ArrayList;
 import java.util.List;
-import oc1.util.Strings;
+import common.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

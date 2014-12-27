@@ -4,9 +4,9 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
-import oc1.util.Mirror;
-import oc1.util.Mirrors;
-import oc1.util.StringMap;
+import common.util.Mirror;
+import common.util.Mirrors;
+import common.util.StringMap;
 
 /**
  * A ScreenFactory that lazily creates screens.

@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import common.net.Network;
-import oc1.ui.EmptyImage;
+import c1.ui.EmptyImage;
 
 /**
  * Testing network implementation that uses J2SE.

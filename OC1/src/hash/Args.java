@@ -1,7 +1,7 @@
 package hash;
 
 import java.util.Arrays;
-import oc1.util.Objects;
+import common.util.Objects;
 
 /**
  *

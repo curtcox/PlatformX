@@ -4,7 +4,7 @@ import fake.FakeRegistryLoader;
 import j2se.J2seNetwork;
 import common.Registry;
 import common.net.Network;
-import oc1.util.Strings;
+import common.util.Strings;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;

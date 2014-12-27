@@ -2,47 +2,197 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\ComponentGenerator.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/ComponentGenerator.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\CompositeScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/CompositeScreenFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\DynamicScreenComponentMethods.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenComponentMethods.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\DynamicScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\DynamicScreenLayoutMethods.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenLayoutMethods.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\DynamicScreenLayoutProvider.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenLayoutProvider.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\DynamicScreenMethodInvocations.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenMethodInvocations.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\EmptyScreenContextProvider.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/EmptyScreenContextProvider.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\Getter.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/Getter.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\GlobScreenControllerLookup.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenControllerLookup.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\GlobScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\GlobScreenLayoutLookup.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenLayoutLookup.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\LayoutScreen.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreen.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\LazyScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/LazyScreenFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\ScreenButton.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screenparts/ScreenButton.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\ScreenContext.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/ScreenContext.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\ScreenContextAsNamedValues.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/ScreenContextAsNamedValues.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\ScreenController.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/ScreenController.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\StringMapStringSource.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/StringMapStringSource.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\screen\DynamicScreenLayoutMethodsTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenLayoutMethodsTest.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\screen\DynamicScreenLayoutProviderTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenLayoutProviderTest.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\screen\GlobScreenFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/GlobScreenFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/AbstractItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/AbstractItemListScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screens/CustomComponentScreen.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screens/CustomComponentScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/services/DistanceCalculator.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/services/DistanceCalculator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/FilterScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/FilterScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/services/Geocoder.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/services/Geocoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screens/Home.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screens/Home.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/LocationSelectionScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/LocationSelectionScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screenparts/ProviderDetailsButton.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screenparts/ProviderDetailsButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screens/ProviderDetailsScreen.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screens/ProviderDetailsScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screenparts/ProviderRatingButton.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screenparts/ProviderRatingButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screens/Rate.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screens/Rate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screen/RootScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screen/RootScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se2/screen/RootScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se2/screen/RootScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/oc1/screen/ScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/oc1/screen/ScreenButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/ScreenLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/ScreenLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/SearchScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/SearchScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/services/ServiceProviders.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/services/ServiceProviders.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/services/Time.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/services/Time.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/ui/UILabel.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UILabel.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\Components.java" afterPath="$PROJECT_DIR$/OC1/src/c1/Components.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\JSON.java" afterPath="$PROJECT_DIR$/OC1/src/c1/JSON.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\app\CurrentState.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/CurrentState.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\app\ExceptionLogger.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/ExceptionLogger.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\app\Heartbeat.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/Heartbeat.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\app\HeartbeatMonitor.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/HeartbeatMonitor.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\app\MyApplication.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\app\RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/RegistryLoader.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\app\Version.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/Version.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\command\LoggedCommand.java" afterPath="$PROJECT_DIR$/OC1/src/c1/command/LoggedCommand.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\device\DeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/c1/device/DeviceInfo.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\device\DeviceKeyValuePair.java" afterPath="$PROJECT_DIR$/OC1/src/c1/device/DeviceKeyValuePair.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\device\ReportBuilder.java" afterPath="$PROJECT_DIR$/OC1/src/c1/device/ReportBuilder.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\event\DataChangeSource.java" afterPath="$PROJECT_DIR$/OC1/src/c1/event/DataChangeSource.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\event\LiveList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/event/LiveList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\event\SimpleLiveList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/event/SimpleLiveList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\event\SimpleSwappableList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/event/SimpleSwappableList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\log\IssueReporter.java" afterPath="$PROJECT_DIR$/OC1/src/c1/log/IssueReporter.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\log\Log.java" afterPath="$PROJECT_DIR$/OC1/src/se/log/Log.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\log\LogManager.java" afterPath="$PROJECT_DIR$/OC1/src/c1/log/LogManager.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\log\LogWriter.java" afterPath="$PROJECT_DIR$/OC1/src/c1/log/LogWriter.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\net\CachedNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/c1/net/CachedNetwork.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\net\CachedNetworkEntriesIO.java" afterPath="$PROJECT_DIR$/OC1/src/c1/net/CachedNetworkEntriesIO.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\net\NetworkCacheEntry.java" afterPath="$PROJECT_DIR$/OC1/src/c1/net/NetworkCacheEntry.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\net\RawNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/c1/net/RawNetwork.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\DynamicScreenMediaCaptureMethods.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screen/DynamicScreenMediaCaptureMethods.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screen\SelectionListScreen.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screen/SelectionListScreen.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\CaptureImageButton.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/CaptureImageButton.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\LocationListCellConfigurer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/LocationListCellConfigurer.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\ProviderDetailsButton.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/ProviderDetailsButton.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\ProviderRatingButton.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/ProviderRatingButton.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\ScreenButton.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/ScreenButton.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\SearchParams.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/SearchParams.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\ServiceProviderListCellConfigurer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/ServiceProviderListCellConfigurer.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\ServiceProviderTextFilter.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/ServiceProviderTextFilter.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\TypeListCellConfigurer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/TypeListCellConfigurer.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\screenparts\TypeTextFilter.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/TypeTextFilter.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\services\DistanceCalculator.java" afterPath="$PROJECT_DIR$/OC1/src/c1/services/DistanceCalculator.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\services\Geocoder.java" afterPath="$PROJECT_DIR$/OC1/src/c1/services/Geocoder.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\services\LocationQuantizer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/services/LocationQuantizer.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\services\Locations.java" afterPath="$PROJECT_DIR$/OC1/src/c1/services/Locations.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\services\ServiceProviders.java" afterPath="$PROJECT_DIR$/OC1/src/c1/services/ServiceProviders.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\services\Time.java" afterPath="$PROJECT_DIR$/OC1/src/c1/services/Time.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\stores\AbstractPairIO.java" afterPath="$PROJECT_DIR$/OC1/src/common/stores/AbstractPairIO.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\stores\MapStorageIO.java" afterPath="$PROJECT_DIR$/OC1/src/common/stores/MapStorageIO.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\stores\PairIO.java" afterPath="$PROJECT_DIR$/OC1/src/common/stores/PairIO.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\ActionButton.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/ActionButton.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\BorderContainer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/BorderContainer.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\BoxYContainer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/BoxYContainer.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\C1Display.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1Display.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\C1Form.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\C1FormFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1FormFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\DebugForm.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/DebugForm.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\EmptyImage.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/EmptyImage.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\IDisplay.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/IDisplay.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\IForm.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/IForm.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\IFormFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/IFormFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\Icons.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/Icons.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\LinkButton.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/LinkButton.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\BasicListCellRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/BasicListCellRenderer.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\BoxList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/BoxList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\DebugList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/DebugList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\FilterListModel.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/FilterListModel.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\IList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/IList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\ListCell.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/ListCell.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\ListCellConfigurer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/ListCellConfigurer.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\ListContentInstaller.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/ListContentInstaller.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\ListFilter.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/ListFilter.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\SearchFilterInstaller.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/SearchFilterInstaller.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\SearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/SearchableList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\StringToList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/StringToList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\StringToListFilter.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/StringToListFilter.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\UIContainerList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/UIContainerList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\UIList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/UIList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\uilist\VirtualListModel.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/VirtualListModel.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\AbstractMirror.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/AbstractMirror.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\AttributedString.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/AttributedString.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\Check.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/Check.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\Glob.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/Glob.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\GlobStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/GlobStringMap.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\GraphicsMirror.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/GraphicsMirror.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\Mirror.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/Mirror.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\Mirrors.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/Mirrors.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\Objects.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/Objects.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\Reflection.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/Reflection.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\SimpleStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/SimpleStringMap.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\Splitter.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/Splitter.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\StringMap.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/StringMap.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\util\Strings.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/Strings.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\net\JsonIndexNetStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/common/net/JsonIndexNetStringMap.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\net\RootStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/common/net/RootStringMap.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\net\SimpleNetStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/common/net/SimpleNetStringMap.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screen\RootScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screen/RootScreenFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screenfactories\AbstractItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/AbstractItemListScreenFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screenfactories\DeviceInfoScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/DeviceInfoScreenFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screenfactories\FilterScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/FilterScreenFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screenfactories\GeocoderStringToList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/GeocoderStringToList.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screenfactories\IndexScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/IndexScreenFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screenfactories\LocationSelectionScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/LocationSelectionScreenFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screenfactories\SearchScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/SearchScreenFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screenfactories\ZoomOutSearchButton.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/ZoomOutSearchButton.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\AttributedLabel.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/AttributedLabel.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\CustomComponent.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/CustomComponent.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\CustomComponentScreen.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/CustomComponentScreen.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\FilterScreen.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/FilterScreen.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\Home.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/Home.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\HomeMirror.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/HomeMirror.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\HowTo.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/HowTo.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\HowToMirror.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/HowToMirror.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\LocationSelectionScreen.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/LocationSelectionScreen.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\ProfileScreen.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/ProfileScreen.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\ProviderDetailsScreen.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/ProviderDetailsScreen.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\Rate.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/Rate.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\RateMirror.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/RateMirror.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\screens\SearchScreen.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/SearchScreen.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\stores\MyRatings.java" afterPath="$PROJECT_DIR$/OC1/src/common/stores/MyRatings.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc2\stores\MyRatingsIO.java" afterPath="$PROJECT_DIR$/OC1/src/common/stores/MyRatingsIO.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se1\app\Application.java" afterPath="$PROJECT_DIR$/OC1/src/se/app/Application.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se1\app\RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/se/app/RegistryLoader.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se1\log\Log.java" afterPath="$PROJECT_DIR$/OC1/src/c1/log/Log.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se1\log\LogManager.java" afterPath="$PROJECT_DIR$/OC1/src/se/log/LogManager.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se1\log\LogWriter.java" afterPath="$PROJECT_DIR$/OC1/src/se/log/LogWriter.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se1\ui\SEDisplay.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se1\ui\SEForm.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/SEForm.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se1\ui\SEFormFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/SEFormFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se2\screen\RootScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/screen/RootScreenFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\app\CurrentStateTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/CurrentStateTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\app\RegistryTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/RegistryTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\io\IOTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/io/IOTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\io\JSONTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/io/JSONTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\net\CachedNetworkEntriesIOTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/net/CachedNetworkEntriesIOTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\net\CachedNetworkTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/net/CachedNetworkTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\net\RawNetworkTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/net/RawNetworkTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\screen\ScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screen/ScreenButtonTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\screen\ScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screen/ScreenTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\services\DistanceCalculatorTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/services/DistanceCalculatorTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\services\LocationQuantizerTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/services/LocationQuantizerTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\ui\ActionButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/ui/ActionButtonTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\util\AttributedStringTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/util/AttributedStringTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\util\GlobStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/util/GlobStringMapTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\util\ObjectsTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/util/ObjectsTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\util\SplitterTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/util/SplitterTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc1\util\StringsTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/util/StringsTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc2\net\JsonIndexNetStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/net/JsonIndexNetStringMapTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc2\net\SimpleNetStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/net/SimpleNetStringMapTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc2\screens\FakeUI.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screens/FakeUI.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc2\screens\ProviderDetailsScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screens/ProviderDetailsScreenTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc2\screens\ProviderRatingButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screens/ProviderRatingButtonTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc2\stores\MyRatingsIOTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/stores/MyRatingsIOTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\oc2\stores\MyRatingsTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/stores/MyRatingsTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\se1\ui\SEDisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEDisplayTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\se1\ui\SEFormTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/hash/ArgNames.java" afterPath="$PROJECT_DIR$/OC1/src/hash/ArgNames.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/ArgNamesParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/ArgNamesParserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/ArgNamesTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/ArgNamesTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/hash/Args.java" afterPath="$PROJECT_DIR$/OC1/src/hash/Args.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/ArgsParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/ArgsParserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/ArgsTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/ArgsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/ContextTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/ContextTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenComponentMethods.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenComponentMethods.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenLayoutProviderTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenLayoutProviderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenMethodInvocations.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenMethodInvocations.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeDisplay.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeDisplay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/GeocodingTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/GeocodingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenControllerLookup.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenControllerLookup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenLayoutLookup.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenLayoutLookup.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/HashInvokerTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/HashInvokerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/HashObjectMethodsTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/HashObjectMethodsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/InvocationParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/InvocationParserTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/InvocationTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/InvocationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/j2se/J2seNetwork.java" afterPath="$PROJECT_DIR$/OC1/test/j2se/J2seNetwork.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" afterPath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/LazyScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/LazyScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/MethodTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/MethodTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/NumericConstantTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/NumericConstantTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/PlacesSearchTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/PlacesSearchTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/Screen.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/Screen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/ScreenController.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/ScreenController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/domain/ServiceProvider.java" afterPath="$PROJECT_DIR$/OC1/src/common/domain/ServiceProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/StringConstantTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/StringConstantTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/StringMapStringSource.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/StringMapStringSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/event/SwappableList.java" afterPath="$PROJECT_DIR$/OC1/src/common/event/SwappableList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/SyntaxErrorTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/SyntaxErrorTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/TernaryTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/TernaryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/lex/TokensTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/lex/TokensTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/com/codename1/ui/UIDebugForm.java" afterPath="$PROJECT_DIR$/OC1/src/com/codename1/ui/UIDebugForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/codenameone_settings.properties" afterPath="$PROJECT_DIR$/OC1/codenameone_settings.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -68,7 +218,7 @@
         <state>
           <leaf>
             <file leaf-file-name="SelectionListScreen.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java">
+              <entry file="file://$PROJECT_DIR$/OC1/src/c1/screen/SelectionListScreen.java">
                 <provider selected="true" editor-type-id="text-editor">
                   <state vertical-scroll-proportion="0.6078212" vertical-offset="51" max-vertical-offset="1173">
                     <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
@@ -89,7 +239,72 @@
     <favorites_list name="OysterCracker" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="RootScreenFactory.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/src/c1/screen/RootScreenFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractMirror.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/util/AbstractMirror.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+              <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AttributedString.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/util/AttributedString.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2482">
+              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractPairIO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/stores/AbstractPairIO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapStorageIO.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/stores/MapStorageIO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2091">
+              <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JsonIndexNetStringMapTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/test/common/net/JsonIndexNetStringMapTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25311205" vertical-offset="4" max-vertical-offset="1479">
+              <caret line="11" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,11 +312,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/oc1/screen/ComponentGenerator.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/UIBorderLayout.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/UITextField.java" />
-        <option value="$PROJECT_DIR$/OC1/src/oc1/uilist/SearchableList.java" />
-        <option value="$PROJECT_DIR$/OC1/src/oc1/ui/BorderContainer.java" />
         <option value="$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutProvider.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/UILabel.java" />
         <option value="$PROJECT_DIR$/OC1/src/oc1/ui/ActionButton.java" />
@@ -148,6 +358,11 @@
         <option value="$PROJECT_DIR$/OC1/src/oc1/services/Geocoder.java" />
         <option value="$PROJECT_DIR$/OC1/src/oc1/services/ServiceProviders.java" />
         <option value="$PROJECT_DIR$/OC1/src/oc1/services/Time.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/net/SimpleNetStringMap.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/net/JsonIndexNetStringMap.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/stores/MapStorageIO.java" />
+        <option value="$PROJECT_DIR$/OC1/test/oc2/net/JsonIndexNetStringMapTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/common/net/JsonIndexNetStringMapTest.java" />
       </list>
     </option>
   </component>
@@ -223,163 +438,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oc1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oc1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screen" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dynamic" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screens" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oc2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screenfactories" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="oc1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -412,8 +471,11 @@
       <recent name="junit.framework.TestCase" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="common.screen.dynamic" />
+      <recent name="common" />
+      <recent name="common.stores" />
+      <recent name="se1" />
       <recent name="oc1" />
+      <recent name="oc1.ui" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="se1.ui" />
@@ -450,11 +512,11 @@
     <configuration default="false" name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="se1.app.*" />
+          <option name="PATTERN" value="se.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="se1.app.Application" />
+      <option name="MAIN_CLASS_NAME" value="se.app.Application" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -472,15 +534,15 @@
     <configuration default="false" name="SEDisplayTest.display_is_a_singleton" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="se1.ui.*" />
+          <option name="PATTERN" value="se.ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="se1.ui" />
-      <option name="MAIN_CLASS_NAME" value="se1.ui.SEDisplayTest" />
+      <option name="PACKAGE_NAME" value="se.ui" />
+      <option name="MAIN_CLASS_NAME" value="se.ui.SEDisplayTest" />
       <option name="METHOD_NAME" value="display_is_a_singleton" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -500,15 +562,15 @@
     <configuration default="false" name="SEDisplayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="se1.ui.*" />
+          <option name="PATTERN" value="se.ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="se1.ui" />
-      <option name="MAIN_CLASS_NAME" value="se1.ui.SEDisplayTest" />
+      <option name="PACKAGE_NAME" value="se.ui" />
+      <option name="MAIN_CLASS_NAME" value="se.ui.SEDisplayTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -528,15 +590,15 @@
     <configuration default="false" name="SEFormTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="se1.ui.*" />
+          <option name="PATTERN" value="se.ui.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="se1.ui" />
-      <option name="MAIN_CLASS_NAME" value="se1.ui.SEFormTest" />
+      <option name="PACKAGE_NAME" value="se.ui" />
+      <option name="MAIN_CLASS_NAME" value="se.ui.SEFormTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -753,7 +815,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.205291" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20031546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20031546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17883597" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -793,90 +855,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/event/SwappableList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/event/DataChangeSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/event/LiveList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/event/SimpleLiveList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1054">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/event/SimpleSwappableList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1258">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/IO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/JSON.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="346" max-vertical-offset="952">
-          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/net/Network.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
-          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/net/CachedNetwork.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
-          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/net/URIs.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.14026402" vertical-offset="0" max-vertical-offset="606">
@@ -921,19 +899,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se1/ui/SEDisplayTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/SEDisplayTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3039106" vertical-offset="0" max-vertical-offset="895">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#331#332#0" expanded="false" />
-            <element signature="e#388#389#0" expanded="false" />
+            <element signature="e#330#331#0" expanded="false" />
+            <element signature="e#387#388#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/uilist/IList.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/IList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
           <caret line="9" column="10" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
@@ -941,17 +919,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/ui/BorderContainer.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/ui/BorderContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se1/ui/SEFormTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
@@ -961,12 +939,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/Components.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/Components.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1175657" vertical-offset="0" max-vertical-offset="723">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1171,17 +1149,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6078212" vertical-offset="51" max-vertical-offset="1173">
-          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screenparts/CaptureImageButton.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenparts/CaptureImageButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="833">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -1191,7 +1159,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/services/DistanceCalculator.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/services/DistanceCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="935">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1199,7 +1167,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/services/Geocoder.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/services/Geocoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
           <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
@@ -1207,7 +1175,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenMediaCaptureMethods.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screen/DynamicScreenMediaCaptureMethods.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07053942" vertical-offset="0" max-vertical-offset="867">
           <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
@@ -1215,7 +1183,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/services/LocationQuantizer.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/services/LocationQuantizer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21161826" vertical-offset="0" max-vertical-offset="723">
           <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
@@ -1223,7 +1191,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/services/Locations.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/services/Locations.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09405256" vertical-offset="0" max-vertical-offset="1071">
           <caret line="9" column="19" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
@@ -1231,7 +1199,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/services/ServiceProviders.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/services/ServiceProviders.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09405256" vertical-offset="0" max-vertical-offset="1139">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
@@ -1239,7 +1207,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/services/Time.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/services/Time.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1175657" vertical-offset="0" max-vertical-offset="723">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
@@ -1247,7 +1215,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screenparts/ScreenButton.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenparts/ScreenButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3526971" vertical-offset="0" max-vertical-offset="1802">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
@@ -1257,10 +1225,98 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screenparts/SearchParams.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenparts/SearchParams.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.18810512" vertical-offset="0" max-vertical-offset="723">
           <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screen/SelectionListScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6078212" vertical-offset="51" max-vertical-offset="1173">
+          <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/net/JsonIndexNetStringMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09405256" vertical-offset="0" max-vertical-offset="723">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/net/RootStringMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.09405256" vertical-offset="0" max-vertical-offset="723">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/net/SimpleNetStringMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16459198" vertical-offset="0" max-vertical-offset="723">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screen/RootScreenFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/util/AbstractMirror.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="4" column="22" selection-start-line="4" selection-start-column="22" selection-end-line="4" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/util/AttributedString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2482">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/stores/AbstractPairIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/stores/MapStorageIO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2091">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/net/JsonIndexNetStringMapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25311205" vertical-offset="4" max-vertical-offset="1479">
+          <caret line="11" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>

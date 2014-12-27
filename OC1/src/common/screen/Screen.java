@@ -4,10 +4,10 @@ import common.ICommand;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import oc1.command.*;
-import oc1.ui.IDisplay;
-import oc1.ui.IForm;
-import oc1.ui.IFormFactory;
+import c1.command.*;
+import c1.ui.IDisplay;
+import c1.ui.IForm;
+import c1.ui.IFormFactory;
 
 /**
  * The entire UI, as presented to the user, at a specific time.

@@ -5,7 +5,7 @@ import java.util.List;
 
 import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
-import oc1.util.Glob;
+import common.util.Glob;
 
 final class GlobScreenLayoutLookup
     implements ScreenLayout.Lookup

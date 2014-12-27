@@ -4,8 +4,8 @@ import com.codename1.ui.animations.Transition;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import oc1.command.LoggedCommand;
-import oc1.log.IssueReporter;
+import c1.command.LoggedCommand;
+import c1.log.IssueReporter;
 
 /**
  * DebugForm in the same package, so we can intercept more methods.

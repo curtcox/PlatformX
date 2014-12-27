@@ -5,17 +5,17 @@ import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import com.codename1.ui.Display;
 import common.log.ILogManager;
-import oc1.app.CurrentState;
+import c1.app.CurrentState;
 import common.Registry;
 import common.domain.ServiceProvider;
-import oc1.log.LogManager;
-import oc1.log.LogWriter;
-import oc1.services.Locations;
-import oc1.services.ServiceProviders;
-import oc1.ui.C1FormFactory;
-import oc1.ui.IDisplay;
-import oc1.ui.IFormFactory;
-import oc1.ui.Icons;
+import c1.log.LogManager;
+import c1.log.LogWriter;
+import c1.services.Locations;
+import c1.services.ServiceProviders;
+import c1.ui.C1FormFactory;
+import c1.ui.IDisplay;
+import c1.ui.IFormFactory;
+import c1.ui.Icons;
 
 public class FakeRegistryLoader {
     

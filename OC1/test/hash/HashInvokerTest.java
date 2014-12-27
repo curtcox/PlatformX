@@ -3,7 +3,7 @@ package hash;
 import hash.parse.HashParser;
 import static org.junit.Assert.*;
 import static hash.SyntaxError.Type.*;
-import oc1.util.Strings;
+import common.util.Strings;
 import org.junit.Test;
 
 public class HashInvokerTest {

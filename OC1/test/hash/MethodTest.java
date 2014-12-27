@@ -1,7 +1,7 @@
 package hash;
 
 import java.util.HashMap;
-import oc1.util.Strings;
+import common.util.Strings;
 import org.junit.Assert;
 import static org.junit.Assert.*;
 import org.junit.Test;

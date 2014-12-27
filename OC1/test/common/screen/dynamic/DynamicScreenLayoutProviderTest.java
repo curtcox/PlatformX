@@ -1,14 +1,11 @@
 package common.screen.dynamic;
 
 import common.screen.ScreenLayout;
-import common.screen.dynamic.DynamicScreenLayoutMethods;
-import common.screen.dynamic.DynamicScreenLayoutProvider;
-import common.screen.dynamic.ScreenContext;
 import common.ui.UIGridLayout;
 import common.ui.UILabel;
 import fake.FakeRegistryLoader;
 import common.event.StringSource;
-import oc1.util.Strings;
+import common.util.Strings;
 import org.junit.*;
 import static org.junit.Assert.*;
 

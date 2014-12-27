@@ -2,9 +2,9 @@ package common.screen.dynamic;
 
 import common.screen.ScreenLink;
 import hash.NamedExpression;
-import oc1.util.Check;
-import oc1.util.Mirror;
-import oc1.util.Mirrors;
+import common.util.Check;
+import common.util.Mirror;
+import common.util.Mirrors;
 
 public final class ScreenController
     implements ScreenContext.Provider

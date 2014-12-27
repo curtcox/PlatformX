@@ -2,7 +2,7 @@ package common.screen.dynamic;
 
 import hash.NamedExpression;
 import java.util.HashMap;
-import oc1.util.Reflection;
+import common.util.Reflection;
 
 /**
  * A map of methods for dynamically invoking ScreenContext methods.

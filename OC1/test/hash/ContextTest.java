@@ -2,7 +2,7 @@ package hash;
 
 import java.util.HashMap;
 import java.util.Map;
-import oc1.util.Strings;
+import common.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

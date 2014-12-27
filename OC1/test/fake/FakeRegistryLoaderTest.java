@@ -3,7 +3,7 @@ package fake;
 import com.codename1.io.Storage;
 import common.log.ILogManager;
 import common.Registry;
-import oc1.log.LogManager;
+import c1.log.LogManager;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

@@ -2,7 +2,7 @@ package common.domain;
 
 import com.codename1.location.Location;
 import common.Registry;
-import oc1.services.Locations;
+import c1.services.Locations;
 import common.event.StringSource;
 import java.net.URI;
 

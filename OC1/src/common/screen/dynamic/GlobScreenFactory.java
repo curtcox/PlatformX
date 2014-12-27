@@ -3,7 +3,7 @@ package common.screen.dynamic;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
-import oc1.util.Glob;
+import common.util.Glob;
 
 public abstract class GlobScreenFactory
     implements ScreenFactory
