@@ -6,6 +6,7 @@ import com.codename1.ui.Container;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.layouts.Layout;
 import oc1.command.ICommand;
 import oc1.command.LoggedCommand;
 import oc1.screen.*;
@@ -51,10 +52,14 @@ public class C1Form
 
     public void layout(ScreenLayout layout) {
         removeAll();
-        setLayout(layout.layout);
+        setLayout(createLayout(layout));
         for(Object object : layout.components) {
             Components.addToContainer(component(object), this);
         }
+    }
+
+    private Layout createLayout(ScreenLayout layout) {
+        return null;
     }
 
     private Component component(Object object) {

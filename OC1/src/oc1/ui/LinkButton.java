@@ -4,6 +4,7 @@ import com.codename1.ui.Button;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import common.Registry;
+import common.UIButton;
 import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
 
@@ -12,15 +13,15 @@ import oc1.screen.ScreenLink;
  * @author Curt
  */
 public final class LinkButton
-    extends Button
+    extends UIButton
 {
     public LinkButton(final String name, final ScreenLink.Factory linkFactory) {
-        super(name);
-        addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
-                screenFactory().create(linkFactory.create()).show();
-            }
-        });
+//        super(name);
+//        addActionListener(new ActionListener() {
+//            public void actionPerformed(ActionEvent event) {
+//                screenFactory().create(linkFactory.create()).show();
+//            }
+//        });
     }
         
     public static ScreenFactory screenFactory() {

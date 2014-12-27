@@ -3,9 +3,7 @@ package oc1.screen;
 import com.codename1.components.*;
 import com.codename1.ui.*;
 import com.codename1.ui.layouts.*;
-import common.ILog;
-import common.ILogManager;
-import common.Registry;
+import common.*;
 import hash.*;
 import oc1.event.StringSource;
 import oc1.log.*;
@@ -40,13 +38,13 @@ public final class DynamicScreenLayoutProvider
         if (result==null)                   { return messageScreen("(null)");            }
         if (result instanceof ScreenLayout) { return (ScreenLayout) result;              }
         if (result instanceof String)       { return messageScreen((String)result);      }
-        if (result instanceof Component)    { return componentScreen((Component)result); }
+        if (result instanceof UIComponent)  { return componentScreen((UIComponent)result); }
         if (result instanceof SyntaxError)  { return errorScreen((SyntaxError) result);  }
         throw new IllegalArgumentException("result="+result);
     }
     
-    private ScreenLayout componentScreen(Component component) {
-        return new ScreenLayout(new GridLayout(1,1),component);
+    private ScreenLayout componentScreen(UIComponent component) {
+        return new ScreenLayout(new UIGridLayout(1,1,component));
     }
 
     private ScreenLayout messageScreen(String message) {
@@ -54,15 +52,15 @@ public final class DynamicScreenLayoutProvider
     }
 
     private ScreenLayout errorScreen(SyntaxError error) {
-        return new ScreenLayout(new BoxLayout(BoxLayout.Y_AXIS),
+        return new ScreenLayout(new UIColumnLayout(
                 label(error.type.toString()),
                 label(error.errorSource),
                 label(error.methodSource)
-        );
+        ));
     }
 
     private ScreenLayout exception(Exception e) {
-        return new ScreenLayout(new GridLayout(2,1),
+        return new ScreenLayout(new UIGridLayout(2,1),
                 label(e.getClass().toString()),
                 label(e.getMessage())
         );
@@ -81,8 +79,8 @@ public final class DynamicScreenLayoutProvider
         }
     }
 
-    private SpanLabel label(String text) {
-        return new SpanLabel(text);
+    private UILabel label(String text) {
+        return new UILabel(text);
     }
     
     private NamedValues asNamedValues(ScreenContext screenContext) {

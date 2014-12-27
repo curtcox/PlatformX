@@ -4,6 +4,9 @@ import com.codename1.components.SpanLabel;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.GridLayout;
 import com.codename1.ui.table.TableLayout;
+import common.UIGridLayout;
+import common.UILabel;
+import common.UITableLayout;
 import fake.FakeRegistryLoader;
 import hash.NamedExpression;
 import org.junit.Test;
@@ -25,13 +28,13 @@ public class DynamicScreenLayoutMethodsTest {
         
         NamedExpression expression = (NamedExpression) value;
         ScreenLayout screen = (ScreenLayout) expression.invoke(new Object[] {4,2,"red","green"});
-        GridLayout grid = (GridLayout) screen.layout;
-        assertEquals(4,grid.getRows());
-        assertEquals(2,grid.getColumns());
-        SpanLabel red = (SpanLabel) screen.components[0];
-        SpanLabel green = (SpanLabel) screen.components[1];
-        assertEquals("red",red.getText());
-        assertEquals("green",green.getText());
+        UIGridLayout grid = (UIGridLayout) screen.layout;
+        assertEquals(4,grid.rows);
+        assertEquals(2,grid.columns);
+        UILabel red = (UILabel) screen.components[0];
+        UILabel green = (UILabel) screen.components[1];
+        assertEquals("red",red.text);
+        assertEquals("green",green.text);
     }
 
     @Test
@@ -40,13 +43,13 @@ public class DynamicScreenLayoutMethodsTest {
         
         NamedExpression expression = (NamedExpression) value;
         ScreenLayout screen = (ScreenLayout) expression.invoke(new Object[] {4,2,"red","green"});
-        TableLayout grid = (TableLayout) screen.layout;
-        assertEquals(4,grid.getRows());
-        assertEquals(2,grid.getColumns());
-        SpanLabel red = (SpanLabel) screen.components[0];
-        SpanLabel green = (SpanLabel) screen.components[1];
-        assertEquals("red",red.getText());
-        assertEquals("green",green.getText());
+        UITableLayout grid = (UITableLayout) screen.layout;
+        assertEquals(4,grid.rows);
+        assertEquals(2,grid.columns);
+        UILabel red = (UILabel) screen.components[0];
+        UILabel green = (UILabel) screen.components[1];
+        assertEquals("red",red.text);
+        assertEquals("green",green.text);
     }
 
 }

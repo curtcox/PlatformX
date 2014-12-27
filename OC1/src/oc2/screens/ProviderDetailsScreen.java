@@ -5,6 +5,10 @@ import com.codename1.ui.Label;
 import com.codename1.ui.table.TableLayout;
 import java.net.URI;
 import java.util.Arrays;
+
+import common.UIButton;
+import common.UILabel;
+import common.UITableLayout;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
 import oc1.screen.*;
@@ -19,12 +23,13 @@ import oc1.ui.LinkButton;
 public final class ProviderDetailsScreen
     extends Screen
 {
-    private final Label name = new Label();
-    private final Label distance = new Label();
-    private final Label types = new Label();
-    private final Label price = new Label();
-    private final Label rating = new Label();
-    private final Button icon = new LinkButton("",new SearchLinkFactory());
+    private final UILabel name = new UILabel();
+    private final UILabel distance = new UILabel();
+    private final UILabel types = new UILabel();
+    private final UILabel price = new UILabel();
+    private final UILabel rating = new UILabel();
+    private final UILabel vicinity = new UILabel();
+    private final UIButton icon = new LinkButton("",new SearchLinkFactory());
     
     private final class SearchLinkFactory implements ScreenLink.Factory {
         public ScreenLink create() {
@@ -38,15 +43,13 @@ public final class ProviderDetailsScreen
         }     
     };
 
-    private final Label vicinity = new Label();
-
     ProviderDetailsScreen() {
         super("Provider Details");
     }
     
     @Override
     public ScreenLayout layoutForPortrait() {
-        return new ScreenLayout(new TableLayout(8,1),
+        return new ScreenLayout(new UITableLayout(8,1,
                                     name,
                                     distance,
                                     vicinity,
@@ -54,7 +57,8 @@ public final class ProviderDetailsScreen
                                     rating,
                                     icon,
                                     types,
-                                    ProviderRatingButton.of());
+                                    ProviderRatingButton.of()
+        ));
     }
     
     @Override
@@ -70,15 +74,15 @@ public final class ProviderDetailsScreen
     }
 
     private void updateName() {
-        name.setText(provider().name.toString());
+        name.text = provider().name.toString();
     }
 
     private void updateRating() {
-        this.rating.setText(getRatingText());
+        this.rating.text = getRatingText();
     }
 
     private void updatePrice() {
-        price.setText(getPriceText());
+        price.text= getPriceText();
     }
 
     private Type[] getType() {
@@ -96,20 +100,20 @@ public final class ProviderDetailsScreen
     private void updateIcon() {
         URI uri = provider().icon;
         if (uri!=null) {
-            icon.setIcon(Icons.of().getImage(uri));
+            icon.icon = uri;
         }
     }
     
     private void updateTypes() {
-        types.setText(Arrays.asList(provider().types).toString());
+        types.text = Arrays.asList(provider().types).toString();
     }
 
     private void updateDistance() {
-        distance.setText(provider().distanceFromCurrentLocation());
+        distance.text = provider().distanceFromCurrentLocation();
     }
 
     private void updateVicinity() {
-        vicinity.setText(provider().address.toString());
+        vicinity.text=provider().address.toString();
     }
 
     private ServiceProvider provider() {

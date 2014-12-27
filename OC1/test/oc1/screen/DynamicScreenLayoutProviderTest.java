@@ -3,6 +3,8 @@ package oc1.screen;
 import com.codename1.components.SpanLabel;
 import com.codename1.ui.*;
 import com.codename1.ui.layouts.GridLayout;
+import common.UIGridLayout;
+import common.UILabel;
 import fake.FakeRegistryLoader;
 import oc1.event.StringSource;
 import oc1.util.Strings;
@@ -49,8 +51,8 @@ public class DynamicScreenLayoutProviderTest {
     }
 
     private void assertSpanLabelTextContains(Object component, String target) {
-        SpanLabel label = (SpanLabel) component;
-        String string = label.getText();
+        UILabel label = (UILabel) component;
+        String string = label.text;
         assertTrue(string,Strings.contains(string,target));
     }
     
@@ -58,8 +60,8 @@ public class DynamicScreenLayoutProviderTest {
     public void getLayout_returns_layout_with_label_when_layout_returns_a_string() {
         sourceCode = lines("layout { 'Whatever' }");
         ScreenLayout actual = testObject.getLayout(context);
-        SpanLabel label = (SpanLabel) actual.components[0];
-        assertEquals("Whatever",label.getText());
+        UILabel label = (UILabel) actual.components[0];
+        assertEquals("Whatever",label.text);
     }
 
     @Test
@@ -69,14 +71,14 @@ public class DynamicScreenLayoutProviderTest {
         sourceCode = lines("layout { grid(1 2 'one' 'two') }");
         
         ScreenLayout actual = testObject.getLayout(context);
-        assertTrue(actual.layout instanceof GridLayout);
-        GridLayout layout = (GridLayout) actual.layout;
-        assertEquals(1,layout.getRows());
-        assertEquals(2,layout.getColumns());
-        SpanLabel label1 = (SpanLabel) actual.components[0];
-        SpanLabel label2 = (SpanLabel) actual.components[1];
-        assertEquals("one",label1.getText());
-        assertEquals("two",label2.getText());
+        assertTrue(actual.layout instanceof UIGridLayout);
+        UIGridLayout layout = (UIGridLayout) actual.layout;
+        assertEquals(1,layout.rows);
+        assertEquals(2,layout.columns);
+        UILabel label1 = (UILabel) actual.components[0];
+        UILabel label2 = (UILabel) actual.components[1];
+        assertEquals("one",label1.text);
+        assertEquals("two",label2.text);
     }
 
     @Test
@@ -87,8 +89,8 @@ public class DynamicScreenLayoutProviderTest {
         );
         context.put("portrait", true);
         ScreenLayout actual = testObject.getLayout(context);
-        SpanLabel label = (SpanLabel) actual.components[0];
-        assertEquals("Family",label.getText());
+        UILabel label = (UILabel) actual.components[0];
+        assertEquals("Family",label.text);
     }
 
     private String lines(String...lines) {

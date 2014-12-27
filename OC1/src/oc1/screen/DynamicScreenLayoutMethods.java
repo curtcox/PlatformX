@@ -1,9 +1,6 @@
 package oc1.screen;
 
-import com.codename1.components.SpanLabel;
-import com.codename1.ui.*;
-import com.codename1.ui.layouts.*;
-import com.codename1.ui.table.TableLayout;
+import common.*;
 import hash.NamedExpression;
 import java.util.HashMap;
 
@@ -14,6 +11,8 @@ import java.util.HashMap;
 final class DynamicScreenLayoutMethods
     extends HashMap
 {
+    private final ComponentGenerator renderer = new ComponentGenerator();
+
     DynamicScreenLayoutMethods() {
         put("grid",grid());        
         put("table",table());        
@@ -28,7 +27,7 @@ final class DynamicScreenLayoutMethods
             public Object invoke(Object[] values) {
                 int rows    = integer(values[0]);
                 int columns = integer(values[1]);
-                return grid(rows,columns,components(values,2));
+                return grid(rows, columns, components(values, 2));
             }
         };
     }
@@ -39,7 +38,7 @@ final class DynamicScreenLayoutMethods
             public Object invoke(Object[] values) {
                 int rows    = integer(values[0]);
                 int columns = integer(values[1]);
-                return table(rows,columns,components(values,2));
+                return table(rows, columns, components(values, 2));
             }
         };
     }
@@ -48,7 +47,7 @@ final class DynamicScreenLayoutMethods
         return new NamedExpression("flow") {
             @Override
             public Object invoke(Object[] values) {
-                return flow(components(values,0));
+                return flow(components(values, 0));
             }
         };
     }
@@ -57,7 +56,7 @@ final class DynamicScreenLayoutMethods
         return new NamedExpression("row") {
             @Override
             public Object invoke(Object[] values) {
-                return row(components(values,0));
+                return row(components(values, 0));
             }
         };
     }
@@ -71,28 +70,19 @@ final class DynamicScreenLayoutMethods
         };
     }
 
-    private Component[] components(Object[] values, int offset) {
-        Component[] components = new Component[values.length-offset];
+    private UIComponent[] components(Object[] values, int offset) {
+        UIComponent[] components = new UIComponent[values.length-offset];
         for (int i=0; i<components.length; i++) {
             components[i] = component(values[i+offset]);
         }
         return components;
     }
 
-    private Component component(Object o) {
-        if (o == null)                 { return new Label(""); }
-        if (o instanceof Component)    { return (Component) o; }    
-        if (o instanceof ScreenLayout) { return toComponent((ScreenLayout)o); }
-        return new SpanLabel(o.toString());
-    }
-
-    Component toComponent(ScreenLayout screenLayout) {
-        Container container = new Container();
-        container.setLayout(screenLayout.layout);
-        for (Object object : screenLayout.components) {
-            Components.addToContainer(component(object), container);
-        }
-        return container;
+    private UIComponent component(Object o) {
+        if (o == null)                 { return new UILabel(""); }
+        if (o instanceof UIComponent)  { return (UIComponent) o; }
+        if (o instanceof ScreenLayout) { return renderer.toComponent((ScreenLayout) o); }
+        return new UILabel(o.toString());
     }
 
     private int integer(Object o) {
@@ -106,27 +96,27 @@ final class DynamicScreenLayoutMethods
         return 0;
     }
     
-    private ScreenLayout grid(int rows,int columns,Component[] components) {
-        return screen(new GridLayout(rows,columns),components);
+    private ScreenLayout grid(int rows,int columns,UIComponent[] components) {
+        return screen(new UIGridLayout(rows,columns,components));
     }
 
-    private ScreenLayout table(int rows,int columns,Component[] components) {
-        return screen(new TableLayout(rows,columns),components);
+    private ScreenLayout table(int rows,int columns,UIComponent[] components) {
+        return screen(new UITableLayout(rows,columns,components));
     }
 
-    private ScreenLayout flow(Component[] components) {
-        return screen(new FlowLayout(),components);
+    private ScreenLayout flow(UIComponent[] components) {
+        return screen(new UIFlowLayout(components));
     }
 
-    private ScreenLayout column(Component[] components) {
-        return screen(new BoxLayout(BoxLayout.Y_AXIS),components);
+    private ScreenLayout column(UIComponent[] components) {
+        return screen(new UIColumnLayout(components));
     }
 
-    private ScreenLayout row(Component[] components) {
-        return screen(new BoxLayout(BoxLayout.X_AXIS),components);
+    private ScreenLayout row(UIComponent[] components) {
+        return screen(new UIRowLayout(components));
     }
 
-    private ScreenLayout screen(Layout layout, Component... components) {
+    private ScreenLayout screen(UILayout layout, UIComponent... components) {
         return new ScreenLayout(layout,components);
     }
 }

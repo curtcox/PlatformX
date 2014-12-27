@@ -29,7 +29,8 @@ public abstract class SelectionListScreen<T>
 
     @Override
     public ScreenLayout layoutForPortrait() {
-        return new ScreenLayout(searchList.component);
+        return null;
+        //return new ScreenLayout(searchList.component);
     }
 
     private void addSelectionListener() {
