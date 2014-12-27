@@ -5,7 +5,7 @@ import com.codename1.location.LocationManager;
 import common.Registry;
 import fake.FakeLocationManager;
 import fake.FakeStorage;
-import oc1.event.Change;
+import common.event.Change;
 import oc1.services.Locations;
 import oc1.services.ServiceProviders;
 import static org.junit.Assert.*;

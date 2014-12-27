@@ -1,4 +1,4 @@
-package oc1.event;
+package common.event;
 
 /**
  * A source of string values.

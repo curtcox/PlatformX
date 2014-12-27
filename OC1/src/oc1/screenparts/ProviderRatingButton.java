@@ -3,7 +3,7 @@ package oc1.screenparts;
 import common.domain.ServiceProvider;
 import oc1.screen.ScreenButton;
 import oc1.ui.ActionButton;
-import oc1.event.StringSource;
+import common.event.StringSource;
 
 /**
  * Navigates to the rating screen.

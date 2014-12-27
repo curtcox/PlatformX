@@ -2,9 +2,9 @@ package oc1.screen;
 
 import oc1.app.CurrentState;
 import common.Registry;
-import oc1.event.Change.Source;
+import common.event.Change.Source;
 import oc1.ui.ActionButton;
-import oc1.event.StringSource;
+import common.event.StringSource;
 
 /**
  * A button that will go to the given screen when tapped.

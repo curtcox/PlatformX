@@ -1,12 +1,10 @@
-package oc1.event;
+package common.event;
+
+import oc1.event.LiveList;
 
 import java.util.List;
 
-/**
- *
- * @author Curt
- */
-public interface SwappableList<T> 
+public interface SwappableList<T>
     extends LiveList<T>
 {    
     void become(List<T> list);

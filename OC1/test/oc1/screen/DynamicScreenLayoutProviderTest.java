@@ -3,7 +3,7 @@ package oc1.screen;
 import common.ui.UIGridLayout;
 import common.ui.UILabel;
 import fake.FakeRegistryLoader;
-import oc1.event.StringSource;
+import common.event.StringSource;
 import oc1.util.Strings;
 import org.junit.*;
 import static org.junit.Assert.*;

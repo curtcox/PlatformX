@@ -1,11 +1,9 @@
 package oc1.ui;
 
-import oc1.event.StringSource;
-import oc1.ui.ActionButton;
+import common.event.StringSource;
 import fake.FakeRegistryLoader;
-import com.codename1.ui.events.ActionListener;
 import oc1.app.CurrentState;
-import oc1.event.Change;
+import common.event.Change;
 import oc2.screens.FakeUI;
 import java.util.concurrent.Callable;
 import static org.junit.Assert.*;

@@ -3,7 +3,7 @@ package oc2.screenfactories;
 import com.codename1.ui.Label;
 import common.domain.LocationDescription;
 import oc1.event.LiveList;
-import oc1.event.SwappableList;
+import common.event.SwappableList;
 import oc1.event.SimpleSwappableList;
 import oc1.screen.GlobScreenFactory;
 import oc1.screen.Screen;

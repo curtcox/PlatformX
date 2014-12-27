@@ -2,7 +2,7 @@ package oc1.uilist;
 
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.DataChangedListener;
-import oc1.event.SwappableList;
+import common.event.SwappableList;
 
 /**
  *

@@ -2,6 +2,7 @@ package oc2.screenfactories;
 
 import java.util.*;
 import common.domain.*;
+import common.event.SwappableList;
 import oc1.event.*;
 import oc1.screen.*;
 import oc1.screenparts.*;

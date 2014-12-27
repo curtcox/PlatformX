@@ -2,7 +2,7 @@ package oc2.screenfactories;
 
 import java.util.List;
 import common.domain.ServiceProvider;
-import oc1.event.SwappableList;
+import common.event.SwappableList;
 import oc1.screenparts.SearchParams;
 import oc1.services.ServiceProviders;
 import oc1.ui.ActionButton;

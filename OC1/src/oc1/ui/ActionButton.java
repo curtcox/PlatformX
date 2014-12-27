@@ -1,9 +1,9 @@
 package oc1.ui;
 
 import common.ui.UIButton;
-import oc1.event.StringSource;
+import common.event.StringSource;
 import oc1.app.CurrentState;
-import oc1.event.Change;
+import common.event.Change;
 
 /**
  * Skeletal implementation of a button that does something when you tap it.

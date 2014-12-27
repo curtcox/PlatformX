@@ -8,7 +8,7 @@ import common.ui.UIComponent;
 import common.ui.UIGridLayout;
 import common.ui.UILabel;
 import hash.*;
-import oc1.event.StringSource;
+import common.event.StringSource;
 
 /**
  * Provides a ScreenLayout that is dynamically generated at runtime.

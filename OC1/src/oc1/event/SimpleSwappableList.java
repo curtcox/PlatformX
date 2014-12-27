@@ -2,18 +2,16 @@ package oc1.event;
 
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.util.EventDispatcher;
+import common.event.SwappableList;
+
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-/**
- *
- * @author Curt
- */
 public final class SimpleSwappableList
-    implements SwappableList 
+    implements SwappableList
 {
     private List list = new ArrayList();
     private final EventDispatcher dataListeners = new EventDispatcher();

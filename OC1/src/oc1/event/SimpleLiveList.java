@@ -7,10 +7,6 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-/**
- *
- * @author Curt
- */
 public final class SimpleLiveList
     implements LiveList, DataChangedListener 
 {
