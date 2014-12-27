@@ -1,6 +1,7 @@
 package oc1.io;
 
 import fake.FakeRegistryLoader;
+import oc1.JSON;
 import oc1.util.StringMap;
 import org.junit.Test;
 import static org.junit.Assert.*;

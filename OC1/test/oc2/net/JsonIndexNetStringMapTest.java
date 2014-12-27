@@ -6,7 +6,7 @@ import java.io.InputStream;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
-import oc1.io.JSON;
+import oc1.JSON;
 import oc1.net.Network;
 import org.junit.Test;
 import static org.junit.Assert.*;

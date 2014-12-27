@@ -2,6 +2,8 @@ package oc1.io;
 
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
+
+import common.IO;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

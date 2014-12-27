@@ -1,4 +1,4 @@
-package oc1.io;
+package oc1;
 
 import com.codename1.io.JSONParser;
 import java.io.ByteArrayInputStream;

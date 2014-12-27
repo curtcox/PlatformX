@@ -1,13 +1,9 @@
-package oc1.io;
+package common;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- *
- * @author Curt
- */
 public final class IO {
 
     public static String stringOrEmptyFrom(InputStream stream) {

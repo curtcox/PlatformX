@@ -1,7 +1,7 @@
 package oc2.net;
 
 import java.net.URI;
-import oc1.io.IO;
+import common.IO;
 import oc1.net.Network;
 import oc1.net.RawNetwork;
 import oc1.net.URIs;
