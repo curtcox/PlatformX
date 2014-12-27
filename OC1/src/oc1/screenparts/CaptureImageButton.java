@@ -1,4 +1,4 @@
-package oc1.screen;
+package oc1.screenparts;
 
 import com.codename1.capture.Capture;
 import com.codename1.components.SpanButton;
