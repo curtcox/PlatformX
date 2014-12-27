@@ -1,4 +1,4 @@
-package oc1.net;
+package common.net;
 
 import java.net.URI;
 import java.net.URISyntaxException;

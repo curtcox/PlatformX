@@ -7,7 +7,7 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 import oc1.JSON;
-import oc1.net.Network;
+import common.net.Network;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;

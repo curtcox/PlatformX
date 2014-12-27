@@ -1,4 +1,4 @@
-package oc1.net;
+package common.net;
 
 import com.codename1.ui.Image;
 import java.io.InputStream;

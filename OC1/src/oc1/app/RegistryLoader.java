@@ -4,6 +4,7 @@ import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import common.Registry;
 import common.domain.ServiceProvider;
+import common.net.Network;
 import oc1.log.*;
 import oc1.net.*;
 import oc1.screen.*;

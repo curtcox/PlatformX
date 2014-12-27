@@ -4,7 +4,7 @@ import com.codename1.ui.Image;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
-import oc1.net.Network;
+import common.net.Network;
 import oc1.ui.EmptyImage;
 
 /**

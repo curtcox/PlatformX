@@ -1,9 +1,9 @@
 package oc2.net;
 
 import java.net.URI;
-import oc1.net.Network;
+import common.net.Network;
 import common.IO;
-import oc1.net.URIs;
+import common.net.URIs;
 import oc1.util.StringMap;
 
 /**

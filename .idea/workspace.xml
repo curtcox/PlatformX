@@ -2,13 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\io\IO.java" afterPath="$PROJECT_DIR$/OC1/src/common/IO.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\io\JSON.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/JSON.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/oc1/io/IOTest.java" afterPath="$PROJECT_DIR$/OC1/test/oc1/io/IOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/oc1/io/JSONTest.java" afterPath="$PROJECT_DIR$/OC1/test/oc1/io/JSONTest.java" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\net\Network.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\net\URIs.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\net\Network.java" afterPath="$PROJECT_DIR$/OC1/src/common/net/Network.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\net\URIs.java" afterPath="$PROJECT_DIR$/OC1/src/common/net/URIs.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/net/CachedNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/net/CachedNetwork.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/GeocodingTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/GeocodingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/ui/Icons.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/ui/Icons.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/j2se/J2seNetwork.java" afterPath="$PROJECT_DIR$/OC1/test/j2se/J2seNetwork.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/net/JsonIndexNetStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/net/JsonIndexNetStringMap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/oc2/net/JsonIndexNetStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/oc2/net/JsonIndexNetStringMapTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/PlacesSearchTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/PlacesSearchTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/net/RawNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/net/RawNetwork.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/app/RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/app/RegistryLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/net/RootStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/net/RootStringMap.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/net/SimpleNetStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/net/SimpleNetStringMap.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/oc2/net/SimpleNetStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/oc2/net/SimpleNetStringMapTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/WebServiceSearch.java" afterPath="$PROJECT_DIR$/OC1/src/google/WebServiceSearch.java" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -147,36 +157,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Change.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Change.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OC1/src/common/event/Change.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+            <state vertical-scroll-proportion="0.05610561" vertical-offset="0" max-vertical-offset="606">
               <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IO.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/IO.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JSON.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OC1/src/oc1/JSON.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.15016502" vertical-offset="346" max-vertical-offset="952">
-              <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -508,6 +494,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="net" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -920,30 +928,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/java/util/HashMap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.346831" vertical-offset="1809" max-vertical-offset="36346">
-          <caret line="151" column="13" selection-start-line="151" selection-start-column="13" selection-end-line="151" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/OC1/lib/CodenameOne.jar!/com/codename1/ui/table/TableLayout.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46207702" vertical-offset="46" max-vertical-offset="10455">
-          <caret line="35" column="11" selection-start-line="35" selection-start-column="11" selection-end-line="35" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIGridLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
@@ -1384,14 +1368,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/event/Change.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/IO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="714">
@@ -1404,11 +1380,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/oc1/JSON.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.15016502" vertical-offset="346" max-vertical-offset="952">
+        <state vertical-scroll-proportion="0.0" vertical-offset="346" max-vertical-offset="952">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/net/Network.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="459">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/net/CachedNetwork.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1360">
+          <caret line="19" column="19" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/net/URIs.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14026402" vertical-offset="0" max-vertical-offset="606">
+          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/event/Change.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05610561" vertical-offset="0" max-vertical-offset="606">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

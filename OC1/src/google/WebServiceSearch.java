@@ -6,7 +6,7 @@ import java.net.URI;
 import java.util.List;
 import java.util.Map;
 import common.Registry;
-import oc1.net.Network;
+import common.net.Network;
 
 /**
  *

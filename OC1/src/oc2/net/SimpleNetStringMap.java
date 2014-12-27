@@ -2,9 +2,9 @@ package oc2.net;
 
 import java.net.URI;
 import common.IO;
-import oc1.net.Network;
+import common.net.Network;
 import oc1.net.RawNetwork;
-import oc1.net.URIs;
+import common.net.URIs;
 import oc1.util.StringMap;
 
 public final class SimpleNetStringMap

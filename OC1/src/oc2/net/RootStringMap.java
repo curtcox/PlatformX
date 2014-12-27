@@ -1,6 +1,6 @@
 package oc2.net;
 
-import oc1.net.URIs;
+import common.net.URIs;
 import oc1.util.StringMap;
 
 public final class RootStringMap {
