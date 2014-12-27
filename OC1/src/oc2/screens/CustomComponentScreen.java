@@ -4,7 +4,7 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
-import oc1.screen.*;
+import common.screen.dynamic.GlobScreenFactory;
 
 public final class CustomComponentScreen
     extends Screen

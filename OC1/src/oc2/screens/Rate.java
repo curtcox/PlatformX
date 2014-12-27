@@ -5,7 +5,7 @@ import com.codename1.ui.Label;
 import com.codename1.ui.TextArea;
 import oc1.app.CurrentState;
 import common.domain.ServiceProvider;
-import oc1.screen.ScreenButton;
+import oc1.screenparts.ScreenButton;
 import common.screen.ScreenLink;
 import oc1.screenparts.ProviderDetailsButton;
 import oc1.ui.ActionButton;

@@ -1,13 +1,12 @@
-package oc1.screen;
+package common.screen.dynamic;
 
-import com.codename1.components.*;
-import com.codename1.ui.*;
+import common.ui.UILabel;
 import hash.NamedExpression;
 import java.net.*;
 import java.util.*;
-import common.Registry;
+
+import oc1.screenparts.ScreenButton;
 import oc1.ui.ActionButton;
-import oc1.ui.Icons;
 
 /**
  * A map of component methods for adding to a ScreenContext.
@@ -46,18 +45,12 @@ final class DynamicScreenComponentMethods
             @Override
             public Object invoke(Object[] values) {
                 URI uri = uri(values[0]);
-                SpanLabel button = new SpanLabel();
-                button.setIcon(image(uri));
+                UILabel button = new UILabel();
+                button.icon = uri;
                 return button;
             }
 
         };
-    }
-
-    Image image(URI uri) {
-        Display display = Registry.get(Display.class);
-        Form form = display.getCurrent();
-        return Icons.of().getImage(uri,form.getWidth(),form.getHeight());
     }
 
     private NamedExpression link() {
@@ -85,7 +78,7 @@ final class DynamicScreenComponentMethods
     }
 
     private ActionButton button(String text, String image, String leadingTo) {
-        return ScreenButton.textAndImageLeadingTo(text,image,leadingTo);
+        return ScreenButton.textAndImageLeadingTo(text, image, leadingTo);
     }
 
     private ActionButton link(String text) {

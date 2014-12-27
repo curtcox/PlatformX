@@ -3,7 +3,7 @@ package common.screen;
 import common.ui.UIBorderLayout;
 import common.ui.UIComponent;
 import common.ui.UILayout;
-import oc1.screen.ScreenContext;
+import common.screen.dynamic.ScreenContext;
 
 /**
  * The layout and components for a single screen.

@@ -3,6 +3,7 @@ package oc1.screen;
 import common.screen.Screen;
 import common.screen.ScreenLayout;
 import fake.FakeRegistryLoader;
+import oc1.screenparts.ScreenButton;
 import oc1.ui.ActionButton;
 import java.util.concurrent.Callable;
 

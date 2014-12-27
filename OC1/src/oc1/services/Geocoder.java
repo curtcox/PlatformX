@@ -9,10 +9,6 @@ import common.domain.LocationDescription;
 import oc1.event.LiveList;
 import oc1.event.SimpleLiveList;
 
-/**
- *
- * @author Curt
- */
 public final class Geocoder {
 
     private final Geocoding geocoding = new Geocoding();

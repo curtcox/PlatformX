@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import common.event.StringSource;
 import oc1.util.StringMap;

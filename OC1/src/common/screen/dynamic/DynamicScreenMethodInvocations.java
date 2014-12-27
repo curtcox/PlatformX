@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import hash.NamedExpression;
 import java.util.HashMap;

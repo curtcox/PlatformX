@@ -5,6 +5,7 @@ import java.util.List;
 
 import common.screen.Screen;
 import common.screen.ScreenLink;
+import common.screen.dynamic.GlobScreenFactory;
 import oc1.event.*;
 import oc1.screen.*;
 import oc1.uilist.*;

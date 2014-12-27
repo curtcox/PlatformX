@@ -5,7 +5,7 @@ import common.domain.LocationDescription;
 import oc1.event.LiveList;
 import common.event.SwappableList;
 import oc1.event.SimpleSwappableList;
-import oc1.screen.GlobScreenFactory;
+import common.screen.dynamic.GlobScreenFactory;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;

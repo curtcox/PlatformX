@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import common.event.StringSource;
 import common.screen.Screen;
@@ -40,7 +40,7 @@ public final class DynamicScreenFactory
         if (layout==null) {
             return null;
         }
-        return new LayoutScreen(name,controller,layout);
+        return new DynamicScreen(name,controller,layout);
     }
     
     private String name(ScreenLink link) {

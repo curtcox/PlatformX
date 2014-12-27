@@ -2,7 +2,7 @@ package oc2.screens;
 
 import com.codename1.ui.Label;
 import common.domain.ServiceProvider;
-import oc1.screen.ScreenButton;
+import oc1.screenparts.ScreenButton;
 import oc1.screenparts.ProviderDetailsButton;
 import oc1.screenparts.ProviderRatingButton;
 import oc1.services.Locations;

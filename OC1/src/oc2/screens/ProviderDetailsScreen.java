@@ -7,12 +7,12 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
+import common.screen.dynamic.GlobScreenFactory;
 import common.ui.UIButton;
 import common.ui.UILabel;
 import common.ui.UITableLayout;
 import common.domain.ServiceProvider;
 import common.domain.Type;
-import oc1.screen.*;
 import oc1.screenparts.ProviderRatingButton;
 import oc1.ui.LinkButton;
 

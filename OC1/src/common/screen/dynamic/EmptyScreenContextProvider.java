@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 final class EmptyScreenContextProvider
     implements ScreenContext.Provider

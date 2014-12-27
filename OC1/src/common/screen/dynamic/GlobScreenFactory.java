@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import common.screen.Screen;
 import common.screen.ScreenFactory;

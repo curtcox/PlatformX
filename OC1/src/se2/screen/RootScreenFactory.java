@@ -1,9 +1,12 @@
 package se2.screen;
 
 import common.Registry;
+import common.screen.CompositeScreenFactory;
 import common.screen.ScreenFactory;
+import common.screen.dynamic.DynamicScreenFactory;
+import common.screen.dynamic.LazyScreenFactory;
+import common.screen.dynamic.StringMapStringSource;
 import oc1.app.Version;
-import oc1.screen.*;
 import oc1.util.StringMap;
 import oc2.screenfactories.*;
 import oc2.screens.CustomComponentScreen;

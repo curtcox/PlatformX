@@ -13,10 +13,6 @@ import common.domain.ServiceProvider;
 import common.domain.Type;
 import oc2.stores.MyRatings;
 
-/**
- *
- * @author Curt
- */
 public final class ServiceProviders {
     
     private final PlacesSearch places = new PlacesSearch();

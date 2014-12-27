@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import java.util.ArrayList;
 import java.util.List;

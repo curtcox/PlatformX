@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import common.screen.ScreenLink;
 import hash.NamedExpression;

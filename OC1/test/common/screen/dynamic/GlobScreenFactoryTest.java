@@ -1,8 +1,9 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import common.screen.Screen;
 import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
+import common.screen.dynamic.GlobScreenFactory;
 import fake.FakeRegistryLoader;
 import org.junit.Test;
 import static org.junit.Assert.*;

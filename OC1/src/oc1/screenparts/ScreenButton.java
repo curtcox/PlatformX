@@ -1,4 +1,4 @@
-package oc1.screen;
+package oc1.screenparts;
 
 import common.screen.Screen;
 import common.screen.ScreenFactory;

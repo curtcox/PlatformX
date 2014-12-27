@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import common.*;
 import common.log.ILog;

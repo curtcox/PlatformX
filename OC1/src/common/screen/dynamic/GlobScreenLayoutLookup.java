@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,11 +7,7 @@ import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
 import oc1.util.Glob;
 
-/**
- *
- * @author Curt
- */
-final class GlobScreenLayoutLookup 
+final class GlobScreenLayoutLookup
     implements ScreenLayout.Lookup
 {
     final List<Glob> globs = new ArrayList();

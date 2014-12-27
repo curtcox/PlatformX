@@ -1,6 +1,9 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import common.screen.ScreenLayout;
+import common.screen.dynamic.DynamicScreenLayoutMethods;
+import common.screen.dynamic.DynamicScreenLayoutProvider;
+import common.screen.dynamic.ScreenContext;
 import common.ui.UIGridLayout;
 import common.ui.UILabel;
 import fake.FakeRegistryLoader;

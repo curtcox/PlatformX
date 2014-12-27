@@ -1,4 +1,4 @@
-package oc1.screen;
+package common.screen.dynamic;
 
 import common.screen.Screen;
 import common.screen.ScreenFactory;
@@ -28,7 +28,7 @@ public final class LazyScreenFactory
         if (layout==null) {
             return null;
         }
-        return new LayoutScreen(name,controller(link),layout);
+        return new DynamicScreen(name,controller(link),layout);
     }
     
     private ScreenContext.Provider controller(ScreenLink link) {
