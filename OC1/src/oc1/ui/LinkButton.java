@@ -1,10 +1,7 @@
 package oc1.ui;
 
-import com.codename1.ui.Button;
-import com.codename1.ui.events.ActionEvent;
-import com.codename1.ui.events.ActionListener;
 import common.Registry;
-import common.UIButton;
+import common.ui.UIButton;
 import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
 

@@ -1,19 +1,15 @@
 package oc2.screens;
 
-import com.codename1.ui.Button;
-import com.codename1.ui.Label;
-import com.codename1.ui.table.TableLayout;
 import java.net.URI;
 import java.util.Arrays;
 
-import common.UIButton;
-import common.UILabel;
-import common.UITableLayout;
+import common.ui.UIButton;
+import common.ui.UILabel;
+import common.ui.UITableLayout;
 import oc1.domain.ServiceProvider;
 import oc1.domain.Type;
 import oc1.screen.*;
 import oc1.screenparts.ProviderRatingButton;
-import oc1.ui.Icons;
 import oc1.ui.LinkButton;
 
 /**

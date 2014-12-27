@@ -1,4 +1,4 @@
-package common;
+package common.ui;
 
 public final class UIColumnLayout
     extends UILayout

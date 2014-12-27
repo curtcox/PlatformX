@@ -1,4 +1,4 @@
-package common;
+package common.ui;
 
 public final class UIGridLayout
     extends UILayout

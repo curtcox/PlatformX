@@ -1,9 +1,6 @@
 package oc2.screens;
 
-import com.codename1.ui.Graphics;
-import common.UIComponent;
-
-import java.awt.Color;
+import common.ui.UIComponent;
 
 final class CustomComponent
     extends UIComponent

@@ -1,4 +1,4 @@
-package common;
+package common.ui;
 
 public class UILabel
     extends UIComponent

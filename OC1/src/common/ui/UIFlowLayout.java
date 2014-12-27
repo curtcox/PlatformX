@@ -1,4 +1,4 @@
-package common;
+package common.ui;
 
 public final class UIFlowLayout
     extends UILayout

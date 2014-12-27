@@ -1,12 +1,12 @@
 package oc1.screen;
 
-import com.codename1.components.*;
-import com.codename1.ui.*;
-import com.codename1.ui.layouts.*;
 import common.*;
+import common.ui.UIColumnLayout;
+import common.ui.UIComponent;
+import common.ui.UIGridLayout;
+import common.ui.UILabel;
 import hash.*;
 import oc1.event.StringSource;
-import oc1.log.*;
 
 /**
  * Provides a ScreenLayout that is dynamically generated at runtime.

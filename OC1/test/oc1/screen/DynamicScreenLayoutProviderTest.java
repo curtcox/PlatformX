@@ -1,10 +1,7 @@
 package oc1.screen;
 
-import com.codename1.components.SpanLabel;
-import com.codename1.ui.*;
-import com.codename1.ui.layouts.GridLayout;
-import common.UIGridLayout;
-import common.UILabel;
+import common.ui.UIGridLayout;
+import common.ui.UILabel;
 import fake.FakeRegistryLoader;
 import oc1.event.StringSource;
 import oc1.util.Strings;

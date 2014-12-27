@@ -1,4 +1,4 @@
-package common;
+package common.ui;
 
 import java.net.URI;
 

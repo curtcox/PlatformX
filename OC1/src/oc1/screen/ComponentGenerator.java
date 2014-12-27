@@ -1,6 +1,6 @@
 package oc1.screen;
 
-import common.UIComponent;
+import common.ui.UIComponent;
 
 final class ComponentGenerator {
 

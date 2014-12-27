@@ -2,23 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/ComponentGenerator.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UIBorderLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UIButton.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UIColumnLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UIComponent.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UIFlowLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UIGridLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UILabel.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UILayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UIRowLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UITableLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/UITextField.java" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\GridContainer.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\ui\TableContainer.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIBorderLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIBorderLayout.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIButton.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIColumnLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIColumnLayout.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIComponent.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIComponent.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIFlowLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIFlowLayout.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIGridLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIGridLayout.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UILabel.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UILabel.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UILayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UILayout.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIRowLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIRowLayout.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UITableLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UITableLayout.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UITextField.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UITextField.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/ui/ActionButton.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/ui/ActionButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/ui/BorderContainer.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/ui/BorderContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/ui/C1Form.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/ui/C1Form.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/ComponentGenerator.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/ComponentGenerator.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screens/CustomComponent.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screens/CustomComponent.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutMethods.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutMethods.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java" afterPath="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java" />
@@ -27,10 +23,6 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/ui/LinkButton.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/ui/LinkButton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screens/ProviderDetailsScreen.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screens/ProviderDetailsScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/ScreenLayout.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/ScreenLayout.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/uilist/SearchFilterInstaller.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/uilist/SearchFilterInstaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/SearchScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screenfactories/SearchScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/uilist/SearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/uilist/SearchableList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -65,10 +57,10 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="SearchableList.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="SearchableList.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/OC1/src/oc1/uilist/SearchableList.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.5566893" vertical-offset="87" max-vertical-offset="969">
+                  <state vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="969">
                     <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
                     <folding>
                       <element signature="imports" expanded="true" />
@@ -130,30 +122,30 @@
             <file leaf-file-name="ScreenLayout.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/ScreenLayout.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-                    <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="612">
+                    <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
                     <folding />
                   </state>
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="DynamicScreenLayoutMethods.java" pinned="false" current-in-tab="false">
+            <file leaf-file-name="DynamicScreenLayoutMethods.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutMethods.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
-                    <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
+                  <state vertical-scroll-proportion="-0.037988827" vertical-offset="204" max-vertical-offset="2142">
+                    <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                      <element signature="e#1650#1651#0" expanded="true" />
-                      <element signature="e#1715#1716#0" expanded="true" />
-                      <element signature="e#1893#1894#0" expanded="true" />
-                      <element signature="e#1960#1961#0" expanded="true" />
-                      <element signature="e#3206#3207#0" expanded="true" />
-                      <element signature="e#3265#3266#0" expanded="true" />
-                      <element signature="e#3326#3327#0" expanded="true" />
-                      <element signature="e#3387#3388#0" expanded="true" />
-                      <element signature="e#3445#3446#0" expanded="true" />
-                      <element signature="e#3503#3504#0" expanded="true" />
+                      <element signature="e#1653#1654#0" expanded="true" />
+                      <element signature="e#1718#1719#0" expanded="true" />
+                      <element signature="e#1896#1897#0" expanded="true" />
+                      <element signature="e#1963#1964#0" expanded="true" />
+                      <element signature="e#3209#3210#0" expanded="true" />
+                      <element signature="e#3268#3269#0" expanded="true" />
+                      <element signature="e#3329#3330#0" expanded="true" />
+                      <element signature="e#3390#3391#0" expanded="true" />
+                      <element signature="e#3448#3449#0" expanded="true" />
+                      <element signature="e#3506#3507#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -181,6 +173,16 @@
                 <element signature="e#484#485#0" expanded="true" />
                 <element signature="e#546#547#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DynamicScreenLayoutMethodsTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7013201" vertical-offset="0" max-vertical-offset="816">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -213,24 +215,24 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1700">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <element signature="e#2275#2276#0" expanded="true" />
-                <element signature="e#2325#2326#0" expanded="true" />
-                <element signature="e#2971#2972#0" expanded="true" />
-                <element signature="e#3042#3043#0" expanded="true" />
-                <element signature="e#3079#3080#0" expanded="true" />
-                <element signature="e#3151#3152#0" expanded="true" />
-                <element signature="e#3188#3189#0" expanded="true" />
-                <element signature="e#3247#3248#0" expanded="true" />
+                <element signature="e#2157#2158#0" expanded="true" />
+                <element signature="e#2207#2208#0" expanded="true" />
+                <element signature="e#2853#2854#0" expanded="true" />
+                <element signature="e#2924#2925#0" expanded="true" />
+                <element signature="e#2961#2962#0" expanded="true" />
+                <element signature="e#3033#3034#0" expanded="true" />
+                <element signature="e#3070#3071#0" expanded="true" />
+                <element signature="e#3129#3130#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamicScreenLayoutProviderTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DynamicScreenLayoutProviderTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutProviderTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="852" max-vertical-offset="1615">
-              <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="852" max-vertical-offset="1615">
+              <caret line="84" column="42" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
               <folding />
             </state>
           </provider>
@@ -246,18 +248,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ActionButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/oc1/ui/ActionButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
-              <caret line="20" column="14" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="UIButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/UIButton.java">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIButton.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
               <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
@@ -267,7 +259,7 @@
         </entry>
       </file>
       <file leaf-file-name="UITableLayout.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/UITableLayout.java">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UITableLayout.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
               <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
@@ -279,8 +271,8 @@
       <file leaf-file-name="CustomComponent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/src/oc2/screens/CustomComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-              <caret line="48" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+              <caret line="45" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -322,7 +314,6 @@
         <option value="$PROJECT_DIR$/OC1/src/oc1/ui/C1Form.java" />
         <option value="$PROJECT_DIR$/OC1/src/oc1/screen/ScreenLayout.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/UIComponent.java" />
-        <option value="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/UILayout.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/UIGridLayout.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/UITableLayout.java" />
@@ -347,6 +338,7 @@
         <option value="$PROJECT_DIR$/OC1/src/oc2/screenfactories/SearchScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/oc1/uilist/SearchFilterInstaller.java" />
         <option value="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutProviderTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java" />
       </list>
     </option>
   </component>
@@ -619,6 +611,46 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -973,7 +1005,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1914" y="-23" width="1918" height="1053" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -985,7 +1017,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32910052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32910052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18243954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1230,7 +1262,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UIComponent.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
           <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
@@ -1238,15 +1270,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UIGridLayout.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIGridLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
@@ -1254,33 +1278,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UIFlowLayout.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIFlowLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="2" column="24" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
           <folding>
-            <element signature="e#123#124#0" expanded="true" />
-            <element signature="e#156#157#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2142">
-          <caret line="98" column="20" selection-start-line="98" selection-start-column="20" selection-end-line="98" selection-end-column="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1715#1716#0" expanded="true" />
-            <element signature="e#1893#1894#0" expanded="true" />
-            <element signature="e#1960#1961#0" expanded="true" />
-            <element signature="e#3206#3207#0" expanded="true" />
-            <element signature="e#3265#3266#0" expanded="true" />
-            <element signature="e#3326#3327#0" expanded="true" />
-            <element signature="e#3387#3388#0" expanded="true" />
-            <element signature="e#3445#3446#0" expanded="true" />
-            <element signature="e#3503#3504#0" expanded="true" />
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#159#160#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1290,30 +1294,30 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#138#139#0" expanded="true" />
-            <element signature="e#165#166#0" expanded="true" />
+            <element signature="e#141#142#0" expanded="true" />
+            <element signature="e#168#169#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UIRowLayout.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIRowLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="5" column="4" selection-start-line="5" selection-start-column="0" selection-end-line="7" selection-end-column="5" />
           <folding>
-            <element signature="e#121#122#0" expanded="false" />
-            <element signature="e#154#155#0" expanded="false" />
+            <element signature="e#124#125#0" expanded="false" />
+            <element signature="e#157#158#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UIBorderLayout.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIBorderLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
           <folding>
-            <element signature="e#127#128#0" expanded="false" />
-            <element signature="e#160#161#0" expanded="false" />
+            <element signature="e#130#131#0" expanded="false" />
+            <element signature="e#163#164#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1336,7 +1340,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UITextField.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UITextField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="204">
           <caret line="3" column="23" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
@@ -1344,32 +1348,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UIColumnLayout.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIColumnLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="5" column="11" selection-start-line="5" selection-start-column="11" selection-end-line="5" selection-end-column="11" />
           <folding>
-            <element signature="e#127#128#0" expanded="false" />
-            <element signature="e#160#161#0" expanded="false" />
+            <element signature="e#130#131#0" expanded="false" />
+            <element signature="e#163#164#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/ScreenLayout.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="612">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UILayout.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UILayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding>
-            <element signature="e#125#126#0" expanded="false" />
-            <element signature="e#169#170#0" expanded="false" />
+            <element signature="e#128#129#0" expanded="false" />
+            <element signature="e#172#173#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1378,20 +1382,17 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1496">
           <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-          <folding>
-            <element signature="e#2692#2693#0" expanded="true" />
-            <element signature="e#2732#2733#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UILabel.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UILabel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding>
-            <element signature="e#151#152#0" expanded="true" />
-            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#154#155#0" expanded="false" />
+            <element signature="e#186#187#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1424,7 +1425,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UIButton.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
@@ -1432,7 +1433,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/UITableLayout.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UITableLayout.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
           <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
@@ -1445,14 +1446,14 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1666">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#2275#2276#0" expanded="true" />
-            <element signature="e#2325#2326#0" expanded="true" />
-            <element signature="e#2971#2972#0" expanded="true" />
-            <element signature="e#3042#3043#0" expanded="true" />
-            <element signature="e#3079#3080#0" expanded="true" />
-            <element signature="e#3151#3152#0" expanded="true" />
-            <element signature="e#3188#3189#0" expanded="true" />
-            <element signature="e#3247#3248#0" expanded="true" />
+            <element signature="e#2157#2158#0" expanded="true" />
+            <element signature="e#2207#2208#0" expanded="true" />
+            <element signature="e#2853#2854#0" expanded="true" />
+            <element signature="e#2924#2925#0" expanded="true" />
+            <element signature="e#2961#2962#0" expanded="true" />
+            <element signature="e#3033#3034#0" expanded="true" />
+            <element signature="e#3070#3071#0" expanded="true" />
+            <element signature="e#3129#3130#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1472,8 +1473,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/oc2/screens/CustomComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="952">
-          <caret line="48" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="901">
+          <caret line="45" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1485,22 +1486,6 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
           <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/uilist/SearchableList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5566893" vertical-offset="87" max-vertical-offset="969">
-          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1335#1336#0" expanded="true" />
-            <element signature="e#1405#1406#0" expanded="true" />
-            <element signature="e#1470#1471#0" expanded="true" />
-            <element signature="e#1532#1533#0" expanded="true" />
-            <element signature="e#1562#1563#0" expanded="true" />
-            <element signature="e#1643#1644#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1530,10 +1515,54 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/uilist/SearchableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="87" max-vertical-offset="969">
+          <caret line="34" column="11" selection-start-line="34" selection-start-column="11" selection-end-line="34" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1335#1336#0" expanded="true" />
+            <element signature="e#1405#1406#0" expanded="true" />
+            <element signature="e#1470#1471#0" expanded="true" />
+            <element signature="e#1532#1533#0" expanded="true" />
+            <element signature="e#1562#1563#0" expanded="true" />
+            <element signature="e#1643#1644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutProviderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="852" max-vertical-offset="1615">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="852" max-vertical-offset="1615">
+          <caret line="84" column="42" selection-start-line="84" selection-start-column="42" selection-end-line="84" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.037988827" vertical-offset="204" max-vertical-offset="2142">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1653#1654#0" expanded="true" />
+            <element signature="e#1718#1719#0" expanded="true" />
+            <element signature="e#1896#1897#0" expanded="true" />
+            <element signature="e#1963#1964#0" expanded="true" />
+            <element signature="e#3209#3210#0" expanded="true" />
+            <element signature="e#3268#3269#0" expanded="true" />
+            <element signature="e#3329#3330#0" expanded="true" />
+            <element signature="e#3390#3391#0" expanded="true" />
+            <element signature="e#3448#3449#0" expanded="true" />
+            <element signature="e#3506#3507#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7013201" vertical-offset="0" max-vertical-offset="816">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>

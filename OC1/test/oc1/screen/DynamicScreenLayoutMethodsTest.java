@@ -1,12 +1,8 @@
 package oc1.screen;
 
-import com.codename1.components.SpanLabel;
-import com.codename1.ui.Label;
-import com.codename1.ui.layouts.GridLayout;
-import com.codename1.ui.table.TableLayout;
-import common.UIGridLayout;
-import common.UILabel;
-import common.UITableLayout;
+import common.ui.UIGridLayout;
+import common.ui.UILabel;
+import common.ui.UITableLayout;
 import fake.FakeRegistryLoader;
 import hash.NamedExpression;
 import org.junit.Test;
