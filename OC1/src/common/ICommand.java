@@ -1,4 +1,4 @@
-package oc1.command;
+package common;
 
 public interface ICommand {
 }

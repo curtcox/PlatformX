@@ -2,6 +2,7 @@ package oc1.command;
 
 import com.codename1.ui.Command;
 import com.codename1.ui.events.ActionEvent;
+import common.ICommand;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;

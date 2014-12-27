@@ -2,34 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ILog.java" afterPath="$PROJECT_DIR$/OC1/src/common/log/ILog.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ILogManager.java" afterPath="$PROJECT_DIR$/OC1/src/common/log/ILogManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/net/CachedNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/net/CachedNetwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/hash/CompositeNamedValues.java" afterPath="$PROJECT_DIR$/OC1/src/hash/CompositeNamedValues.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/uilist/DebugList.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/uilist/DebugList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutProvider.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/app/ExceptionLogger.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/app/ExceptionLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/app/Heartbeat.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/app/Heartbeat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/app/HeartbeatMonitor.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/app/HeartbeatMonitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/io/JSON.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/io/JSON.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" afterPath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/services/Locations.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/services/Locations.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/log/Log.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/log/Log.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se1/log/Log.java" afterPath="$PROJECT_DIR$/OC1/src/se1/log/Log.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/log/LogManager.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/log/LogManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se1/log/LogManager.java" afterPath="$PROJECT_DIR$/OC1/src/se1/log/LogManager.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\oc1\command\ICommand.java" afterPath="$PROJECT_DIR$/OC1/src/common/ICommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/ui/C1Form.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/ui/C1Form.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/ui/IForm.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/ui/IForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/command/LoggedCommand.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/command/LoggedCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/stores/MapStorageIO.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/stores/MapStorageIO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/app/MyApplication.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/app/MyApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/net/RawNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/net/RawNetwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/util/Reflection.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/util/Reflection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se1/app/RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/se1/app/RegistryLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se1/ui/SEForm.java" afterPath="$PROJECT_DIR$/OC1/src/se1/ui/SEForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/Screen.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/Screen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/com/codename1/ui/UIDebugForm.java" afterPath="$PROJECT_DIR$/OC1/src/com/codename1/ui/UIDebugForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -183,12 +161,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamicScreenLayoutMethodsTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DynamicScreenLayoutMethodsTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5330033" vertical-offset="0" max-vertical-offset="816">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
               <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ICommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/ICommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+              <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoggedCommand.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/src/oc1/command/LoggedCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.25247526" vertical-offset="0" max-vertical-offset="606">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -254,26 +254,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UIButton.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIButton.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
-              <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UITableLayout.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UITableLayout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-              <caret line="8" column="11" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CustomComponent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/src/oc2/screens/CustomComponent.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -294,7 +274,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/oc1/command/LoggedCommand.java" />
         <option value="$PROJECT_DIR$/OC1/src/oc1/net/RawNetwork.java" />
         <option value="$PROJECT_DIR$/OC1/src/oc1/io/JSON.java" />
         <option value="$PROJECT_DIR$/OC1/src/oc1/stores/MapStorageIO.java" />
@@ -345,6 +324,7 @@
         <option value="$PROJECT_DIR$/OC1/src/oc1/uilist/SearchFilterInstaller.java" />
         <option value="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutProviderTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/oc1/command/LoggedCommand.java" />
       </list>
     </option>
   </component>
@@ -617,6 +597,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="screen" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="oc1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -989,7 +991,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1914" y="-23" width="1918" height="1053" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1004,7 +1006,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32910052" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18243954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18243954" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1044,33 +1046,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/log/LogWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#197#198#0" expanded="false" />
-            <element signature="e#249#250#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/ScreenFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se1/ui/SEForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="6" max-vertical-offset="731">
           <caret line="8" column="21" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
           <folding>
-            <element signature="e#394#395#0" expanded="false" />
-            <element signature="e#430#431#0" expanded="false" />
+            <element signature="e#389#390#0" expanded="false" />
+            <element signature="e#425#426#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1214,10 +1196,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="346" max-vertical-offset="969">
           <caret line="54" column="8" selection-start-line="54" selection-start-column="8" selection-end-line="54" selection-end-column="8" />
           <folding>
-            <element signature="e#1586#1587#0" expanded="false" />
-            <element signature="e#1613#1614#0" expanded="false" />
-            <element signature="e#1663#1664#0" expanded="false" />
-            <element signature="e#1690#1691#0" expanded="false" />
+            <element signature="e#1546#1547#0" expanded="false" />
+            <element signature="e#1573#1574#0" expanded="false" />
+            <element signature="e#1623#1624#0" expanded="false" />
+            <element signature="e#1650#1651#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1547,9 +1529,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5330033" vertical-offset="0" max-vertical-offset="816">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="816">
           <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ICommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="170">
+          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/oc1/command/LoggedCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25247526" vertical-offset="0" max-vertical-offset="606">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

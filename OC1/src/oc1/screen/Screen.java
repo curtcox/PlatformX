@@ -1,5 +1,6 @@
 package oc1.screen;
 
+import common.ICommand;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;

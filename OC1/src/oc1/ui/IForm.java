@@ -1,6 +1,6 @@
 package oc1.ui;
 
-import oc1.command.ICommand;
+import common.ICommand;
 import oc1.screen.ScreenLayout;
 
 public interface IForm {

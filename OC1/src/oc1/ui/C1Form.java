@@ -2,12 +2,11 @@ package oc1.ui;
 
 import com.codename1.ui.Command;
 import com.codename1.ui.Component;
-import com.codename1.ui.Container;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.Layout;
-import oc1.command.ICommand;
+import common.ICommand;
 import oc1.command.LoggedCommand;
 import oc1.screen.*;
 
