@@ -1,6 +1,6 @@
 package oc2.domain;
 
-import oc1.domain.TypedString;
+import common.domain.TypedString;
 
 
 /**

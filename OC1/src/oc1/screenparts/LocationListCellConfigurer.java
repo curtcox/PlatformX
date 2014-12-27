@@ -1,6 +1,6 @@
 package oc1.screenparts;
 
-import oc1.domain.LocationDescription;
+import common.domain.LocationDescription;
 import oc1.uilist.ListCell;
 import oc1.uilist.ListCellConfigurer;
 

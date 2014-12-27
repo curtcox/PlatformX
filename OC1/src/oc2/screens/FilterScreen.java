@@ -1,6 +1,6 @@
 package oc2.screens;
 
-import oc1.domain.Type;
+import common.domain.Type;
 import oc1.screen.ScreenLink;
 import oc1.screen.SelectionListScreen;
 import oc1.uilist.SearchableList;

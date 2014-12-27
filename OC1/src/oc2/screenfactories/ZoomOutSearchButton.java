@@ -1,7 +1,7 @@
 package oc2.screenfactories;
 
 import java.util.List;
-import oc1.domain.ServiceProvider;
+import common.domain.ServiceProvider;
 import oc1.event.SwappableList;
 import oc1.screenparts.SearchParams;
 import oc1.services.ServiceProviders;

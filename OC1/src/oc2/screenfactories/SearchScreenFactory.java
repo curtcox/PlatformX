@@ -1,7 +1,7 @@
 package oc2.screenfactories;
 
 import java.util.*;
-import oc1.domain.*;
+import common.domain.*;
 import oc1.event.*;
 import oc1.screen.*;
 import oc1.screenparts.*;

@@ -1,4 +1,4 @@
-package oc1.domain;
+package common.domain;
 
 import oc2.domain.Rating;
 import com.codename1.location.Location;

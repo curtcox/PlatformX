@@ -1,4 +1,4 @@
-package oc1.domain;
+package common.domain;
 
 import com.codename1.location.Location;
 

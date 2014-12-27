@@ -1,6 +1,6 @@
 package oc2.screens;
 
-import oc1.domain.LocationDescription;
+import common.domain.LocationDescription;
 import oc1.screen.ScreenLink;
 import oc1.screen.SelectionListScreen;
 import oc1.services.Locations;

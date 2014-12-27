@@ -6,11 +6,11 @@ import google.PlacesSearch;
 import java.util.ArrayList;
 import java.util.List;
 import common.Registry;
-import oc1.domain.Address;
-import oc1.domain.ID;
-import oc1.domain.Name;
-import oc1.domain.ServiceProvider;
-import oc1.domain.Type;
+import common.domain.Address;
+import common.domain.ID;
+import common.domain.Name;
+import common.domain.ServiceProvider;
+import common.domain.Type;
 import oc2.stores.MyRatings;
 
 /**

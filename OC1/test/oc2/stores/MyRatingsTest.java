@@ -4,7 +4,7 @@ import com.codename1.io.Storage;
 import fake.FakeRegistryLoader;
 import fake.FakeStorage;
 import common.Registry;
-import oc1.domain.ID;
+import common.domain.ID;
 import oc2.domain.Rating;
 import java.io.ByteArrayInputStream;
 import static org.junit.Assert.*;

@@ -3,7 +3,7 @@ package oc2.screenfactories;
 import com.codename1.ui.Label;
 import java.util.ArrayList;
 import java.util.List;
-import oc1.domain.Type;
+import common.domain.Type;
 import oc1.event.LiveList;
 import oc1.event.SimpleLiveList;
 import oc1.screen.GlobScreenFactory;

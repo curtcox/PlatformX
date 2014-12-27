@@ -1,6 +1,6 @@
 package oc2.stores;
 
-import oc1.domain.ID;
+import common.domain.ID;
 import oc2.domain.Rating;
 import oc1.stores.AbstractPairIO;
 

@@ -1,12 +1,10 @@
 package oc2.screens;
 
-import com.codename1.ui.Button;
-import com.codename1.ui.Component;
 import com.codename1.ui.Display;
 import com.codename1.ui.Label;
 import com.codename1.ui.TextArea;
 import oc1.app.CurrentState;
-import oc1.domain.ServiceProvider;
+import common.domain.ServiceProvider;
 import oc1.screen.ScreenButton;
 import oc1.screen.ScreenLink;
 import oc1.screenparts.ProviderDetailsButton;

@@ -1,6 +1,6 @@
 package oc1.screenparts;
 
-import oc1.domain.Type;
+import common.domain.Type;
 import oc1.uilist.ListCell;
 import oc1.uilist.ListCellConfigurer;
 import oc1.util.Strings;

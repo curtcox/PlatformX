@@ -1,7 +1,7 @@
 package oc2.screenfactories;
 
 import com.codename1.ui.Label;
-import oc1.domain.LocationDescription;
+import common.domain.LocationDescription;
 import oc1.event.LiveList;
 import oc1.event.SwappableList;
 import oc1.event.SimpleSwappableList;

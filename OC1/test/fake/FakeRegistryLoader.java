@@ -7,7 +7,7 @@ import com.codename1.ui.Display;
 import common.log.ILogManager;
 import oc1.app.CurrentState;
 import common.Registry;
-import oc1.domain.ServiceProvider;
+import common.domain.ServiceProvider;
 import oc1.log.LogManager;
 import oc1.log.LogWriter;
 import oc1.services.Locations;
