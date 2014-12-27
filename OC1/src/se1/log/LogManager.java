@@ -1,7 +1,7 @@
 package se1.log;
 
-import common.ILog;
-import common.ILogManager;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.Registry;
 
 public final class LogManager

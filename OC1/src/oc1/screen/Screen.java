@@ -1,10 +1,9 @@
 package oc1.screen;
 
-import common.ILog;
-import common.ILogManager;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.Registry;
 import oc1.command.*;
-import oc1.log.LogManager;
 import oc1.ui.IDisplay;
 import oc1.ui.IForm;
 import oc1.ui.IFormFactory;

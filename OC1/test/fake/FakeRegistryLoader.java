@@ -4,7 +4,7 @@ import com.codename1.impl.ImplementationFactory;
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import com.codename1.ui.Display;
-import common.ILogManager;
+import common.log.ILogManager;
 import oc1.app.CurrentState;
 import common.Registry;
 import oc1.domain.ServiceProvider;

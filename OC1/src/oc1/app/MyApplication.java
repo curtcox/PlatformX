@@ -6,10 +6,9 @@ import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
 import java.io.IOException;
 
-import common.ILog;
-import common.ILogManager;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.Registry;
-import oc1.log.LogManager;
 import oc1.screen.ScreenFactory;
 import oc1.screen.ScreenLink;
 

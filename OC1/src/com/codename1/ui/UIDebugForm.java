@@ -1,8 +1,8 @@
 package com.codename1.ui;
 
 import com.codename1.ui.animations.Transition;
-import common.ILog;
-import common.ILogManager;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.Registry;
 import oc1.command.LoggedCommand;
 import oc1.log.IssueReporter;

@@ -1,6 +1,6 @@
 package se1.app;
 
-import common.ILogManager;
+import common.log.ILogManager;
 import common.Registry;
 import se1.log.*;
 import oc1.screen.ScreenFactory;

@@ -1,11 +1,10 @@
 package oc1.stores;
 
 import com.codename1.io.Storage;
-import common.ILog;
-import common.ILogManager;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.Registry;
-import oc1.log.Log;
-import oc1.log.LogManager;
+
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.IOException;

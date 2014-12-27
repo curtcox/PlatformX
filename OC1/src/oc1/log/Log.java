@@ -1,6 +1,6 @@
 package oc1.log;
 
-import common.ILog;
+import common.log.ILog;
 import common.Registry;
 import oc1.ui.IDisplay;
 import oc1.ui.IForm;

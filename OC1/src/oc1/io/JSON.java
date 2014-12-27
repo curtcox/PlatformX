@@ -7,11 +7,9 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import common.ILog;
-import common.ILogManager;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.Registry;
-import oc1.log.Log;
-import oc1.log.LogManager;
 import oc1.util.SimpleStringMap;
 import oc1.util.StringMap;
 

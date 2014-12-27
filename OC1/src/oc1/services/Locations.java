@@ -3,10 +3,9 @@ package oc1.services;
 import com.codename1.location.Location;
 import com.codename1.location.LocationListener;
 import com.codename1.location.LocationManager;
-import common.ILog;
-import common.ILogManager;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.Registry;
-import oc1.log.LogManager;
 
 public final class Locations
     implements LocationListener

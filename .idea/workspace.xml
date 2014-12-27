@@ -2,27 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIBorderLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIBorderLayout.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIButton.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIColumnLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIColumnLayout.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIComponent.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIComponent.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIFlowLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIFlowLayout.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIGridLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIGridLayout.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UILabel.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UILabel.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UILayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UILayout.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UIRowLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIRowLayout.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UITableLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UITableLayout.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\UITextField.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UITextField.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/ui/ActionButton.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/ui/ActionButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/ComponentGenerator.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/ComponentGenerator.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screens/CustomComponent.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screens/CustomComponent.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutMethods.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutMethods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java" afterPath="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ILog.java" afterPath="$PROJECT_DIR$/OC1/src/common/log/ILog.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ILogManager.java" afterPath="$PROJECT_DIR$/OC1/src/common/log/ILogManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/net/CachedNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/net/CachedNetwork.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/hash/CompositeNamedValues.java" afterPath="$PROJECT_DIR$/OC1/src/hash/CompositeNamedValues.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/uilist/DebugList.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/uilist/DebugList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutProvider.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/DynamicScreenLayoutProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutProviderTest.java" afterPath="$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutProviderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/ui/LinkButton.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/ui/LinkButton.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc2/screens/ProviderDetailsScreen.java" afterPath="$PROJECT_DIR$/OC1/src/oc2/screens/ProviderDetailsScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/ScreenLayout.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/ScreenLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/app/ExceptionLogger.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/app/ExceptionLogger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/app/Heartbeat.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/app/Heartbeat.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/app/HeartbeatMonitor.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/app/HeartbeatMonitor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/io/JSON.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/io/JSON.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" afterPath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/services/Locations.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/services/Locations.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/log/Log.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/log/Log.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se1/log/Log.java" afterPath="$PROJECT_DIR$/OC1/src/se1/log/Log.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/log/LogManager.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/log/LogManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se1/log/LogManager.java" afterPath="$PROJECT_DIR$/OC1/src/se1/log/LogManager.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/command/LoggedCommand.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/command/LoggedCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/stores/MapStorageIO.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/stores/MapStorageIO.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/app/MyApplication.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/app/MyApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/net/RawNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/net/RawNetwork.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/util/Reflection.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/util/Reflection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se1/app/RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/se1/app/RegistryLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/Screen.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/Screen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java" afterPath="$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/com/codename1/ui/UIDebugForm.java" afterPath="$PROJECT_DIR$/OC1/src/com/codename1/ui/UIDebugForm.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -51,7 +57,7 @@
               <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java">
                 <provider selected="true" editor-type-id="text-editor">
                   <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
-                    <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+                    <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
                     <folding />
                   </state>
                 </provider>
@@ -180,8 +186,8 @@
       <file leaf-file-name="DynamicScreenLayoutMethodsTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7013201" vertical-offset="0" max-vertical-offset="816">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.5330033" vertical-offset="0" max-vertical-offset="816">
+              <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -629,28 +635,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1105,12 +1089,12 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#905#906#0" expanded="false" />
-            <element signature="e#942#943#0" expanded="false" />
-            <element signature="e#1096#1097#0" expanded="false" />
-            <element signature="e#1141#1142#0" expanded="false" />
-            <element signature="e#1175#1176#0" expanded="false" />
-            <element signature="e#1226#1227#0" expanded="false" />
+            <element signature="e#909#910#0" expanded="false" />
+            <element signature="e#946#947#0" expanded="false" />
+            <element signature="e#1100#1101#0" expanded="false" />
+            <element signature="e#1145#1146#0" expanded="false" />
+            <element signature="e#1179#1180#0" expanded="false" />
+            <element signature="e#1230#1231#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1382,7 +1366,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="1496">
           <caret line="62" column="38" selection-start-line="62" selection-start-column="38" selection-end-line="62" selection-end-column="38" />
-          <folding />
+          <folding>
+            <element signature="e#2752#2753#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1484,7 +1470,7 @@
     <entry file="file://$PROJECT_DIR$/OC1/src/oc1/screen/SelectionListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
-          <caret line="32" column="10" selection-start-line="32" selection-start-column="10" selection-end-line="32" selection-end-column="10" />
+          <caret line="31" column="10" selection-start-line="31" selection-start-column="10" selection-end-line="31" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -1561,8 +1547,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/oc1/screen/DynamicScreenLayoutMethodsTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7013201" vertical-offset="0" max-vertical-offset="816">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5330033" vertical-offset="0" max-vertical-offset="816">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
           <folding />
         </state>
       </provider>

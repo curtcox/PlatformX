@@ -2,8 +2,8 @@ package hash;
 
 import java.util.Arrays;
 
-import common.ILog;
-import common.ILogManager;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.Registry;
 
 /**
