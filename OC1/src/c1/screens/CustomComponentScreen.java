@@ -5,6 +5,7 @@ import common.screen.ScreenFactory;
 import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
+import common.ui.UIComponent;
 
 public final class CustomComponentScreen
     extends Screen
@@ -21,8 +22,8 @@ public final class CustomComponentScreen
     }
     
     @Override
-    public ScreenLayout layoutForPortrait() {
-        return new ScreenLayout(new CustomComponent());
+    public UIComponent layoutForPortrait() {
+        return new CustomComponent();
     }
 
 }

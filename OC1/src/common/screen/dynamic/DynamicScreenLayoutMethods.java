@@ -97,27 +97,24 @@ final class DynamicScreenLayoutMethods
         return 0;
     }
     
-    private ScreenLayout grid(int rows,int columns,UIComponent[] components) {
-        return screen(new UIGridLayout(rows,columns,components));
+    private UIComponent grid(int rows,int columns,UIComponent[] components) {
+        return new UIGridLayout(rows,columns,components);
     }
 
-    private ScreenLayout table(int rows,int columns,UIComponent[] components) {
-        return screen(new UITableLayout(rows,columns,components));
+    private UIComponent table(int rows,int columns,UIComponent[] components) {
+        return new UITableLayout(rows,columns,components);
     }
 
-    private ScreenLayout flow(UIComponent[] components) {
-        return screen(new UIFlowLayout(components));
+    private UIComponent flow(UIComponent[] components) {
+        return new UIFlowLayout(components);
     }
 
-    private ScreenLayout column(UIComponent[] components) {
-        return screen(new UIColumnLayout(components));
+    private UIComponent column(UIComponent[] components) {
+        return new UIColumnLayout(components);
     }
 
-    private ScreenLayout row(UIComponent[] components) {
-        return screen(new UIRowLayout(components));
+    private UIComponent row(UIComponent[] components) {
+        return new UIRowLayout(components);
     }
 
-    private ScreenLayout screen(UILayout layout, UIComponent... components) {
-        return new ScreenLayout(layout,components);
-    }
 }

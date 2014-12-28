@@ -9,6 +9,7 @@ import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
 import common.ui.UIButton;
+import common.ui.UIComponent;
 import common.ui.UILabel;
 import common.ui.UITableLayout;
 import common.domain.ServiceProvider;
@@ -48,17 +49,17 @@ public final class ProviderDetailsScreen
     }
     
     @Override
-    public ScreenLayout layoutForPortrait() {
-        return new ScreenLayout(new UITableLayout(8,1,
-                                    name,
-                                    distance,
-                                    vicinity,
-                                    price,
-                                    rating,
-                                    icon,
-                                    types,
-                                    ProviderRatingButton.of()
-        ));
+    public UIComponent layoutForPortrait() {
+        return new UITableLayout(8,1,
+                    name,
+                    distance,
+                    vicinity,
+                    price,
+                    rating,
+                    icon,
+                    types,
+                    ProviderRatingButton.of()
+        );
     }
     
     @Override

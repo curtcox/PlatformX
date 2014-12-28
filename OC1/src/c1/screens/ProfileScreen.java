@@ -2,6 +2,8 @@ package c1.screens;
 
 import common.screen.Screen;
 import common.screen.ScreenLayout;
+import common.ui.UIBorderLayout;
+import common.ui.UIComponent;
 
 /**
  * For viewing and manipulating the user profile.
@@ -16,8 +18,8 @@ final class ProfileScreen
     }
 
     @Override
-    protected ScreenLayout layoutForPortrait() {
-        return new ScreenLayout();
+    protected UIComponent layoutForPortrait() {
+        return new UIBorderLayout();
     }
     
 }

@@ -13,6 +13,7 @@ import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
 import c1.Components;
 import c1.command.LoggedCommand;
+import common.ui.UIComponent;
 
 public class C1Form
     extends Form
@@ -53,19 +54,17 @@ public class C1Form
         Screen.getShowing().refresh();
     }
 
-    public void layout(ScreenLayout layout) {
+    public void layout(UIComponent component) {
         removeAll();
-        setLayout(createLayout(layout));
-        for(Object object : layout.components) {
-            Components.addToContainer(component(object), this);
-        }
+        setLayout(createLayout(component));
+        Components.addToContainer(component(component), this);
     }
 
-    private Layout createLayout(ScreenLayout layout) {
+    private Layout createLayout(UIComponent component) {
         return null;
     }
 
-    private Component component(Object object) {
+    private Component component(UIComponent component) {
         return null;
     }
 

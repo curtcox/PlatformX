@@ -2,9 +2,10 @@ package c1.ui;
 
 import common.ICommand;
 import common.screen.ScreenLayout;
+import common.ui.UIComponent;
 
 public interface IForm {
-    void layout(ScreenLayout layout);
+    void layout(UIComponent layout);
 
     void show();
 

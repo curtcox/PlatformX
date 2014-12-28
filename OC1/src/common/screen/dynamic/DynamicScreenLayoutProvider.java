@@ -25,7 +25,7 @@ public final class DynamicScreenLayoutProvider
         this.source = source;    
     }
 
-    public ScreenLayout getLayout(ScreenContext context) {
+    public UIComponent getLayout(ScreenContext context) {
         String sourceCode = source.getString();
         if (!isValidHash(sourceCode)) {
             return messageScreen("Source is not valid Hash");
@@ -37,36 +37,35 @@ public final class DynamicScreenLayoutProvider
         return sourceCode!=null && sourceCode.length()>0;
     }
 
-    private ScreenLayout screenForResult(Object result) {
+    private UIComponent screenForResult(Object result) {
         if (result==null)                   { return messageScreen("(null)");            }
-        if (result instanceof ScreenLayout) { return (ScreenLayout) result;              }
+        if (result instanceof ScreenLayout) { return (UIComponent) result;              }
         if (result instanceof String)       { return messageScreen((String)result);      }
         if (result instanceof UIComponent)  { return componentScreen((UIComponent)result); }
         if (result instanceof SyntaxError)  { return errorScreen((SyntaxError) result);  }
         throw new IllegalArgumentException("result="+result);
     }
     
-    private ScreenLayout componentScreen(UIComponent component) {
-        return new ScreenLayout(new UIGridLayout(1,1,component));
+    private UIComponent componentScreen(UIComponent component) {
+        return new UIGridLayout(1,1,component);
     }
 
-    private ScreenLayout messageScreen(String message) {
+    private UIComponent messageScreen(String message) {
         return componentScreen(label(message));
     }
 
-    private ScreenLayout errorScreen(SyntaxError error) {
-        return new ScreenLayout(new UIColumnLayout(
+    private UIComponent errorScreen(SyntaxError error) {
+        return new UIColumnLayout(
                 label(error.type.toString()),
                 label(error.errorSource),
                 label(error.methodSource)
-        ));
+        );
     }
 
-    private ScreenLayout exception(Exception e) {
-        return new ScreenLayout(new UIGridLayout(2,1),
+    private UIComponent exception(Exception e) {
+        return new UIGridLayout(2,1,
                 label(e.getClass().toString()),
-                label(e.getMessage())
-        );
+                label(e.getMessage()));
     }
 
     private Object getLayoutFromHash(String sourceCode,ScreenContext screenContext) {

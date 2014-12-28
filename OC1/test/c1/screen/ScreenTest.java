@@ -2,6 +2,7 @@ package c1.screen;
 
 import common.screen.Screen;
 import common.screen.ScreenLayout;
+import common.ui.UILayout;
 import fake.FakeRegistryLoader;
 import java.util.concurrent.Callable;
 
@@ -26,7 +27,7 @@ public class ScreenTest {
     @Test
     public void can_create() {
         new Screen(FakeUI.newForm(),"name"){
-            @Override protected ScreenLayout layoutForPortrait() { return null;}
+            @Override protected UILayout layoutForPortrait() { return null;}
         };
     }
     
@@ -40,7 +41,7 @@ public class ScreenTest {
             public Object call() throws Exception {
                 form = FakeUI.newForm();
                 return new Screen(form,"name"){
-                    @Override protected ScreenLayout layoutForPortrait() { return null; }
+                    @Override protected UILayout layoutForPortrait() { return null; }
                 };
             }
         });

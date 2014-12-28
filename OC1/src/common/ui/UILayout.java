@@ -1,6 +1,8 @@
 package common.ui;
 
-public class UILayout {
+public class UILayout
+    extends UIComponent
+{
 
     public final UIComponent[] components;
 

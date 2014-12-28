@@ -2,6 +2,8 @@ package c1.screen;
 
 import common.screen.Screen;
 import common.screen.ScreenLayout;
+import common.ui.UIBorderLayout;
+import common.ui.UILayout;
 import fake.FakeRegistryLoader;
 import c1.screenparts.ScreenButton;
 import c1.ui.ActionButton;
@@ -13,10 +15,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class ScreenButtonTest {
 
     private ActionButton createScreenButtonOnEDT(final String text, final Screen screen) throws Exception {
@@ -76,7 +74,7 @@ public class ScreenButtonTest {
         }
 
         @Override
-        protected ScreenLayout layoutForPortrait() { return new ScreenLayout();}
+        protected UILayout layoutForPortrait() { return new UIBorderLayout();}
     }
     
     private TestScreen createScreenOnEDT() throws Exception {

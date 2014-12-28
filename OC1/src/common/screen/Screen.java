@@ -8,6 +8,7 @@ import c1.command.*;
 import c1.ui.IDisplay;
 import c1.ui.IForm;
 import c1.ui.IFormFactory;
+import common.ui.UIComponent;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
@@ -104,13 +105,13 @@ public abstract class Screen {
         }
     }
 
-    protected abstract ScreenLayout layoutForPortrait();
+    protected abstract UIComponent layoutForPortrait();
 
-    protected ScreenLayout layoutForLandscape() {
+    protected UIComponent layoutForLandscape() {
         return layoutForPortrait();
     }
 
-    private void layout(ScreenLayout layout) {
+    private void layout(UIComponent layout) {
         form.layout(layout);
     }
 

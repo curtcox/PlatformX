@@ -2,6 +2,7 @@ package common.screen.dynamic;
 
 import common.screen.Screen;
 import common.screen.ScreenLayout;
+import common.ui.UIComponent;
 
 /**
  * A screen that is created by a dynamic layout method.
@@ -19,12 +20,12 @@ final class DynamicScreen
     }
 
     @Override
-    protected ScreenLayout layoutForPortrait() {
+    protected UIComponent layoutForPortrait() {
         return getLayout();
     }
 
     @Override
-    protected ScreenLayout layoutForLandscape() {
+    protected UIComponent layoutForLandscape() {
         return getLayout();
     }
     
@@ -53,8 +54,8 @@ final class DynamicScreen
             }
         };    
     }
-    
-    ScreenLayout getLayout() {
+
+    UIComponent getLayout() {
         return layoutProvider.getLayout(getContext());
     }
 }

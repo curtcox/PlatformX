@@ -6,9 +6,9 @@ import common.log.ILogManager;
 import common.Registry;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
-import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
 import c1.uilist.SearchableList;
+import common.ui.UIComponent;
 
 /**
  * A screen for selecting an item from a list of items.
@@ -31,7 +31,7 @@ public abstract class SelectionListScreen<T>
     }
 
     @Override
-    public ScreenLayout layoutForPortrait() {
+    public UIComponent layoutForPortrait() {
         return null;
         //return new ScreenLayout(searchList.component);
     }
