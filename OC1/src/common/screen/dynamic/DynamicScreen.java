@@ -1,7 +1,6 @@
 package common.screen.dynamic;
 
 import common.screen.Screen;
-import common.screen.ScreenLayout;
 import common.ui.UIComponent;
 
 /**
@@ -11,9 +10,9 @@ final class DynamicScreen
     extends Screen
 {
     final ScreenContext.Provider controller;
-    final ScreenLayout.Provider layoutProvider;
+    final ScreenLayoutProvider layoutProvider;
     
-    public DynamicScreen(String name, ScreenContext.Provider controller, ScreenLayout.Provider layoutProvider) {
+    public DynamicScreen(String name, ScreenContext.Provider controller, ScreenLayoutProvider layoutProvider) {
         super(name);
         this.controller = controller;
         this.layoutProvider = layoutProvider;

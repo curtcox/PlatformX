@@ -1,10 +1,7 @@
 package common.screen.dynamic;
 
 import common.event.StringSource;
-import common.screen.Screen;
-import common.screen.ScreenFactory;
-import common.screen.ScreenLayout;
-import common.screen.ScreenLink;
+import common.screen.*;
 import common.util.Glob;
 import common.util.GlobStringMap;
 import common.util.StringMap;
@@ -19,9 +16,9 @@ public final class DynamicScreenFactory
 {
     final StringMap names;
     final ScreenController.Lookup controllers;
-    final ScreenLayout.Lookup layouts;
+    final ScreenLayoutLookup layouts;
     
-    public DynamicScreenFactory(StringMap names, ScreenController.Lookup controllers, ScreenLayout.Lookup layouts) {
+    public DynamicScreenFactory(StringMap names, ScreenController.Lookup controllers, ScreenLayoutLookup layouts) {
         this.names = names;
         this.controllers = controllers;
         this.layouts = layouts;
@@ -36,7 +33,7 @@ public final class DynamicScreenFactory
         if (controller==null) {
             return null;
         }
-        ScreenLayout.Provider layout = layoutProvider(link);
+        ScreenLayoutProvider layout = layoutProvider(link);
         if (layout==null) {
             return null;
         }
@@ -51,7 +48,7 @@ public final class DynamicScreenFactory
         return controllers.lookup(link);
     }
     
-    private ScreenLayout.Provider layoutProvider(ScreenLink link) {
+    private ScreenLayoutProvider layoutProvider(ScreenLink link) {
         return layouts.lookup(link);
     }
     

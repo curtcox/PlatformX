@@ -1,6 +1,5 @@
 package common.screen.dynamic;
 
-import common.screen.ScreenLayout;
 import common.ui.*;
 import hash.NamedExpression;
 import java.util.HashMap;
@@ -12,8 +11,6 @@ import java.util.HashMap;
 final class DynamicScreenLayoutMethods
     extends HashMap
 {
-    private final ComponentGenerator renderer = new ComponentGenerator();
-
     DynamicScreenLayoutMethods() {
         put("grid",grid());        
         put("table",table());        
@@ -82,7 +79,6 @@ final class DynamicScreenLayoutMethods
     private UIComponent component(Object o) {
         if (o == null)                 { return new UILabel(""); }
         if (o instanceof UIComponent)  { return (UIComponent) o; }
-        if (o instanceof ScreenLayout) { return renderer.toComponent((ScreenLayout) o); }
         return new UILabel(o.toString());
     }
 

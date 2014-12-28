@@ -1,7 +1,5 @@
 package common.screen.dynamic;
 
-import common.screen.ScreenLayout;
-import common.ui.UIComponent;
 import common.ui.UIGridLayout;
 import common.ui.UILabel;
 import common.ui.UILayout;

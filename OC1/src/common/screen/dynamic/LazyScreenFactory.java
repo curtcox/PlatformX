@@ -1,9 +1,6 @@
 package common.screen.dynamic;
 
-import common.screen.Screen;
-import common.screen.ScreenFactory;
-import common.screen.ScreenLayout;
-import common.screen.ScreenLink;
+import common.screen.*;
 import common.util.Mirror;
 import common.util.Mirrors;
 import common.util.StringMap;
@@ -24,7 +21,7 @@ public final class LazyScreenFactory
     
     public Screen create(ScreenLink link) {
         String name = link.screen;
-        ScreenLayout.Provider layout = layoutProvider(link);
+        ScreenLayoutProvider layout = layoutProvider(link);
         if (layout==null) {
             return null;
         }
@@ -36,7 +33,7 @@ public final class LazyScreenFactory
         return (mirror==null) ? new EmptyScreenContextProvider() : new ScreenController(mirror.getTarget());
     }
     
-    private ScreenLayout.Provider layoutProvider(ScreenLink link) {
+    private ScreenLayoutProvider layoutProvider(ScreenLink link) {
         return new DynamicScreenLayoutProvider(new StringMapStringSource(sources,link.screen));
     }
     

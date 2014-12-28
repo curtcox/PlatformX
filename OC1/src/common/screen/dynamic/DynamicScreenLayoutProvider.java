@@ -3,7 +3,6 @@ package common.screen.dynamic;
 import common.*;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.screen.ScreenLayout;
 import common.ui.UIColumnLayout;
 import common.ui.UIComponent;
 import common.ui.UIGridLayout;
@@ -16,7 +15,7 @@ import common.event.StringSource;
  * @author Curt
  */
 public final class DynamicScreenLayoutProvider
-    implements ScreenLayout.Provider
+    implements ScreenLayoutProvider
 {
     final StringSource source;
     static final String layout = "layout";
@@ -39,19 +38,14 @@ public final class DynamicScreenLayoutProvider
 
     private UIComponent screenForResult(Object result) {
         if (result==null)                   { return messageScreen("(null)");            }
-        if (result instanceof ScreenLayout) { return (UIComponent) result;              }
-        if (result instanceof String)       { return messageScreen((String)result);      }
-        if (result instanceof UIComponent)  { return componentScreen((UIComponent)result); }
+        if (result instanceof UIComponent)  { return (UIComponent) result;               }
+        if (result instanceof String)       { return messageScreen((String) result);      }
         if (result instanceof SyntaxError)  { return errorScreen((SyntaxError) result);  }
         throw new IllegalArgumentException("result="+result);
     }
     
-    private UIComponent componentScreen(UIComponent component) {
-        return new UIGridLayout(1,1,component);
-    }
-
     private UIComponent messageScreen(String message) {
-        return componentScreen(label(message));
+        return label(message);
     }
 
     private UIComponent errorScreen(SyntaxError error) {

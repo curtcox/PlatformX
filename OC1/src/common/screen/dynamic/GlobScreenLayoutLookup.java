@@ -3,22 +3,21 @@ package common.screen.dynamic;
 import java.util.ArrayList;
 import java.util.List;
 
-import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
 import common.util.Glob;
 
 final class GlobScreenLayoutLookup
-    implements ScreenLayout.Lookup
+    implements ScreenLayoutLookup
 {
     final List<Glob> globs = new ArrayList();
-    final List<ScreenLayout.Provider> layouts = new ArrayList();
+    final List<ScreenLayoutProvider> layouts = new ArrayList();
 
-    void add(Glob glob, ScreenLayout.Provider layout) {
+    void add(Glob glob, ScreenLayoutProvider layout) {
         globs.add(glob);
         layouts.add(layout);
     }
 
-    public ScreenLayout.Provider lookup(ScreenLink link) {
+    public ScreenLayoutProvider lookup(ScreenLink link) {
         for (int i=0; i<globs.size(); i++) {
             Glob glob = globs.get(i);
             if (glob.matches(link.screen)) {
