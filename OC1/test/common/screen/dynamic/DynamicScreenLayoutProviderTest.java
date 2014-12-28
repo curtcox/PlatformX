@@ -28,16 +28,15 @@ public class DynamicScreenLayoutProviderTest {
     @Test
     public void getLayout_returns_layout_with_message_when_source_is_null() {
         sourceCode = null;
-        UILayout actual = (UILayout) testObject.getLayout(context);
-        Object component = actual.components[0];
-        assertSpanLabelTextContains(component,"Source is not valid Hash");
+        UILabel label = (UILabel) testObject.getLayout(context);
+        assertSpanLabelTextContains(label,"Source is not valid Hash");
     }
 
     @Test
     public void getLayout_returns_layout_with_message_when_source_is_empty() {
         sourceCode = "";
-        UILayout actual = (UILayout) testObject.getLayout(context);
-        assertTrue(Strings.contains(actual.components[0].toString(),""));
+        UILabel label = (UILabel) testObject.getLayout(context);
+        assertTrue(Strings.contains(label.toString(),""));
     }
 
     @Test
@@ -57,8 +56,7 @@ public class DynamicScreenLayoutProviderTest {
     @Test
     public void getLayout_returns_layout_with_label_when_layout_returns_a_string() {
         sourceCode = lines("layout { 'Whatever' }");
-        UILayout actual = (UILayout) testObject.getLayout(context);
-        UILabel label = (UILabel) actual.components[0];
+        UILabel label = (UILabel) testObject.getLayout(context);
         assertEquals("Whatever",label.text);
     }
 
@@ -86,8 +84,7 @@ public class DynamicScreenLayoutProviderTest {
             "layout_portrait { 'Family' }"
         );
         context.put("portrait", true);
-        UILayout actual = (UILayout) testObject.getLayout(context);
-        UILabel label = (UILabel) actual.components[0];
+        UILabel label = (UILabel) testObject.getLayout(context);
         assertEquals("Family",label.text);
     }
 
