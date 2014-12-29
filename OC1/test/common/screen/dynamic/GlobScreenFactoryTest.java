@@ -1,9 +1,7 @@
 package common.screen.dynamic;
 
 import common.screen.Screen;
-import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
-import common.screen.dynamic.GlobScreenFactory;
 import common.ui.UILayout;
 import fake.FakeRegistryLoader;
 import org.junit.Test;

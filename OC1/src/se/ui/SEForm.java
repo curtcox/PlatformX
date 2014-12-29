@@ -1,7 +1,6 @@
 package se.ui;
 
 import common.ICommand;
-import common.screen.ScreenLayout;
 import c1.ui.IForm;
 import common.ui.UIComponent;
 

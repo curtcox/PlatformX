@@ -1,7 +1,6 @@
 package c1.screens;
 
 import common.screen.Screen;
-import common.screen.ScreenLayout;
 import common.ui.UIBorderLayout;
 import common.ui.UIComponent;
 

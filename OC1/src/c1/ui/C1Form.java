@@ -3,13 +3,14 @@ package c1.ui;
 import com.codename1.ui.Command;
 import com.codename1.ui.Component;
 import com.codename1.ui.Form;
+import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.Layout;
 import common.ICommand;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
-import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
 import c1.Components;
 import c1.command.LoggedCommand;
@@ -61,11 +62,11 @@ public class C1Form
     }
 
     private Layout createLayout(UIComponent component) {
-        return null;
+        return new FlowLayout();
     }
 
     private Component component(UIComponent component) {
-        return null;
+        return new Label();
     }
 
     @Override

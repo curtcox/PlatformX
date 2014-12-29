@@ -1,7 +1,6 @@
 package c1.screen;
 
 import common.screen.Screen;
-import common.screen.ScreenLayout;
 import common.ui.UILayout;
 import fake.FakeRegistryLoader;
 import java.util.concurrent.Callable;

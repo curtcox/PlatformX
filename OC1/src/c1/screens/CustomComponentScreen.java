@@ -2,7 +2,6 @@ package c1.screens;
 
 import common.screen.Screen;
 import common.screen.ScreenFactory;
-import common.screen.ScreenLayout;
 import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
 import common.ui.UIComponent;
