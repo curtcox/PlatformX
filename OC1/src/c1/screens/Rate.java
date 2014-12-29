@@ -1,8 +1,6 @@
 package c1.screens;
 
 import com.codename1.ui.Display;
-import com.codename1.ui.Label;
-import com.codename1.ui.TextArea;
 import c1.app.CurrentState;
 import common.domain.ServiceProvider;
 import c1.screenparts.ScreenButton;
@@ -11,6 +9,8 @@ import c1.screenparts.ProviderDetailsButton;
 import c1.ui.ActionButton;
 import common.domain.Rating;
 import common.stores.MyRatings;
+import common.ui.UILabel;
+import common.ui.UITextArea;
 
 /**
  * See
@@ -18,12 +18,12 @@ import common.stores.MyRatings;
  * @author Curt
  */
 public final class Rate {
-    final Label rating = new Label();
-    final TextArea description = new TextArea(
+    final UILabel rating = new UILabel();
+    final UITextArea description = new UITextArea(
         "                                                                    ");
     
     public Rate() {
-        description.setEditable(false);
+        description.editable=false;
     }
 
     ActionButton change_location_button() {
@@ -41,8 +41,8 @@ public final class Rate {
     ActionButton rating_button(final String ratingText, final String ratingDescription) {
         ActionButton button = new ActionButton("") {
             public void onTap() {
-                rating.setText(ratingText);
-                description.setText(ratingDescription);
+                rating.text=ratingText;
+                description.text=ratingDescription;
                 rateCurrentProvider(new Rating(ratingText));
             }
         };
