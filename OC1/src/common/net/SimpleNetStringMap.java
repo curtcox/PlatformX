@@ -2,7 +2,7 @@ package common.net;
 
 import java.net.URI;
 import common.IO;
-import c1.net.RawNetwork;
+import common.Registry;
 import common.util.StringMap;
 
 public final class SimpleNetStringMap
@@ -11,13 +11,18 @@ public final class SimpleNetStringMap
     final URI base;
     final Network network;
     
-    public SimpleNetStringMap(URI base) {
-        this(base,new RawNetwork());
+    public SimpleNetStringMap(URI base)
+    {
+        this(base,network());
     }
 
     SimpleNetStringMap(URI base, Network network) {
         this.base = base;
         this.network = network;
+    }
+
+    private static Network network() {
+        return Registry.get(Network.class);
     }
 
     public String get(String string) {

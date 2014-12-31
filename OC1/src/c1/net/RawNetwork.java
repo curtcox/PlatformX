@@ -5,6 +5,7 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 import common.net.Network;
+import common.ui.UIImage;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -31,11 +32,11 @@ public final class RawNetwork
         }
     }
 
-    public Image getImage(URI uri) {
+    public UIImage getImage(URI uri) {
         return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
     }
 
-    public Image getImage(URI uri, int w, int h) {
+    public UIImage getImage(URI uri, int w, int h) {
         return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
     }
 

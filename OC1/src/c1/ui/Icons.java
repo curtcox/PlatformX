@@ -1,9 +1,10 @@
 package c1.ui;
 
-import com.codename1.ui.Image;
 import com.codename1.ui.util.Resources;
 import common.Registry;
 import common.net.Network;
+import common.ui.UIImage;
+
 import java.net.URI;
 
 public final class Icons {
@@ -16,16 +17,19 @@ public final class Icons {
         return Registry.get(Icons.class);
     }
 
-    public Image getImage(String icon) {
-        return resources().getImage(icon);
+    public UIImage getImage(String icon) {
+        return translator().translate(resources().getImage(icon));
     }
 
-    public Image getImage(URI uri) {
+    public UIImage getImage(URI uri) {
         return Registry.get(Network.class).getImage(uri);
     }
 
-    public Image getImage(URI uri, int w, int h) {
+    public UIImage getImage(URI uri, int w, int h) {
         return Registry.get(Network.class).getImage(uri,w,h);
     }
 
+    private ImageTranslator translator() {
+        return Registry.get(ImageTranslator.class);
+    }
 }

@@ -8,14 +8,11 @@ import java.util.HashMap;
 import java.util.Map;
 import common.net.Network;
 import common.net.SimpleNetStringMap;
+import common.ui.UIImage;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
 
-/**
- *
- * @author Curt
- */
 public class SimpleNetStringMapTest {
 
     Map<URI,String> pages = new HashMap<URI,String>();
@@ -24,8 +21,8 @@ public class SimpleNetStringMapTest {
         public InputStream getStreamFor(URI uri) {
             return new ByteArrayInputStream(pages.get(uri).getBytes());
         }
-        public Image getImage(URI uri) { throw new UnsupportedOperationException(""); }
-        public Image getImage(URI uri, int w, int h) { throw new UnsupportedOperationException(); }
+        public UIImage getImage(URI uri) { throw new UnsupportedOperationException(""); }
+        public UIImage getImage(URI uri, int w, int h) { throw new UnsupportedOperationException(); }
     };
     
     URI base = URI("http://example.com/");

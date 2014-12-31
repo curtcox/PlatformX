@@ -3,7 +3,6 @@ package c1.net;
 import com.codename1.io.Storage;
 import com.codename1.io.Util;
 import com.codename1.ui.EncodedImage;
-import com.codename1.ui.Image;
 import com.codename1.ui.URLImage;
 import java.io.IOException;
 import java.io.InputStream;
@@ -11,6 +10,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import common.Registry;
 import c1.ui.EmptyImage;
+import common.ui.UIImage;
 import common.util.Strings;
 
 final class NetworkCacheEntry {
@@ -59,15 +59,16 @@ final class NetworkCacheEntry {
         }
     }
 
-    Image createImageToStorage() {
+    UIImage createImageToStorage() {
         return createImageToStorage(71,71);
     }
 
-    Image createImageToStorage(int w, int h) {
+    UIImage createImageToStorage(int w, int h) {
         EncodedImage placeholder = new EmptyImage(w, h);
         URLImage image = URLImage.createToStorage(placeholder, fileName, uri.toString(), URLImage.RESIZE_SCALE_TO_FILL);
         image.fetch();
-        return image;
+        //return image;
+        return null;
     }
 
 }

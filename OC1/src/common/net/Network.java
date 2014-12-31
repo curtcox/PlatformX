@@ -1,6 +1,7 @@
 package common.net;
 
-import com.codename1.ui.Image;
+import common.ui.UIImage;
+
 import java.io.InputStream;
 import java.net.URI;
 
@@ -17,7 +18,7 @@ public interface Network {
      */
     InputStream getStreamFor(URI uri);
 
-    Image getImage(URI uri);
+    UIImage getImage(URI uri);
 
-    Image getImage(URI uri, int w, int h);
+    UIImage getImage(URI uri, int w, int h);
 }

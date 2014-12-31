@@ -7,6 +7,8 @@ import common.log.ILogManager;
 import common.Registry;
 import common.net.Network;
 import common.stores.MapStorageIO;
+import common.ui.UIImage;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -50,11 +52,11 @@ public final class CachedNetwork
         }
     }
 
-    public Image getImage(URI uri) {
+    public UIImage getImage(URI uri) {
         return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
     }
 
-    public Image getImage(URI uri,int w, int h) {
+    public UIImage getImage(URI uri,int w, int h) {
         return NetworkCacheEntry.newEntryFor(uri).createImageToStorage(w,h);
     }
 
