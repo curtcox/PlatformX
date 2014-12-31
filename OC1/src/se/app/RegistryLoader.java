@@ -25,8 +25,8 @@ final class RegistryLoader {
         put(LogWriter.class,        new LogWriter());
         put(IFormFactory.class,     new SEFormFactory());
         put(IDisplay.class,         SEDisplay.of());
-        put(StringMap.class,        RootStringMap.of());
         put(Network.class,          new SERawNetwork());
+        put(StringMap.class,        RootStringMap.of());
         put(ScreenFactory.class,    RootScreenFactory.of());
     }
 

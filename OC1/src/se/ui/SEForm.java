@@ -10,7 +10,7 @@ public final class SEForm
     extends JComponent
     implements IForm
 {
-    final String title;
+    private final String title;
 
     public SEForm(String title) {
         this.title = title;
@@ -38,7 +38,7 @@ public final class SEForm
 
     @Override
     public String getTitle() {
-        return null;
+        return title;
     }
 
     private SEDisplay display() {
