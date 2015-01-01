@@ -5,6 +5,7 @@ import c1.ui.IForm;
 import common.ui.UIComponent;
 
 import javax.swing.*;
+import java.awt.*;
 
 public final class SEForm
     extends JComponent
@@ -14,11 +15,12 @@ public final class SEForm
 
     public SEForm(String title) {
         this.title = title;
+        setLayout(new GridLayout(1, 1));
     }
 
     @Override
     public void layout(UIComponent layout) {
-
+        add(SEUIRenderer.render(layout));
     }
 
     @Override
