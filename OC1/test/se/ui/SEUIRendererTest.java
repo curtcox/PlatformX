@@ -1,10 +1,11 @@
 package se.ui;
 
-
 import common.ui.UIButton;
 import common.ui.UIColumn;
 import common.ui.UIComponent;
 import common.ui.UILabel;
+import fake.FakeSERegistryLoader;
+import org.junit.Before;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -15,10 +16,28 @@ import static org.junit.Assert.fail;
 
 public class SEUIRendererTest {
 
+    static class FakeButton extends UIButton {
+
+        boolean tapped;
+
+        public FakeButton(String name) {
+            super(name);
+        }
+
+        @Override
+        public void onTap() {
+            tapped = true;
+        }
+    }
+    @Before
+    public void setup() {
+        FakeSERegistryLoader.load();
+    }
+
     @Test
     public void render_returns_right_component_type() {
         assertRendersAs(new UILabel(""),JLabel.class);
-        assertRendersAs(new UIButton(), JButton.class);
+        assertRendersAs(new FakeButton(""), JButton.class);
         assertRendersAs(new UIColumn(),JPanel.class);
     }
 
@@ -73,9 +92,9 @@ public class SEUIRendererTest {
     }
 
     @Test
-    public void render_a_button() {
+    public void render_a_button_produces_button_with_proper_text() {
         String text = toString();
-        UIButton button = new UIButton();
+        UIButton button = new FakeButton("");
         button.text = text;
         JButton actual = (JButton) render(button);
 
@@ -83,8 +102,17 @@ public class SEUIRendererTest {
     }
 
     @Test
+    public void render_an_action_button_produces_button_with_proper_action() {
+        FakeButton fakeButton = new FakeButton("");
+        JButton jButton = (JButton) render(fakeButton);
+        jButton.doClick();
+
+        assertTrue(fakeButton.tapped);
+    }
+
+    @Test
     public void render_column_with_a_button_and_a_label() {
-        UIColumn column = new UIColumn(new UIButton(),new UILabel());
+        UIColumn column = new UIColumn(new FakeButton(""),new UILabel());
         JPanel actual = (JPanel) render(column);
         assertEquals(2,actual.getComponentCount());
         assertTrue(actual.getComponent(0) instanceof JButton);

@@ -10,6 +10,9 @@ import common.ui.UILabel;
 
 import javax.swing.*;
 
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import static javax.swing.BoxLayout.Y_AXIS;
 
 final class SEUIRenderer {
@@ -35,8 +38,15 @@ final class SEUIRenderer {
     }
 
     static JButton button(UIComponent layout) {
-        UIButton button = (UIButton) layout;
-        return new JButton(button.text);
+        final UIButton button = (UIButton) layout;
+        JButton jButton = new JButton(button.text);
+        jButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                button.onTap();
+            }
+        });
+        return jButton;
     }
 
     static JLabel label(UIComponent layout) {

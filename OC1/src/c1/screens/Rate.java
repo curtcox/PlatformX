@@ -6,9 +6,9 @@ import common.domain.ServiceProvider;
 import common.screenparts.ScreenButton;
 import common.screen.ScreenLink;
 import c1.screenparts.ProviderDetailsButton;
-import common.screenparts.ActionButton;
 import common.domain.Rating;
 import common.stores.MyRatings;
+import common.ui.UIButton;
 import common.ui.UILabel;
 import common.ui.UITextArea;
 
@@ -26,20 +26,20 @@ public final class Rate {
         description.editable=false;
     }
 
-    ActionButton change_location_button() {
+    UIButton change_location_button() {
         return ScreenButton.textAndLeadingTo("Pick a different location",new ScreenLink("Search"));
     }
 
-    ActionButton about_rating_button() {
-        return new ActionButton("More about this rating scheme") {
+    UIButton about_rating_button() {
+        return new UIButton("More about this rating scheme") {
             public void onTap() {
                 Display.getInstance().execute("http://www.sagetraveling.com/Rating-System-Explanation/");
             }
         };
     }
     
-    ActionButton rating_button(final String ratingText, final String ratingDescription) {
-        ActionButton button = new ActionButton("") {
+    UIButton rating_button(final String ratingText, final String ratingDescription) {
+        UIButton button = new UIButton("") {
             public void onTap() {
                 rating.text=ratingText;
                 description.text=ratingDescription;
@@ -56,7 +56,7 @@ public final class Rate {
         CurrentState.get().broadcastChange();
     }
 
-    ActionButton provider_details_button() {
+    UIButton provider_details_button() {
         return ProviderDetailsButton.of();
     }
     

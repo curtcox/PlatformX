@@ -2,10 +2,10 @@ package c1.screen;
 
 import common.screen.Screen;
 import common.ui.UIBorderContainer;
+import common.ui.UIButton;
 import common.ui.UIContainer;
 import fake.FakeC1RegistryLoader;
 import common.screenparts.ScreenButton;
-import common.screenparts.ActionButton;
 import java.util.concurrent.Callable;
 
 import common.ui.IForm;
@@ -16,8 +16,8 @@ import org.junit.Test;
 
 public class ScreenButtonTest {
 
-    private ActionButton createScreenButtonOnEDT(final String text, final Screen screen) throws Exception {
-        return (ActionButton) FakeUI.onEDT(new Callable(){
+    private UIButton createScreenButtonOnEDT(final String text, final Screen screen) throws Exception {
+        return (UIButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
                 return ScreenButton.textAndLeadingTo(text, screen);
             }
@@ -32,14 +32,14 @@ public class ScreenButtonTest {
     @Test
     public void of_returns_ActionButton_with_given_text() throws Exception {
         String text = toString();
-        ActionButton button = createScreenButtonOnEDT(text,null);
+        UIButton button = createScreenButtonOnEDT(text,null);
         assertEquals(text,button.getText());
     }
 
     @Test
     public void of_returns_ActionButton_that_shows_screen_onTap() throws Exception {
         TestScreen screen = createScreenOnEDT();
-        ActionButton button = createScreenButtonOnEDT("text",screen);
+        UIButton button = createScreenButtonOnEDT("text",screen);
         button.onTap();
         assertTrue(screen.shown);
     }
@@ -47,7 +47,7 @@ public class ScreenButtonTest {
     @Test
     public void of_returns_ActionButton_that_refreshes_screen_onTap() throws Exception {
         TestScreen screen = createScreenOnEDT();
-        ActionButton button = createScreenButtonOnEDT("text",screen);
+        UIButton button = createScreenButtonOnEDT("text",screen);
         button.onTap();
         assertTrue(screen.refreshed);
     }

@@ -1,12 +1,12 @@
 package c1.screens;
 
 import c1.log.IssueReporter;
-import common.screenparts.ActionButton;
+import common.ui.UIButton;
 
 public final class HowTo {   
     
-    ActionButton submitIssueButton() {
-        return new ActionButton("Submit Issue") {
+    UIButton submitIssueButton() {
+        return new UIButton("Submit Issue") {
             @Override public void onTap() { IssueReporter.sendEmail(); }
         };
     }

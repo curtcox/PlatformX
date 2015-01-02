@@ -1,7 +1,7 @@
 package c1.ui;
 
 import common.event.StringSource;
-import common.screenparts.ActionButton;
+import common.ui.UIButton;
 import fake.FakeC1RegistryLoader;
 import common.app.CurrentState;
 import common.event.Change;
@@ -11,10 +11,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class ActionButtonTest {
 
     boolean tapped;
@@ -25,10 +21,10 @@ public class ActionButtonTest {
         FakeC1RegistryLoader.load();
     }
     
-    private ActionButton createActionButtonOnEDT(final String text) throws Exception {
-        return (ActionButton) FakeUI.onEDT(new Callable(){
+    private UIButton createActionButtonOnEDT(final String text) throws Exception {
+        return (UIButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return new ActionButton(text) {
+                return new UIButton(text) {
                     @Override
                     public void onTap() {
                         tapped = true;
@@ -41,13 +37,13 @@ public class ActionButtonTest {
     @Test
     public void sets_text_to_constructor_value() throws Exception {
         String random = this.toString();
-        ActionButton button = createActionButtonOnEDT(random);
+        UIButton button = createActionButtonOnEDT(random);
         assertSame(random, button.getText());
     }
 
     @Test
     public void updateTextOnChange_with_specified_source_updates_text() throws Exception {
-        ActionButton button = createActionButtonOnEDT("");
+        UIButton button = createActionButtonOnEDT("");
         String expected = stringSource().getString();
         Change.Source change = new Change.Source() {
             public void addListener(Change.Listener listener) {
@@ -72,7 +68,7 @@ public class ActionButtonTest {
     @Test
     public void updateTextOnChange_updates_text_when_current_state_changes() throws Exception {
         FakeC1RegistryLoader.load();
-        ActionButton button = createActionButtonOnEDT("");
+        UIButton button = createActionButtonOnEDT("");
         String expected = stringSource().getString();
         button.updateTextOnChange(stringSource());
         CurrentState.get().broadcastChange();

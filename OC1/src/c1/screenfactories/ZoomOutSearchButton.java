@@ -5,10 +5,10 @@ import common.domain.ServiceProvider;
 import common.event.SwappableList;
 import c1.screenparts.SearchParams;
 import c1.services.ServiceProviders;
-import common.screenparts.ActionButton;
+import common.ui.UIButton;
 
 final class ZoomOutSearchButton
-    extends ActionButton
+    extends UIButton
 {
     private SearchParams searchParams;
     private final SwappableList providers;

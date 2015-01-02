@@ -1,12 +1,12 @@
 package common.screen.dynamic;
 
+import common.ui.UIButton;
 import common.ui.UILabel;
 import hash.NamedExpression;
 import java.net.*;
 import java.util.*;
 
 import common.screenparts.ScreenButton;
-import common.screenparts.ActionButton;
 
 /**
  * A map of component methods for adding to a ScreenContext.
@@ -77,11 +77,11 @@ final class DynamicScreenComponentMethods
         return (value==null) ? "" : value.toString();
     }
 
-    private ActionButton button(String text, String image, String leadingTo) {
+    private UIButton button(String text, String image, String leadingTo) {
         return ScreenButton.textAndImageLeadingTo(text, image, leadingTo);
     }
 
-    private ActionButton link(String text) {
+    private UIButton link(String text) {
         return ScreenButton.textAndLeadingTo(text, text);
     }
     

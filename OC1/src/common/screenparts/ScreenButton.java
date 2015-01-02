@@ -6,8 +6,8 @@ import common.screen.ScreenLink;
 import common.app.CurrentState;
 import common.Registry;
 import common.event.Change.Source;
-import common.screenparts.ActionButton;
 import common.event.StringSource;
+import common.ui.UIButton;
 
 /**
  * A button that will go to the given screen when tapped.
@@ -15,26 +15,26 @@ import common.event.StringSource;
  */
 public final class ScreenButton {
 
-    public static ActionButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,String screen) {
-        ActionButton button = textActionAndLeadingTo(text,runnable,screenFactory().create(new ScreenLink(screen)));
+    public static UIButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,String screen) {
+        UIButton button = textActionAndLeadingTo(text,runnable,screenFactory().create(new ScreenLink(screen)));
         button.icon=image;
         return button;
     }
 
-    public static ActionButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,Screen screen) {
-        ActionButton button = textActionAndLeadingTo(text,runnable,screen);
+    public static UIButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,Screen screen) {
+        UIButton button = textActionAndLeadingTo(text,runnable,screen);
         button.icon=image;
         return button;
     }
 
-    public static ActionButton textAndImageLeadingTo(String text,String image,final String screen) {
-        ActionButton button = textAndLeadingTo(text,screen);
+    public static UIButton textAndImageLeadingTo(String text,String image,final String screen) {
+        UIButton button = textAndLeadingTo(text,screen);
         button.icon=image;
         return button;
     }
 
-    public static ActionButton textAndLeadingTo(String text,final Screen screen) {
-        return new ActionButton(text) {
+    public static UIButton textAndLeadingTo(String text,final Screen screen) {
+        return new UIButton(text) {
             @Override
             public void onTap() {
                 screen.show();
@@ -42,8 +42,8 @@ public final class ScreenButton {
         };
     }
 
-    public static ActionButton textAndLeadingTo(String text,final ScreenLink link) {
-        return new ActionButton(text) {
+    public static UIButton textAndLeadingTo(String text,final ScreenLink link) {
+        return new UIButton(text) {
             @Override
             public void onTap() {
                 screenFactory().create(link).show();
@@ -51,8 +51,8 @@ public final class ScreenButton {
         };
     }
 
-    public static ActionButton textAndLeadingTo(String text,final String screen) {
-        return new ActionButton(text) {
+    public static UIButton textAndLeadingTo(String text,final String screen) {
+        return new UIButton(text) {
             @Override
             public void onTap() {
                 screenFactory().create(new ScreenLink(screen)).show();
@@ -64,8 +64,8 @@ public final class ScreenButton {
         return Registry.get(ScreenFactory.class);
     }
     
-    public static ActionButton textActionAndLeadingTo(String text,final Runnable runnable, final Screen screen) {
-        return new ActionButton(text) {
+    public static UIButton textActionAndLeadingTo(String text,final Runnable runnable, final Screen screen) {
+        return new UIButton(text) {
             @Override
             public void onTap() {
                 runnable.run();
@@ -74,26 +74,26 @@ public final class ScreenButton {
         };
     }
 
-    public static ActionButton textWatchingAndLeadingTo(StringSource source,Source change,Screen screen) {
-        final ActionButton button = textAndLeadingTo(source.getString(),screen);
+    public static UIButton textWatchingAndLeadingTo(StringSource source,Source change,Screen screen) {
+        final UIButton button = textAndLeadingTo(source.getString(),screen);
         button.updateTextOnChange(change, source);
         return button;
     }
 
-    public static ActionButton textAndLeadingTo(StringSource source,Screen screen) {
-        final ActionButton button = textAndLeadingTo(source.getString(),screen);
+    public static UIButton textAndLeadingTo(StringSource source,Screen screen) {
+        final UIButton button = textAndLeadingTo(source.getString(),screen);
         button.updateTextOnChange(CurrentState.get(), source);
         return button;
     }
 
-    public static ActionButton textAndLeadingTo(StringSource source,String screenName) {
-        final ActionButton button = textAndLeadingTo(source.getString(),screenName);
+    public static UIButton textAndLeadingTo(StringSource source,String screenName) {
+        final UIButton button = textAndLeadingTo(source.getString(),screenName);
         button.updateTextOnChange(CurrentState.get(), source);
         return button;
     }
 
-    public static ActionButton lazyWithTextAndLeadingTo(String text,final String screen, final Object...args) {
-        return new ActionButton(text) {
+    public static UIButton lazyWithTextAndLeadingTo(String text,final String screen, final Object...args) {
+        return new UIButton(text) {
             @Override
             public void onTap() {
                 screenFactory().create(new ScreenLink(screen,args)).show();
@@ -101,8 +101,8 @@ public final class ScreenButton {
         };
     }
 
-    public static ActionButton lazyWithTextAndLeadingTo(StringSource source,String screen) {
-        final ActionButton button = lazyWithTextAndLeadingTo(source.getString(),screen);
+    public static UIButton lazyWithTextAndLeadingTo(StringSource source,String screen) {
+        final UIButton button = lazyWithTextAndLeadingTo(source.getString(),screen);
         button.updateTextOnChange(CurrentState.get(), source);
         return button;
     }

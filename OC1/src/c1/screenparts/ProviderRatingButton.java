@@ -1,9 +1,9 @@
 package c1.screenparts;
 
 import common.domain.ServiceProvider;
-import common.screenparts.ActionButton;
 import common.event.StringSource;
 import common.screenparts.ScreenButton;
+import common.ui.UIButton;
 
 /**
  * Navigates to the rating screen.
@@ -13,7 +13,7 @@ public final class ProviderRatingButton {
 
     private ProviderRatingButton() {}
     
-    public static ActionButton of() {
+    public static UIButton of() {
         return ScreenButton.lazyWithTextAndLeadingTo(buttonText(), "Rate");
     }
 

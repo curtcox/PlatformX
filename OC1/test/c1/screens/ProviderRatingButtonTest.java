@@ -1,8 +1,8 @@
 package c1.screens;
 
 import c1.screenparts.ProviderRatingButton;
+import common.ui.UIButton;
 import fake.FakeC1RegistryLoader;
-import common.screenparts.ActionButton;
 import java.util.concurrent.Callable;
 import static org.junit.Assert.*;
 import org.junit.Test;
@@ -19,8 +19,8 @@ public class ProviderRatingButtonTest {
         assertNotNull(createScreenButtonOnEDT());
     }
  
-    private ActionButton createScreenButtonOnEDT() throws Exception {
-        return (ActionButton) FakeUI.onEDT(new Callable(){
+    private UIButton createScreenButtonOnEDT() throws Exception {
+        return (UIButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
                 return ProviderRatingButton.of();
             }

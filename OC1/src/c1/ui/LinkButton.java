@@ -12,17 +12,19 @@ import common.screen.ScreenLink;
 public final class LinkButton
     extends UIButton
 {
+    private final ScreenLink.Factory linkFactory;
+
     public LinkButton(final String name, final ScreenLink.Factory linkFactory) {
-//        super(name);
-//        addActionListener(new ActionListener() {
-//            public void actionPerformed(ActionEvent event) {
-//                screenFactory().create(linkFactory.create()).show();
-//            }
-//        });
+        super(name);
+        this.linkFactory = linkFactory;
     }
         
     public static ScreenFactory screenFactory() {
         return Registry.get(ScreenFactory.class);
     }
 
+    @Override
+    public void onTap() {
+         screenFactory().create(linkFactory.create()).show();
+    }
 }
