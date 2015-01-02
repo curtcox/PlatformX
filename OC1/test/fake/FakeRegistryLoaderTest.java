@@ -11,23 +11,23 @@ public class FakeRegistryLoaderTest {
 
     @Test
     public void can_load() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
     }
 
     @Test
     public void can_initDisplay() {
-        FakeRegistryLoader.initDisplay();
+        FakeC1RegistryLoader.initDisplay();
     }
 
     @Test
     public void load_puts_LogManager_in_Registry() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
         assertTrue(Registry.get(ILogManager.class) instanceof LogManager);
     }
 
     @Test
     public void load_puts_FakeStorage_in_Registry() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
         assertTrue(Registry.get(Storage.class) instanceof FakeStorage);
     }
 

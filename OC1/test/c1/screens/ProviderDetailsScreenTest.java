@@ -1,6 +1,6 @@
 package c1.screens;
 
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import java.util.concurrent.Callable;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -14,12 +14,12 @@ public class ProviderDetailsScreenTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
     }
     
     @Test
     public void test_can_create() throws Exception {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
         assertNotNull(createScreenOnEDT());
     }
  

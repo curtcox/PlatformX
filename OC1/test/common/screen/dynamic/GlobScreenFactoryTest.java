@@ -3,7 +3,7 @@ package common.screen.dynamic;
 import common.screen.Screen;
 import common.screen.ScreenLink;
 import common.ui.UIContainer;
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -20,7 +20,7 @@ public class GlobScreenFactoryTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
         screen = new Screen("whatever") {
             @Override
             protected UIContainer layoutForPortrait() { return null; }

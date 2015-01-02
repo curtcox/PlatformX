@@ -62,7 +62,6 @@ public abstract class Screen {
         setPrevious();
         showing = this;
         refresh();
-        layoutForm();
         form.show();
         form.setBackCommand(back);
     }

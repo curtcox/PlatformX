@@ -4,7 +4,7 @@ import common.ui.UIGrid;
 import common.ui.UILabel;
 import common.ui.UIContainer;
 import common.ui.UITable;
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import hash.NamedExpression;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -16,7 +16,7 @@ public class DynamicScreenLayoutMethodsTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
     }
 
     @Test

@@ -20,6 +20,7 @@ public final class SEForm
 
     @Override
     public void layout(UIComponent layout) {
+        removeAll();
         add(SEUIRenderer.render(layout));
     }
 

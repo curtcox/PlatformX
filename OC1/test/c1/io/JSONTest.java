@@ -1,6 +1,6 @@
 package c1.io;
 
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import c1.JSON;
 import common.util.StringMap;
 import org.junit.Test;
@@ -15,7 +15,7 @@ public class JSONTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
     }
 
     @Test

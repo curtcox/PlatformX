@@ -1,8 +1,7 @@
 package common.stores;
 
 import com.codename1.io.Storage;
-import common.stores.MyRatings;
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import fake.FakeStorage;
 import common.Registry;
 import common.domain.ID;
@@ -22,7 +21,7 @@ public class MyRatingsTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
         ratings1 = new MyRatings();
     }
     

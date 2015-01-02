@@ -1,7 +1,7 @@
 package c1.screens;
 
 import c1.screenparts.ProviderRatingButton;
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import c1.ui.ActionButton;
 import java.util.concurrent.Callable;
 import static org.junit.Assert.*;
@@ -15,7 +15,7 @@ public class ProviderRatingButtonTest {
     
     @Test
     public void test_can_create() throws Exception {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
         assertNotNull(createScreenButtonOnEDT());
     }
  

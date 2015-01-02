@@ -1,6 +1,6 @@
 package google;
 
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import j2se.J2seNetwork;
 import common.Registry;
 import common.net.Network;
@@ -20,7 +20,7 @@ public class GeocodingTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
         Registry.put(Network.class,   new J2seNetwork());
         testObject = new Geocoding();
     }

@@ -3,7 +3,7 @@ package c1.screen;
 import common.screen.Screen;
 import common.ui.UIBorderContainer;
 import common.ui.UIContainer;
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import c1.screenparts.ScreenButton;
 import c1.ui.ActionButton;
 import java.util.concurrent.Callable;
@@ -26,7 +26,7 @@ public class ScreenButtonTest {
 
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
     }
 
     @Test

@@ -3,7 +3,7 @@ package common.screen.dynamic;
 import common.ui.UIGrid;
 import common.ui.UILabel;
 import common.ui.UIContainer;
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import common.event.StringSource;
 import common.util.Strings;
 import org.junit.*;
@@ -22,7 +22,7 @@ public class DynamicScreenLayoutProviderTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
     }
 
     @Test

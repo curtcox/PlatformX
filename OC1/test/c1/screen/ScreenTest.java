@@ -2,7 +2,7 @@ package c1.screen;
 
 import common.screen.Screen;
 import common.ui.UIContainer;
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import java.util.concurrent.Callable;
 
 import common.ui.IForm;
@@ -20,7 +20,7 @@ public class ScreenTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
     }
 
     @Test

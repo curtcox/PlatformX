@@ -1,7 +1,7 @@
 package c1.ui;
 
 import common.event.StringSource;
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import c1.app.CurrentState;
 import common.event.Change;
 import c1.screens.FakeUI;
@@ -21,7 +21,7 @@ public class ActionButtonTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
     }
     
     private ActionButton createActionButtonOnEDT(final String text) throws Exception {
@@ -70,7 +70,7 @@ public class ActionButtonTest {
     
     @Test
     public void updateTextOnChange_updates_text_when_current_state_changes() throws Exception {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
         ActionButton button = createActionButtonOnEDT("");
         String expected = stringSource().getString();
         button.updateTextOnChange(stringSource());

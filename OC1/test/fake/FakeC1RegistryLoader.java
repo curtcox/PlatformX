@@ -17,7 +17,7 @@ import common.ui.IDisplay;
 import c1.ui.IFormFactory;
 import c1.ui.Icons;
 
-public class FakeRegistryLoader {
+public class FakeC1RegistryLoader {
     
     public static void load() {
         put(ILogManager.class,      new LogManager());
