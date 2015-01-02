@@ -6,4 +6,5 @@ public class UIButton
     extends UIComponent
 {
     public URI icon;
+    public String text;
 }
