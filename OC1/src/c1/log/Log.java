@@ -2,8 +2,8 @@ package c1.log;
 
 import common.log.ILog;
 import common.Registry;
-import c1.ui.IDisplay;
-import c1.ui.IForm;
+import common.ui.IDisplay;
+import common.ui.IForm;
 
 public final class Log
     implements ILog

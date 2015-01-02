@@ -14,6 +14,7 @@ import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import c1.Components;
 import c1.command.LoggedCommand;
+import common.ui.IForm;
 import common.ui.UIComponent;
 
 public class C1Form

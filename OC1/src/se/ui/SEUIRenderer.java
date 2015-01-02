@@ -7,6 +7,8 @@ import common.ui.UILabel;
 
 import javax.swing.*;
 
+import static javax.swing.BoxLayout.Y_AXIS;
+
 final class SEUIRenderer {
 
     static JComponent render(UIComponent layout) {
@@ -18,7 +20,13 @@ final class SEUIRenderer {
     }
 
     static JPanel column(UIComponent layout) {
-        return new JPanel();
+        UIColumnLayout column = (UIColumnLayout) layout;
+        JPanel panel = new JPanel();
+        panel.setLayout(new BoxLayout(panel,Y_AXIS));
+        for (UIComponent component : column.components) {
+            panel.add(render(component));
+        }
+        return panel;
     }
 
     static JButton button(UIComponent layout) {

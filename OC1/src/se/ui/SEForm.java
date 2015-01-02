@@ -1,7 +1,7 @@
 package se.ui;
 
 import common.ICommand;
-import c1.ui.IForm;
+import common.ui.IForm;
 import common.ui.UIComponent;
 
 import javax.swing.*;

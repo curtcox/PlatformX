@@ -5,7 +5,7 @@ import common.ui.UILayout;
 import fake.FakeRegistryLoader;
 import java.util.concurrent.Callable;
 
-import c1.ui.IForm;
+import common.ui.IForm;
 import c1.screens.FakeUI;
 import static org.junit.Assert.*;
 import org.junit.Before;

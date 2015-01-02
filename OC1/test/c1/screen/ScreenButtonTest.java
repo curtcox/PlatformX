@@ -8,7 +8,7 @@ import c1.screenparts.ScreenButton;
 import c1.ui.ActionButton;
 import java.util.concurrent.Callable;
 
-import c1.ui.IForm;
+import common.ui.IForm;
 import c1.screens.FakeUI;
 import static org.junit.Assert.*;
 import org.junit.Before;

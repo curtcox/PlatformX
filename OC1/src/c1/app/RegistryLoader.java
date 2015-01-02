@@ -12,6 +12,7 @@ import c1.net.*;
 import c1.screen.RootScreenFactory;
 import c1.services.*;
 import c1.ui.*;
+import common.ui.IDisplay;
 import common.util.*;
 import common.stores.MyRatings;
 

@@ -1,4 +1,4 @@
-package c1.ui;
+package common.ui;
 
 public interface IDisplay {
 

@@ -13,7 +13,7 @@ import c1.log.LogWriter;
 import c1.services.Locations;
 import c1.services.ServiceProviders;
 import c1.ui.C1FormFactory;
-import c1.ui.IDisplay;
+import common.ui.IDisplay;
 import c1.ui.IFormFactory;
 import c1.ui.Icons;
 

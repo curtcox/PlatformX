@@ -1,7 +1,6 @@
-package c1.ui;
+package common.ui;
 
 import common.ICommand;
-import common.ui.UIComponent;
 
 public interface IForm {
     void layout(UIComponent layout);

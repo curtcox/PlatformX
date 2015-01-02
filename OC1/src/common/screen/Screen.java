@@ -5,8 +5,8 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 import c1.command.*;
-import c1.ui.IDisplay;
-import c1.ui.IForm;
+import common.ui.IDisplay;
+import common.ui.IForm;
 import c1.ui.IFormFactory;
 import common.ui.UIComponent;
 

@@ -5,7 +5,7 @@ import common.Registry;
 import common.net.Network;
 import se.log.*;
 import common.screen.ScreenFactory;
-import c1.ui.IDisplay;
+import common.ui.IDisplay;
 import c1.ui.IFormFactory;
 import common.util.StringMap;
 import common.net.RootStringMap;
