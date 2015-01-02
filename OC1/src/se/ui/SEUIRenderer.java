@@ -3,24 +3,22 @@ package se.ui;
 import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.ui.UIButton;
-import common.ui.UIColumn;
-import common.ui.UIComponent;
-import common.ui.UILabel;
+import common.ui.*;
 
 import javax.swing.*;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static javax.swing.BoxLayout.Y_AXIS;
+import static javax.swing.BoxLayout.*;
 
 final class SEUIRenderer {
 
     static JComponent render(UIComponent layout) {
-        if (layout instanceof UIButton)        { return button(layout); }
-        if (layout instanceof UILabel)         { return label(layout);  }
+        if (layout instanceof UIButton)  { return button(layout); }
+        if (layout instanceof UILabel)   { return label(layout);  }
         if (layout instanceof UIColumn)  { return column(layout);  }
+        if (layout instanceof UIRow)     { return row(layout);  }
         String message = layout == null ? "null" : layout.getClass().getName();
         IllegalArgumentException e = new IllegalArgumentException(message);
         log(e);
@@ -28,10 +26,17 @@ final class SEUIRenderer {
     }
 
     static JPanel column(UIComponent layout) {
-        UIColumn column = (UIColumn) layout;
+        return box(layout,Y_AXIS);
+    }
+
+    static JPanel row(UIComponent layout) {
+        return box(layout,X_AXIS);
+    }
+
+    static JPanel box(UIComponent layout,int axis) {
         JPanel panel = new JPanel();
-        panel.setLayout(new BoxLayout(panel,Y_AXIS));
-        for (UIComponent component : column.components) {
+        panel.setLayout(new BoxLayout(panel,axis));
+        for (UIComponent component : ((UIContainer) layout).components) {
             panel.add(render(component));
         }
         return panel;
