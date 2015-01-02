@@ -1,7 +1,7 @@
 package common.ui;
 
 public final class UIBorderContainer
-    extends UILayout
+    extends UIContainer
 {
     public UIBorderContainer(UIComponent... components) {
         super(components);

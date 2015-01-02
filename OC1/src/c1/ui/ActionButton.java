@@ -15,8 +15,6 @@ public abstract class ActionButton
 {
 
     final String name;
-    String text;
-    String icon;
     int textPosition;
 
     public ActionButton(final String name) {
@@ -43,14 +41,6 @@ public abstract class ActionButton
                 text = source.getString();
             }
         });
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
-
-    public void setText(String text) {
-        this.text = text;
     }
 
     @Override

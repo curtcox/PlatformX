@@ -1,7 +1,7 @@
 package common.ui;
 
 public final class UIFlow
-    extends UILayout
+    extends UIContainer
 {
     public UIFlow(UIComponent... components) {
         super(components);

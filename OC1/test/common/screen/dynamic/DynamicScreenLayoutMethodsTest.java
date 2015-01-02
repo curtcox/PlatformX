@@ -2,7 +2,7 @@ package common.screen.dynamic;
 
 import common.ui.UIGrid;
 import common.ui.UILabel;
-import common.ui.UILayout;
+import common.ui.UIContainer;
 import common.ui.UITable;
 import fake.FakeRegistryLoader;
 import hash.NamedExpression;
@@ -24,7 +24,7 @@ public class DynamicScreenLayoutMethodsTest {
         Object value = testObject.get("grid");
         
         NamedExpression expression = (NamedExpression) value;
-        UILayout screen = (UILayout) expression.invoke(new Object[] {4,2,"red","green"});
+        UIContainer screen = (UIContainer) expression.invoke(new Object[] {4,2,"red","green"});
         UIGrid grid = (UIGrid) screen;
         assertEquals(4,grid.rows);
         assertEquals(2,grid.columns);

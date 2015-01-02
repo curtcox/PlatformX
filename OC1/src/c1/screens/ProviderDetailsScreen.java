@@ -100,7 +100,7 @@ public final class ProviderDetailsScreen
     private void updateIcon() {
         URI uri = provider().icon;
         if (uri!=null) {
-            icon.icon = uri;
+            icon.icon = uri.toString();
         }
     }
     

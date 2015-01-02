@@ -17,19 +17,19 @@ public final class ScreenButton {
 
     public static ActionButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,String screen) {
         ActionButton button = textActionAndLeadingTo(text,runnable,screenFactory().create(new ScreenLink(screen)));
-        button.setIcon(image);
+        button.icon=image;
         return button;
     }
 
     public static ActionButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,Screen screen) {
         ActionButton button = textActionAndLeadingTo(text,runnable,screen);
-        button.setIcon(image);
+        button.icon=image;
         return button;
     }
 
     public static ActionButton textAndImageLeadingTo(String text,String image,final String screen) {
         ActionButton button = textAndLeadingTo(text,screen);
-        button.setIcon(image);
+        button.icon=image;
         return button;
     }
 

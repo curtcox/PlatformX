@@ -1,5 +1,8 @@
 package se.ui;
 
+import common.Registry;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.ui.UIButton;
 import common.ui.UIColumn;
 import common.ui.UIComponent;
@@ -16,7 +19,9 @@ final class SEUIRenderer {
         if (layout instanceof UILabel)         { return label(layout);  }
         if (layout instanceof UIColumn)  { return column(layout);  }
         String message = layout == null ? "null" : layout.getClass().getName();
-        throw new IllegalArgumentException(message);
+        IllegalArgumentException e = new IllegalArgumentException(message);
+        log(e);
+        throw e;
     }
 
     static JPanel column(UIComponent layout) {
@@ -37,6 +42,14 @@ final class SEUIRenderer {
     static JLabel label(UIComponent layout) {
         UILabel label = (UILabel) layout;
         return new JLabel(label.text);
+    }
+
+    private static void log(Throwable t) {
+        getLog().log(t);
+    }
+
+    private static ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(SEUIRenderer.class);
     }
 
 }

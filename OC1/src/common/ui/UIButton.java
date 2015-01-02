@@ -5,6 +5,6 @@ import java.net.URI;
 public class UIButton
     extends UIComponent
 {
-    public URI icon;
+    public String icon;
     public String text;
 }

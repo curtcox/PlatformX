@@ -28,7 +28,7 @@ final class ZoomOutSearchButton
 
     private void zoomOut() {
         searchParams = searchParams.zoomOut();
-        setText(searchParams.zoomText());
+        text = searchParams.zoomText();
         providers.become(getProviders(searchParams));
     }
     

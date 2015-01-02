@@ -2,7 +2,7 @@ package common.screen.dynamic;
 
 import common.ui.UIGrid;
 import common.ui.UILabel;
-import common.ui.UILayout;
+import common.ui.UIContainer;
 import fake.FakeRegistryLoader;
 import common.event.StringSource;
 import common.util.Strings;
@@ -42,7 +42,7 @@ public class DynamicScreenLayoutProviderTest {
     @Test
     public void getLayout_returns_layout_with_message_when_layout_not_defined() {
         sourceCode = "layover {}";
-        UILayout actual = (UILayout) testObject.getLayout(context);
+        UIContainer actual = (UIContainer) testObject.getLayout(context);
         assertSpanLabelTextContains(actual.components[0],"RuntimeException");
         assertSpanLabelTextContains(actual.components[1],"layout not found");
     }
@@ -66,7 +66,7 @@ public class DynamicScreenLayoutProviderTest {
         
         sourceCode = lines("layout { grid(1 2 'one' 'two') }");
 
-        UILayout actual = (UILayout) testObject.getLayout(context);
+        UIContainer actual = (UIContainer) testObject.getLayout(context);
         assertTrue(actual instanceof UIGrid);
         UIGrid layout = (UIGrid) actual;
         assertEquals(1,layout.rows);

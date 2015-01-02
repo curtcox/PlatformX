@@ -46,7 +46,7 @@ public final class Rate {
                 rateCurrentProvider(new Rating(ratingText));
             }
         };
-        button.setIcon("rating.png");
+        button.icon="rating.png";
         return button;
     }
 

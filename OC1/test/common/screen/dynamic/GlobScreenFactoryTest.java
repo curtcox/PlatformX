@@ -2,7 +2,7 @@ package common.screen.dynamic;
 
 import common.screen.Screen;
 import common.screen.ScreenLink;
-import common.ui.UILayout;
+import common.ui.UIContainer;
 import fake.FakeRegistryLoader;
 import org.junit.Test;
 import static org.junit.Assert.*;
@@ -23,7 +23,7 @@ public class GlobScreenFactoryTest {
         FakeRegistryLoader.load();
         screen = new Screen("whatever") {
             @Override
-            protected UILayout layoutForPortrait() { return null; }
+            protected UIContainer layoutForPortrait() { return null; }
         };
     }
     

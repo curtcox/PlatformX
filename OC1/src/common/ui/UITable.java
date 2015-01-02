@@ -1,7 +1,7 @@
 package common.ui;
 
 public final class UITable
-    extends UILayout
+    extends UIContainer
 {
     public final int rows;
     public final int columns;
