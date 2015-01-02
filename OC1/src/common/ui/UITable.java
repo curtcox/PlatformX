@@ -1,12 +1,12 @@
 package common.ui;
 
-public final class UIGridLayout
+public final class UITable
     extends UILayout
 {
     public final int rows;
     public final int columns;
 
-    public UIGridLayout(int rows, int columns,UIComponent...components) {
+    public UITable(int rows, int columns, UIComponent... components) {
         super(components);
         this.rows = rows;
         this.columns = columns;

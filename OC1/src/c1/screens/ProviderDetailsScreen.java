@@ -10,7 +10,7 @@ import common.screen.dynamic.GlobScreenFactory;
 import common.ui.UIButton;
 import common.ui.UIComponent;
 import common.ui.UILabel;
-import common.ui.UITableLayout;
+import common.ui.UITable;
 import common.domain.ServiceProvider;
 import common.domain.Type;
 import c1.screenparts.ProviderRatingButton;
@@ -49,7 +49,7 @@ public final class ProviderDetailsScreen
     
     @Override
     public UIComponent layoutForPortrait() {
-        return new UITableLayout(8,1,
+        return new UITable(8,1,
                     name,
                     distance,
                     vicinity,

@@ -1,7 +1,7 @@
 package se.ui;
 
 import common.ui.UIButton;
-import common.ui.UIColumnLayout;
+import common.ui.UIColumn;
 import common.ui.UIComponent;
 import common.ui.UILabel;
 
@@ -14,13 +14,13 @@ final class SEUIRenderer {
     static JComponent render(UIComponent layout) {
         if (layout instanceof UIButton)        { return button(layout); }
         if (layout instanceof UILabel)         { return label(layout);  }
-        if (layout instanceof UIColumnLayout)  { return column(layout);  }
+        if (layout instanceof UIColumn)  { return column(layout);  }
         String message = layout == null ? "null" : layout.getClass().getName();
         throw new IllegalArgumentException(message);
     }
 
     static JPanel column(UIComponent layout) {
-        UIColumnLayout column = (UIColumnLayout) layout;
+        UIColumn column = (UIColumn) layout;
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel,Y_AXIS));
         for (UIComponent component : column.components) {

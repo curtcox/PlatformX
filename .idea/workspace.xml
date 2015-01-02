@@ -2,31 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\ui\IDisplay.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\ui\IForm.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\ui\IDisplay.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/IDisplay.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\ui\IForm.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/IForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/ui/BoxYContainer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/BoxYContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/ui/C1Display.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1Display.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/ui/C1FormFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1FormFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeDisplay.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screens/FakeUI.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screens/FakeUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/ui/IFormFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/IFormFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/log/Log.java" afterPath="$PROJECT_DIR$/OC1/src/c1/log/Log.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/log/Log.java" afterPath="$PROJECT_DIR$/OC1/src/se/log/Log.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/RegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/app/RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/se/app/RegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/ui/SEForm.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/SEForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/ui/SEFormFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/SEFormFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIBorderContainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIColumn.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIFlow.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIRow.java" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ui\UIBorderLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ui\UIColumnLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ui\UIFlowLayout.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ui\UIRowLayout.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ui\UIGridLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UIGrid.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\ui\UITableLayout.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/UITable.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenLayoutMethods.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenLayoutMethods.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenLayoutMethodsTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenLayoutMethodsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenLayoutProvider.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenLayoutProvider.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenLayoutProviderTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenLayoutProviderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screens/ProfileScreen.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/ProfileScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screens/ProviderDetailsScreen.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screens/ProviderDetailsScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/SEUIRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEUIRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/Screen.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/Screen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screen/ScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screen/ScreenButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screen/ScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screen/ScreenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,8 +47,8 @@
             <file leaf-file-name="SEUIRenderer.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.4368715" vertical-offset="0" max-vertical-offset="895">
-                    <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
+                  <state vertical-scroll-proportion="0.18994413" vertical-offset="0" max-vertical-offset="895">
+                    <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -96,8 +90,8 @@
       <file leaf-file-name="Screen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1836">
-              <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1836">
+              <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
               <folding>
                 <element signature="e#2845#2846#0" expanded="true" />
                 <element signature="e#2882#2883#0" expanded="true" />
@@ -111,10 +105,12 @@
       <file leaf-file-name="Log.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/src/se/log/Log.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="918">
-              <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="413" max-vertical-offset="952">
+              <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#549#550#0" expanded="true" />
+                <element signature="e#643#644#0" expanded="true" />
                 <element signature="e#1105#1106#0" expanded="true" />
                 <element signature="e#1150#1151#0" expanded="true" />
               </folding>
@@ -145,8 +141,8 @@
       <file leaf-file-name="SEDisplay.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="93" max-vertical-offset="833">
-              <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="833">
+              <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
               <folding>
                 <element signature="e#651#652#0" expanded="true" />
                 <element signature="e#678#679#0" expanded="true" />
@@ -155,10 +151,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SEForm.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UIBorderContainer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIBorderContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.063079774" vertical-offset="0" max-vertical-offset="539">
+              <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SEForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.22018349" vertical-offset="43" max-vertical-offset="748">
+            <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="748">
               <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
               <folding>
                 <element signature="e#409#410#0" expanded="true" />
@@ -176,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/common/stores/MapStorageIO.java" />
         <option value="$PROJECT_DIR$/OC1/test/oc2/net/JsonIndexNetStringMapTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/ui/ScreenLayout.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/ui/UILayout.java" />
@@ -227,6 +232,7 @@
         <option value="$PROJECT_DIR$/OC1/src/se/log/Log.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/ui/IForm.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/ui/SEForm.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/ui/UIBorderContainer.java" />
       </list>
     </option>
   </component>
@@ -368,7 +374,51 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="se" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="common" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -464,7 +514,13 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="OC1" />
       <envs />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="" />
+        <option name="TRANSPORT" value="0" />
+        <option name="LOCAL" value="true" />
+      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -765,7 +821,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1914" y="-23" width="1918" height="1053" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -777,16 +833,16 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27830687" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27830687" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20031546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20031546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2994709" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -811,7 +867,33 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="7" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java</url>
+          <line>48</line>
+          <properties />
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java</url>
+          <line>60</line>
+          <properties />
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java</url>
+          <line>40</line>
+          <properties />
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/OC1/src/se/log/Log.java</url>
+          <line>47</line>
+          <properties />
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -820,14 +902,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/ScreenLayoutProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09405256" vertical-offset="0" max-vertical-offset="723">
-          <caret line="5" column="24" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/ScreenLayoutLookup.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.09405256" vertical-offset="0" max-vertical-offset="723">
@@ -1222,10 +1296,10 @@
           <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#668#669#0" expanded="true" />
-            <element signature="e#727#728#0" expanded="true" />
-            <element signature="e#2910#2911#0" expanded="true" />
-            <element signature="e#2963#2964#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#695#696#0" expanded="true" />
+            <element signature="e#2842#2843#0" expanded="true" />
+            <element signature="e#2895#2896#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1262,19 +1336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="550" max-vertical-offset="1836">
-          <caret line="17" column="22" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="22" />
-          <folding>
-            <element signature="e#2845#2846#0" expanded="true" />
-            <element signature="e#2882#2883#0" expanded="true" />
-            <element signature="e#2911#2912#0" expanded="true" />
-            <element signature="e#2986#2987#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/log/LogManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
@@ -1283,14 +1344,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/log/Log.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="229" max-vertical-offset="918">
-          <caret line="52" column="29" selection-start-line="52" selection-start-column="29" selection-end-line="52" selection-end-column="29" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="43" max-vertical-offset="748">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#457#458#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18994413" vertical-offset="0" max-vertical-offset="895">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1105#1106#0" expanded="true" />
-            <element signature="e#1150#1151#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1303,10 +1373,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="603" max-vertical-offset="1836">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding>
+            <element signature="e#2845#2846#0" expanded="true" />
+            <element signature="e#2882#2883#0" expanded="true" />
+            <element signature="e#2911#2912#0" expanded="true" />
+            <element signature="e#2986#2987#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/log/Log.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="413" max-vertical-offset="952">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#549#550#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#1105#1106#0" expanded="true" />
+            <element signature="e#1150#1151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="799">
-          <caret line="47" column="9" selection-start-line="47" selection-start-column="9" selection-end-line="47" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="294" max-vertical-offset="833">
+          <caret line="45" column="5" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
           <folding>
             <element signature="e#651#652#0" expanded="true" />
             <element signature="e#678#679#0" expanded="true" />
@@ -1314,24 +1411,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEForm.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/UIBorderContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22018349" vertical-offset="43" max-vertical-offset="748">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="e#409#410#0" expanded="true" />
-            <element signature="e#457#458#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4368715" vertical-offset="0" max-vertical-offset="895">
-          <caret line="23" column="36" selection-start-line="23" selection-start-column="36" selection-end-line="23" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.063079774" vertical-offset="0" max-vertical-offset="539">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

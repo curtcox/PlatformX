@@ -1,9 +1,9 @@
 package common.screen.dynamic;
 
-import common.ui.UIGridLayout;
+import common.ui.UIGrid;
 import common.ui.UILabel;
 import common.ui.UILayout;
-import common.ui.UITableLayout;
+import common.ui.UITable;
 import fake.FakeRegistryLoader;
 import hash.NamedExpression;
 import org.junit.Test;
@@ -25,7 +25,7 @@ public class DynamicScreenLayoutMethodsTest {
         
         NamedExpression expression = (NamedExpression) value;
         UILayout screen = (UILayout) expression.invoke(new Object[] {4,2,"red","green"});
-        UIGridLayout grid = (UIGridLayout) screen;
+        UIGrid grid = (UIGrid) screen;
         assertEquals(4,grid.rows);
         assertEquals(2,grid.columns);
         UILabel red = (UILabel) screen.components[0];
@@ -39,7 +39,7 @@ public class DynamicScreenLayoutMethodsTest {
         Object value = testObject.get("table");
         
         NamedExpression expression = (NamedExpression) value;
-        UITableLayout table = (UITableLayout) expression.invoke(new Object[] {4,2,"red","green"});
+        UITable table = (UITable) expression.invoke(new Object[] {4,2,"red","green"});
         assertEquals(4,table.rows);
         assertEquals(2,table.columns);
         UILabel red = (UILabel) table.components[0];

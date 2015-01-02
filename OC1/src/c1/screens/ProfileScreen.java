@@ -1,7 +1,7 @@
 package c1.screens;
 
 import common.screen.Screen;
-import common.ui.UIBorderLayout;
+import common.ui.UIBorderContainer;
 import common.ui.UIComponent;
 
 /**
@@ -18,7 +18,7 @@ final class ProfileScreen
 
     @Override
     protected UIComponent layoutForPortrait() {
-        return new UIBorderLayout();
+        return new UIBorderContainer();
     }
     
 }

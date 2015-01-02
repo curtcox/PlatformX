@@ -3,9 +3,9 @@ package common.screen.dynamic;
 import common.*;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.ui.UIColumnLayout;
+import common.ui.UIColumn;
 import common.ui.UIComponent;
-import common.ui.UIGridLayout;
+import common.ui.UIGrid;
 import common.ui.UILabel;
 import hash.*;
 import common.event.StringSource;
@@ -49,7 +49,7 @@ public final class DynamicScreenLayoutProvider
     }
 
     private UIComponent errorScreen(SyntaxError error) {
-        return new UIColumnLayout(
+        return new UIColumn(
                 label(error.type.toString()),
                 label(error.errorSource),
                 label(error.methodSource)
@@ -57,7 +57,7 @@ public final class DynamicScreenLayoutProvider
     }
 
     private UIComponent exception(Exception e) {
-        return new UIGridLayout(2,1,
+        return new UIGrid(2,1,
                 label(e.getClass().toString()),
                 label(e.getMessage()));
     }

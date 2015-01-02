@@ -1,6 +1,6 @@
 package common.screen.dynamic;
 
-import common.ui.UIGridLayout;
+import common.ui.UIGrid;
 import common.ui.UILabel;
 import common.ui.UILayout;
 import fake.FakeRegistryLoader;
@@ -67,8 +67,8 @@ public class DynamicScreenLayoutProviderTest {
         sourceCode = lines("layout { grid(1 2 'one' 'two') }");
 
         UILayout actual = (UILayout) testObject.getLayout(context);
-        assertTrue(actual instanceof UIGridLayout);
-        UIGridLayout layout = (UIGridLayout) actual;
+        assertTrue(actual instanceof UIGrid);
+        UIGrid layout = (UIGrid) actual;
         assertEquals(1,layout.rows);
         assertEquals(2,layout.columns);
         UILabel label1 = (UILabel) actual.components[0];

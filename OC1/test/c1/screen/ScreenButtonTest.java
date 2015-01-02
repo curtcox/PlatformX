@@ -1,7 +1,7 @@
 package c1.screen;
 
 import common.screen.Screen;
-import common.ui.UIBorderLayout;
+import common.ui.UIBorderContainer;
 import common.ui.UILayout;
 import fake.FakeRegistryLoader;
 import c1.screenparts.ScreenButton;
@@ -73,7 +73,7 @@ public class ScreenButtonTest {
         }
 
         @Override
-        protected UILayout layoutForPortrait() { return new UIBorderLayout();}
+        protected UILayout layoutForPortrait() { return new UIBorderContainer();}
     }
     
     private TestScreen createScreenOnEDT() throws Exception {
