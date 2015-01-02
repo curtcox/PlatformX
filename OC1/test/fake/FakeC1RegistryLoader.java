@@ -5,7 +5,7 @@ import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import com.codename1.ui.Display;
 import common.log.ILogManager;
-import c1.app.CurrentState;
+import common.app.CurrentState;
 import common.Registry;
 import common.domain.ServiceProvider;
 import c1.log.LogManager;

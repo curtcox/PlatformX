@@ -1,7 +1,7 @@
 package c1.screens;
 
 import c1.log.IssueReporter;
-import c1.ui.ActionButton;
+import common.screenparts.ActionButton;
 
 public final class HowTo {   
     

@@ -1,12 +1,12 @@
 package c1.screens;
 
 import com.codename1.ui.Display;
-import c1.app.CurrentState;
+import common.app.CurrentState;
 import common.domain.ServiceProvider;
-import c1.screenparts.ScreenButton;
+import common.screenparts.ScreenButton;
 import common.screen.ScreenLink;
 import c1.screenparts.ProviderDetailsButton;
-import c1.ui.ActionButton;
+import common.screenparts.ActionButton;
 import common.domain.Rating;
 import common.stores.MyRatings;
 import common.ui.UILabel;

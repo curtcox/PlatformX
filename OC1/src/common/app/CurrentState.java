@@ -1,4 +1,4 @@
-package c1.app;
+package common.app;
 
 import common.Registry;
 import common.event.Change;

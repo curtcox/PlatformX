@@ -1,9 +1,9 @@
-package c1.ui;
+package common.screenparts;
 
-import common.ui.UIButton;
 import common.event.StringSource;
-import c1.app.CurrentState;
+import common.app.CurrentState;
 import common.event.Change;
+import common.ui.UIButton;
 
 /**
  * Skeletal implementation of a button that does something when you tap it.

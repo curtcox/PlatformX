@@ -4,8 +4,8 @@ import common.screen.Screen;
 import common.ui.UIBorderContainer;
 import common.ui.UIContainer;
 import fake.FakeC1RegistryLoader;
-import c1.screenparts.ScreenButton;
-import c1.ui.ActionButton;
+import common.screenparts.ScreenButton;
+import common.screenparts.ActionButton;
 import java.util.concurrent.Callable;
 
 import common.ui.IForm;

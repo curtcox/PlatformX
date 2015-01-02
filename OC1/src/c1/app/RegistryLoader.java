@@ -3,6 +3,7 @@ package c1.app;
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import common.Registry;
+import common.app.CurrentState;
 import common.domain.ServiceProvider;
 import common.net.Network;
 import common.net.RootStringMap;

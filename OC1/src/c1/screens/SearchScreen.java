@@ -1,6 +1,6 @@
 package c1.screens;
 
-import c1.app.CurrentState;
+import common.app.CurrentState;
 import common.Registry;
 import common.domain.ServiceProvider;
 import common.screen.ScreenLink;

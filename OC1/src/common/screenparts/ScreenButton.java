@@ -1,12 +1,12 @@
-package c1.screenparts;
+package common.screenparts;
 
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
-import c1.app.CurrentState;
+import common.app.CurrentState;
 import common.Registry;
 import common.event.Change.Source;
-import c1.ui.ActionButton;
+import common.screenparts.ActionButton;
 import common.event.StringSource;
 
 /**

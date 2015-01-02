@@ -2,11 +2,11 @@ package c1.screens;
 
 import com.codename1.ui.Label;
 import common.domain.ServiceProvider;
-import c1.screenparts.ScreenButton;
+import common.screenparts.ScreenButton;
 import c1.screenparts.ProviderDetailsButton;
 import c1.screenparts.ProviderRatingButton;
 import c1.services.Locations;
-import c1.ui.ActionButton;
+import common.screenparts.ActionButton;
 
 /**
  * The home screen of the application.

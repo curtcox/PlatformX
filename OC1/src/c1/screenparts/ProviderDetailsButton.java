@@ -1,7 +1,8 @@
 package c1.screenparts;
 
 import common.domain.ServiceProvider;
-import c1.ui.ActionButton;
+import common.screenparts.ActionButton;
+import common.screenparts.ScreenButton;
 
 /**
  * Navigates to a detailed screen for the current provider.
@@ -10,7 +11,7 @@ import c1.ui.ActionButton;
 public final class ProviderDetailsButton {
 
     public static ActionButton of() {
-        return ScreenButton.textAndLeadingTo(ServiceProvider.getCurrentName(),"ProviderDetails");
+        return ScreenButton.textAndLeadingTo(ServiceProvider.getCurrentName(), "ProviderDetails");
     }
 
 }

@@ -1,8 +1,9 @@
 package c1.ui;
 
 import common.event.StringSource;
+import common.screenparts.ActionButton;
 import fake.FakeC1RegistryLoader;
-import c1.app.CurrentState;
+import common.app.CurrentState;
 import common.event.Change;
 import c1.screens.FakeUI;
 import java.util.concurrent.Callable;

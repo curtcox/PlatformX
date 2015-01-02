@@ -5,8 +5,8 @@ import hash.NamedExpression;
 import java.net.*;
 import java.util.*;
 
-import c1.screenparts.ScreenButton;
-import c1.ui.ActionButton;
+import common.screenparts.ScreenButton;
+import common.screenparts.ActionButton;
 
 /**
  * A map of component methods for adding to a ScreenContext.

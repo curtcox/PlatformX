@@ -2,7 +2,7 @@ package c1.screens;
 
 import c1.screenparts.ProviderRatingButton;
 import fake.FakeC1RegistryLoader;
-import c1.ui.ActionButton;
+import common.screenparts.ActionButton;
 import java.util.concurrent.Callable;
 import static org.junit.Assert.*;
 import org.junit.Test;
