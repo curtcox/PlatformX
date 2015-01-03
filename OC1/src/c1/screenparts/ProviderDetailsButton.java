@@ -2,7 +2,7 @@ package c1.screenparts;
 
 import common.domain.ServiceProvider;
 import common.screenparts.ScreenButton;
-import common.ui.UIButton;
+import common.uiwidget.UIButton;
 
 /**
  * Navigates to a detailed screen for the current provider.

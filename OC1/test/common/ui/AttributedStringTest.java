@@ -1,9 +1,10 @@
-package common.util;
+package common.ui;
 
 import java.awt.Color;
+
 import org.junit.Test;
-import common.util.AttributedString.Part;
-import static common.util.AttributedString.Decoration.*;
+import common.ui.AttributedString.Part;
+import static common.ui.AttributedString.Decoration.*;
 import static org.junit.Assert.*;
 
 public class AttributedStringTest {

@@ -1,9 +1,9 @@
 package c1.screen;
 
 import common.screen.Screen;
-import common.ui.UIBorderContainer;
-import common.ui.UIButton;
-import common.ui.UIContainer;
+import common.uiwidget.UIBorderContainer;
+import common.uiwidget.UIButton;
+import common.uiwidget.UIContainer;
 import fake.FakeC1RegistryLoader;
 import common.screenparts.ScreenButton;
 import java.util.concurrent.Callable;

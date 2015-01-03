@@ -1,7 +1,7 @@
 package c1.screens;
 
 import c1.log.IssueReporter;
-import common.ui.UIButton;
+import common.uiwidget.UIButton;
 
 public final class HowTo {   
     

@@ -1,7 +1,7 @@
 package se.ui;
 
-import common.ui.UIComponent;
-import common.ui.UILabel;
+import common.uiwidget.UIComponent;
+import common.uiwidget.UILabel;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -28,10 +28,9 @@ public class SEFormTest {
     }
 
     @Test
-    public void uses_1_x_1_grid_layout() {
-        GridLayout layout = (GridLayout) testObject.getLayout();
-        assertEquals(1,layout.getRows());
-        assertEquals(1,layout.getColumns());
+    public void uses_border_layout() {
+        LayoutManager layout = testObject.getLayout();
+        assertTrue(layout instanceof BorderLayout);
     }
 
     @Test
@@ -40,9 +39,9 @@ public class SEFormTest {
     }
 
     @Test
-    public void layout_produces_one_component_for_a_label() {
+    public void layout_produces_one_component_plus_navigation_panel_for_a_label() {
         testObject.layout(new UILabel("!!"));
-        assertEquals(1, testObject.getComponents().length);
+        assertEquals(2, testObject.getComponents().length);
     }
 
     @Test
@@ -51,7 +50,7 @@ public class SEFormTest {
 
         for (int i=0; i<3; i++) {
             testObject.layout(layout);
-            assertEquals(1, testObject.getComponents().length);
+            assertEquals(2, testObject.getComponents().length);
         }
     }
 

@@ -1,7 +1,7 @@
 package c1.screens;
 
 import c1.screenparts.ProviderRatingButton;
-import common.ui.UIButton;
+import common.uiwidget.UIButton;
 import fake.FakeC1RegistryLoader;
 import java.util.concurrent.Callable;
 import static org.junit.Assert.*;

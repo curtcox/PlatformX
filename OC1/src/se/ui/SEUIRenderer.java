@@ -3,7 +3,7 @@ package se.ui;
 import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.ui.*;
+import common.uiwidget.*;
 
 import javax.swing.*;
 

@@ -1,4 +1,4 @@
-package c1.ui;
+package c1.uiwidget;
 
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;

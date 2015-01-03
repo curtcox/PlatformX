@@ -1,14 +1,12 @@
 package common.net;
 
-import com.codename1.ui.Image;
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
-import common.net.Network;
-import common.net.SimpleNetStringMap;
-import common.ui.UIImage;
+
+import common.uiwidget.UIImage;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;

@@ -2,7 +2,7 @@ package se.ui;
 
 import common.ICommand;
 import common.ui.IForm;
-import common.ui.UIComponent;
+import common.uiwidget.UIComponent;
 
 import javax.swing.*;
 import java.awt.*;

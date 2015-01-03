@@ -1,7 +1,7 @@
 package common.screen;
 
 import common.ui.IForm;
-import common.ui.UIComponent;
+import common.uiwidget.UIComponent;
 import fake.FakeForm;
 import fake.FakeSERegistryLoader;
 import org.junit.Before;

@@ -1,7 +1,7 @@
 package common.screen.dynamic;
 
-import common.ui.UIButton;
-import common.ui.UILabel;
+import common.uiwidget.UIButton;
+import common.uiwidget.UILabel;
 import hash.NamedExpression;
 import java.net.*;
 import java.util.*;

@@ -6,7 +6,7 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.list.ListModel;
 import c1.event.LiveList;
-import c1.ui.BorderContainer;
+import c1.uiwidget.BorderContainer;
 
 /**
  * A wrapper for a searchable list component.

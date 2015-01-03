@@ -1,4 +1,4 @@
-package common.ui;
+package common.uiwidget;
 
 public final class UIRow
     extends UIContainer

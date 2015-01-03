@@ -1,6 +1,7 @@
-package common.util;
+package common.ui;
 
-import com.codename1.ui.Font;
+import common.util.Objects;
+
 import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -41,12 +42,12 @@ public final class AttributedString
     }
 
     public static final class Part {
-        public final Font font;
+        public final UIFont font;
         public final Color color;
         public final String text;
         public final Decoration decoration;
         
-        Part(Font font, Color color, Decoration decoration, String text) {
+        Part(UIFont font, Color color, Decoration decoration, String text) {
             this.font = font;
             this.color = color;
             this.text = text;
@@ -89,7 +90,7 @@ public final class AttributedString
         Set current;
         Set prior;
         Color color;
-        Font font;
+        UIFont font;
         Decoration decoration;
 
         AttributedString build() {
@@ -120,7 +121,7 @@ public final class AttributedString
             return new Part(font,color,decoration,out.toString());
         }
         
-        Builder font(Font font) {
+        Builder font(UIFont font) {
             this.font = font;
             current = currentAttributes();
             return this;

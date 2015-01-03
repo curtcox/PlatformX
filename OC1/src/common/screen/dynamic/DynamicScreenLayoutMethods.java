@@ -1,6 +1,6 @@
 package common.screen.dynamic;
 
-import common.ui.*;
+import common.uiwidget.*;
 import hash.NamedExpression;
 import java.util.HashMap;
 

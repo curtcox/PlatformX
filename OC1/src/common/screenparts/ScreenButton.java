@@ -7,7 +7,7 @@ import common.app.CurrentState;
 import common.Registry;
 import common.event.Change.Source;
 import common.event.StringSource;
-import common.ui.UIButton;
+import common.uiwidget.UIButton;
 
 /**
  * A button that will go to the given screen when tapped.

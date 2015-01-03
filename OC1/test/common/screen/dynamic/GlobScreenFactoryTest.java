@@ -2,7 +2,7 @@ package common.screen.dynamic;
 
 import common.screen.Screen;
 import common.screen.ScreenLink;
-import common.ui.UIContainer;
+import common.uiwidget.UIContainer;
 import fake.FakeC1RegistryLoader;
 import org.junit.Test;
 import static org.junit.Assert.*;

@@ -8,7 +8,7 @@ import c1.command.*;
 import common.ui.IDisplay;
 import common.ui.IForm;
 import c1.ui.IFormFactory;
-import common.ui.UIComponent;
+import common.uiwidget.UIComponent;
 
 /**
  * The entire UI, as presented to the user, at a specific time.

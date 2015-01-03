@@ -1,7 +1,7 @@
 package c1.ui;
 
 import common.Registry;
-import common.ui.UIButton;
+import common.uiwidget.UIButton;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 

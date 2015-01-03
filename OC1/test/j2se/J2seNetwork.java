@@ -3,7 +3,7 @@ package j2se;
 import java.io.*;
 import java.net.URI;
 import common.net.Network;
-import common.ui.UIImage;
+import common.uiwidget.UIImage;
 
 /**
  * Testing network implementation that uses J2SE.

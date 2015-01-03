@@ -6,7 +6,7 @@ import common.screenparts.ScreenButton;
 import c1.screenparts.ProviderDetailsButton;
 import c1.screenparts.ProviderRatingButton;
 import c1.services.Locations;
-import common.ui.UIButton;
+import common.uiwidget.UIButton;
 
 /**
  * The home screen of the application.

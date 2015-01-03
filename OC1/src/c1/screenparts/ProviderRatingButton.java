@@ -3,7 +3,7 @@ package c1.screenparts;
 import common.domain.ServiceProvider;
 import common.event.StringSource;
 import common.screenparts.ScreenButton;
-import common.ui.UIButton;
+import common.uiwidget.UIButton;
 
 /**
  * Navigates to the rating screen.

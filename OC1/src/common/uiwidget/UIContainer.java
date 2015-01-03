@@ -1,4 +1,4 @@
-package common.ui;
+package common.uiwidget;
 
 import java.util.Arrays;
 

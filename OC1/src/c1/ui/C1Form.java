@@ -15,7 +15,7 @@ import common.screen.ScreenLink;
 import c1.Components;
 import c1.command.LoggedCommand;
 import common.ui.IForm;
-import common.ui.UIComponent;
+import common.uiwidget.UIComponent;
 
 public class C1Form
     extends Form

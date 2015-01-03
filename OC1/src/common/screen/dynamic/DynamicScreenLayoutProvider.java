@@ -3,10 +3,10 @@ package common.screen.dynamic;
 import common.*;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.ui.UIColumn;
-import common.ui.UIComponent;
-import common.ui.UIGrid;
-import common.ui.UILabel;
+import common.uiwidget.UIColumn;
+import common.uiwidget.UIComponent;
+import common.uiwidget.UIGrid;
+import common.uiwidget.UILabel;
 import hash.*;
 import common.event.StringSource;
 

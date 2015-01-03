@@ -2,7 +2,7 @@ package fake;
 
 import common.ICommand;
 import common.ui.IForm;
-import common.ui.UIComponent;
+import common.uiwidget.UIComponent;
 
 public class FakeForm
     implements IForm

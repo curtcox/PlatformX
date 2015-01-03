@@ -4,7 +4,7 @@ import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.net.Network;
-import common.ui.UIImage;
+import common.uiwidget.UIImage;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

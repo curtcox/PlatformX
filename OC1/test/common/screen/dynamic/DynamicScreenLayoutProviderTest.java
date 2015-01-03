@@ -1,8 +1,8 @@
 package common.screen.dynamic;
 
-import common.ui.UIGrid;
-import common.ui.UILabel;
-import common.ui.UIContainer;
+import common.uiwidget.UIGrid;
+import common.uiwidget.UILabel;
+import common.uiwidget.UIContainer;
 import fake.FakeC1RegistryLoader;
 import common.event.StringSource;
 import common.util.Strings;

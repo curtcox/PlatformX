@@ -1,6 +1,6 @@
 package c1.screens;
 
-import common.ui.UIComponent;
+import common.uiwidget.UIComponent;
 
 final class CustomComponent
     extends UIComponent

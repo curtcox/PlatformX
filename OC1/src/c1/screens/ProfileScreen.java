@@ -1,8 +1,8 @@
 package c1.screens;
 
 import common.screen.Screen;
-import common.ui.UIBorderContainer;
-import common.ui.UIComponent;
+import common.uiwidget.UIBorderContainer;
+import common.uiwidget.UIComponent;
 
 /**
  * For viewing and manipulating the user profile.

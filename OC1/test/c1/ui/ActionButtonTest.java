@@ -1,7 +1,7 @@
 package c1.ui;
 
 import common.event.StringSource;
-import common.ui.UIButton;
+import common.uiwidget.UIButton;
 import fake.FakeC1RegistryLoader;
 import common.app.CurrentState;
 import common.event.Change;

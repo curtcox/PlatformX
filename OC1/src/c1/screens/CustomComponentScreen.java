@@ -4,7 +4,7 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
-import common.ui.UIComponent;
+import common.uiwidget.UIComponent;
 
 public final class CustomComponentScreen
     extends Screen

@@ -1,7 +1,7 @@
 package common.screen.dynamic;
 
 import common.screen.Screen;
-import common.ui.UIComponent;
+import common.uiwidget.UIComponent;
 
 /**
  * A screen that is created by a dynamic layout method.

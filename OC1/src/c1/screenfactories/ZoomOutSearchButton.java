@@ -5,7 +5,7 @@ import common.domain.ServiceProvider;
 import common.event.SwappableList;
 import c1.screenparts.SearchParams;
 import c1.services.ServiceProviders;
-import common.ui.UIButton;
+import common.uiwidget.UIButton;
 
 final class ZoomOutSearchButton
     extends UIButton

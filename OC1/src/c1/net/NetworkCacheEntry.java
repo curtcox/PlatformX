@@ -10,7 +10,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import common.Registry;
 import c1.ui.EmptyImage;
-import common.ui.UIImage;
+import common.uiwidget.UIImage;
 import common.util.Strings;
 
 final class NetworkCacheEntry {

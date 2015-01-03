@@ -1,4 +1,4 @@
-package common.ui;
+package common.uiwidget;
 
 public class UIComponent {
 }

@@ -3,7 +3,7 @@ package c1.ui;
 import com.codename1.ui.util.Resources;
 import common.Registry;
 import common.net.Network;
-import common.ui.UIImage;
+import common.uiwidget.UIImage;
 
 import java.net.URI;
 

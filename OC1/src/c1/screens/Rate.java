@@ -8,9 +8,9 @@ import common.screen.ScreenLink;
 import c1.screenparts.ProviderDetailsButton;
 import common.domain.Rating;
 import common.stores.MyRatings;
-import common.ui.UIButton;
-import common.ui.UILabel;
-import common.ui.UITextArea;
+import common.uiwidget.UIButton;
+import common.uiwidget.UILabel;
+import common.uiwidget.UITextArea;
 
 /**
  * See

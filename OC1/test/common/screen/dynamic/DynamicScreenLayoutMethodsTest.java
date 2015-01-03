@@ -1,9 +1,9 @@
 package common.screen.dynamic;
 
-import common.ui.UIGrid;
-import common.ui.UILabel;
-import common.ui.UIContainer;
-import common.ui.UITable;
+import common.uiwidget.UIGrid;
+import common.uiwidget.UILabel;
+import common.uiwidget.UIContainer;
+import common.uiwidget.UITable;
 import fake.FakeC1RegistryLoader;
 import hash.NamedExpression;
 import org.junit.Test;

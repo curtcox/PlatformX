@@ -1,6 +1,6 @@
 package common.net;
 
-import common.ui.UIImage;
+import common.uiwidget.UIImage;
 
 import java.io.InputStream;
 import java.net.URI;

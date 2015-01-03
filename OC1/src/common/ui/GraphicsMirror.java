@@ -1,7 +1,8 @@
-package common.util;
+package common.ui;
 
 import com.codename1.ui.*;
 import com.codename1.ui.geom.Shape;
+import common.util.AbstractMirror;
 
 public final class GraphicsMirror
     extends AbstractMirror<Graphics>
