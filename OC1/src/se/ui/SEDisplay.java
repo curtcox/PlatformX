@@ -4,6 +4,7 @@ import common.ui.IDisplay;
 import common.ui.IForm;
 
 import javax.swing.*;
+import java.awt.*;
 
 public final class SEDisplay
     implements IDisplay
@@ -41,12 +42,15 @@ public final class SEDisplay
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        frame.setSize(400,400);
+        frame.setPreferredSize(new Dimension(400, 400));
         return frame;
     }
 
     void show(SEForm form) {
         this.form = form;
-        frame.getContentPane().add(form);
+        Container contentPane = frame.getContentPane();
+        contentPane.removeAll();
+        contentPane.add(form);
+        frame.pack();
     }
 }
