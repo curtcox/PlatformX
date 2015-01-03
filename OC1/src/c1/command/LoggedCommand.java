@@ -21,8 +21,6 @@ public abstract class LoggedCommand
         go();
     }
 
-    abstract protected void go();
-    
     private void log(String message) {
         getLog().log(message);
     }

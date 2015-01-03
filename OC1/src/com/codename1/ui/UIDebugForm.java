@@ -29,7 +29,7 @@ public final class UIDebugForm
 
     private static Command submitIssue() {
         return new LoggedCommand("Report") {
-            @Override protected void go() {
+            @Override public void go() {
                 IssueReporter.sendEmail();
             }
         };

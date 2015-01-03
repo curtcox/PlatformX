@@ -51,7 +51,7 @@ public abstract class Screen {
         }
         previous = showing;
         back = new LoggedCommand("Back") {
-            @Override protected void go() {
+            @Override public void go() {
                 back();
             }
         };

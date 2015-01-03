@@ -6,12 +6,16 @@ import common.uiwidget.UIComponent;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 public final class SEForm
     extends JPanel
     implements IForm
 {
     private final String title;
+    private ICommand back;
+    private JButton backButton;
 
     public SEForm(String title) {
         this.title = title;
@@ -28,9 +32,22 @@ public final class SEForm
     private JPanel navigationPanel() {
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
-        panel.add(new JButton("<"),BorderLayout.WEST);
+        backButton = backButton();
+        panel.add(backButton,BorderLayout.WEST);
         panel.add(new JTextField(),BorderLayout.CENTER);
         return panel;
+    }
+
+    JButton backButton() {
+        JButton button = new JButton("<");
+        button.setEnabled(false);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                back.go();
+            }
+        });
+        return button;
     }
 
     @Override
@@ -40,12 +57,13 @@ public final class SEForm
 
     @Override
     public void setBackCommand(ICommand back) {
-
+        this.back = back;
+        backButton.setEnabled(back!=null);
     }
 
     @Override
     public void showBack() {
-
+        show();
     }
 
     @Override
