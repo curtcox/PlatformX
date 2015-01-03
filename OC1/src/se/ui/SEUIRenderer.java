@@ -56,7 +56,9 @@ final class SEUIRenderer {
 
     static JLabel label(UIComponent layout) {
         UILabel label = (UILabel) layout;
-        return new JLabel(label.text);
+        JLabel jlabel = new JLabel(label.text);
+        jlabel.setBorder(BorderFactory.createEmptyBorder(5,5,5,5));
+        return jlabel;
     }
 
     private static void log(Throwable t) {

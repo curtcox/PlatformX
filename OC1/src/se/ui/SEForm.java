@@ -8,20 +8,29 @@ import javax.swing.*;
 import java.awt.*;
 
 public final class SEForm
-    extends JComponent
+    extends JPanel
     implements IForm
 {
     private final String title;
 
     public SEForm(String title) {
         this.title = title;
-        setLayout(new GridLayout(1, 1));
+        setLayout(new BorderLayout());
     }
 
     @Override
     public void layout(UIComponent layout) {
         removeAll();
-        add(SEUIRenderer.render(layout));
+        add(SEUIRenderer.render(layout),BorderLayout.CENTER);
+        add(navigationPanel(),BorderLayout.NORTH);
+    }
+
+    private JPanel navigationPanel() {
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+        panel.add(new JButton("<"),BorderLayout.WEST);
+        panel.add(new JTextField(),BorderLayout.CENTER);
+        return panel;
     }
 
     @Override
