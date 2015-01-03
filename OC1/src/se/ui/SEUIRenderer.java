@@ -17,6 +17,7 @@ final class SEUIRenderer {
     static JComponent render(UIComponent layout) {
         if (layout instanceof UIButton)  { return button(layout); }
         if (layout instanceof UILabel)   { return label(layout);  }
+        if (layout instanceof UIFlow)    { return flow(layout);  }
         if (layout instanceof UIColumn)  { return column(layout);  }
         if (layout instanceof UIRow)     { return row(layout);  }
         String message = layout == null ? "null" : layout.getClass().getName();
@@ -36,6 +37,14 @@ final class SEUIRenderer {
     static JPanel box(UIComponent layout,int axis) {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel,axis));
+        for (UIComponent component : ((UIContainer) layout).components) {
+            panel.add(render(component));
+        }
+        return panel;
+    }
+
+    static JPanel flow(UIComponent layout) {
+        JPanel panel = new JPanel();
         for (UIComponent component : ((UIContainer) layout).components) {
             panel.add(render(component));
         }
