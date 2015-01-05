@@ -1,13 +1,13 @@
 package common.screen;
 
 import common.ICommand;
+import common.command.LoggedCommand;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import c1.command.*;
 import common.ui.IDisplay;
 import common.ui.IForm;
-import c1.ui.IFormFactory;
+import common.ui.IFormFactory;
 import common.uiwidget.UIComponent;
 
 /**
@@ -51,7 +51,7 @@ public abstract class Screen {
         }
         previous = showing;
         back = new LoggedCommand("Back") {
-            @Override public void go() {
+            @Override public void action() {
                 back();
             }
         };
@@ -73,14 +73,14 @@ public abstract class Screen {
     public void back() {
         log("back " + name);
         if (previous!=null) {
-            goBack();
+            previous.goBack();
         }
     }
     
     private void goBack() {
-        previous.refresh();
-        previous.layoutForm();
-        previous.form.showBack();
+        refresh();
+        layoutForm();
+        form.showBack();
     }
 
     /**

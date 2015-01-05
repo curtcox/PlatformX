@@ -1,7 +1,7 @@
 package se.ui;
 
 import common.ui.IForm;
-import c1.ui.IFormFactory;
+import common.ui.IFormFactory;
 
 public final class SEFormFactory
     implements IFormFactory

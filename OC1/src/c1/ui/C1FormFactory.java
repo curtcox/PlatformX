@@ -1,6 +1,7 @@
 package c1.ui;
 
 import common.ui.IForm;
+import common.ui.IFormFactory;
 
 /**
  * For creating new FormS.

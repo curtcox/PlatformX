@@ -3,15 +3,15 @@ package c1.command;
 import com.codename1.ui.Command;
 import com.codename1.ui.events.ActionEvent;
 import common.ICommand;
+import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.Registry;
 
-public abstract class LoggedCommand
+public abstract class C1LoggedCommand
     extends Command
     implements ICommand
 {
-    public LoggedCommand(String command) {
+    public C1LoggedCommand(String command) {
         super(command);
     }
     
@@ -26,7 +26,7 @@ public abstract class LoggedCommand
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(LoggedCommand.class);
+        return Registry.get(ILogManager.class).getLog(C1LoggedCommand.class);
     }
 
 }

@@ -1,5 +1,6 @@
 package c1.ui;
 
+import c1.command.C1LoggedCommand;
 import com.codename1.ui.Command;
 import com.codename1.ui.Component;
 import com.codename1.ui.Form;
@@ -13,7 +14,7 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import c1.Components;
-import c1.command.LoggedCommand;
+import common.command.LoggedCommand;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -29,7 +30,7 @@ public class C1Form
     }
 
     private static Command goHome() {
-        return new LoggedCommand("Home") {
+        return new C1LoggedCommand("Home") {
             @Override public void go() {
                 ScreenFactory.DEFAULT.create(new ScreenLink("")).show();
             }

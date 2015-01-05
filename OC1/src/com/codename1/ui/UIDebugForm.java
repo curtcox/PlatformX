@@ -1,10 +1,11 @@
 package com.codename1.ui;
 
+import c1.command.C1LoggedCommand;
 import com.codename1.ui.animations.Transition;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import c1.command.LoggedCommand;
+import common.command.LoggedCommand;
 import c1.log.IssueReporter;
 
 /**
@@ -28,7 +29,7 @@ public final class UIDebugForm
     }
 
     private static Command submitIssue() {
-        return new LoggedCommand("Report") {
+        return new C1LoggedCommand("Report") {
             @Override public void go() {
                 IssueReporter.sendEmail();
             }
