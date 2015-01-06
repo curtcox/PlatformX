@@ -14,7 +14,7 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ScreenButtonTest {
+public class C1ScreenButtonTest {
 
     private UIButton createScreenButtonOnEDT(final String text, final Screen screen) throws Exception {
         return (UIButton) FakeUI.onEDT(new Callable(){
