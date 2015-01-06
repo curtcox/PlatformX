@@ -9,6 +9,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 
 public class ScreenTest {
 
@@ -67,11 +68,16 @@ public class ScreenTest {
     }
 
     @Test
-    public void back_shows_previously_shown_screen() {
-        FakeForm form1 = new FakeForm();
-        FakeForm form2 = new FakeForm();
-        ExampleScreen first = new ExampleScreen(form1,"first");
-        ExampleScreen second = new ExampleScreen(form2,"second");
+    public void show_calls_show_on_form() {
+        testObject.show();
+
+        assertTrue(form.showWasCalled);
+    }
+
+    @Test
+    public void getShowing_returns_original_screen_after_going_back_to_it() {
+        ExampleScreen first = new ExampleScreen(new FakeForm(),"first");
+        ExampleScreen second = new ExampleScreen(new FakeForm(),"second");
 
         first.show();
         second.show();
@@ -79,6 +85,20 @@ public class ScreenTest {
         second.back();
 
         assertSame(first,Screen.getShowing());
+    }
+
+    @Test
+    public void back_shows_previously_shown_screen() {
+        FakeForm form1 = new FakeForm();
+        ExampleScreen first = new ExampleScreen(form1,"first");
+        ExampleScreen second = new ExampleScreen(new FakeForm(),"second");
+
+        first.show();
+        second.show();
+
+        second.back();
+
+        assertTrue(form1.showBackWasCalled);
     }
 
     private String random(String name) {

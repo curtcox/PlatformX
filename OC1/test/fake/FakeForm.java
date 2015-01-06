@@ -8,6 +8,8 @@ public class FakeForm
     implements IForm
 {
     public UIComponent layout;
+    public boolean showWasCalled;
+    public boolean showBackWasCalled;
 
     @Override
     public void layout(UIComponent layout) {
@@ -16,7 +18,7 @@ public class FakeForm
 
     @Override
     public void show() {
-
+        showWasCalled = true;
     }
 
     @Override
@@ -26,7 +28,7 @@ public class FakeForm
 
     @Override
     public void showBack() {
-
+        showBackWasCalled = true;
     }
 
     @Override

@@ -78,11 +78,11 @@ public abstract class Screen {
     public void back() {
         log("back " + name);
         if (previous!=null) {
-            previous.goBack();
+            previous.goBackToThisScreen();
         }
     }
     
-    private void goBack() {
+    private void goBackToThisScreen() {
         showing = this;
         refresh();
         layoutForm();
