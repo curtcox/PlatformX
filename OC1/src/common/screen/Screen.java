@@ -1,6 +1,6 @@
 package common.screen;
 
-import common.command.LoggedCommand;
+import common.command.Command;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
@@ -19,7 +19,7 @@ public abstract class Screen {
     public final IForm form;
     private final String name;
     private Screen previous; // set once
-    private LoggedCommand back;    // set once
+    private Command back;    // set once
     private static Screen showing; // the currently showing screen
     
     /**
@@ -49,7 +49,7 @@ public abstract class Screen {
             return;
         }
         previous = showing;
-        back = new LoggedCommand("Back") {
+        back = new Command("Back") {
             @Override public void action() {
                 back();
             }

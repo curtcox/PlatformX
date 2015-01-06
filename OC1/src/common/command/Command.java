@@ -4,10 +4,10 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 
-public abstract class LoggedCommand {
+public abstract class Command {
     public final String command;
 
-    public LoggedCommand(String command) {
+    public Command(String command) {
         this.command = command;
     }
     
@@ -23,7 +23,7 @@ public abstract class LoggedCommand {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(LoggedCommand.class);
+        return Registry.get(ILogManager.class).getLog(Command.class);
     }
 
 }

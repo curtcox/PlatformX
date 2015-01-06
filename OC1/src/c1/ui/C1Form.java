@@ -1,7 +1,6 @@
 package c1.ui;
 
 import c1.command.C1LoggedCommand;
-import com.codename1.ui.Command;
 import com.codename1.ui.Component;
 import com.codename1.ui.Form;
 import com.codename1.ui.Label;
@@ -13,7 +12,7 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import c1.Components;
-import common.command.LoggedCommand;
+import common.command.Command;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -28,8 +27,8 @@ public class C1Form
         refreshOnPull();
     }
 
-    private static Command goHome() {
-        return new C1LoggedCommand(new LoggedCommand("Home") {
+    private static com.codename1.ui.Command goHome() {
+        return new C1LoggedCommand(new Command("Home") {
             @Override public void action() {
                 ScreenFactory.DEFAULT.create(new ScreenLink("")).show();
             }
@@ -71,7 +70,7 @@ public class C1Form
     }
 
     @Override
-    public void setBackCommand(LoggedCommand back) {
+    public void setBackCommand(Command back) {
         super.setBackCommand(new C1LoggedCommand(back));
     }
 

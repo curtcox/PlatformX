@@ -1,13 +1,12 @@
 package c1.ui;
 
 import c1.command.C1LoggedCommand;
-import com.codename1.ui.Command;
 import com.codename1.ui.Component;
 import com.codename1.ui.Form;
 import com.codename1.ui.Graphics;
 import com.codename1.ui.animations.Transition;
 import c1.log.IssueReporter;
-import common.command.LoggedCommand;
+import common.command.Command;
 
 /**
  * A Form with lots of extra debugging.
@@ -29,8 +28,8 @@ final class DebugForm
         return form;
     }
 
-    private static Command submitIssue() {
-        return new C1LoggedCommand(new LoggedCommand("Report") {
+    private static com.codename1.ui.Command submitIssue() {
+        return new C1LoggedCommand(new Command("Report") {
             @Override public void action() {
                 IssueReporter.sendEmail();
             }

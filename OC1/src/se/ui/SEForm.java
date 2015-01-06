@@ -1,6 +1,6 @@
 package se.ui;
 
-import common.command.LoggedCommand;
+import common.command.Command;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -14,7 +14,7 @@ public final class SEForm
     implements IForm
 {
     private final String title;
-    private LoggedCommand back;
+    private Command back;
     private JButton backButton;
 
     public SEForm(String title) {
@@ -56,7 +56,7 @@ public final class SEForm
     }
 
     @Override
-    public void setBackCommand(LoggedCommand back) {
+    public void setBackCommand(Command back) {
         this.back = back;
         backButton.setEnabled(back!=null);
     }

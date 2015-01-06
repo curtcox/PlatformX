@@ -1,18 +1,17 @@
 package c1.command;
 
-import com.codename1.ui.Command;
 import com.codename1.ui.events.ActionEvent;
 import common.Registry;
-import common.command.LoggedCommand;
+import common.command.Command;
 import common.log.ILog;
 import common.log.ILogManager;
 
 public class C1LoggedCommand
-    extends Command
+    extends com.codename1.ui.Command
 {
-    final LoggedCommand command;
+    final Command command;
 
-    public C1LoggedCommand(LoggedCommand command) {
+    public C1LoggedCommand(Command command) {
         super(command.command);
         this.command = command;
     }

@@ -1,6 +1,6 @@
 package common.ui;
 
-import common.command.LoggedCommand;
+import common.command.Command;
 import common.uiwidget.UIComponent;
 
 public interface IForm {
@@ -8,7 +8,7 @@ public interface IForm {
 
     void show();
 
-    void setBackCommand(LoggedCommand back);
+    void setBackCommand(Command back);
 
     void showBack();
 

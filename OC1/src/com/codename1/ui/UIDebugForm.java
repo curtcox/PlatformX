@@ -5,7 +5,7 @@ import com.codename1.ui.animations.Transition;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import common.command.LoggedCommand;
+import common.command.Command;
 import c1.log.IssueReporter;
 
 /**
@@ -28,8 +28,8 @@ public final class UIDebugForm
         return form;
     }
 
-    private static Command submitIssue() {
-        return new C1LoggedCommand(new LoggedCommand("Report") {
+    private static com.codename1.ui.Command submitIssue() {
+        return new C1LoggedCommand(new Command("Report") {
             @Override
             protected void action() {
                 IssueReporter.sendEmail();
