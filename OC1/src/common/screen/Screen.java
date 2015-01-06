@@ -62,7 +62,9 @@ public abstract class Screen {
         showing = this;
         refresh();
         form.show();
-        form.setBackCommand(back);
+        if (back!=null) {
+            form.setBackCommand(back);
+        }
     }
    
     public static Screen getShowing() {
