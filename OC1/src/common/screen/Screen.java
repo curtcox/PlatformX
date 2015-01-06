@@ -1,6 +1,5 @@
 package common.screen;
 
-import common.ICommand;
 import common.command.LoggedCommand;
 import common.log.ILog;
 import common.log.ILogManager;
@@ -20,7 +19,7 @@ public abstract class Screen {
     public final IForm form;
     private final String name;
     private Screen previous; // set once
-    private ICommand back;    // set once
+    private LoggedCommand back;    // set once
     private static Screen showing; // the currently showing screen
     
     /**

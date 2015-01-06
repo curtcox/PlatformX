@@ -1,23 +1,19 @@
 package common.command;
 
-import common.ICommand;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 
-public abstract class LoggedCommand
-    implements ICommand
-{
-    final String command;
+public abstract class LoggedCommand {
+    public final String command;
 
     public LoggedCommand(String command) {
         this.command = command;
     }
     
-    @Override
     public void go() {
         log("Executing " + command);
-        go();
+        action();
     }
 
     protected abstract void action();

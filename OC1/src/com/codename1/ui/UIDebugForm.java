@@ -29,11 +29,12 @@ public final class UIDebugForm
     }
 
     private static Command submitIssue() {
-        return new C1LoggedCommand("Report") {
-            @Override public void go() {
+        return new C1LoggedCommand(new LoggedCommand("Report") {
+            @Override
+            protected void action() {
                 IssueReporter.sendEmail();
             }
-        };
+        });
     }
 
     @Override protected void onShow()          { log("onShow"); }

@@ -1,6 +1,6 @@
 package fake;
 
-import common.ICommand;
+import common.command.LoggedCommand;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -20,7 +20,7 @@ public class FakeForm
     }
 
     @Override
-    public void setBackCommand(ICommand back) {
+    public void setBackCommand(LoggedCommand back) {
 
     }
 

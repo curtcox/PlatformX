@@ -9,7 +9,6 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.Layout;
-import common.ICommand;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
@@ -30,11 +29,11 @@ public class C1Form
     }
 
     private static Command goHome() {
-        return new C1LoggedCommand("Home") {
-            @Override public void go() {
+        return new C1LoggedCommand(new LoggedCommand("Home") {
+            @Override public void action() {
                 ScreenFactory.DEFAULT.create(new ScreenLink("")).show();
             }
-        };
+        });
     }
 
     private void refreshOnOrientationChange() {
@@ -72,8 +71,8 @@ public class C1Form
     }
 
     @Override
-    public void setBackCommand(ICommand back) {
-        super.setBackCommand((Command) back);
+    public void setBackCommand(LoggedCommand back) {
+        super.setBackCommand(new C1LoggedCommand(back));
     }
 
 }

@@ -6,8 +6,8 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Form;
 import com.codename1.ui.Graphics;
 import com.codename1.ui.animations.Transition;
-import common.command.LoggedCommand;
 import c1.log.IssueReporter;
+import common.command.LoggedCommand;
 
 /**
  * A Form with lots of extra debugging.
@@ -30,11 +30,11 @@ final class DebugForm
     }
 
     private static Command submitIssue() {
-        return new C1LoggedCommand("Report") {
-            @Override public void go() {
+        return new C1LoggedCommand(new LoggedCommand("Report") {
+            @Override public void action() {
                 IssueReporter.sendEmail();
             }
-        };
+        });
     }
 
     @Override protected void onShow()          { log("onShow"); }

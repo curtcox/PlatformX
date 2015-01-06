@@ -2,23 +2,25 @@ package c1.command;
 
 import com.codename1.ui.Command;
 import com.codename1.ui.events.ActionEvent;
-import common.ICommand;
 import common.Registry;
+import common.command.LoggedCommand;
 import common.log.ILog;
 import common.log.ILogManager;
 
-public abstract class C1LoggedCommand
+public class C1LoggedCommand
     extends Command
-    implements ICommand
 {
-    public C1LoggedCommand(String command) {
-        super(command);
+    final LoggedCommand command;
+
+    public C1LoggedCommand(LoggedCommand command) {
+        super(command.command);
+        this.command = command;
     }
     
     @Override
     public void actionPerformed(ActionEvent event) {
         log("Executing " + getCommandName());
-        go();
+        command.go();
     }
 
     private void log(String message) {
