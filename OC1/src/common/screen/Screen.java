@@ -17,7 +17,7 @@ import common.uiwidget.UIComponent;
 public abstract class Screen {
 
     public final IForm form;
-    private final String name;
+    public final String name;
     private Screen previous; // set once
     private Command back;    // set once
     private static Screen showing; // the currently showing screen
@@ -49,7 +49,11 @@ public abstract class Screen {
             return;
         }
         previous = showing;
-        back = new Command("Back") {
+        back = backCommand();
+    }
+
+    private Command backCommand() {
+        return new Command("Back") {
             @Override public void action() {
                 back();
             }
@@ -79,6 +83,7 @@ public abstract class Screen {
     }
     
     private void goBack() {
+        showing = this;
         refresh();
         layoutForm();
         form.showBack();
