@@ -7,9 +7,7 @@ import fake.FakeSERegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class ScreenTest {
 
@@ -99,6 +97,21 @@ public class ScreenTest {
         second.back();
 
         assertTrue(form1.showBackWasCalled);
+    }
+
+    @Test
+    public void setBackCommand_is_called_when_there_is_a_previous_screen() {
+        FakeForm form1 = new FakeForm();
+        FakeForm form2 = new FakeForm();
+        ExampleScreen first = new ExampleScreen(form1,"first");
+        ExampleScreen second = new ExampleScreen(form2,"second");
+
+        first.show();
+        second.show();
+
+        second.back();
+
+        assertEquals("Back", form2.getBackCommand().command);
     }
 
     private String random(String name) {

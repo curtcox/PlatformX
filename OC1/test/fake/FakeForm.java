@@ -10,6 +10,7 @@ public class FakeForm
     public UIComponent layout;
     public boolean showWasCalled;
     public boolean showBackWasCalled;
+    private Command backCommand;
 
     @Override
     public void layout(UIComponent layout) {
@@ -22,8 +23,8 @@ public class FakeForm
     }
 
     @Override
-    public void setBackCommand(Command back) {
-
+    public void setBackCommand(Command backCommand) {
+        this.backCommand = backCommand;
     }
 
     @Override
@@ -34,5 +35,9 @@ public class FakeForm
     @Override
     public String getTitle() {
         return null;
+    }
+
+    public Command getBackCommand() {
+        return backCommand;
     }
 }
