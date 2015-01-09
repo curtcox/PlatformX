@@ -1,5 +1,10 @@
 package se.uiwidget;
 
+import common.ui.AttributedString;
+import common.ui.AttributedString.*;
+import common.ui.AttributedString.Renderer;
+import common.uiwidget.UIAttributedText.*;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.MouseEvent;
@@ -9,7 +14,11 @@ public final class SEAttributedText
     extends JComponent
     implements MouseListener
 {
-    SEAttributedText() {
+    final AttributedString text;
+    private TextLayout layout;
+
+    SEAttributedText(AttributedString text) {
+        this.text = text;
         addMouseListener(this);
     }
 
@@ -21,15 +30,32 @@ public final class SEAttributedText
     }
 
     void drawText(Graphics2D g) {
-        g.setColor(Color.BLACK);
-        g.drawString("text", 0, 0);
-        g.drawString("TEXT_DECORATION_NONE", 0, 20);
-        g.drawString("TEXT_DECORATION_UNDERLINE", 0, 40);
-        g.drawString("TEXT_DECORATION_STRIKETHRU", 0, 60);
-        g.drawString("TEXT_DECORATION_OVERLINE", 0, 80);
-        g.drawString("TEXT_DECORATION_3D_SHADOW_NORTH", 0, 100);
-        g.drawString("TEXT_DECORATION_3D", 0, 120);
-        g.drawString("TEXT_DECORATION_3D_LOWERED", 0, 140);
+        layout = new TextLayout(getSize());
+        for (Part part : text) {
+            drawTextPart(part,g);
+        }
+    }
+
+    void drawTextPart(Part part,Graphics2D g) {
+        Renderer renderer = new SEAttributedStringRenderer(g);
+        Point at = layout.addRectangle(renderer.size(part));
+        Part first = biggestPartThatWillFit(part, renderer);
+        renderer.renderPartAt(first, at);
+        if (!first.equals(part)) {
+            Part rest = part.minusPrefix(first);
+            drawTextPart(rest,g);
+        }
+    }
+
+    private Part biggestPartThatWillFit(Part part, Renderer renderer) {
+        for (int i=part.size; i>0; i--) {
+            Part subPart = part.prefixOfSize(i);
+            Dimension textBox = renderer.size(subPart);
+            if (layout.willFit(textBox)) {
+                return part;
+            }
+        }
+        return part.prefixOfSize(1);
     }
 
     void drawBackground(Graphics2D g) {
@@ -37,46 +63,23 @@ public final class SEAttributedText
         g.fillRect(0,0, getWidth(), getHeight());
     }
 
-    public static void main(String[] args) {
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                launch();
-            }
-        });
-    }
-
-    static void launch() {
-        JFrame frame = new JFrame();
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(new SEAttributedText());
-        frame.setVisible(true);
-        frame.setPreferredSize(new Dimension(400,400));
-        frame.pack();
-    }
-
     @Override
     public void mouseClicked(MouseEvent mouseEvent) {
-        System.out.println(mouseEvent);
+        SelectedEvent event = selectedEvent(mouseEvent);
+        if (event!=null) {
+            onTextSelected(event);
+        }
     }
 
-    @Override
-    public void mousePressed(MouseEvent mouseEvent) {
-        System.out.println(mouseEvent);
+    private SelectedEvent selectedEvent(MouseEvent mouseEvent) {
+        int index = layout.getPointIndex(mouseEvent.getPoint());
+        return index==-1 ? null : new SelectedEvent(text,index);
     }
 
-    @Override
-    public void mouseReleased(MouseEvent mouseEvent) {
-        System.out.println(mouseEvent);
-    }
+    @Override public void mousePressed(MouseEvent mouseEvent) {}
+    @Override public void mouseReleased(MouseEvent mouseEvent) {}
+    @Override public void mouseEntered(MouseEvent mouseEvent) {}
+    @Override public void mouseExited(MouseEvent mouseEvent) {}
 
-    @Override
-    public void mouseEntered(MouseEvent mouseEvent) {
-        System.out.println(mouseEvent);
-    }
-
-    @Override
-    public void mouseExited(MouseEvent mouseEvent) {
-        System.out.println(mouseEvent);
-    }
+    protected void onTextSelected(SelectedEvent event) {}
 }

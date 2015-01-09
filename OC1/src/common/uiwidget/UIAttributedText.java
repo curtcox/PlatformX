@@ -17,7 +17,7 @@ public abstract class UIAttributedText
         public final AttributedString text;
         public final int part;
 
-        SelectedEvent(AttributedString text, int part) {
+        public SelectedEvent(AttributedString text, int part) {
             this.text = text;
             this.part = part;
         }

@@ -2,7 +2,7 @@ package common.ui;
 
 import common.util.Objects;
 
-import java.awt.Color;
+import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -41,17 +41,24 @@ public final class AttributedString
         None,Underline,Strikethru,Overline,ShadowNorth3D,Normal3D,Lowered3D
     }
 
+    public interface Renderer {
+        void renderPartAt(AttributedString.Part part,Point point);
+        Dimension size(AttributedString.Part part);
+    }
+
     public static final class Part {
         public final UIFont font;
         public final Color color;
         public final String text;
         public final Decoration decoration;
-        
+        public final int size;
+
         Part(UIFont font, Color color, Decoration decoration, String text) {
             this.font = font;
             this.color = color;
             this.text = text;
             this.decoration = decoration;
+            this.size = text.length();
         }
         
         @Override
@@ -76,6 +83,14 @@ public final class AttributedString
                     " font=" + font
             ;
         }
+
+        public Part minusPrefix(Part first) {
+            return null;
+        }
+
+        public Part prefixOfSize(int i) {
+            return null;
+        }
     }
             
     private AttributedString(Builder builder) {
@@ -93,11 +108,11 @@ public final class AttributedString
         UIFont font;
         Decoration decoration;
 
-        AttributedString build() {
+        public AttributedString build() {
             return new AttributedString(this);
         }
 
-        Builder append(String string) {
+        public Builder append(String string) {
             this.text.append(string);
             if (!(Objects.areEqual(prior,current))) {
                 partsText = new ArrayList<String>();
@@ -121,19 +136,19 @@ public final class AttributedString
             return new Part(font,color,decoration,out.toString());
         }
         
-        Builder font(UIFont font) {
+        public Builder font(UIFont font) {
             this.font = font;
             current = currentAttributes();
             return this;
         }
 
-        Builder decoration(Decoration decoration) {
+        public Builder decoration(Decoration decoration) {
             this.decoration = decoration;
             current = currentAttributes();
             return this;
         }
 
-        Builder color(Color color) {
+        public Builder color(Color color) {
             this.color = color;
             current = currentAttributes();
             return this;
