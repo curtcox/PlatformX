@@ -3,6 +3,8 @@ package common.ui;
 import common.util.Objects;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
@@ -22,6 +24,14 @@ public final class AttributedString
     AttributedString(String text,List<Part> parts) {
         this.parts = parts;
         this.text = text;
+    }
+
+    public AttributedString() {
+        this("",new ArrayList<Part>());
+    }
+
+    public AttributedString(String text) {
+        this(text, Arrays.asList(new Part[]{new Part(null,null,null,text)}));
     }
 
     public Iterator<Part> iterator() {
