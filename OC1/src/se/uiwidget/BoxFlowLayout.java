@@ -2,9 +2,9 @@ package se.uiwidget;
 
 import java.awt.*;
 
-final class TextLayout {
+final class BoxFlowLayout {
 
-    public TextLayout(Dimension size) {
+    public BoxFlowLayout(Dimension size) {
 
     }
 

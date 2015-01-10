@@ -15,7 +15,7 @@ public final class SEAttributedText
     implements MouseListener
 {
     final AttributedString text;
-    private TextLayout layout;
+    private BoxFlowLayout layout;
 
     SEAttributedText(AttributedString text) {
         this.text = text;
@@ -26,24 +26,24 @@ public final class SEAttributedText
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         drawBackground(g2d);
-        drawText(g2d);
+        layout = new BoxFlowLayout(getSize());
+        drawText(new SEAttributedStringRenderer(g2d));
     }
 
-    void drawText(Graphics2D g) {
-        layout = new TextLayout(getSize());
+    void drawText(Renderer renderer) {
         for (Part part : text) {
-            drawTextPart(part,g);
+            drawTextPart(part,renderer);
         }
     }
 
-    void drawTextPart(Part part,Graphics2D g) {
-        Renderer renderer = new SEAttributedStringRenderer(g);
+
+    void drawTextPart(Part part,Renderer renderer) {
         Point at = layout.addRectangle(renderer.size(part));
         Part first = biggestPartThatWillFit(part, renderer);
         renderer.renderPartAt(first, at);
         if (!first.equals(part)) {
             Part rest = part.minusPrefix(first);
-            drawTextPart(rest,g);
+            drawTextPart(rest,renderer);
         }
     }
 

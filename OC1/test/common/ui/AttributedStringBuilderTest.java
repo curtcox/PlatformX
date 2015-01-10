@@ -7,34 +7,34 @@ import common.ui.AttributedString.Part;
 import static common.ui.AttributedString.Decoration.*;
 import static org.junit.Assert.*;
 
-public class AttributedStringTest {
+public class AttributedStringBuilderTest {
     
     @Test
     public void can_create() {
-        assertTrue(AttributedString.builder().build() instanceof AttributedString);
+        assertTrue(new AttributedStringBuilder().build() instanceof AttributedString);
     }
 
     @Test
     public void toString_with_no_parts() {
-        AttributedString string = AttributedString.builder().build(); 
+        AttributedString string = new AttributedStringBuilder().build();
         assertEquals("",string.toString());
     }
 
     @Test
     public void no_parts() {
-        AttributedString string = AttributedString.builder().build(); 
+        AttributedString string = new AttributedStringBuilder().build();
         assertEquals(0,string.parts.size());
     }
 
     @Test
-    public void iteratable_hasNext_returns_false_for_no_parts() {
-        AttributedString string = AttributedString.builder().build(); 
+    public void iterator_hasNext_returns_false_for_no_parts() {
+        AttributedString string = new AttributedStringBuilder().build();
         assertFalse(string.iterator().hasNext());
     }
 
     @Test
     public void simple_text_with_no_attributes() {
-        AttributedString string = AttributedString.builder()
+        AttributedString string = new AttributedStringBuilder()
                 .append("text")
                 .build(); 
         assertParts(string,new Part(null,null,null,"text"));
@@ -42,7 +42,7 @@ public class AttributedStringTest {
 
     @Test
     public void one_part_red_text() {
-        AttributedString string = AttributedString.builder()
+        AttributedString string = new AttributedStringBuilder()
                 .color(Color.RED)
                 .append("text")
                 .build(); 
@@ -52,7 +52,7 @@ public class AttributedStringTest {
 
     @Test
     public void appended_text_with_2_parts_and_no_markup() {
-        AttributedString string = AttributedString.builder()
+        AttributedString string = new AttributedStringBuilder()
                 .append("text ")
                 .append("more text")
                 .build(); 
@@ -62,7 +62,7 @@ public class AttributedStringTest {
 
     @Test
     public void appended_text_with_3_parts_and_no_markup() {
-        AttributedString string = AttributedString.builder()
+        AttributedString string = new AttributedStringBuilder()
                 .append("tinker ")
                 .append("evars ")
                 .append("chance")
@@ -73,7 +73,7 @@ public class AttributedStringTest {
 
     @Test
     public void appended_text_with_a_color_change_1() {
-        AttributedString string = AttributedString.builder()
+        AttributedString string = new AttributedStringBuilder()
                 .append("text ")
                 .color(Color.RED)
                 .append("more text")
@@ -86,7 +86,7 @@ public class AttributedStringTest {
 
     @Test
     public void appended_text_with_a_color_change_2() {
-        AttributedString string = AttributedString.builder()
+        AttributedString string = new AttributedStringBuilder()
                 .append("text ")
                 .color(Color.RED)
                 .append("more ")
@@ -100,7 +100,7 @@ public class AttributedStringTest {
 
     @Test
     public void appended_text_with_2_color_changes() {
-        AttributedString string = AttributedString.builder()
+        AttributedString string = new AttributedStringBuilder()
                 .append("USA ")
                 .color(Color.RED)
                 .append("Red ")
