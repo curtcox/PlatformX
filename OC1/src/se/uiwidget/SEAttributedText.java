@@ -1,8 +1,8 @@
 package se.uiwidget;
 
 import common.ui.AttributedString;
-import common.ui.AttributedString.*;
-import common.ui.AttributedString.Renderer;
+import common.ui.AttributedString.PartRenderer;
+import common.ui.SimpleAttributedStringRenderer;
 import common.uiwidget.UIAttributedText.*;
 
 import javax.swing.*;
@@ -10,15 +10,25 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
-public final class SEAttributedText
+public class SEAttributedText
     extends JComponent
     implements MouseListener
 {
     final AttributedString text;
+    final AttributedStringRenderer stringRenderer;
     private BoxFlowLayout layout;
 
+    public interface AttributedStringRenderer {
+        void drawText(AttributedString text,PartRenderer renderer,BoxFlowLayout layout);
+    }
+
     SEAttributedText(AttributedString text) {
+        this(text,new SimpleAttributedStringRenderer());
+    }
+
+    SEAttributedText(AttributedString text,AttributedStringRenderer stringRenderer) {
         this.text = text;
+        this.stringRenderer = stringRenderer;
         addMouseListener(this);
     }
 
@@ -26,36 +36,12 @@ public final class SEAttributedText
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         drawBackground(g2d);
-        layout = new BoxFlowLayout(getSize());
         drawText(new SEAttributedStringRenderer(g2d));
     }
 
-    void drawText(Renderer renderer) {
-        for (Part part : text) {
-            drawTextPart(part,renderer);
-        }
-    }
-
-
-    void drawTextPart(Part part,Renderer renderer) {
-        Point at = layout.addRectangle(renderer.size(part));
-        Part first = biggestPartThatWillFit(part, renderer);
-        renderer.renderPartAt(first, at);
-        if (!first.equals(part)) {
-            Part rest = part.minusPrefix(first);
-            drawTextPart(rest,renderer);
-        }
-    }
-
-    private Part biggestPartThatWillFit(Part part, Renderer renderer) {
-        for (int i=part.size; i>0; i--) {
-            Part subPart = part.prefixOfSize(i);
-            Dimension textBox = renderer.size(subPart);
-            if (layout.willFit(textBox)) {
-                return part;
-            }
-        }
-        return part.prefixOfSize(1);
+    void drawText(PartRenderer partRenderer) {
+        layout = new BoxFlowLayout(getSize());
+        stringRenderer.drawText(text, partRenderer, layout);
     }
 
     void drawBackground(Graphics2D g) {

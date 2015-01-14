@@ -5,7 +5,7 @@ import common.ui.AttributedString;
 import java.awt.*;
 
 final class SEAttributedStringRenderer
-    implements AttributedString.Renderer
+    implements AttributedString.PartRenderer
 {
 
     private final Graphics2D g;

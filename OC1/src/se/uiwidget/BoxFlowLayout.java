@@ -2,21 +2,31 @@ package se.uiwidget;
 
 import java.awt.*;
 
-final class BoxFlowLayout {
+public final class BoxFlowLayout {
+
+    private final Dimension size;
 
     public BoxFlowLayout(Dimension size) {
-
+        this.size = size;
     }
 
-    boolean willFit(Dimension size) {
+    public boolean willFitOnALine(Dimension size) {
         return false;
     }
 
-    Point addRectangle(Dimension size) {
+    public boolean willFitOnThisLine(Dimension size) {
+        return size.width <= this.size.width && size.height<=this.size.height;
+    }
+
+    public Point startNextLineWith(Dimension size) {
         return null;
     }
 
-    int getPointIndex(Point point) {
-        return 0;
+    public Point addBoxToThisLine(Dimension size) {
+        return null;
+    }
+
+    public int getPointIndex(Point point) {
+        return -1;
     }
 }

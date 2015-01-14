@@ -47,7 +47,7 @@ public final class AttributedString
         None,Underline,Strikethru,Overline,ShadowNorth3D,Normal3D,Lowered3D
     }
 
-    public interface Renderer {
+    public interface PartRenderer {
         void renderPartAt(AttributedString.Part part,Point point);
         Dimension size(AttributedString.Part part);
     }

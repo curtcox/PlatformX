@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/ui/AttributedStringBuilder.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se\uiwidget\TextLayout.java" afterPath="$PROJECT_DIR$/OC1/src/se/uiwidget/BoxFlowLayout.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\ui\AttributedStringTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/ui/AttributedStringBuilderTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/BoxFlowLayoutTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextDemo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/ui/SimpleAttributedStringRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/ui/AttributedString.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/AttributedString.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uiwidget/BoxFlowLayout.java" afterPath="$PROJECT_DIR$/OC1/src/se/uiwidget/BoxFlowLayout.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedStringRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedStringRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedText.java" afterPath="$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedText.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -32,10 +34,10 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="ScreenTest.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="ScreenTest.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/ScreenTest.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="1.8424581" vertical-offset="51" max-vertical-offset="1904">
+                  <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1904">
                     <caret line="113" column="16" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
                     <folding>
                       <element signature="e#693#694#0" expanded="true" />
@@ -48,10 +50,44 @@
             <file leaf-file-name="SEAttributedText.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedText.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
-                    <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="1309">
+                    <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
                     <folding>
                       <element signature="imports" expanded="true" />
+                      <element signature="e#702#703#0" expanded="true" />
+                      <element signature="e#765#766#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="SEAttributedStringRenderer.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedStringRenderer.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+                    <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+                    <folding>
+                      <element signature="e#243#244#0" expanded="true" />
+                      <element signature="e#269#270#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="BoxFlowLayout.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/BoxFlowLayout.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.5318436" vertical-offset="0" max-vertical-offset="895">
+                    <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+                    <folding>
+                      <element signature="e#154#155#0" expanded="true" />
+                      <element signature="e#186#187#0" expanded="true" />
+                      <element signature="e#239#240#0" expanded="true" />
+                      <element signature="e#267#268#0" expanded="true" />
+                      <element signature="e#462#463#0" expanded="true" />
+                      <element signature="e#489#490#0" expanded="true" />
+                      <element signature="e#542#543#0" expanded="true" />
+                      <element signature="e#569#570#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -68,21 +104,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AttributedStringBuilderTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OC1/test/common/ui/AttributedStringBuilderTest.java">
+      <file leaf-file-name="SimpleAttributedStringRenderer.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/SimpleAttributedStringRenderer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.2461773" vertical-offset="1565" max-vertical-offset="2482">
-              <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AttributedString.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/AttributedString.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="1513">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.9097859" vertical-offset="102" max-vertical-offset="799">
+              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -90,28 +116,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AttributedStringBuilder.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/AttributedStringBuilder.java">
+      <file leaf-file-name="BoxFlowLayoutTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/test/se/uiwidget/BoxFlowLayoutTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
-              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BoxFlowLayout.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/BoxFlowLayout.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+              <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
               <folding>
-                <element signature="e#158#159#0" expanded="true" />
-                <element signature="e#186#187#0" expanded="true" />
-                <element signature="e#228#229#0" expanded="true" />
-                <element signature="e#255#256#0" expanded="true" />
-                <element signature="e#293#294#0" expanded="true" />
-                <element signature="e#317#318#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#273#274#0" expanded="true" />
+                <element signature="e#341#342#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -120,12 +133,20 @@
       <file leaf-file-name="SEAttributedTextTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="564" max-vertical-offset="1411">
+              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#253#254#0" expanded="true" />
-                <element signature="e#343#344#0" expanded="true" />
+                <element signature="e#736#737#0" expanded="true" />
+                <element signature="e#771#772#0" expanded="true" />
+                <element signature="e#850#851#0" expanded="true" />
+                <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#941#942#0" expanded="true" />
+                <element signature="e#1018#1019#0" expanded="true" />
+                <element signature="e#2062#2210#0" expanded="true" />
+                <element signature="e#2209#2210#0" expanded="true" />
+                <element signature="e#2293#2294#0" expanded="true" />
+                <element signature="e#2362#2363#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -139,10 +160,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/fake/FakeSERegistryLoader.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/ui/ActionButton.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/app/CurrentState.java" />
-        <option value="$PROJECT_DIR$/OC1/src/c1/screenparts/ScreenButton.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screenparts/ActionButton.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/ui/UIButton.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java" />
@@ -182,14 +199,18 @@
         <option value="$PROJECT_DIR$/OC1/src/common/uiwidget/UIAttributedText.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedStringRenderer.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uiwidget/TextLayout.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/uiwidget/BoxFlowLayout.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedText.java" />
-        <option value="$PROJECT_DIR$/OC1/test/common/ui/AttributedStringTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/ui/Builder.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/ui/AttributedStringBuilder.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/ui/AttributedString.java" />
-        <option value="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/common/ui/AttributedStringBuilderTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/common/ui/AttributedStringTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/ui/AttributedString.java" />
+        <option value="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextDemo.java" />
+        <option value="$PROJECT_DIR$/OC1/test/se/uiwidget/BoxFlowLayoutTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/ui/AttributedStringRenderer.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/ui/SimpleAttributedStringRenderer.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedText.java" />
+        <option value="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/uiwidget/BoxFlowLayout.java" />
       </list>
     </option>
   </component>
@@ -206,7 +227,7 @@
     <OptionsSetting value="true" id="Update" />
     <OptionsSetting value="true" id="Status" />
     <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="2" id="Add" />
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
@@ -238,60 +259,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -342,27 +309,28 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="se.uiwidget" />
+      <recent name="common.ui" />
       <recent name="se.ui" />
       <recent name="common.screen" />
       <recent name="se1.ui" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="se.uiwidget" />
       <recent name="common.uiwidget" />
       <recent name="c1.command" />
       <recent name="fake" />
       <recent name="common.ui" />
-      <recent name="common" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in OC1">
-    <configuration default="false" name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="SEAttributedTextTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="se.app.*" />
+          <option name="PATTERN" value="se.uiwidget.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="se.app.Application" />
+      <option name="MAIN_CLASS_NAME" value="se.uiwidget.SEAttributedTextTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -373,51 +341,22 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="OC1" />
       <envs />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="All in OC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="OC1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="ScreenTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="SEAttributedTextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="common.screen.*" />
+          <option name="PATTERN" value="se.uiwidget.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="common.screen" />
-      <option name="MAIN_CLASS_NAME" value="common.screen.ScreenTest" />
+      <option name="PACKAGE_NAME" value="se.uiwidget" />
+      <option name="MAIN_CLASS_NAME" value="se.uiwidget.SEAttributedTextTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -434,29 +373,35 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="SEAttributedText" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="BoxFlowLayoutTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="se.uiwidget.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="se.uiwidget.SEAttributedText" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="PACKAGE_NAME" value="se.uiwidget" />
+      <option name="MAIN_CLASS_NAME" value="se.uiwidget.BoxFlowLayoutTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="OC1" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
       <envs />
+      <patterns />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="SEAttributedTextTest.can_create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="SEAttributedTextTest.mouseClick_does_not_trigger_onTextSelected_when_rendered_text_is_empty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="se.uiwidget.*" />
@@ -468,8 +413,31 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="se.uiwidget" />
       <option name="MAIN_CLASS_NAME" value="se.uiwidget.SEAttributedTextTest" />
-      <option name="METHOD_NAME" value="can_create" />
+      <option name="METHOD_NAME" value="mouseClick_does_not_trigger_onTextSelected_when_rendered_text_is_empty" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="All in OC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="OC1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -638,19 +606,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Application" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ScreenTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.SEAttributedText" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SEAttributedTextTest.can_create" />
+      <item index="0" class="java.lang.String" itemvalue="Application.SEAttributedTextTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.SEAttributedTextTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.BoxFlowLayoutTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SEAttributedTextTest.mouseClick_does_not_trigger_onTextSelected_when_rendered_text_is_empty" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.All in OC1" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SEAttributedTextTest.can_create" />
-        <item index="2" class="java.lang.String" itemvalue="Application.SEAttributedText" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Application" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.ScreenTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.SEAttributedTextTest.mouseClick_does_not_trigger_onTextSelected_when_rendered_text_is_empty" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.BoxFlowLayoutTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SEAttributedTextTest" />
+        <item index="4" class="java.lang.String" itemvalue="Application.SEAttributedTextTest" />
       </list>
     </recent_temporary>
   </component>
@@ -737,56 +705,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screens/HowTo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07798165" vertical-offset="0" max-vertical-offset="654">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screens/Home.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57186544" vertical-offset="0" max-vertical-offset="663">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/c1/screens/ProviderRatingButtonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57186544" vertical-offset="0" max-vertical-offset="654">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/c1/ui/ActionButtonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6666667" vertical-offset="550" max-vertical-offset="1241">
-          <caret line="72" column="25" selection-start-line="72" selection-start-column="25" selection-end-line="72" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/SEUIRendererTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2703">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#439#440#0" expanded="false" />
-            <element signature="e#474#475#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/c1/uiwidget/BorderContainer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
@@ -1154,47 +1072,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedStringRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.103975534" vertical-offset="0" max-vertical-offset="654">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding>
-            <element signature="e#239#240#0" expanded="false" />
-            <element signature="e#265#266#0" expanded="false" />
-            <element signature="e#902#903#0" expanded="false" />
-            <element signature="e#940#941#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/BoxFlowLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="476">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding>
-            <element signature="e#158#159#0" expanded="true" />
-            <element signature="e#186#187#0" expanded="true" />
-            <element signature="e#228#229#0" expanded="true" />
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#317#318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedText.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
-          <caret line="12" column="29" selection-start-line="12" selection-start-column="29" selection-end-line="12" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/ScreenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.8424581" vertical-offset="51" max-vertical-offset="1904">
+        <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1904">
           <caret line="113" column="16" selection-start-line="113" selection-start-column="16" selection-end-line="113" selection-end-column="16" />
           <folding>
             <element signature="e#693#694#0" expanded="true" />
@@ -1203,41 +1083,145 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/AttributedStringBuilder.java">
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/java/awt/event/MouseEvent.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1224">
-          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+        <state vertical-scroll-proportion="0.119019836" vertical-offset="0" max-vertical-offset="6307">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/AttributedString.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/ui/AttributedStringTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="203" max-vertical-offset="1513">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.64581007" vertical-offset="0" max-vertical-offset="895">
+          <caret line="34" column="5" selection-start-line="34" selection-start-column="5" selection-end-line="34" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1394">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#253#254#0" expanded="true" />
-            <element signature="e#343#344#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/AttributedStringBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20642202" vertical-offset="1" max-vertical-offset="1292">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/common/ui/AttributedStringBuilderTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2461773" vertical-offset="1565" max-vertical-offset="2482">
-          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.5703364" vertical-offset="1463" max-vertical-offset="2482">
+          <caret line="115" column="5" selection-start-line="115" selection-start-column="5" selection-end-line="115" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/AttributedString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="564" max-vertical-offset="1683">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#585#586#0" expanded="true" />
+            <element signature="e#631#632#0" expanded="true" />
+            <element signature="e#675#676#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedStringRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
+          <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="4" />
+          <folding>
+            <element signature="e#243#244#0" expanded="true" />
+            <element signature="e#269#270#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/SEAttributedText.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="414" max-vertical-offset="1309">
+          <caret line="42" column="26" selection-start-line="42" selection-start-column="26" selection-end-line="42" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uiwidget/BoxFlowLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5318436" vertical-offset="0" max-vertical-offset="895">
+          <caret line="29" column="17" selection-start-line="29" selection-start-column="17" selection-end-line="29" selection-end-column="17" />
+          <folding>
+            <element signature="e#154#155#0" expanded="true" />
+            <element signature="e#186#187#0" expanded="true" />
+            <element signature="e#239#240#0" expanded="true" />
+            <element signature="e#267#268#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#489#490#0" expanded="true" />
+            <element signature="e#542#543#0" expanded="true" />
+            <element signature="e#569#570#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="564" max-vertical-offset="1411">
+          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#736#737#0" expanded="true" />
+            <element signature="e#771#772#0" expanded="true" />
+            <element signature="e#850#851#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#941#942#0" expanded="true" />
+            <element signature="e#1018#1019#0" expanded="true" />
+            <element signature="e#2062#2210#0" expanded="true" />
+            <element signature="e#2209#2210#0" expanded="true" />
+            <element signature="e#2293#2294#0" expanded="true" />
+            <element signature="e#2362#2363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/uiwidget/BoxFlowLayoutTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+          <caret line="8" column="42" selection-start-line="8" selection-start-column="42" selection-end-line="8" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#273#274#0" expanded="true" />
+            <element signature="e#341#342#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/SimpleAttributedStringRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9097859" vertical-offset="102" max-vertical-offset="799">
+          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
