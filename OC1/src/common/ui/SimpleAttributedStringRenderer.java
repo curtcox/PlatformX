@@ -37,8 +37,9 @@ public final class SimpleAttributedStringRenderer
     @Override
     public void drawText(AttributedString text, AttributedString.PartRenderer renderer, BoxFlowLayout layout) {
         if (!text.parts.isEmpty()) {
-            renderer.renderPartAt(text.parts.get(0), new Point(0, 0));
-            layout.addBoxToThisLine(new Dimension(0,0));
+            AttributedString.Part part = text.parts.get(0);
+            renderer.renderPartAt(part, new Point(0, 0));
+            layout.addBoxToThisLine(renderer.size(part));
         }
     }
 }

@@ -94,6 +94,9 @@ public class SimpleAttributedStringRendererTest {
         testObject.drawText(text,partRenderer,layout);
 
         assertEquals(0,layout.getPointIndex(new Point(0,0)));
+        assertEquals(0,layout.getPointIndex(new Point(0,1)));
+        assertEquals(0,layout.getPointIndex(new Point(1,0)));
+        assertEquals(0,layout.getPointIndex(new Point(1,1)));
     }
 
     @Test
@@ -104,7 +107,28 @@ public class SimpleAttributedStringRendererTest {
         AttributedString text = new AttributedString("x");
         testObject.drawText(text,partRenderer,layout);
 
+        assertEquals(-1,layout.getPointIndex(new Point(1,2)));
+        assertEquals(-1,layout.getPointIndex(new Point(2,1)));
         assertEquals(-1,layout.getPointIndex(new Point(2,2)));
+    }
+
+    @Test
+    public void drawText_uses_renderer_to_determine_box_size() {
+        FakePartRenderer partRenderer = new FakePartRenderer() {
+            @Override public Dimension size(AttributedString.Part part) {
+                return new Dimension(2,2);
+            }
+        };
+        BoxFlowLayout layout = new BoxFlowLayout(new Dimension(10,10));
+
+        AttributedString text = new AttributedString("x");
+        testObject.drawText(text,partRenderer,layout);
+
+        assertEquals(0,layout.getPointIndex(new Point(0,0)));
+        assertEquals(0,layout.getPointIndex(new Point(2,2)));
+        assertEquals(-1,layout.getPointIndex(new Point(1,3)));
+        assertEquals(-1,layout.getPointIndex(new Point(3,1)));
+        assertEquals(-1,layout.getPointIndex(new Point(3,3)));
     }
 
 }
