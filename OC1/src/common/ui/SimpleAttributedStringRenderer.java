@@ -25,17 +25,19 @@ public final class SimpleAttributedStringRenderer
 //        }
 //    }
 
-    void drawTextPart(AttributedString.Part part) {
+//    void drawTextPart(AttributedString.Part part) {
 //        Dimension box = renderer.size(part);
 //        if (layout.willFitOnThisLine(box)) {
 //            Point at = layout.addBoxToThisLine(box);
 //            renderer.renderPartAt(part, at);
 //            return;
 //        }
-    }
+//    }
 
     @Override
     public void drawText(AttributedString text, AttributedString.PartRenderer renderer, BoxFlowLayout layout) {
-
+        if (!text.parts.isEmpty()) {
+            renderer.renderPartAt(text.parts.get(0), new Point(0, 0));
+        }
     }
 }
