@@ -5,7 +5,7 @@ import java.awt.*;
 public final class BoxFlowLayout {
 
     private final Dimension size;
-    private boolean added;
+    private Dimension added;
 
     public BoxFlowLayout(Dimension size) {
         this.size = size;
@@ -23,12 +23,12 @@ public final class BoxFlowLayout {
 //        return null;
 //    }
 //
-    public Point addBoxToThisLine(Dimension size) {
-        added = true;
-        return null;
+    public Point addBoxToThisLine(Dimension box) {
+        added = box;
+        return new Point(0,0);
     }
 
     public int getPointIndex(Point point) {
-        return added ? 0 : -1;
+        return added!=null && point.x <= added.width && point.y <= added.height ? 0 : -1;
     }
 }

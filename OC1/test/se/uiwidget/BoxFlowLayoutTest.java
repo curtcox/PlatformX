@@ -30,10 +30,33 @@ public class BoxFlowLayoutTest {
     }
 
     @Test
-    public void getPointAtIndex_returns_0_when_box_has_been_added() {
+    public void addBoxToThisLine_returns_0_0_for_first_box_added() {
         BoxFlowLayout testObject = newLayout(10,10);
+
+        Point actual = testObject.addBoxToThisLine(new Dimension(5,5));
+
+        assertEquals(new Point(0,0),actual);
+    }
+
+    @Test
+    public void getPointAtIndex_returns_0_when_box_has_been_added_and_is_in_box() {
+        BoxFlowLayout testObject = newLayout(10,10);
+
         testObject.addBoxToThisLine(new Dimension(5,5));
-        assertEquals(0,testObject.getPointIndex(new Point(0,0)));
+
+        assertEquals(0, testObject.getPointIndex(new Point(0, 0)));
+        assertEquals(0, testObject.getPointIndex(new Point(1, 1)));
+    }
+
+    @Test
+    public void getPointAtIndex_returns_minus_1_when_box_has_been_added_and_is_not_in_box() {
+        BoxFlowLayout testObject = newLayout(10,10);
+
+        testObject.addBoxToThisLine(new Dimension(5,5));
+
+        assertEquals(-1, testObject.getPointIndex(new Point(8, 8)));
+        assertEquals(-1, testObject.getPointIndex(new Point(20, 1)));
+        assertEquals(-1, testObject.getPointIndex(new Point(1, 20)));
     }
 
     private BoxFlowLayout newLayout(int x, int y) {

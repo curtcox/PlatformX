@@ -86,7 +86,7 @@ public class SimpleAttributedStringRendererTest {
     }
 
     @Test
-    public void drawText_properly_updates_boxLayout_for_a_single_character_string() {
+    public void drawText_updates_boxLayout_and_point_can_be_found_for_a_single_character_string() {
         FakePartRenderer partRenderer = new FakePartRenderer();
         BoxFlowLayout layout = new BoxFlowLayout(new Dimension(10,10));
 
@@ -94,6 +94,17 @@ public class SimpleAttributedStringRendererTest {
         testObject.drawText(text,partRenderer,layout);
 
         assertEquals(0,layout.getPointIndex(new Point(0,0)));
+    }
+
+    @Test
+    public void drawText_updates_boxLayout_and_point_outside_of_box_is_not_matched_to_box() {
+        FakePartRenderer partRenderer = new FakePartRenderer();
+        BoxFlowLayout layout = new BoxFlowLayout(new Dimension(10,10));
+
+        AttributedString text = new AttributedString("x");
+        testObject.drawText(text,partRenderer,layout);
+
+        assertEquals(-1,layout.getPointIndex(new Point(2,2)));
     }
 
 }
