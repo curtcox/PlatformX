@@ -6,9 +6,9 @@ import static org.junit.Assert.assertEquals;
 
 final class BoxFlowLayoutAssertions {
 
-    final BoxFlowLayout layout;
+    final ColumnBoxFlowLayout layout;
 
-    BoxFlowLayoutAssertions(BoxFlowLayout layout) {
+    BoxFlowLayoutAssertions(ColumnBoxFlowLayout layout) {
         this.layout = layout;
     }
 

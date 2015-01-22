@@ -5,14 +5,14 @@ import java.awt.Rectangle;
 import java.awt.Point;
 import java.util.*;
 
-public final class BoxFlowLayout {
+public final class ColumnBoxFlowLayout {
 
     private final int width;
     private Point currentBoxUpperLeft = new Point(0,0);
     private int bottom;
     private List<Rectangle>boxes  = new ArrayList<Rectangle>();
 
-    public BoxFlowLayout(int width) {
+    public ColumnBoxFlowLayout(int width) {
         this.width = width;
     }
 

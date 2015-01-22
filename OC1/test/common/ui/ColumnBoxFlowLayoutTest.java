@@ -6,7 +6,7 @@ import java.awt.*;
 
 import static org.junit.Assert.*;
 
-public class BoxFlowLayoutTest {
+public class ColumnBoxFlowLayoutTest {
 
     @Test
     public void can_create() {
@@ -32,7 +32,7 @@ public class BoxFlowLayoutTest {
 
     @Test
     public void addBoxToThisLine_returns_0_0_for_first_box_added() {
-        BoxFlowLayout testObject = newLayout(10);
+        ColumnBoxFlowLayout testObject = newLayout(10);
 
         Point actual = testObject.addBoxToThisLine(box(5, 5));
 
@@ -41,7 +41,7 @@ public class BoxFlowLayoutTest {
 
     @Test
     public void startNextLineWith_returns_0_0_for_first_box_added() {
-        BoxFlowLayout testObject = newLayout(10);
+        ColumnBoxFlowLayout testObject = newLayout(10);
 
         Point actual = testObject.startNextLineWith(box(5, 5));
 
@@ -50,7 +50,7 @@ public class BoxFlowLayoutTest {
 
     @Test
     public void startNextLineWith_returns_0_2_for_second_box_added_after_first_is_2_tall() {
-        BoxFlowLayout testObject = newLayout(10);
+        ColumnBoxFlowLayout testObject = newLayout(10);
 
         testObject.addBoxToThisLine(box(2,2));
         Point actual = testObject.startNextLineWith(box(1, 1));
@@ -60,7 +60,7 @@ public class BoxFlowLayoutTest {
 
     @Test
     public void addBoxToThisLine_returns_box_to_right_of_existing_box_for_second_box_added() {
-        BoxFlowLayout testObject = newLayout(10);
+        ColumnBoxFlowLayout testObject = newLayout(10);
 
         testObject.addBoxToThisLine(box(5, 5));
         Point actual = testObject.addBoxToThisLine(box(1, 1));
@@ -70,7 +70,7 @@ public class BoxFlowLayoutTest {
 
     @Test
     public void getPointAtIndex_returns_0_when_box_has_been_added_and_is_in_box() {
-        BoxFlowLayout testObject = newLayout(10);
+        ColumnBoxFlowLayout testObject = newLayout(10);
 
         testObject.addBoxToThisLine(box(5, 5));
 
@@ -81,7 +81,7 @@ public class BoxFlowLayoutTest {
 
     @Test
     public void getPointAtIndex_returns_1_for_second_box_on_the_line() {
-        BoxFlowLayout testObject = newLayout(10);
+        ColumnBoxFlowLayout testObject = newLayout(10);
 
         testObject.addBoxToThisLine(new Dimension(1,1));
         testObject.addBoxToThisLine(new Dimension(1,1));
@@ -93,7 +93,7 @@ public class BoxFlowLayoutTest {
 
     @Test
     public void getPointAtIndex_returns_1_for_second_box_on_wrapped_line_when_first_box_is_1_tall() {
-        BoxFlowLayout testObject = newLayout(10);
+        ColumnBoxFlowLayout testObject = newLayout(10);
 
         testObject.addBoxToThisLine(box(1,1));
         testObject.startNextLineWith(box(1, 1));
@@ -105,7 +105,7 @@ public class BoxFlowLayoutTest {
 
     @Test
     public void getPointAtIndex_returns_1_for_second_box_on_wrapped_line_when_first_box_is_2_tall() {
-        BoxFlowLayout testObject = newLayout(10);
+        ColumnBoxFlowLayout testObject = newLayout(10);
 
         testObject.addBoxToThisLine(box(2, 2));
         testObject.startNextLineWith(box(1, 1));
@@ -118,7 +118,7 @@ public class BoxFlowLayoutTest {
 
     @Test
     public void getPointAtIndex_returns_minus_1_when_box_has_been_added_and_is_not_in_box() {
-        BoxFlowLayout testObject = newLayout(10);
+        ColumnBoxFlowLayout testObject = newLayout(10);
 
         testObject.addBoxToThisLine(box(5, 5));
 
@@ -128,8 +128,8 @@ public class BoxFlowLayoutTest {
         assertions.pointIndex(1, 20, -1);
     }
 
-    private BoxFlowLayout newLayout(int width) {
-        return new BoxFlowLayout(width);
+    private ColumnBoxFlowLayout newLayout(int width) {
+        return new ColumnBoxFlowLayout(width);
     }
 
     Dimension box(int w, int h) {

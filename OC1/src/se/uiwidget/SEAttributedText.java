@@ -2,7 +2,7 @@ package se.uiwidget;
 
 import common.ui.AttributedString;
 import common.ui.AttributedString.PartRenderer;
-import common.ui.BoxFlowLayout;
+import common.ui.ColumnBoxFlowLayout;
 import common.ui.SimpleAttributedStringRenderer;
 import common.uiwidget.UIAttributedText.*;
 
@@ -17,10 +17,10 @@ public class SEAttributedText
 {
     final AttributedString text;
     final AttributedStringRenderer stringRenderer;
-    private BoxFlowLayout layout;
+    private ColumnBoxFlowLayout layout;
 
     public interface AttributedStringRenderer {
-        void drawText(AttributedString text,PartRenderer renderer,BoxFlowLayout layout);
+        void drawText(AttributedString text,PartRenderer renderer,ColumnBoxFlowLayout layout);
     }
 
     SEAttributedText(AttributedString text) {
@@ -41,7 +41,7 @@ public class SEAttributedText
     }
 
     void drawText(PartRenderer partRenderer) {
-        layout = new BoxFlowLayout(getWidth());
+        layout = new ColumnBoxFlowLayout(getWidth());
         stringRenderer.drawText(text, partRenderer, layout);
     }
 

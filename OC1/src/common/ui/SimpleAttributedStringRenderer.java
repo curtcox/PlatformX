@@ -8,7 +8,7 @@ public final class SimpleAttributedStringRenderer
     implements SEAttributedText.AttributedStringRenderer
 {
 
-    Point drawTextPart(Point point,AttributedString.Part part,AttributedString.PartRenderer renderer, BoxFlowLayout layout) {
+    Point drawTextPart(Point point,AttributedString.Part part,AttributedString.PartRenderer renderer, ColumnBoxFlowLayout layout) {
         renderer.renderPartAt(part, point);
         Dimension box = renderer.size(part);
         Point upperLeft = layout.addBoxToThisLine(box);
@@ -16,7 +16,7 @@ public final class SimpleAttributedStringRenderer
     }
 
     @Override
-    public void drawText(AttributedString text, AttributedString.PartRenderer renderer, BoxFlowLayout layout) {
+    public void drawText(AttributedString text, AttributedString.PartRenderer renderer, ColumnBoxFlowLayout layout) {
         Point at = new Point(0,0);
         for (AttributedString.Part part : text) {
             drawTextPart(at,part,renderer,layout);

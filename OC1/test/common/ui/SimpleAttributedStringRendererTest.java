@@ -44,7 +44,7 @@ public class SimpleAttributedStringRendererTest {
                 fail();
             }
         };
-        BoxFlowLayout layout = new BoxFlowLayout(0);
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(0);
 
         AttributedString text = new AttributedString();
         testObject.drawText(text,partRenderer,layout);
@@ -53,7 +53,7 @@ public class SimpleAttributedStringRendererTest {
     @Test
     public void drawText_renders_single_character_that_will_fit_using_part_renderer() {
         FakePartRenderer partRenderer = new FakePartRenderer();
-        BoxFlowLayout layout = new BoxFlowLayout(1);
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(1);
 
         AttributedString text = new AttributedString("x");
         testObject.drawText(text,partRenderer,layout);
@@ -65,7 +65,7 @@ public class SimpleAttributedStringRendererTest {
     @Test
     public void drawText_renders_single_character_that_will_fit_at_0_0() {
         FakePartRenderer partRenderer = new FakePartRenderer();
-        BoxFlowLayout layout = new BoxFlowLayout(1);
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(1);
 
         AttributedString text = new AttributedString("x");
         testObject.drawText(text,partRenderer,layout);
@@ -77,7 +77,7 @@ public class SimpleAttributedStringRendererTest {
     @Test
     public void drawText_does_not_update_boxLayout_for_an_empty_string() {
         FakePartRenderer partRenderer = new FakePartRenderer();
-        BoxFlowLayout layout = new BoxFlowLayout(10);
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(10);
 
         AttributedString text = new AttributedString();
         testObject.drawText(text,partRenderer,layout);
@@ -89,7 +89,7 @@ public class SimpleAttributedStringRendererTest {
     @Test
     public void drawText_updates_boxLayout_and_point_can_be_found_for_a_single_character_string() {
         FakePartRenderer partRenderer = new FakePartRenderer();
-        BoxFlowLayout layout = new BoxFlowLayout(10);
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(10);
 
         AttributedString text = new AttributedString("x");
         testObject.drawText(text,partRenderer, layout);
@@ -104,7 +104,7 @@ public class SimpleAttributedStringRendererTest {
     @Test
     public void drawText_updates_boxLayout_and_point_outside_of_box_is_not_matched_to_box() {
         FakePartRenderer partRenderer = new FakePartRenderer();
-        BoxFlowLayout layout = new BoxFlowLayout(10);
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(10);
 
         AttributedString text = new AttributedString("x");
         testObject.drawText(text,partRenderer, layout);
@@ -122,7 +122,7 @@ public class SimpleAttributedStringRendererTest {
                 return new Dimension(2,2);
             }
         };
-        BoxFlowLayout layout = new BoxFlowLayout(10);
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(10);
 
         AttributedString text = new AttributedString("x");
         testObject.drawText(text,partRenderer, layout);
@@ -138,7 +138,7 @@ public class SimpleAttributedStringRendererTest {
     @Test
     public void drawText_wraps_line_on_part_boundaries_when_there_is_not_enough_room_for_all_parts_on_a_line() {
         FakePartRenderer partRenderer = new FakePartRenderer();
-        BoxFlowLayout layout = new BoxFlowLayout(1);
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(1);
 
         AttributedString text = new AttributedString("12",Arrays.asList(part("1"),part("2")));
         testObject.drawText(text,partRenderer,layout);
@@ -155,7 +155,7 @@ public class SimpleAttributedStringRendererTest {
     @Test
     public void drawText_puts_multiple_parts_on_a_line_when_there_is_enough_room() {
         FakePartRenderer partRenderer = new FakePartRenderer();
-        BoxFlowLayout layout = new BoxFlowLayout(10);
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(10);
 
         AttributedString text = new AttributedString("12",Arrays.asList(part("1"),part("2")));
         testObject.drawText(text, partRenderer,layout);
