@@ -27,11 +27,17 @@ public final class AttributedString
     }
 
     public AttributedString() {
-        this("",new ArrayList<Part>());
+        this("");
     }
 
     public AttributedString(String text) {
-        this(text, Arrays.asList(new Part[]{new Part(null,null,null,text)}));
+        this(text, parts(text));
+    }
+
+    static List<Part> parts(String text) {
+        return text.equals("")
+                ? new ArrayList<Part>()
+                : Arrays.asList(new Part[]{new Part(null,null,null,text)});
     }
 
     public Iterator<Part> iterator() {

@@ -61,7 +61,7 @@ public class SEAttributedTextTest {
 
     @Test
     public void renderer_is_not_called_for_empty_string() {
-        AttributedString string = new AttributedString("");
+        AttributedString string = new AttributedString();
         TestAttributedText testObject = new TestAttributedText(string);
         FakeRenderer renderer = new FakeRenderer() {
             public void renderPartAt(AttributedString.Part part, Point point) {

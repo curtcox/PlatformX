@@ -15,8 +15,15 @@ public class AttributedStringTest {
     }
 
     @Test
-    public void empty_string() {
+    public void empty_string_constructed_from_0_args() {
         AttributedString testObject = new AttributedString();
+        assertEquals(0,testObject.parts.size());
+        assertEquals("",testObject.toString());
+    }
+
+    @Test
+    public void empty_string_constructed_from_1_arg() {
+        AttributedString testObject = new AttributedString("");
         assertEquals(0,testObject.parts.size());
         assertEquals("",testObject.toString());
     }
