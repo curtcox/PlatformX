@@ -7,17 +7,17 @@ import java.util.*;
 
 public final class BoxFlowLayout {
 
-    private final Dimension size;
+    private final int width;
     private Point currentBoxUpperLeft = new Point(0,0);
     private int bottom;
     private List<Rectangle>boxes  = new ArrayList<Rectangle>();
 
-    public BoxFlowLayout(Dimension size) {
-        this.size = size;
+    public BoxFlowLayout(int width) {
+        this.width = width;
     }
 
     public boolean willFitOnThisLine(Dimension box) {
-        return box.width <= size.width && box.height<=size.height;
+        return box.width <= width;
     }
 
     public Point startNextLineWith(Dimension box) {

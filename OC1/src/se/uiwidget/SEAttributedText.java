@@ -41,7 +41,7 @@ public class SEAttributedText
     }
 
     void drawText(PartRenderer partRenderer) {
-        layout = new BoxFlowLayout(getSize());
+        layout = new BoxFlowLayout(getWidth());
         stringRenderer.drawText(text, partRenderer, layout);
     }
 
