@@ -8,35 +8,35 @@ import java.util.*;
 public final class BoxFlowLayout {
 
     private final Dimension size;
-    private Point at = new Point(0,0);
+    private Point currentBoxUpperLeft = new Point(0,0);
+    private int bottom;
     private List<Rectangle>boxes  = new ArrayList<Rectangle>();
 
     public BoxFlowLayout(Dimension size) {
         this.size = size;
     }
 
-//    public boolean willFitOnALine(Dimension size) {
-//        return false;
-//    }
-
-    public boolean willFitOnThisLine(Dimension size) {
-        return size.width <= this.size.width && size.height<=this.size.height;
+    public boolean willFitOnThisLine(Dimension box) {
+        return box.width <= size.width && box.height<=size.height;
     }
 
-//    public Point startNextLineWith(Dimension size) {
-//        return null;
-//    }
-//
+    public Point startNextLineWith(Dimension box) {
+        currentBoxUpperLeft = new Point(0,bottom);
+        boxes.add(rectangleForThisLine(box));
+        return currentBoxUpperLeft;
+    }
+
     public Point addBoxToThisLine(Dimension box) {
-        boxes.add(rectangleFor(box));
-        Point upperLeft = at;
-        at = new Point(box.width,0);
+        boxes.add(rectangleForThisLine(box));
+        Point upperLeft = currentBoxUpperLeft;
+        currentBoxUpperLeft = new Point(box.width,0);
+        bottom = box.height;
         return upperLeft;
     }
 
-    private Rectangle rectangleFor(Dimension box) {
-        int x = at.x;
-        int y = at.y;
+    private Rectangle rectangleForThisLine(Dimension box) {
+        int x = currentBoxUpperLeft.x;
+        int y = currentBoxUpperLeft.y;
         int w = box.width;
         int h = box.height;
         return new Rectangle(x,y,w,h);
