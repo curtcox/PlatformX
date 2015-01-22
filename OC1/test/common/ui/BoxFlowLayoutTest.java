@@ -1,5 +1,6 @@
-package se.uiwidget;
+package common.ui;
 
+import common.ui.BoxFlowLayout;
 import org.junit.Test;
 
 import java.awt.*;
@@ -39,13 +40,36 @@ public class BoxFlowLayoutTest {
     }
 
     @Test
+    public void addBoxToThisLine_returns_box_to_right_of_existing_box_for_second_box_added() {
+        BoxFlowLayout testObject = newLayout(10,10);
+
+        testObject.addBoxToThisLine(new Dimension(5,5));
+        Point actual = testObject.addBoxToThisLine(new Dimension(1,1));
+
+        assertEquals(new Point(5,0),actual);
+    }
+
+    @Test
     public void getPointAtIndex_returns_0_when_box_has_been_added_and_is_in_box() {
         BoxFlowLayout testObject = newLayout(10,10);
 
         testObject.addBoxToThisLine(new Dimension(5,5));
 
-        assertEquals(0, testObject.getPointIndex(new Point(0, 0)));
-        assertEquals(0, testObject.getPointIndex(new Point(1, 1)));
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(testObject);
+        assertions.pointIndex(0, 0, 0);
+        assertions.pointIndex(1, 1, 0);
+    }
+
+    @Test
+    public void getPointAtIndex_returns_1_for_second_box_on_the_line() {
+        BoxFlowLayout testObject = newLayout(10,10);
+
+        testObject.addBoxToThisLine(new Dimension(1,1));
+        testObject.addBoxToThisLine(new Dimension(1,1));
+
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(testObject);
+        assertions.pointIndex(0, 0, 0);
+        assertions.pointIndex(1, 0, 1);
     }
 
     @Test
@@ -54,9 +78,10 @@ public class BoxFlowLayoutTest {
 
         testObject.addBoxToThisLine(new Dimension(5,5));
 
-        assertEquals(-1, testObject.getPointIndex(new Point(8, 8)));
-        assertEquals(-1, testObject.getPointIndex(new Point(20, 1)));
-        assertEquals(-1, testObject.getPointIndex(new Point(1, 20)));
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(testObject);
+        assertions.pointIndex(8, 8, -1);
+        assertions.pointIndex(20, 1, -1);
+        assertions.pointIndex(1, 20, -1);
     }
 
     private BoxFlowLayout newLayout(int x, int y) {

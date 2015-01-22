@@ -2,6 +2,7 @@ package se.uiwidget;
 
 import common.ui.AttributedString;
 import common.ui.AttributedString.PartRenderer;
+import common.ui.BoxFlowLayout;
 import common.ui.SimpleAttributedStringRenderer;
 import common.uiwidget.UIAttributedText.*;
 

@@ -1,6 +1,5 @@
 package common.ui;
 
-import se.uiwidget.BoxFlowLayout;
 import se.uiwidget.SEAttributedText;
 
 import java.awt.*;
@@ -25,21 +24,18 @@ public final class SimpleAttributedStringRenderer
 //        }
 //    }
 
-//    void drawTextPart(AttributedString.Part part) {
-//        Dimension box = renderer.size(part);
-//        if (layout.willFitOnThisLine(box)) {
-//            Point at = layout.addBoxToThisLine(box);
-//            renderer.renderPartAt(part, at);
-//            return;
-//        }
-//    }
+    Point drawTextPart(Point point,AttributedString.Part part,AttributedString.PartRenderer renderer, BoxFlowLayout layout) {
+        renderer.renderPartAt(part, point);
+        Dimension box = renderer.size(part);
+        Point upperLeft = layout.addBoxToThisLine(box);
+        return new Point(upperLeft.x + box.width,upperLeft.y);
+    }
 
     @Override
     public void drawText(AttributedString text, AttributedString.PartRenderer renderer, BoxFlowLayout layout) {
-        if (!text.parts.isEmpty()) {
-            AttributedString.Part part = text.parts.get(0);
-            renderer.renderPartAt(part, new Point(0, 0));
-            layout.addBoxToThisLine(renderer.size(part));
+        Point at = new Point(0,0);
+        for (AttributedString.Part part : text) {
+            drawTextPart(at,part,renderer,layout);
         }
     }
 }

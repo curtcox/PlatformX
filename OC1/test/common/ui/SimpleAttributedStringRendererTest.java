@@ -1,10 +1,10 @@
 package common.ui;
 
 import org.junit.Test;
-import se.uiwidget.BoxFlowLayout;
 
 import java.awt.*;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -82,7 +82,8 @@ public class SimpleAttributedStringRendererTest {
         AttributedString text = new AttributedString();
         testObject.drawText(text,partRenderer,layout);
 
-        assertEquals(-1,layout.getPointIndex(new Point(0,0)));
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(layout);
+        assertions.pointIndex(0, 0, -1);
     }
 
     @Test
@@ -91,12 +92,13 @@ public class SimpleAttributedStringRendererTest {
         BoxFlowLayout layout = new BoxFlowLayout(new Dimension(10,10));
 
         AttributedString text = new AttributedString("x");
-        testObject.drawText(text,partRenderer,layout);
+        testObject.drawText(text,partRenderer, layout);
 
-        assertEquals(0,layout.getPointIndex(new Point(0,0)));
-        assertEquals(0,layout.getPointIndex(new Point(0,1)));
-        assertEquals(0,layout.getPointIndex(new Point(1,0)));
-        assertEquals(0,layout.getPointIndex(new Point(1,1)));
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(layout);
+        assertions.pointIndex(0, 0,  0);
+        assertions.pointIndex(0, 1, -1);
+        assertions.pointIndex(1, 0, -1);
+        assertions.pointIndex(1, 1, -1);
     }
 
     @Test
@@ -105,11 +107,12 @@ public class SimpleAttributedStringRendererTest {
         BoxFlowLayout layout = new BoxFlowLayout(new Dimension(10,10));
 
         AttributedString text = new AttributedString("x");
-        testObject.drawText(text,partRenderer,layout);
+        testObject.drawText(text,partRenderer, layout);
 
-        assertEquals(-1,layout.getPointIndex(new Point(1,2)));
-        assertEquals(-1,layout.getPointIndex(new Point(2,1)));
-        assertEquals(-1,layout.getPointIndex(new Point(2,2)));
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(layout);
+        assertions.pointIndex(1, 2, -1);
+        assertions.pointIndex(2, 1, -1);
+        assertions.pointIndex(2, 2, -1);
     }
 
     @Test
@@ -122,13 +125,51 @@ public class SimpleAttributedStringRendererTest {
         BoxFlowLayout layout = new BoxFlowLayout(new Dimension(10,10));
 
         AttributedString text = new AttributedString("x");
-        testObject.drawText(text,partRenderer,layout);
+        testObject.drawText(text,partRenderer, layout);
 
-        assertEquals(0,layout.getPointIndex(new Point(0,0)));
-        assertEquals(0,layout.getPointIndex(new Point(2,2)));
-        assertEquals(-1,layout.getPointIndex(new Point(1,3)));
-        assertEquals(-1,layout.getPointIndex(new Point(3,1)));
-        assertEquals(-1,layout.getPointIndex(new Point(3,3)));
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(layout);
+        assertions.pointIndex(0, 0, 0);
+        assertions.pointIndex(1, 1, 0);
+        assertions.pointIndex(1, 3,-1);
+        assertions.pointIndex(3, 1,-1);
+        assertions.pointIndex(3, 3,-1);
     }
 
+    @Test
+    public void drawText_wraps_line_on_part_boundaries_when_there_is_not_enough_room_for_all_parts_on_a_line() {
+        FakePartRenderer partRenderer = new FakePartRenderer();
+        BoxFlowLayout layout = new BoxFlowLayout(new Dimension(1,1));
+
+        AttributedString text = new AttributedString("12",Arrays.asList(part("1"),part("2")));
+        testObject.drawText(text,partRenderer,layout);
+
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(layout);
+        assertions.pointIndex(0, 0, 0);
+        assertions.pointIndex(0, 1, 1);
+        assertions.pointIndex(0, 2,-1);
+        assertions.pointIndex(2, 0,-1);
+        assertions.pointIndex(1, 4,-1);
+        assertions.pointIndex(4, 1,-1);
+    }
+
+    @Test
+    public void drawText_puts_multiple_parts_on_a_line_when_there_is_enough_room() {
+        FakePartRenderer partRenderer = new FakePartRenderer();
+        BoxFlowLayout layout = new BoxFlowLayout(new Dimension(10,10));
+
+        AttributedString text = new AttributedString("12",Arrays.asList(part("1"),part("2")));
+        testObject.drawText(text, partRenderer,layout);
+
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(layout);
+        assertions.pointIndex(0, 0, 0);
+        assertions.pointIndex(1, 0, 1);
+        assertions.pointIndex(2, 0,-1);
+        assertions.pointIndex(0, 2,-1);
+        assertions.pointIndex(1, 4,-1);
+        assertions.pointIndex(4, 1,-1);
+    }
+
+    private AttributedString.Part part(String text) {
+        return new AttributedString.Part(null,null,null,text);
+    }
 }
