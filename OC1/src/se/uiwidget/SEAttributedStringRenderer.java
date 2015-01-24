@@ -22,6 +22,7 @@ final class SEAttributedStringRenderer
         SimpleAttributedStringRenderer renderer = new SimpleAttributedStringRenderer();
         SEAttributedStringPartRenderer partRenderer = new SEAttributedStringPartRenderer(g);
         ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(width);
+        g.setColor(Color.BLACK);
         renderer.drawText(text,partRenderer,layout);
     }
 

@@ -15,16 +15,25 @@ final class SEAttributedStringPartRenderer
 
     @Override
     public void renderPartAt(AttributedString.Part part, Point point) {
-        g.setColor(Color.RED);
-        g.drawString(part.text,point.x,point.y + 10);
+        Color color = part.color;
+        if (color!=null) {
+            g.setColor(part.color);
+        }
+        g.drawString(part.text,point.x,point.y + height());
     }
 
     @Override
     public Dimension size(AttributedString.Part part) {
-        FontMetrics fontMetrics = g.getFontMetrics();
         String text = part.text;
-        int w = fontMetrics.stringWidth(text);
-        int h = fontMetrics.getHeight();
-        return new Dimension(w,h);
+        int w = fontMetrics().stringWidth(text);
+        return new Dimension(w,height());
+    }
+
+    int height() {
+        return fontMetrics().getHeight();
+    }
+
+    FontMetrics fontMetrics() {
+        return g.getFontMetrics();
     }
 }
