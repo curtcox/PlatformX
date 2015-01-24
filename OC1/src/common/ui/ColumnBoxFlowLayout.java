@@ -8,9 +8,9 @@ import java.util.*;
 public final class ColumnBoxFlowLayout {
 
     private final int width;
-    private Point currentBoxUpperLeft = new Point(0,0);
     private int bottom;
     private int lineHeight;
+    private int lineWidth;
     private List<Rectangle>boxes  = new ArrayList<Rectangle>();
 
     public ColumnBoxFlowLayout(int width) {
@@ -18,28 +18,29 @@ public final class ColumnBoxFlowLayout {
     }
 
     public boolean willFitOnThisLine(Dimension box) {
-        return currentBoxUpperLeft.x + box.width <= width;
+        return lineWidth + box.width <= width;
     }
 
     public Point startNextLineWith(Dimension box) {
         bottom += lineHeight;
+        Point point = new Point(0,bottom);
         lineHeight = box.height;
-        currentBoxUpperLeft = new Point(0,bottom);
-        boxes.add(rectangleForThisLine(box));
-        return currentBoxUpperLeft;
+        lineWidth = box.width;
+        boxes.add(rectangleForBoxAt(box,point));
+        return point;
     }
 
     public Point addBoxToThisLine(Dimension box) {
-        boxes.add(rectangleForThisLine(box));
-        Point upperLeft = currentBoxUpperLeft;
-        currentBoxUpperLeft = new Point(box.width,0);
+        Point point = new Point(lineWidth,bottom);
+        boxes.add(rectangleForBoxAt(box, point));
+        lineWidth =+ box.width;
         lineHeight = Math.max(lineHeight,box.height);
-        return upperLeft;
+        return point;
     }
 
-    private Rectangle rectangleForThisLine(Dimension box) {
-        int x = currentBoxUpperLeft.x;
-        int y = currentBoxUpperLeft.y;
+    private Rectangle rectangleForBoxAt(Dimension box, Point at) {
+        int x = at.x;
+        int y = at.y;
         int w = box.width;
         int h = box.height;
         return new Rectangle(x,y,w,h);
