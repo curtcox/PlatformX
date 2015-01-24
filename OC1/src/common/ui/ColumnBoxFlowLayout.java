@@ -10,6 +10,7 @@ public final class ColumnBoxFlowLayout {
     private final int width;
     private Point currentBoxUpperLeft = new Point(0,0);
     private int bottom;
+    private int lineHeight;
     private List<Rectangle>boxes  = new ArrayList<Rectangle>();
 
     public ColumnBoxFlowLayout(int width) {
@@ -21,6 +22,8 @@ public final class ColumnBoxFlowLayout {
     }
 
     public Point startNextLineWith(Dimension box) {
+        bottom += lineHeight;
+        lineHeight = box.height;
         currentBoxUpperLeft = new Point(0,bottom);
         boxes.add(rectangleForThisLine(box));
         return currentBoxUpperLeft;
@@ -30,7 +33,7 @@ public final class ColumnBoxFlowLayout {
         boxes.add(rectangleForThisLine(box));
         Point upperLeft = currentBoxUpperLeft;
         currentBoxUpperLeft = new Point(box.width,0);
-        bottom = box.height;
+        lineHeight = Math.max(lineHeight,box.height);
         return upperLeft;
     }
 

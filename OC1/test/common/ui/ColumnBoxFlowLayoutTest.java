@@ -77,6 +77,27 @@ public class ColumnBoxFlowLayoutTest {
     }
 
     @Test
+    public void startNextLineWith_returns_0_2_for_first_box_on_second_line_after_uneven_first_line_is_2_tall() {
+        ColumnBoxFlowLayout testObject = newLayout(10);
+
+        testObject.addBoxToThisLine(box(2,2));
+        testObject.addBoxToThisLine(box(1,1));
+        Point actual = testObject.startNextLineWith(box(1, 1));
+
+        assertEquals(new Point(0,2),actual);
+    }
+
+    @Test
+    public void startNextLineWith_returns_0_2_for_second_box_added_after_firstNewLine_is_2_tall() {
+        ColumnBoxFlowLayout testObject = newLayout(10);
+
+        testObject.startNextLineWith(box(2, 2));
+        Point actual = testObject.startNextLineWith(box(1, 1));
+
+        assertEquals(new Point(0,2),actual);
+    }
+
+    @Test
     public void addBoxToThisLine_returns_box_to_right_of_existing_box_for_second_box_added() {
         ColumnBoxFlowLayout testObject = newLayout(10);
 

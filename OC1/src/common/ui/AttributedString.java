@@ -21,17 +21,26 @@ public final class AttributedString
     public final List<Part> parts;
     private final String text;
 
-    AttributedString(String text,List<Part> parts) {
-        this.parts = parts;
-        this.text = text;
-    }
-
     public AttributedString() {
         this("");
     }
 
     public AttributedString(String text) {
         this(text, parts(text));
+    }
+
+    public AttributedString(List<Part> parts) {
+        this.parts = parts;
+        this.text = text(parts);
+    }
+
+    AttributedString(String text,List<Part> parts) {
+        this.parts = parts;
+        this.text = text;
+    }
+
+    static String text(List<Part> parts) {
+        return null;
     }
 
     static List<Part> parts(String text) {
@@ -69,7 +78,7 @@ public final class AttributedString
         public final Decoration decoration;
         public final int size;
 
-        Part(UIFont font, Color color, Decoration decoration, String text) {
+        public Part(UIFont font, Color color, Decoration decoration, String text) {
             this.font = font;
             this.color = color;
             this.text = text;
