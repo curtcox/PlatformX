@@ -17,7 +17,7 @@ public final class ColumnBoxFlowLayout {
     }
 
     public boolean willFitOnThisLine(Dimension box) {
-        return box.width <= width;
+        return currentBoxUpperLeft.x + box.width <= width;
     }
 
     public Point startNextLineWith(Dimension box) {

@@ -14,15 +14,33 @@ public class ColumnBoxFlowLayoutTest {
     }
 
     @Test
-    public void willFit_returns_false_when_first_box_does_not_fit_in_layout() {
+    public void willFit_returns_false_when_1st_box_does_not_fit_in_layout() {
         assertFalse(newLayout(10).willFitOnThisLine(box(11, 1)));
         assertFalse(newLayout(10).willFitOnThisLine(box(20, 1)));
     }
 
     @Test
-    public void willFit_returns_true_when_first_box_fits_in_layout() {
+    public void willFit_returns_true_when_1st_box_fits_in_layout() {
         assertTrue(newLayout(10).willFitOnThisLine(box(1, 1)));
         assertTrue(newLayout(10).willFitOnThisLine(box(10, 1)));
+    }
+
+    @Test
+    public void willFit_returns_true_when_2nd_box_fits_in_layout() {
+        ColumnBoxFlowLayout testObject = newLayout(10);
+        Dimension box = box(1,1);
+        testObject.addBoxToThisLine(box);
+
+        assertTrue(testObject.willFitOnThisLine(box));
+    }
+
+    @Test
+    public void willFit_returns_false_when_2nd_box_does_not_fit_in_layout() {
+        ColumnBoxFlowLayout testObject = newLayout(1);
+        Dimension box = box(1,1);
+        testObject.addBoxToThisLine(box);
+
+        assertFalse(testObject.willFitOnThisLine(box));
     }
 
     @Test
