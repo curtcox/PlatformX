@@ -13,9 +13,8 @@ import static org.junit.Assert.*;
 
 public class SEAttributedTextTest {
 
-    static class FakeRenderer implements PartRenderer {
-        @Override public void renderPartAt(AttributedString.Part part, Point point) {}
-        @Override public Dimension size(AttributedString.Part part) { return new Dimension(part.size,1); }
+    static class FakeRenderer implements AttributedString.Renderer {
+        @Override public void render(AttributedString string) {}
     }
 
     static class TestAttributedText extends SEAttributedText {

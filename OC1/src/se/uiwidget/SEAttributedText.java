@@ -3,7 +3,6 @@ package se.uiwidget;
 import common.ui.AttributedString;
 import common.ui.AttributedString.PartRenderer;
 import common.ui.ColumnBoxFlowLayout;
-import common.ui.SimpleAttributedStringRenderer;
 import common.uiwidget.UIAttributedText.*;
 
 import javax.swing.*;
@@ -16,7 +15,6 @@ public class SEAttributedText
     implements MouseListener
 {
     final AttributedString text;
-    final AttributedStringRenderer stringRenderer;
     private ColumnBoxFlowLayout layout;
 
     public interface AttributedStringRenderer {
@@ -24,12 +22,7 @@ public class SEAttributedText
     }
 
     SEAttributedText(AttributedString text) {
-        this(text,new SimpleAttributedStringRenderer());
-    }
-
-    SEAttributedText(AttributedString text,AttributedStringRenderer stringRenderer) {
         this.text = text;
-        this.stringRenderer = stringRenderer;
         addMouseListener(this);
     }
 
@@ -37,12 +30,12 @@ public class SEAttributedText
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         drawBackground(g2d);
-        drawText(new SEAttributedStringRenderer(g2d));
+        drawText(new SEAttributedStringRenderer(getWidth(),g2d));
     }
 
-    void drawText(PartRenderer partRenderer) {
+    void drawText(AttributedString.Renderer stringRenderer) {
         layout = new ColumnBoxFlowLayout(getWidth());
-        stringRenderer.drawText(text, partRenderer, layout);
+        stringRenderer.render(text);
     }
 
     void drawBackground(Graphics2D g) {
