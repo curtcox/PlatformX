@@ -58,13 +58,24 @@ public class ColumnBoxFlowLayoutTest {
     }
 
     @Test
-    public void addBoxToThisLine_returns_point_directly_to_the_right_of_first_box_added_when_adding_second_point() {
+    public void addBoxToThisLine_returns_point_directly_to_the_right_of_1st_box_added_when_adding_2nd_point() {
         ColumnBoxFlowLayout testObject = newLayout(10);
 
         testObject.addBoxToThisLine(box(1,1));
         Point actual = testObject.addBoxToThisLine(box(5, 5));
 
         assertEquals(new Point(1,0),actual);
+    }
+
+    @Test
+    public void addBoxToThisLine_returns_point_directly_to_the_right_of_2nd_box_added_when_adding_3rd_point() {
+        ColumnBoxFlowLayout testObject = newLayout(10);
+
+        testObject.addBoxToThisLine(box(1,1));
+        testObject.addBoxToThisLine(box(1,1));
+        Point actual = testObject.addBoxToThisLine(box(5, 5));
+
+        assertEquals(new Point(2,0),actual);
     }
 
     @Test

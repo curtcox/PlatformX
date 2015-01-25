@@ -33,7 +33,7 @@ public final class ColumnBoxFlowLayout {
     public Point addBoxToThisLine(Dimension box) {
         Point point = new Point(lineWidth,bottom);
         boxes.add(rectangleForBoxAt(box, point));
-        lineWidth =+ box.width;
+        lineWidth += box.width;
         lineHeight = Math.max(lineHeight,box.height);
         return point;
     }

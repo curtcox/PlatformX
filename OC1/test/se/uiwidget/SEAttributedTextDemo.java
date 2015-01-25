@@ -29,10 +29,17 @@ public class SEAttributedTextDemo {
     static AttributedString crawl() {
         return new AttributedString(Arrays.asList(new AttributedString.Part[] {
             part("A long time ago, in a galaxy far, far away...."),
-            part("It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil Galactic Empire."),
-            part("During the battle, rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR, an "),
-            part("armored space station with enough power to destroy an entire planet."),
-            part("Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that can save her people and restore freedom to the galaxy....")
+            part("It is a period of civil war."),
+            part("Rebel spaceships, striking from a hidden base, "),
+            part("have won their first victory against the evil Galactic Empire."),
+            part("During the battle, "),
+            part("rebel spies managed to steal secret plans to the Empire's ultimate weapon, "),
+            part("the DEATH STAR, "),
+            part("an armored space station with enough power to destroy an entire planet."),
+            part("Pursued by the Empire's sinister agents, "),
+            part("Princess Leia races home aboard her starship, "),
+            part("custodian of the stolen plans that can save her people "),
+            part("and restore freedom to the galaxy....")
         }));
     }
 
