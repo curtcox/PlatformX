@@ -1,6 +1,7 @@
 package se.uiwidget;
 
 import common.ui.AttributedString;
+import common.uiwidget.UIAttributedText;
 
 import javax.swing.*;
 import java.awt.*;
@@ -20,11 +21,20 @@ public class SEAttributedTextDemo {
     private static void launch() {
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().add(new SEAttributedText(crawl()));
+        frame.getContentPane().add(attributedText());
         frame.setVisible(true);
         frame.setPreferredSize(new Dimension(400,400));
         frame.pack();
     }
+
+    private static SEAttributedText attributedText() {
+        return new SEAttributedText(crawl()) {
+            protected void onTextSelected(UIAttributedText.SelectedEvent event) {
+                System.out.println(event.toString());
+            }
+        };
+    }
+
 
     static AttributedString crawl() {
         return new AttributedString(Arrays.asList(new AttributedString.Part[] {

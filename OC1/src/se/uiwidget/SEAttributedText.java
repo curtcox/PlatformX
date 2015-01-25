@@ -30,15 +30,15 @@ public class SEAttributedText
     public void paint(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         drawBackground(g2d);
-        drawText(new SEAttributedStringRenderer(getWidth(),g2d));
+        layout = new ColumnBoxFlowLayout(getWidth());
+        drawText(new SEAttributedStringRenderer(layout,g2d));
     }
 
     void drawText(AttributedString.Renderer stringRenderer) {
-        layout = new ColumnBoxFlowLayout(getWidth());
         stringRenderer.render(text);
     }
 
-    void drawBackground(Graphics2D g) {
+    private void drawBackground(Graphics2D g) {
         g.setColor(Color.WHITE);
         g.fillRect(0,0, getWidth(), getHeight());
     }
@@ -52,6 +52,9 @@ public class SEAttributedText
     }
 
     private SelectedEvent selectedEvent(MouseEvent mouseEvent) {
+        if (layout==null) {
+            return null;
+        }
         int index = layout.getPointIndex(mouseEvent.getPoint());
         return index==-1 ? null : new SelectedEvent(text,index);
     }

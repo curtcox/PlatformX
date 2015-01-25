@@ -1,7 +1,6 @@
 package se.uiwidget;
 
 import common.ui.AttributedString;
-import common.ui.AttributedString.PartRenderer;
 import common.uiwidget.UIAttributedText;
 import org.junit.Test;
 
@@ -37,25 +36,12 @@ public class SEAttributedTextTest {
     }
 
     @Test
-    public void mouseClick_does_not_trigger_onTextSelected_when_there_is_no_text_rendered() {
+    public void mouseClick_is_harmless_before_first_painting() {
         TestAttributedText testObject = new TestAttributedText(new AttributedString(""));
-        FakeRenderer renderer = new FakeRenderer();
-        testObject.drawText(renderer);
+
         testObject.mouseClicked(mouse(0, 0));
 
         assertTrue(testObject.event == null);
-    }
-
-    @Test
-    public void mouseClick_does_not_trigger_onTextSelected_when_rendered_text_is_empty() {
-        AttributedString string = new AttributedString("");
-        TestAttributedText testObject = new TestAttributedText(string);
-
-        FakeRenderer renderer = new FakeRenderer();
-        testObject.drawText(renderer);
-        testObject.mouseClicked(mouse(0,0));
-
-        assertTrue(testObject.event==null);
     }
 
     @Test

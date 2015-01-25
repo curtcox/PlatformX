@@ -21,6 +21,10 @@ public abstract class UIAttributedText
             this.text = text;
             this.part = part;
         }
+
+        public String toString() {
+            return "part=" + part;
+        }
     }
 
     public UIAttributedText(AttributedString text) {
