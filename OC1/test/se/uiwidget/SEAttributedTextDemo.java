@@ -5,6 +5,8 @@ import common.uiwidget.UIAttributedText;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class SEAttributedTextDemo {
@@ -41,13 +43,16 @@ public class SEAttributedTextDemo {
     }
 
     static AttributedString.Part[] crawlParts() {
-        AttributedString.Part[] parts = new AttributedString.Part[crawlParagraphs().length * 2];
-        int i = 0;
+        List list = new ArrayList();
         for (String paragraph : crawlParagraphs()) {
-            parts[i] = part(paragraph); i++;
-            parts[i] = part("/n"); i++;
+            for (String word : paragraph.split(" ")) {
+                list.add(part(word + " "));
+            }
+            list.add(AttributedString.NEW_LINE);
+            list.add(part(" "));
+            list.add(AttributedString.NEW_LINE);
         }
-        return parts;
+        return (AttributedString.Part[]) list.toArray(new AttributedString.Part[list.size()]);
     }
 
     static String[] crawlParagraphs() {
