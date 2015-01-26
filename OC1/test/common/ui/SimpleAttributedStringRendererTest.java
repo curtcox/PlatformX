@@ -169,6 +169,21 @@ public class SimpleAttributedStringRendererTest {
         assertions.pointIndex(4, 1,-1);
     }
 
+    @Test
+    public void drawText_puts_parts_on_following_line_after_a_new_line() {
+        FakePartRenderer partRenderer = new FakePartRenderer();
+        ColumnBoxFlowLayout layout = new ColumnBoxFlowLayout(10);
+
+        AttributedString text = new AttributedString("1/n2",
+                Arrays.asList(part("1"),AttributedString.NEW_LINE,part("2")));
+        testObject.drawText(text, partRenderer,layout);
+
+        BoxFlowLayoutAssertions assertions = new BoxFlowLayoutAssertions(layout);
+        assertions.pointIndex(0, 0, 0);
+        assertions.pointIndex(1, 0,-1);
+        assertions.pointIndex(0, 1, 2);
+    }
+
     private AttributedString.Part part(String text) {
         return new AttributedString.Part(null,null,null,text);
     }

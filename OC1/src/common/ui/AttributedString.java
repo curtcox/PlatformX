@@ -16,6 +16,11 @@ public final class AttributedString
     implements Iterable<AttributedString.Part>
 {
     /**
+     * A special non-rendering part for advancing to the next line.
+     */
+    public static final Part NEW_LINE = new Part(null,null,null,"/n");
+
+    /**
      * The parts of this string.
      */
     public final List<Part> parts;
@@ -109,13 +114,6 @@ public final class AttributedString
             ;
         }
 
-        public Part minusPrefix(Part first) {
-            return null;
-        }
-
-        public Part prefixOfSize(int i) {
-            return null;
-        }
     }
 
 
