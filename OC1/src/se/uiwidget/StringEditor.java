@@ -1,23 +1,32 @@
 package se.uiwidget;
 
+import common.util.MutableString;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public final class StringMapEditor
+public final class StringEditor
     extends JPanel
 {
 
-    final JTextArea textArea = new JTextArea(
-        "This is an editable JTextArea. " +
-        "A text area is a plain text component, which means that although it can display text in any font, " +
-        "all of the text is in the same font."
-    );
+    private final MutableString value;
+    final JTextArea textArea = new JTextArea();
+
+    public StringEditor(MutableString value) {
+        this.value = value;
+        textArea.setText(value.toString());
+        setLayout(new BorderLayout());
+        add(new JScrollPane(textArea), BorderLayout.CENTER);
+        textArea.addKeyListener(new TextKeyListener());
+    }
+
 
     final class TextKeyListener implements KeyListener {
         @Override
         public void keyTyped(KeyEvent keyEvent) {
+            value.set(textArea.getText());
             System.out.println("text : " + textArea.getText());
         }
 
@@ -25,9 +34,4 @@ public final class StringMapEditor
         @Override public void keyReleased(KeyEvent keyEvent) {}
     }
 
-    public StringMapEditor() {
-        setLayout(new BorderLayout());
-        add(new JScrollPane(textArea), BorderLayout.CENTER);
-        textArea.addKeyListener(new TextKeyListener());
-    }
 }
