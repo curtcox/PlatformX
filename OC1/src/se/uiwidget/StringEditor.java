@@ -1,37 +1,59 @@
 package se.uiwidget;
 
-import common.util.MutableString;
+import common.event.StringChange;
 
 import javax.swing.*;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.KeyEvent;
+import java.awt.event.KeyAdapter;
 import java.awt.event.KeyListener;
 
 public final class StringEditor
     extends JPanel
 {
+    final JTextArea textArea;
+    final StringChange.Listener textListener;
 
-    private final MutableString value;
-    final JTextArea textArea = new JTextArea();
-
-    public StringEditor(MutableString value) {
-        this.value = value;
-        textArea.setText(value.toString());
-        setLayout(new BorderLayout());
-        add(new JScrollPane(textArea), BorderLayout.CENTER);
-        textArea.addKeyListener(new TextKeyListener());
+    StringEditor() {
+        this(new JTextArea(), null, new KeyAdapter() {});
     }
 
+    StringEditor(final StringChange.Listener textListener, KeyListener keyListener) {
+        this(new JTextArea(), textListener, keyListener);
+    }
 
-    final class TextKeyListener implements KeyListener {
-        @Override
-        public void keyTyped(KeyEvent keyEvent) {
-            value.set(textArea.getText());
-            System.out.println("text : " + textArea.getText());
-        }
+    StringEditor(JTextArea textArea, final StringChange.Listener textListener, KeyListener keyListener) {
+        this.textArea = textArea;
+        this.textListener = textListener;
+        setLayout(new BorderLayout());
+        add(new JScrollPane(textArea), BorderLayout.CENTER);
+        textArea.addKeyListener(keyListener);
+        addTextListener();
+    }
 
-        @Override public void keyPressed(KeyEvent keyEvent) {}
-        @Override public void keyReleased(KeyEvent keyEvent) {}
+    void addTextListener() {
+        textArea.getDocument().addDocumentListener(documentListener());
+    }
+
+    DocumentListener documentListener() {
+        return new DocumentListener() {
+            @Override public void insertUpdate(DocumentEvent event) { notifyTextListener(); }
+            @Override public void removeUpdate(DocumentEvent event) { notifyTextListener(); }
+            @Override public void changedUpdate(DocumentEvent event) { notifyTextListener(); }
+        };
+    }
+
+    void notifyTextListener() {
+        textListener.onChange(new StringChange.Event(this,null,getText()));
+    }
+
+    public String getText() {
+        return textArea.getText();
+    }
+
+    public void setText(String text) {
+        textArea.setText(text);
     }
 
 }
