@@ -14,17 +14,7 @@ public final class SimpleMutableStringMap
     }
 
     @Override
-    public void rename(String oldKey, String newKey) {
-
-    }
-
-    @Override
     public void delete(String key) {
-
-    }
-
-    @Override
-    public void addListener(Listener listener) {
 
     }
 
