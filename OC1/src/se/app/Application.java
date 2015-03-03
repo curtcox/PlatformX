@@ -1,23 +1,41 @@
 package se.app;
 
 import common.Registry;
+import common.net.RootStringMap;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
+import mite.MiteHTTPServer;
+import mite.RequestHandler;
 
 import java.awt.*;
+import java.io.IOException;
 
 public final class Application {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        startServer();
+        launchUIOnEDT();
+    }
+
+    private static void startServer() throws IOException {
+        RequestHandler handler = new StringMapRequestHandler(FileSystemStringMap.of());
+        new MiteHTTPServer(findEmptyPort(),handler);
+    }
+
+    private static int findEmptyPort() {
+        return 8000;
+    }
+
+    private static void launchUIOnEDT() {
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                launch();
+                launchApp();
             }
         });
     }
 
-    private static void launch() {
+    private static void launchApp() {
         RegistryLoader.load();
         show();
     }

@@ -2,10 +2,6 @@ package common.util;
 
 import java.util.Map;
 
-/**
- *
- * @author Curt
- */
 public final class SimpleStringMap
     implements StringMap
 {
