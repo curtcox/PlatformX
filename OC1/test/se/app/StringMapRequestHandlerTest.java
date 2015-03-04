@@ -6,12 +6,11 @@ import mite.HTTPRequest;
 import mite.RequestHandler;
 import org.junit.Test;
 
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class StringMapRequestHandlerTest {
 
@@ -40,6 +39,19 @@ public class StringMapRequestHandlerTest {
         map.put("/key_in_map","stuff");
 
         assertTrue(testObject.handles(request));
+    }
+
+    @Test
+    public void returns_map_value_for_requests_that_are_in_map() throws IOException {
+        HTTPRequest request = HTTPRequest.parse("GET /key_in_map");
+        String value = random();
+        map.put("/key_in_map",value);
+
+        assertEquals(value, testObject.handle(request));
+    }
+
+    private String random() {
+        return toString();
     }
 
 }

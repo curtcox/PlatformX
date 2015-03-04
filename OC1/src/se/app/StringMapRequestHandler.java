@@ -6,6 +6,9 @@ import mite.handlers.AbstractRequestHandler;
 
 import java.io.IOException;
 
+/**
+ * A StringMap as a HTTPRequestHandler
+ */
 final class StringMapRequestHandler
     extends AbstractRequestHandler
 {
@@ -22,7 +25,7 @@ final class StringMapRequestHandler
 
     @Override
     protected String handle(HTTPRequest request) throws IOException {
-        return null;
+        return map.get(request.filename);
     }
 
 }
