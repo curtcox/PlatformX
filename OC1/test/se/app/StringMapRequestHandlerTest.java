@@ -2,6 +2,7 @@ package se.app;
 
 import common.util.SimpleStringMap;
 import common.util.StringMap;
+import mite.HTTPRequest;
 import mite.RequestHandler;
 import org.junit.Test;
 
@@ -30,14 +31,15 @@ public class StringMapRequestHandlerTest {
 
     @Test
     public void does_not_handle_requests_that_are_not_in_map() {
-        assertFalse(testObject.handles("key not in map"));
+        assertFalse(testObject.handles("GET /key_not_in_map"));
     }
 
     @Test
     public void handles_requests_that_are_in_map() {
-        map.put("key in map","stuff");
+        HTTPRequest request = HTTPRequest.parse("GET /key_in_map");
+        map.put("/key_in_map","stuff");
 
-        assertTrue(testObject.handles("key in map"));
+        assertTrue(testObject.handles(request));
     }
 
 }

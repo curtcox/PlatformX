@@ -1,15 +1,13 @@
 package se.app;
 
 import common.util.StringMap;
-import mite.RequestHandler;
+import mite.HTTPRequest;
+import mite.handlers.AbstractRequestHandler;
 
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.net.Socket;
 
 final class StringMapRequestHandler
-    implements RequestHandler
+    extends AbstractRequestHandler
 {
     final StringMap map;
 
@@ -18,12 +16,13 @@ final class StringMapRequestHandler
     }
 
     @Override
-    public boolean handles(String request) {
-        return map.get(request) != null;
+    protected boolean handles(HTTPRequest request) {
+        return map.get(request.filename) != null;
     }
 
     @Override
-    public void handle(String request, Socket socket, InputStream in, OutputStream out) throws IOException {
-
+    protected String handle(HTTPRequest request) throws IOException {
+        return null;
     }
+
 }
