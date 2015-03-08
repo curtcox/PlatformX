@@ -16,7 +16,12 @@ public abstract class Command {
         action();
     }
 
-    protected abstract void action();
+    public void go(Object... args) {
+        log("Executing " + command + args);
+        action(args);
+    }
+
+    protected abstract void action(Object... args);
 
     private void log(String message) {
         getLog().log(message);

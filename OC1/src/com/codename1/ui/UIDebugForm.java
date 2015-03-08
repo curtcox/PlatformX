@@ -31,7 +31,7 @@ public final class UIDebugForm
     private static com.codename1.ui.Command submitIssue() {
         return new C1LoggedCommand(new Command("Report") {
             @Override
-            protected void action() {
+            protected void action(Object...args) {
                 IssueReporter.sendEmail();
             }
         });

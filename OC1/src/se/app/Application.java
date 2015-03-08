@@ -6,6 +6,7 @@ import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import mite.MiteHTTPServer;
 import mite.RequestHandler;
+import se.util.TaggedValueStringMap;
 
 import java.awt.*;
 import java.io.IOException;
@@ -13,12 +14,13 @@ import java.io.IOException;
 public final class Application {
 
     public static void main(String[] args) throws IOException {
-        startServer();
+        //startServer();
         launchUIOnEDT();
     }
 
     private static void startServer() throws IOException {
-        RequestHandler handler = new StringMapRequestHandler(FileSystemStringMap.of());
+        TaggedValueStringMap source = null;
+        RequestHandler handler = new StringMapRequestHandler(source);
         new MiteHTTPServer(findEmptyPort(),handler);
     }
 

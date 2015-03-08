@@ -54,7 +54,7 @@ public abstract class Screen {
 
     private Command backCommand() {
         return new Command("Back") {
-            @Override public void action() {
+            @Override public void action(Object... args) {
                 back();
             }
         };

@@ -15,16 +15,25 @@ public final class SEForm
 {
     private final String title;
     private Command back;
+    private Command edit;
     private JButton backButton;
+    private JButton editButton;
+    private UIComponent layout;
 
-    public SEForm(String title) {
+    SEForm(String title, Command edit) {
         this.title = title;
+        this.edit = edit;
         setLayout(new BorderLayout());
+    }
+
+    SEForm(String title) {
+        this(title,new EditCommand());
     }
 
     @Override
     public void layout(UIComponent layout) {
         removeAll();
+        this.layout = layout;
         add(SEUIRenderer.render(layout),BorderLayout.CENTER);
         add(navigationPanel(),BorderLayout.NORTH);
     }
@@ -33,9 +42,27 @@ public final class SEForm
         JPanel panel = new JPanel();
         panel.setLayout(new BorderLayout());
         backButton = backButton();
+        editButton = editButton();
         panel.add(backButton,BorderLayout.WEST);
+        panel.add(editButton,BorderLayout.EAST);
         panel.add(new JTextField(),BorderLayout.CENTER);
         return panel;
+    }
+
+    JButton editButton() {
+        JButton button = new JButton("#");
+        button.setEnabled(false);
+        button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                editButtonClicked();
+            }
+        });
+        return button;
+    }
+
+    void editButtonClicked() {
+        edit.go(title,layout);
     }
 
     JButton backButton() {

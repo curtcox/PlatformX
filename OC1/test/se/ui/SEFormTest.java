@@ -2,6 +2,7 @@ package se.ui;
 
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
+import fake.FakeSERegistryLoader;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -12,7 +13,9 @@ import static org.junit.Assert.*;
 
 public class SEFormTest {
 
-    SEForm testObject = new SEForm("");
+    String title = random("title");
+    EditCommand editCommand = new EditCommand();
+    SEForm testObject = new SEForm(title,editCommand);
 
     @Test
     public void can_create() {
@@ -56,15 +59,26 @@ public class SEFormTest {
 
     @Test
     public void layout_produces_a_matching_label_for_a_label() {
-        String text = random();
+        String text = random("text");
         testObject.layout(new UILabel(text));
         JLabel label = (JLabel) testObject.getComponents()[0];
         assertSame(text, label.getText());
     }
 
+    @Test
+    public void editButtonClicked_triggers_edit_command_with_title_and_layout() {
+        FakeSERegistryLoader.load();
+        UIComponent layout = new UILabel(random("label"));
+        testObject.layout(layout);
 
-    private String random() {
-        return toString();
+        testObject.editButtonClicked();
+
+        assertEquals(title,editCommand.title);
+        assertEquals(layout,editCommand.layout);
+    }
+
+    private String random(String prefix) {
+        return prefix + toString();
     }
 
 }

@@ -3,6 +3,10 @@ package common.ui;
 import common.command.Command;
 import common.uiwidget.UIComponent;
 
+/**
+ * A place where ScreenS are shown.
+ * See Screen
+ */
 public interface IForm {
     void layout(UIComponent layout);
 
