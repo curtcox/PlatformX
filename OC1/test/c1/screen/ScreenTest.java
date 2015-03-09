@@ -1,6 +1,7 @@
 package c1.screen;
 
 import common.screen.Screen;
+import common.screen.ScreenLink;
 import common.uiwidget.UIContainer;
 import fake.FakeC1RegistryLoader;
 import java.util.concurrent.Callable;
@@ -25,7 +26,7 @@ public class ScreenTest {
 
     @Test
     public void can_create() {
-        new Screen(FakeUI.newForm(),"name"){
+        new Screen(FakeUI.newForm(),new ScreenLink("name")){
             @Override protected UIContainer layoutForPortrait() { return null;}
         };
     }
@@ -39,7 +40,7 @@ public class ScreenTest {
         return (Screen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
                 form = FakeUI.newForm();
-                return new Screen(form,"name"){
+                return new Screen(form,new ScreenLink("name")){
                     @Override protected UIContainer layoutForPortrait() { return null; }
                 };
             }

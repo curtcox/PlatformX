@@ -1,6 +1,7 @@
 package c1.screen;
 
 import common.screen.Screen;
+import common.screen.ScreenLink;
 import common.uiwidget.UIBorderContainer;
 import common.uiwidget.UIButton;
 import common.uiwidget.UIContainer;
@@ -58,7 +59,7 @@ public class C1ScreenButtonTest {
         boolean shown;
         
         public TestScreen(IForm form) {
-            super(form,"test");
+            super(form,new ScreenLink("test"));
         }
         
         @Override

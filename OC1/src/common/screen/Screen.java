@@ -17,27 +17,34 @@ import common.uiwidget.UIComponent;
 public abstract class Screen {
 
     public final IForm form;
-    public final String name;
+    final ScreenLink link;
     private Screen previous; // set once
     private Command back;    // set once
     private static Screen showing; // the currently showing screen
     
     /**
      * Override this constructor to create a new screen.
-     * @param name name of the Screen and title of the underlying Form
+     * @param link to the Screen
+     */
+    public Screen(ScreenLink link) {
+        this(formFactory().newForm(link.screen),link);
+    }
+
+    /**
+     * Override this constructor to create a new screen.
      */
     public Screen(String name) {
-        this(formFactory().newForm(name),name);
+        this(new ScreenLink(name));
     }
 
     /**
      * This constructor is exposed mostly for testing.
      * @param form 
      */
-    public Screen(IForm form, String name) {
+    public Screen(IForm form, ScreenLink link) {
         this.form = form;
-        this.name = name;
-        log("created " + name);
+        this.link = link;
+        log("created " + link);
     }
 
     private static IFormFactory formFactory() {
@@ -61,7 +68,7 @@ public abstract class Screen {
     }
 
     public void show() {
-        log("show " + name);
+        log("show " + link.screen);
         setPrevious();
         showing = this;
         refresh();
@@ -76,7 +83,7 @@ public abstract class Screen {
     }
     
     public void back() {
-        log("back " + name);
+        log("back " + link.screen);
         if (previous!=null) {
             previous.goBackToThisScreen();
         }

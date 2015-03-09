@@ -9,17 +9,21 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+/**
+ * I'm ready for my closeup.
+ */
 public class ScreenTest {
 
     FakeForm form = new FakeForm();
-    String name = random("name");
+    String name = random("title");
     UIComponent layout = new UIComponent();
+    ScreenLink link = new ScreenLink(name);
     ExampleScreen testObject;
 
     class ExampleScreen extends Screen {
 
-        public ExampleScreen(IForm form,String name) {
-            super(form,name);
+        public ExampleScreen(IForm form,ScreenLink link) {
+            super(form,link);
         }
 
         @Override
@@ -29,19 +33,25 @@ public class ScreenTest {
 
         @Override
         public String toString() {
-            return name;
+            return link.screen;
         }
     }
 
     @Before
     public void setup() {
         FakeSERegistryLoader.load();
-        testObject = new ExampleScreen(form,name);
+        testObject = new ExampleScreen(form,link);
     }
+
 
     @Test
     public void can_create() {
-        assertNotNull(new ExampleScreen(form,name));
+        assertNotNull(new ExampleScreen(form,link));
+    }
+
+    @Test
+    public void uses_screenLink_from_constructor() {
+        assertSame(link,testObject.link);
     }
 
     @Test
@@ -74,8 +84,8 @@ public class ScreenTest {
 
     @Test
     public void getShowing_returns_original_screen_after_going_back_to_it() {
-        ExampleScreen first = new ExampleScreen(new FakeForm(),"first");
-        ExampleScreen second = new ExampleScreen(new FakeForm(),"second");
+        ExampleScreen first = new ExampleScreen(new FakeForm(),new ScreenLink("first"));
+        ExampleScreen second = new ExampleScreen(new FakeForm(),new ScreenLink("second"));
 
         first.show();
         second.show();
@@ -88,8 +98,8 @@ public class ScreenTest {
     @Test
     public void back_shows_previously_shown_screen() {
         FakeForm form1 = new FakeForm();
-        ExampleScreen first = new ExampleScreen(form1,"first");
-        ExampleScreen second = new ExampleScreen(new FakeForm(),"second");
+        ExampleScreen first = new ExampleScreen(form1,new ScreenLink("first"));
+        ExampleScreen second = new ExampleScreen(new FakeForm(),new ScreenLink("second"));
 
         first.show();
         second.show();
@@ -103,8 +113,8 @@ public class ScreenTest {
     public void setBackCommand_is_called_when_there_is_a_previous_screen() {
         FakeForm form1 = new FakeForm();
         FakeForm form2 = new FakeForm();
-        ExampleScreen first = new ExampleScreen(form1,"first");
-        ExampleScreen second = new ExampleScreen(form2,"second");
+        ExampleScreen first = new ExampleScreen(form1,new ScreenLink("first"));
+        ExampleScreen second = new ExampleScreen(form2,new ScreenLink("second"));
 
         first.show();
         second.show();
