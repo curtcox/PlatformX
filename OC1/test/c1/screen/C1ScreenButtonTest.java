@@ -59,7 +59,7 @@ public class C1ScreenButtonTest {
         boolean shown;
         
         public TestScreen(IForm form) {
-            super(form,new ScreenLink("test"));
+            super(form,ScreenLink.of("test"));
         }
         
         @Override

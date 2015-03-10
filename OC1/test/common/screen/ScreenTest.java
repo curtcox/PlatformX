@@ -17,7 +17,7 @@ public class ScreenTest {
     FakeForm form = new FakeForm();
     String name = random("title");
     UIComponent layout = new UIComponent();
-    ScreenLink link = new ScreenLink(name);
+    ScreenLink link = ScreenLink.of(name);
     ExampleScreen testObject;
 
     class ExampleScreen extends Screen {
@@ -33,7 +33,7 @@ public class ScreenTest {
 
         @Override
         public String toString() {
-            return link.screen;
+            return link.toString();
         }
     }
 
@@ -84,8 +84,8 @@ public class ScreenTest {
 
     @Test
     public void getShowing_returns_original_screen_after_going_back_to_it() {
-        ExampleScreen first = new ExampleScreen(new FakeForm(),new ScreenLink("first"));
-        ExampleScreen second = new ExampleScreen(new FakeForm(),new ScreenLink("second"));
+        ExampleScreen first = new ExampleScreen(new FakeForm(),ScreenLink.of("first"));
+        ExampleScreen second = new ExampleScreen(new FakeForm(),ScreenLink.of("second"));
 
         first.show();
         second.show();
@@ -98,8 +98,8 @@ public class ScreenTest {
     @Test
     public void back_shows_previously_shown_screen() {
         FakeForm form1 = new FakeForm();
-        ExampleScreen first = new ExampleScreen(form1,new ScreenLink("first"));
-        ExampleScreen second = new ExampleScreen(new FakeForm(),new ScreenLink("second"));
+        ExampleScreen first = new ExampleScreen(form1,ScreenLink.of("first"));
+        ExampleScreen second = new ExampleScreen(new FakeForm(),ScreenLink.of("second"));
 
         first.show();
         second.show();
@@ -113,8 +113,8 @@ public class ScreenTest {
     public void setBackCommand_is_called_when_there_is_a_previous_screen() {
         FakeForm form1 = new FakeForm();
         FakeForm form2 = new FakeForm();
-        ExampleScreen first = new ExampleScreen(form1,new ScreenLink("first"));
-        ExampleScreen second = new ExampleScreen(form2,new ScreenLink("second"));
+        ExampleScreen first = new ExampleScreen(form1,ScreenLink.of("first"));
+        ExampleScreen second = new ExampleScreen(form2,ScreenLink.of("second"));
 
         first.show();
         second.show();

@@ -63,7 +63,7 @@ public class MyApplication {
 
     private void show() {
         ScreenFactory factory = Registry.get(ScreenFactory.class);
-        factory.create(new ScreenLink("")).show();
+        factory.create(ScreenLink.of("")).show();
     }
     
     public void stop() {

@@ -43,7 +43,7 @@ private final class ItemScreen
 
     @Override
     protected ScreenLink useSelectedItem(Object item) {
-        return new ScreenLink(item.toString());
+        return ScreenLink.of(item.toString());
     }
 }
 

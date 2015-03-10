@@ -44,7 +44,7 @@ public final class Application {
 
     private static void show() {
         ScreenFactory factory = Registry.get(ScreenFactory.class);
-        factory.create(new ScreenLink("")).show();
+        factory.create(ScreenLink.of("")).show();
     }
 
 }

@@ -29,12 +29,12 @@ public class GlobScreenFactoryTest {
     
     @Test
     public void create_returns_results_of_doCreate_when_glob_matches() {
-         assertSame(screen,testObject.create(new ScreenLink("stuff")));    
+         assertSame(screen,testObject.create(ScreenLink.of("stuff")));
     }
 
     @Test
     public void create_returns_null_when_glob_does_not_match() {
-         assertEquals(null,testObject.create(new ScreenLink("junk")));    
+         assertEquals(null,testObject.create(ScreenLink.of("junk")));
     }
 
 }

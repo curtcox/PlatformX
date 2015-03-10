@@ -16,7 +16,7 @@ import common.uiwidget.UIButton;
 public final class ScreenButton {
 
     public static UIButton textImageActionAndLeadingTo(String text,String image,Runnable runnable,String screen) {
-        UIButton button = textActionAndLeadingTo(text,runnable,screenFactory().create(new ScreenLink(screen)));
+        UIButton button = textActionAndLeadingTo(text,runnable,screenFactory().create(ScreenLink.of(screen)));
         button.icon=image;
         return button;
     }
@@ -55,7 +55,7 @@ public final class ScreenButton {
         return new UIButton(text) {
             @Override
             public void onTap() {
-                screenFactory().create(new ScreenLink(screen)).show();
+                screenFactory().create(ScreenLink.of(screen)).show();
             }
         };
     }
@@ -96,7 +96,7 @@ public final class ScreenButton {
         return new UIButton(text) {
             @Override
             public void onTap() {
-                screenFactory().create(new ScreenLink(screen,args)).show();
+                screenFactory().create(ScreenLink.of(screen,args)).show();
             }
         };
     }

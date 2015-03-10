@@ -21,7 +21,7 @@ public final class LocationSelectionScreen
     @Override
     protected ScreenLink useSelectedItem(LocationDescription item) {
         Locations.of().selectLocation(item.toLocation());
-        return new ScreenLink("ProviderDetails",item);
+        return ScreenLink.of("ProviderDetails",item);
     }
 
 }

@@ -30,7 +30,7 @@ public class C1Form
     private static com.codename1.ui.Command goHome() {
         return new C1LoggedCommand(new Command("Home") {
             @Override public void action(Object...args) {
-                ScreenFactory.DEFAULT.create(new ScreenLink("")).show();
+                ScreenFactory.DEFAULT.create(ScreenLink.of("")).show();
             }
         });
     }

@@ -26,7 +26,7 @@ public class ScreenTest {
 
     @Test
     public void can_create() {
-        new Screen(FakeUI.newForm(),new ScreenLink("name")){
+        new Screen(FakeUI.newForm(),ScreenLink.of("name")){
             @Override protected UIContainer layoutForPortrait() { return null;}
         };
     }
@@ -40,7 +40,7 @@ public class ScreenTest {
         return (Screen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
                 form = FakeUI.newForm();
-                return new Screen(form,new ScreenLink("name")){
+                return new Screen(form,ScreenLink.of("name")){
                     @Override protected UIContainer layoutForPortrait() { return null; }
                 };
             }

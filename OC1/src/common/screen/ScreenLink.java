@@ -7,7 +7,11 @@ import java.util.Arrays;
  * @author Curt
  */
 public final class ScreenLink {
-    
+
+    public static ScreenLink of(String name, Object... args) {
+        return new ScreenLink(name,args);
+    }
+
     public interface Factory {
         ScreenLink create();    
     }
@@ -15,7 +19,7 @@ public final class ScreenLink {
     public final String screen;
     public final Object[] args;
     
-    public ScreenLink(String screen, Object... args) {
+    private ScreenLink(String screen, Object... args) {
         this.screen = screen;
         this.args = args;
     }

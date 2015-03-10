@@ -34,7 +34,7 @@ public abstract class Screen {
      * Override this constructor to create a new screen.
      */
     public Screen(String name) {
-        this(new ScreenLink(name));
+        this(ScreenLink.of(name));
     }
 
     /**
