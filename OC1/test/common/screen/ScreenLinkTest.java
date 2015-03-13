@@ -14,12 +14,12 @@ public class ScreenLinkTest {
         String arg = random("arg");
         ScreenLink testObject = ScreenLink.of(name,arg);
 
-        assertSame(name,testObject.tags.toString());
+        assertEquals(name,testObject.tags.toString());
         assertEquals(1,testObject.args.length);
         assertSame(arg,testObject.args[0]);
     }
 
     private String random(String prefix) {
-        return prefix + toString();
+        return prefix + "@" + hashCode();
     }
 }

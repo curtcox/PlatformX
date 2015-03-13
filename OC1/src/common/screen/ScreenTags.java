@@ -1,7 +1,19 @@
 package common.screen;
 
 public final class ScreenTags {
-    public static ScreenTags of(String screen) {
-        return null;
+
+    final String tags;
+
+    private ScreenTags(String tags) {
+        this.tags = tags;
+    }
+
+    public static ScreenTags of(String tags) {
+        return new ScreenTags(tags.toLowerCase());
+    }
+
+    @Override
+    public String toString() {
+        return tags;
     }
 }

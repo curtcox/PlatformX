@@ -19,7 +19,7 @@ public final class Glob {
     }
 
     public boolean matches(ScreenTags tags) {
-        return false;
+        return matches(tags.toString());
     }
 
     public boolean matches(String string) {
