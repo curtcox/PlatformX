@@ -20,7 +20,7 @@ final class GlobScreenControllerLookup
     public ScreenController lookup(ScreenLink link) {
         for (int i=0; i<globs.size(); i++) {
             Glob glob = globs.get(i);
-            if (glob.matches(link.screen)) {
+            if (glob.matches(link.tags)) {
                 return controllers.get(i);
             }
         }

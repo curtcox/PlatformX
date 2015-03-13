@@ -27,7 +27,7 @@ public abstract class Screen {
      * @param link to the Screen
      */
     public Screen(ScreenLink link) {
-        this(formFactory().newForm(link.screen),link);
+        this(formFactory().newForm(link.toString()),link);
     }
 
     /**
@@ -68,7 +68,7 @@ public abstract class Screen {
     }
 
     public void show() {
-        log("show " + link.screen);
+        log("show " + link.toString());
         setPrevious();
         showing = this;
         refresh();
@@ -83,7 +83,7 @@ public abstract class Screen {
     }
     
     public void back() {
-        log("back " + link.screen);
+        log("back " + link.toString());
         if (previous!=null) {
             previous.goBackToThisScreen();
         }

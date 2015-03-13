@@ -16,16 +16,16 @@ public final class ScreenLink {
         ScreenLink create();    
     }
     
-    public final String screen;
+    public final ScreenTags tags;
     public final Object[] args;
     
     private ScreenLink(String screen, Object... args) {
-        this.screen = screen;
+        this.tags = ScreenTags.of(screen);
         this.args = args;
     }
     
     @Override
     public String toString() {
-        return screen + " " + Arrays.asList(args);
+        return tags + " " + Arrays.asList(args);
     }
 }

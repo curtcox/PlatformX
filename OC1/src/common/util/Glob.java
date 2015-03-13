@@ -1,5 +1,7 @@
 package common.util;
 
+import common.screen.ScreenTags;
+
 /**
  * A glob in the file system filename sense.
  * @author Curt
@@ -16,8 +18,12 @@ public final class Glob {
         this.glob = glob.toLowerCase();
     }
 
+    public boolean matches(ScreenTags tags) {
+        return false;
+    }
+
     public boolean matches(String string) {
         return glob.equals("*") || glob.equals(string.toLowerCase());
     }
-    
+
 }
