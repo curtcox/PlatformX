@@ -37,6 +37,6 @@ public final class LazyScreenFactory
     }
 
     private String name(ScreenLink link) {
-        return link.tags.toString();
+        return link.title();
     }
 }

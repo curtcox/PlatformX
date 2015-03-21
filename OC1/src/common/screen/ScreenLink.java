@@ -23,7 +23,11 @@ public final class ScreenLink {
         this.tags = ScreenTags.of(screen);
         this.args = args;
     }
-    
+
+    public String title() {
+        return tags.toString();
+    }
+
     @Override
     public String toString() {
         return tags + " " + Arrays.asList(args);

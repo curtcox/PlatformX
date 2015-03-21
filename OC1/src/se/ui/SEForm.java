@@ -96,7 +96,7 @@ public final class SEForm
 
     @Override
     public String getTitle() {
-        return link.tags.toString();
+        return link.title();
     }
 
     @Override

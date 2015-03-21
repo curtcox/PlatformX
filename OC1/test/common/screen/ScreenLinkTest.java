@@ -15,6 +15,7 @@ public class ScreenLinkTest {
         ScreenLink testObject = ScreenLink.of(name,arg);
 
         assertEquals(name,testObject.tags.toString());
+        assertEquals(name, testObject.title());
         assertEquals(1,testObject.args.length);
         assertSame(arg,testObject.args[0]);
     }

@@ -41,7 +41,7 @@ public final class DynamicScreenFactory
     }
     
     private String name(ScreenLink link) {
-        return names.get(link.tags.toString());
+        return names.get(link.title());
     } 
     
     private ScreenContext.Provider controller(ScreenLink link) {
