@@ -23,7 +23,7 @@ public class C1Form
     private final ScreenLink link;
 
     public C1Form(ScreenLink link) {
-        super(link.toString());
+        super(link.title());
         this.link = link;
         addCommand(goHome());
         refreshOnOrientationChange();
@@ -79,7 +79,7 @@ public class C1Form
 
     @Override
     public ScreenLink getScreenLink() {
-        return null;
+        return link;
     }
 
 }

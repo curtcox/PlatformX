@@ -38,6 +38,13 @@ public class SEFormTest {
     }
 
     @Test
+    public void link_is_set_from_constructor() {
+        SEForm testObject = new SEForm(link);
+
+        assertSame(link, testObject.getScreenLink());
+    }
+
+    @Test
     public void uses_border_layout() {
         LayoutManager layout = testObject.getLayout();
         assertTrue(layout instanceof BorderLayout);

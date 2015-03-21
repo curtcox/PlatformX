@@ -101,7 +101,7 @@ public final class SEForm
 
     @Override
     public ScreenLink getScreenLink() {
-        return null;
+        return link;
     }
 
     private SEDisplay display() {
