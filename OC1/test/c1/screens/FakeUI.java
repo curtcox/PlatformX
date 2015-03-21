@@ -2,6 +2,7 @@ package c1.screens;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.plaf.UIManager;
+import common.screen.ScreenLink;
 import fake.FakeUIManager;
 import c1.ui.C1Form;
 import common.ui.IForm;
@@ -23,7 +24,7 @@ public final class FakeUI {
     }
     
     public static IForm newForm() {
-        return new C1Form("test") {
+        return new C1Form(ScreenLink.of("test")) {
             @Override
             public UIManager getUIManager(){
                 return FakeUIManager.of();

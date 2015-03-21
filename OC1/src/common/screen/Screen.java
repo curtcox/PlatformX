@@ -27,7 +27,7 @@ public abstract class Screen {
      * @param link to the Screen
      */
     public Screen(ScreenLink link) {
-        this(formFactory().newForm(link.toString()),link);
+        this(formFactory().newForm(link),link);
     }
 
     /**

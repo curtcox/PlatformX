@@ -1,5 +1,7 @@
 package se.ui;
 
+import common.screen.ScreenLink;
+import common.ui.IForm;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
 import fake.FakeSERegistryLoader;
@@ -13,21 +15,26 @@ import static org.junit.Assert.*;
 
 public class SEFormTest {
 
-    String title = random("title");
+    String title = random("link");
     EditCommand editCommand = new EditCommand();
-    SEForm testObject = new SEForm(title,editCommand);
+    ScreenLink link = ScreenLink.of(title);
+    SEForm testObject = new SEForm(link,editCommand);
 
     @Test
     public void can_create() {
-        assertNotNull(new SEForm(""));
+        assertNotNull(new SEForm(ScreenLink.of("")));
+    }
+
+    @Test
+    public void is_IForm() {
+        assertTrue(new SEForm(ScreenLink.of("")) instanceof IForm);
     }
 
     @Test
     public void title_is_set_from_constructor() {
-        String title = toString();
-        SEForm testObject = new SEForm(title);
+        SEForm testObject = new SEForm(link);
 
-        assertSame(title, testObject.getTitle());
+        assertEquals(title, testObject.getTitle());
     }
 
     @Test
@@ -73,12 +80,12 @@ public class SEFormTest {
 
         testObject.editButtonClicked();
 
-        assertEquals(title,editCommand.title);
+        assertEquals(title,editCommand.link.tags.toString());
         assertEquals(layout,editCommand.layout);
     }
 
     private String random(String prefix) {
-        return prefix + toString();
+        return (prefix + toString().toLowerCase());
     }
 
 }

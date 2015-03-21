@@ -1,5 +1,6 @@
 package common.ui;
 
+import common.screen.ScreenLink;
 import common.ui.IForm;
 
 /**
@@ -9,5 +10,5 @@ import common.ui.IForm;
  * @author Curt
  */
 public interface IFormFactory {
-    IForm newForm(String title);
+    IForm newForm(ScreenLink link);
 }

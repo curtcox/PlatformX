@@ -1,12 +1,13 @@
 package se.ui;
 
 import common.command.Command;
+import common.screen.ScreenLink;
 import common.uiwidget.UIComponent;
 
 final class EditCommand
     extends Command
 {
-    public String title;
+    public ScreenLink link;
     public UIComponent layout;
 
     EditCommand() {
@@ -15,7 +16,7 @@ final class EditCommand
 
     @Override
     protected void action(Object... args) {
-        title = (String) args[0];
+        link = (ScreenLink) args[0];
         layout = (UIComponent) args[1];
     }
 }

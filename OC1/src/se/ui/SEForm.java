@@ -1,6 +1,7 @@
 package se.ui;
 
 import common.command.Command;
+import common.screen.ScreenLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -13,21 +14,21 @@ public final class SEForm
     extends JPanel
     implements IForm
 {
-    private final String title;
+    private final ScreenLink link;
     private Command back;
     private Command edit;
     private JButton backButton;
     private JButton editButton;
     private UIComponent layout;
 
-    SEForm(String title, Command edit) {
-        this.title = title;
+    SEForm(ScreenLink link, Command edit) {
+        this.link = link;
         this.edit = edit;
         setLayout(new BorderLayout());
     }
 
-    SEForm(String title) {
-        this(title,new EditCommand());
+    SEForm(ScreenLink link) {
+        this(link,new EditCommand());
     }
 
     @Override
@@ -62,7 +63,7 @@ public final class SEForm
     }
 
     void editButtonClicked() {
-        edit.go(title,layout);
+        edit.go(link,layout);
     }
 
     JButton backButton() {
@@ -95,7 +96,12 @@ public final class SEForm
 
     @Override
     public String getTitle() {
-        return title;
+        return link.tags.toString();
+    }
+
+    @Override
+    public ScreenLink getScreenLink() {
+        return null;
     }
 
     private SEDisplay display() {

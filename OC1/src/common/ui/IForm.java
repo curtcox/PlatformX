@@ -1,6 +1,7 @@
 package common.ui;
 
 import common.command.Command;
+import common.screen.ScreenLink;
 import common.uiwidget.UIComponent;
 
 /**
@@ -17,4 +18,6 @@ public interface IForm {
     void showBack();
 
     String getTitle();
+
+    ScreenLink getScreenLink();
 }

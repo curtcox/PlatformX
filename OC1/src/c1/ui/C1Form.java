@@ -20,8 +20,11 @@ public class C1Form
     extends Form
     implements IForm
 {
-    public C1Form(String title) {
-        super(title);
+    private final ScreenLink link;
+
+    public C1Form(ScreenLink link) {
+        super(link.toString());
+        this.link = link;
         addCommand(goHome());
         refreshOnOrientationChange();
         refreshOnPull();
@@ -72,6 +75,11 @@ public class C1Form
     @Override
     public void setBackCommand(Command back) {
         super.setBackCommand(new C1LoggedCommand(back));
+    }
+
+    @Override
+    public ScreenLink getScreenLink() {
+        return null;
     }
 
 }

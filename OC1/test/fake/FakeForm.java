@@ -1,6 +1,7 @@
 package fake;
 
 import common.command.Command;
+import common.screen.ScreenLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -27,17 +28,16 @@ public class FakeForm
         this.backCommand = backCommand;
     }
 
+    public Command getBackCommand() {
+        return backCommand;
+    }
+
     @Override
     public void showBack() {
         showBackWasCalled = true;
     }
 
-    @Override
-    public String getTitle() {
-        return null;
-    }
+    @Override  public String getTitle() { return null; }
+    @Override  public ScreenLink getScreenLink() { return null; }
 
-    public Command getBackCommand() {
-        return backCommand;
-    }
 }

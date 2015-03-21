@@ -1,12 +1,13 @@
 package se.ui;
 
+import common.screen.ScreenLink;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class SEDisplayTest {
 
-    SEForm form = new SEForm("");
+    SEForm form = new SEForm(ScreenLink.of(""));
     SEDisplay testObject = SEDisplay.of();
 
     @Test

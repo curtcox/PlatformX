@@ -1,8 +1,8 @@
 package se.ui;
 
+import common.screen.ScreenLink;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -26,13 +26,14 @@ public class EditCommandTest {
     @Test
     public void uses_title_and_layout_from_action() {
         UIComponent layout = new UILabel(random("label"));
-        String title = random("title");
-        testObject.action(title,layout);
-        assertSame(title, testObject.title);
+        String title = random("link");
+        ScreenLink link = ScreenLink.of(title);
+        testObject.action(link,layout);
+        assertSame(title, testObject.link.tags.toString());
         assertSame(layout, testObject.layout);
     }
 
     private String random(String prefix) {
-        return prefix + toString();
+        return (prefix + toString()).toLowerCase();
     }
 }

@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 public class ScreenTest {
 
     FakeForm form = new FakeForm();
-    String name = random("title");
+    String name = random("link");
     UIComponent layout = new UIComponent();
     ScreenLink link = ScreenLink.of(name);
     ExampleScreen testObject;
