@@ -11,20 +11,22 @@ import java.util.Map;
  */
 public final class Events {
 
-    interface Listener {
+    private Listener listener;
+
+    public interface Listener {
         void onEvent(Event event);
     }
 
-    interface Event {}
-
-    private final Map<Class,Object> listeners = new HashMap<Class,Object>();
+    public interface Event {}
 
     public void registerListenerFor(Listener listener, Class clazz) {
-
+        this.listener = listener;
     }
 
     public void post(Event event) {
-
+        if (listener!=null) {
+            listener.onEvent(event);
+        }
     }
 
 }

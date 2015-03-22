@@ -89,6 +89,8 @@ public class SEFormTest {
         Events events = new Events();
         SimpleListener listener = new SimpleListener();
         Registry.put(Events.class,events);
+        events.registerListenerFor(listener,EditCommand.Value.class);
+
         testObject.layout(layout);
 
         testObject.editButtonClicked();

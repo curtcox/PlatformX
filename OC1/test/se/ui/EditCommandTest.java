@@ -32,8 +32,9 @@ public class EditCommandTest {
         String title = random("link");
         ScreenLink link = ScreenLink.of(title);
         Events events = new Events();
-        SimpleListener listener = new SimpleListener();
         Registry.put(Events.class,events);
+        SimpleListener listener = new SimpleListener();
+        events.registerListenerFor(listener,EditCommand.Value.class);
 
         testObject.action(link,layout);
 
