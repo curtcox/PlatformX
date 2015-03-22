@@ -89,13 +89,13 @@ public class SEFormTest {
         Events events = new Events();
         SimpleListener listener = new SimpleListener();
         Registry.put(Events.class,events);
-        events.registerListenerFor(listener,EditCommand.Value.class);
+        events.registerListenerFor(listener,EditCommand.Event.class);
 
         testObject.layout(layout);
 
         testObject.editButtonClicked();
 
-        EditCommand.Value value = (EditCommand.Value) listener.getLast();
+        EditCommand.Event value = (EditCommand.Event) listener.getLast();
         assertEquals(title,value.link.title());
         assertEquals(layout,value.layout);
     }
