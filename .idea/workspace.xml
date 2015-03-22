@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/se/events/Events.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\c1\app\RegistryTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/RegistryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/ui/EditCommand.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/EditCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/Registry.java" afterPath="$PROJECT_DIR$/OC1/src/common/Registry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/se/events/SimpleListenerTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java" afterPath="$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -57,13 +52,26 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="SEFormTest.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="SEFormTest.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.8547486" vertical-offset="799" max-vertical-offset="1768">
-                    <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1768">
+                    <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
                     <folding>
                       <element signature="imports" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="SimpleListener.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.20893855" vertical-offset="0" max-vertical-offset="895">
+                    <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+                    <folding>
+                      <element signature="e#178#179#0" expanded="true" />
+                      <element signature="e#212#213#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -100,14 +108,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SimpleListener.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java">
+      <file leaf-file-name="SimpleListenerTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/test/se/events/SimpleListenerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-              <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.20795107" vertical-offset="0" max-vertical-offset="654">
+              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
               <folding>
-                <element signature="e#189#190#0" expanded="true" />
-                <element signature="e#216#217#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#247#248#0" expanded="true" />
+                <element signature="e#322#323#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -148,11 +157,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EditCommandTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EditCommandTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7140673" vertical-offset="145" max-vertical-offset="799">
-              <caret line="40" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="799">
+              <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -168,7 +177,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/se/util/TaggedValueStringMap.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/command/Command.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/ui/DebugForm.java" />
         <option value="$PROJECT_DIR$/OC1/src/com/codename1/ui/UIDebugForm.java" />
@@ -215,10 +223,11 @@
         <option value="$PROJECT_DIR$/OC1/test/c1/app/RegistryTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/common/RegistryTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/events/Events.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/ui/EditCommand.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/se/events/SimpleListenerTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java" />
       </list>
     </option>
   </component>
@@ -389,11 +398,11 @@
       <recent name="common.stores" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="se.events" />
       <recent name="se.ui" />
       <recent name="c1.ui" />
       <recent name="common.util" />
       <recent name="common.screen" />
-      <recent name="mite.handlers" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="common.util" />
@@ -403,7 +412,7 @@
       <recent name="c1.command" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in OC1">
+  <component name="RunManager" selected="JUnit.SimpleListenerTest">
     <configuration default="false" name="All in OC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="OC1" />
@@ -413,34 +422,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="GlobTest.star_matches_all_strings" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="common.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="OC1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="common.util" />
-      <option name="MAIN_CLASS_NAME" value="common.util.GlobTest" />
-      <option name="METHOD_NAME" value="star_matches_all_strings" />
-      <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -523,6 +504,34 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="se.ui" />
       <option name="MAIN_CLASS_NAME" value="se.ui.SEFormTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="SimpleListenerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="se.events.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="OC1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="se.events" />
+      <option name="MAIN_CLASS_NAME" value="se.events.SimpleListenerTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -694,18 +703,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.GlobTest.star_matches_all_strings" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.GlobTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.C1FormTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SEFormTest" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.GlobTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.C1FormTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SEFormTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.SimpleListenerTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.C1FormTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SEFormTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.GlobTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.GlobTest.star_matches_all_strings" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.SimpleListenerTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in OC1" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.C1FormTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SEFormTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.GlobTest" />
       </list>
     </recent_temporary>
   </component>
@@ -741,7 +750,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27830687" sideWeight="0.7486856" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27830687" sideWeight="0.7486856" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20031546" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -785,13 +794,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/AbstractItemListScreenFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="337" max-vertical-offset="1088">
-          <caret line="60" column="42" selection-start-line="60" selection-start-column="42" selection-end-line="60" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/c1/screens/Rate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="82" max-vertical-offset="969">
@@ -935,8 +937,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="167" max-vertical-offset="1989">
           <caret line="29" column="39" selection-start-line="29" selection-start-column="39" selection-end-line="29" selection-end-column="39" />
           <folding>
-            <element signature="e#807#808#0" expanded="true" />
-            <element signature="e#861#862#0" expanded="true" />
+            <element signature="e#807#808#0" expanded="false" />
+            <element signature="e#861#862#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -976,12 +978,12 @@
         <state vertical-scroll-proportion="0.037988827" vertical-offset="0" max-vertical-offset="895">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding>
-            <element signature="e#117#118#0" expanded="true" />
-            <element signature="e#149#150#0" expanded="true" />
-            <element signature="e#197#198#0" expanded="true" />
-            <element signature="e#254#255#0" expanded="true" />
-            <element signature="e#300#301#0" expanded="true" />
-            <element signature="e#327#328#0" expanded="true" />
+            <element signature="e#117#118#0" expanded="false" />
+            <element signature="e#149#150#0" expanded="false" />
+            <element signature="e#197#198#0" expanded="false" />
+            <element signature="e#254#255#0" expanded="false" />
+            <element signature="e#300#301#0" expanded="false" />
+            <element signature="e#327#328#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1109,8 +1111,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
           <folding>
-            <element signature="e#398#399#0" expanded="true" />
-            <element signature="e#445#446#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="false" />
+            <element signature="e#445#446#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1148,8 +1150,8 @@
         <state vertical-scroll-proportion="0.29373997" vertical-offset="4" max-vertical-offset="748">
           <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="24" selection-end-column="5" />
           <folding>
-            <element signature="e#461#462#0" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#461#462#0" expanded="false" />
+            <element signature="e#504#505#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1167,17 +1169,6 @@
         <state vertical-scroll-proportion="0.10914928" vertical-offset="0" max-vertical-offset="623">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="3" column="30" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding>
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#216#217#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1214,9 +1205,9 @@
         <state vertical-scroll-proportion="0.32290503" vertical-offset="0" max-vertical-offset="895">
           <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#240#241#0" expanded="true" />
-            <element signature="e#311#312#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#240#241#0" expanded="false" />
+            <element signature="e#311#312#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1263,22 +1254,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8547486" vertical-offset="799" max-vertical-offset="1768">
-          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="145" max-vertical-offset="799">
+          <caret line="18" column="9" selection-start-line="18" selection-start-column="9" selection-end-line="18" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7140673" vertical-offset="145" max-vertical-offset="799">
-          <caret line="40" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="1768">
+          <caret line="62" column="10" selection-start-line="62" selection-start-column="10" selection-end-line="62" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20893855" vertical-offset="0" max-vertical-offset="895">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/events/SimpleListenerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20795107" vertical-offset="0" max-vertical-offset="654">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#247#248#0" expanded="true" />
+            <element signature="e#322#323#0" expanded="true" />
           </folding>
         </state>
       </provider>
