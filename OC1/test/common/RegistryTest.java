@@ -1,4 +1,4 @@
-package c1.app;
+package common;
 
 import common.Registry;
 import java.util.ArrayList;
@@ -9,10 +9,6 @@ import java.util.Set;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class RegistryTest {
 
     @Test

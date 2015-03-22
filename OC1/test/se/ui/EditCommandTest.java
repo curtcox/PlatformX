@@ -1,9 +1,12 @@
 package se.ui;
 
+import se.events.Events;
+import common.Registry;
 import common.screen.ScreenLink;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
 import org.junit.Test;
+import se.events.SimpleListener;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -24,13 +27,19 @@ public class EditCommandTest {
     }
 
     @Test
-    public void uses_title_and_layout_from_action() {
+    public void uses_title_and_layout_from_action_for_event_bus_value() {
         UIComponent layout = new UILabel(random("label"));
         String title = random("link");
         ScreenLink link = ScreenLink.of(title);
+        Events events = new Events();
+        SimpleListener listener = new SimpleListener();
+        Registry.put(Events.class,events);
+
         testObject.action(link,layout);
-        assertSame(title, testObject.link.tags.toString());
-        assertSame(layout, testObject.layout);
+
+        EditCommand.Value value = (EditCommand.Value) listener.getLast();
+        assertSame(title, value.link.title());
+        assertSame(layout, value.layout);
     }
 
     private String random(String prefix) {

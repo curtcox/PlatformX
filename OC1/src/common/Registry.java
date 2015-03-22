@@ -23,5 +23,5 @@ public final class Registry {
     public static <T> void put(Class<T> key, T value) {
         Registry.values.put(key, value);
     }
-    
+
 }
