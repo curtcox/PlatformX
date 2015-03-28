@@ -1,5 +1,8 @@
 package common.screen;
 
+/**
+ * Immutable set of screen tags.
+ */
 public final class ScreenTags {
 
     final String tags;

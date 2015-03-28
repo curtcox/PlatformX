@@ -8,20 +8,20 @@ import java.util.Arrays;
  */
 public final class ScreenLink {
 
-    public static ScreenLink of(String name, Object... args) {
-        return new ScreenLink(name,args);
+    public interface Factory {
+        ScreenLink create();
     }
 
-    public interface Factory {
-        ScreenLink create();    
-    }
-    
     public final ScreenTags tags;
     public final Object[] args;
-    
+
     private ScreenLink(String screen, Object... args) {
         this.tags = ScreenTags.of(screen);
         this.args = args;
+    }
+
+    public static ScreenLink of(String name, Object... args) {
+        return new ScreenLink(name,args);
     }
 
     public String title() {

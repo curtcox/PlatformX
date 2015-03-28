@@ -13,6 +13,7 @@ import se.net.SERawNetwork;
 import se.screen.RootScreenFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
+import se.util.TaggedValueStringMap;
 
 /**
  * Loads the registry with all of the instances needed for startup.
@@ -26,7 +27,7 @@ final class RegistryLoader {
         put(IFormFactory.class,     new SEFormFactory());
         put(IDisplay.class,         SEDisplay.of());
         put(Network.class,          new SERawNetwork());
-        put(StringMap.class,        RootStringMap.of());
+        put(StringMap.class,        new TaggedValueStringMap());
         put(ScreenFactory.class,    RootScreenFactory.of());
     }
 

@@ -1,12 +1,10 @@
 package se.app;
 
 import common.Registry;
-import common.net.RootStringMap;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
+import common.util.StringMap;
 import mite.MiteHTTPServer;
-import mite.RequestHandler;
-import se.util.TaggedValueStringMap;
 
 import java.awt.*;
 import java.io.IOException;
@@ -14,14 +12,11 @@ import java.io.IOException;
 public final class Application {
 
     public static void main(String[] args) throws IOException {
-        //startServer();
         launchUIOnEDT();
     }
 
     private static void startServer() throws IOException {
-        TaggedValueStringMap source = null;
-        RequestHandler handler = new StringMapRequestHandler(source);
-        new MiteHTTPServer(findEmptyPort(),handler);
+        new MiteHTTPServer(findEmptyPort(), new StringMapRequestHandler(stringMap()));
     }
 
     private static int findEmptyPort() {
@@ -39,12 +34,28 @@ public final class Application {
 
     private static void launchApp() {
         RegistryLoader.load();
+        tryToStartServer();
         show();
     }
 
+    private static void tryToStartServer() {
+        try {
+            startServer();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     private static void show() {
-        ScreenFactory factory = Registry.get(ScreenFactory.class);
-        factory.create(ScreenLink.of("")).show();
+        screenFactory().create(ScreenLink.of("")).show();
+    }
+
+    private static StringMap stringMap() {
+        return Registry.get(StringMap.class);
+    }
+
+    private static ScreenFactory screenFactory() {
+        return Registry.get(ScreenFactory.class);
     }
 
 }

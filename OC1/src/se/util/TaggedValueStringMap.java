@@ -1,17 +1,30 @@
 package se.util;
 
+import common.screen.ScreenTags;
 import common.util.StringMap;
 import java.util.Collection;
 
-public interface TaggedValueStringMap
-    extends StringMap
+public class TaggedValueStringMap
+    implements StringMap
 {
+
     public interface TaggedValue {
-        void addTag(String tag);
-        void removeTag(String tag);
-        Collection getTags();
-        void set(String value);
+        void setTags(ScreenTags tags);
+        ScreenTags getTags();
+        void setContents(String value);
+        String getContents();
     }
 
-    TaggedValue newValue();
+    @Override
+    public String get(String string) {
+        return null;
+    }
+
+    TaggedValue newValue() {
+        return null;
+    }
+
+    TaggedValue[] getValuesFor(ScreenTags tags) {
+        return null;
+    }
 }

@@ -15,7 +15,7 @@ public final class EditCommand
         final ScreenLink link;
         final UIComponent layout;
 
-        Event(ScreenLink link, UIComponent layout) {
+        public Event(ScreenLink link, UIComponent layout) {
             this.link = link;
             this.layout = layout;
         }
