@@ -12,8 +12,8 @@ public final class EditCommand
     public static class Event
         implements Events.Event
     {
-        final ScreenLink link;
-        final UIComponent layout;
+        public final ScreenLink link;
+        public final UIComponent layout;
 
         public Event(ScreenLink link, UIComponent layout) {
             this.link = link;

@@ -1,43 +1,48 @@
 package se.editor;
 
 import common.Registry;
+import common.screen.ScreenTags;
 import se.events.Events;
 import se.ui.EditCommand;
-import se.util.TaggedValueStringMap;
+import se.util.SimpleTaggedValue;
+import se.util.TaggedValue;
 
 final class ScreenEditor {
 
-    private TaggedValueStringMap.TaggedValue value;
-    private static ScreenEditor editor;
+    TaggedValue editing = new SimpleTaggedValue();
+    private static ScreenEditor screenEditor;
 
-    static ScreenEditor of() {
-        return editor;
+    private ScreenEditor() {}
+
+    public static ScreenEditor of() {
+        if (screenEditor == null) {
+            screenEditor = new ScreenEditor();
+            screenEditor.register();
+        }
+        return screenEditor;
     }
 
-    static void register() {
-        events().registerListenerFor(editCommandListener(),EditCommand.Event.class);
+    void register() {
+        events().registerListenerFor(editCommandListener(), EditCommand.Event.class);
     }
 
-    static Events.Listener editCommandListener() {
+    Events.Listener editCommandListener() {
         return new Events.Listener() {
             @Override
             public void onEvent(Events.Event event) {
                 EditCommand.Event editEvent = (EditCommand.Event) event;
-                editor().edit(taggedValue(editEvent));
+                edit(taggedValue(editEvent));
             }
         };
     }
 
-    private void edit(TaggedValueStringMap.TaggedValue taggedValue) {
 
+    void edit(ScreenTags tags) {
+        editing.setTags(tags);
     }
 
-    private static TaggedValueStringMap.TaggedValue taggedValue(EditCommand.Event editEvent) {
-        return null;
-    }
-
-    private static ScreenEditor editor() {
-        return null;
+    private static ScreenTags taggedValue(EditCommand.Event editEvent) {
+        return editEvent.link.tags;
     }
 
     static Events events() {
