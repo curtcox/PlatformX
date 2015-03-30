@@ -16,5 +16,5 @@ public interface StringMap {
         StringMap parse(String string);    
     }
     
-    String get(String string);
+    String get(String key);
 }

@@ -15,15 +15,11 @@ public final class StringEditor
     final JTextArea textArea;
     final StringChange.Listener textListener;
 
-    StringEditor() {
-        this(new JTextArea(), null, new KeyAdapter() {});
-    }
-
-    StringEditor(final StringChange.Listener textListener, KeyListener keyListener) {
+    public StringEditor(StringChange.Listener textListener, KeyListener keyListener) {
         this(new JTextArea(), textListener, keyListener);
     }
 
-    StringEditor(JTextArea textArea, final StringChange.Listener textListener, KeyListener keyListener) {
+    StringEditor(JTextArea textArea, StringChange.Listener textListener, KeyListener keyListener) {
         this.textArea = textArea;
         this.textListener = textListener;
         setLayout(new BorderLayout());

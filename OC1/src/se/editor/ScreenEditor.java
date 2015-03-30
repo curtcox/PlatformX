@@ -1,18 +1,25 @@
 package se.editor;
 
 import common.Registry;
+import common.event.StringChange;
 import common.screen.ScreenTags;
 import se.events.Events;
 import se.ui.EditCommand;
+import se.uiwidget.StringEditor;
 import se.util.SimpleTaggedValue;
 import se.util.TaggedValue;
+import se.util.TaggedValueStringMap;
+
+import javax.swing.*;
 
 final class ScreenEditor {
 
     TaggedValue editing = new SimpleTaggedValue();
     private static ScreenEditor screenEditor;
+    final JFrame frame = new JFrame();
+    final StringEditor editor = new StringEditor(textListener(),null);
 
-    private ScreenEditor() {}
+    ScreenEditor() {}
 
     public static ScreenEditor of() {
         if (screenEditor == null) {
@@ -36,9 +43,19 @@ final class ScreenEditor {
         };
     }
 
+    private StringChange.Listener textListener() {
+        return new StringChange.Listener() {
+            @Override
+            public void onChange(StringChange.Event event) {
+
+            }
+        };
+    }
 
     void edit(ScreenTags tags) {
         editing.setTags(tags);
+        editor.setText(stringMap().get(tags.toString()));
+        frame.setVisible(true);
     }
 
     private static ScreenTags taggedValue(EditCommand.Event editEvent) {
@@ -49,4 +66,7 @@ final class ScreenEditor {
         return Registry.get(Events.class);
     }
 
+    static TaggedValueStringMap stringMap() {
+        return Registry.get(TaggedValueStringMap.class);
+    }
 }

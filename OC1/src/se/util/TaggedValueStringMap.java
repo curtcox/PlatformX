@@ -3,20 +3,23 @@ package se.util;
 import common.screen.ScreenTags;
 import common.util.StringMap;
 
-public class TaggedValueStringMap
+public final class TaggedValueStringMap
     implements StringMap
 {
 
+    SimpleTaggedValue taggedValue = new SimpleTaggedValue();
+
     @Override
-    public String get(String string) {
+    public String get(String key) {
+        return taggedValue.getContents();
+    }
+
+    public TaggedValue newValue() {
+        return taggedValue;
+    }
+
+    public TaggedValue[] getValuesFor(ScreenTags tags) {
         return null;
     }
 
-    TaggedValue newValue() {
-        return null;
-    }
-
-    TaggedValue[] getValuesFor(ScreenTags tags) {
-        return null;
-    }
 }

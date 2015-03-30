@@ -6,6 +6,7 @@ public final class SimpleTaggedValue
     implements TaggedValue
 {
     private ScreenTags tags;
+    private String contents;
 
     @Override
     public void setTags(ScreenTags tags) {
@@ -19,11 +20,11 @@ public final class SimpleTaggedValue
 
     @Override
     public void setContents(String value) {
-
+        this.contents = value;
     }
 
     @Override
     public String getContents() {
-        return null;
+        return contents;
     }
 }

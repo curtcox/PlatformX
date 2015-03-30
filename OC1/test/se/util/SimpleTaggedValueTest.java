@@ -23,4 +23,13 @@ public class SimpleTaggedValueTest {
 
         assertSame(tags, testObject.getTags());
     }
+
+    @Test
+    public void get_contents_returns_value_set() {
+        String contents = "text stuff";
+        testObject.setContents(contents);
+
+        assertSame(contents, testObject.getContents());
+    }
+
 }

@@ -38,7 +38,7 @@ public class StringEditorTest {
 
     @Test
     public void can_create() {
-        assertNotNull(new StringEditor());
+        assertNotNull(new StringEditor(null,null));
     }
 
     @Test
