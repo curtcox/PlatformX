@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java" afterPath="$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValue.java" afterPath="$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValue.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uiwidget/StringEditor.java" afterPath="$PROJECT_DIR$/OC1/src/se/uiwidget/StringEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/util/StringMap.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/StringMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/util/TaggedValueStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/se/util/TaggedValueStringMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/util/TaggedValueStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/util/TaggedValueStringMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java" afterPath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -74,20 +66,20 @@
             <file leaf-file-name="ScreenEditor.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.29478458" vertical-offset="63" max-vertical-offset="1326">
-                    <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+                  <state vertical-scroll-proportion="0.37188208" vertical-offset="63" max-vertical-offset="1377">
+                    <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                      <element signature="e#801#802#0" expanded="true" />
-                      <element signature="e#893#894#0" expanded="true" />
-                      <element signature="e#955#1197#0" expanded="true" />
-                      <element signature="e#1196#1197#0" expanded="true" />
-                      <element signature="e#1650#1651#0" expanded="true" />
-                      <element signature="e#1692#1693#0" expanded="true" />
-                      <element signature="e#1722#1723#0" expanded="true" />
-                      <element signature="e#1771#1772#0" expanded="true" />
-                      <element signature="e#1818#1819#0" expanded="true" />
-                      <element signature="e#1881#1882#0" expanded="true" />
+                      <element signature="e#882#883#0" expanded="true" />
+                      <element signature="e#974#975#0" expanded="true" />
+                      <element signature="e#1036#1278#0" expanded="true" />
+                      <element signature="e#1277#1278#0" expanded="true" />
+                      <element signature="e#1731#1732#0" expanded="true" />
+                      <element signature="e#1773#1774#0" expanded="true" />
+                      <element signature="e#1803#1804#0" expanded="true" />
+                      <element signature="e#1852#1853#0" expanded="true" />
+                      <element signature="e#1899#1900#0" expanded="true" />
+                      <element signature="e#1962#1963#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -139,17 +131,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ScreenEditorDemo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ScreenEditorDemo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-              <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.14220184" vertical-offset="94" max-vertical-offset="833">
+              <caret line="11" column="21" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="29" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#349#350#0" expanded="true" />
-                <element signature="e#404#405#0" expanded="true" />
-                <element signature="e#657#658#0" expanded="true" />
-                <element signature="e#706#707#0" expanded="true" />
+                <element signature="e#1194#1195#0" expanded="true" />
+                <element signature="e#1243#1244#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -172,10 +162,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ScreenEditorTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ScreenEditorTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7140673" vertical-offset="638" max-vertical-offset="1292">
+            <state vertical-scroll-proportion="0.0" vertical-offset="638" max-vertical-offset="1292">
               <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -235,7 +225,6 @@
         <option value="$PROJECT_DIR$/OC1/src/common/screen/ScreenTags.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/app/RegistryLoader.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/app/Application.java" />
-        <option value="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/ui/EditCommand.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/util/TaggedValue.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" />
@@ -244,9 +233,10 @@
         <option value="$PROJECT_DIR$/OC1/src/common/util/StringMap.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/util/TaggedValueStringMapTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/util/TaggedValueStringMap.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uiwidget/StringEditor.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java" />
       </list>
     </option>
   </component>
@@ -391,7 +381,7 @@
       <recent name="c1.command" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in OC1">
+  <component name="RunManager">
     <configuration default="false" name="ScreenEditorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -683,10 +673,10 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.TaggedValueStringMapTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.ScreenEditorTest" />
-        <item index="3" class="java.lang.String" itemvalue="Application.ScreenEditorDemo" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ScreenEditorDemo" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in OC1" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TaggedValueStringMapTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ScreenEditorTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.SimpleTaggedValueTest" />
       </list>
     </recent_temporary>
@@ -1078,16 +1068,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/AttributedString.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3039106" vertical-offset="272" max-vertical-offset="1938">
-          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/util/TaggedValue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
@@ -1151,26 +1131,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29478458" vertical-offset="63" max-vertical-offset="1326">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#893#894#0" expanded="true" />
-            <element signature="e#955#1197#0" expanded="true" />
-            <element signature="e#1196#1197#0" expanded="true" />
-            <element signature="e#1650#1651#0" expanded="true" />
-            <element signature="e#1692#1693#0" expanded="true" />
-            <element signature="e#1722#1723#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1881#1882#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/ScreenLink.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.36391437" vertical-offset="0" max-vertical-offset="654">
@@ -1178,20 +1138,6 @@
           <folding>
             <element signature="e#493#494#0" expanded="true" />
             <element signature="e#541#542#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="612">
-          <caret line="8" column="22" selection-start-line="8" selection-start-column="22" selection-end-line="8" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#349#350#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
-            <element signature="e#657#658#0" expanded="true" />
-            <element signature="e#706#707#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1242,16 +1188,16 @@
         <state vertical-scroll-proportion="0.7798165" vertical-offset="0" max-vertical-offset="680">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#412#413#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#338#339#0" expanded="false" />
+            <element signature="e#412#413#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7140673" vertical-offset="638" max-vertical-offset="1292">
+        <state vertical-scroll-proportion="0.0" vertical-offset="638" max-vertical-offset="1292">
           <caret line="65" column="21" selection-start-line="65" selection-start-column="21" selection-end-line="65" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1259,6 +1205,48 @@
             <element signature="e#787#788#0" expanded="true" />
             <element signature="e#831#832#0" expanded="true" />
             <element signature="e#895#896#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/AttributedString.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3039106" vertical-offset="272" max-vertical-offset="1938">
+          <caret line="36" column="45" selection-start-line="36" selection-start-column="45" selection-end-line="36" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37188208" vertical-offset="63" max-vertical-offset="1377">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1036#1278#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#1731#1732#0" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+            <element signature="e#1803#1804#0" expanded="true" />
+            <element signature="e#1852#1853#0" expanded="true" />
+            <element signature="e#1899#1900#0" expanded="true" />
+            <element signature="e#1962#1963#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.14220184" vertical-offset="94" max-vertical-offset="833">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1194#1195#0" expanded="true" />
+            <element signature="e#1243#1244#0" expanded="true" />
           </folding>
         </state>
       </provider>

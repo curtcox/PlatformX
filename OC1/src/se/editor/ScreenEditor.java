@@ -19,7 +19,10 @@ final class ScreenEditor {
     final JFrame frame = new JFrame();
     final StringEditor editor = new StringEditor(textListener(),null);
 
-    ScreenEditor() {}
+    ScreenEditor() {
+        frame.getContentPane().add(editor);
+        frame.setSize(500,500);
+    }
 
     public static ScreenEditor of() {
         if (screenEditor == null) {
