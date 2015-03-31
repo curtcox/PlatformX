@@ -52,7 +52,6 @@ public final class SEForm
 
     JButton editButton() {
         JButton button = new JButton("#");
-        button.setEnabled(false);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {

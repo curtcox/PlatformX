@@ -12,7 +12,7 @@ import se.util.TaggedValueStringMap;
 
 import javax.swing.*;
 
-final class ScreenEditor {
+public final class ScreenEditor {
 
     TaggedValue editing = new SimpleTaggedValue();
     private static ScreenEditor screenEditor;
