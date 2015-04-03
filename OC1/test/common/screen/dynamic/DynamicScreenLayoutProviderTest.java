@@ -1,5 +1,6 @@
 package common.screen.dynamic;
 
+import common.screen.ScreenLink;
 import common.uiwidget.UIGrid;
 import common.uiwidget.UILabel;
 import common.uiwidget.UIContainer;
@@ -12,6 +13,7 @@ import static org.junit.Assert.*;
 public class DynamicScreenLayoutProviderTest {
 
     String sourceCode;
+    ScreenLink link;
     ScreenContext context = new ScreenContext();
     StringSource source = new StringSource() {
         public String getString() {
@@ -28,21 +30,21 @@ public class DynamicScreenLayoutProviderTest {
     @Test
     public void getLayout_returns_layout_with_message_when_source_is_null() {
         sourceCode = null;
-        UILabel label = (UILabel) testObject.getLayout(context);
+        UILabel label = (UILabel) testObject.getLayout(link,context);
         assertSpanLabelTextContains(label,"Source is not valid Hash");
     }
 
     @Test
     public void getLayout_returns_layout_with_message_when_source_is_empty() {
         sourceCode = "";
-        UILabel label = (UILabel) testObject.getLayout(context);
+        UILabel label = (UILabel) testObject.getLayout(link,context);
         assertTrue(Strings.contains(label.toString(),""));
     }
 
     @Test
     public void getLayout_returns_layout_with_message_when_layout_not_defined() {
         sourceCode = "layover {}";
-        UIContainer actual = (UIContainer) testObject.getLayout(context);
+        UIContainer actual = (UIContainer) testObject.getLayout(link,context);
         assertSpanLabelTextContains(actual.components[0],"RuntimeException");
         assertSpanLabelTextContains(actual.components[1],"layout not found");
     }
@@ -56,7 +58,7 @@ public class DynamicScreenLayoutProviderTest {
     @Test
     public void getLayout_returns_layout_with_label_when_layout_returns_a_string() {
         sourceCode = lines("layout { 'Whatever' }");
-        UILabel label = (UILabel) testObject.getLayout(context);
+        UILabel label = (UILabel) testObject.getLayout(link,context);
         assertEquals("Whatever",label.text);
     }
 
@@ -66,7 +68,7 @@ public class DynamicScreenLayoutProviderTest {
         
         sourceCode = lines("layout { grid(1 2 'one' 'two') }");
 
-        UIContainer actual = (UIContainer) testObject.getLayout(context);
+        UIContainer actual = (UIContainer) testObject.getLayout(link,context);
         assertTrue(actual instanceof UIGrid);
         UIGrid layout = (UIGrid) actual;
         assertEquals(1,layout.rows);
@@ -84,7 +86,7 @@ public class DynamicScreenLayoutProviderTest {
             "layout_portrait { 'Family' }"
         );
         context.put("portrait", true);
-        UILabel label = (UILabel) testObject.getLayout(context);
+        UILabel label = (UILabel) testObject.getLayout(link,context);
         assertEquals("Family",label.text);
     }
 

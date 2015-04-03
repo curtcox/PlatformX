@@ -44,7 +44,7 @@ public final class ProviderDetailsScreen
     };
 
     ProviderDetailsScreen() {
-        super("Provider Details");
+        super(ScreenLink.of("Provider Details"));
     }
     
     @Override

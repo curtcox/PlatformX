@@ -1,6 +1,7 @@
 package c1.screens;
 
 import common.screen.Screen;
+import common.screen.ScreenLink;
 import common.uiwidget.UIBorderContainer;
 import common.uiwidget.UIComponent;
 
@@ -13,7 +14,7 @@ final class ProfileScreen
 {
 
     ProfileScreen() {
-        super("Profile");
+        super(ScreenLink.of("Profile"));
     }
 
     @Override

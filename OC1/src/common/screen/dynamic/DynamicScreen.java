@@ -1,6 +1,7 @@
 package common.screen.dynamic;
 
 import common.screen.Screen;
+import common.screen.ScreenLink;
 import common.uiwidget.UIComponent;
 
 /**
@@ -13,7 +14,7 @@ final class DynamicScreen
     final ScreenLayoutProvider layoutProvider;
     
     public DynamicScreen(String name, ScreenContext.Provider controller, ScreenLayoutProvider layoutProvider) {
-        super(name);
+        super(ScreenLink.of(name));
         this.controller = controller;
         this.layoutProvider = layoutProvider;
     }
@@ -55,6 +56,6 @@ final class DynamicScreen
     }
 
     UIComponent getLayout() {
-        return layoutProvider.getLayout(getContext());
+        return layoutProvider.getLayout(link,getContext());
     }
 }

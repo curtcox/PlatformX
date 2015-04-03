@@ -17,7 +17,7 @@ public final class CustomComponentScreen
     };
 
     CustomComponentScreen() {
-        super("Custom");
+        super(ScreenLink.of("Custom"));
     }
     
     @Override

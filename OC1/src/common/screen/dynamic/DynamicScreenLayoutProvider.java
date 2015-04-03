@@ -3,6 +3,7 @@ package common.screen.dynamic;
 import common.*;
 import common.log.ILog;
 import common.log.ILogManager;
+import common.screen.ScreenLink;
 import common.uiwidget.UIColumn;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UIGrid;
@@ -24,7 +25,7 @@ public final class DynamicScreenLayoutProvider
         this.source = source;    
     }
 
-    public UIComponent getLayout(ScreenContext context) {
+    public UIComponent getLayout(ScreenLink link, ScreenContext context) {
         String sourceCode = source.getString();
         if (!isValidHash(sourceCode)) {
             return messageScreen("Source is not valid Hash");

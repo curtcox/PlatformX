@@ -17,7 +17,7 @@ import common.uiwidget.UIComponent;
 public abstract class Screen {
 
     public final IForm form;
-    final ScreenLink link;
+    public final ScreenLink link;
     private Screen previous; // set once
     private Command back;    // set once
     private static Screen showing; // the currently showing screen
@@ -28,13 +28,6 @@ public abstract class Screen {
      */
     public Screen(ScreenLink link) {
         this(formFactory().newForm(link),link);
-    }
-
-    /**
-     * Override this constructor to create a new screen.
-     */
-    public Screen(String name) {
-        this(ScreenLink.of(name));
     }
 
     /**

@@ -21,7 +21,7 @@ public class GlobScreenFactoryTest {
     @Before
     public void setUp() {
         FakeC1RegistryLoader.load();
-        screen = new Screen("whatever") {
+        screen = new Screen(ScreenLink.of("whatever")) {
             @Override
             protected UIContainer layoutForPortrait() { return null; }
         };

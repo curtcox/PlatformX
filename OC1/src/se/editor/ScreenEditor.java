@@ -2,6 +2,7 @@ package se.editor;
 
 import common.Registry;
 import common.event.StringChange;
+import common.screen.Screen;
 import common.screen.ScreenTags;
 import se.events.Events;
 import se.ui.EditCommand;
@@ -50,7 +51,8 @@ public final class ScreenEditor {
         return new StringChange.Listener() {
             @Override
             public void onChange(StringChange.Event event) {
-
+                editing.setContents(editor.getText());
+                Screen.getShowing().refresh();
             }
         };
     }
