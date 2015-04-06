@@ -10,7 +10,6 @@ import common.screen.ScreenFactory;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import common.util.StringMap;
-import common.net.RootStringMap;
 import se.net.SERawNetwork;
 import se.screen.RootScreenFactory;
 import se.ui.SEDisplay;

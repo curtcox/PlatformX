@@ -7,14 +7,12 @@ import c1.uilist.SearchableList;
 
 /**
  * For filtering provider types.
- *
- * @author Curt
  */
 public final class FilterScreen
     extends SelectionListScreen<Type>
 {
-    public FilterScreen(SearchableList<Type> typeList) {
-        super("Filter",typeList);
+    public FilterScreen(ScreenLink link, SearchableList<Type> typeList) {
+        super(link,typeList);
     }
 
     @Override

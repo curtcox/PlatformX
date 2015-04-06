@@ -8,14 +8,13 @@ import c1.uilist.SearchableList;
 
 /**
  * The screen used to search for locations.
- * @author Curt
  */
 public final class LocationSelectionScreen
     extends SelectionListScreen<LocationDescription>
 {
 
-    public LocationSelectionScreen(SearchableList<LocationDescription> searchList) { 
-        super("Pick Location",searchList);
+    public LocationSelectionScreen(ScreenLink link,SearchableList<LocationDescription> searchList) {
+        super(link,searchList);
     }
 
     @Override

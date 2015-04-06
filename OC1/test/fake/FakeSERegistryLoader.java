@@ -4,6 +4,7 @@ import common.Registry;
 import common.domain.ServiceProvider;
 import common.log.ILogManager;
 import common.ui.IDisplay;
+import common.ui.IFormFactory;
 import se.log.LogManager;
 import se.log.LogWriter;
 
@@ -14,6 +15,7 @@ public class FakeSERegistryLoader {
         put(LogWriter.class,        new LogWriter());
         put(ServiceProvider.class,  ServiceProvider.NULL);
         put(IDisplay.class,         new FakeDisplay());
+        put(IFormFactory.class,     new FakeFormFactory());
     }
     
     static void put(Class clazz, Object object) {

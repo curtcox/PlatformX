@@ -24,7 +24,7 @@ public final class LazyScreenFactory
         if (layout==null) {
             return null;
         }
-        return new DynamicScreen(name(link),controller(link),layout);
+        return new DynamicScreen(link,controller(link),layout);
     }
     
     private ScreenContext.Provider controller(ScreenLink link) {

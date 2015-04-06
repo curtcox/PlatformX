@@ -23,7 +23,7 @@ public abstract class AbstractItemListScreenFactory<T>
     }
     
     public Screen doCreate(ScreenLink link) {
-        return new ItemScreen(newSearchableList());    
+        return new ItemScreen(link,newSearchableList());
     }     
 
     abstract protected List<T> getValues();
@@ -37,8 +37,8 @@ public abstract class AbstractItemListScreenFactory<T>
 private final class ItemScreen
     extends SelectionListScreen
 {
-    public ItemScreen(SearchableList values) {
-        super(glob,values);
+    public ItemScreen(ScreenLink link,SearchableList values) {
+        super(link,values);
     }
 
     @Override

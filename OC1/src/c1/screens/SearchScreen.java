@@ -9,13 +9,12 @@ import c1.uilist.SearchableList;
 
 /**
  * The screen used to search for service providers.
- * @author Curt
  */
 public final class SearchScreen
     extends SelectionListScreen<ServiceProvider>
 {
-    public SearchScreen(SearchableList<ServiceProvider> searchList) { 
-        super("Search",searchList);
+    public SearchScreen(ScreenLink link, SearchableList<ServiceProvider> searchList) {
+        super(link,searchList);
     }
 
     private void useSelectedProvider(ServiceProvider provider) {

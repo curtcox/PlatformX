@@ -12,12 +12,12 @@ public final class CustomComponentScreen
     
     public static final ScreenFactory FACTORY = new GlobScreenFactory("Custom") {
         public Screen doCreate(ScreenLink link) {
-            return new CustomComponentScreen();
+            return new CustomComponentScreen(link);
         }     
     };
 
-    CustomComponentScreen() {
-        super(ScreenLink.of("Custom"));
+    CustomComponentScreen(ScreenLink link) {
+        super(link);
     }
     
     @Override

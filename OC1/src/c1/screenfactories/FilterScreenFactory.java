@@ -20,7 +20,7 @@ public final class FilterScreenFactory {
 
     public static ScreenFactory FACTORY = new GlobScreenFactory("Filter") {
         public Screen doCreate(ScreenLink link) {
-            return new FilterScreen(newSearchableList());    
+            return new FilterScreen(link,newSearchableList());
         }     
     };
 

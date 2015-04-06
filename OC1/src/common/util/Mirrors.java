@@ -6,7 +6,6 @@ import c1.screens.*;
 
 /**
  * For finding the Mirror for a given object.
- * @author Curt
  */
 public final class Mirrors {
 

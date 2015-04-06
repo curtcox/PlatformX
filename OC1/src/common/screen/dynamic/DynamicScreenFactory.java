@@ -18,17 +18,13 @@ public final class DynamicScreenFactory
     final ScreenController.Lookup controllers;
     final ScreenLayoutLookup layouts;
     
-    public DynamicScreenFactory(StringMap names, ScreenController.Lookup controllers, ScreenLayoutLookup layouts) {
+    private DynamicScreenFactory(StringMap names, ScreenController.Lookup controllers, ScreenLayoutLookup layouts) {
         this.names = names;
         this.controllers = controllers;
         this.layouts = layouts;
     }
     
     public Screen create(ScreenLink link) {
-        String name = name(link);
-        if (name==null) {
-            return null;
-        }
         ScreenContext.Provider controller = controller(link);
         if (controller==null) {
             return null;
@@ -37,12 +33,8 @@ public final class DynamicScreenFactory
         if (layout==null) {
             return null;
         }
-        return new DynamicScreen(name,controller,layout);
+        return new DynamicScreen(link,controller,layout);
     }
-    
-    private String name(ScreenLink link) {
-        return names.get(link.title());
-    } 
     
     private ScreenContext.Provider controller(ScreenLink link) {
         return controllers.lookup(link);
@@ -61,6 +53,14 @@ public final class DynamicScreenFactory
         final GlobScreenControllerLookup controllers = new GlobScreenControllerLookup();
         final GlobScreenLayoutLookup layouts = new GlobScreenLayoutLookup();
 
+        /**
+         * Tie the following together.
+         * @param globString used to determine if the request matches
+         * @param name name displayed to the user
+         * @param controller creates the context and responds to actions
+         * @param source for looking up the layout source
+         * @return this builder for chaining
+         */
         public Builder map(String globString,String name,Object controller,StringSource source) {
             Glob glob = Glob.of(globString);
             names.add(glob,name);

@@ -19,13 +19,13 @@ public final class LocationSelectionScreenFactory {
     public static ScreenFactory FACTORY = new GlobScreenFactory("LocationSelection") {
         @Override
         protected Screen doCreate(ScreenLink link) {
-            return of(); 
+            return of(link);
         }
     };
             
-    static LocationSelectionScreen of() {
+    static LocationSelectionScreen of(ScreenLink link) {
         SearchableList<LocationDescription> searchList = newSearchableList();
-        return new LocationSelectionScreen(searchList);
+        return new LocationSelectionScreen(link,searchList);
     }
     
     private static SearchableList<LocationDescription> newSearchableList(LiveList locations) {

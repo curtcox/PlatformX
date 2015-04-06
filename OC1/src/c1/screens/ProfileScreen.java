@@ -13,8 +13,8 @@ final class ProfileScreen
     extends Screen
 {
 
-    ProfileScreen() {
-        super(ScreenLink.of("Profile"));
+    ProfileScreen(ScreenLink link) {
+        super(link);
     }
 
     @Override

@@ -20,24 +20,24 @@ public final class SearchScreenFactory {
 
     public static ScreenFactory FACTORY = new GlobScreenFactory("Search") {
         public Screen doCreate(ScreenLink link) {
-            return searchScreenFromArgs(link.args);
+            return searchScreenFromArgs(link,link.args);
         }     
     };
         
-    private static SearchScreen of() {
-        return withTypesAndRadius(ALL_TYPES,STARTING_RADIUS);    
+    private static SearchScreen of(ScreenLink link) {
+        return withTypesAndRadius(link,ALL_TYPES,STARTING_RADIUS);
     }
     
-    private static Screen searchScreenFromArgs(Object[] args) {
-        if (args.length==0) return SearchScreenFactory.of();
-        if (args.length==1) return SearchScreenFactory.withTypes(types(args));
-        if (args.length==2) return SearchScreenFactory.withTypesAndRadius(types((Object[])args[0]),(Integer)args[1]);
+    private static Screen searchScreenFromArgs(ScreenLink link,Object[] args) {
+        if (args.length==0) return SearchScreenFactory.of(link);
+        if (args.length==1) return SearchScreenFactory.withTypes(link,types(args));
+        if (args.length==2) return SearchScreenFactory.withTypesAndRadius(link,types((Object[])args[0]),(Integer)args[1]);
         throw new IllegalArgumentException("args=" + Arrays.asList(args));
     }
 
-    public static SearchScreen withTypesAndRadius(Type[] types, int radius) {
+    public static SearchScreen withTypesAndRadius(ScreenLink link,Type[] types, int radius) {
         SearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,radius);
-        return new SearchScreen(newSearchableList(getProviders(searchParams),searchParams));    
+        return new SearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
     }
 
     private static Type[] types(Object[] objects) {
@@ -48,9 +48,9 @@ public final class SearchScreenFactory {
         return types;
     }
     
-    public static SearchScreen withTypes(Type[] types) {
+    public static SearchScreen withTypes(ScreenLink link,Type[] types) {
         SearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
-        return new SearchScreen(newSearchableList(getProviders(searchParams),searchParams));    
+        return new SearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
     }
 
     private static SearchParams zoomOutToSmallestRadiusWithMultipleHits(Type[] types, int radius) {

@@ -13,8 +13,8 @@ final class DynamicScreen
     final ScreenContext.Provider controller;
     final ScreenLayoutProvider layoutProvider;
     
-    public DynamicScreen(String name, ScreenContext.Provider controller, ScreenLayoutProvider layoutProvider) {
-        super(ScreenLink.of(name));
+    public DynamicScreen(ScreenLink link, ScreenContext.Provider controller, ScreenLayoutProvider layoutProvider) {
+        super(link);
         this.controller = controller;
         this.layoutProvider = layoutProvider;
     }
