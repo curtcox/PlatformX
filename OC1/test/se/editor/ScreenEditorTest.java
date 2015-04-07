@@ -1,8 +1,12 @@
 package se.editor;
 
 import common.Registry;
+import common.screen.Screen;
 import common.screen.ScreenLink;
 import common.screen.ScreenTags;
+import common.uiwidget.UIComponent;
+import fake.FakeForm;
+import fake.FakeSERegistryLoader;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,15 +19,16 @@ import static org.junit.Assert.*;
 
 public class ScreenEditorTest {
 
-    static Events events = new Events();
+    Events events = new Events();
     TaggedValueStringMap stringMap = new TaggedValueStringMap();
     ScreenEditor testObject;
 
     @Before
     public void setUp() {
+        FakeSERegistryLoader.load();
         Registry.put(Events.class,events);
         Registry.put(TaggedValueStringMap.class,stringMap);
-        testObject = ScreenEditor.of();
+        testObject = new ScreenEditor();
     }
 
     @Test
@@ -37,11 +42,12 @@ public class ScreenEditorTest {
     }
 
     @Test
-    public void sending_an_edit_command_event_causes_a_value_with_the_corresponding_tags_to_be_edited() {
+    public void sending_an_edit_command_event_causes_a_value_with_the_corresponding_tags_to_be_edited_when_registered() {
         String name = "screen name";
         ScreenLink link = ScreenLink.of(name);
         EditCommand.Event event = new EditCommand.Event(link,null);
 
+        testObject.register();
         events.post(event);
 
         assertEquals(link.tags, testObject.editing.getTags());
@@ -62,10 +68,19 @@ public class ScreenEditorTest {
         TaggedValue value = stringMap.newValue();
         value.setTags(tags);
         value.setContents("contents");
+        screen().show();
 
         testObject.edit(tags);
 
         assertEquals("contents", testObject.editor.getText());
     }
 
+    Screen screen() {
+        return new Screen(new FakeForm(),ScreenLink.of("")) {
+            @Override
+            protected UIComponent layoutForPortrait() {
+                return null;
+            }
+        };
+    }
 }

@@ -7,7 +7,6 @@ import java.util.Map;
  * Global event bus.
  * The bus acts as a layer of indirection, so that clients can listen for events
  * without needing to know who fires them.
- * @author Curt
  */
 public final class Events {
 

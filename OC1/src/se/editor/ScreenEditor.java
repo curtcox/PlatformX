@@ -20,17 +20,23 @@ public final class ScreenEditor {
     final JFrame frame = new JFrame();
     final StringEditor editor = new StringEditor(textListener(),null);
 
-    ScreenEditor() {
-        frame.getContentPane().add(editor);
-        frame.setSize(500,500);
-    }
+    /**
+     * Only use this for testing.
+     */
+    ScreenEditor() {}
 
     public static ScreenEditor of() {
         if (screenEditor == null) {
             screenEditor = new ScreenEditor();
             screenEditor.register();
+            screenEditor.init();
         }
         return screenEditor;
+    }
+
+    void init() {
+        frame.getContentPane().add(editor);
+        frame.setSize(500,500);
     }
 
     void register() {
