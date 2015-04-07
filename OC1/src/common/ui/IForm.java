@@ -19,5 +19,8 @@ public interface IForm {
 
     String getTitle();
 
+    /**
+     * Return the link used to create this form.
+     */
     ScreenLink getScreenLink();
 }

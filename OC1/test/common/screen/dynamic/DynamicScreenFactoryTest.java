@@ -27,7 +27,7 @@ public class DynamicScreenFactoryTest {
     StringSource source=new StringSource(){
         @Override
         public String getString() {
-            return "source";
+            return "layout{}";
         }
     };
 

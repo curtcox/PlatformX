@@ -11,6 +11,7 @@ public class FakeForm
     public UIComponent layout;
     public boolean showWasCalled;
     public boolean showBackWasCalled;
+    public ScreenLink link;
     private Command backCommand;
 
     @Override
@@ -38,6 +39,6 @@ public class FakeForm
     }
 
     @Override  public String getTitle() { return null; }
-    @Override  public ScreenLink getScreenLink() { return null; }
+    @Override  public ScreenLink getScreenLink() { return link; }
 
 }
