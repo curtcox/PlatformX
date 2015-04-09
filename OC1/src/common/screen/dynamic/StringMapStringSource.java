@@ -5,7 +5,6 @@ import common.util.StringMap;
 
 /**
  * For using a StringMap as a StringSource
- * @author Curt
  */
 public final class StringMapStringSource
     implements StringSource

@@ -15,7 +15,6 @@ import c1.screens.*;
 
 /**
  * The top-level ScreenFactory.
- * @author Curt
  */
 public final class RootScreenFactory {
     
@@ -45,7 +44,7 @@ public final class RootScreenFactory {
     
     private static ScreenFactory dynamicScreens(StringMap layouts) {
         return DynamicScreenFactory.builder()
-                    .map(""     ,Version.VERSION, new Home(), new StringMapStringSource(layouts,"Home"))
+                    .map(""     , new Home(), new StringMapStringSource(layouts,"Home"))
                 .build();
     }
 }

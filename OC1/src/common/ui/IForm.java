@@ -9,6 +9,7 @@ import common.uiwidget.UIComponent;
  * See Screen
  */
 public interface IForm {
+
     void layout(UIComponent layout);
 
     void show();

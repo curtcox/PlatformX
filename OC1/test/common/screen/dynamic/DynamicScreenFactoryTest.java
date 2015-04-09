@@ -22,7 +22,6 @@ public class DynamicScreenFactoryTest {
 
     FakeForm form = new FakeForm();
     FakeFormFactory formFactory;
-    String name="Display page Title";
     Object controller=new Home();
     StringSource source=new StringSource(){
         @Override
@@ -44,11 +43,25 @@ public class DynamicScreenFactoryTest {
     }
 
     @Test
-    public void map_produces_ScreenFactory_that_maps_to_a_screen() {
+    public void map_produces_ScreenFactory_that_maps_to_a_screen_for_empty_tag_set() {
         ScreenLink link = ScreenLink.of("");
-        String globString ="";
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(globString, name, controller, source).build();
+        String screenSpec ="";
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
+
         Screen screen = testObject.create(link);
+
+        assertNotNull(screen);
+        assertSame(link, formFactory.link);
+    }
+
+    @Test
+    public void map_produces_ScreenFactory_that_maps_to_a_screen_for_one_tag() {
+        ScreenLink link = ScreenLink.of("tag1");
+        String screenSpec ="tag1";
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
+
+        Screen screen = testObject.create(link);
+
         assertNotNull(screen);
         assertSame(link, formFactory.link);
     }
@@ -56,11 +69,23 @@ public class DynamicScreenFactoryTest {
     @Test
     public void map_produces_ScreenFactory_that_maps_to_screens_with_the_same_link() {
         ScreenLink link = ScreenLink.of("");
-        String globString ="";
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(globString, name, controller, source).build();
+        String screenSpec ="";
+
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
         testObject.create(link).layoutForm();
 
         assertSame(link, form.getScreenLink());
+    }
+
+    @Test
+    public void map_produces_ScreenFactory_that_maps_to_screens_with_title_from_screen_link() {
+        ScreenLink link = ScreenLink.of("title");
+        String screenSpec ="title";
+
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
+        testObject.create(link).layoutForm();
+
+        assertSame("title", form.getTitle());
     }
 
 }

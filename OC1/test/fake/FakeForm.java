@@ -38,7 +38,7 @@ public class FakeForm
         showBackWasCalled = true;
     }
 
-    @Override  public String getTitle() { return null; }
+    @Override  public String getTitle() { return link.title(); }
     @Override  public ScreenLink getScreenLink() { return link; }
 
 }
