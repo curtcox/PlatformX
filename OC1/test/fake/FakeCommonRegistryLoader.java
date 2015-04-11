@@ -3,6 +3,7 @@ package fake;
 import common.Registry;
 import common.domain.ServiceProvider;
 import common.log.ILogManager;
+import common.screen.ScreenFactory;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import se.log.LogManager;
@@ -15,6 +16,7 @@ public class FakeCommonRegistryLoader {
         put(LogWriter.class,        new LogWriter());
         put(IDisplay.class,         new FakeDisplay());
         put(IFormFactory.class,     new FakeFormFactory());
+        put(ScreenFactory.class,    new FakeScreenFactory());
     }
     
     static void put(Class clazz, Object object) {

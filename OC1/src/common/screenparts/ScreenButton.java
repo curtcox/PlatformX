@@ -18,7 +18,7 @@ public final class ScreenButton
     final Screen screen;
 
     private ScreenButton(Builder builder) {
-        super("");
+        super(builder.text);
         this.screen = builder.screen;
     }
 
@@ -28,6 +28,7 @@ public final class ScreenButton
     }
 
     public static class Builder {
+        private String text;
         private Screen screen;
 
         public UIButton build() {
@@ -38,7 +39,10 @@ public final class ScreenButton
         }
 
         public Builder text(StringSource s) { return this; }
-        public Builder text(String s) { return this; }
+        public Builder text(String text) {
+            this.text = text;
+            return this;
+        }
         public Builder image(String s) { return this; }
         public Builder leadingTo(Screen screen) {
             this.screen = screen;
