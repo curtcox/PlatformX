@@ -48,9 +48,9 @@ public class DynamicScreenFactoryTest {
         String screenSpec ="";
         ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
 
-        Screen screen = testObject.create(link);
+        Screen[] screens = testObject.create(link);
 
-        assertNotNull(screen);
+        assertNotNull(screens);
         assertSame(link, formFactory.link);
     }
 
@@ -60,9 +60,9 @@ public class DynamicScreenFactoryTest {
         String screenSpec ="tag1";
         ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
 
-        Screen screen = testObject.create(link);
+        Screen[] screens = testObject.create(link);
 
-        assertNotNull(screen);
+        assertNotNull(screens);
         assertSame(link, formFactory.link);
     }
 
@@ -72,7 +72,7 @@ public class DynamicScreenFactoryTest {
         String screenSpec ="";
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
-        testObject.create(link).layoutForm();
+        testObject.create(link)[0].layoutForm();
 
         assertSame(link, form.getScreenLink());
     }
@@ -83,7 +83,7 @@ public class DynamicScreenFactoryTest {
         String screenSpec ="title";
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
-        testObject.create(link).layoutForm();
+        testObject.create(link)[0].layoutForm();
 
         assertSame("title", form.getTitle());
     }

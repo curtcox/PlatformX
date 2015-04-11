@@ -20,7 +20,7 @@ public class C1ScreenButtonTest {
     private UIButton createScreenButtonOnEDT(final String text, final Screen screen) throws Exception {
         return (UIButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return ScreenButton.textAndLeadingTo(text, screen);
+                return ScreenButton.builder().text(text).leadingTo(screen).build();
             }
         });
     }

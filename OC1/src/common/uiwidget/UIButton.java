@@ -7,7 +7,6 @@ import common.event.StringSource;
 /**
  * Skeletal implementation of a button that does something when you tap it.
  * Implementers must provide onTap.
- * @author Curt
  */
 public abstract class UIButton
     extends UIComponent

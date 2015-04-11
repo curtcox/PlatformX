@@ -70,7 +70,9 @@ public abstract class Screen {
             form.setBackCommand(back);
         }
     }
-   
+
+    public static void show(Screen[] screens) {}
+
     public static Screen getShowing() {
         return showing;
     }

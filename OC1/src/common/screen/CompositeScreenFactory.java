@@ -8,7 +8,6 @@ import java.util.Arrays;
 
 /**
  * A ScreenFactory that delegates to other ScreenFactories.
- * @author Curt
  */
 public final class CompositeScreenFactory
     implements ScreenFactory
@@ -23,9 +22,9 @@ public final class CompositeScreenFactory
      * Return a Screen from the first containing factory that matches the link,
      * or throw an IllegalArgumentException if none exists.
      */
-    public Screen create(ScreenLink link) {
+    public Screen[] create(ScreenLink link) {
         for (ScreenFactory factory : factories) {
-            Screen screen = factory.create(link);
+            Screen[] screen = factory.create(link);
             if (screen!=null) {
                 return screen;
             }

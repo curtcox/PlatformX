@@ -6,12 +6,14 @@ import common.uiwidget.UIButton;
 
 /**
  * Navigates to a detailed screen for the current provider.
- * @author Curt
  */
 public final class ProviderDetailsButton {
 
     public static UIButton of() {
-        return ScreenButton.textAndLeadingTo(ServiceProvider.getCurrentName(), "ProviderDetails");
+        return ScreenButton.builder()
+                .text(ServiceProvider.getCurrentName())
+                .leadingTo("ProviderDetails")
+                .build();
     }
 
 }

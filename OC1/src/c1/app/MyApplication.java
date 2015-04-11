@@ -9,6 +9,7 @@ import java.io.IOException;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
+import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 
@@ -63,7 +64,7 @@ public class MyApplication {
 
     private void show() {
         ScreenFactory factory = Registry.get(ScreenFactory.class);
-        factory.create(ScreenLink.of("")).show();
+        Screen.show(factory.create(ScreenLink.of("")));
     }
     
     public void stop() {

@@ -1,6 +1,7 @@
 package se.app;
 
 import common.Registry;
+import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.util.StringMap;
@@ -47,7 +48,7 @@ public final class Application {
     }
 
     private static void show() {
-        screenFactory().create(ScreenLink.of("")).show();
+        Screen.show(screenFactory().create(ScreenLink.of("")));
     }
 
     private static StringMap stringMap() {

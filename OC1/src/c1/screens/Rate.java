@@ -27,7 +27,7 @@ public final class Rate {
     }
 
     UIButton change_location_button() {
-        return ScreenButton.textAndLeadingTo("Pick a different location",ScreenLink.of("Search"));
+        return ScreenButton.builder().text("Pick a different location").leadingTo(ScreenLink.of("Search")).build();
     }
 
     UIButton about_rating_button() {

@@ -7,14 +7,16 @@ import common.uiwidget.UIButton;
 
 /**
  * Navigates to the rating screen.
- * @author Curt
  */
 public final class ProviderRatingButton {
 
     private ProviderRatingButton() {}
     
     public static UIButton of() {
-        return ScreenButton.lazyWithTextAndLeadingTo(buttonText(), "Rate");
+        return ScreenButton.builder()
+                .text(buttonText())
+                .leadingTo("Rate")
+                .build();
     }
 
     private static StringSource buttonText() {

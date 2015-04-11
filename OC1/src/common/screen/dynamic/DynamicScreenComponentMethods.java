@@ -10,7 +10,6 @@ import common.screenparts.ScreenButton;
 
 /**
  * A map of component methods for adding to a ScreenContext.
- * @author Curt
  */
 final class DynamicScreenComponentMethods
     extends HashMap
@@ -78,11 +77,11 @@ final class DynamicScreenComponentMethods
     }
 
     private UIButton button(String text, String image, String leadingTo) {
-        return ScreenButton.textAndImageLeadingTo(text, image, leadingTo);
+        return ScreenButton.builder().text(text).image(image).leadingTo(leadingTo).build();
     }
 
     private UIButton link(String text) {
-        return ScreenButton.textAndLeadingTo(text, text);
+        return ScreenButton.builder().text(text).leadingTo(text).build();
     }
     
 }

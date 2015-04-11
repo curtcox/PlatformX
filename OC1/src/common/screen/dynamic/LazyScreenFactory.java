@@ -18,12 +18,12 @@ public final class LazyScreenFactory
         this.sources = sources;
     }
     
-    public Screen create(ScreenLink link) {
+    public Screen[] create(ScreenLink link) {
         ScreenLayoutProvider layout = layoutProvider(link);
         if (layout==null) {
             return null;
         }
-        return new DynamicScreen(link,controller(link),layout);
+        return new Screen[] { new DynamicScreen(link,controller(link),layout) };
     }
     
     private ScreenContext.Provider controller(ScreenLink link) {

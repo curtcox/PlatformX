@@ -19,7 +19,7 @@ public final class DynamicScreenFactory
         this.layouts = layouts;
     }
     
-    public Screen create(ScreenLink link) {
+    public Screen[] create(ScreenLink link) {
         ScreenContext.Provider controller = controller(link);
         if (controller==null) {
             return null;
@@ -28,7 +28,7 @@ public final class DynamicScreenFactory
         if (layout==null) {
             return null;
         }
-        return new DynamicScreen(link,controller,layout);
+        return new Screen[] { new DynamicScreen(link,controller,layout) };
     }
     
     private ScreenContext.Provider controller(ScreenLink link) {

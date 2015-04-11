@@ -10,7 +10,6 @@ import common.uiwidget.UIButton;
 
 /**
  * The home screen of the application.
- * @author Curt
  */
 public final class Home {
     
@@ -27,7 +26,12 @@ public final class Home {
     }
 
     UIButton searchNearbyButton() {
-        UIButton button = ScreenButton.textImageActionAndLeadingTo("Search nearby", "system-search-4.png", clearLocationSelection(), "Search");
+        UIButton button = ScreenButton.builder()
+                .text("Search nearby")
+                .image("system-search-4.png")
+                .action(clearLocationSelection())
+                .leadingTo("Search")
+                .build();
         button.setTextPosition(Label.BOTTOM);
         return button;
     }

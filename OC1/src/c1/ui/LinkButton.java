@@ -1,13 +1,13 @@
 package c1.ui;
 
 import common.Registry;
+import common.screen.Screen;
 import common.uiwidget.UIButton;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 
 /**
  * A button that follows a link when you tap it.
- * @author Curt
  */
 public final class LinkButton
     extends UIButton
@@ -25,6 +25,6 @@ public final class LinkButton
 
     @Override
     public void onTap() {
-         screenFactory().create(linkFactory.create()).show();
+         Screen.show(screenFactory().create(linkFactory.create()));
     }
 }

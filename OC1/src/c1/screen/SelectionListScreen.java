@@ -46,7 +46,7 @@ public abstract class SelectionListScreen<T>
     }
 
     private void followLink(ScreenLink link) {
-        screenFactory().create(link).show();
+        Screen.show(screenFactory().create(link));
     }
 
     private T getSelected() {
