@@ -16,7 +16,7 @@ public class InvocationTest {
 
     @Test
     public void can_create_with_empty_array() {
-        Invocation invocation = new Invocation(proxy,method,args());
+        Invocation invocation = new Invocation(proxy,method,args(),wild());
 
         assertSame(proxy,invocation.proxy);
         assertSame(method,invocation.method);
@@ -24,34 +24,72 @@ public class InvocationTest {
     }
 
     @Test
-    public void equal_values_are_equals() {
-        assertEquals(new Invocation(proxy,method,args()),new Invocation(proxy,method,args()));
-        assertEquals(new Invocation(proxy,method,args("")),new Invocation(proxy,method,args("")));
-        assertEquals(new Invocation(proxy,method,args(new ArrayList())),new Invocation(proxy,method,args(Collections.emptyList())));
+    public void can_create_with_null_wildcard_array() {
+        new Invocation(proxy,method,args(),null);
+        new Invocation(proxy,method,args(1),null);
+        new Invocation(proxy,method,args(1,2),null);
+    }
+
+    @Test
+    public void throws_IllegalArgumentException_when_more_args_than_wildcards() {
+        try {
+            new Invocation(proxy,method,args("x"),wild());
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Must have the same number of arguments and wildcards",e.getMessage());
+        }
+    }
+
+    @Test
+    public void throws_IllegalArgumentException_when_more_wildcards_than_args() {
+        try {
+            new Invocation(proxy,method,args(),wild(""));
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Must have the same number of arguments and wildcards",e.getMessage());
+        }
+    }
+
+    @Test
+    public void equal_values_are_equals_when_there_are_no_wildcards() {
+        assertEquals(new Invocation(proxy,method,args(),null),new Invocation(proxy,method,args(),null));
+        assertEquals(new Invocation(proxy,method,args(""),null),new Invocation(proxy,method,args(""),null));
+        assertEquals(new Invocation(proxy,method,args(new ArrayList()),null),new Invocation(proxy,method,args(Collections.emptyList()),null));
+    }
+
+    @Test
+    public void equal_values_are_equals_when_there_are_wildcards() {
+        assertEquals(new Invocation(proxy,method,args("x"),wild("z")),new Invocation(proxy,method,args("x"),wild("y")));
+    }
+
+    @Test
+    public void equal_values_are_equals_when_there_are_wildcards_in_unequal_spots() {
+        assertEquals(new Invocation(proxy,method,args("x"),wild("x")),new Invocation(proxy,method,args("y"),wild("z")));
+        assertEquals(new Invocation(proxy,method,args("f","*","x"),wild("","*","")),new Invocation(proxy,method,args("f","o","x"),wild("","","")));
     }
 
     @Test
     public void mock_equals_itself() {
         Map map = Mocks.mock("foo", Map.class);
-        assertEquals(new Invocation(proxy, method, args(map)), new Invocation(proxy, method, args(map)));
+        assertEquals(new Invocation(proxy, method, args(map),wild("")), new Invocation(proxy, method, args(map),wild("")));
     }
 
     @Test
     public void different_arguments_are_not_equal() {
-        assertFalse(new Invocation(proxy, method,args()).equals(new Invocation(proxy, method,args(null))));
-        assertFalse(new Invocation(proxy, method,args(0)).equals(new Invocation(proxy, method,args(1))));
+        assertFalse(new Invocation(proxy, method,args(),null).equals(new Invocation(proxy, method,args(null),null)));
+        assertFalse(new Invocation(proxy, method,args(0),null).equals(new Invocation(proxy, method,args(1),null)));
     }
 
     @Test
     public void different_proxy_is_not_equal() {
         Object different = new Object();
-        assertFalse(new Invocation(proxy, method,args()).equals(new Invocation(different, method,args())));
+        assertFalse(new Invocation(proxy, method,args(),wild()).equals(new Invocation(different, method,args(),wild())));
     }
 
     @Test
     public void different_method_is_not_equal() {
         Method different = proxy.getClass().getDeclaredMethods()[1];
-        assertFalse(new Invocation(proxy, method,args()).equals(new Invocation(proxy, different,args())));
+        assertFalse(new Invocation(proxy, method,args(),wild()).equals(new Invocation(proxy, different,args(),wild())));
     }
 
     Object[] args(Object... args) {
@@ -60,4 +98,9 @@ public class InvocationTest {
         }
         return args;
     }
+
+    Object[] wild(Object... args) {
+        return args(args);
+    }
+
 }

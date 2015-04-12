@@ -3,6 +3,7 @@ package mach;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.StringBufferInputStream;
 import java.lang.reflect.Proxy;
 
 import static org.junit.Assert.*;
@@ -15,7 +16,8 @@ public class MocksTest {
     Sample sample;
 
     interface Sample {
-       String getValue();
+        String getValue();
+        String getNext(String current);
     }
 
     @Before
@@ -39,12 +41,45 @@ public class MocksTest {
     }
 
     @Test
-    public void returns_makes_mock_return_specified_value() {
+    public void returns_makes_mock_return_specified_value_for_method_with_no_args() {
         Sample sample = mock("name",Sample.class);
         String expected = "expected";
         returns(expected);  sample.getValue();
 
         String actual = sample.getValue();
+
+        assertSame(expected,actual);
+    }
+
+    @Test
+    public void returns_makes_mock_return_specified_value_for_method_with_one_arg() {
+        Sample sample = mock("name",Sample.class);
+        String expected = "2nd";
+        returns(expected);  sample.getNext("1st");
+
+        String actual = sample.getNext("1st");
+
+        assertSame(expected,actual);
+    }
+
+    @Test
+    public void returns_makes_mock_return_specified_value_for_method_with_one_arg_using_wildcard() {
+        Sample sample = mock("name",Sample.class);
+        String expected = "2nd";
+        returns(expected);  wild("*"); sample.getNext("*");
+
+        String actual = sample.getNext("1st");
+
+        assertSame(expected,actual);
+    }
+
+    @Test
+    public void returns_makes_mock_return_specified_value_for_method_with_one_arg_using_null_as_wildcard() {
+        Sample sample = mock("name",Sample.class);
+        String expected = "2nd";
+        returns(expected);  wild(null); sample.getNext(null);
+
+        String actual = sample.getNext("1st");
 
         assertSame(expected,actual);
     }

@@ -7,10 +7,6 @@ import java.util.concurrent.Callable;
 import static org.junit.Assert.*;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class ProviderRatingButtonTest {
     
     @Test

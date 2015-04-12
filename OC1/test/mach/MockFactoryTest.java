@@ -173,7 +173,7 @@ public class MockFactoryTest {
         try {
             mock.methodWithNoArgs();
         } catch (AssertionError e) {
-            String message = "Missing invocation " + new Invocation(mock,methodWithNoArgs, new Object[0]);
+            String message = "Missing invocation " + new Invocation(mock,methodWithNoArgs, new Object[0], new Object[0]);
             assertEquals(message,e.getMessage());
             return;
         }
@@ -190,8 +190,8 @@ public class MockFactoryTest {
             mock.methodWithOneArg("wrong");
         } catch (AssertionError e) {
             ComparisonFailure failure = (ComparisonFailure) e;
-            Invocation expected = new Invocation(mock,methodWithOneArg, new Object[] {"right"});
-            Invocation received = new Invocation(mock,methodWithOneArg, new Object[] {"wrong"});
+            Invocation expected = new Invocation(mock,methodWithOneArg, new Object[] {"right"}, null);
+            Invocation received = new Invocation(mock,methodWithOneArg, new Object[] {"wrong"}, null);
             assertEquals(received.toString(),failure.getActual());
             assertEquals(expected.toString(),failure.getExpected());
             return;
@@ -225,7 +225,7 @@ public class MockFactoryTest {
         try {
             mock.methodWithNoArgs();
         } catch (AssertionError e) {
-            String message = "Unwanted invocation " + new Invocation(mock,methodWithNoArgs, new Object[0]);
+            String message = "Unwanted invocation " + new Invocation(mock,methodWithNoArgs, new Object[0], new Object[0]);
             assertEquals(message,e.getMessage());
             return;
         }

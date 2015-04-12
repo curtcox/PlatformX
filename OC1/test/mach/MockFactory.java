@@ -12,8 +12,15 @@ final class MockFactory {
 
     /**
      * The last specified return.
+     * This value will be recorded and cleared by invocation in the "returns" phase.
      */
     Object result;
+
+    /**
+     * An array of values that are use to match unknown parameter values.
+     * This value will be recorded and cleared by invocation in the "returns" phase.
+     */
+    Object[] wildcards;
 
     /**
      * Create the specified mock.
@@ -27,7 +34,7 @@ final class MockFactory {
 
     /**
      * Used to specify the value to be returned.
-     * The next mock invocation will specify what returns it.
+     * The next mock invocation will specify what method invocation returns it.
      */
     void returns(Object value) {
         if (result != null) {
@@ -38,4 +45,15 @@ final class MockFactory {
         current = Phase.returns;
     }
 
+    /**
+     * Used to specify any wildcards to be used.
+     * The next mock invocation will specify the what method invocation uses it.
+     */
+    void wild(Object[] wildcards) {
+        if (current!=Phase.returns) {
+            String message = "Specify a (possibly void) result before specifying wildcards.";
+            throw new IllegalStateException(message);
+        }
+        this.wildcards = wildcards;
+    }
 }

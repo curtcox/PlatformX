@@ -36,8 +36,8 @@ public class ScreenButtonTest  {
         screen = new FakeScreen(link);
         screens = new FakeScreen[] {screen};
 
-        _();       form.layout(screen.uiComponent);
-        _();       form.setBackCommand(null);
+        _();             form.layout(screen.uiComponent);
+        _(); wild(null); form.setBackCommand(null);
         _(screens); screenFactory.create(link);
     }
 

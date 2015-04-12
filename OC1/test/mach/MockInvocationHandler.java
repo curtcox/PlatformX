@@ -38,7 +38,7 @@ final class MockInvocationHandler
         if (equals(method))   { return equals(proxy, args); }
         if (hashCode(method)) { return hashCode(); }
 
-        latest = new Invocation(proxy,method,args);
+        latest = new Invocation(proxy,method,args,factory.wildcards);
 
         if (current == Phase.no)      { return no(latest);      }
         if (current == Phase.returns) { return returns(latest); }
@@ -66,6 +66,7 @@ final class MockInvocationHandler
         Object value = factory.result;
         factory.result = null;
         current = invoke;
+        factory.wildcards = null;
         return value;
     }
 

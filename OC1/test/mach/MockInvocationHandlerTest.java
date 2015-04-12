@@ -50,14 +50,14 @@ public class MockInvocationHandlerTest {
     public void invoke_fails_when_method_invoked_with_wrong_value() throws Throwable {
         Method method = getMethod(Map.class,"get");
         factory.returns("???");
-        testObject.invoke(proxy,method,new Object[] {"right"});
+        testObject.invoke(proxy, method, new Object[]{"right"});
 
         try {
             testObject.invoke(proxy,method,new Object[] {"wrong"});
         } catch (AssertionError e) {
             org.junit.ComparisonFailure failure = (org.junit.ComparisonFailure) e;
-            Invocation expected = new Invocation(testObject,method, new Object[] {"right"});
-            Invocation received = new Invocation(testObject,method, new Object[] {"wrong"});
+            Invocation expected = new Invocation(testObject,method, new Object[] {"right"}, null);
+            Invocation received = new Invocation(testObject,method, new Object[] {"wrong"}, null);
             assertEquals(received.toString(),failure.getActual());
             assertEquals(expected.toString(),failure.getExpected());
             return;

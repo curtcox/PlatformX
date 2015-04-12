@@ -59,28 +59,39 @@ public final class Mocks {
     /**
      * Specify that the following method will return the given value.
      */
-    public static <T> void returns(T value) {
+    public static void returns(Object value) {
         factory.returns(value);
+    }
+
+    /**
+     * Specify that the following method will use the given wildcards.
+     */
+    public static void wild(Object... value) {
+        if (value==null) {
+            factory.wild(new Object[] {null});
+        } else {
+            factory.wild(value);
+        }
     }
 
     /**
      * Specify that the following method will return no value.
      */
-    public static <T> void _() {
+    public static void _() {
         factory.returns(null);
     }
 
     /**
      * Specify that the following method will return the given value.
      */
-    public static <T> void _(T value) {
+    public static void _(Object value) {
         factory.returns(value);
     }
 
     /**
      * Specify that the following method will return no value.
      */
-    public static <T> void returns() {
+    public static void returns() {
         factory.returns(null);
     }
 
