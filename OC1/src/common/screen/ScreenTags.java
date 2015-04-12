@@ -16,6 +16,17 @@ public final class ScreenTags {
     }
 
     @Override
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        ScreenTags that = (ScreenTags) o;
+        return tags.equals(that.tags);
+    }
+
+    @Override
     public String toString() {
         return tags;
     }

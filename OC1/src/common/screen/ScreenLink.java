@@ -28,6 +28,17 @@ public final class ScreenLink {
     }
 
     @Override
+    public int hashCode() {
+        return 0;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        ScreenLink that = (ScreenLink) o;
+        return tags.equals(that.tags);
+    }
+
+    @Override
     public String toString() {
         return tags + " " + Arrays.asList(args);
     }

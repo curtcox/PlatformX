@@ -3,8 +3,7 @@ package common.screen;
 import junit.framework.TestCase;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
+import static org.junit.Assert.*;
 
 public class ScreenLinkTest {
 
@@ -18,6 +17,28 @@ public class ScreenLinkTest {
         assertEquals(name, testObject.title());
         assertEquals(1,testObject.args.length);
         assertSame(arg,testObject.args[0]);
+    }
+
+    @Test
+    public void are_equal() {
+        assertEqual(ScreenLink.of(""), ScreenLink.of(""));
+        assertEqual(ScreenLink.of("x"), ScreenLink.of("x"));
+    }
+
+    private void assertEqual(ScreenLink a, ScreenLink b) {
+        assertTrue(a.equals(b));
+        assertTrue(b.equals(a));
+        assertEquals(a.hashCode(),b.hashCode());
+    }
+
+    @Test
+    public void are_not_equal() {
+        assertNotEqual(ScreenLink.of("x"), ScreenLink.of("y"));
+    }
+
+    private void assertNotEqual(ScreenLink a, ScreenLink b) {
+        assertFalse(a.equals(b));
+        assertFalse(b.equals(a));
     }
 
     private String random(String prefix) {

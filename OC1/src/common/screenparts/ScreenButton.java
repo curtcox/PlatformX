@@ -58,7 +58,10 @@ public final class ScreenButton
             this.screen = screen;
             return this;
         }
-        public Builder leadingTo(String s) { return this; }
+        public Builder leadingTo(String target) {
+            link = ScreenLink.of(target);
+            return this;
+        }
         public Builder leadingTo(ScreenLink link) {
             this.link = link;
             return this;

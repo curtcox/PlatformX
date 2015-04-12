@@ -33,7 +33,8 @@ public class C1ScreenButtonTest {
     @Test
     public void of_returns_ActionButton_with_given_text() throws Exception {
         String text = toString();
-        UIButton button = createScreenButtonOnEDT(text,null);
+        TestScreen screen = createScreenOnEDT();
+        UIButton button = createScreenButtonOnEDT(text,screen);
         assertEquals(text,button.getText());
     }
 

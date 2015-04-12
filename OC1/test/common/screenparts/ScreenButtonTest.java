@@ -20,7 +20,8 @@ public class ScreenButtonTest  {
     IForm form;
     IFormFactory formFactory;
     ScreenFactory screenFactory;
-    ScreenLink link = ScreenLink.of("test");
+    String linkTarget = "test";
+    ScreenLink link = ScreenLink.of(linkTarget);
     FakeScreen screen;
     FakeScreen[] screens;
 
@@ -61,6 +62,13 @@ public class ScreenButtonTest  {
     @Test
     public void tapping_screen_button_shows_screen_specified_by_link() {
         ScreenButton.builder().leadingTo(link).build().onTap();
+
+        verifyScreenShown();
+    }
+
+    @Test
+    public void tapping_screen_button_shows_screen_specified_by_link_target() {
+        ScreenButton.builder().leadingTo(linkTarget).build().onTap();
 
         verifyScreenShown();
     }

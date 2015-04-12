@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/Invocation.java" afterPath="$PROJECT_DIR$/OC1/test/mach/Invocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockFactory.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandlerTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/Mocks.java" afterPath="$PROJECT_DIR$/OC1/test/mach/Mocks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MocksTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MocksTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screens/ProviderRatingButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screens/ProviderRatingButtonTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/ScreenLink.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/ScreenLink.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screen/ScreenLinkTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/ScreenLinkTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/ScreenTags.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/ScreenTags.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screen/ScreenTagsTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/ScreenTagsTest.java" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,11 +52,11 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="ScreenButton.java" pinned="false" current-in-tab="false">
+            <file leaf-file-name="ScreenButton.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1207">
-                    <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.6837989" vertical-offset="306" max-vertical-offset="1258">
+                    <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
                     <folding>
                       <element signature="e#650#651#0" expanded="true" />
                       <element signature="e#681#682#0" expanded="true" />
@@ -80,10 +77,10 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="Invocation.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="Invocation.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/OC1/test/mach/Invocation.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.71315193" vertical-offset="391" max-vertical-offset="1275">
+                  <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1275">
                     <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
                     <folding>
                       <element signature="imports" expanded="true" />
@@ -172,8 +169,8 @@
       <file leaf-file-name="ScreenButtonTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="805" max-vertical-offset="1479">
-              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="1615">
+              <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,27 +178,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mocks.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/test/mach/Mocks.java">
+      <file leaf-file-name="ScreenLink.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/ScreenLink.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="848" max-vertical-offset="1785">
-              <caret line="72" column="32" selection-start-line="72" selection-start-column="32" selection-end-line="72" selection-end-column="32" />
+            <state vertical-scroll-proportion="0.6305638" vertical-offset="34" max-vertical-offset="799">
+              <caret line="31" column="17" selection-start-line="29" selection-start-column="0" selection-end-line="38" selection-end-column="5" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2101#2102#0" expanded="true" />
-                <element signature="e#2138#2139#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MocksTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OC1/test/mach/MocksTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28189912" vertical-offset="1051" max-vertical-offset="2618">
-              <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#635#636#0" expanded="true" />
+                <element signature="e#659#660#0" expanded="true" />
+                <element signature="e#845#846#0" expanded="true" />
+                <element signature="e#900#901#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -215,9 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/c1/screens/ProviderDetailsScreenTest.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/events/Events.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/util/GlobStringMap.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/fake/FakeFormFactory.java" />
@@ -225,7 +208,6 @@
         <option value="$PROJECT_DIR$/OC1/src/common/ui/IForm.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screen/RootScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/screen/RootScreenFactory.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/screen/ScreenLink.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/dynamic/StringMapStringSource.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/ScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/uiwidget/UIButton.java" />
@@ -247,25 +229,29 @@
         <option value="$PROJECT_DIR$/OC1/src/c1/screenparts/ProviderRatingButton.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screens/Rate.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenComponentMethods.java" />
-        <option value="$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/fake/FakeScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/test/test/MockInvocationHandler.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/MocksFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/Registry.java" />
         <option value="$PROJECT_DIR$/OC1/test/fake/FakeCommonRegistryLoader.java" />
         <option value="$PROJECT_DIR$/OC1/test/fake/FakeScreen.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/Phase.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandlerTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/MockFactory.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/MocksTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/Mocks.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/Invocation.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java" />
         <option value="$PROJECT_DIR$/OC1/test/c1/screens/ProviderRatingButtonTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/screen/ScreenLink.java" />
+        <option value="$PROJECT_DIR$/OC1/test/common/screen/ScreenLinkTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/common/screen/ScreenTagsTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/screen/ScreenTags.java" />
       </list>
     </option>
   </component>
@@ -368,11 +354,11 @@
       <recent name="common.stores" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="common.screen" />
       <recent name="common.screenparts" />
       <recent name="common.screen.dynamic" />
       <recent name="se.app" />
       <recent name="se.util" />
-      <recent name="se.editor" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="fake" />
@@ -397,34 +383,6 @@
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="InvocationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="mach.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="OC1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="mach" />
-      <option name="MAIN_CLASS_NAME" value="mach.InvocationTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -467,18 +425,41 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="MocksTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="All in OC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="OC1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="ScreenLinkTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="mach.*" />
+          <option name="PATTERN" value="common.screen.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="mach" />
-      <option name="MAIN_CLASS_NAME" value="mach.MocksTest" />
+      <option name="PACKAGE_NAME" value="common.screen" />
+      <option name="MAIN_CLASS_NAME" value="common.screen.ScreenLinkTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -495,15 +476,20 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="All in OC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="false" name="ScreenTagsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="common.screen.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
+      <option name="PACKAGE_NAME" value="common.screen" />
+      <option name="MAIN_CLASS_NAME" value="common.screen.ScreenTagsTest" />
       <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -673,18 +659,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.mach in OC1" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.InvocationTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.ScreenButtonTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MocksTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.All in OC1" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.ScreenButtonTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.All in OC1" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ScreenLinkTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ScreenTagsTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.ScreenButtonTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.mach in OC1" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.MocksTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.InvocationTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ScreenLinkTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ScreenTagsTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.ScreenButtonTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.mach in OC1" />
       </list>
     </recent_temporary>
   </component>
@@ -823,57 +809,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="1037">
-          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screen/SelectionListScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="1071">
-          <caret line="48" column="48" selection-start-line="48" selection-start-column="48" selection-end-line="48" selection-end-column="48" />
-          <folding>
-            <element signature="e#1460#1461#0" expanded="false" />
-            <element signature="e#1517#1518#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/AbstractItemListScreenFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1122">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
-          <folding>
-            <element signature="e#564#565#0" expanded="false" />
-            <element signature="e#627#628#0" expanded="false" />
-            <element signature="e#1068#1069#0" expanded="false" />
-            <element signature="e#1102#1103#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="17" column="38" selection-start-line="17" selection-start-column="38" selection-end-line="17" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/ui/LinkButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
-          <caret line="27" column="13" selection-start-line="27" selection-start-column="13" selection-end-line="27" selection-end-column="13" />
-          <folding>
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#709#710#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/CompositeScreenFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
@@ -923,14 +858,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
           <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenparts/ProviderRatingButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1155,17 +1082,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="1207">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding>
-            <element signature="e#650#651#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/LazyScreenFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
@@ -1184,17 +1100,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakeForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22793296" vertical-offset="0" max-vertical-offset="895">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/mach/Invocation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.71315193" vertical-offset="391" max-vertical-offset="1275">
+        <state vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="1275">
           <caret line="60" column="35" selection-start-line="60" selection-start-column="35" selection-end-line="60" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1205,16 +1113,6 @@
             <element signature="e#1369#1370#0" expanded="true" />
             <element signature="e#1447#1448#0" expanded="true" />
             <element signature="e#1856#1857#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="805" max-vertical-offset="1479">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1259,22 +1157,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45400593" vertical-offset="0" max-vertical-offset="1224">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/c1/screens/ProviderRatingButtonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.100890204" vertical-offset="0" max-vertical-offset="674">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8486647" vertical-offset="584" max-vertical-offset="2499">
@@ -1297,12 +1179,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakeForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22793296" vertical-offset="0" max-vertical-offset="895">
+          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenparts/ProviderRatingButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6837989" vertical-offset="306" max-vertical-offset="1258">
+          <caret line="61" column="41" selection-start-line="61" selection-start-column="41" selection-end-line="61" selection-end-column="41" />
+          <folding>
+            <element signature="e#650#651#0" expanded="true" />
+            <element signature="e#681#682#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="1615">
+          <caret line="23" column="10" selection-start-line="23" selection-start-column="10" selection-end-line="23" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/c1/screens/FakeUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3694362" vertical-offset="176" max-vertical-offset="850">
+          <caret line="38" column="24" selection-start-line="38" selection-start-column="24" selection-end-line="38" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/c1/screens/ProviderRatingButtonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37833828" vertical-offset="0" max-vertical-offset="674">
+          <caret line="20" column="45" selection-start-line="20" selection-start-column="45" selection-end-line="20" selection-end-column="45" />
+          <folding>
+            <element signature="e#536#677#0" expanded="true" />
+            <element signature="e#676#677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35756677" vertical-offset="82" max-vertical-offset="1241">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/mach/MocksTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28189912" vertical-offset="1051" max-vertical-offset="2618">
           <caret line="79" column="30" selection-start-line="79" selection-start-column="30" selection-end-line="79" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/ScreenLinkTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.100890204" vertical-offset="0" max-vertical-offset="799">
+          <caret line="7" column="22" selection-start-line="7" selection-start-column="22" selection-end-line="7" selection-end-column="22" />
+          <folding>
+            <element signature="e#933#934#0" expanded="true" />
+            <element signature="e#1003#1004#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/ScreenTagsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07121662" vertical-offset="105" max-vertical-offset="833">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1025#1026#0" expanded="true" />
+            <element signature="e#1095#1096#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/ScreenTags.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5296736" vertical-offset="0" max-vertical-offset="674">
+          <caret line="25" column="37" selection-start-line="25" selection-start-column="37" selection-end-line="25" selection-end-column="37" />
+          <folding>
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/ScreenLink.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6305638" vertical-offset="34" max-vertical-offset="799">
+          <caret line="31" column="17" selection-start-line="29" selection-start-column="0" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#635#636#0" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#845#846#0" expanded="true" />
+            <element signature="e#900#901#0" expanded="true" />
           </folding>
         </state>
       </provider>
