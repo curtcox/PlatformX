@@ -10,7 +10,7 @@ import java.lang.reflect.Proxy;
 import static org.junit.Assert.*;
 import static mach.Mocks.no;
 import static mach.Mocks.verify;
-public class MocksFactoryTest {
+public class MockFactoryTest {
 
     MockFactory testObject;
     interface Sample {
@@ -134,7 +134,7 @@ public class MocksFactoryTest {
             testObject.returns("next");
             fail();
         } catch (IllegalStateException e) {
-            assertEquals("Return glyph [first] hasn't been mapped, yet.",e.getMessage());
+            assertEquals("Return value [first] hasn't been mapped, yet.",e.getMessage());
         }
     }
 

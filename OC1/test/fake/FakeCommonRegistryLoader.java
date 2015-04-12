@@ -15,8 +15,6 @@ public class FakeCommonRegistryLoader {
         put(ILogManager.class,      new LogManager());
         put(LogWriter.class,        new LogWriter());
         put(IDisplay.class,         new FakeDisplay());
-        put(IFormFactory.class,     new FakeFormFactory());
-        put(ScreenFactory.class,    new FakeScreenFactory());
     }
     
     static void put(Class clazz, Object object) {

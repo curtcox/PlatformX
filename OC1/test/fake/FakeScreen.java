@@ -7,7 +7,7 @@ import common.uiwidget.UIComponent;
 public class FakeScreen extends Screen {
 
     public boolean layoutForPortrait;
-    public UIComponent uiComponent;
+    public UIComponent uiComponent = new UIComponent();
 
     public FakeScreen(ScreenLink link) {
         super(link);

@@ -66,6 +66,28 @@ public class MockInvocationHandlerTest {
     }
 
     @Test
+    public void invoke_with_no_args_returns_given_value_when_invoked_after_return_value_has_been_set() throws Throwable {
+        Method method = getMethod(Map.class,"size");
+        int expected = 42;
+        factory.returns(expected);
+        testObject.invoke(proxy,method,args);
+        int actual = (Integer) testObject.invoke(proxy,method,args);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void invoke_with_one_arg_returns_given_value_when_invoked_after_return_value_has_been_set() throws Throwable {
+        Method method = getMethod(Map.class,"get");
+        String expected = "value";
+        factory.returns(expected);
+        testObject.invoke(proxy,method,args("key"));
+        String actual = (String) testObject.invoke(proxy,method,args("key"));
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
     public void equals_returns_true_when_given_its_proxy() throws Throwable {
         Method method = getMethod(Object.class,"equals");
         assertEquals(Boolean.TRUE, testObject.invoke(proxy, method, new Object[]{proxy}));
@@ -77,5 +99,8 @@ public class MockInvocationHandlerTest {
         assertEquals(Boolean.FALSE, testObject.invoke(proxy, method, new Object[]{null}));
     }
 
+    private static Object[] args(Object... args) {
+        return args;
+    }
 
 }

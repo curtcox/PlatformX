@@ -7,6 +7,9 @@ enum Phase {
 
     /**
      * In this phase, the next invocation will define what is returned.
+     * It is used to define behaviour prior to test execution.
+     * When in the "returns" phase, invoking a method on a mock will record the invocation and
+     * change the state to invoke.
      */
     returns,
 
@@ -17,12 +20,15 @@ enum Phase {
     invoke,
 
     /**
-     * In this phase, the next invocation will verify previous invocation happened.
+     * In this phase, the next invocation will verify subsequent invocations happened also occurred previously.
      */
     verify,
 
     /**
      * In this phase, the next invocation will forbid invocations after it.
+     * It is used to prohibit behaviour prior to test execution.
+     * When in the "no" phase, invoking a method on a mock will record the invocation and
+     * change the state to invoke.
      */
     no;
 
