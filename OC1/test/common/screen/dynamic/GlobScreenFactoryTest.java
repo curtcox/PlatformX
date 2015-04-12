@@ -29,7 +29,7 @@ public class GlobScreenFactoryTest {
     
     @Test
     public void create_returns_results_of_doCreate_when_glob_matches() {
-         assertSame(screen,testObject.create(ScreenLink.of("stuff")));
+         assertSame(screen,testObject.create(ScreenLink.of("stuff"))[0]);
     }
 
     @Test
