@@ -39,7 +39,7 @@ public class ScreenButtonTest  {
 
         _();             form.layout(screen.uiComponent);
         _(); wild(null); form.setBackCommand(null);
-        _(screens); screenFactory.create(link);
+        _(screens);      screenFactory.create(link);
     }
 
     @Test

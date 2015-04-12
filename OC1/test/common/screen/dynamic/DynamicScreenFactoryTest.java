@@ -11,9 +11,11 @@ import fake.FakeForm;
 import fake.FakeFormFactory;
 import fake.FakeSERegistryLoader;
 import junit.framework.TestCase;
+import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
+import static mach.Mocks._;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
@@ -23,15 +25,12 @@ public class DynamicScreenFactoryTest {
     FakeForm form = new FakeForm();
     FakeFormFactory formFactory;
     Object controller=new Home();
-    StringSource source=new StringSource(){
-        @Override
-        public String getString() {
-            return "layout{}";
-        }
-    };
+    StringSource source;
 
     @Before
     public void setUp() {
+        Mocks.init(this);
+        _("layout{}"); source.getString();
         FakeSERegistryLoader.load();
         formFactory = (FakeFormFactory) Registry.get(IFormFactory.class);
         formFactory.form = form;
