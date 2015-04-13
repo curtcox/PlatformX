@@ -7,30 +7,31 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.ui.IFormFactory;
+import common.uiwidget.UIComponent;
+import common.uiwidget.UILabel;
 import fake.FakeForm;
 import fake.FakeFormFactory;
 import fake.FakeSERegistryLoader;
-import junit.framework.TestCase;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
 import static mach.Mocks._;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class DynamicScreenFactoryTest {
 
     FakeForm form = new FakeForm();
     FakeFormFactory formFactory;
     Object controller=new Home();
-    StringSource source;
+    StringSource source1;
+    StringSource source2;
 
     @Before
     public void setUp() {
         Mocks.init(this);
-        _("layout{}"); source.getString();
+        _("layout{ one }"); source1.getString();
+        _("layout{ two }"); source2.getString();
         FakeSERegistryLoader.load();
         formFactory = (FakeFormFactory) Registry.get(IFormFactory.class);
         formFactory.form = form;
@@ -45,7 +46,7 @@ public class DynamicScreenFactoryTest {
     public void map_produces_ScreenFactory_that_maps_to_a_screen_for_empty_tag_set() {
         ScreenLink link = ScreenLink.of("");
         String screenSpec ="";
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
 
         Screen[] screens = testObject.create(link);
 
@@ -57,11 +58,12 @@ public class DynamicScreenFactoryTest {
     public void map_produces_ScreenFactory_that_maps_to_a_screen_for_one_tag() {
         ScreenLink link = ScreenLink.of("tag1");
         String screenSpec ="tag1";
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
 
         Screen[] screens = testObject.create(link);
 
         assertNotNull(screens);
+        assertEquals(1,screens.length);
         assertSame(link, formFactory.link);
     }
 
@@ -70,7 +72,7 @@ public class DynamicScreenFactoryTest {
         ScreenLink link = ScreenLink.of("");
         String screenSpec ="";
 
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
         testObject.create(link)[0].layoutForm();
 
         assertSame(link, form.getScreenLink());
@@ -81,10 +83,71 @@ public class DynamicScreenFactoryTest {
         ScreenLink link = ScreenLink.of("title");
         String screenSpec ="title";
 
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source).build();
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
         testObject.create(link)[0].layoutForm();
 
         assertSame("title", form.getTitle());
+    }
+
+    @Test
+    public void map_produces_ScreenFactory_that_maps_to_screens_with_contents_from_screen_link() {
+        ScreenLink link = ScreenLink.of("title");
+        String screenSpec ="title";
+
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
+        testObject.create(link)[0].layoutForm();
+
+        UIComponent layout = form.layout;
+        UILabel label = (UILabel) layout;
+        assertEquals("one",label.text);
+    }
+
+    @Test
+    public void create_returns_1st_matching_screen_when_there_are_two_choices() {
+        ScreenLink link = ScreenLink.of("one");
+
+        ScreenFactory testObject = DynamicScreenFactory.builder()
+                .map("one", controller, source1)
+                .map("two", controller, source2)
+                .build();
+
+        testObject.create(link)[0].layoutForm();
+
+        assertSame("one", form.getTitle());
+        UIComponent layout = form.layout;
+        UILabel label = (UILabel) layout;
+        assertEquals("one", label.text);
+    }
+
+    @Test
+    public void create_returns_2nd_matching_screen_when_there_are_two_choices() {
+        ScreenLink link = ScreenLink.of("two");
+
+        ScreenFactory testObject = DynamicScreenFactory.builder()
+                .map("one", controller, source1)
+                .map("two", controller, source2)
+                .build();
+
+        testObject.create(link)[0].layoutForm();
+
+        assertSame("two", form.getTitle());
+        UIComponent layout = form.layout;
+        UILabel label = (UILabel) layout;
+        assertEquals("two", label.text);
+    }
+
+    @Test
+    public void create_returns_both_matching_screen_when_there_are_two_choices() {
+        ScreenLink link = ScreenLink.of("");
+
+        ScreenFactory testObject = DynamicScreenFactory.builder()
+                .map("one", controller, source1)
+                .map("two", controller, source2)
+                .build();
+
+        Screen[] screens = testObject.create(link);
+
+        assertEquals(2,screens.length);
     }
 
 }
