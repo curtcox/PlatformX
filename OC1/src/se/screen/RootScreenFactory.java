@@ -3,6 +3,7 @@ package se.screen;
 import common.Registry;
 import common.screen.CompositeScreenFactory;
 import common.screen.ScreenFactory;
+import common.screen.ScreenTags;
 import common.screen.dynamic.DynamicScreenFactory;
 import common.screen.dynamic.LazyScreenFactory;
 import common.screen.dynamic.StringMapStringSource;
@@ -47,7 +48,7 @@ public final class RootScreenFactory {
 
     private static ScreenFactory dynamicScreens(StringMap layouts) {
         return DynamicScreenFactory.builder()
-                .map(""     , new Home(), new StringMapStringSource(layouts,"Home"))
+                .map(ScreenTags.of("Home"), new Home(), new StringMapStringSource(layouts, "Home"))
                 .build();
     }
 }

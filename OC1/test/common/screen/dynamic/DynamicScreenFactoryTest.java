@@ -6,6 +6,7 @@ import common.event.StringSource;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
+import common.screen.ScreenTags;
 import common.ui.IFormFactory;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
@@ -44,9 +45,9 @@ public class DynamicScreenFactoryTest {
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_a_screen_for_empty_tag_set() {
-        ScreenLink link = ScreenLink.of("");
-        String screenSpec ="";
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
+        ScreenLink link = link("");
+
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(tags(""), controller, source1).build();
 
         Screen[] screens = testObject.create(link);
 
@@ -56,9 +57,9 @@ public class DynamicScreenFactoryTest {
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_a_screen_for_one_tag() {
-        ScreenLink link = ScreenLink.of("tag1");
-        String screenSpec ="tag1";
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
+        ScreenLink link = link("tag1");
+
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(tags("tag1"), controller, source1).build();
 
         Screen[] screens = testObject.create(link);
 
@@ -69,10 +70,9 @@ public class DynamicScreenFactoryTest {
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_screens_with_the_same_link() {
-        ScreenLink link = ScreenLink.of("");
-        String screenSpec ="";
+        ScreenLink link = link("");
 
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(tags(""), controller, source1).build();
         testObject.create(link)[0].layoutForm();
 
         assertSame(link, form.getScreenLink());
@@ -80,22 +80,18 @@ public class DynamicScreenFactoryTest {
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_screens_with_title_from_screen_link() {
-        ScreenLink link = ScreenLink.of("title");
-        String screenSpec ="title";
 
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
-        testObject.create(link)[0].layoutForm();
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(tags("title"), controller, source1).build();
+        testObject.create(link("title"))[0].layoutForm();
 
         assertSame("title", form.getTitle());
     }
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_screens_with_contents_from_screen_link() {
-        ScreenLink link = ScreenLink.of("title");
-        String screenSpec ="title";
 
-        ScreenFactory testObject = DynamicScreenFactory.builder().map(screenSpec, controller, source1).build();
-        testObject.create(link)[0].layoutForm();
+        ScreenFactory testObject = DynamicScreenFactory.builder().map(tags("title"), controller, source1).build();
+        testObject.create(link("title"))[0].layoutForm();
 
         UIComponent layout = form.layout;
         UILabel label = (UILabel) layout;
@@ -104,14 +100,13 @@ public class DynamicScreenFactoryTest {
 
     @Test
     public void create_returns_1st_matching_screen_when_there_are_two_choices() {
-        ScreenLink link = ScreenLink.of("one");
 
         ScreenFactory testObject = DynamicScreenFactory.builder()
-                .map("one", controller, source1)
-                .map("two", controller, source2)
+                .map(tags("one"), controller, source1)
+                .map(tags("two"), controller, source2)
                 .build();
 
-        testObject.create(link)[0].layoutForm();
+        testObject.create(link("one"))[0].layoutForm();
 
         assertSame("one", form.getTitle());
         UIComponent layout = form.layout;
@@ -121,14 +116,13 @@ public class DynamicScreenFactoryTest {
 
     @Test
     public void create_returns_2nd_matching_screen_when_there_are_two_choices() {
-        ScreenLink link = ScreenLink.of("two");
 
         ScreenFactory testObject = DynamicScreenFactory.builder()
-                .map("one", controller, source1)
-                .map("two", controller, source2)
+                .map(tags("one"), controller, source1)
+                .map(tags("two"), controller, source2)
                 .build();
 
-        testObject.create(link)[0].layoutForm();
+        testObject.create(link("two"))[0].layoutForm();
 
         assertSame("two", form.getTitle());
         UIComponent layout = form.layout;
@@ -138,16 +132,23 @@ public class DynamicScreenFactoryTest {
 
     @Test
     public void create_returns_both_matching_screen_when_there_are_two_choices() {
-        ScreenLink link = ScreenLink.of("");
 
         ScreenFactory testObject = DynamicScreenFactory.builder()
-                .map("one", controller, source1)
-                .map("two", controller, source2)
+                .map(tags("one"), controller, source1)
+                .map(tags("two"), controller, source2)
                 .build();
 
-        Screen[] screens = testObject.create(link);
+        Screen[] screens = testObject.create(link(""));
 
         assertEquals(2,screens.length);
+    }
+
+    private ScreenTags tags(String string) {
+        return ScreenTags.of(string);
+    }
+
+    private ScreenLink link(String string) {
+        return ScreenLink.of(string);
     }
 
 }
