@@ -10,10 +10,6 @@ public final class ScreenController
     implements ScreenContext.Provider
 {
 
-//    public interface Lookup {
-//        ScreenController lookup(ScreenLink link);
-//    }
-
     private final Object target;
     
     public ScreenController(Object target) {

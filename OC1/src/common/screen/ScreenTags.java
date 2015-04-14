@@ -15,6 +15,10 @@ public final class ScreenTags {
         return new ScreenTags(tags.toLowerCase());
     }
 
+    public boolean matches(ScreenLink link) {
+        return true;
+    }
+
     @Override
     public int hashCode() {
         return 0;
@@ -30,4 +34,5 @@ public final class ScreenTags {
     public String toString() {
         return tags;
     }
+
 }
