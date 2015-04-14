@@ -43,4 +43,26 @@ public class ScreenTagsTest {
         assertFalse(b.equals(a));
     }
 
+    @Test
+    public void matches_screen_link_when_tags_contains_all_link_tags() {
+        assertTrue(tags("").matches(link("")));
+        assertTrue(tags("a").matches(link("")));
+        assertTrue(tags("r g b").matches(link("r")));
+        assertTrue(tags("r g b").matches(link("g b")));
+        assertTrue(tags("r g b").matches(link("b g r")));
+    }
+
+    @Test
+    public void does_not_match_screen_link_when_tags_does_not_contains_all_link_tags() {
+        assertFalse(tags("").matches(link("a")));
+        assertFalse(tags("g").matches(link("r g b")));
+    }
+
+    private ScreenLink link(String s) {
+        return ScreenLink.of(s);
+    }
+
+    private ScreenTags tags(String s) {
+        return ScreenTags.of(s);
+    }
 }

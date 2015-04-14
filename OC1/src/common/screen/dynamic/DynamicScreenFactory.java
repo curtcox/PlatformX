@@ -2,7 +2,6 @@ package common.screen.dynamic;
 
 import common.event.StringSource;
 import common.screen.*;
-import common.util.Glob;
 
 import java.util.ArrayList;
 import java.util.List;
