@@ -58,9 +58,16 @@ public final class ScreenEditor {
             @Override
             public void onChange(StringChange.Event event) {
                 editing.setContents(editor.getText());
-                Screen.getShowing().refresh();
+                refreshScreen();
             }
         };
+    }
+
+    private void refreshScreen() {
+        Screen screen = Screen.getShowing();
+        if (screen!=null) {
+            screen.refresh();
+        }
     }
 
     void edit(ScreenTags tags) {

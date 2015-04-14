@@ -25,6 +25,6 @@ public final class LinkButton
 
     @Override
     public void onTap() {
-         Screen.show(screenFactory().create(linkFactory.create()));
+         Screen.show(linkFactory.create(),screenFactory());
     }
 }

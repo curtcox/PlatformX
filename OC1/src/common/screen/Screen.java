@@ -71,7 +71,12 @@ public abstract class Screen {
         }
     }
 
-    public static void show(Screen[] screens) {}
+    public static void show(ScreenLink link, ScreenFactory factory) {
+        Screen[] screens = factory.create(link);
+        if (screens.length==1) {
+            screens[0].show();
+        }
+    }
 
     public static Screen getShowing() {
         return showing;
