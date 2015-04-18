@@ -27,7 +27,7 @@ public final class LazyScreenFactory
         for (StringSource source : sources.get(link.tags)) {
             list.add(new DynamicScreen(link,controller(link), layoutProvider(source)));
         }
-        return new Screen[] {  };
+        return list.toArray(new Screen[0]);
     }
     
     private ScreenContext.Provider controller(ScreenLink link) {

@@ -16,6 +16,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class LazyScreenFactoryTest {
 
+    StringSource source;
     TaggedStringSources sources;
     LazyScreenFactory testObject;
 
@@ -42,4 +43,17 @@ public class LazyScreenFactoryTest {
         assertNotNull(actual);
         assertEquals(0,actual.length);
     }
+
+    @Test
+    public void create_returns_single_matching_screen_when_there_is_one() {
+        ScreenLink link = ScreenLink.of("");
+        _(new StringSource[]{source}); sources.get(ScreenTags.of(""));
+
+        Screen[] actual = testObject.create(link);
+
+        assertNotNull(actual);
+        assertEquals(1,actual.length);
+    }
+
+
 }
