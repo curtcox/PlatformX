@@ -3,6 +3,7 @@ package se.app;
 import common.log.ILogManager;
 import common.Registry;
 import common.net.Network;
+import common.screen.dynamic.TaggedStringSources;
 import se.editor.ScreenEditor;
 import se.events.Events;
 import se.log.*;
@@ -18,7 +19,6 @@ import se.util.TaggedValueStringMap;
 
 /**
  * Loads the registry with all of the instances needed for startup.
- * @author Curt
  */
 final class RegistryLoader {
 
@@ -38,6 +38,7 @@ final class RegistryLoader {
         TaggedValueStringMap stringMap = new TaggedValueStringMap();
         put(StringMap.class, stringMap);
         put(TaggedValueStringMap.class, stringMap);
+        put(TaggedStringSources.class,stringMap);
     }
 
     static void put(Class clazz, Object object) {

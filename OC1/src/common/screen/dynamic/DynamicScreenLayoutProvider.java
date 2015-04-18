@@ -13,7 +13,6 @@ import common.event.StringSource;
 
 /**
  * Provides a ScreenLayout that is dynamically generated at runtime.
- * @author Curt
  */
 public final class DynamicScreenLayoutProvider
     implements ScreenLayoutProvider

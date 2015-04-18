@@ -1,10 +1,12 @@
 package se.util;
 
+import common.event.StringSource;
 import common.screen.ScreenTags;
+import common.screen.dynamic.TaggedStringSources;
 import common.util.StringMap;
 
 public final class TaggedValueStringMap
-    implements StringMap
+    implements StringMap, TaggedStringSources
 {
 
     SimpleTaggedValue taggedValue = new SimpleTaggedValue();
@@ -22,4 +24,8 @@ public final class TaggedValueStringMap
         return null;
     }
 
+    @Override
+    public StringSource[] get(ScreenTags tags) {
+        return null;
+    }
 }

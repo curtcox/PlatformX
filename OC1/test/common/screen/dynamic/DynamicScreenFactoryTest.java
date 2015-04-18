@@ -44,7 +44,7 @@ public class DynamicScreenFactoryTest {
     }
 
     @Test
-    public void map_produces_ScreenFactory_that_maps_to_a_screen_for_empty_tag_set() {
+    public void map_produces_ScreenFactory_that_maps_to_a_screen_array_for_empty_tag_set() {
         ScreenLink link = link("");
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(tags(""), controller, source1).build();

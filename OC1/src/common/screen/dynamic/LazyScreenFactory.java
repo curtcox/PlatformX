@@ -1,9 +1,13 @@
 package common.screen.dynamic;
 
+import common.event.StringSource;
 import common.screen.*;
 import common.util.Mirror;
 import common.util.Mirrors;
 import common.util.StringMap;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A ScreenFactory that lazily creates screens.
@@ -12,30 +16,30 @@ import common.util.StringMap;
 public final class LazyScreenFactory
     implements ScreenFactory
 {
-    final StringMap sources;
+    final TaggedStringSources sources;
     
-    public LazyScreenFactory(StringMap sources) {
+    public LazyScreenFactory(TaggedStringSources sources) {
         this.sources = sources;
     }
     
     public Screen[] create(ScreenLink link) {
-        ScreenLayoutProvider layout = layoutProvider(link);
-        if (layout==null) {
-            return null;
+        List<Screen> list = new ArrayList();
+        for (StringSource source : sources.get(link.tags)) {
+            list.add(new DynamicScreen(link,controller(link), layoutProvider(source)));
         }
-        return new Screen[] { new DynamicScreen(link,controller(link),layout) };
+        return new Screen[] {  };
     }
     
     private ScreenContext.Provider controller(ScreenLink link) {
-        Mirror mirror = Mirrors.of(name(link));
+        Mirror mirror = Mirrors.of(tags(link));
         return (mirror==null) ? new EmptyScreenContextProvider() : new ScreenController(mirror.getTarget());
     }
     
-    private ScreenLayoutProvider layoutProvider(ScreenLink link) {
-        return new DynamicScreenLayoutProvider(new StringMapStringSource(sources,name(link)));
+    private ScreenLayoutProvider layoutProvider(StringSource source) {
+        return new DynamicScreenLayoutProvider(source);
     }
 
-    private String name(ScreenLink link) {
-        return link.title();
+    private String tags(ScreenLink link) {
+        return link.tags.toString();
     }
 }

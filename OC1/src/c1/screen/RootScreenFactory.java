@@ -10,6 +10,7 @@ import common.screen.dynamic.DynamicScreenFactory;
 import common.screen.dynamic.LazyScreenFactory;
 import common.screen.dynamic.StringMapStringSource;
 import c1.app.Version;
+import common.screen.dynamic.TaggedStringSources;
 import common.util.StringMap;
 import c1.screenfactories.*;
 import c1.screens.*;
@@ -26,10 +27,10 @@ public final class RootScreenFactory {
     );
     
     public static ScreenFactory of() {
-        return of(Registry.get(StringMap.class));    
+        return of(Registry.get(StringMap.class),Registry.get(TaggedStringSources.class));
     }
     
-    public static ScreenFactory of(StringMap layouts) {
+    public static ScreenFactory of(StringMap layouts, TaggedStringSources taggedLayouts) {
         return new CompositeScreenFactory(
                 new DeviceInfoScreenFactory(),
                 LocationSelectionScreenFactory.FACTORY,
@@ -39,7 +40,7 @@ public final class RootScreenFactory {
                 CustomComponentScreen.FACTORY,
                 dynamicScreens(layouts),
                 new IndexScreenFactory(),
-                new LazyScreenFactory(layouts)
+                new LazyScreenFactory(taggedLayouts)
         );
     }
     

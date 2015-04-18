@@ -5,7 +5,6 @@ package common.util;
  * This is a read-only abstraction that could be backed by a HashMap,
  * a file, a file system, a remote server, or some combination of the 
  * previous.
- * @author Curt
  */
 public interface StringMap {
 
