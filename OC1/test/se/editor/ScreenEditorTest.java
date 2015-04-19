@@ -11,6 +11,7 @@ import org.junit.Before;
 import org.junit.Test;
 import se.events.Events;
 import se.ui.EditLinkEvent;
+import se.ui.EditTaggedValueEvent;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
 
@@ -42,34 +43,32 @@ public class ScreenEditorTest {
 
     @Test
     public void sending_an_edit_command_event_causes_a_value_with_the_corresponding_tags_to_be_edited_when_registered() {
-        String name = "screen name";
-        ScreenLink link = ScreenLink.of(name);
-        EditLinkEvent event = new EditLinkEvent(link,null);
+        TaggedValue value = stringMap.newValue();
+        value.setTags(ScreenTags.of("whatever"));
+        EditTaggedValueEvent event = new EditTaggedValueEvent(value);
 
         testObject.register();
         events.post(event);
 
-        assertEquals(link.tags, testObject.editing.getTags());
+        assertEquals(value.getTags(), testObject.editing.getTags());
     }
 
     @Test
     public void edit_makes_the_editing_frame_visible() {
-        ScreenTags tags = ScreenTags.of("whatever");
+        TaggedValue value = stringMap.newValue();
 
-        testObject.edit(tags);
+        testObject.edit(value);
 
         assertTrue(testObject.frame.isVisible());
     }
 
     @Test
     public void edit_puts_the_edited_text_in_the_editor() {
-        ScreenTags tags = ScreenTags.of("whatever");
         TaggedValue value = stringMap.newValue();
-        value.setTags(tags);
         value.setContents("contents");
         screen().show();
 
-        testObject.edit(tags);
+        testObject.edit(value);
 
         assertEquals("contents", testObject.editor.getText());
     }

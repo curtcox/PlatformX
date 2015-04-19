@@ -3,9 +3,8 @@ package se.editor;
 import common.Registry;
 import common.event.StringChange;
 import common.screen.Screen;
-import common.screen.ScreenTags;
 import se.events.Events;
-import se.ui.EditLinkEvent;
+import se.ui.EditTaggedValueEvent;
 import se.uiwidget.StringEditor;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
@@ -15,9 +14,10 @@ import javax.swing.*;
 public final class ScreenEditor {
 
     TaggedValue editing;
-    private static ScreenEditor screenEditor;
     final JFrame frame = new JFrame();
     final StringEditor editor = new StringEditor(textListener(),null);
+
+    private static ScreenEditor screenEditor;
 
     /**
      * Only use this for testing.
@@ -39,15 +39,15 @@ public final class ScreenEditor {
     }
 
     void register() {
-        events().registerListenerFor(editCommandListener(), EditLinkEvent.class);
+        events().registerListenerFor(editCommandListener(), EditTaggedValueEvent.class);
     }
 
     Events.Listener editCommandListener() {
         return new Events.Listener() {
             @Override
             public void onEvent(Events.Event event) {
-                EditLinkEvent editEvent = (EditLinkEvent) event;
-                edit(taggedValue(editEvent));
+                EditTaggedValueEvent editEvent = (EditTaggedValueEvent) event;
+                edit(editEvent.taggedValue);
             }
         };
     }
@@ -69,21 +69,14 @@ public final class ScreenEditor {
         }
     }
 
-    void edit(ScreenTags tags) {
-        editing.setTags(tags);
-        editor.setText(stringMap().get(tags.toString()));
+    void edit(TaggedValue value) {
+        editing = value;
+        editor.setText(value.getContents());
         frame.setVisible(true);
-    }
-
-    private static ScreenTags taggedValue(EditLinkEvent editEvent) {
-        return editEvent.link.tags;
     }
 
     static Events events() {
         return Registry.get(Events.class);
     }
 
-    static TaggedValueStringMap stringMap() {
-        return Registry.get(TaggedValueStringMap.class);
-    }
 }
