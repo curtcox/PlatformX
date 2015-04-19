@@ -5,7 +5,7 @@ import common.screen.ScreenLink;
 import common.screen.ScreenTags;
 import common.uiwidget.UIComponent;
 import se.events.Events;
-import se.ui.EditCommand;
+import se.ui.EditLinkEvent;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
 
@@ -34,7 +34,7 @@ public class ScreenEditorDemo {
         String name = "test";
         ScreenLink link = ScreenLink.of(name);
         UIComponent layout = null;
-        return new EditCommand.Event(link,layout);
+        return new EditLinkEvent(link,layout);
     }
 
     static Events events() {

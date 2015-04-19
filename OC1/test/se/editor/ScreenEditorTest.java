@@ -7,11 +7,10 @@ import common.screen.ScreenTags;
 import common.uiwidget.UIComponent;
 import fake.FakeForm;
 import fake.FakeSERegistryLoader;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 import se.events.Events;
-import se.ui.EditCommand;
+import se.ui.EditLinkEvent;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
 
@@ -45,7 +44,7 @@ public class ScreenEditorTest {
     public void sending_an_edit_command_event_causes_a_value_with_the_corresponding_tags_to_be_edited_when_registered() {
         String name = "screen name";
         ScreenLink link = ScreenLink.of(name);
-        EditCommand.Event event = new EditCommand.Event(link,null);
+        EditLinkEvent event = new EditLinkEvent(link,null);
 
         testObject.register();
         events.post(event);

@@ -5,9 +5,8 @@ import common.event.StringChange;
 import common.screen.Screen;
 import common.screen.ScreenTags;
 import se.events.Events;
-import se.ui.EditCommand;
+import se.ui.EditLinkEvent;
 import se.uiwidget.StringEditor;
-import se.util.SimpleTaggedValue;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
 
@@ -15,7 +14,7 @@ import javax.swing.*;
 
 public final class ScreenEditor {
 
-    TaggedValue editing = new SimpleTaggedValue();
+    TaggedValue editing;
     private static ScreenEditor screenEditor;
     final JFrame frame = new JFrame();
     final StringEditor editor = new StringEditor(textListener(),null);
@@ -40,14 +39,14 @@ public final class ScreenEditor {
     }
 
     void register() {
-        events().registerListenerFor(editCommandListener(), EditCommand.Event.class);
+        events().registerListenerFor(editCommandListener(), EditLinkEvent.class);
     }
 
     Events.Listener editCommandListener() {
         return new Events.Listener() {
             @Override
             public void onEvent(Events.Event event) {
-                EditCommand.Event editEvent = (EditCommand.Event) event;
+                EditLinkEvent editEvent = (EditLinkEvent) event;
                 edit(taggedValue(editEvent));
             }
         };
@@ -76,7 +75,7 @@ public final class ScreenEditor {
         frame.setVisible(true);
     }
 
-    private static ScreenTags taggedValue(EditCommand.Event editEvent) {
+    private static ScreenTags taggedValue(EditLinkEvent editEvent) {
         return editEvent.link.tags;
     }
 

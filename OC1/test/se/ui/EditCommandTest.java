@@ -34,11 +34,11 @@ public class EditCommandTest {
         Events events = new Events();
         Registry.put(Events.class,events);
         SimpleListener listener = new SimpleListener();
-        events.registerListenerFor(listener,EditCommand.Event.class);
+        events.registerListenerFor(listener,EditLinkEvent.class);
 
         testObject.action(link,layout);
 
-        EditCommand.Event value = (EditCommand.Event) listener.getLast();
+        EditLinkEvent value = (EditLinkEvent) listener.getLast();
         assertSame(title, value.link.title());
         assertSame(layout, value.layout);
     }

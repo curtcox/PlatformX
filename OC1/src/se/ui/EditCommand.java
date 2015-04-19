@@ -9,17 +9,6 @@ import se.events.Events;
 public final class EditCommand
     extends Command
 {
-    public static class Event
-        implements Events.Event
-    {
-        public final ScreenLink link;
-        public final UIComponent layout;
-
-        public Event(ScreenLink link, UIComponent layout) {
-            this.link = link;
-            this.layout = layout;
-        }
-    }
 
     EditCommand() {
         super("Edit");
@@ -29,7 +18,7 @@ public final class EditCommand
     protected void action(Object... args) {
         ScreenLink link = (ScreenLink) args[0];
         UIComponent layout = (UIComponent) args[1];
-        events().post(new Event(link,layout));
+        events().post(new EditLinkEvent(link,layout));
     }
 
     Events events() {
