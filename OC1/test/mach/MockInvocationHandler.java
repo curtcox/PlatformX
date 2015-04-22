@@ -38,12 +38,13 @@ final class MockInvocationHandler
         if (equals(method))   { return equals(proxy, args); }
         if (hashCode(method)) { return hashCode(); }
 
-        latest = new Invocation(proxy,method,args,factory.wildcards);
+        Invocation invocation = new Invocation(proxy,method,args,factory.wildcards);
+        factory.handler = this;
 
-        if (current == Phase.no)      { return no(latest);      }
-        if (current == Phase.returns) { return returns(latest); }
-        if (current == Phase.invoke)  { return invoke(latest);  }
-        if (current == Phase.verify)  { return verify(latest);  }
+        if (current == Phase.no)      { return no(invocation);      }
+        if (current == Phase.returns) { return returns(invocation); }
+        if (current == Phase.invoke)  { return invoke(invocation);  }
+        if (current == Phase.verify)  { return verify(invocation);  }
 
         throw new UnsupportedOperationException("Invalid phase : " + current);
     }
@@ -89,6 +90,7 @@ final class MockInvocationHandler
         }
         Object result = result(invocation);
         invoked.put(invocation, result);
+        latest = invocation;
         return result;
     }
 

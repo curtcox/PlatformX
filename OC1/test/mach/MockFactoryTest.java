@@ -165,6 +165,53 @@ public class MockFactoryTest {
     }
 
     @Test
+    public void method_returns_specified_when_invocation_matches_wildcard() {
+        Sample mock = newMockSample();
+
+        String expected = "expected";
+        testObject.returns(expected); testObject.wild(null); mock.methodWithOneArg(null);
+
+        String actual = mock.methodWithOneArg(random());
+
+        assertSame(expected, actual);
+    }
+
+    @Test
+    public void wild_null_is_interpreted_as_an_object_array_with_one_null_value() {
+        testObject.wild(null);
+        assertEquals(1,testObject.wildcards.length);
+        assertNull(testObject.wildcards[0]);
+    }
+
+    @Test
+    public void arg_returns_previous_arg_during_verify_after_invoking_method_with_wildcard() {
+        Sample mock = newMockSample();
+
+        String passedArg = "some random string";
+        testObject.returns("don't care"); testObject.wild(null); mock.methodWithOneArg(null);
+
+        mock.methodWithOneArg(passedArg);
+
+        verify();
+        testObject.wild(null); mock.methodWithOneArg(null); Object capturedArg = testObject.arg();
+
+        assertSame(passedArg, capturedArg);
+    }
+
+    @Test
+    public void arg_returns_previous_arg_immediately_after_being_invoked() {
+        Sample mock = newMockSample();
+
+        String passedArg = "some random string";
+        testObject.returns("don't care"); testObject.wild(null); mock.methodWithOneArg(null);
+
+        mock.methodWithOneArg(passedArg);
+
+        Object capturedArg = testObject.arg();
+        assertSame(passedArg, capturedArg);
+    }
+
+    @Test
     public void verify_fails_when_method_not_invoked() {
         Sample mock = newMockSample();
 
@@ -232,4 +279,7 @@ public class MockFactoryTest {
         fail();
     }
 
+    String random() {
+        return toString();
+    }
 }

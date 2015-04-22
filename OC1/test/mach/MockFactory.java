@@ -23,6 +23,12 @@ final class MockFactory {
     Object[] wildcards;
 
     /**
+     * The last invocation handler from this factory that was used for a method
+     * invocation.
+     */
+    MockInvocationHandler handler;
+
+    /**
      * Create the specified mock.
      */
     <T> T mock(Class<T> clazz, String name) {
@@ -49,11 +55,16 @@ final class MockFactory {
      * Used to specify any wildcards to be used.
      * The next mock invocation will specify the what method invocation uses it.
      */
-    void wild(Object[] wildcards) {
-        if (current!=Phase.returns) {
+    void wild(Object... wildcards) {
+        if (current==Phase.returns || current==Phase.verify) {
+            this.wildcards = wildcards==null ? new Object[1] : wildcards;
+        } else {
             String message = "Specify a (possibly void) result before specifying wildcards.";
             throw new IllegalStateException(message);
         }
-        this.wildcards = wildcards;
+    }
+
+    public <T> T arg() {
+        return (T) handler.latest.args.get(0);
     }
 }

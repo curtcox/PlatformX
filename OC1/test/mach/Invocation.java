@@ -68,6 +68,6 @@ final class Invocation {
     }
 
     public String toString() {
-        return method.toString() + args;
+        return method.toString() + args + wildcards;
     }
 }

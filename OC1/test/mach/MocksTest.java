@@ -85,6 +85,20 @@ public class MocksTest {
     }
 
     @Test
+    public void arg_makes_mock_return_arg_value_for_method_with_one_arg_during_verify() {
+        Sample sample = mock("name",Sample.class);
+        returns("don't care, but needed");  wild(null); sample.getNext(null);
+
+        String expected = "arg value used";
+        sample.getNext(expected);
+
+        verify();
+        wild(null); sample.getNext(null); String actual = arg();
+
+        assertSame(expected,actual);
+    }
+
+    @Test
     public void verify_sets_current_state_to_verify() {
         verify();
         assertSame(verify,current);

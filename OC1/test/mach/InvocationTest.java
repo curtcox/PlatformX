@@ -52,9 +52,9 @@ public class InvocationTest {
 
     @Test
     public void equal_values_are_equals_when_there_are_no_wildcards() {
-        assertEquals(new Invocation(proxy,method,args(),null),new Invocation(proxy,method,args(),null));
-        assertEquals(new Invocation(proxy,method,args(""),null),new Invocation(proxy,method,args(""),null));
-        assertEquals(new Invocation(proxy,method,args(new ArrayList()),null),new Invocation(proxy,method,args(Collections.emptyList()),null));
+        assertEqual(new Invocation(proxy, method, args(), null), new Invocation(proxy, method, args(), null));
+        assertEqual(new Invocation(proxy, method, args(""), null), new Invocation(proxy, method, args(""), null));
+        assertEqual(new Invocation(proxy, method, args(new ArrayList()), null), new Invocation(proxy, method, args(Collections.emptyList()), null));
     }
 
     @Test
@@ -64,14 +64,21 @@ public class InvocationTest {
 
     @Test
     public void equal_values_are_equals_when_there_are_wildcards_in_unequal_spots() {
-        assertEquals(new Invocation(proxy,method,args("x"),wild("x")),new Invocation(proxy,method,args("y"),wild("z")));
-        assertEquals(new Invocation(proxy,method,args("f","*","x"),wild("","*","")),new Invocation(proxy,method,args("f","o","x"),wild("","","")));
+        assertEqual(new Invocation(proxy, method, args("x"), wild("x")), new Invocation(proxy, method, args("y"), null));
+        assertEqual(new Invocation(proxy, method, args("x"), wild("x")), new Invocation(proxy, method, args("y"), wild("z")));
+        assertEqual(new Invocation(proxy, method, args("f", "*", "x"), wild("", "*", "")), new Invocation(proxy, method, args("f", "o", "x"), wild("", "", "")));
+    }
+
+    private void assertEqual(Invocation a, Invocation b) {
+        assertEquals(a,b);
+        assertEquals(b,a);
+        assertEquals(a.hashCode(),b.hashCode());
     }
 
     @Test
     public void mock_equals_itself() {
         Map map = Mocks.mock("foo", Map.class);
-        assertEquals(new Invocation(proxy, method, args(map),wild("")), new Invocation(proxy, method, args(map),wild("")));
+        assertEqual(new Invocation(proxy, method, args(map), wild("")), new Invocation(proxy, method, args(map), wild("")));
     }
 
     @Test

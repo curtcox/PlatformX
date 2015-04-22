@@ -95,6 +95,10 @@ public final class Mocks {
         factory.returns(null);
     }
 
+    public static <T> T arg() {
+        return factory.arg();
+    }
+
     /**
      * Start verifying invocations.
      */
@@ -108,4 +112,5 @@ public final class Mocks {
     public static void no() {
         current = no;
     }
+
 }
