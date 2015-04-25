@@ -7,7 +7,7 @@ import common.uiwidget.UIComponent;
 import se.events.Events;
 import se.ui.EditLinkEvent;
 import se.util.TaggedValue;
-import se.util.TaggedValueStringMap;
+import se.util.SimpleTaggedValueStringMap;
 
 public class ScreenEditorDemo {
 
@@ -18,14 +18,14 @@ public class ScreenEditorDemo {
     }
 
     private static void addSource() {
-        TaggedValueStringMap stringMap = Registry.get(TaggedValueStringMap.class);
+        SimpleTaggedValueStringMap stringMap = Registry.get(SimpleTaggedValueStringMap.class);
         TaggedValue taggedValue = stringMap.newValue();
         taggedValue.setContents("existing source");
         taggedValue.setTags(ScreenTags.of("test"));
     }
 
     private static void loadRegistry() {
-        Registry.put(TaggedValueStringMap.class,new TaggedValueStringMap());
+        Registry.put(SimpleTaggedValueStringMap.class,new SimpleTaggedValueStringMap());
         Registry.put(Events.class,new Events());
         Registry.put(ScreenEditor.class,ScreenEditor.of());
     }

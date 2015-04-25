@@ -9,7 +9,7 @@ import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
 import org.junit.Test;
 import se.util.TaggedValue;
-import se.util.TaggedValueStringMap;
+import se.util.SimpleTaggedValueStringMap;
 
 import static mach.Mocks.*;
 import static org.junit.Assert.*;
@@ -22,14 +22,14 @@ public class EditCommandTest {
     ScreenLink link = ScreenLink.of(title);
     Events.Listener listener;
     Events events = new Events();
-    TaggedValueStringMap taggedValues = new TaggedValueStringMap();
+    SimpleTaggedValueStringMap taggedValues = new SimpleTaggedValueStringMap();
     EditCommand testObject = new EditCommand();
 
     @Before
     public void setUp() {
         Mocks.init(this);
         _(); wild(null); listener.onEvent(null);
-        Registry.put(TaggedValueStringMap.class,taggedValues);
+        Registry.put(SimpleTaggedValueStringMap.class,taggedValues);
         Registry.put(Events.class, events);
     }
 

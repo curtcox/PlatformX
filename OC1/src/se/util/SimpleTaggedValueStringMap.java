@@ -5,7 +5,7 @@ import common.screen.ScreenTags;
 import common.screen.dynamic.TaggedStringSources;
 import common.util.StringMap;
 
-public final class TaggedValueStringMap
+public final class SimpleTaggedValueStringMap
     implements StringMap, TaggedStringSources
 {
 

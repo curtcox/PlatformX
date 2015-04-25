@@ -7,7 +7,6 @@ import se.events.Events;
 import se.ui.EditTaggedValueEvent;
 import se.uiwidget.StringEditor;
 import se.util.TaggedValue;
-import se.util.TaggedValueStringMap;
 
 import javax.swing.*;
 

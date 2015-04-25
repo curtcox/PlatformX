@@ -2,16 +2,15 @@ package se.util;
 
 import common.screen.ScreenTags;
 import common.util.StringMap;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-public class TaggedValueStringMapTest {
+public class SimpleTaggedValueStringMapTest {
 
-    TaggedValueStringMap testObject = new TaggedValueStringMap();
+    SimpleTaggedValueStringMap testObject = new SimpleTaggedValueStringMap();
 
     @Test
     public void can_create() {

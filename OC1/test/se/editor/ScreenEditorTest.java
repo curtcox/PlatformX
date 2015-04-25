@@ -10,24 +10,23 @@ import fake.FakeSERegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 import se.events.Events;
-import se.ui.EditLinkEvent;
 import se.ui.EditTaggedValueEvent;
 import se.util.TaggedValue;
-import se.util.TaggedValueStringMap;
+import se.util.SimpleTaggedValueStringMap;
 
 import static org.junit.Assert.*;
 
 public class ScreenEditorTest {
 
     Events events = new Events();
-    TaggedValueStringMap stringMap = new TaggedValueStringMap();
+    SimpleTaggedValueStringMap stringMap = new SimpleTaggedValueStringMap();
     ScreenEditor testObject;
 
     @Before
     public void setUp() {
         FakeSERegistryLoader.load();
         Registry.put(Events.class,events);
-        Registry.put(TaggedValueStringMap.class,stringMap);
+        Registry.put(SimpleTaggedValueStringMap.class,stringMap);
         testObject = new ScreenEditor();
     }
 
