@@ -6,7 +6,7 @@ import common.screen.dynamic.TaggedStringSources;
 import common.util.StringMap;
 
 public final class SimpleTaggedValueStringMap
-    implements StringMap, TaggedStringSources
+    implements TaggedValueStringMap
 {
 
     SimpleTaggedValue taggedValue = new SimpleTaggedValue();
