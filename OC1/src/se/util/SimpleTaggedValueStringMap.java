@@ -37,6 +37,18 @@ public final class SimpleTaggedValueStringMap
 
     @Override
     public StringSource[] get(ScreenTags tags) {
+        for (final TaggedValue value : taggedValues) {
+            if (value.getTags().equals(tags)) {
+                return new StringSource[] {
+                    new StringSource() {
+                        @Override
+                        public String getString() {
+                            return value.getContents();
+                        }
+                    }
+                };
+            }
+        }
         return new StringSource[0];
     }
 }
