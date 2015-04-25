@@ -1,5 +1,6 @@
 package se.util;
 
+import common.event.StringSource;
 import common.screen.ScreenTags;
 import common.util.StringMap;
 import org.junit.Test;
@@ -58,12 +59,24 @@ public class SimpleTaggedValueStringMapTest {
 
     @Test
     public void get_key_returns_null_when_no_value_has_been_set_for_simple_tag() {
-        String key = "moons";
-
-        String actual = testObject.get(key);
+        String actual = testObject.get("moons");
 
         String expected = null;
         assertEquals(expected,actual);
+    }
+
+    @Test
+    public void getValuesFor_returns_empty_array_when_no_value_has_been_set_for_simple_tag() {
+        TaggedValue[] actual = testObject.getValuesFor(ScreenTags.of("moons"));
+
+        assertEquals(0,actual.length);
+    }
+
+    @Test
+    public void get_tags_returns_empty_array_when_no_value_has_been_set_for_simple_tag() {
+        StringSource[] actual = testObject.get(ScreenTags.of("moons"));
+
+        assertEquals(0,actual.length);
     }
 
 }
