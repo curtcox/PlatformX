@@ -7,12 +7,9 @@ import common.net.Network;
 import common.util.Strings;
 import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class GeocodingTest {
     
     String[] all = new String[0];
@@ -30,7 +27,7 @@ public class GeocodingTest {
         assertNotNull(new Geocoding());
     }
 
-    @Test
+    @Test @Ignore
     public void search_for_Chicago_contains_Chicago() {
         for (GoogleLocation location : testObject.searchFor("Chicago")) {
             if (Strings.contains(location.address,"Chicago, IL, USA")) {

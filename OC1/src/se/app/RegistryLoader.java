@@ -16,6 +16,7 @@ import se.screen.RootScreenFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
 import se.util.SimpleTaggedValueStringMap;
+import se.util.TaggedValueStringMap;
 
 /**
  * Loads the registry with all of the instances needed for startup.
@@ -37,7 +38,7 @@ final class RegistryLoader {
     private static void putTaggedValueStringMap() {
         SimpleTaggedValueStringMap stringMap = new SimpleTaggedValueStringMap();
         put(StringMap.class, stringMap);
-        put(SimpleTaggedValueStringMap.class, stringMap);
+        put(TaggedValueStringMap.class, stringMap);
         put(TaggedStringSources.class,stringMap);
     }
 

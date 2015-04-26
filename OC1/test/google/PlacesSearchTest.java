@@ -7,6 +7,7 @@ import common.net.Network;
 import common.util.Strings;
 import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -30,7 +31,7 @@ public class PlacesSearchTest {
         assertNotNull(new PlacesSearch());
     }
 
-    @Test
+    @Test @Ignore
     public void search_nearby_38_6269_neg_90_12697_contains_arch() {
         for (Place place : testObject.nearbySearch(38.6269d, -90.18697d, 100,all)) {
             if (Strings.contains(place.name,"Jefferson National Expansion Memorial")) {

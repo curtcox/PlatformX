@@ -6,14 +6,19 @@ import common.ui.IForm;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
 import fake.FakeSERegistryLoader;
+import mach.Mocks;
+import org.junit.Before;
 import org.junit.Test;
 import se.events.Events;
 import se.events.SimpleListener;
+import se.util.TaggedValue;
+import se.util.TaggedValueStringMap;
 
 import javax.swing.*;
 
 import java.awt.*;
 
+import static mach.Mocks._;
 import static org.junit.Assert.*;
 
 public class SEFormTest {
@@ -21,7 +26,13 @@ public class SEFormTest {
     String title = random("link");
     EditCommand editCommand = new EditCommand();
     ScreenLink link = ScreenLink.of(title);
+    TaggedValueStringMap stringMap;
     SEForm testObject = new SEForm(link,editCommand);
+
+    @Before
+    public void setUp() {
+        Mocks.init(this);
+    }
 
     @Test
     public void can_create() {
@@ -83,13 +94,15 @@ public class SEFormTest {
     }
 
     @Test
-    public void editButtonClicked_triggers_edit_command_with_title_and_layout() {
+    public void editButtonClicked_triggers_edit_command_with_title_and_layout_when_there_is_no_single_tagged_value_found() {
         FakeSERegistryLoader.load();
         UIComponent layout = new UILabel(random("label"));
         Events events = new Events();
         SimpleListener listener = new SimpleListener();
         Registry.put(Events.class,events);
+        Registry.put(TaggedValueStringMap.class,stringMap);
         events.registerListenerFor(listener,EditLinkEvent.class);
+        _(new TaggedValue[0]); stringMap.getValuesFor(link.tags);
 
         testObject.layout(layout);
 

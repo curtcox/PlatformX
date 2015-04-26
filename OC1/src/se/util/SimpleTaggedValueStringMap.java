@@ -2,9 +2,6 @@ package se.util;
 
 import common.event.StringSource;
 import common.screen.ScreenTags;
-import common.screen.dynamic.TaggedStringSources;
-import common.util.Objects;
-import common.util.StringMap;
 
 import java.util.ArrayList;
 import java.util.List;

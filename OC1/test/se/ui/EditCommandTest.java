@@ -18,7 +18,6 @@ public class EditCommandTest {
 
     UIComponent layout = new UILabel(random("label"));
     String title = random("link");
-    String contents = "page contents";
     ScreenLink link = ScreenLink.of(title);
     Events.Listener listener;
     Events events = new Events();

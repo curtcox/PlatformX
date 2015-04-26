@@ -20,7 +20,6 @@ import common.stores.MyRatings;
 
 /**
  * Loads the registry with all of the instances needed for startup.
- * @author Curt
  */
 final class RegistryLoader {
     
