@@ -49,6 +49,19 @@ public class SimpleTaggedValueStringMapTest {
         assertEquals(contents, actual[0].getString());
     }
 
+    @Test
+    public void getValuesFor_returns_contents_of_tagged_value_with_simple_tag_when_value_has_been_set() {
+        String tags = random("tags");
+        String contents = random("contents");
+        newValue(tags, contents);
+
+        TaggedValue[] actual = testObject.getValuesFor(ScreenTags.of(tags));
+
+        assertEquals(1,actual.length);
+        assertEquals(contents, actual[0].getContents());
+        assertEquals(ScreenTags.of(tags), actual[0].getTags());
+    }
+
     String random(String prefix) {
         return prefix + hashCode();
     }

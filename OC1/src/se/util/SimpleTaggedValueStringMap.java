@@ -14,10 +14,8 @@ public final class SimpleTaggedValueStringMap
 
     @Override
     public String get(String key) {
-        for (TaggedValue value : taggedValues) {
-            if (value.getTags().equals(ScreenTags.of(key))) {
-                return value.getContents();
-            }
+        for (TaggedValue value : getValuesFor(ScreenTags.of(key))) {
+            return value.getContents();
         }
         return null;
     }
@@ -29,23 +27,28 @@ public final class SimpleTaggedValueStringMap
     }
 
     public TaggedValue[] getValuesFor(ScreenTags tags) {
+        for (TaggedValue value : taggedValues) {
+            if (value.getTags().equals(tags)) {
+                return new TaggedValue[] {value};
+            }
+        }
         return new TaggedValue[0];
     }
 
     @Override
     public StringSource[] get(ScreenTags tags) {
-        for (final TaggedValue value : taggedValues) {
-            if (value.getTags().equals(tags)) {
-                return new StringSource[] {
-                    new StringSource() {
-                        @Override
-                        public String getString() {
-                            return value.getContents();
-                        }
-                    }
-                };
-            }
+        for (final TaggedValue value : getValuesFor(tags)) {
+            return new StringSource[] {asStringSource(value)};
         }
         return new StringSource[0];
+    }
+
+    private StringSource asStringSource(final TaggedValue value) {
+        return new StringSource() {
+            @Override
+            public String getString() {
+                return value.getContents();
+            }
+        };
     }
 }
