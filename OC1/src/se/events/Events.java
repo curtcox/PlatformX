@@ -11,6 +11,7 @@ import java.util.Map;
 public final class Events {
 
     private Listener listener;
+    private Class clazz;
 
     public interface Listener {
         void onEvent(Event event);
@@ -20,10 +21,11 @@ public final class Events {
 
     public void registerListenerFor(Listener listener, Class clazz) {
         this.listener = listener;
+        this.clazz = clazz;
     }
 
     public void post(Event event) {
-        if (listener!=null) {
+        if (listener!=null && event.getClass()==clazz) {
             listener.onEvent(event);
         }
     }
