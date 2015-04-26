@@ -10,8 +10,7 @@ import java.util.Map;
  */
 public final class Events {
 
-    private Listener listener;
-    private Class clazz;
+    private Map<Class,Listener>listeners = new HashMap<Class, Listener>();
 
     public interface Listener {
         void onEvent(Event event);
@@ -20,12 +19,12 @@ public final class Events {
     public interface Event {}
 
     public void registerListenerFor(Listener listener, Class clazz) {
-        this.listener = listener;
-        this.clazz = clazz;
+        listeners.put(clazz,listener);
     }
 
     public void post(Event event) {
-        if (listener!=null && event.getClass()==clazz) {
+        Listener listener = listeners.get(event.getClass());
+        if (listener!=null) {
             listener.onEvent(event);
         }
     }
