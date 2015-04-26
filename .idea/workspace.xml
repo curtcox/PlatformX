@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/GeocodeResponseParser.java" afterPath="$PROJECT_DIR$/OC1/src/google/GeocodeResponseParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/Geocoding.java" afterPath="$PROJECT_DIR$/OC1/src/google/Geocoding.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/Geometry.java" afterPath="$PROJECT_DIR$/OC1/src/google/Geometry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/Google.java" afterPath="$PROJECT_DIR$/OC1/src/google/Google.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/GoogleLocation.java" afterPath="$PROJECT_DIR$/OC1/src/google/GoogleLocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/GoogleUrl.java" afterPath="$PROJECT_DIR$/OC1/src/google/GoogleUrl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" afterPath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/Place.java" afterPath="$PROJECT_DIR$/OC1/src/google/Place.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/PlacesResponseParser.java" afterPath="$PROJECT_DIR$/OC1/src/google/PlacesResponseParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/PlacesSearch.java" afterPath="$PROJECT_DIR$/OC1/src/google/PlacesSearch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/URLEncoder.java" afterPath="$PROJECT_DIR$/OC1/src/google/URLEncoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/WebServiceSearch.java" afterPath="$PROJECT_DIR$/OC1/src/google/WebServiceSearch.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se\events\SimpleListener.java" afterPath="$PROJECT_DIR$/OC1/test/se/events/SimpleListener.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/events/EventsTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/events/EventsTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -50,8 +41,8 @@
             <file leaf-file-name="SimpleTaggedValue.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValue.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.07597765" vertical-offset="0" max-vertical-offset="895">
-                    <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+                  <state vertical-scroll-proportion="0.05698324" vertical-offset="0" max-vertical-offset="895">
+                    <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
                     <folding>
                       <element signature="e#232#233#0" expanded="true" />
                       <element signature="e#264#265#0" expanded="true" />
@@ -74,14 +65,38 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="EditCommandTest.java" pinned="false" current-in-tab="true">
+            <file leaf-file-name="EditCommandTest.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.077097505" vertical-offset="306" max-vertical-offset="1224">
+                  <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1224">
                     <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="SimpleTaggedValueStringMap.java" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValueStringMap.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="1020">
+                    <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+                    <folding>
+                      <element signature="imports" expanded="true" />
+                      <element signature="e#1218#1368#0" expanded="true" />
+                      <element signature="e#1367#1368#0" expanded="true" />
+                    </folding>
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="Events.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/OC1/src/se/events/Events.java">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.45586592" vertical-offset="0" max-vertical-offset="895">
+                    <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -97,11 +112,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="URLEncoder.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OC1/src/google/URLEncoder.java">
+      <file leaf-file-name="ScreenEditor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.15133531" vertical-offset="0" max-vertical-offset="674">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.8115727" vertical-offset="473" max-vertical-offset="1173">
+              <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -115,8 +130,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/common/screen/ScreenTags.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/app/Application.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/ui/LinkButton.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java" />
@@ -146,14 +159,11 @@
         <option value="$PROJECT_DIR$/OC1/src/se/util/TaggedValue.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/util/TaggedValueStringMap.java" />
-        <option value="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueStringMapTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/app/RegistryLoader.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/app/RegistryLoader.java" />
-        <option value="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/google/PlacesSearchTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/google/GeocodingTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/app/RegistryLoaderTest.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValueStringMap.java" />
         <option value="$PROJECT_DIR$/OC1/src/google/Google.java" />
         <option value="$PROJECT_DIR$/OC1/src/google/GeocodeResponseParser.java" />
         <option value="$PROJECT_DIR$/OC1/src/google/Geocoding.java" />
@@ -166,6 +176,11 @@
         <option value="$PROJECT_DIR$/OC1/src/google/PlacesSearch.java" />
         <option value="$PROJECT_DIR$/OC1/src/google/WebServiceSearch.java" />
         <option value="$PROJECT_DIR$/OC1/src/google/URLEncoder.java" />
+        <option value="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueStringMapTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValueStringMap.java" />
+        <option value="$PROJECT_DIR$/OC1/test/se/events/EventsTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/events/SimpleListener.java" />
+        <option value="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" />
       </list>
     </option>
   </component>
@@ -226,7 +241,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
+              <option name="myItemId" value="test" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -241,10 +256,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="google" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,11 +305,11 @@
       <recent name="common.screen" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="se.events" />
       <recent name="common.screen.dynamic" />
       <recent name="common" />
       <recent name="common.util" />
       <recent name="common.ui" />
-      <recent name="common.stores" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="se.ui" />
@@ -316,34 +327,6 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in OC1">
-    <configuration default="false" name="mach in OC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="mach.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="OC1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="mach" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
     <configuration default="false" name="All in OC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="OC1" />
@@ -447,6 +430,28 @@
       </option>
       <envs />
       <patterns />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="Application" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="se.app.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="se.app.Application" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="OC1" />
+      <envs />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
@@ -605,19 +610,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="JUnit.mach in OC1" />
-      <item index="1" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.EditCommandTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SimpleTaggedValueStringMapTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SEFormTest" />
+      <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.EditCommandTest" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.SimpleTaggedValueStringMapTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.SEFormTest" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Application" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SEFormTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Application" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.SimpleTaggedValueStringMapTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.EditCommandTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.mach in OC1" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.SEFormTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EditCommandTest" />
       </list>
     </recent_temporary>
   </component>
@@ -722,12 +727,6 @@
           <properties />
           <option name="timeStamp" value="37" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/OC1/src/se/events/Events.java</url>
-          <line>26</line>
-          <properties />
-          <option name="timeStamp" value="42" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="46" />
     </breakpoint-manager>
@@ -738,44 +737,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="274" max-vertical-offset="1156">
-          <caret line="55" column="9" selection-start-line="55" selection-start-column="9" selection-end-line="55" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/events/Events.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30843115" vertical-offset="0" max-vertical-offset="937">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/junit-4.11.jar!/org/junit/Assert.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="604" max-vertical-offset="5202">
-          <caret line="64" column="27" selection-start-line="64" selection-start-column="27" selection-end-line="64" selection-end-column="27" />
-          <folding>
-            <element signature="e#1888#1889#0" expanded="true" />
-            <element signature="e#1934#1935#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.58456975" vertical-offset="2479" max-vertical-offset="4658">
-          <caret line="186" column="94" selection-start-line="186" selection-start-column="94" selection-end-line="186" selection-end-column="94" />
-          <folding>
-            <element signature="e#8308#8309#0" expanded="true" />
-            <element signature="e#8341#8342#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/mach/Mocks.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.1691394" vertical-offset="0" max-vertical-offset="1802">
@@ -953,40 +914,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueStringMapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6305638" vertical-offset="646" max-vertical-offset="1683">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#439#440#0" expanded="true" />
-            <element signature="e#480#481#0" expanded="true" />
-            <element signature="e#524#525#0" expanded="true" />
-            <element signature="e#583#584#0" expanded="true" />
-            <element signature="e#646#647#0" expanded="true" />
-            <element signature="e#718#719#0" expanded="true" />
-            <element signature="e#1447#1448#0" expanded="true" />
-            <element signature="e#1489#1490#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/se/app/RegistryLoaderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15133531" vertical-offset="0" max-vertical-offset="674">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9109792" vertical-offset="763" max-vertical-offset="1700">
-          <caret line="104" column="23" selection-start-line="104" selection-start-column="23" selection-end-line="104" selection-end-column="23" />
-          <folding>
-            <element signature="e#778#779#0" expanded="true" />
-            <element signature="e#810#811#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1032,19 +964,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValueStringMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07597765" vertical-offset="0" max-vertical-offset="969">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="e#741#742#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#1015#1225#0" expanded="true" />
-            <element signature="e#1224#1225#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/ScreenTags.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1329609" vertical-offset="0" max-vertical-offset="895">
@@ -1071,33 +990,6 @@
           <folding>
             <element signature="e#2119#2120#0" expanded="true" />
             <element signature="e#2172#2173#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.077097505" vertical-offset="306" max-vertical-offset="1224">
-          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07597765" vertical-offset="0" max-vertical-offset="895">
-          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
-          <folding>
-            <element signature="e#232#233#0" expanded="true" />
-            <element signature="e#264#265#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#485#486#0" expanded="true" />
-            <element signature="e#516#517#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1202,10 +1094,106 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="306" max-vertical-offset="1224">
+          <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/google/URLEncoder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15133531" vertical-offset="0" max-vertical-offset="674">
           <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05698324" vertical-offset="0" max-vertical-offset="895">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding>
+            <element signature="e#232#233#0" expanded="true" />
+            <element signature="e#264#265#0" expanded="true" />
+            <element signature="e#313#314#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#436#437#0" expanded="true" />
+            <element signature="e#485#486#0" expanded="true" />
+            <element signature="e#516#517#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/util/SimpleTaggedValueStringMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="125" max-vertical-offset="1020">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1218#1368#0" expanded="true" />
+            <element signature="e#1367#1368#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/events/Events.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45586592" vertical-offset="0" max-vertical-offset="895">
+          <caret line="27" column="9" selection-start-line="27" selection-start-column="9" selection-end-line="27" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/events/SimpleListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.050445102" vertical-offset="0" max-vertical-offset="674">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+          <folding>
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
+            <element signature="e#249#250#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4198813" vertical-offset="1315" max-vertical-offset="1989">
+          <caret line="100" column="48" selection-start-line="100" selection-start-column="48" selection-end-line="100" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/events/EventsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50445104" vertical-offset="0" max-vertical-offset="748">
+          <caret line="26" column="45" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueStringMapTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3323442" vertical-offset="677" max-vertical-offset="1768">
+          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8115727" vertical-offset="473" max-vertical-offset="1173">
+          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
           <folding />
         </state>
       </provider>

@@ -32,4 +32,14 @@ public class EventsTest {
         assertSame(expected, actual);
     }
 
+    @Test
+    public void post_does_not_notify_registered_listeners_for_event_they_are_not_registered_for() {
+        SimpleListener listener = new SimpleListener();
+        Events.Event expected = new Events.Event() {};
+        testObject.registerListenerFor(listener,expected.getClass());
+        testObject.post(expected);
+        Events.Event actual = listener.getLast();
+        assertSame(expected, actual);
+    }
+
 }
