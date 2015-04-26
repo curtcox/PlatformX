@@ -8,10 +8,6 @@ import java.util.Map;
 import common.Registry;
 import common.net.Network;
 
-/**
- *
- * @author Curt
- */
 abstract class WebServiceSearch<T> {
     
     final String baseURI;

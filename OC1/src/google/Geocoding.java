@@ -6,7 +6,6 @@ import java.util.Map;
 
 /**
  * See https://developers.google.com/maps/documentation/geocoding/
- * @author Curt
  */
 public final class Geocoding
     extends WebServiceSearch

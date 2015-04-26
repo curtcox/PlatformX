@@ -1,17 +1,10 @@
 package google;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
-import java.io.IOException;
-
 /**
  * Thanks Sihan http://sihantech.wordpress.com/2008/07/16/encoding-url-in-j2me/
  */
 final class URLEncoder {
 
-    
-    
     public static String encode(String s) {
         StringBuffer out = new StringBuffer();
         for (byte c : stringToBytes(s)) {            

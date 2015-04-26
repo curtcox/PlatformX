@@ -2,10 +2,6 @@ package google;
 
 import java.util.Map;
 
-/**
- *
- * @author Curt
- */
 final class Geometry {
     Double latitude;
     Double longitude;

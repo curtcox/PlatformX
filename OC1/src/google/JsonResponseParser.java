@@ -14,10 +14,6 @@ import common.log.ILogManager;
 import common.Registry;
 import c1.ui.Icons;
 
-/**
- *
- * @author Curt
- */
 abstract class JsonResponseParser<T>
 {
     final List<T> parseJsonResponse(InputStreamReader reader) {
