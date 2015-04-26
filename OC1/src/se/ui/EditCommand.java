@@ -5,7 +5,6 @@ import common.command.Command;
 import common.screen.ScreenLink;
 import common.uiwidget.UIComponent;
 import se.events.Events;
-import se.util.SimpleTaggedValue;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
 

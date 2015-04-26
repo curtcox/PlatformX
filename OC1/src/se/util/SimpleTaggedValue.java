@@ -2,7 +2,7 @@ package se.util;
 
 import common.screen.ScreenTags;
 
-public final class SimpleTaggedValue
+final class SimpleTaggedValue
     implements TaggedValue
 {
     private ScreenTags tags;
