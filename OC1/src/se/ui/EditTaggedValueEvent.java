@@ -1,7 +1,5 @@
 package se.ui;
 
-import common.screen.ScreenLink;
-import common.uiwidget.UIComponent;
 import se.events.Events;
 import se.util.TaggedValue;
 

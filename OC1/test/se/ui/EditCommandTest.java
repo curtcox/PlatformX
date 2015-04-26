@@ -44,8 +44,8 @@ public class EditCommandTest {
     }
 
     @Test
-    public void action_posts_EditLinkEvent_with_title_and_layout_from_action_for_event_bus_value_when_no_tagged_value_is_found() {
-        _(new TaggedValue[0]); taggedValues.getValuesFor(link.tags);
+    public void action_posts_EditLinkEvent_with_title_and_layout_from_action_for_event_bus_value_when_multiple_tagged_values_are_found() {
+        _(new TaggedValue[2]); taggedValues.getValuesFor(link.tags);
         events.registerListenerFor(listener, EditLinkEvent.class);
         testObject.action(link,layout);
 
@@ -58,6 +58,19 @@ public class EditCommandTest {
     @Test
     public void action_posts_EditTaggedValueEvent_when_there_is_one_matching_source() {
         _(new TaggedValue[] {taggedValue}); taggedValues.getValuesFor(link.tags);
+        events.registerListenerFor(listener, EditTaggedValueEvent.class);
+
+        testObject.action(link,layout);
+
+        verify();
+        wild(null); listener.onEvent(null);  EditTaggedValueEvent event = arg();
+        assertSame(taggedValue, event.taggedValue);
+    }
+
+    @Test
+    public void action_posts_EditTaggedValueEvent_when_there_is_no_matching_source() {
+        _(new TaggedValue[0]); taggedValues.getValuesFor(link.tags);
+        _(taggedValue);        taggedValues.newValue();
         events.registerListenerFor(listener, EditTaggedValueEvent.class);
 
         testObject.action(link,layout);

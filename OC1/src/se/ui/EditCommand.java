@@ -20,12 +20,22 @@ public final class EditCommand
     protected void action(Object... args) {
         ScreenLink link = (ScreenLink) args[0];
         TaggedValue[] values = stringMap().getValuesFor(link.tags);
-        if (values.length==1) {
-            events().post(new EditTaggedValueEvent(values[0]));
+        if (values.length==0) {
+            postEventToEditSingleSource(stringMap().newValue());
+        } else if (values.length==1) {
+            postEventToEditSingleSource(values[0]);
         } else {
             UIComponent layout = (UIComponent) args[1];
-            events().post(new EditLinkEvent(link,layout));
+            postEventForAmbiguousSelection(link, layout);
         }
+    }
+
+    private void postEventToEditSingleSource(TaggedValue value) {
+        events().post(new EditTaggedValueEvent(value));
+    }
+
+    private void postEventForAmbiguousSelection(ScreenLink link, UIComponent layout) {
+        events().post(new EditLinkEvent(link,layout));
     }
 
     Events events() {
