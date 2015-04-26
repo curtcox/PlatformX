@@ -6,7 +6,6 @@ import javax.swing.*;
 import javax.swing.event.DocumentEvent;
 import javax.swing.event.DocumentListener;
 import java.awt.*;
-import java.awt.event.KeyAdapter;
 import java.awt.event.KeyListener;
 
 public final class StringEditor
@@ -41,7 +40,12 @@ public final class StringEditor
     }
 
     void notifyTextListener() {
-        textListener.onChange(new StringChange.Event(this,null,getText()));
+        EventQueue.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                textListener.onChange(new StringChange.Event(this, null, getText()));
+            }
+        });
     }
 
     public String getText() {
