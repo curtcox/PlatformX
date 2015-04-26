@@ -29,6 +29,7 @@ public class EditCommandTest {
     public void setUp() {
         Mocks.init(this);
         _(); wild(null); listener.onEvent(null);
+        _(); taggedValue.setTags(link.tags);
         Registry.put(TaggedValueStringMap.class,taggedValues);
         Registry.put(Events.class, events);
     }
@@ -78,6 +79,7 @@ public class EditCommandTest {
         verify();
         wild(null); listener.onEvent(null);  EditTaggedValueEvent event = arg();
         assertSame(taggedValue, event.taggedValue);
+        taggedValue.setTags(link.tags);
     }
 
     private String random(String prefix) {

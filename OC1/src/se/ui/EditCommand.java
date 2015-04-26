@@ -21,7 +21,9 @@ public final class EditCommand
         ScreenLink link = (ScreenLink) args[0];
         TaggedValue[] values = stringMap().getValuesFor(link.tags);
         if (values.length==0) {
-            postEventToEditSingleSource(stringMap().newValue());
+            TaggedValue value = stringMap().newValue();
+            value.setTags(link.tags);
+            postEventToEditSingleSource(value);
         } else if (values.length==1) {
             postEventToEditSingleSource(values[0]);
         } else {
