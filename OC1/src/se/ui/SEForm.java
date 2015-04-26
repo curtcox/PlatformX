@@ -37,6 +37,7 @@ public final class SEForm
         this.layout = layout;
         add(SEUIRenderer.render(layout),BorderLayout.CENTER);
         add(navigationPanel(),BorderLayout.NORTH);
+        doLayout();
     }
 
     private JPanel navigationPanel() {
