@@ -71,6 +71,7 @@ public final class ScreenEditor {
     void edit(TaggedValue value) {
         editing = value;
         editor.setText(value.getContents());
+        frame.setTitle(value.getTags().toString());
         frame.setVisible(true);
     }
 
