@@ -35,9 +35,9 @@ public final class SEForm
     public void layout(UIComponent layout) {
         removeAll();
         this.layout = layout;
-        add(SEUIRenderer.render(layout),BorderLayout.CENTER);
-        add(navigationPanel(),BorderLayout.NORTH);
-        doLayout();
+        add(SEUIRenderer.render(layout), BorderLayout.CENTER);
+        add(navigationPanel(), BorderLayout.NORTH);
+        show();
     }
 
     private JPanel navigationPanel() {
