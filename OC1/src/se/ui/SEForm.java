@@ -47,7 +47,9 @@ public final class SEForm
         editButton = editButton();
         panel.add(backButton,BorderLayout.WEST);
         panel.add(editButton,BorderLayout.EAST);
-        panel.add(new JTextField(),BorderLayout.CENTER);
+        JTextField address = new JTextField();
+        address.setText(link.tags.toString());
+        panel.add(address,BorderLayout.CENTER);
         return panel;
     }
 
