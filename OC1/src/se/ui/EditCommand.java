@@ -21,15 +21,19 @@ public final class EditCommand
         ScreenLink link = (ScreenLink) args[0];
         TaggedValue[] values = stringMap().getValuesFor(link.tags);
         if (values.length==0) {
-            TaggedValue value = stringMap().newValue();
-            value.setTags(link.tags);
-            postEventToEditSingleSource(value);
+            newTaggedValue(link);
         } else if (values.length==1) {
             postEventToEditSingleSource(values[0]);
         } else {
             UIComponent layout = (UIComponent) args[1];
             postEventForAmbiguousSelection(link, layout);
         }
+    }
+
+    private void newTaggedValue(ScreenLink link) {
+        TaggedValue value = stringMap().newValue();
+        value.setTags(link.tags);
+        postEventToEditSingleSource(value);
     }
 
     private void postEventToEditSingleSource(TaggedValue value) {
