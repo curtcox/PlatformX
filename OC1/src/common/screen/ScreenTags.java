@@ -1,5 +1,6 @@
 package common.screen;
 
+import common.util.Strings;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,8 +19,8 @@ public final class ScreenTags {
 
     private static Set<String> splitIntoSet(String tags) {
         Set<String> set = new HashSet();
-        for (String tag : tags.split(" ")) {
-            if (!tag.isEmpty()) {
+        for (String tag : Strings.split(tags," ")) {
+            if (!Strings.isEmpty(tag)) {
                 set.add(tag);
             }
         }

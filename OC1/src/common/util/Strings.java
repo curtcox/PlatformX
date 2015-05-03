@@ -28,4 +28,8 @@ public final class Strings {
         return out.toString();
     }
 
+    public static boolean isEmpty(String string) {
+        return string.length() == 0;
+    }
+
 }

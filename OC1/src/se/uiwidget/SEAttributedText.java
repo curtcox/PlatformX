@@ -17,10 +17,6 @@ public class SEAttributedText
     final AttributedString text;
     private ColumnBoxFlowLayout layout;
 
-    public interface AttributedStringRenderer {
-        void drawText(AttributedString text,PartRenderer renderer,ColumnBoxFlowLayout layout);
-    }
-
     SEAttributedText(AttributedString text) {
         this.text = text;
         addMouseListener(this);
@@ -55,7 +51,7 @@ public class SEAttributedText
         if (layout==null) {
             return null;
         }
-        int index = layout.getPointIndex(mouseEvent.getPoint());
+        int index = layout.getPointIndex(uiPoint(mouseEvent.getPoint()));
         return index==-1 ? null : new SelectedEvent(text,index);
     }
 
@@ -65,4 +61,8 @@ public class SEAttributedText
     @Override public void mouseExited(MouseEvent mouseEvent) {}
 
     protected void onTextSelected(SelectedEvent event) {}
+
+    private common.ui.Point uiPoint(Point point) {
+        throw new UnsupportedOperationException("Not supported yet.");
+    }
 }

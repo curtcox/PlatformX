@@ -45,4 +45,9 @@ public class StringsTest {
         assertEquals("what the fox",Strings.replace("what_the_fox", "_", " "));
     }
 
+    @Test
+    public void isEmpty() {
+        assertTrue(Strings.isEmpty(""));
+        assertFalse(Strings.isEmpty("!"));
+    }
 }

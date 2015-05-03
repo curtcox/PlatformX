@@ -1,8 +1,5 @@
 package common.ui;
 
-import java.awt.Dimension;
-import java.awt.Rectangle;
-import java.awt.Point;
 import java.util.*;
 
 public final class ColumnBoxFlowLayout {

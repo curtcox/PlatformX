@@ -3,11 +3,13 @@ package c1.uiwidget;
 import com.codename1.ui.Component;
 import com.codename1.ui.Graphics;
 import static com.codename1.ui.plaf.Style.*;
-import java.awt.Color;
 
 final class AttributedLabel
     extends Component
 {
+
+    final int black = 0x000000;
+    final int white = 0xffffff;
     
     @Override
     public void paint(Graphics g) {
@@ -16,7 +18,7 @@ final class AttributedLabel
     }
 
     void drawText(Graphics g) {
-        g.setColor(Color.BLACK.getRGB());
+        g.setColor(black);
         g.drawString("text", 0, 0);
         g.drawString("TEXT_DECORATION_NONE", 0, 20, TEXT_DECORATION_NONE);
         g.drawString("TEXT_DECORATION_UNDERLINE", 0, 40, TEXT_DECORATION_UNDERLINE);
@@ -28,7 +30,7 @@ final class AttributedLabel
     }
     
     void drawBackground(Graphics g) {
-        g.setColor(Color.WHITE.getRGB());
+        g.setColor(white);
         g.fillRect(0,0, getWidth(), getHeight());
     }
 }

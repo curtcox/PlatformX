@@ -1,7 +1,5 @@
 package common.ui;
 
-import java.awt.Color;
-
 import org.junit.Test;
 import common.ui.AttributedString.Part;
 import static common.ui.AttributedString.Decoration.*;

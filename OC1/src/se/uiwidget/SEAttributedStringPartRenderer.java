@@ -1,8 +1,12 @@
 package se.uiwidget;
 
 import common.ui.AttributedString;
+import common.ui.Color;
+import common.ui.Dimension;
+import common.ui.Point;
+import java.awt.FontMetrics;
 
-import java.awt.*;
+import java.awt.Graphics2D;
 
 final class SEAttributedStringPartRenderer
     implements AttributedString.PartRenderer
@@ -17,7 +21,7 @@ final class SEAttributedStringPartRenderer
     public void renderPartAt(AttributedString.Part part, Point point) {
         Color color = part.color;
         if (color!=null) {
-            g.setColor(part.color);
+            g.setColor(awtColor(part.color));
         }
         g.drawString(part.text,point.x,point.y + height());
     }
@@ -35,5 +39,9 @@ final class SEAttributedStringPartRenderer
 
     FontMetrics fontMetrics() {
         return g.getFontMetrics();
+    }
+
+    private java.awt.Color awtColor(Color color) {
+        throw new UnsupportedOperationException("Not supported yet."); 
     }
 }

@@ -1,11 +1,7 @@
 package common.ui;
 
-import se.uiwidget.SEAttributedText;
-
-import java.awt.*;
-
 public final class SimpleAttributedStringRenderer
-    implements SEAttributedText.AttributedStringRenderer
+    implements AttributedString.AttributedStringRenderer
 {
 
     @Override

@@ -2,7 +2,6 @@ package common.ui;
 
 import common.util.Objects;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Iterator;
@@ -19,6 +18,10 @@ public final class AttributedString
      * A special non-rendering part for advancing to the next line.
      */
     public static final Part NEW_LINE = new Part(null,null,null,"/n");
+
+    public interface AttributedStringRenderer {
+        void drawText(AttributedString text,PartRenderer renderer,ColumnBoxFlowLayout layout);
+    }
 
     /**
      * The parts of this string.

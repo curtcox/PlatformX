@@ -2,7 +2,6 @@ package common.ui;
 
 import common.util.Objects;
 
-import java.awt.*;
 import java.util.*;
 import java.util.List;
 
