@@ -13,6 +13,7 @@ import c1.net.*;
 import c1.screen.RootScreenFactory;
 import c1.services.*;
 import c1.ui.*;
+import common.log.ILogManager;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import common.util.*;
@@ -25,7 +26,7 @@ final class RegistryLoader {
     
     static void load() {
         put(ExceptionLogger.class,  new ExceptionLogger());
-        put(LogManager.class,       new LogManager());
+        put(ILogManager.class,      new LogManager());
         put(LogWriter.class,        new LogWriter());
         put(IFormFactory.class,     new C1FormFactory());
         put(IDisplay.class,         new C1Display());

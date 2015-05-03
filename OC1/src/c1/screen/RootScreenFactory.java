@@ -9,7 +9,6 @@ import common.screen.ScreenTags;
 import common.screen.dynamic.DynamicScreenFactory;
 import common.screen.dynamic.LazyScreenFactory;
 import common.screen.dynamic.StringMapStringSource;
-import c1.app.Version;
 import common.screen.dynamic.TaggedStringSources;
 import common.util.StringMap;
 import c1.screenfactories.*;
