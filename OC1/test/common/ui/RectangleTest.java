@@ -18,6 +18,20 @@ public class RectangleTest {
     }
 
     @Test
+    public void rectangle_0_0_0_0_does_not_contain_anything() {
+        Rectangle testObject = new Rectangle(0,0,0,0);
+
+        assertFalse(testObject.contains(new Point(0, 0)));
+    }
+
+    @Test
+    public void rectangle_0_0_2_2_contains_1_1() {
+        Rectangle testObject = new Rectangle(0,0,2,2);
+
+        assertTrue(testObject.contains(new Point(1, 1)));
+    }
+
+    @Test
     public void rectangle_0_0_10_10_does_not_contain() {
         Rectangle testObject = new Rectangle(0,0,10,10);
 
