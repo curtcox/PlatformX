@@ -8,7 +8,6 @@ import java.net.URI;
 /**
  * Network interface.
  * Interface for getting things from the network.
- * @author Curt
  */
 public interface Network {
 

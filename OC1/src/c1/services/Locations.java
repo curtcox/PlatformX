@@ -2,7 +2,6 @@ package c1.services;
 
 import com.codename1.location.Location;
 import com.codename1.location.LocationListener;
-import com.codename1.location.LocationManager;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
@@ -14,7 +13,7 @@ public final class Locations
     private Location current;
     
     public Locations() {
-        LocationManager manager = Registry.get(LocationManager.class);
+        ILocationManager manager = Registry.get(ILocationManager.class);
         manager.setLocationListener(this);
     }
 
@@ -32,8 +31,8 @@ public final class Locations
         return Registry.get(Locations.class);
     }
 
-    private LocationManager getManager() {
-        return Registry.get(LocationManager.class);
+    private ILocationManager getManager() {
+        return Registry.get(ILocationManager.class);
     }
 
     public Location getCurrentLocation() {

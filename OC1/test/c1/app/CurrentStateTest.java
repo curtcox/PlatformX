@@ -1,5 +1,6 @@
 package c1.app;
 
+import c1.services.ILocationManager;
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
 import common.Registry;
@@ -13,10 +14,6 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class CurrentStateTest {
     
     FakeListener listener = new FakeListener(); 
@@ -33,7 +30,7 @@ public class CurrentStateTest {
     @Before
     public void setUp() {
         Registry.put(Storage.class, new FakeStorage());
-        Registry.put(LocationManager.class, new FakeLocationManager());
+        Registry.put(ILocationManager.class, new FakeLocationManager());
         Registry.put(Locations.class, new Locations());
         Registry.put(ServiceProviders.class, new ServiceProviders());
         testObject = new CurrentState();
