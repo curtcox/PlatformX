@@ -9,4 +9,14 @@ public final class Point {
         this.x = x;
         this.y = y;
     }
+
+    public boolean equals(Object o) {
+        Point that = (Point) o;
+        return x==that.x && y==that.y;
+    }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
 }
