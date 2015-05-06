@@ -1,17 +1,15 @@
 package google;
 
-import fake.FakeRegistryLoader;
+import fake.FakeC1RegistryLoader;
 import j2se.J2seNetwork;
-import oc1.app.Registry;
-import oc1.net.Network;
+import common.Registry;
+import common.net.Network;
+import common.util.Strings;
 import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
 public class GeocodingTest {
     
     String[] all = new String[0];
@@ -19,7 +17,7 @@ public class GeocodingTest {
     
     @Before
     public void setUp() {
-        FakeRegistryLoader.load();
+        FakeC1RegistryLoader.load();
         Registry.put(Network.class,   new J2seNetwork());
         testObject = new Geocoding();
     }
@@ -29,10 +27,10 @@ public class GeocodingTest {
         assertNotNull(new Geocoding());
     }
 
-    @Test
+    @Test @Ignore
     public void search_for_Chicago_contains_Chicago() {
         for (GoogleLocation location : testObject.searchFor("Chicago")) {
-            if (location.address.contains("Chicago, IL, USA")) {
+            if (Strings.contains(location.address,"Chicago, IL, USA")) {
                 double delta = 0.01;
                 assertEquals(41.8781136,   location.latitude,delta);
                 assertEquals(-87.6297982,  location.longitude,delta);

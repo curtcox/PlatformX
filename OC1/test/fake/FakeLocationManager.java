@@ -1,31 +1,20 @@
 package fake;
 
+import c1.services.ILocationManager;
 import com.codename1.location.Location;
-import com.codename1.location.LocationManager;
-import java.io.IOException;
+import com.codename1.location.LocationListener;
 
-/**
- *
- * @author Curt
- */
-public class FakeLocationManager 
-    extends LocationManager
+public class FakeLocationManager
+    implements ILocationManager
 {
 
     @Override
-    public Location getCurrentLocation() throws IOException {
-        return new Location();
-    }
-
-    @Override
     public Location getLastKnownLocation() {
-        return new Location();
+        return null;
     }
 
     @Override
-    protected void bindListener() {
-    }
+    public void setLocationListener(LocationListener listener) {
 
-    @Override
-    protected void clearListener() {}
+    }
 }

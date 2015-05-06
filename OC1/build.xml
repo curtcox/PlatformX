@@ -1,49 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-    <!--build_version=2.1-->
-    
-    <!-- IMPORTANT!!! When building for ios: if you don't supply the certificate/provisioning profile etc. you will not 
-    be able to run on a regular device (only on jailbroken devices) in that case your package name MUST be: com.codename1.demos.lwuitdemo
-
-    Required attributes for the task:
-
-    jarFile - the application jar file resulting from the build
-
-    displayName - display name for the application in the UI
-
-    Either packageName and mainClassName or fullClassName:
-    mainClassName - the name of the main class not including the package name
-
-    packageName - the package in which the main class resides, this will also 
-    be used to classify the application. It is recommended you give this some thought since
-    package names are impossible to change later on some stores!
-
-    fullClassName - combination of packageName.mainClassName
-
-    icon - a 512x512 pixel icon in PNG format, it will be adjusted for the proper resolutions. 
-    Notice that this icon SHOULDN'T include the iphone tint effect since that effect is overlayed 
-    by the iphone build process
-
-    targetType - the device target, one of the following: iphone, android, rim, me (for j2me support), 
-    win (for Windows Phone 7 support - pending)
-
-    vendor - the vendor name
-    
-    Optional attributes for iphone development these are REQUIRED if you want to distribute an application for
-    any purpose. For details on obtaining these files please go to codenameone.com:
-    certificate - optional for the iPhone project, the p12 certificate file for signing
-    certPassword - required if the certificate is specified
-    ProvisioningProfile - if the certificate is specified a mobile_provisioning file received from Apple must be supplied too
-
-    userName - login information from codenameone.com
-
-    password - the password matching your login from codenameone.com
-
-    subtitle - iphone secondary title
-
-    version - the version number for the application as a floating point value
-
-    -->
-    
+    <!--build_version=2.5-->
+        
     <project name="OC1" default="default" basedir=".">
     <description>Builds, tests, and runs the project OC1.</description>
     <import file="nbproject/build-impl.xml"/>
@@ -73,12 +30,39 @@
 
     <target depends="compile-test" name="-do-test-run">        
         <!-- JavaSE.jar is added here since the test execution might fail otherwise for a pre-existing project -->
-        <java classpath="dist/unitTests.jar:${javac.test.classpath}:${file.reference.JavaSE.jar}"
-              classname="com.codename1.impl.javase.TestRunner">
+        <java classpath="dist/unitTests.jar:${javac.test.classpath}:${file.reference.JavaSE.jar}" classname="com.codename1.impl.javase.TestRunner">
             <arg value="${codename1.packageName}.${codename1.mainName}" />
         </java>
     </target>
-    
+
+    <target name="unit-test" depends="compile-test">
+        <mkdir dir="${build.test.results.dir}" />
+        <junit>
+          <classpath>
+            <pathelement path="${run.test.classpath}"/>
+          </classpath>    
+          <batchtest todir="${build.test.results.dir}">
+             <fileset dir="${build.test.classes.dir}">
+                  <include name="**/*Test*" />
+                  <exclude name="**/*$*" />
+                  <exclude name="**/*C1Test*" />
+             </fileset>
+          </batchtest>
+          <formatter type="brief"/>
+          <formatter type="plain"/>
+          <formatter type="xml"/>
+        </junit>
+    </target>   
+
+    <target name="unit-test-report" depends="unit-test">
+        <junitreport todir="${build.test.results.dir}">
+            <fileset dir="${build.test.results.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="${build.test.results.dir}"/>
+        </junitreport>
+    </target>   
+
     <target depends="-do-test-run" description="Run unit tests." name="test"/>
 
     <target name="-pre-compile">
@@ -92,6 +76,8 @@
             bootclasspath="lib/CLDC11.jar" excludes="${excludes}"
             classpath="${javac.classpath}:${build.classes.dir}">
             <src path="${src.dir}"/>
+            <exclude name="se/**"/>
+            <exclude name="mite/**"/>
         </javac>        
     </target>
 
@@ -201,7 +187,6 @@
             <fileset dir="${build.classes.dir}" includes="**/*.class"/>
         </delete>
     </target>
-
     
     <target name="build-for-ios-device-release" depends="clean,copy-ios-override,copy-libs,jar,clean-override">
         <codeNameOne 
@@ -277,8 +262,9 @@
     <target name="copy-desktop-override">
         <mkdir dir="${build.classes.dir}" />
         <mkdir dir="override" />
+        <mkdir dir="lib/impl/native/javase" />
         <copy todir="${build.classes.dir}">
-            <fileset dir="native/internal_tmp" includes="**/*"/>
+            <fileset dir="native/javase" includes="**/*"/>
             <fileset dir="lib/impl/native/javase" includes="**/*"/>
         </copy>
     </target>
@@ -414,6 +400,7 @@
         <property name="javac.source" value="1.5" />
         <property name="javac.target" value="1.5" />
         <mkdir dir="native/javase" />
+        <mkdir dir="native/android" />
         <mkdir dir="native/internal_tmp" />
         <mkdir dir="native/ios" />
         <mkdir dir="native/j2me" />
@@ -485,24 +472,7 @@
             />
     </target>
                 
-    <target name="deobfuscate-ios-crash">
-        <mkdir dir="crashreport" />
-        <verifyDir dir="crashreport"/>
-        <zip basedir="crashreport" destfile="build/crash_build.zip" />
-        
-        <codeNameOne 
-            jarFile="build/crash_build.zip"
-            displayName="${codename1.displayName}"
-            packageName = "${codename1.packageName}"
-            mainClassName = "${codename1.mainName}"
-            version="${codename1.version}"
-            icon="${codename1.icon}"
-            vendor="${codename1.vendor}"
-            subtitle="${codename1.secondaryTitle}"
-            appid="none"
-            buildArgs="ios.decrash=1"
-            
-            targetType="iphone_crash"
-            />
+    <target name="webservice-wizard">
+        <java classpath="CodeNameOneBuildClient.jar" classname="com.codename1.ws.wizard.WSWizard" dir="." fork="true" />
     </target>
 </project>

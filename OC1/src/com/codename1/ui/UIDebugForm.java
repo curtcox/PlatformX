@@ -1,9 +1,12 @@
 package com.codename1.ui;
 
+import c1.command.C1LoggedCommand;
 import com.codename1.ui.animations.Transition;
-import oc1.command.LoggedCommand;
-import oc1.log.IssueReporter;
-import oc1.log.LogManager;
+import common.log.ILog;
+import common.log.ILogManager;
+import common.Registry;
+import common.command.Command;
+import c1.log.IssueReporter;
 
 /**
  * DebugForm in the same package, so we can intercept more methods.
@@ -25,12 +28,13 @@ public final class UIDebugForm
         return form;
     }
 
-    private static Command submitIssue() {
-        return new LoggedCommand("Report") {
-            @Override protected void go() {
+    private static com.codename1.ui.Command submitIssue() {
+        return new C1LoggedCommand(new Command("Report") {
+            @Override
+            protected void action(Object...args) {
                 IssueReporter.sendEmail();
             }
-        };
+        });
     }
 
     @Override protected void onShow()          { log("onShow"); }
@@ -75,7 +79,11 @@ public final class UIDebugForm
     }
 
     private void log(String message) {
-        LogManager.of().getLog(UIDebugForm.class).log(title + ":" + message);    
+        getLog().log(title + ":" + message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(UIDebugForm.class);
     }
 
 }

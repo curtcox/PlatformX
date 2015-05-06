@@ -3,10 +3,6 @@ package google;
 import java.util.List;
 import java.util.Map;
 
-/**
- *
- * @author Curt
- */
 final class PlacesResponseParser
     extends JsonResponseParser
 {

@@ -4,10 +4,6 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Map;
 
-/**
- *
- * @author Curt
- */
 final class GoogleUrl {
     
     static URI of(String base,Map<String,String> parameters) {

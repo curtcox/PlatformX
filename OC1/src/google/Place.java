@@ -4,7 +4,6 @@ import java.net.URI;
 
 /**
  * See https://developers.google.com/places/documentation/search#PlaceSearchResults
- * @author Curt
  */
 public final class Place {
     public String name;

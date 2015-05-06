@@ -5,13 +5,9 @@ import java.io.InputStreamReader;
 import java.net.URI;
 import java.util.List;
 import java.util.Map;
-import oc1.app.Registry;
-import oc1.net.Network;
+import common.Registry;
+import common.net.Network;
 
-/**
- *
- * @author Curt
- */
 abstract class WebServiceSearch<T> {
     
     final String baseURI;

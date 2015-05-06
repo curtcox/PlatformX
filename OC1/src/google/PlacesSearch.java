@@ -6,7 +6,6 @@ import java.util.Map;
 
 /**
  * See https://developers.google.com/places/documentation/search
- * @author Curt
  */
 public final class PlacesSearch
     extends WebServiceSearch
