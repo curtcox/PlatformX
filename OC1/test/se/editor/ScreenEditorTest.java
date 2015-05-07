@@ -55,6 +55,7 @@ public class ScreenEditorTest {
     @Test
     public void edit_makes_the_editing_frame_visible() {
         TaggedValue value = stringMap.newValue();
+        value.setTags(ScreenTags.of("use_for_title"));
 
         testObject.edit(value);
 
@@ -64,6 +65,7 @@ public class ScreenEditorTest {
     @Test
     public void edit_puts_the_edited_text_in_the_editor() {
         TaggedValue value = stringMap.newValue();
+        value.setTags(ScreenTags.of("use_for_title"));
         value.setContents("contents");
         screen().show();
 

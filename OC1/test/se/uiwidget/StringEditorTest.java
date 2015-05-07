@@ -24,7 +24,6 @@ public class StringEditorTest {
 
         @Override
         public void onChange(StringChange.Event event) {
-
             this.event = event;
         }
     }

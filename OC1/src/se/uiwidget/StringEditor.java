@@ -33,19 +33,23 @@ public final class StringEditor
 
     DocumentListener documentListener() {
         return new DocumentListener() {
-            @Override public void insertUpdate(DocumentEvent event) { notifyTextListener(); }
-            @Override public void removeUpdate(DocumentEvent event) { notifyTextListener(); }
-            @Override public void changedUpdate(DocumentEvent event) { notifyTextListener(); }
+            @Override public void insertUpdate(DocumentEvent event) { notifyTextListenerLater(); }
+            @Override public void removeUpdate(DocumentEvent event) { notifyTextListenerLater(); }
+            @Override public void changedUpdate(DocumentEvent event) { notifyTextListenerLater(); }
         };
     }
 
-    void notifyTextListener() {
+    void notifyTextListenerLater() {
         EventQueue.invokeLater(new Runnable() {
             @Override
             public void run() {
-                textListener.onChange(new StringChange.Event(this, null, getText()));
+                notifyTextListener();
             }
         });
+    }
+
+    void notifyTextListener() {
+        textListener.onChange(new StringChange.Event(this, null, getText()));
     }
 
     public String getText() {
