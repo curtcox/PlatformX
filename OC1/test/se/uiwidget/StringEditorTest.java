@@ -67,14 +67,19 @@ public class StringEditorTest {
     }
 
     @Test
-    public void string_listener_is_notified_when_text_changes() {
-        String text = random();
+    public void string_listener_is_notified_when_text_changes() throws Exception {
+        final String text = random();
         testObject.setText(text);
+        EventQueue.invokeAndWait(new Runnable() {
+            @Override
+            public void run() {
+                StringChange.Event event = stringChangeListener.event;
+                assertNotNull(event);
+                assertEquals(text,       event.newValue);
+                assertEquals(testObject, event.source);
+            }
+        });
 
-        StringChange.Event event = stringChangeListener.event;
-        assertNotNull(event);
-        assertEquals(text,       event.newValue);
-        assertEquals(testObject, event.source);
     }
 
     private String random() {
