@@ -60,7 +60,7 @@ public final class CachedNetwork
     }
 
     private void cacheOnDownloadOK(NetworkCacheEntry entry) {
-        if (entry.downloadToStorageWasOK()) {
+        if (entry.blockingDownloadToStorageWhichReturnsTrueOnSuccess()) {
             entries.put(entry.uri, entry);
             saveEntriesToStorage();
         } else {

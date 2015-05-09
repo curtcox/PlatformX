@@ -21,7 +21,7 @@ public final class RawNetwork
     public InputStream getStreamFor(URI url) {
         try {
             NetworkCacheEntry entry = NetworkCacheEntry.newEntryFor(url);
-            if (!entry.downloadToStorageWasOK()) {
+            if (!entry.blockingDownloadToStorageWhichReturnsTrueOnSuccess()) {
                 log("Download failed for " + url);            
             }
             return entry.getStreamFromStorage();

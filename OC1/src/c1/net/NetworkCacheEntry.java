@@ -29,7 +29,7 @@ final class NetworkCacheEntry {
         this.timeStamp = timeStamp;
     }
 
-    boolean downloadToStorageWasOK() {
+    boolean blockingDownloadToStorageWhichReturnsTrueOnSuccess() {
         boolean showProgress = true;
         return Util.downloadUrlToStorage(uri.toString(), fileName, showProgress);
     }
