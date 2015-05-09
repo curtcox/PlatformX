@@ -12,7 +12,6 @@ import common.uiwidget.UIComponent;
 /**
  * The entire UI, as presented to the user, at a specific time.
  * Implementers will need to override at least one layout method to create the UI.
- * @author Curt
  */
 public abstract class Screen {
 
@@ -61,13 +60,17 @@ public abstract class Screen {
     }
 
     public void show() {
-        log("show " + link.toString());
-        setPrevious();
-        showing = this;
-        refresh();
-        form.show();
-        if (back!=null) {
-            form.setBackCommand(back);
+        try {
+            log("show " + link.toString());
+            setPrevious();
+            showing = this;
+            refresh();
+            form.show();
+            if (back != null) {
+                form.setBackCommand(back);
+            }
+        } catch (RuntimeException e) {
+            log(e);
         }
     }
 
@@ -82,7 +85,7 @@ public abstract class Screen {
         return showing;
     }
     
-    public void back() {
+    public final void back() {
         log("back " + link.toString());
         if (previous!=null) {
             previous.goBackToThisScreen();
@@ -105,7 +108,7 @@ public abstract class Screen {
         layoutForm();
     }
     
-    public boolean isPortrait() {
+    public final boolean isPortrait() {
         return Registry.get(IDisplay.class).isPortrait();
     }
 
@@ -129,6 +132,10 @@ public abstract class Screen {
 
     private void log(String message) {
         getLog().log(message);
+    }
+
+    private void log(Exception e) {
+        getLog().log(e);
     }
 
     private ILog getLog() {
