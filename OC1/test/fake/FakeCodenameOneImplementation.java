@@ -10,7 +10,6 @@ import java.io.OutputStream;
 
 /**
  * Minimal fake implementation required for testing.
- * @author Curt
  */
 final class FakeCodenameOneImplementation
     extends CodenameOneImplementation
@@ -40,17 +39,16 @@ final class FakeCodenameOneImplementation
     @Override public int stringWidth(Object nativeFont, String str) { return 0; }
     @Override public int getClipY(Object graphics) { return 0; }
     @Override public void setHeader(Object connection, String key, String val) {}
-    
+    @Override public int getClipWidth(Object graphics) { return 0; }
+    @Override public int getClipHeight(Object graphics) { return 0; }
+    @Override public void clipRect(Object graphics, int x, int y, int width, int height) {}
+    @Override public void flushGraphics(int x, int y, int width, int height) {}
+
     // Stuff we needed to minimally do above.
     // Stuff we just throw exceptions for below.
 
     @Override
     public void editString(Component cmp, int maxSize, int constraint, String text, int initiatingKeycode) {
-        throw never();
-    }
-
-    @Override
-    public void flushGraphics(int x, int y, int width, int height) {
         throw never();
     }
 
@@ -141,21 +139,6 @@ final class FakeCodenameOneImplementation
 
     @Override
     public void setNativeFont(Object graphics, Object font) {
-        throw never();
-    }
-
-    @Override
-    public int getClipWidth(Object graphics) {
-        throw never();
-    }
-
-    @Override
-    public int getClipHeight(Object graphics) {
-        throw never();
-    }
-
-    @Override
-    public void clipRect(Object graphics, int x, int y, int width, int height) {
         throw never();
     }
 

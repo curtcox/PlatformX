@@ -4,10 +4,6 @@ import com.codename1.impl.ImplementationFactory;
 import com.codename1.ui.Display;
 import com.codename1.ui.plaf.UIManager;
 
-/**
- *
- * @author Curt
- */
 public class FakeUIManager {
 
     private FakeUIManager() {}
