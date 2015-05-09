@@ -1,5 +1,6 @@
 package fake;
 
+import c1.services.ILocationManager;
 import com.codename1.impl.ImplementationFactory;
 import com.codename1.io.Storage;
 import com.codename1.location.LocationManager;
@@ -23,7 +24,7 @@ public class FakeC1RegistryLoader {
         put(ILogManager.class,      new LogManager());
         put(LogWriter.class,        new LogWriter());
         put(Storage.class,          new FakeStorage());
-        put(LocationManager.class,  new FakeLocationManager());
+        put(ILocationManager.class, new FakeLocationManager());
         put(Locations.class,        new Locations());
         put(ServiceProvider.class,  ServiceProvider.NULL);
         put(ServiceProviders.class, new ServiceProviders());

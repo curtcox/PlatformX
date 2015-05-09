@@ -27,7 +27,7 @@ public final class Heartbeat
         getLog().log(message);
     }
 
-    private void log() {
+    void log() {
         log("scheduled=" + scheduled + " executed=" + executed + " duration=" + duration);
     }
 
