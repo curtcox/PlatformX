@@ -1,5 +1,8 @@
 package common;
 
+import common.log.ILog;
+import common.log.ILogManager;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -10,6 +13,7 @@ public final class IO {
         try {
             return stringFrom(stream);
         } catch (IOException e) {
+            log(e);
             return "";
         }
     }
@@ -31,6 +35,14 @@ public final class IO {
         buffer.flush();
 
         return buffer.toByteArray();
+    }
+
+    private static void log(Exception e) {
+        getLog().log(e);
+    }
+
+    private static ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(IO.class);
     }
 
 }

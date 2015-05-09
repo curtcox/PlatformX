@@ -57,6 +57,14 @@ public final class Mocks {
     }
 
     /**
+     * Create a single mock of the given interface.
+     * This can be used as an alternative to using init(this) in the test class setup.
+     */
+    public static <T> T mock(Class<T> face) {
+        return factory.mock(face, face.getName());
+    }
+
+    /**
      * Specify that the following method will return the given value.
      */
     public static void returns(Object value) {
