@@ -25,6 +25,11 @@ public class MyApplication {
         } catch(IOException e){
             log(e);
         }
+        log(context);
+    }
+
+    private void log(Object context) {
+        getLog().log("init("+context +")");
     }
 
     private void log(Exception e) {

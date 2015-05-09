@@ -1,6 +1,7 @@
 package c1.app;
 
 import com.codename1.io.Storage;
+import com.codename1.ui.Display;
 import common.Registry;
 import common.app.CurrentState;
 import common.domain.ServiceProvider;
@@ -34,6 +35,7 @@ final class RegistryLoader {
         put(Storage.class,          new Storage());
         put(Network.class,          new CachedNetwork());
         put(IDisplay.class,         new C1Display());
+        put(Display.class,          Display.getInstance());
         put(ILocationManager.class, new LocationManager());
     }
 
