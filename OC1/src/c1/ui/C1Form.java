@@ -61,15 +61,11 @@ public class C1Form
     public void layout(UIComponent component) {
         removeAll();
         setLayout(createLayout(component));
-        Components.addToContainer(component(component), this);
+        Components.addToContainer(C1UIRenderer.render(component), this);
     }
 
     private Layout createLayout(UIComponent component) {
         return new FlowLayout();
-    }
-
-    private Component component(UIComponent component) {
-        return new Label();
     }
 
     @Override

@@ -1,7 +1,10 @@
 package c1.ui;
 
+import com.codename1.ui.layouts.FlowLayout;
 import common.screen.ScreenLink;
 import common.ui.IForm;
+import common.uiwidget.UIComponent;
+import common.uiwidget.UILabel;
 import fake.FakeC1RegistryLoader;
 import fake.FakeUIManager;
 import junit.framework.TestCase;
@@ -48,6 +51,27 @@ public class C1FormTest {
     @Test
     public void can_show() {
         testObject.show();
+    }
+
+    @Test
+    public void there_are_2_components_when_none_have_been_added() {
+        assertEquals(2,testObject.getComponentCount());
+    }
+
+    @Test
+    public void layout_is_idempotent() {
+        UIComponent layout = new UILabel("!!");
+
+        for (int i=0; i<3; i++) {
+            testObject.layout(layout);
+            assertEquals(2, testObject.getComponentCount());
+        }
+    }
+
+    @Test
+    public void layout_uses_flow_layout() {
+        testObject.layout(new UILabel());
+        assertTrue(testObject.getLayout() instanceof FlowLayout);
     }
 
     private String random(String prefix) {

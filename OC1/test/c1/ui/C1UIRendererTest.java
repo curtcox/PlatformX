@@ -1,19 +1,17 @@
-package se.ui;
+package c1.ui;
 
+import com.codename1.ui.*;
+import com.codename1.ui.layouts.*;
 import common.uiwidget.*;
 import fake.FakeSERegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.swing.*;
-
-import java.awt.*;
-
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
 
-public class SEUIRendererTest {
+public class C1UIRendererTest {
 
     static class FakeButton extends UIButton {
 
@@ -36,11 +34,11 @@ public class SEUIRendererTest {
 
     @Test
     public void render_returns_right_component_type() {
-        assertRendersAs(new UILabel(""),JLabel.class);
-        assertRendersAs(new FakeButton(""), JButton.class);
-        assertRendersAs(new UIColumn(),JPanel.class);
-        assertRendersAs(new UIRow(),JPanel.class);
-        assertRendersAs(new UIFlow(),JPanel.class);
+        assertRendersAs(new UILabel(""),Label.class);
+        assertRendersAs(new FakeButton(""), Button.class);
+        assertRendersAs(new UIColumn(),Container.class);
+        assertRendersAs(new UIRow(),Container.class);
+        assertRendersAs(new UIFlow(),Container.class);
     }
 
     private void assertRendersAs(UIComponent component, Class c) {
@@ -71,15 +69,15 @@ public class SEUIRendererTest {
     @Test
     public void render_empty_flow_produces_proper_layout() {
         UIFlow flow = new UIFlow();
-        JPanel actual = (JPanel) render(flow);
-        LayoutManager layout = actual.getLayout();
+        Container actual = (Container) render(flow);
+        Layout layout = actual.getLayout();
         assertTrue(layout instanceof FlowLayout);
     }
 
     @Test
     public void render_empty_column_produces_proper_layout() {
         UIColumn column = new UIColumn();
-        JPanel actual = (JPanel) render(column);
+        Container actual = (Container) render(column);
         BoxLayout layout = (BoxLayout) actual.getLayout();
         assertEquals(BoxLayout.Y_AXIS,layout.getAxis());
     }
@@ -87,7 +85,7 @@ public class SEUIRendererTest {
     @Test
     public void render_empty_row_produces_proper_layout() {
         UIRow row = new UIRow();
-        JPanel actual = (JPanel) render(row);
+        Container actual = (Container) render(row);
         BoxLayout layout = (BoxLayout) actual.getLayout();
         assertEquals(BoxLayout.X_AXIS,layout.getAxis());
     }
@@ -96,9 +94,9 @@ public class SEUIRendererTest {
     public void render_flow_with_a_label() {
         String text = toString();
         UIFlow flow = new UIFlow(new UILabel(text));
-        JPanel actual = (JPanel) render(flow);
+        Container actual = (Container) render(flow);
         assertEquals(1,actual.getComponentCount());
-        JLabel label = (JLabel) actual.getComponent(0);
+        Label label = (Label) actual.getComponentAt(0);
         assertEquals(text,label.getText());
     }
 
@@ -106,9 +104,9 @@ public class SEUIRendererTest {
     public void render_column_with_a_label() {
         String text = toString();
         UIColumn column = new UIColumn(new UILabel(text));
-        JPanel actual = (JPanel) render(column);
+        Container actual = (Container) render(column);
         assertEquals(1,actual.getComponentCount());
-        JLabel label = (JLabel) actual.getComponent(0);
+        Label label = (Label) actual.getComponentAt(0);
         assertEquals(text,label.getText());
     }
 
@@ -116,16 +114,16 @@ public class SEUIRendererTest {
     public void render_row_with_a_label() {
         String text = toString();
         UIRow row = new UIRow(new UILabel(text));
-        JPanel actual = (JPanel) render(row);
+        Container actual = (Container) render(row);
         assertEquals(1,actual.getComponentCount());
-        JLabel label = (JLabel) actual.getComponent(0);
+        Label label = (Label) actual.getComponentAt(0);
         assertEquals(text,label.getText());
     }
 
     @Test
     public void render_a_label() {
         String text = toString();
-        JLabel actual = (JLabel) render(new UILabel(text));
+        Label actual = (Label) render(new UILabel(text));
         assertEquals(text,actual.getText());
     }
 
@@ -134,7 +132,7 @@ public class SEUIRendererTest {
         String text = toString();
         UIButton button = new FakeButton("");
         button.text = text;
-        JButton actual = (JButton) render(button);
+        Button actual = (Button) render(button);
 
         assertEquals(text,actual.getText());
     }
@@ -142,8 +140,8 @@ public class SEUIRendererTest {
     @Test
     public void render_an_action_button_produces_button_with_proper_action() {
         FakeButton fakeButton = new FakeButton("");
-        JButton jButton = (JButton) render(fakeButton);
-        jButton.doClick();
+        Button button = (Button) render(fakeButton);
+        button.pressed();
 
         assertTrue(fakeButton.tapped);
     }
@@ -151,13 +149,13 @@ public class SEUIRendererTest {
     @Test
     public void render_column_with_a_button_and_a_label() {
         UIColumn column = new UIColumn(new FakeButton(""),new UILabel());
-        JPanel actual = (JPanel) render(column);
+        Container actual = (Container) render(column);
         assertEquals(2,actual.getComponentCount());
-        assertTrue(actual.getComponent(0) instanceof JButton);
-        assertTrue(actual.getComponent(1) instanceof JLabel);
+        assertTrue(actual.getComponentAt(0) instanceof Button);
+        assertTrue(actual.getComponentAt(1) instanceof Label);
     }
 
-    private JComponent render(UIComponent component) {
-        return SEUIRenderer.render(component);
+    private Component render(UIComponent component) {
+        return C1UIRenderer.render(component);
     }
 }
