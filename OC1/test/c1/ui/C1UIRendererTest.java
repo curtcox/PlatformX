@@ -141,7 +141,7 @@ public class C1UIRendererTest {
     public void render_an_action_button_produces_button_with_proper_action() {
         FakeButton fakeButton = new FakeButton("");
         Button button = (Button) render(fakeButton);
-        button.pressed();
+        button.released();
 
         assertTrue(fakeButton.tapped);
     }

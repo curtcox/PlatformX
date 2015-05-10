@@ -1,23 +1,35 @@
 package common.screen;
 
+import c1.screens.FakeUI;
+import common.Registry;
+import common.log.ILog;
+import common.log.ILogManager;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
+import common.uiwidget.UIContainer;
+import fake.FakeCommonRegistryLoader;
 import fake.FakeForm;
-import fake.FakeSERegistryLoader;
+import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
+import static mach.Mocks._;
+import static mach.Mocks.verify;
+import static mach.Mocks.wild;
 import static org.junit.Assert.*;
 
 /**
  * I'm ready for my closeup.
  */
-public class ScreenTest {
+public class CommonScreenTest {
 
     FakeForm form = new FakeForm();
     String name = random("link");
     UIComponent layout = new UIComponent();
     ScreenLink link = ScreenLink.of(name);
+    ScreenFactory factory;
+    ILog log;
+    ILogManager logManager;
     ExampleScreen testObject;
 
     class ExampleScreen extends Screen {
@@ -39,8 +51,9 @@ public class ScreenTest {
 
     @Before
     public void setup() {
-        FakeSERegistryLoader.load();
+        FakeCommonRegistryLoader.load();
         testObject = new ExampleScreen(form,link);
+        Mocks.init(this);
     }
 
 
@@ -128,5 +141,63 @@ public class ScreenTest {
         return name + toString();
     }
 
+    static class FakeScreen extends Screen {
+        FakeScreen() {
+            super(FakeUI.newForm(), ScreenLink.of("name"));
+        }
+        @Override protected UIContainer layoutForPortrait() { return null;}
+    }
+
+    @Test
+    public void show_makes_screen_the_one_showing_when_factory_returns_one_link_for_it() {
+        Screen screen = new FakeScreen();
+        ScreenLink link = ScreenLink.of("foo");
+        Screen[] screens = new Screen[] { screen };
+        _(screens); factory.create(link);
+
+        Screen.show(link,factory);
+
+        assertSame(screen, Screen.getShowing());
+    }
+
+    static class ScreenThatThrowsExceptionOnLayout extends Screen {
+        RuntimeException e;
+        ScreenThatThrowsExceptionOnLayout(RuntimeException e) {
+            super(FakeUI.newForm(), ScreenLink.of("name"));
+            this.e = e;
+        }
+        @Override protected UIContainer layoutForPortrait() {
+            throw e;
+        }
+    }
+
+    @Test
+    public void show_logs_exception_if_one_is_thrown() {
+        RuntimeException e = new RuntimeException();
+        _(log); logManager.getLog(Screen.class);
+        _(); wild("*"); log.log("*");
+        _(); log.log(e);
+        Registry.put(ILogManager.class, logManager);
+        Screen screen = new ScreenThatThrowsExceptionOnLayout(e);
+
+        screen.show();
+
+        verify();
+        log.log(e);
+    }
+
+    @Test
+    public void show_throws_and_exception_when_factory_returns_no_screens_for_link() {
+        ScreenLink link = ScreenLink.of("foo");
+        Screen[] screens = new Screen[0];
+        _(screens); factory.create(link);
+
+        try {
+            Screen.show(link, factory);
+            fail();
+        } catch (RuntimeException e) {
+            assertEquals("No screens found for " + link,e.getMessage());
+        }
+    }
 
 }

@@ -22,13 +22,10 @@ import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
-public class ScreenTest {
+public class C1ScreenTest {
     
     IForm form;
     Screen previous;
-    ScreenFactory factory;
-    ILog log;
-    ILogManager logManager;
 
     static class FakeScreen extends Screen {
         FakeScreen() {
@@ -40,7 +37,6 @@ public class ScreenTest {
     @Before
     public void setUp() {
         FakeC1RegistryLoader.load();
-        Mocks.init(this);
     }
 
     @Test
@@ -62,42 +58,5 @@ public class ScreenTest {
         });
     }
 
-    @Test
-    public void show_makes_screen_the_one_showing_when_factory_returns_one_link_for_it() {
-        Screen screen = new FakeScreen();
-        ScreenLink link = ScreenLink.of("foo");
-        Screen[] screens = new Screen[] { screen };
-        _(screens); factory.create(link);
-
-        Screen.show(link,factory);
-
-        assertSame(screen, Screen.getShowing());
-    }
-
-    static class ScreenThatThrowsExceptionOnLayout extends Screen {
-        RuntimeException e;
-        ScreenThatThrowsExceptionOnLayout(RuntimeException e) {
-            super(FakeUI.newForm(), ScreenLink.of("name"));
-            this.e = e;
-        }
-        @Override protected UIContainer layoutForPortrait() {
-            throw e;
-        }
-    }
-
-    @Test
-    public void show_logs_exception_if_one_is_thrown() {
-        RuntimeException e = new RuntimeException();
-        _(log); logManager.getLog(Screen.class);
-        _(); wild("*"); log.log("*");
-        _(); log.log(e);
-        Registry.put(ILogManager.class,logManager);
-        Screen screen = new ScreenThatThrowsExceptionOnLayout(e);
-
-        screen.show();
-
-        verify();
-        log.log(e);
-    }
 
 }

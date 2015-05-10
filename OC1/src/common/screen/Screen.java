@@ -76,6 +76,9 @@ public abstract class Screen {
 
     public static void show(ScreenLink link, ScreenFactory factory) {
         Screen[] screens = factory.create(link);
+        if (screens.length==0) {
+            throw new RuntimeException("No screens found for " + link);
+        }
         if (screens.length==1) {
             screens[0].show();
         }
