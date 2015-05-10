@@ -3,9 +3,6 @@ package common.screenparts;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
-import common.app.CurrentState;
-import common.Registry;
-import common.event.Change.Source;
 import common.event.StringSource;
 import common.uiwidget.UIButton;
 
@@ -33,7 +30,8 @@ public final class ScreenButton
         if (screen!=null) {
             return screen;
         }
-        return ScreenFactory.DEFAULT.create(link)[0];
+        Screen.show(link, ScreenFactory.DEFAULT);
+        return Screen.getShowing();
     }
 
     public static class Builder {
