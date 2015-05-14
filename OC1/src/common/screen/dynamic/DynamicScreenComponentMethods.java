@@ -44,9 +44,9 @@ final class DynamicScreenComponentMethods
             @Override
             public Object invoke(Object[] values) {
                 URI uri = uri(values[0]);
-                UILabel button = new UILabel();
-                button.icon = uri;
-                return button;
+                UILabel label = new UILabel();
+                label.icon = uri;
+                return label;
             }
 
         };

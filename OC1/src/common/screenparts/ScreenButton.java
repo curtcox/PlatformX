@@ -13,12 +13,13 @@ public final class ScreenButton
     extends UIButton
 {
     final Screen screen;
-    final ScreenLink link;
+    public final ScreenLink link;
 
     private ScreenButton(Builder builder) {
         super(builder.text);
         this.screen = builder.screen;
         this.link = builder.link;
+        this.icon = builder.image;
     }
 
     @Override
@@ -36,6 +37,7 @@ public final class ScreenButton
 
     public static class Builder {
         private String text;
+        private String image;
         private Screen screen;
         private ScreenLink link;
 
@@ -51,7 +53,10 @@ public final class ScreenButton
             this.text = text;
             return this;
         }
-        public Builder image(String s) { return this; }
+        public Builder image(String image) {
+            this.image = image;
+            return this;
+        }
         public Builder leadingTo(Screen screen) {
             this.screen = screen;
             return this;

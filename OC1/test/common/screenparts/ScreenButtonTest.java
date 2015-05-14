@@ -81,6 +81,14 @@ public class ScreenButtonTest  {
         assertEquals(expected, actual);
     }
 
+    @Test
+    public void button_is_built_with_specified_image() {
+        String expected = "image name";
+        String actual = ScreenButton.builder().image(expected).leadingTo(screen).build().icon;
+
+        assertEquals(expected, actual);
+    }
+
     void verifyScreenShown() {
         verify();
         form.layout(screen.uiComponent);
