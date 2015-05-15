@@ -4,8 +4,10 @@ import com.codename1.ui.*;
 import com.codename1.ui.layouts.*;
 import common.uiwidget.*;
 import fake.FakeSERegistryLoader;
+import fake.FakeUIManager;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -29,6 +31,7 @@ public class C1UIRendererTest {
 
     @Before
     public void setup() {
+        FakeUIManager.of();
         FakeSERegistryLoader.load();
     }
 
@@ -138,11 +141,12 @@ public class C1UIRendererTest {
     }
 
     @Test
-    public void render_an_action_button_produces_button_with_proper_action() {
+    public void render_an_action_button_produces_button_with_proper_action() throws InterruptedException {
         FakeButton fakeButton = new FakeButton("");
         Button button = (Button) render(fakeButton);
         button.released();
 
+        Thread.sleep(50);
         assertTrue(fakeButton.tapped);
     }
 
