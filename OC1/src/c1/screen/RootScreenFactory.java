@@ -19,7 +19,7 @@ import c1.screens.*;
  */
 public final class RootScreenFactory {
     
-    public static List<String> index = Arrays.asList(
+    private static List<String> index = Arrays.asList(
         "Device_Info",
         "LocationSelection","ProviderDetails",
         "Filter","Search","Custom"
@@ -38,7 +38,7 @@ public final class RootScreenFactory {
                 SearchScreenFactory.FACTORY,
                 CustomComponentScreen.FACTORY,
                 dynamicScreens(layouts),
-                new IndexScreenFactory(),
+                new IndexScreenFactory(index),
                 new LazyScreenFactory(taggedLayouts)
         );
     }
