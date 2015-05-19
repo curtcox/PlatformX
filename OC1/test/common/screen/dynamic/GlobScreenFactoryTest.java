@@ -1,6 +1,7 @@
 package common.screen.dynamic;
 
 import common.screen.Screen;
+import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.uiwidget.UIContainer;
 import fake.FakeC1RegistryLoader;
@@ -11,12 +12,12 @@ import org.junit.Before;
 public class GlobScreenFactoryTest {
 
     Screen screen;
-    GlobScreenFactory testObject = new GlobScreenFactory("stuff") {
+    GlobScreenFactory testObject = new GlobScreenFactory("stuff", new ScreenFactory() {
         @Override
-        protected Screen doCreate(ScreenLink link) {
-            return screen;
+        public Screen[] create(ScreenLink link) {
+            return new Screen[] {screen};
         }
-    };
+    });
     
     @Before
     public void setUp() {

@@ -4,22 +4,20 @@ import com.codename1.ui.Label;
 import java.util.List;
 
 import common.screen.Screen;
+import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
-import common.screen.dynamic.GlobScreenFactory;
 import c1.event.*;
 import c1.screen.*;
 import c1.uilist.*;
 import common.util.Strings;
 
 public abstract class AbstractItemListScreenFactory<T>
-    extends GlobScreenFactory
+    implements ScreenFactory
 {
-    public AbstractItemListScreenFactory(String glob) {
-        super(glob);
-    }
+    public AbstractItemListScreenFactory() {}
     
-    public Screen doCreate(ScreenLink link) {
-        return new ItemScreen(link,newSearchableList());
+    public Screen[] create(ScreenLink link) {
+        return new Screen[] {new ItemScreen(link,newSearchableList())};
     }     
 
     abstract protected List<T> getValues();

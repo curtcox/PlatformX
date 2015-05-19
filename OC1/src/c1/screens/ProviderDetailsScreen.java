@@ -37,11 +37,12 @@ public final class ProviderDetailsScreen
         }
     }
 
-    public static ScreenFactory FACTORY = new GlobScreenFactory("ProviderDetails") {
-        public Screen doCreate(ScreenLink link) {
-            return new ProviderDetailsScreen(link);
-        }     
-    };
+    public static ScreenFactory FACTORY = new GlobScreenFactory("ProviderDetails", new ScreenFactory() {
+        @Override
+        public Screen[] create(ScreenLink link) {
+            return new Screen[] {new ProviderDetailsScreen(link)};
+        }
+    });
 
     ProviderDetailsScreen(ScreenLink link) {
         super(link);

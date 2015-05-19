@@ -1,5 +1,6 @@
 package c1.screenfactories;
 
+import common.screen.Screen;
 import common.screen.ScreenLink;
 import junit.framework.TestCase;
 import org.junit.Test;
@@ -28,7 +29,26 @@ public class IndexScreenFactoryTest {
     }
 
     @Test
-    public void empty_index_has_screens() {
+    public void index_with_3_values() {
+        assertEquals(3, indexScreenFactory("Moe","Larry","Curly").getValues().size());
+    }
+
+    @Test
+    public void index_with_1_screen() {
+        ScreenLink link = ScreenLink.of("");
+        Screen[] screens = indexScreenFactory("Moe").create(link);
+        assertEquals(1, screens.length);
+        Screen screen = screens[0];
+        assertEquals(link,screen.link);
+    }
+
+    @Test
+    public void index_with_3_screens() {
+        assertEquals(3, indexScreenFactory("Moe", "Larry", "Curly").create(ScreenLink.of("")).length);
+    }
+
+    @Test
+    public void empty_index_matches_no_screens() {
         assertEquals(0, indexScreenFactory().create(ScreenLink.of("")).length);
     }
 

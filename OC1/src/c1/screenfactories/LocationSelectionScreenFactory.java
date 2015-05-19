@@ -16,12 +16,12 @@ import c1.uilist.SearchableList;
 
 public final class LocationSelectionScreenFactory {
 
-    public static ScreenFactory FACTORY = new GlobScreenFactory("LocationSelection") {
+    public static ScreenFactory FACTORY = new GlobScreenFactory("LocationSelection", new ScreenFactory() {
         @Override
-        protected Screen doCreate(ScreenLink link) {
-            return of(link);
+        public Screen[] create(ScreenLink link) {
+            return new Screen[] {of(link)};
         }
-    };
+    });
             
     static LocationSelectionScreen of(ScreenLink link) {
         SearchableList<LocationDescription> searchList = newSearchableList();
