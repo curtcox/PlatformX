@@ -18,7 +18,7 @@ public abstract class GlobScreenFactory
         if (glob.matches(link.tags)) {
             return new Screen[] {doCreate(link)};
         }
-        return null;
+        return new Screen[0];
     }
 
     protected abstract Screen doCreate(ScreenLink link);

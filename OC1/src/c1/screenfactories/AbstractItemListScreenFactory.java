@@ -14,12 +14,8 @@ import common.util.Strings;
 public abstract class AbstractItemListScreenFactory<T>
     extends GlobScreenFactory
 {
-
-    private final String glob;
-    
     public AbstractItemListScreenFactory(String glob) {
         super(glob);
-        this.glob = glob;
     }
     
     public Screen doCreate(ScreenLink link) {
