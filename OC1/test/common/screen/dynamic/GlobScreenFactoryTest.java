@@ -12,7 +12,7 @@ import org.junit.Before;
 public class GlobScreenFactoryTest {
 
     Screen screen;
-    GlobScreenFactory testObject = new GlobScreenFactory("stuff", new ScreenFactory() {
+    ScreenFactory testObject = GlobScreenFactory.filter("stuff", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
             return new Screen[] {screen};

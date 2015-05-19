@@ -18,7 +18,7 @@ public final class SearchScreenFactory {
     private static final int STARTING_RADIUS = 100;
     private static final Type[] ALL_TYPES = new Type[0];
 
-    public static ScreenFactory FACTORY = new GlobScreenFactory("Search", new ScreenFactory() {
+    public static ScreenFactory FACTORY = GlobScreenFactory.filter("Search", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
             return new Screen[] {searchScreenFromArgs(link,link.args)};

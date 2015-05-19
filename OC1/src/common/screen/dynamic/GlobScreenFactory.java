@@ -11,9 +11,13 @@ public final class GlobScreenFactory
     final Glob glob;
     final ScreenFactory inner;
 
-    public GlobScreenFactory(String glob, ScreenFactory inner) {
+    private GlobScreenFactory(String glob, ScreenFactory inner) {
         this.glob = Glob.of(glob);
         this.inner = inner;
+    }
+
+    public static ScreenFactory filter(String glob, ScreenFactory inner) {
+        return new GlobScreenFactory(glob,inner);
     }
 
     public final Screen[] create(ScreenLink link) {

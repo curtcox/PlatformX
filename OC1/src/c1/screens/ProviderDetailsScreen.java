@@ -37,7 +37,7 @@ public final class ProviderDetailsScreen
         }
     }
 
-    public static ScreenFactory FACTORY = new GlobScreenFactory("ProviderDetails", new ScreenFactory() {
+    public static ScreenFactory FACTORY = GlobScreenFactory.filter("ProviderDetails", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
             return new Screen[] {new ProviderDetailsScreen(link)};

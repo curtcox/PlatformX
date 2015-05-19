@@ -16,7 +16,7 @@ import c1.uilist.SearchableList;
 
 public final class LocationSelectionScreenFactory {
 
-    public static ScreenFactory FACTORY = new GlobScreenFactory("LocationSelection", new ScreenFactory() {
+    public static ScreenFactory FACTORY = GlobScreenFactory.filter("LocationSelection", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
             return new Screen[] {of(link)};

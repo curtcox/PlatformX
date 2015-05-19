@@ -18,7 +18,7 @@ import c1.uilist.SearchableList;
 
 public final class FilterScreenFactory {
 
-    public static ScreenFactory FACTORY = new GlobScreenFactory("Filter", new ScreenFactory() {
+    public static ScreenFactory FACTORY = GlobScreenFactory.filter("Filter", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
             return new Screen[] {new FilterScreen(link,newSearchableList())};

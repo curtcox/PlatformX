@@ -10,7 +10,7 @@ public final class CustomComponentScreen
     extends Screen
 {
     
-    public static final ScreenFactory FACTORY = new GlobScreenFactory("Custom", new ScreenFactory() {
+    public static final ScreenFactory FACTORY = GlobScreenFactory.filter("Custom", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
             return new Screen[] {new CustomComponentScreen(link)};
