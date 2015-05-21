@@ -14,11 +14,10 @@ import common.uiwidget.UITable;
 import common.domain.ServiceProvider;
 import common.domain.Type;
 import common.screenparts.ProviderRatingButton;
-import c1.ui.LinkButton;
+import common.ui.LinkButton;
 
 /**
  * For showing details about a particular provider.
- * @author Curt
  */
 public final class ProviderDetailsScreen
     extends Screen

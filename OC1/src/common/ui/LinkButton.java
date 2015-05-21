@@ -1,4 +1,4 @@
-package c1.ui;
+package common.ui;
 
 import common.Registry;
 import common.screen.Screen;
