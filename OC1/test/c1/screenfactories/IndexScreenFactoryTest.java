@@ -3,13 +3,10 @@ package c1.screenfactories;
 import common.screen.Screen;
 import common.screen.ScreenLink;
 import fake.FakeC1RegistryLoader;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -21,7 +18,7 @@ public class IndexScreenFactoryTest {
         FakeC1RegistryLoader.load();
     }
 
-    static AbstractItemListScreenFactory indexScreenFactory(String... values) {
+    static ItemListScreenFactory indexScreenFactory(String... values) {
         return IndexScreenFactory.of(Arrays.asList(values));
     }
 
@@ -50,18 +47,18 @@ public class IndexScreenFactoryTest {
         Screen[] screens = indexScreenFactory("moe").create(link);
         assertEquals(1, screens.length);
         Screen screen = screens[0];
-        assertEquals("moe",screen.link.tags.toString());
+        assertEquals("moe", screen.link.tags.toString());
     }
 
     @Test
     public void index_with_3_values_can_create_3_screens() {
-        AbstractItemListScreenFactory factory = indexScreenFactory("moe","larry","curly");
-        checkScreenFrom(factory,"moe");
+        ItemListScreenFactory factory = indexScreenFactory("moe", "larry", "curly");
+        checkScreenFrom(factory, "moe");
         checkScreenFrom(factory,"larry");
         checkScreenFrom(factory, "curly");
     }
 
-    void checkScreenFrom(AbstractItemListScreenFactory factory,String tag) {
+    void checkScreenFrom(ItemListScreenFactory factory,String tag) {
         Screen[] screens = factory.create(ScreenLink.of(tag));
         assertEquals(1, screens.length);
         Screen screen = screens[0];

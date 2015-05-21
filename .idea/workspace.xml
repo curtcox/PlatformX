@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/ListValueSupplier.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/c1/screenfactories/ListValueSupplierTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/ValueSupplier.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/AbstractItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/AbstractItemListScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/device/DeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/c1/device/DeviceInfo.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\screenfactories\AbstractItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/ItemListScreenFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/DeviceInfoScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/DeviceInfoScreenFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/IndexScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/IndexScreenFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screen/RootScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screen/RootScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/screen/RootScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/screen/RootScreenFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -78,23 +72,23 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="AbstractItemListScreenFactory.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/AbstractItemListScreenFactory.java">
+            <file leaf-file-name="ItemListScreenFactory.java" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/ItemListScreenFactory.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.33333334" vertical-offset="233" max-vertical-offset="1309">
-                    <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+                  <state vertical-scroll-proportion="0.19274376" vertical-offset="51" max-vertical-offset="1309">
+                    <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                      <element signature="e#459#460#0" expanded="true" />
-                      <element signature="e#499#500#0" expanded="true" />
-                      <element signature="e#550#551#0" expanded="true" />
-                      <element signature="e#629#630#0" expanded="true" />
-                      <element signature="e#669#670#0" expanded="true" />
-                      <element signature="e#712#713#0" expanded="true" />
-                      <element signature="e#1106#1107#0" expanded="true" />
-                      <element signature="e#1140#1141#0" expanded="true" />
-                      <element signature="e#1211#1212#0" expanded="true" />
-                      <element signature="e#1264#1265#0" expanded="true" />
+                      <element signature="e#443#444#0" expanded="true" />
+                      <element signature="e#483#484#0" expanded="true" />
+                      <element signature="e#534#535#0" expanded="true" />
+                      <element signature="e#613#614#0" expanded="true" />
+                      <element signature="e#653#654#0" expanded="true" />
+                      <element signature="e#696#697#0" expanded="true" />
+                      <element signature="e#1090#1091#0" expanded="true" />
+                      <element signature="e#1124#1125#0" expanded="true" />
+                      <element signature="e#1195#1196#0" expanded="true" />
+                      <element signature="e#1248#1249#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -114,14 +108,14 @@
       <file leaf-file-name="IndexScreenFactoryTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.85" vertical-offset="612" max-vertical-offset="1292">
-              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.375" vertical-offset="561" max-vertical-offset="1241">
+              <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#494#495#0" expanded="true" />
-                <element signature="e#684#685#0" expanded="true" />
-                <element signature="e#735#736#0" expanded="true" />
+                <element signature="e#367#368#0" expanded="true" />
+                <element signature="e#410#411#0" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+                <element signature="e#643#644#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/se/SwingRunner.java" />
         <option value="$PROJECT_DIR$/OC1/test/c1/app/ExceptionLoggerTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/app/RegistryLoader.java" />
         <option value="$PROJECT_DIR$/OC1/test/c1/app/RegistryLoaderTest.java" />
@@ -182,10 +175,11 @@
         <option value="$PROJECT_DIR$/OC1/src/c1/screen/RootScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/screen/RootScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/IndexScreenFactory.java" />
-        <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/AbstractItemListScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/test/c1/screenfactories/ListValueSupplierTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/ListValueSupplier.java" />
         <option value="$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/AbstractItemListScreenFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/ItemListScreenFactory.java" />
       </list>
     </option>
   </component>
@@ -1204,39 +1198,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenComponentMethods.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63378686" vertical-offset="393" max-vertical-offset="1377">
-          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakeC1RegistryLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15" vertical-offset="0" max-vertical-offset="680">
           <caret line="22" column="23" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/AbstractItemListScreenFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="233" max-vertical-offset="1309">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#459#460#0" expanded="true" />
-            <element signature="e#499#500#0" expanded="true" />
-            <element signature="e#550#551#0" expanded="true" />
-            <element signature="e#629#630#0" expanded="true" />
-            <element signature="e#669#670#0" expanded="true" />
-            <element signature="e#712#713#0" expanded="true" />
-            <element signature="e#1106#1107#0" expanded="true" />
-            <element signature="e#1140#1141#0" expanded="true" />
-            <element signature="e#1211#1212#0" expanded="true" />
-            <element signature="e#1264#1265#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1335,14 +1301,42 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.85" vertical-offset="612" max-vertical-offset="1292">
-          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.375" vertical-offset="561" max-vertical-offset="1241">
+          <caret line="48" column="35" selection-start-line="48" selection-start-column="35" selection-end-line="48" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#494#495#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-            <element signature="e#735#736#0" expanded="true" />
+            <element signature="e#367#368#0" expanded="true" />
+            <element signature="e#410#411#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenComponentMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.63378686" vertical-offset="393" max-vertical-offset="1377">
+          <caret line="64" column="5" selection-start-line="64" selection-start-column="5" selection-end-line="64" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/ItemListScreenFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19274376" vertical-offset="51" max-vertical-offset="1309">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#443#444#0" expanded="true" />
+            <element signature="e#483#484#0" expanded="true" />
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#613#614#0" expanded="true" />
+            <element signature="e#653#654#0" expanded="true" />
+            <element signature="e#696#697#0" expanded="true" />
+            <element signature="e#1090#1091#0" expanded="true" />
+            <element signature="e#1124#1125#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1248#1249#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -11,12 +11,12 @@ import c1.screen.*;
 import c1.uilist.*;
 import common.util.Strings;
 
-public final class AbstractItemListScreenFactory<T>
+public final class ItemListScreenFactory<T>
     implements ScreenFactory
 {
     final ValueSupplier<T> supplier;
 
-    public AbstractItemListScreenFactory(ValueSupplier<T> supplier) {
+    public ItemListScreenFactory(ValueSupplier<T> supplier) {
         this.supplier = supplier;
     }
     
