@@ -1,6 +1,7 @@
 package c1.screens;
 
 import common.screen.ScreenLink;
+import common.screens.ProviderDetailsScreen;
 import fake.FakeC1RegistryLoader;
 import java.util.concurrent.Callable;
 import org.junit.Test;

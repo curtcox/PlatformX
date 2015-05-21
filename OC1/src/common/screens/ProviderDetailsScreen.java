@@ -1,4 +1,4 @@
-package c1.screens;
+package common.screens;
 
 import java.net.URI;
 import java.util.Arrays;

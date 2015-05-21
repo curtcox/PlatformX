@@ -12,7 +12,7 @@ import common.util.StringMap;
 import c1.screenfactories.*;
 import c1.screens.CustomComponentScreen;
 import c1.screens.Home;
-import c1.screens.ProviderDetailsScreen;
+import common.screens.ProviderDetailsScreen;
 
 import java.util.Arrays;
 import java.util.List;
