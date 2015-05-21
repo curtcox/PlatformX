@@ -34,7 +34,7 @@ public final class ItemListScreenFactory<T>
         return list;
     }
 
-private final class ItemsScreen
+private static final class ItemsScreen
     extends SelectionListScreen
 {
     public ItemsScreen(ScreenLink link, SearchableList values) {
@@ -47,15 +47,15 @@ private final class ItemsScreen
     }
 }
 
-private final class CellConfigurer
-    implements ListCellConfigurer<T>
+private static final class CellConfigurer
+    implements ListCellConfigurer
 {
-    public void configureButton(ListCell button, T item) {
+    public void configureButton(ListCell button, Object item) {
         button.firstRow.setText(item.toString());
     }
 }
 
-private final class TextFilter
+private static final class TextFilter
     implements StringToListFilter
 {
     public ListFilter listFilterFor(final String text) {
