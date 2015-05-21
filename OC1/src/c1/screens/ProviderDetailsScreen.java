@@ -13,7 +13,7 @@ import common.uiwidget.UILabel;
 import common.uiwidget.UITable;
 import common.domain.ServiceProvider;
 import common.domain.Type;
-import c1.screenparts.ProviderRatingButton;
+import common.screenparts.ProviderRatingButton;
 import c1.ui.LinkButton;
 
 /**
@@ -40,7 +40,7 @@ public final class ProviderDetailsScreen
     public static ScreenFactory FACTORY = GlobScreenFactory.filter("ProviderDetails", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
-            return new Screen[] {new ProviderDetailsScreen(link)};
+            return new Screen[]{new ProviderDetailsScreen(link)};
         }
     });
 

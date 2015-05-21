@@ -1,11 +1,11 @@
 package c1.screens;
 
 import com.codename1.ui.Label;
+import c1.services.Locations;
 import common.domain.ServiceProvider;
 import common.screenparts.ScreenButton;
-import c1.screenparts.ProviderDetailsButton;
-import c1.screenparts.ProviderRatingButton;
-import c1.services.Locations;
+import common.screenparts.ProviderDetailsButton;
+import common.screenparts.ProviderRatingButton;
 import common.uiwidget.UIButton;
 
 /**

@@ -1,6 +1,6 @@
 package c1.screens;
 
-import c1.screenparts.ProviderRatingButton;
+import common.screenparts.ProviderRatingButton;
 import common.uiwidget.UIButton;
 import fake.FakeC1RegistryLoader;
 import java.util.concurrent.Callable;

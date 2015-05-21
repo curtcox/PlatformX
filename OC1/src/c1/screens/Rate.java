@@ -5,7 +5,7 @@ import common.app.CurrentState;
 import common.domain.ServiceProvider;
 import common.screenparts.ScreenButton;
 import common.screen.ScreenLink;
-import c1.screenparts.ProviderDetailsButton;
+import common.screenparts.ProviderDetailsButton;
 import common.domain.Rating;
 import common.stores.MyRatings;
 import common.uiwidget.UIButton;

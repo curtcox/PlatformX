@@ -1,8 +1,7 @@
-package c1.screenparts;
+package common.screenparts;
 
 import common.domain.ServiceProvider;
 import common.event.StringSource;
-import common.screenparts.ScreenButton;
 import common.uiwidget.UIButton;
 
 /**
