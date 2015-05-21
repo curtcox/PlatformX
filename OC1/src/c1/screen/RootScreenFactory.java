@@ -31,14 +31,14 @@ public final class RootScreenFactory {
     
     public static ScreenFactory of(StringMap layouts, TaggedStringSources taggedLayouts) {
         return new CompositeScreenFactory(
-                new DeviceInfoScreenFactory(),
+                DeviceInfoScreenFactory.of(),
                 LocationSelectionScreenFactory.FACTORY,
                 ProviderDetailsScreen.FACTORY,
                 FilterScreenFactory.FACTORY,
                 SearchScreenFactory.FACTORY,
                 CustomComponentScreen.FACTORY,
                 dynamicScreens(layouts),
-                new IndexScreenFactory(index),
+                IndexScreenFactory.of(index),
                 new LazyScreenFactory(taggedLayouts)
         );
     }

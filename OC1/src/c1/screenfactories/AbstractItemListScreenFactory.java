@@ -11,16 +11,22 @@ import c1.screen.*;
 import c1.uilist.*;
 import common.util.Strings;
 
-public abstract class AbstractItemListScreenFactory<T>
+public final class AbstractItemListScreenFactory<T>
     implements ScreenFactory
 {
-    public AbstractItemListScreenFactory() {}
+    final ValueSupplier<T> supplier;
+
+    public AbstractItemListScreenFactory(ValueSupplier<T> supplier) {
+        this.supplier = supplier;
+    }
     
     public Screen[] create(ScreenLink link) {
-        return new Screen[] {new ItemScreen(link,newSearchableList())};
+        return new Screen[] {new ItemsScreen(link,newSearchableList())};
     }     
 
-    abstract protected List<T> getValues();
+    private List<T> getValues() {
+        return supplier.getValues();
+    }
 
     private SearchableList<T> newSearchableList() {
         SearchableList<T> list = new SearchableList(new SimpleLiveList(getValues()),new Label(),new CellConfigurer());
@@ -28,10 +34,10 @@ public abstract class AbstractItemListScreenFactory<T>
         return list;
     }
 
-private final class ItemScreen
+private final class ItemsScreen
     extends SelectionListScreen
 {
-    public ItemScreen(ScreenLink link,SearchableList values) {
+    public ItemsScreen(ScreenLink link, SearchableList values) {
         super(link,values);
     }
 

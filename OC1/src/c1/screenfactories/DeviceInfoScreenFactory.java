@@ -1,13 +1,11 @@
 package c1.screenfactories;
 
-import java.util.List;
-import c1.device.*;
+import c1.device.DeviceInfo;
+import common.screen.ScreenFactory;
 
-public final class DeviceInfoScreenFactory 
-    extends AbstractItemListScreenFactory
-{
-    protected List<DeviceKeyValuePair> getValues() {
-        return DeviceInfo.asDeviceKeyValuePairs();
+public final class DeviceInfoScreenFactory {
+
+    public static ScreenFactory of() {
+        return new AbstractItemListScreenFactory(new ListValueSupplier(DeviceInfo.asDeviceKeyValuePairs()));
     }
-
 }

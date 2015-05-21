@@ -2,7 +2,9 @@ package c1.screenfactories;
 
 import common.screen.Screen;
 import common.screen.ScreenLink;
+import fake.FakeC1RegistryLoader;
 import junit.framework.TestCase;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -14,8 +16,13 @@ import static org.junit.Assert.assertNotNull;
 
 public class IndexScreenFactoryTest {
 
-    static IndexScreenFactory indexScreenFactory(String... values) {
-        return new IndexScreenFactory(Arrays.asList(values));
+    @Before
+    public void setUp() {
+        FakeC1RegistryLoader.load();
+    }
+
+    static AbstractItemListScreenFactory indexScreenFactory(String... values) {
+        return IndexScreenFactory.of(Arrays.asList(values));
     }
 
     @Test
@@ -24,41 +31,41 @@ public class IndexScreenFactoryTest {
     }
 
     @Test
-    public void empty_index_has_no_values() {
-        assertEquals(0, indexScreenFactory().getValues().size());
-    }
-
-    @Test
-    public void index_with_3_values() {
-        assertEquals(3, indexScreenFactory("Moe","Larry","Curly").getValues().size());
-    }
-
-    @Test
-    public void index_with_1_screen() {
+    public void empty_index_returns_1_index_screen() {
         ScreenLink link = ScreenLink.of("");
-        Screen[] screens = indexScreenFactory("Moe").create(link);
+        Screen[] screens = indexScreenFactory().create(link);
+        assertEquals(1, screens.length);
+    }
+
+    @Test
+    public void index_with_3_values_returns_1_screen() {
+        ScreenLink link = ScreenLink.of("");
+        Screen[] screens = indexScreenFactory("Moe","Larry","Curly").create(link);
+        assertEquals(1, screens.length);
+    }
+
+    @Test
+    public void index_with_1_value_can_create_1_screen() {
+        ScreenLink link = ScreenLink.of("moe");
+        Screen[] screens = indexScreenFactory("moe").create(link);
         assertEquals(1, screens.length);
         Screen screen = screens[0];
-        assertEquals(link,screen.link);
+        assertEquals("moe",screen.link.tags.toString());
     }
 
     @Test
-    public void index_with_3_screens() {
-        assertEquals(3, indexScreenFactory("Moe", "Larry", "Curly").create(ScreenLink.of("")).length);
+    public void index_with_3_values_can_create_3_screens() {
+        AbstractItemListScreenFactory factory = indexScreenFactory("moe","larry","curly");
+        checkScreenFrom(factory,"moe");
+        checkScreenFrom(factory,"larry");
+        checkScreenFrom(factory, "curly");
     }
 
-    @Test
-    public void empty_index_matches_no_screens() {
-        assertEquals(0, indexScreenFactory().create(ScreenLink.of("")).length);
-    }
-
-    @Test
-    public void index_with_1_value() {
-        String value = "whatever";
-        IndexScreenFactory testObject = indexScreenFactory(value);
-        List<String> values = testObject.getValues();
-        assertEquals(1, values.size());
-        assertEquals(value, values.get(0));
+    void checkScreenFrom(AbstractItemListScreenFactory factory,String tag) {
+        Screen[] screens = factory.create(ScreenLink.of(tag));
+        assertEquals(1, screens.length);
+        Screen screen = screens[0];
+        assertEquals(tag,screen.link.tags.toString());
     }
 
 }

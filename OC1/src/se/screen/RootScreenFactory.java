@@ -7,7 +7,6 @@ import common.screen.ScreenTags;
 import common.screen.dynamic.DynamicScreenFactory;
 import common.screen.dynamic.LazyScreenFactory;
 import common.screen.dynamic.StringMapStringSource;
-import c1.app.Version;
 import common.screen.dynamic.TaggedStringSources;
 import common.util.StringMap;
 import c1.screenfactories.*;
@@ -35,14 +34,14 @@ public final class RootScreenFactory {
 
     public static ScreenFactory of(StringMap layouts, TaggedStringSources taggedLayouts) {
         return new CompositeScreenFactory(
-                new DeviceInfoScreenFactory(),
+                DeviceInfoScreenFactory.of(),
                 LocationSelectionScreenFactory.FACTORY,
                 ProviderDetailsScreen.FACTORY,
                 FilterScreenFactory.FACTORY,
                 SearchScreenFactory.FACTORY,
                 CustomComponentScreen.FACTORY,
                 dynamicScreens(layouts),
-                new IndexScreenFactory(index),
+                IndexScreenFactory.of(index),
                 new LazyScreenFactory(taggedLayouts)
         );
     }

@@ -9,7 +9,6 @@ import java.util.List;
 
 /**
  * For generating a dump of device-specific info.
- * @author Curt
  */
 public final class DeviceInfo {
 

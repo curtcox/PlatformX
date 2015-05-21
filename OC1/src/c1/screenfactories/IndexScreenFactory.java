@@ -2,16 +2,9 @@ package c1.screenfactories;
 
 import java.util.List;
 
-public final class IndexScreenFactory 
-    extends AbstractItemListScreenFactory
-{
-    private final List<String> index;
+public final class IndexScreenFactory {
 
-    public IndexScreenFactory(List<String> index) {
-        this.index = index;
-    }
-
-    protected List<String> getValues() {
-        return index;
+    public static AbstractItemListScreenFactory of(final List<String> index) {
+        return new AbstractItemListScreenFactory(new ListValueSupplier(index));
     }
 }
