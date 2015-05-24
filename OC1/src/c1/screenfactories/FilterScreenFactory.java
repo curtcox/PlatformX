@@ -12,7 +12,7 @@ import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import c1.screenparts.TypeListCellConfigurer;
 import c1.screenparts.TypeTextFilter;
-import c1.screens.FilterScreen;
+import common.screens.FilterScreen;
 import c1.uilist.SearchFilterInstaller;
 import c1.uilist.SearchableList;
 
@@ -21,7 +21,7 @@ public final class FilterScreenFactory {
     public static ScreenFactory FACTORY = GlobScreenFactory.filter("Filter", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
-            return new Screen[] {new FilterScreen(link,newSearchableList())};
+            return new Screen[]{new FilterScreen(link, newSearchableList())};
         }
     });
 

@@ -2,9 +2,9 @@ package c1.screens;
 
 import common.domain.LocationDescription;
 import common.screen.ScreenLink;
-import c1.screen.SelectionListScreen;
+import common.screen.SelectionListScreen;
 import c1.services.Locations;
-import c1.uilist.SearchableList;
+import common.uiwidget.ISearchableList;
 
 /**
  * The screen used to search for locations.
@@ -13,7 +13,7 @@ public final class LocationSelectionScreen
     extends SelectionListScreen<LocationDescription>
 {
 
-    public LocationSelectionScreen(ScreenLink link,SearchableList<LocationDescription> searchList) {
+    public LocationSelectionScreen(ScreenLink link,ISearchableList<LocationDescription> searchList) {
         super(link,searchList);
     }
 

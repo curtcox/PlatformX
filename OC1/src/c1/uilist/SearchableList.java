@@ -7,12 +7,15 @@ import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.list.ListModel;
 import c1.event.LiveList;
 import c1.uiwidget.BorderContainer;
+import common.uiwidget.ISearchableList;
 
 /**
  * A wrapper for a searchable list component.
  * @param <T> list item type
  */
-public final class SearchableList<T> {
+public final class SearchableList<T>
+    implements ISearchableList<T>
+{
 
     final TextField searchTerm = new TextField();
     final FilterListModel<T> filterListModel;

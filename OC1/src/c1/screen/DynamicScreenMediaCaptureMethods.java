@@ -10,7 +10,6 @@ import java.util.*;
 
 /**
  * A map of component methods for adding to a ScreenContext.
- * @author Curt
  */
 final class DynamicScreenMediaCaptureMethods
     extends HashMap

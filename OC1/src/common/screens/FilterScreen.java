@@ -1,9 +1,9 @@
-package c1.screens;
+package common.screens;
 
 import common.domain.Type;
 import common.screen.ScreenLink;
-import c1.screen.SelectionListScreen;
-import c1.uilist.SearchableList;
+import common.screen.SelectionListScreen;
+import common.uiwidget.ISearchableList;
 
 /**
  * For filtering provider types.
@@ -11,7 +11,7 @@ import c1.uilist.SearchableList;
 public final class FilterScreen
     extends SelectionListScreen<Type>
 {
-    public FilterScreen(ScreenLink link, SearchableList<Type> typeList) {
+    public FilterScreen(ScreenLink link, ISearchableList<Type> typeList) {
         super(link,typeList);
     }
 

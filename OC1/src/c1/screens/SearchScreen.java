@@ -4,7 +4,7 @@ import common.app.CurrentState;
 import common.Registry;
 import common.domain.ServiceProvider;
 import common.screen.ScreenLink;
-import c1.screen.SelectionListScreen;
+import common.screen.SelectionListScreen;
 import c1.uilist.SearchableList;
 
 /**

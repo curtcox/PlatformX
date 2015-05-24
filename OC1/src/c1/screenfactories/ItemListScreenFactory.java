@@ -2,13 +2,13 @@ package c1.screenfactories;
 
 import com.codename1.ui.Label;
 import java.util.List;
-
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import c1.event.*;
-import c1.screen.*;
 import c1.uilist.*;
+import common.screen.SelectionListScreen;
+import common.uiwidget.ISearchableList;
 import common.util.Strings;
 
 public final class ItemListScreenFactory<T>
@@ -28,7 +28,7 @@ public final class ItemListScreenFactory<T>
         return supplier.getValues();
     }
 
-    private SearchableList<T> newSearchableList() {
+    private ISearchableList<T> newSearchableList() {
         SearchableList<T> list = new SearchableList(new SimpleLiveList(getValues()),new Label(),new CellConfigurer());
         SearchFilterInstaller.install(list, new TextFilter());
         return list;
@@ -37,7 +37,7 @@ public final class ItemListScreenFactory<T>
 private static final class ItemsScreen
     extends SelectionListScreen
 {
-    public ItemsScreen(ScreenLink link, SearchableList values) {
+    public ItemsScreen(ScreenLink link, ISearchableList values) {
         super(link,values);
     }
 
