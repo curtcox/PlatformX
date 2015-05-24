@@ -1,5 +1,6 @@
-package c1.screens;
+package common.screenparts;
 
+import c1.screens.FakeUI;
 import common.screenparts.ProviderRatingButton;
 import common.uiwidget.UIButton;
 import fake.FakeC1RegistryLoader;
@@ -16,7 +17,7 @@ public class ProviderRatingButtonTest {
     }
  
     private UIButton createScreenButtonOnEDT() throws Exception {
-        return (UIButton) FakeUI.onEDT(new Callable(){
+        return (UIButton) FakeUI.onEDT(new Callable() {
             public Object call() throws Exception {
                 return ProviderRatingButton.of();
             }

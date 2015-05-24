@@ -1,11 +1,12 @@
 package c1.screens;
 
 import com.codename1.ui.Label;
-import c1.services.Locations;
+import common.Registry;
 import common.domain.ServiceProvider;
 import common.screenparts.ScreenButton;
 import common.screenparts.ProviderDetailsButton;
 import common.screenparts.ProviderRatingButton;
+import common.services.LocationService;
 import common.uiwidget.UIButton;
 
 /**
@@ -39,9 +40,13 @@ public final class Home {
     Runnable clearLocationSelection() {
         return new Runnable() {
             public void run() {
-                Locations.of().selectLocation(null);
+                locations().selectLocation(null);
             }
         };
+    }
+
+    LocationService locations() {
+        return Registry.get(LocationService.class);
     }
 
 }

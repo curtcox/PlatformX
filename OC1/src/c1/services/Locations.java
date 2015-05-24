@@ -5,9 +5,10 @@ import com.codename1.location.LocationListener;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
+import common.services.LocationService;
 
 public final class Locations
-    implements LocationListener
+    implements LocationService, LocationListener
 {
     private Location selected;
     private Location current;

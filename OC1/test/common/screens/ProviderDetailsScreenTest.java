@@ -1,7 +1,7 @@
-package c1.screens;
+package common.screens;
 
+import c1.screens.FakeUI;
 import common.screen.ScreenLink;
-import common.screens.ProviderDetailsScreen;
 import fake.FakeC1RegistryLoader;
 import java.util.concurrent.Callable;
 import org.junit.Test;
@@ -22,7 +22,7 @@ public class ProviderDetailsScreenTest {
     }
  
     private ProviderDetailsScreen createScreenOnEDT() throws Exception {
-        return (ProviderDetailsScreen) FakeUI.onEDT(new Callable(){
+        return (ProviderDetailsScreen) FakeUI.onEDT(new Callable() {
             public Object call() throws Exception {
                 return new ProviderDetailsScreen(ScreenLink.of("Provider Details"));
             }
