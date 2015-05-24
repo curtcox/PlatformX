@@ -1,6 +1,6 @@
 package common.screen.dynamic;
 
-import c1.screens.Home;
+import common.screens.Home;
 import common.Registry;
 import common.event.StringSource;
 import common.screen.Screen;

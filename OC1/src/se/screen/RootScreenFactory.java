@@ -11,7 +11,7 @@ import common.screen.dynamic.TaggedStringSources;
 import common.util.StringMap;
 import c1.screenfactories.*;
 import c1.screens.CustomComponentScreen;
-import c1.screens.Home;
+import common.screens.Home;
 import common.screens.ProviderDetailsScreen;
 
 import java.util.Arrays;

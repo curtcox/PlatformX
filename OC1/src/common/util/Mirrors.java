@@ -3,6 +3,8 @@ package common.util;
 import java.util.HashMap;
 import java.util.Map;
 import c1.screens.*;
+import common.screens.Home;
+import common.screens.HomeMirror;
 
 /**
  * For finding the Mirror for a given object.
