@@ -1,4 +1,4 @@
-package c1.screens;
+package common.screens;
 
 import common.uiwidget.UIComponent;
 

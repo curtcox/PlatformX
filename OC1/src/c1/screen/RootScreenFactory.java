@@ -10,11 +10,11 @@ import common.screen.dynamic.DynamicScreenFactory;
 import common.screen.dynamic.LazyScreenFactory;
 import common.screen.dynamic.StringMapStringSource;
 import common.screen.dynamic.TaggedStringSources;
+import common.screens.CustomComponentScreen;
 import common.screens.Home;
 import common.screens.ProviderDetailsScreen;
 import common.util.StringMap;
 import c1.screenfactories.*;
-import c1.screens.*;
 
 /**
  * The top-level ScreenFactory.

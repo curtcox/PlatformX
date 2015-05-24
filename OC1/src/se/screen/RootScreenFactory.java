@@ -10,7 +10,7 @@ import common.screen.dynamic.StringMapStringSource;
 import common.screen.dynamic.TaggedStringSources;
 import common.util.StringMap;
 import c1.screenfactories.*;
-import c1.screens.CustomComponentScreen;
+import common.screens.CustomComponentScreen;
 import common.screens.Home;
 import common.screens.ProviderDetailsScreen;
 

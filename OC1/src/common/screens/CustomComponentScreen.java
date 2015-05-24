@@ -1,4 +1,4 @@
-package c1.screens;
+package common.screens;
 
 import common.screen.Screen;
 import common.screen.ScreenFactory;
@@ -13,7 +13,7 @@ public final class CustomComponentScreen
     public static final ScreenFactory FACTORY = GlobScreenFactory.filter("Custom", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
-            return new Screen[] {new CustomComponentScreen(link)};
+            return new Screen[]{new CustomComponentScreen(link)};
         }
     });
 
