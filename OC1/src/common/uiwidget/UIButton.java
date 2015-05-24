@@ -3,6 +3,7 @@ package common.uiwidget;
 import common.app.CurrentState;
 import common.event.Change;
 import common.event.StringSource;
+import common.ui.TextPosition;
 
 /**
  * Skeletal implementation of a button that does something when you tap it.
@@ -15,7 +16,7 @@ public abstract class UIButton
     public String text;
 
     final String name;
-    int textPosition;
+    TextPosition textPosition;
 
     public UIButton(final String name) {
         this.name = name;
@@ -48,7 +49,7 @@ public abstract class UIButton
         return "Button:" + name;
     }
 
-    public void setTextPosition(int textPosition) {
+    public void setTextPosition(TextPosition textPosition) {
         this.textPosition = textPosition;
     }
 

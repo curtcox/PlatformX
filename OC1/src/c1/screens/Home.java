@@ -1,12 +1,12 @@
 package c1.screens;
 
-import com.codename1.ui.Label;
 import common.Registry;
 import common.domain.ServiceProvider;
 import common.screenparts.ScreenButton;
 import common.screenparts.ProviderDetailsButton;
 import common.screenparts.ProviderRatingButton;
 import common.services.LocationService;
+import common.ui.TextPosition;
 import common.uiwidget.UIButton;
 
 /**
@@ -33,7 +33,7 @@ public final class Home {
                 .action(clearLocationSelection())
                 .leadingTo("Search")
                 .build();
-        button.setTextPosition(Label.BOTTOM);
+        button.setTextPosition(TextPosition.BOTTOM);
         return button;
     }
 
