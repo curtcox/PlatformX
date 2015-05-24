@@ -1,8 +1,8 @@
 package common.uiwidget;
 
-import com.codename1.ui.events.ActionListener;
+import common.event.Action;
 
 public interface ISearchableList<T> {
-    void onSelected(ActionListener actionListener);
+    void onSelected(Action.Listener actionListener);
     T getSelected();
 }

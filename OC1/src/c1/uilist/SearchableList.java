@@ -3,10 +3,12 @@ package c1.uilist;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
+import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.list.ListModel;
 import c1.event.LiveList;
 import c1.uiwidget.BorderContainer;
+import common.event.Action;
 import common.uiwidget.ISearchableList;
 
 /**
@@ -43,8 +45,13 @@ public final class SearchableList<T>
         return new BorderContainer(searchTerm).addEast(action);
     }
     
-    public void onSelected(ActionListener actionListener) {
-        filteredList.addActionListener(actionListener);
+    public void onSelected(final Action.Listener listener) {
+        filteredList.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent actionEvent) {
+                listener.actionPerformed(new Action(actionEvent));
+            }
+        });
     }
 
     public T getSelected() {

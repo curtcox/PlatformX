@@ -5,7 +5,6 @@ import com.codename1.ui.list.ListModel;
 
 /**
  * For displaying a list of items.  Use a factory to create one.
- * @author Curt
  */
 interface IList {
     

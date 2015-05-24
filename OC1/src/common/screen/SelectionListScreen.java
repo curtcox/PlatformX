@@ -1,6 +1,6 @@
 package common.screen;
 
-import com.codename1.ui.events.*;
+import common.event.Action;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
@@ -32,8 +32,8 @@ public abstract class SelectionListScreen<T>
     }
 
     private void addSelectionListener() {
-        searchList.onSelected(new ActionListener() {
-            public void actionPerformed(ActionEvent event) {
+        searchList.onSelected(new Action.Listener() {
+            public void actionPerformed(Action event) {
                 log("selected " + getSelected());
                 followLink(useSelectedItem(getSelected()));
             }
