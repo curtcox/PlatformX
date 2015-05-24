@@ -46,12 +46,16 @@ public final class SearchableList<T>
     }
     
     public void onSelected(final Action.Listener listener) {
-        filteredList.addActionListener(new ActionListener() {
+        filteredList.addActionListener(converted(listener));
+    }
+
+    private static ActionListener converted(final Action.Listener listener) {
+        return new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {
                 listener.actionPerformed(new Action(actionEvent));
             }
-        });
+        };
     }
 
     public T getSelected() {
