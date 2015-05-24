@@ -5,6 +5,8 @@ import java.util.Map;
 import c1.screens.*;
 import common.screens.Home;
 import common.screens.HomeMirror;
+import common.screens.HowTo;
+import common.screens.HowToMirror;
 
 /**
  * For finding the Mirror for a given object.
