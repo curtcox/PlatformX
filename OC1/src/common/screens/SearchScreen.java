@@ -1,11 +1,11 @@
-package c1.screens;
+package common.screens;
 
 import common.app.CurrentState;
 import common.Registry;
 import common.domain.ServiceProvider;
 import common.screen.ScreenLink;
 import common.screen.SelectionListScreen;
-import c1.uilist.SearchableList;
+import common.uiwidget.ISearchableList;
 
 /**
  * The screen used to search for service providers.
@@ -13,7 +13,7 @@ import c1.uilist.SearchableList;
 public final class SearchScreen
     extends SelectionListScreen<ServiceProvider>
 {
-    public SearchScreen(ScreenLink link, SearchableList<ServiceProvider> searchList) {
+    public SearchScreen(ScreenLink link, ISearchableList<ServiceProvider> searchList) {
         super(link,searchList);
     }
 

@@ -9,7 +9,7 @@ import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
 import c1.event.*;
 import c1.screenparts.*;
-import c1.screens.SearchScreen;
+import common.screens.SearchScreen;
 import c1.services.ServiceProviders;
 import c1.uilist.*;
 
@@ -21,7 +21,7 @@ public final class SearchScreenFactory {
     public static ScreenFactory FACTORY = GlobScreenFactory.filter("Search", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
-            return new Screen[] {searchScreenFromArgs(link,link.args)};
+            return new Screen[]{searchScreenFromArgs(link, link.args)};
         }
     });
         
