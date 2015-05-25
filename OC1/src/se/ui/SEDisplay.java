@@ -2,9 +2,13 @@ package se.ui;
 
 import common.ui.IDisplay;
 import common.ui.IForm;
+import hash.Run;
 
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 
 public final class SEDisplay
     implements IDisplay
@@ -36,6 +40,17 @@ public final class SEDisplay
     @Override
     public IForm getCurrent() {
         return form;
+    }
+
+    @Override
+    public void execute(String url) {
+        try {
+            Desktop.getDesktop().browse(new URI(url));
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private static JFrame frame() {

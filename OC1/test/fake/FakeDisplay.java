@@ -15,4 +15,7 @@ public final class FakeDisplay
     public IForm getCurrent() {
         return null;
     }
+
+    @Override
+    public void execute(String url) {}
 }

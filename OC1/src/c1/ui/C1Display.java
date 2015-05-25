@@ -19,6 +19,11 @@ public final class C1Display
         return form instanceof IForm ? (IForm) form : null;
     }
 
+    @Override
+    public void execute(String url) {
+        display().execute(url);
+    }
+
     Form currentForm() {
         return display().getCurrent();
     }
