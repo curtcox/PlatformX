@@ -10,10 +10,10 @@ import common.uiwidget.ISearchableList;
 /**
  * The screen used to search for service providers.
  */
-public final class SearchScreen
+public final class ServiceProviderSearchScreen
     extends SelectionListScreen<ServiceProvider>
 {
-    public SearchScreen(ScreenLink link, ISearchableList<ServiceProvider> searchList) {
+    public ServiceProviderSearchScreen(ScreenLink link, ISearchableList<ServiceProvider> searchList) {
         super(link,searchList);
     }
 

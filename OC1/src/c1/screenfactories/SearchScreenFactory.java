@@ -9,7 +9,7 @@ import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
 import c1.event.*;
 import c1.screenparts.*;
-import common.screens.SearchScreen;
+import common.screens.ServiceProviderSearchScreen;
 import c1.services.ServiceProviders;
 import c1.uilist.*;
 
@@ -25,7 +25,7 @@ public final class SearchScreenFactory {
         }
     });
         
-    private static SearchScreen of(ScreenLink link) {
+    private static ServiceProviderSearchScreen of(ScreenLink link) {
         return withTypesAndRadius(link,ALL_TYPES,STARTING_RADIUS);
     }
     
@@ -36,9 +36,9 @@ public final class SearchScreenFactory {
         throw new IllegalArgumentException("args=" + Arrays.asList(args));
     }
 
-    public static SearchScreen withTypesAndRadius(ScreenLink link,Type[] types, int radius) {
+    public static ServiceProviderSearchScreen withTypesAndRadius(ScreenLink link,Type[] types, int radius) {
         SearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,radius);
-        return new SearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
+        return new ServiceProviderSearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
     }
 
     private static Type[] types(Object[] objects) {
@@ -49,9 +49,9 @@ public final class SearchScreenFactory {
         return types;
     }
     
-    public static SearchScreen withTypes(ScreenLink link,Type[] types) {
+    public static ServiceProviderSearchScreen withTypes(ScreenLink link,Type[] types) {
         SearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
-        return new SearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
+        return new ServiceProviderSearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
     }
 
     private static SearchParams zoomOutToSmallestRadiusWithMultipleHits(Type[] types, int radius) {
