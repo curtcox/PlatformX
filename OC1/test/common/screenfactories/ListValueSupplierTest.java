@@ -1,6 +1,6 @@
-package c1.screenfactories;
+package common.screenfactories;
 
-import junit.framework.TestCase;
+import common.screenfactories.ListValueSupplier;
 import org.junit.Test;
 
 import java.util.ArrayList;

@@ -1,5 +1,7 @@
 package c1.screenfactories;
 
+import common.screenfactories.ListValueSupplier;
+
 import java.util.List;
 
 public final class IndexScreenFactory {

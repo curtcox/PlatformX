@@ -8,6 +8,7 @@ import common.screen.dynamic.DynamicScreenFactory;
 import common.screen.dynamic.LazyScreenFactory;
 import common.screen.dynamic.StringMapStringSource;
 import common.screen.dynamic.TaggedStringSources;
+import common.screenfactories.DeviceInfoScreenFactory;
 import common.util.StringMap;
 import c1.screenfactories.*;
 import common.screens.CustomComponentScreen;

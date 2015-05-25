@@ -1,4 +1,6 @@
-package c1.screenfactories;
+package common.screenfactories;
+
+import c1.screenfactories.ValueSupplier;
 
 import java.util.List;
 
