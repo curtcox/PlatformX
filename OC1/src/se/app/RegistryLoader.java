@@ -12,7 +12,7 @@ import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import common.util.StringMap;
 import se.net.SERawNetwork;
-import se.screen.RootScreenFactory;
+import se.screen.SERootScreenFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
 import se.util.SimpleTaggedValueStringMap;
@@ -31,7 +31,7 @@ final class RegistryLoader {
         put(IDisplay.class,         SEDisplay.of());
         put(Network.class,          new SERawNetwork());
         putTaggedValueStringMap();
-        put(ScreenFactory.class,    RootScreenFactory.of());
+        put(ScreenFactory.class,    SERootScreenFactory.of());
         put(ScreenEditor.class,     ScreenEditor.of());
     }
 

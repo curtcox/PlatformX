@@ -10,7 +10,7 @@ import common.net.RootStringMap;
 import common.screen.ScreenFactory;
 import c1.log.*;
 import c1.net.*;
-import c1.screen.RootScreenFactory;
+import c1.screen.C1RootScreenFactory;
 import c1.services.*;
 import c1.ui.*;
 import common.log.ILogManager;
@@ -54,7 +54,7 @@ final class RegistryLoader {
         StringMap stringMap = RootStringMap.of();
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
-        put(ScreenFactory.class,    RootScreenFactory.of());
+        put(ScreenFactory.class,    C1RootScreenFactory.of());
     }
 
     static void put(Class clazz, Object object) {

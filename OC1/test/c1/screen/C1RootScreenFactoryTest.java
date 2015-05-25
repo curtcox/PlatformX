@@ -8,14 +8,13 @@ import common.screen.dynamic.StringMapAsTaggedStringSources;
 import common.screen.dynamic.TaggedStringSources;
 import common.util.SimpleStringMap;
 import common.util.StringMap;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class RootScreenFactoryTest {
+public class C1RootScreenFactoryTest {
 
     ScreenFactory testObject;
 
@@ -24,7 +23,7 @@ public class RootScreenFactoryTest {
         StringMap stringMap = new SimpleStringMap(null);
         Registry.put(StringMap.class, stringMap);
         Registry.put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
-        testObject = RootScreenFactory.of();
+        testObject = C1RootScreenFactory.of();
     }
 
     @Test
