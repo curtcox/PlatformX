@@ -5,14 +5,20 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.LookAndFeel;
 import com.codename1.ui.plaf.UIManager;
+import common.device.DeviceKeyValuePair;
+import common.device.IDeviceInfo;
+import common.device.ReportBuilder;
+
 import java.util.List;
 
 /**
  * For generating a dump of device-specific info.
  */
-public final class DeviceInfo {
+public final class DeviceInfo
+    implements IDeviceInfo
+{
 
-    public static List asDeviceKeyValuePairs() {
+    public List asDeviceKeyValuePairs() {
         return buildReport().toKeyValuePairs();
     }
 

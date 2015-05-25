@@ -1,11 +1,11 @@
-package c1.device;
+package common.device;
 
 public final class DeviceKeyValuePair {
 
     public final String key;
     public final Object value;
     
-    DeviceKeyValuePair(String key, Object value) {
+    public DeviceKeyValuePair(String key, Object value) {
         this.key = key;
         this.value = value;
     }
