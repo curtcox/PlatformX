@@ -18,7 +18,7 @@ public class IndexScreenFactoryTest {
         FakeC1RegistryLoader.load();
     }
 
-    static ItemListScreenFactory indexScreenFactory(String... values) {
+    static C1ItemListScreenFactory indexScreenFactory(String... values) {
         return IndexScreenFactory.of(Arrays.asList(values));
     }
 
@@ -52,13 +52,13 @@ public class IndexScreenFactoryTest {
 
     @Test
     public void index_with_3_values_can_create_3_screens() {
-        ItemListScreenFactory factory = indexScreenFactory("moe", "larry", "curly");
+        C1ItemListScreenFactory factory = indexScreenFactory("moe", "larry", "curly");
         checkScreenFrom(factory, "moe");
         checkScreenFrom(factory,"larry");
         checkScreenFrom(factory, "curly");
     }
 
-    void checkScreenFrom(ItemListScreenFactory factory,String tag) {
+    void checkScreenFrom(C1ItemListScreenFactory factory,String tag) {
         Screen[] screens = factory.create(ScreenLink.of(tag));
         assertEquals(1, screens.length);
         Screen screen = screens[0];

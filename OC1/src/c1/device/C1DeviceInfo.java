@@ -14,7 +14,7 @@ import java.util.List;
 /**
  * For generating a dump of device-specific info.
  */
-public final class DeviceInfo
+public final class C1DeviceInfo
     implements IDeviceInfo
 {
 

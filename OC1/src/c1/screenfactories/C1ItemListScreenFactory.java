@@ -11,12 +11,12 @@ import common.screen.SelectionListScreen;
 import common.uiwidget.ISearchableList;
 import common.util.Strings;
 
-public final class ItemListScreenFactory<T>
+final class C1ItemListScreenFactory<T>
     implements ScreenFactory
 {
     final ValueSupplier<T> supplier;
 
-    public ItemListScreenFactory(ValueSupplier<T> supplier) {
+    C1ItemListScreenFactory(ValueSupplier<T> supplier) {
         this.supplier = supplier;
     }
     

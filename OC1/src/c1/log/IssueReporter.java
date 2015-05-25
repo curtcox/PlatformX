@@ -4,7 +4,7 @@ import com.codename1.messaging.Message;
 import com.codename1.ui.Display;
 import common.Registry;
 import c1.app.Version;
-import c1.device.DeviceInfo;
+import c1.device.C1DeviceInfo;
 
 public final class IssueReporter {
 
@@ -25,7 +25,7 @@ public final class IssueReporter {
     private static String createContent() {
         StringBuilder out = new StringBuilder();
         out.append(Version.VERSION + "\r\n");
-        out.append(DeviceInfo.dump());
+        out.append(C1DeviceInfo.dump());
         out.append(getLogWriter().dump());
         return out.toString();
     }

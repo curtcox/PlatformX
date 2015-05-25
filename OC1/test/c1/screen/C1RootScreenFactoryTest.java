@@ -1,13 +1,21 @@
 package c1.screen;
 
+import c1.device.C1DeviceInfo;
+import c1.screenfactories.C1ItemListScreenFactoryFactory;
 import common.Registry;
+import common.device.IDeviceInfo;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screen.dynamic.StringMapAsTaggedStringSources;
 import common.screen.dynamic.TaggedStringSources;
+import common.screenfactories.ItemListScreenFactoryFactory;
+import common.ui.IFormFactory;
 import common.util.SimpleStringMap;
 import common.util.StringMap;
+import fake.FakeDeviceInfo;
+import fake.FakeFormFactory;
+import fake.FakeUIManager;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,6 +31,10 @@ public class C1RootScreenFactoryTest {
         StringMap stringMap = new SimpleStringMap(null);
         Registry.put(StringMap.class, stringMap);
         Registry.put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
+        Registry.put(ItemListScreenFactoryFactory.class, new C1ItemListScreenFactoryFactory());
+        Registry.put(IDeviceInfo.class, new FakeDeviceInfo());
+        Registry.put(IFormFactory.class, new FakeFormFactory());
+        FakeUIManager.of();
         testObject = C1RootScreenFactory.of();
     }
 

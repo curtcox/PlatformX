@@ -6,7 +6,7 @@ import java.util.List;
 
 public final class IndexScreenFactory {
 
-    public static ItemListScreenFactory of(final List<String> index) {
-        return new ItemListScreenFactory(new ListValueSupplier(index));
+    public static C1ItemListScreenFactory of(final List<String> index) {
+        return new C1ItemListScreenFactory(new ListValueSupplier(index));
     }
 }
