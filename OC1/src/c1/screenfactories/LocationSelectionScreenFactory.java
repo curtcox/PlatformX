@@ -10,7 +10,7 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import c1.screenparts.LocationListCellConfigurer;
-import c1.screens.LocationSelectionScreen;
+import common.screens.LocationSelectionScreen;
 import c1.uilist.ListContentInstaller;
 import c1.uilist.SearchableList;
 
@@ -19,7 +19,7 @@ public final class LocationSelectionScreenFactory {
     public static ScreenFactory FACTORY = GlobScreenFactory.filter("LocationSelection", new ScreenFactory() {
         @Override
         public Screen[] create(ScreenLink link) {
-            return new Screen[] {of(link)};
+            return new Screen[]{of(link)};
         }
     });
             

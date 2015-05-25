@@ -1,9 +1,10 @@
-package c1.screens;
+package common.screens;
 
+import common.Registry;
 import common.domain.LocationDescription;
 import common.screen.ScreenLink;
 import common.screen.SelectionListScreen;
-import c1.services.Locations;
+import common.services.LocationService;
 import common.uiwidget.ISearchableList;
 
 /**
@@ -19,8 +20,11 @@ public final class LocationSelectionScreen
 
     @Override
     protected ScreenLink useSelectedItem(LocationDescription item) {
-        Locations.of().selectLocation(item.toLocation());
+        locationService().selectLocation(item.toLocation());
         return ScreenLink.of("ProviderDetails",item);
     }
 
+    private LocationService locationService() {
+        return Registry.get(LocationService.class);
+    }
 }
