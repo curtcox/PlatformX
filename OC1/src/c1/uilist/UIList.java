@@ -4,10 +4,6 @@ import com.codename1.ui.List;
 import com.codename1.ui.list.ListCellRenderer;
 import com.codename1.ui.list.ListModel;
 
-/**
- *
- * @author Curt
- */
 final class UIList<T>
     extends List<T> 
     implements IList

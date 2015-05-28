@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\screenparts\ServiceProviderSearchParams.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenparts/ServiceProviderSearchParams.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/ServiceProviderSearchScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/ServiceProviderSearchScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/ZoomOutSearchButton.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/ZoomOutSearchButton.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\uilist\ListFilter.java" afterPath="$PROJECT_DIR$/OC1/src/common/uilist/ListFilter.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\uilist\StringToListFilter.java" afterPath="$PROJECT_DIR$/OC1/src/common/uilist/StringToListFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/uilist/FilterListModel.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/FilterListModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/uilist/ListCellConfigurer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/ListCellConfigurer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/uilist/SearchFilterInstaller.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/SearchFilterInstaller.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenparts/ServiceProviderTextFilter.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/ServiceProviderTextFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenparts/TypeTextFilter.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenparts/TypeTextFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/uilist/UIList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/UIList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -74,22 +80,22 @@
             <file leaf-file-name="C1ItemListScreenFactory.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="1309">
-                    <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="46" max-vertical-offset="1343">
+                    <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
                     <folding>
                       <element signature="imports" expanded="true" />
-                      <element signature="e#472#473#0" expanded="true" />
-                      <element signature="e#508#509#0" expanded="true" />
-                      <element signature="e#559#560#0" expanded="true" />
-                      <element signature="e#638#639#0" expanded="true" />
-                      <element signature="e#1041#1042#0" expanded="true" />
-                      <element signature="e#1075#1076#0" expanded="true" />
-                      <element signature="e#1146#1147#0" expanded="true" />
-                      <element signature="e#1199#1200#0" expanded="true" />
-                      <element signature="e#1344#1345#0" expanded="true" />
-                      <element signature="e#1400#1401#0" expanded="true" />
-                      <element signature="e#1551#1746#0" expanded="true" />
-                      <element signature="e#1745#1746#0" expanded="true" />
+                      <element signature="e#546#547#0" expanded="true" />
+                      <element signature="e#582#583#0" expanded="true" />
+                      <element signature="e#633#634#0" expanded="true" />
+                      <element signature="e#712#713#0" expanded="true" />
+                      <element signature="e#1115#1116#0" expanded="true" />
+                      <element signature="e#1149#1150#0" expanded="true" />
+                      <element signature="e#1220#1221#0" expanded="true" />
+                      <element signature="e#1273#1274#0" expanded="true" />
+                      <element signature="e#1418#1419#0" expanded="true" />
+                      <element signature="e#1474#1475#0" expanded="true" />
+                      <element signature="e#1625#1820#0" expanded="true" />
+                      <element signature="e#1819#1820#0" expanded="true" />
                     </folding>
                   </state>
                 </provider>
@@ -98,8 +104,8 @@
             <file leaf-file-name="SearchFilterInstaller.java" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/SearchFilterInstaller.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
-                    <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="459">
+                    <caret line="8" column="37" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -132,12 +138,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SERootScreenFactory.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OC1/src/se/screen/SERootScreenFactory.java">
+      <file leaf-file-name="UIList.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/UIList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.125" vertical-offset="102" max-vertical-offset="1088">
-              <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
-              <folding />
+            <state vertical-scroll-proportion="0.15" vertical-offset="0" max-vertical-offset="680">
+              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -150,12 +158,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/common/screens/ProfileScreen.java" />
-        <option value="$PROJECT_DIR$/OC1/src/c1/screens/Rate.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/screens/Rate.java" />
-        <option value="$PROJECT_DIR$/OC1/src/c1/ui/C1Display.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/ui/IDisplay.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java" />
         <option value="$PROJECT_DIR$/OC1/test/fake/FakeDisplay.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screens/SearchScreen.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screens/ServiceProviderSearchScreen.java" />
@@ -201,6 +203,12 @@
         <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/ServiceProviderSearchScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screenparts/SearchParams.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screenparts/ServiceProviderSearchParams.java" />
+        <option value="$PROJECT_DIR$/OC1/src/c1/uilist/ListFilter.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/uilist/ListFilter.java" />
+        <option value="$PROJECT_DIR$/OC1/src/c1/uilist/StringToListFilter.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/uilist/StringToListFilter.java" />
+        <option value="$PROJECT_DIR$/OC1/src/c1/uilist/UIList.java" />
+        <option value="$PROJECT_DIR$/OC1/src/c1/uilist/ListCellConfigurer.java" />
       </list>
     </option>
   </component>
@@ -303,29 +311,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="services" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="common" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="screenparts" />
+              <option name="myItemId" value="uilist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -365,7 +351,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="screenparts" />
+              <option name="myItemId" value="uilist" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -762,7 +748,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-38" width="1936" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -777,7 +763,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26632124" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1924307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1924307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="RoboVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29844558" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -858,7 +844,7 @@
           <option name="timeStamp" value="58" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="65" />
+      <option name="time" value="66" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -867,94 +853,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakeDeviceInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374">
-          <caret line="13" column="50" selection-start-line="13" selection-start-column="50" selection-end-line="13" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#274#275#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakeFormFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1" vertical-offset="0" max-vertical-offset="680">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/Registry.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/log/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2" max-vertical-offset="884">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/log/LogManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/log/LogWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="595">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/log/LogWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="578">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/log/Log.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="884">
-          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/log/IssueReporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
-          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/c1/log/LogManager.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="340">
@@ -1143,16 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenparts/ServiceProviderListCellConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.49768874" vertical-offset="0" max-vertical-offset="649">
-          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/c1/services/DistanceCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4191063" vertical-offset="0" max-vertical-offset="969">
@@ -1256,22 +1144,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="12" max-vertical-offset="1309">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="46" max-vertical-offset="1343">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#472#473#0" expanded="true" />
-            <element signature="e#508#509#0" expanded="true" />
-            <element signature="e#559#560#0" expanded="true" />
-            <element signature="e#638#639#0" expanded="true" />
-            <element signature="e#1041#1042#0" expanded="true" />
-            <element signature="e#1075#1076#0" expanded="true" />
-            <element signature="e#1146#1147#0" expanded="true" />
-            <element signature="e#1199#1200#0" expanded="true" />
-            <element signature="e#1344#1345#0" expanded="true" />
-            <element signature="e#1400#1401#0" expanded="true" />
-            <element signature="e#1551#1746#0" expanded="true" />
-            <element signature="e#1745#1746#0" expanded="true" />
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#582#583#0" expanded="true" />
+            <element signature="e#633#634#0" expanded="true" />
+            <element signature="e#712#713#0" expanded="true" />
+            <element signature="e#1115#1116#0" expanded="true" />
+            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="e#1220#1221#0" expanded="true" />
+            <element signature="e#1273#1274#0" expanded="true" />
+            <element signature="e#1418#1419#0" expanded="true" />
+            <element signature="e#1474#1475#0" expanded="true" />
+            <element signature="e#1625#1820#0" expanded="true" />
+            <element signature="e#1819#1820#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1288,14 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10897436" vertical-offset="0" max-vertical-offset="624">
           <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/VirtualListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="901">
-          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
           <folding />
         </state>
       </provider>
@@ -1338,14 +1218,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screenparts/ServiceProviderSearchParams.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.104776576" vertical-offset="0" max-vertical-offset="649">
-          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/ZoomOutSearchButton.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34822804" vertical-offset="29" max-vertical-offset="782">
@@ -1368,11 +1240,123 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screenparts/ProviderDetailsButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.175" vertical-offset="0" max-vertical-offset="680">
+          <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screenparts/ServiceProviderSearchParams.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1" vertical-offset="0" max-vertical-offset="680">
+          <caret line="4" column="36" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/screen/SERootScreenFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.125" vertical-offset="102" max-vertical-offset="1088">
-          <caret line="11" column="51" selection-start-line="11" selection-start-column="51" selection-end-line="11" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1088">
+          <caret line="20" column="24" selection-start-line="20" selection-start-column="24" selection-end-line="20" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenparts/ServiceProviderListCellConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="527">
+          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenparts/TypeTextFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/ListFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="306">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="e#103#207#0" expanded="true" />
+            <element signature="e#206#207#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/StringToListFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="187">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/BoxList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1207">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/VirtualListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="5" max-vertical-offset="901">
+          <caret line="12" column="36" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/ListCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <caret line="33" column="19" selection-start-line="33" selection-start-column="19" selection-end-line="33" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#2734#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/ListCellConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/IList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="629">
+          <caret line="8" column="10" selection-start-line="8" selection-start-column="10" selection-end-line="8" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/UIList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15" vertical-offset="0" max-vertical-offset="680">
+          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

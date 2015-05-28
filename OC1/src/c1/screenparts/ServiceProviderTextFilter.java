@@ -1,8 +1,8 @@
 package c1.screenparts;
 
 import common.domain.ServiceProvider;
-import c1.uilist.ListFilter;
-import c1.uilist.StringToListFilter;
+import common.uilist.ListFilter;
+import common.uilist.StringToListFilter;
 import common.util.Strings;
 
 /**

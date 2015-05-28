@@ -8,6 +8,8 @@ import common.screen.ScreenLink;
 import c1.event.*;
 import c1.uilist.*;
 import common.screen.SelectionListScreen;
+import common.uilist.ListFilter;
+import common.uilist.StringToListFilter;
 import common.uiwidget.ISearchableList;
 import common.util.Strings;
 

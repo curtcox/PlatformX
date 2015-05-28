@@ -1,9 +1,5 @@
-package c1.uilist;
+package common.uilist;
 
-/**
- *
- * @author Curt
- */
 public interface ListFilter<T> {
     
     public static ListFilter ALLOW_ALL = new ListFilter() {

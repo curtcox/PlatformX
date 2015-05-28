@@ -1,9 +1,5 @@
-package c1.uilist;
+package common.uilist;
 
-/**
- *
- * @author Curt
- */
 public interface StringToListFilter {
     ListFilter listFilterFor(String text);
 }
