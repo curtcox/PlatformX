@@ -2,6 +2,8 @@ package common.screenfactories;
 
 import common.screen.ScreenFactory;
 
+import java.util.List;
+
 public interface ItemListScreenFactoryFactory {
-    ScreenFactory newFactory(ListValueSupplier supplier);
+    ScreenFactory newFactory(List values);
 }

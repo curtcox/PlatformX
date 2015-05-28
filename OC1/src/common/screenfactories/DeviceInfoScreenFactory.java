@@ -7,7 +7,7 @@ import common.screen.ScreenFactory;
 public final class DeviceInfoScreenFactory {
 
     public static ScreenFactory of() {
-        return itemListScreenFactoryFactory().newFactory(new ListValueSupplier(deviceInfo().asDeviceKeyValuePairs()));
+        return itemListScreenFactoryFactory().newFactory(deviceInfo().asDeviceKeyValuePairs());
     }
 
     private static ItemListScreenFactoryFactory itemListScreenFactoryFactory() {

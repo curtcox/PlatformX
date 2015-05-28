@@ -14,22 +14,18 @@ import common.util.Strings;
 final class C1ItemListScreenFactory<T>
     implements ScreenFactory
 {
-    final ValueSupplier<T> supplier;
+    final List<T> values;
 
-    C1ItemListScreenFactory(ValueSupplier<T> supplier) {
-        this.supplier = supplier;
+    C1ItemListScreenFactory(List<T> values) {
+        this.values = values;
     }
     
     public Screen[] create(ScreenLink link) {
         return new Screen[] {new ItemsScreen(link,newSearchableList())};
     }     
 
-    private List<T> getValues() {
-        return supplier.getValues();
-    }
-
     private ISearchableList<T> newSearchableList() {
-        SearchableList<T> list = new SearchableList(new SimpleLiveList(getValues()),new Label(),new CellConfigurer());
+        SearchableList<T> list = new SearchableList(new SimpleLiveList(values),new Label(),new CellConfigurer());
         SearchFilterInstaller.install(list, new TextFilter());
         return list;
     }
