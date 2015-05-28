@@ -38,7 +38,7 @@ public final class SearchableList<T>
     }
 
     public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
-        this(IList.BOX,items,action,configurer);
+        this(C1ListFactories.BOX,items,action,configurer);
     }
 
     private Container newNorthContainer(Component action) {

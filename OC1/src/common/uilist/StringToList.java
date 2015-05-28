@@ -1,11 +1,7 @@
-package c1.uilist;
+package common.uilist;
 
 import java.util.List;
 
-/**
- *
- * @author Curt
- */
 public interface StringToList {
     List listFor(String text);
 }

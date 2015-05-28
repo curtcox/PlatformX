@@ -3,6 +3,7 @@ package c1.uilist;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.DataChangedListener;
 import common.event.SwappableList;
+import common.uilist.StringToList;
 
 /**
  *

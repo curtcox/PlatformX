@@ -2,7 +2,7 @@ package c1.screenfactories;
 
 import java.util.List;
 import c1.services.Geocoder;
-import c1.uilist.StringToList;
+import common.uilist.StringToList;
 
 final class GeocoderStringToList
     implements StringToList
