@@ -34,7 +34,7 @@ public final class Application {
     }
 
     private static void launchApp() {
-        RegistryLoader.load();
+        SERegistryLoader.load();
         tryToStartServer();
         show();
     }

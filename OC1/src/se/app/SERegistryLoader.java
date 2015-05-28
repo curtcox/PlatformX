@@ -21,7 +21,7 @@ import se.util.TaggedValueStringMap;
 /**
  * Loads the registry with all of the instances needed for startup.
  */
-final class RegistryLoader {
+final class SERegistryLoader {
 
     static void load() {
         put(ILogManager.class,      new LogManager());

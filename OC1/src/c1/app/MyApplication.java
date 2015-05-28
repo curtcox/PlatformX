@@ -20,7 +20,7 @@ public class MyApplication {
     public void init(Object context) {
         try {
             loadTheme();
-            RegistryLoader.load();
+            C1RegistryLoader.load();
             ExceptionLogger.of().install();
         } catch(IOException e){
             log(e);

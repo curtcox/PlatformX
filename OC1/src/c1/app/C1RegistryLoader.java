@@ -28,7 +28,7 @@ import common.stores.MyRatings;
 /**
  * Loads the registry with all of the instances needed for startup.
  */
-final class RegistryLoader {
+final class C1RegistryLoader {
 
     static void load() {
         loadCodenameOnePlatform();

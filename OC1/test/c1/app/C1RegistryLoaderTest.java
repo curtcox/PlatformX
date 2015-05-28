@@ -13,12 +13,11 @@ import fake.FakeDeviceInfo;
 import fake.FakeDisplay;
 import fake.FakeLocationManager;
 import fake.FakeStorage;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
 
-public class RegistryLoaderTest {
+public class C1RegistryLoaderTest {
 
     @Test
     public void load_with_fake_storage_and_raw_network() {
@@ -37,7 +36,7 @@ public class RegistryLoaderTest {
         Registry.put(IDisplay.class, new FakeDisplay());
         Registry.put(ILocationManager.class, new FakeLocationManager());
         Registry.put(IDeviceInfo.class, new FakeDeviceInfo());
-        RegistryLoader.loadPlatform();
+        C1RegistryLoader.loadPlatform();
     }
 
     private void log(String message) {
@@ -45,7 +44,7 @@ public class RegistryLoaderTest {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(RegistryLoaderTest.class);
+        return Registry.get(ILogManager.class).getLog(C1RegistryLoaderTest.class);
     }
 
 }
