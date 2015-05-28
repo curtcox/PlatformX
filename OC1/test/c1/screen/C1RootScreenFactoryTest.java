@@ -4,6 +4,7 @@ import c1.device.C1DeviceInfo;
 import c1.screenfactories.C1ItemListScreenFactoryFactory;
 import common.Registry;
 import common.device.IDeviceInfo;
+import common.log.ILogManager;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
@@ -15,6 +16,7 @@ import common.util.SimpleStringMap;
 import common.util.StringMap;
 import fake.FakeDeviceInfo;
 import fake.FakeFormFactory;
+import fake.FakeLogManager;
 import fake.FakeUIManager;
 import org.junit.Before;
 import org.junit.Test;
@@ -34,6 +36,7 @@ public class C1RootScreenFactoryTest {
         Registry.put(ItemListScreenFactoryFactory.class, new C1ItemListScreenFactoryFactory());
         Registry.put(IDeviceInfo.class, new FakeDeviceInfo());
         Registry.put(IFormFactory.class, new FakeFormFactory());
+        Registry.put(ILogManager.class, new FakeLogManager());
         FakeUIManager.of();
         testObject = C1RootScreenFactory.of();
     }

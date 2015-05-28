@@ -4,7 +4,7 @@ import common.screen.ScreenFactory;
 import common.screenfactories.ItemListScreenFactoryFactory;
 import common.screenfactories.ListValueSupplier;
 
-public class C1ItemListScreenFactoryFactory
+public final class C1ItemListScreenFactoryFactory
     implements ItemListScreenFactoryFactory
 {
     @Override

@@ -1,9 +1,12 @@
 package c1.app;
 
+import c1.device.C1DeviceInfo;
+import c1.screenfactories.C1ItemListScreenFactoryFactory;
 import com.codename1.io.Storage;
 import com.codename1.ui.Display;
 import common.Registry;
 import common.app.CurrentState;
+import common.device.IDeviceInfo;
 import common.domain.ServiceProvider;
 import common.net.Network;
 import common.net.RootStringMap;
@@ -16,6 +19,7 @@ import c1.ui.*;
 import common.log.ILogManager;
 import common.screen.dynamic.StringMapAsTaggedStringSources;
 import common.screen.dynamic.TaggedStringSources;
+import common.screenfactories.ItemListScreenFactoryFactory;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import common.util.*;
@@ -37,6 +41,7 @@ final class RegistryLoader {
         put(IDisplay.class,         new C1Display());
         put(Display.class,          Display.getInstance());
         put(ILocationManager.class, new LocationManager());
+        put(IDeviceInfo.class,      new C1DeviceInfo());
     }
 
     static void loadPlatform() {
@@ -54,6 +59,7 @@ final class RegistryLoader {
         StringMap stringMap = RootStringMap.of();
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
+        put(ItemListScreenFactoryFactory.class, new C1ItemListScreenFactoryFactory());
         put(ScreenFactory.class,    C1RootScreenFactory.of());
     }
 

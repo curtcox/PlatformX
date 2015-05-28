@@ -3,12 +3,13 @@ package c1.app;
 import c1.net.RawNetwork;
 import c1.services.ILocationManager;
 import com.codename1.io.Storage;
-import com.codename1.ui.Display;
 import common.Registry;
+import common.device.IDeviceInfo;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.net.Network;
 import common.ui.IDisplay;
+import fake.FakeDeviceInfo;
 import fake.FakeDisplay;
 import fake.FakeLocationManager;
 import fake.FakeStorage;
@@ -35,6 +36,7 @@ public class RegistryLoaderTest {
         Registry.put(Network.class, new RawNetwork());
         Registry.put(IDisplay.class, new FakeDisplay());
         Registry.put(ILocationManager.class, new FakeLocationManager());
+        Registry.put(IDeviceInfo.class, new FakeDeviceInfo());
         RegistryLoader.loadPlatform();
     }
 
