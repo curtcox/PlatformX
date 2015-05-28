@@ -2,16 +2,12 @@ package c1.screenparts;
 
 import common.domain.Type;
 
-/**
- *
- * @author Curt
- */
-public final class SearchParams {
+public final class ServiceProviderSearchParams {
     
     public final int radius;
     public final Type[] types;
 
-    public SearchParams(Type[] types, int radius) {
+    public ServiceProviderSearchParams(Type[] types, int radius) {
         this.radius = radius;
         this.types = types;
     }
@@ -36,8 +32,8 @@ public final class SearchParams {
         return (radius<1000) ? radius + "m" : radius / 1000 + "K";     
     }
 
-    public SearchParams zoomOut() {
-        return new SearchParams(types,bigger(radius));
+    public ServiceProviderSearchParams zoomOut() {
+        return new ServiceProviderSearchParams(types,bigger(radius));
     }
 
     private int bigger(int radius) {

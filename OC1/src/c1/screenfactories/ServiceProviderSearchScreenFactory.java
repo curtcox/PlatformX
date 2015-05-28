@@ -39,7 +39,7 @@ public final class ServiceProviderSearchScreenFactory {
     }
 
     public static ServiceProviderSearchScreen withTypesAndRadius(ScreenLink link,Type[] types, int radius) {
-        SearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,radius);
+        ServiceProviderSearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,radius);
         return new ServiceProviderSearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
     }
 
@@ -52,12 +52,12 @@ public final class ServiceProviderSearchScreenFactory {
     }
     
     public static ServiceProviderSearchScreen withTypes(ScreenLink link,Type[] types) {
-        SearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
+        ServiceProviderSearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
         return new ServiceProviderSearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
     }
 
-    private static SearchParams zoomOutToSmallestRadiusWithMultipleHits(Type[] types, int radius) {
-        SearchParams searchParams = new SearchParams(types,radius);
+    private static ServiceProviderSearchParams zoomOutToSmallestRadiusWithMultipleHits(Type[] types, int radius) {
+        ServiceProviderSearchParams searchParams = new ServiceProviderSearchParams(types,radius);
         List<ServiceProvider> providers = getProviders(searchParams);
         while (searchParams.couldZoomOut() && providers.size()<2) {
             searchParams = searchParams.zoomOut();
@@ -66,7 +66,7 @@ public final class ServiceProviderSearchScreenFactory {
         return searchParams;
     }
     
-    private static SearchableList<ServiceProvider> newSearchableList(List<ServiceProvider> providers,SearchParams searchParams) {
+    private static SearchableList<ServiceProvider> newSearchableList(List<ServiceProvider> providers,ServiceProviderSearchParams searchParams) {
         SwappableList<ServiceProvider> swappable = new SimpleSwappableList(providers);
         ZoomOutSearchButton zoomButton = new ZoomOutSearchButton(searchParams,swappable);
         SearchableList list = null;//new SearchableList(swappable,zoomButton,new ServiceProviderListCellConfigurer());
@@ -74,7 +74,7 @@ public final class ServiceProviderSearchScreenFactory {
         return list;
     }
 
-    private static List<ServiceProvider> getProviders(SearchParams searchParams) {
+    private static List<ServiceProvider> getProviders(ServiceProviderSearchParams searchParams) {
         return ServiceProviders.of().nearby(searchParams.types,searchParams.radius);
     }
 
