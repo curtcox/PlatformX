@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\screenfactories\ValueSupplier.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ListValueSupplier.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\screenfactories\ListValueSupplierTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactoryFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenfactories/DeviceInfoScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/DeviceInfoScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/IndexScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/IndexScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenfactories/ItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/ItemListScreenFactoryFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/IndexScreenFactory.java" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\screenfactories\IndexScreenFactory.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screen/C1RootScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screen/C1RootScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/screen/SERootScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/screen/SERootScreenFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -140,9 +137,11 @@
       <file leaf-file-name="SERootScreenFactory.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/OC1/src/se/screen/SERootScreenFactory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.075" vertical-offset="0" max-vertical-offset="1037">
-              <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-              <folding />
+            <state vertical-scroll-proportion="0.725" vertical-offset="68" max-vertical-offset="1054">
+              <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -155,8 +154,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/c1/screen/SelectionListScreen.java" />
-        <option value="$PROJECT_DIR$/OC1/src/c1/screen/DynamicScreenMediaCaptureMethods.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/event/IActionListener.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screens/FilterScreen.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screens/LocationSelectionScreen.java" />
@@ -182,7 +179,6 @@
         <option value="$PROJECT_DIR$/OC1/src/common/screens/ServiceProviderSearchScreen.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/screen/RootScreenFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/screen/RootScreenFactory.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/screen/SERootScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screen/RootScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screen/C1RootScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/test/c1/screen/SEC1RootScreenFactoryTest.java" />
@@ -204,8 +200,11 @@
         <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactoryFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screenfactories/ItemListScreenFactoryFactory.java" />
-        <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/IndexScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screenfactories/DeviceInfoScreenFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/IndexScreenFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/screenfactories/IndexScreenFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/screen/SERootScreenFactory.java" />
       </list>
     </option>
   </component>
@@ -255,60 +254,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="se" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1217,45 +1162,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactoryFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="680">
-          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#309#310#0" expanded="true" />
-            <element signature="e#367#368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screenfactories/DeviceInfoScreenFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.25" vertical-offset="0" max-vertical-offset="680">
-          <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screenfactories/ItemListScreenFactoryFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.175" vertical-offset="0" max-vertical-offset="680">
           <caret line="7" column="40" selection-start-line="7" selection-start-column="40" selection-end-line="7" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/IndexScreenFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05" vertical-offset="0" max-vertical-offset="680">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="e#165#166#0" expanded="true" />
-            <element signature="e#222#223#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1278,10 +1190,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/screen/SERootScreenFactory.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screenfactories/DeviceInfoScreenFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.075" vertical-offset="0" max-vertical-offset="1037">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="680">
+          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenComponentMethods.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17120181" vertical-offset="393" max-vertical-offset="1377">
+          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1308,11 +1230,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenComponentMethods.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17120181" vertical-offset="393" max-vertical-offset="1377">
-          <caret line="40" column="37" selection-start-line="40" selection-start-column="37" selection-end-line="40" selection-end-column="37" />
-          <folding />
+        <state vertical-scroll-proportion="1.0279412" vertical-offset="270" max-vertical-offset="1207">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#561#562#0" expanded="true" />
+            <element signature="e#628#629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactoryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2" vertical-offset="0" max-vertical-offset="680">
+          <caret line="8" column="34" selection-start-line="8" selection-start-column="34" selection-end-line="8" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screenfactories/IndexScreenFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25" vertical-offset="0" max-vertical-offset="680">
+          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#280#281#0" expanded="true" />
+            <element signature="e#337#338#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/screen/SERootScreenFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.725" vertical-offset="68" max-vertical-offset="1054">
+          <caret line="33" column="53" selection-start-line="33" selection-start-column="53" selection-end-line="33" selection-end-column="53" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

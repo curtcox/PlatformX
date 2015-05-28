@@ -14,6 +14,7 @@ import c1.screenfactories.*;
 import common.screens.CustomComponentScreen;
 import common.screens.Home;
 import common.screens.ProviderDetailsScreen;
+import common.screenfactories.IndexScreenFactory;
 
 import java.util.Arrays;
 import java.util.List;

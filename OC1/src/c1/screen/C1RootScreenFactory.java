@@ -16,6 +16,7 @@ import common.screens.Home;
 import common.screens.ProviderDetailsScreen;
 import common.util.StringMap;
 import c1.screenfactories.*;
+import common.screenfactories.IndexScreenFactory;
 
 /**
  * The top-level ScreenFactory.
