@@ -3,7 +3,7 @@ package c1.screenfactories;
 import java.util.List;
 import common.domain.ServiceProvider;
 import common.event.SwappableList;
-import c1.screenparts.ServiceProviderSearchParams;
+import common.screenparts.ServiceProviderSearchParams;
 import common.services.ServiceProviders;
 import common.uiwidget.UIButton;
 

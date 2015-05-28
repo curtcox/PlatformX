@@ -2,6 +2,7 @@ package c1.screenfactories;
 
 import java.util.*;
 
+import common.screenparts.ServiceProviderSearchParams;
 import common.services.ServiceProviders;
 import common.Registry;
 import common.domain.*;

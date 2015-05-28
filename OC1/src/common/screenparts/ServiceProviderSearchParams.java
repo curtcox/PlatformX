@@ -1,4 +1,4 @@
-package c1.screenparts;
+package common.screenparts;
 
 import common.domain.Type;
 
