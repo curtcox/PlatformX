@@ -1,6 +1,9 @@
 package c1.screenfactories;
 
 import java.util.*;
+
+import c1.services.ServiceProviders;
+import common.Registry;
 import common.domain.*;
 import common.event.SwappableList;
 import common.screen.Screen;
@@ -10,10 +13,9 @@ import common.screen.dynamic.GlobScreenFactory;
 import c1.event.*;
 import c1.screenparts.*;
 import common.screens.ServiceProviderSearchScreen;
-import c1.services.ServiceProviders;
 import c1.uilist.*;
 
-public final class SearchScreenFactory {
+public final class ServiceProviderSearchScreenFactory {
     
     private static final int STARTING_RADIUS = 100;
     private static final Type[] ALL_TYPES = new Type[0];
@@ -30,9 +32,9 @@ public final class SearchScreenFactory {
     }
     
     private static Screen searchScreenFromArgs(ScreenLink link,Object[] args) {
-        if (args.length==0) return SearchScreenFactory.of(link);
-        if (args.length==1) return SearchScreenFactory.withTypes(link,types(args));
-        if (args.length==2) return SearchScreenFactory.withTypesAndRadius(link,types((Object[])args[0]),(Integer)args[1]);
+        if (args.length==0) return ServiceProviderSearchScreenFactory.of(link);
+        if (args.length==1) return ServiceProviderSearchScreenFactory.withTypes(link, types(args));
+        if (args.length==2) return ServiceProviderSearchScreenFactory.withTypesAndRadius(link, types((Object[]) args[0]), (Integer) args[1]);
         throw new IllegalArgumentException("args=" + Arrays.asList(args));
     }
 
@@ -76,4 +78,7 @@ public final class SearchScreenFactory {
         return ServiceProviders.of().nearby(searchParams.types,searchParams.radius);
     }
 
+    private static ServiceProviders serviceProviders() {
+        return Registry.get(ServiceProviders.class);
+    }
 }

@@ -16,7 +16,7 @@ import common.screens.FilterScreen;
 import c1.uilist.SearchFilterInstaller;
 import c1.uilist.SearchableList;
 
-public final class FilterScreenFactory {
+public final class ServiceProviderFilterScreenFactory {
 
     public static ScreenFactory FACTORY = GlobScreenFactory.filter("Filter", new ScreenFactory() {
         @Override

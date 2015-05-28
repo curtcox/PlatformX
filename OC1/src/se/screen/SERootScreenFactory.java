@@ -1,5 +1,8 @@
 package se.screen;
 
+import c1.screenfactories.ServiceProviderFilterScreenFactory;
+import c1.screenfactories.LocationSelectionScreenFactory;
+import c1.screenfactories.ServiceProviderSearchScreenFactory;
 import common.Registry;
 import common.screen.CompositeScreenFactory;
 import common.screen.ScreenFactory;
@@ -10,7 +13,6 @@ import common.screen.dynamic.StringMapStringSource;
 import common.screen.dynamic.TaggedStringSources;
 import common.screenfactories.DeviceInfoScreenFactory;
 import common.util.StringMap;
-import c1.screenfactories.*;
 import common.screens.CustomComponentScreen;
 import common.screens.Home;
 import common.screens.ProviderDetailsScreen;
@@ -39,8 +41,8 @@ public final class SERootScreenFactory {
                 DeviceInfoScreenFactory.of(),
                 LocationSelectionScreenFactory.FACTORY,
                 ProviderDetailsScreen.FACTORY,
-                FilterScreenFactory.FACTORY,
-                SearchScreenFactory.FACTORY,
+                ServiceProviderFilterScreenFactory.FACTORY,
+                ServiceProviderSearchScreenFactory.FACTORY,
                 CustomComponentScreen.FACTORY,
                 dynamicScreens(layouts),
                 IndexScreenFactory.of(index),

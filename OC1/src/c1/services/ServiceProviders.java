@@ -30,13 +30,17 @@ public final class ServiceProviders {
     }
 
     private List<Place> placesNearHere(Type[] types, int radius) {
-        Location currentLocation = Locations.of().getCurrentLocation();
+        Location currentLocation = locations().getCurrentLocation();
         if (currentLocation==null) {
             return new ArrayList<Place>();
         }
         double latitude = currentLocation.getLatitude();
         double longitude = currentLocation.getLongitude();
         return places.nearbySearch(latitude, longitude, radius,asStrings(types));
+    }
+
+    private Locations locations() {
+        return Locations.of();
     }
 
     private String[] asStrings(Type[] types) {
