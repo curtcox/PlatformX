@@ -1,6 +1,6 @@
 package common.domain;
 
-import com.codename1.location.Location;
+import common.services.LocationReading;
 
 public final class LocationDescription {
 
@@ -14,11 +14,8 @@ public final class LocationDescription {
         this.longitude = longitude;
     }
 
-    public Location toLocation() {
-        Location location = new Location();
-        location.setLongitude(longitude);
-        location.setLatitude(latitude);
-        return location;
+    public LocationReading toLocation() {
+        return new LocationReading(latitude,longitude);
     }
 
     @Override

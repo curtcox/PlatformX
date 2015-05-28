@@ -2,13 +2,12 @@ package c1.app;
 
 import c1.services.ILocationManager;
 import com.codename1.io.Storage;
-import com.codename1.location.LocationManager;
 import common.Registry;
 import common.app.CurrentState;
 import fake.FakeLocationManager;
 import fake.FakeStorage;
 import common.event.Change;
-import c1.services.Locations;
+import c1.services.C1Locations;
 import c1.services.ServiceProviders;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -31,7 +30,7 @@ public class CurrentStateTest {
     public void setUp() {
         Registry.put(Storage.class, new FakeStorage());
         Registry.put(ILocationManager.class, new FakeLocationManager());
-        Registry.put(Locations.class, new Locations());
+        Registry.put(C1Locations.class, new C1Locations());
         Registry.put(ServiceProviders.class, new ServiceProviders());
         testObject = new CurrentState();
     }

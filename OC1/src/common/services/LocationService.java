@@ -1,9 +1,10 @@
 package common.services;
 
-import com.codename1.location.Location;
-
 public interface LocationService {
 
-    void selectLocation(Location selected);
+    void selectLocation(LocationReading selected);
 
+    LocationReading getCurrentLocation();
+
+    int calculateDistance(LocationReading location, LocationReading currentLocation);
 }

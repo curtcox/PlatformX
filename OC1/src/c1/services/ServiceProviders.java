@@ -1,6 +1,7 @@
 package c1.services;
 
-import com.codename1.location.Location;
+import common.services.LocationReading;
+import common.services.LocationService;
 import google.Place;
 import google.PlacesSearch;
 import java.util.ArrayList;
@@ -30,17 +31,17 @@ public final class ServiceProviders {
     }
 
     private List<Place> placesNearHere(Type[] types, int radius) {
-        Location currentLocation = locations().getCurrentLocation();
+        LocationReading currentLocation = locations().getCurrentLocation();
         if (currentLocation==null) {
             return new ArrayList<Place>();
         }
-        double latitude = currentLocation.getLatitude();
-        double longitude = currentLocation.getLongitude();
+        double latitude = currentLocation.latitude;
+        double longitude = currentLocation.longitude;
         return places.nearbySearch(latitude, longitude, radius,asStrings(types));
     }
 
-    private Locations locations() {
-        return Locations.of();
+    private LocationService locations() {
+        return Registry.get(LocationService.class);
     }
 
     private String[] asStrings(Type[] types) {
@@ -61,11 +62,8 @@ public final class ServiceProviders {
         );
     }
 
-    private Location locationFromPlace(Place place) {
-        Location location = new Location();
-        location.setLatitude(place.latitude);
-        location.setLongitude(place.longitude);
-        return location;
+    private LocationReading locationFromPlace(Place place) {
+        return new LocationReading(place.latitude,place.longitude);
     }
 
     private Type[] typesFromPlace(Place place) {

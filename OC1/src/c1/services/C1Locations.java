@@ -5,21 +5,27 @@ import com.codename1.location.LocationListener;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
+import common.services.LocationReading;
 import common.services.LocationService;
 
-public final class Locations
+public final class C1Locations
     implements LocationService, LocationListener
 {
     private Location selected;
     private Location current;
     
-    public Locations() {
+    public C1Locations() {
         ILocationManager manager = Registry.get(ILocationManager.class);
         manager.setLocationListener(this);
     }
 
-    public void selectLocation(Location selected) {
-        this.selected = selected;
+    public void selectLocation(LocationReading selected) {
+        this.selected = convert(selected);
+    }
+
+    private Location convert(LocationReading selected) {
+        Location location = new Location();
+        return location;
     }
 
     public void locationUpdated(Location location) {
@@ -28,25 +34,34 @@ public final class Locations
 
     public void providerStateChanged(int newState) {}
     
-    public static Locations of() {
-        return Registry.get(Locations.class);
+    public static C1Locations of() {
+        return Registry.get(C1Locations.class);
     }
 
     private ILocationManager getManager() {
         return Registry.get(ILocationManager.class);
     }
 
-    public Location getCurrentLocation() {
+    public LocationReading getCurrentLocation() {
         if (selected!=null) {
-            return selected;
+            return convert(selected);
         }
         try {
-            return realGetCurrentLocation();
+            return convert(realGetCurrentLocation());
         } catch (RuntimeException e) {
             // This can happen.  Set git for more info. 
             log(e);
             return null;
         }
+    }
+
+    @Override
+    public int calculateDistance(LocationReading location, LocationReading currentLocation) {
+        return 0;
+    }
+
+    private LocationReading convert(Location selected) {
+        return null;
     }
 
     private Location realGetCurrentLocation() {
@@ -70,7 +85,7 @@ public final class Locations
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(Locations.class);
+        return Registry.get(ILogManager.class).getLog(C1Locations.class);
     }
 
 }

@@ -50,7 +50,7 @@ final class C1RegistryLoader {
         put(LogWriter.class,        new LogWriter());
         put(IFormFactory.class,     new C1FormFactory());
         put(MyRatings.class,        new MyRatings());
-        put(Locations.class,        new Locations());
+        put(C1Locations.class,        new C1Locations());
         put(ServiceProvider.class,  ServiceProvider.NULL);
         put(ServiceProviders.class, new ServiceProviders());
         put(Geocoder.class,         new Geocoder());
