@@ -2,7 +2,7 @@ package c1.screenfactories;
 
 import java.util.*;
 
-import c1.services.ServiceProviders;
+import common.services.ServiceProviders;
 import common.Registry;
 import common.domain.*;
 import common.event.SwappableList;

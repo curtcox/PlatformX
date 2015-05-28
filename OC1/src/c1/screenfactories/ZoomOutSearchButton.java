@@ -4,7 +4,7 @@ import java.util.List;
 import common.domain.ServiceProvider;
 import common.event.SwappableList;
 import c1.screenparts.SearchParams;
-import c1.services.ServiceProviders;
+import common.services.ServiceProviders;
 import common.uiwidget.UIButton;
 
 final class ZoomOutSearchButton

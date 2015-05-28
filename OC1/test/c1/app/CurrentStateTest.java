@@ -8,7 +8,7 @@ import fake.FakeLocationManager;
 import fake.FakeStorage;
 import common.event.Change;
 import c1.services.C1Locations;
-import c1.services.ServiceProviders;
+import common.services.ServiceProviders;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;

@@ -11,7 +11,7 @@ import common.domain.ServiceProvider;
 import c1.log.LogManager;
 import c1.log.LogWriter;
 import c1.services.C1Locations;
-import c1.services.ServiceProviders;
+import common.services.ServiceProviders;
 import c1.ui.C1FormFactory;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;

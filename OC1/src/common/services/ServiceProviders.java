@@ -1,7 +1,5 @@
-package c1.services;
+package common.services;
 
-import common.services.LocationReading;
-import common.services.LocationService;
 import google.Place;
 import google.PlacesSearch;
 import java.util.ArrayList;
