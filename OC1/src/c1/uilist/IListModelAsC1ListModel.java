@@ -5,10 +5,10 @@ import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;
 import common.uilist.IListModel;
 
-public final class IListModelAsListModel
+public final class IListModelAsC1ListModel
    implements ListModel
 {
-    public IListModelAsListModel(IListModel model) {
+    public IListModelAsC1ListModel(IListModel model) {
 
     }
 

@@ -18,9 +18,9 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 
-final class DebugList<T> extends List<T> {
+final class C1DebugList<T> extends List<T> {
 
-    DebugList(ListModel model) {
+    C1DebugList(ListModel model) {
         super(model);
     }
     
@@ -567,7 +567,7 @@ final class DebugList<T> extends List<T> {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(DebugList.class);
+        return Registry.get(ILogManager.class).getLog(C1DebugList.class);
     }
 
 }

@@ -67,11 +67,11 @@ public final class ServiceProviderSearchScreenFactory {
         return searchParams;
     }
     
-    private static SearchableList<ServiceProvider> newSearchableList(List<ServiceProvider> providers,ServiceProviderSearchParams searchParams) {
+    private static C1SearchableList<ServiceProvider> newSearchableList(List<ServiceProvider> providers,ServiceProviderSearchParams searchParams) {
         SwappableList<ServiceProvider> swappable = new SimpleSwappableList(providers);
         ZoomOutSearchButton zoomButton = new ZoomOutSearchButton(searchParams,swappable);
-        SearchableList list = null;//new SearchableList(swappable,zoomButton,new ServiceProviderListCellConfigurer());
-        SearchFilterInstaller.install(list, new ServiceProviderTextFilter());
+        C1SearchableList list = null;//new SearchableList(swappable,zoomButton,new ServiceProviderListCellConfigurer());
+        C1SearchFilterInstaller.install(list, new ServiceProviderTextFilter());
         return list;
     }
 

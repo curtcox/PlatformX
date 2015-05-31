@@ -5,15 +5,15 @@ import com.codename1.ui.list.ListModel;
 import common.event.Action;
 import common.uilist.UIList;
 
-final class UIContainerList<T>
+final class C1UIContainerList<T>
     extends ContainerList 
     implements UIList
 {
-    UIContainerList(ListModel model) {
+    C1UIContainerList(ListModel model) {
         super(model);
     }
 
-    public void setCellRenderer(BasicListCellRenderer renderer) {
+    public void setCellRenderer(C1BasicListCellRenderer renderer) {
         super.setRenderer(renderer);
     }
 

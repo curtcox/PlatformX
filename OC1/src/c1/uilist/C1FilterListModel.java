@@ -35,7 +35,7 @@ import java.util.ArrayList;
  *
  * @author Shai Almog
  */
-public final class FilterListModel<T>
+public final class C1FilterListModel<T>
     implements ListModel<T>, DataChangedListener
 {
     private final ListModel<T> underlying;
@@ -47,7 +47,7 @@ public final class FilterListModel<T>
      * The proxy is applied to the actual model and effectively hides it
      * @param underlying the "real" model for the list
      */
-    public FilterListModel(ListModel<T> underlying) {
+    public C1FilterListModel(ListModel<T> underlying) {
         this.underlying = underlying;
         this.filter = ListFilter.ALLOW_ALL;
         calculateOffsets();

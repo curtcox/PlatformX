@@ -16,12 +16,12 @@ import common.uiwidget.ISearchableList;
  * A wrapper for a searchable list component.
  * @param <T> list item type
  */
-public final class SearchableList<T>
+public final class C1SearchableList<T>
     implements ISearchableList<T>
 {
 
     final TextField searchTerm = new TextField();
-    final FilterListModel<T> filterListModel;
+    final C1FilterListModel<T> filterListModel;
     private final ListModel<T> underlyingListModel;
     private final UIList filteredList;
 
@@ -30,19 +30,19 @@ public final class SearchableList<T>
      */
     public final Component component;
 
-    private SearchableList(UIList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer) {
-        underlyingListModel = VirtualListModel.of(items);
-        filterListModel = new FilterListModel(underlyingListModel);
+    private C1SearchableList(UIList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer) {
+        underlyingListModel = C1VirtualListModel.of(items);
+        filterListModel = new C1FilterListModel(underlyingListModel);
         filteredList = factory.of(convert(filterListModel),configurer);
         component = new BorderContainer((Component)filteredList)
              .addNorth(newNorthContainer(action));
     }
 
-    private IListModel convert(FilterListModel<T> filterListModel) {
+    private IListModel convert(C1FilterListModel<T> filterListModel) {
         return null;
     }
 
-    public SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
+    public C1SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
         this(C1ListFactories.BOX,items,action,configurer);
     }
 

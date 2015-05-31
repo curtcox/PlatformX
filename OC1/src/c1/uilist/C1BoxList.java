@@ -15,7 +15,7 @@ import common.uilist.UIList;
  * For displaying items from a ListModel.
  * This class exists as an attempt to bypass a UI freeze with List.
  */
-final class BoxList
+final class C1BoxList
     extends Container
     implements UIList
 {
@@ -24,7 +24,7 @@ final class BoxList
     private final ListCellConfigurer configurer;
     private int selectedIndex;
     
-    BoxList(ListModel model, ListCellConfigurer configurer) {
+    C1BoxList(ListModel model, ListCellConfigurer configurer) {
         this.model = model;
         this.configurer = configurer;
         addCellsFromModel();
@@ -36,7 +36,7 @@ final class BoxList
         model.addDataChangedListener(new DataChangedListener() {
             public void dataChanged(int type, int index) {
                 addCellsFromModel();
-                BoxList.this.repaint();
+                C1BoxList.this.repaint();
             }
         });
     }
@@ -56,8 +56,8 @@ final class BoxList
         }
     }
 
-    private ListCell newListCell(ListCellConfigurer configurer,final int index) {
-        ListCell cell = new ListCell();
+    private C1ListCell newListCell(ListCellConfigurer configurer,final int index) {
+        C1ListCell cell = new C1ListCell();
         configurer.configureButton(cell, model.getItemAt(index));
         cell.setLeadComponent(cell.firstRow);
         addSelectedListener(cell.firstRow,index);

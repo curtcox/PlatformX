@@ -31,16 +31,16 @@ import com.codename1.ui.list.CellRenderer;
 import com.codename1.ui.list.ListCellRenderer;
 import common.uilist.ListCellConfigurer;
 
-public final class BasicListCellRenderer<T>
+public final class C1BasicListCellRenderer<T>
     implements ListCellRenderer<T>, CellRenderer<T>
 {
     private final Label focusComponent = new Label();
-    private final ListCell selected = new ListCell();
-    private final ListCell unselected = new ListCell();
+    private final C1ListCell selected = new C1ListCell();
+    private final C1ListCell unselected = new C1ListCell();
     private final Label selectedEntries;
     private final ListCellConfigurer configurer;
     
-    public BasicListCellRenderer(ListCellConfigurer configurer) {
+    public C1BasicListCellRenderer(ListCellConfigurer configurer) {
         this.configurer = configurer;
         focusComponent.setUIID(selected.getUIID() + "Focus");
         focusComponent.setFocus(true);
@@ -50,7 +50,7 @@ public final class BasicListCellRenderer<T>
     /**
      * @inheritDoc
      */
-    public ListCell getCellRendererComponent(Component list, Object model, T value, int index, boolean isSelected) {
+    public C1ListCell getCellRendererComponent(Component list, Object model, T value, int index, boolean isSelected) {
         if (shouldTreatAsSelected(list,isSelected)) {
             Label entries = selectedEntries;
             selected.setFocus(true);
@@ -64,7 +64,7 @@ public final class BasicListCellRenderer<T>
         }
     }
 
-    private void configure(ListCell cell, T value) {
+    private void configure(C1ListCell cell, T value) {
         configurer.configureButton(cell, value);
     }
     
@@ -89,11 +89,11 @@ public final class BasicListCellRenderer<T>
         return focusComponent;
     }
 
-    public ListCell getSelected() {
+    public C1ListCell getSelected() {
         return selected;
     }
 
-    public ListCell getUnselected() {
+    public C1ListCell getUnselected() {
         return unselected;
     }
 }

@@ -11,8 +11,8 @@ import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screenparts.LocationListCellConfigurer;
 import common.screens.LocationSelectionScreen;
-import c1.uilist.ListContentInstaller;
-import c1.uilist.SearchableList;
+import c1.uilist.C1ListContentInstaller;
+import c1.uilist.C1SearchableList;
 
 public final class LocationSelectionScreenFactory {
 
@@ -24,18 +24,18 @@ public final class LocationSelectionScreenFactory {
     });
             
     static LocationSelectionScreen of(ScreenLink link) {
-        SearchableList<LocationDescription> searchList = newSearchableList();
+        C1SearchableList<LocationDescription> searchList = newSearchableList();
         return new LocationSelectionScreen(link,searchList);
     }
     
-    private static SearchableList<LocationDescription> newSearchableList(LiveList locations) {
-        return new SearchableList(locations,new Label(),new LocationListCellConfigurer());
+    private static C1SearchableList<LocationDescription> newSearchableList(LiveList locations) {
+        return new C1SearchableList(locations,new Label(),new LocationListCellConfigurer());
     }
 
-    private static SearchableList<LocationDescription> newSearchableList() {
+    private static C1SearchableList<LocationDescription> newSearchableList() {
         SwappableList<LocationDescription> locations = new SimpleSwappableList();
-        SearchableList<LocationDescription> list = newSearchableList(locations);
-        ListContentInstaller.install(list, locations,new GeocoderStringToList());
+        C1SearchableList<LocationDescription> list = newSearchableList(locations);
+        C1ListContentInstaller.install(list, locations, new GeocoderStringToList());
         return list;
     }
 

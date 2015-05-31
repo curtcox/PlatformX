@@ -35,7 +35,7 @@ import java.net.URI;
 /**
  * A compound list cell.
  */
-public final class ListCell
+public final class C1ListCell
     extends Container
     implements IListCell
 {
@@ -46,7 +46,7 @@ public final class ListCell
     /**
      * Default constructor allowing the designer to create an instance of this class
      */
-    public ListCell() {
+    public C1ListCell() {
         setLayout(new BorderLayout());
         addComponent(BorderLayout.CENTER, createLabelsBorder(firstRow,secondRow));
         addComponent(BorderLayout.WEST, createIconContainer(icon));

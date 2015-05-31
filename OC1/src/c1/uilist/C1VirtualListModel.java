@@ -9,7 +9,7 @@ import c1.event.LiveList;
 /**
  * A ListModel that uses a given list to store its elements.
  */
-public final class VirtualListModel<T>
+public final class C1VirtualListModel<T>
     implements ListModel<T>, DataChangedListener
 {
     private int index;
@@ -17,12 +17,12 @@ public final class VirtualListModel<T>
     private final EventDispatcher dataListeners = new EventDispatcher();
     private final EventDispatcher selectionListeners = new EventDispatcher();
 
-    private VirtualListModel(java.util.List items) {
+    private C1VirtualListModel(java.util.List items) {
         this.items = items;
     }
 
-    public static VirtualListModel of(LiveList items) {
-        VirtualListModel model = new VirtualListModel(items);
+    public static C1VirtualListModel of(LiveList items) {
+        C1VirtualListModel model = new C1VirtualListModel(items);
         items.addDataChangedListener(model);
         return model;
     }
