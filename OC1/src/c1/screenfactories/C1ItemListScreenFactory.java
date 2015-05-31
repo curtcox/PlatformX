@@ -2,16 +2,14 @@ package c1.screenfactories;
 
 import com.codename1.ui.Label;
 import java.util.List;
+
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import c1.event.*;
 import c1.uilist.*;
 import common.screen.SelectionListScreen;
-import common.uilist.IListCell;
-import common.uilist.ListCellConfigurer;
-import common.uilist.ListFilter;
-import common.uilist.StringToListFilter;
+import common.uilist.*;
 import common.uiwidget.ISearchableList;
 import common.util.Strings;
 
@@ -30,7 +28,7 @@ final class C1ItemListScreenFactory<T>
 
     private ISearchableList<T> newSearchableList() {
         C1SearchableList<T> list = new C1SearchableList(new SimpleLiveList(values),new Label(),new CellConfigurer());
-        C1SearchFilterInstaller.install(list, new TextFilter());
+        C1SearchFilterInstaller.c1SpecificInstall(list, new TextFilter());
         return list;
     }
 

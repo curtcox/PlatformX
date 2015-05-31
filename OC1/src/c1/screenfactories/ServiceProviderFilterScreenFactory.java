@@ -3,6 +3,8 @@ package c1.screenfactories;
 import com.codename1.ui.Label;
 import java.util.ArrayList;
 import java.util.List;
+
+import common.Registry;
 import common.domain.Type;
 import c1.event.LiveList;
 import c1.event.SimpleLiveList;
@@ -13,8 +15,8 @@ import common.screen.ScreenLink;
 import common.screenparts.TypeListCellConfigurer;
 import common.screenparts.TypeTextFilter;
 import common.screens.FilterScreen;
-import c1.uilist.C1SearchFilterInstaller;
 import c1.uilist.C1SearchableList;
+import common.uilist.ISearchFilterInstaller;
 
 public final class ServiceProviderFilterScreenFactory {
 
@@ -35,8 +37,12 @@ public final class ServiceProviderFilterScreenFactory {
 
     private static C1SearchableList<Type> newSearchableList() {
         C1SearchableList list = new C1SearchableList(getTypes(),new Label(),new TypeListCellConfigurer());
-        C1SearchFilterInstaller.install(list, new TypeTextFilter());
+        installer().install(list, new TypeTextFilter());
         return list;
+    }
+
+    private static ISearchFilterInstaller installer() {
+        return Registry.get(ISearchFilterInstaller.class);
     }
 
     private static String[] providerTypeNames() {

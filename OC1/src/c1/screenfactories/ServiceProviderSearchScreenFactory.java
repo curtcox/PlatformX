@@ -12,9 +12,9 @@ import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
-import c1.event.*;
 import common.screens.ServiceProviderSearchScreen;
-import c1.uilist.*;
+import common.uilist.ISearchFilterInstaller;
+import common.uiwidget.ISearchableList;
 
 public final class ServiceProviderSearchScreenFactory {
     
@@ -67,12 +67,20 @@ public final class ServiceProviderSearchScreenFactory {
         return searchParams;
     }
     
-    private static C1SearchableList<ServiceProvider> newSearchableList(List<ServiceProvider> providers,ServiceProviderSearchParams searchParams) {
-        SwappableList<ServiceProvider> swappable = new SimpleSwappableList(providers);
+    private static ISearchableList<ServiceProvider> newSearchableList(List<ServiceProvider> providers,ServiceProviderSearchParams searchParams) {
+        SwappableList<ServiceProvider> swappable = newSwappableList(providers);
         ZoomOutSearchButton zoomButton = new ZoomOutSearchButton(searchParams,swappable);
-        C1SearchableList list = null;//new SearchableList(swappable,zoomButton,new ServiceProviderListCellConfigurer());
-        C1SearchFilterInstaller.install(list, new ServiceProviderTextFilter());
+        ISearchableList list = null;//new SearchableList(swappable,zoomButton,new ServiceProviderListCellConfigurer());
+        installer().install(list, new ServiceProviderTextFilter());
         return list;
+    }
+
+    private static SwappableList<ServiceProvider> newSwappableList(List<ServiceProvider> providers) {
+        return null;
+    }
+
+    private static ISearchFilterInstaller installer() {
+        return Registry.get(ISearchFilterInstaller.class);
     }
 
     private static List<ServiceProvider> getProviders(ServiceProviderSearchParams searchParams) {
