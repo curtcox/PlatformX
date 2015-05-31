@@ -1,5 +1,6 @@
 package c1.services;
 
+import common.services.IGeocoder;
 import google.Geocoding;
 import google.GoogleLocation;
 import java.util.ArrayList;
@@ -9,8 +10,9 @@ import common.domain.LocationDescription;
 import c1.event.LiveList;
 import c1.event.SimpleLiveList;
 
-public final class Geocoder {
-
+public final class Geocoder
+    implements IGeocoder
+{
     private final Geocoding geocoding = new Geocoding();
 
     public static Geocoder of() {

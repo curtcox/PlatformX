@@ -1,7 +1,9 @@
 package c1.screenfactories;
 
 import java.util.List;
-import c1.services.Geocoder;
+
+import common.Registry;
+import common.services.IGeocoder;
 import common.uilist.StringToList;
 
 final class GeocoderStringToList
@@ -9,7 +11,10 @@ final class GeocoderStringToList
 {
 
     public List listFor(String text) {
-        return Geocoder.of().searchFor(text);
+        return geocoder().searchFor(text);
     }
-   
+
+    static IGeocoder geocoder() {
+        return Registry.get(IGeocoder.class);
+    }
 }
