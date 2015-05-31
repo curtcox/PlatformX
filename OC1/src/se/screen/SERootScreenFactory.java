@@ -2,7 +2,7 @@ package se.screen;
 
 import c1.screenfactories.ServiceProviderFilterScreenFactory;
 import c1.screenfactories.LocationSelectionScreenFactory;
-import c1.screenfactories.ServiceProviderSearchScreenFactory;
+import common.screenfactories.ServiceProviderSearchScreenFactory;
 import common.Registry;
 import common.screen.CompositeScreenFactory;
 import common.screen.ScreenFactory;

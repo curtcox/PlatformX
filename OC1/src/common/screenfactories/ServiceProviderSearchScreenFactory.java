@@ -1,4 +1,4 @@
-package c1.screenfactories;
+package common.screenfactories;
 
 import java.util.*;
 

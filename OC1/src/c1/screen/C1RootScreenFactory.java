@@ -11,6 +11,7 @@ import common.screen.dynamic.LazyScreenFactory;
 import common.screen.dynamic.StringMapStringSource;
 import common.screen.dynamic.TaggedStringSources;
 import common.screenfactories.DeviceInfoScreenFactory;
+import common.screenfactories.ServiceProviderSearchScreenFactory;
 import common.screens.CustomComponentScreen;
 import common.screens.Home;
 import common.screens.ProviderDetailsScreen;
