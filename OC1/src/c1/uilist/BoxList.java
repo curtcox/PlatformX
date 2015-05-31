@@ -7,18 +7,20 @@ import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.ListModel;
+import common.event.Action;
+import common.uilist.ListCellConfigurer;
+import common.uilist.UIList;
 
 /**
  * For displaying items from a ListModel.
  * This class exists as an attempt to bypass a UI freeze with List.
- * @author Curt
  */
 final class BoxList
     extends Container
-    implements IList
+    implements UIList
 {
     private final ListModel model;
-    private ActionListener actionListener;
+    private Action.Listener actionListener;
     private final ListCellConfigurer configurer;
     private int selectedIndex;
     
@@ -39,7 +41,7 @@ final class BoxList
         });
     }
     
-    public void addActionListener(ActionListener actionListener) {
+    public void addActionListener(Action.Listener actionListener) {
         this.actionListener = actionListener;
     }
 
@@ -66,7 +68,7 @@ final class BoxList
         button.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent event) {
                 selectedIndex = index;
-                actionListener.actionPerformed(event);
+                actionListener.actionPerformed(new Action(event));
             }
         });
     }

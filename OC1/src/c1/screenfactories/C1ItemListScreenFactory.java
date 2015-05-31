@@ -8,6 +8,8 @@ import common.screen.ScreenLink;
 import c1.event.*;
 import c1.uilist.*;
 import common.screen.SelectionListScreen;
+import common.uilist.IListCell;
+import common.uilist.ListCellConfigurer;
 import common.uilist.ListFilter;
 import common.uilist.StringToListFilter;
 import common.uiwidget.ISearchableList;
@@ -48,8 +50,8 @@ private static final class ItemsScreen
 private static final class CellConfigurer
     implements ListCellConfigurer
 {
-    public void configureButton(ListCell button, Object item) {
-        button.firstRow.setText(item.toString());
+    public void configureButton(IListCell button, Object item) {
+        button.setFirstRowText(item.toString());
     }
 }
 

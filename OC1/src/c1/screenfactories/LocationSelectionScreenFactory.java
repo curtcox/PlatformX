@@ -9,7 +9,7 @@ import common.screen.dynamic.GlobScreenFactory;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
-import c1.screenparts.LocationListCellConfigurer;
+import common.screenparts.LocationListCellConfigurer;
 import common.screens.LocationSelectionScreen;
 import c1.uilist.ListContentInstaller;
 import c1.uilist.SearchableList;

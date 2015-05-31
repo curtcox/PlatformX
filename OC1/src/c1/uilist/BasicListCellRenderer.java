@@ -29,9 +29,8 @@ import com.codename1.ui.Label;
 import com.codename1.ui.List;
 import com.codename1.ui.list.CellRenderer;
 import com.codename1.ui.list.ListCellRenderer;
+import common.uilist.ListCellConfigurer;
 
-/**
- */
 public final class BasicListCellRenderer<T>
     implements ListCellRenderer<T>, CellRenderer<T>
 {

@@ -3,16 +3,23 @@ package c1.uilist;
 import com.codename1.ui.List;
 import com.codename1.ui.list.ListCellRenderer;
 import com.codename1.ui.list.ListModel;
+import common.event.Action;
+import common.uilist.UIList;
 
-final class UIList<T>
+final class C1UIList<T>
     extends List<T> 
-    implements IList
+    implements UIList
 {
-    UIList(ListModel model) {
+    C1UIList(ListModel model) {
         super(model);
     }
 
     public void setCellRenderer(ListCellRenderer renderer) {
         super.setRenderer(renderer);
+    }
+
+    @Override
+    public void addActionListener(Action.Listener listener) {
+
     }
 }

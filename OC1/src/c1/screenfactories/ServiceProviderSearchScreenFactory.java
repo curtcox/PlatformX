@@ -3,6 +3,7 @@ package c1.screenfactories;
 import java.util.*;
 
 import common.screenparts.ServiceProviderSearchParams;
+import common.screenparts.ServiceProviderTextFilter;
 import common.services.ServiceProviders;
 import common.Registry;
 import common.domain.*;
@@ -12,7 +13,6 @@ import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
 import c1.event.*;
-import c1.screenparts.*;
 import common.screens.ServiceProviderSearchScreen;
 import c1.uilist.*;
 

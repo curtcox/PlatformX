@@ -1,11 +1,11 @@
-package c1.screenparts;
+package common.screenparts;
 
-import common.domain.Type;
+import common.domain.ServiceProvider;
 import common.uilist.ListFilter;
 import common.uilist.StringToListFilter;
 import common.util.Strings;
 
-public final class TypeTextFilter
+public final class ServiceProviderTextFilter
     implements StringToListFilter
 {
 
@@ -13,8 +13,8 @@ public final class TypeTextFilter
         return new ListFilter() {
             public boolean passes(Object item) {
                 String trimmed = text.trim().toLowerCase();
-                Type type = (Type) item;
-                return isIn(trimmed, type);
+                ServiceProvider provider = (ServiceProvider) item;
+                return isIn(trimmed, provider.name) || isIn(trimmed, provider.address);
             }
         };
     }

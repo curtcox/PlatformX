@@ -27,12 +27,17 @@ import com.codename1.ui.Container;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
+import common.uilist.IListCell;
+import common.uiwidget.UIImage;
+
+import java.net.URI;
 
 /**
  * A compound list cell.
  */
 public final class ListCell
     extends Container
+    implements IListCell
 {
     public final Button firstRow = new Button("MultiButton");
     public final Button secondRow = new Button();
@@ -63,5 +68,25 @@ public final class ListCell
         firstRow.setUIID("MultiLine1");
         secondRow.setUIID("MultiLine2");
         return labelsBorder;
+    }
+
+    @Override
+    public void setFirstRowText(String text) {
+
+    }
+
+    @Override
+    public void setSecondRowText(String text) {
+
+    }
+
+    @Override
+    public void setIcon(UIImage icon) {
+
+    }
+
+    @Override
+    public void setIcon(URI uri) {
+
     }
 }

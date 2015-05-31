@@ -11,7 +11,6 @@ import java.io.IOException;
 /**
  * Button that captures an image from the device camera and uses it for the
  * button face.
- * @author Curt
  */
 final class CaptureImageButton
     extends SpanButton
