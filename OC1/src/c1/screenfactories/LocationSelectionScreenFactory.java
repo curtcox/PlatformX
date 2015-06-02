@@ -1,18 +1,20 @@
 package c1.screenfactories;
 
-import com.codename1.ui.Label;
+import common.Registry;
 import common.domain.LocationDescription;
 import c1.event.LiveList;
 import common.event.SwappableList;
-import c1.event.SimpleSwappableList;
 import common.screen.dynamic.GlobScreenFactory;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screenparts.LocationListCellConfigurer;
 import common.screens.LocationSelectionScreen;
-import c1.uilist.C1ListContentInstaller;
-import c1.uilist.C1SearchableList;
+import common.uilist.IListContentInstaller;
+import common.uiwidget.ISearchableList;
+import common.uiwidget.UILabel;
+
+import java.util.ArrayList;
 
 public final class LocationSelectionScreenFactory {
 
@@ -24,19 +26,31 @@ public final class LocationSelectionScreenFactory {
     });
             
     static LocationSelectionScreen of(ScreenLink link) {
-        C1SearchableList<LocationDescription> searchList = newSearchableList();
+        ISearchableList<LocationDescription> searchList = newSearchableList();
         return new LocationSelectionScreen(link,searchList);
     }
     
-    private static C1SearchableList<LocationDescription> newSearchableList(LiveList locations) {
-        return new C1SearchableList(locations,new Label(),new LocationListCellConfigurer());
+    private static ISearchableList<LocationDescription> newSearchableList(LiveList locations) {
+        return searchableListFactory().from(locations, new UILabel(), new LocationListCellConfigurer());
     }
 
-    private static C1SearchableList<LocationDescription> newSearchableList() {
-        SwappableList<LocationDescription> locations = new SimpleSwappableList();
-        C1SearchableList<LocationDescription> list = newSearchableList(locations);
-        C1ListContentInstaller.install(list, locations, new GeocoderStringToList());
+    private static ISearchableList<LocationDescription> newSearchableList() {
+        SwappableList<LocationDescription> locations = swappableListFactory().from(new ArrayList());
+        ISearchableList<LocationDescription> list = newSearchableList(locations);
+        contentInstaller().install(list, locations, new GeocoderStringToList());
         return list;
+    }
+
+    private static SwappableList.Factory swappableListFactory() {
+        return Registry.get(SwappableList.Factory.class);
+    }
+
+    private static ISearchableList.Factory searchableListFactory() {
+        return Registry.get(ISearchableList.Factory.class);
+    }
+
+    private static IListContentInstaller contentInstaller() {
+        return Registry.get(IListContentInstaller.class);
     }
 
 }

@@ -1,13 +1,10 @@
 package c1.screenfactories;
 
-import com.codename1.ui.Label;
 import java.util.ArrayList;
 import java.util.List;
 
 import common.Registry;
 import common.domain.Type;
-import c1.event.LiveList;
-import c1.event.SimpleLiveList;
 import common.screen.dynamic.GlobScreenFactory;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
@@ -15,8 +12,9 @@ import common.screen.ScreenLink;
 import common.screenparts.TypeListCellConfigurer;
 import common.screenparts.TypeTextFilter;
 import common.screens.FilterScreen;
-import c1.uilist.C1SearchableList;
 import common.uilist.ISearchFilterInstaller;
+import common.uiwidget.ISearchableList;
+import common.uiwidget.UILabel;
 
 public final class ServiceProviderFilterScreenFactory {
 
@@ -27,18 +25,22 @@ public final class ServiceProviderFilterScreenFactory {
         }
     });
 
-    private static LiveList<Type> getTypes() {
+    private static List<Type> getTypes() {
         List<Type> list = new ArrayList<Type>();
         for (String name : providerTypeNames()) {
             list.add(new Type(name));
         }
-        return new SimpleLiveList(list);
+        return list;
     }
 
-    private static C1SearchableList<Type> newSearchableList() {
-        C1SearchableList list = new C1SearchableList(getTypes(),new Label(),new TypeListCellConfigurer());
+    private static ISearchableList<Type> newSearchableList() {
+        ISearchableList list = listFactory().from(getTypes(),new UILabel(),new TypeListCellConfigurer());
         installer().install(list, new TypeTextFilter());
         return list;
+    }
+
+    private static ISearchableList.Factory listFactory() {
+        return Registry.get(ISearchableList.Factory.class);
     }
 
     private static ISearchFilterInstaller installer() {
