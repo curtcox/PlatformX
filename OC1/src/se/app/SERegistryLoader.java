@@ -3,6 +3,7 @@ package se.app;
 import common.log.ILogManager;
 import common.Registry;
 import common.net.Network;
+import common.screen.RootScreenFactory;
 import common.screen.dynamic.TaggedStringSources;
 import se.editor.ScreenEditor;
 import se.events.Events;
@@ -12,7 +13,6 @@ import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import common.util.StringMap;
 import se.net.SERawNetwork;
-import se.screen.SERootScreenFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
 import se.util.SimpleTaggedValueStringMap;
@@ -31,7 +31,7 @@ final class SERegistryLoader {
         put(IDisplay.class,         SEDisplay.of());
         put(Network.class,          new SERawNetwork());
         putTaggedValueStringMap();
-        put(ScreenFactory.class,    SERootScreenFactory.of());
+        put(ScreenFactory.class,    RootScreenFactory.of());
         put(ScreenEditor.class,     ScreenEditor.of());
     }
 

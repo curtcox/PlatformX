@@ -10,10 +10,10 @@ import common.device.IDeviceInfo;
 import common.domain.ServiceProvider;
 import common.net.Network;
 import common.net.RootStringMap;
+import common.screen.RootScreenFactory;
 import common.screen.ScreenFactory;
 import c1.log.*;
 import c1.net.*;
-import c1.screen.C1RootScreenFactory;
 import c1.services.*;
 import c1.ui.*;
 import common.log.ILogManager;
@@ -61,7 +61,7 @@ final class C1RegistryLoader {
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
         put(ItemListScreenFactoryFactory.class, new C1ItemListScreenFactoryFactory());
-        put(ScreenFactory.class,    C1RootScreenFactory.of());
+        put(ScreenFactory.class,    RootScreenFactory.of());
     }
 
     static void put(Class clazz, Object object) {

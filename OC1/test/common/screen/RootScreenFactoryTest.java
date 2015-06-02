@@ -1,10 +1,11 @@
-package c1.screen;
+package common.screen;
 
 import c1.device.C1DeviceInfo;
 import c1.screenfactories.C1ItemListScreenFactoryFactory;
 import common.Registry;
 import common.device.IDeviceInfo;
 import common.log.ILogManager;
+import common.screen.RootScreenFactory;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
@@ -24,7 +25,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class C1RootScreenFactoryTest {
+public class RootScreenFactoryTest {
 
     ScreenFactory testObject;
 
@@ -38,7 +39,7 @@ public class C1RootScreenFactoryTest {
         Registry.put(IFormFactory.class, new FakeFormFactory());
         Registry.put(ILogManager.class, new FakeLogManager());
         FakeUIManager.of();
-        testObject = C1RootScreenFactory.of();
+        testObject = RootScreenFactory.of();
     }
 
     @Test
