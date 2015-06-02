@@ -4,7 +4,7 @@ import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;
 import com.codename1.ui.util.EventDispatcher;
-import c1.event.LiveList;
+import common.event.LiveList;
 import common.event.Change;
 
 /**

@@ -3,22 +3,34 @@ package c1.event;
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.util.EventDispatcher;
 import common.event.Change;
+import common.event.SwappableList;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
-public final class SimpleLiveList
-    implements LiveList, DataChangedListener 
+public final class C1SwappableList
+    implements SwappableList
 {
-    private final List list;
+    private List list = new ArrayList();
     private final EventDispatcher dataListeners = new EventDispatcher();
 
-    public SimpleLiveList(List list) {
+    public C1SwappableList() {}
+    public C1SwappableList(List list) {
+        become(list);
+    }
+
+    public void become(List list) {
         this.list = list;
+        fireAllDataChanged();
     }
     
+    private void fireAllDataChanged() {
+        dataChanged(DataChangedListener.CHANGED,0);
+    }
+
     public void addListener(Change.Listener listener) {
         dataListeners.addListener(listener);
     }
@@ -67,4 +79,5 @@ public final class SimpleLiveList
     private RuntimeException unsupported() {
         return new RuntimeException("Not supported yet.");
     }
+
 }

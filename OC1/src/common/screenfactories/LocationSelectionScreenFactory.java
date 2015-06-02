@@ -1,8 +1,8 @@
-package c1.screenfactories;
+package common.screenfactories;
 
 import common.Registry;
 import common.domain.LocationDescription;
-import c1.event.LiveList;
+import common.event.LiveList;
 import common.event.SwappableList;
 import common.screen.dynamic.GlobScreenFactory;
 import common.screen.Screen;

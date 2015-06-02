@@ -1,6 +1,4 @@
-package c1.event;
-
-import common.event.Change;
+package common.event;
 
 /**
  * A list of values that could change at any time.

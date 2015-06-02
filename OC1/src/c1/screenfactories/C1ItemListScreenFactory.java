@@ -27,7 +27,7 @@ final class C1ItemListScreenFactory<T>
     }     
 
     private ISearchableList<T> newSearchableList() {
-        C1SearchableList<T> list = new C1SearchableList(new SimpleLiveList(values),new Label(),new CellConfigurer());
+        C1SearchableList<T> list = new C1SearchableList(new C1LiveList(values),new Label(),new CellConfigurer());
         C1SearchFilterInstaller.c1SpecificInstall(list, new TextFilter());
         return list;
     }

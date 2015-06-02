@@ -4,7 +4,7 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
 import com.codename1.ui.list.ListModel;
-import c1.event.LiveList;
+import common.event.LiveList;
 import c1.uiwidget.BorderContainer;
 import common.event.Action;
 import common.uilist.IListModel;
