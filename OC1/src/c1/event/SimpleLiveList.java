@@ -2,6 +2,8 @@ package c1.event;
 
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.util.EventDispatcher;
+import common.event.Change;
+
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
@@ -17,11 +19,11 @@ public final class SimpleLiveList
         this.list = list;
     }
     
-    public void addDataChangedListener(DataChangedListener listener) {
+    public void addDataChangedListener(Change.Listener listener) {
         dataListeners.addListener(listener);
     }
 
-    public void removeDataChangedListener(DataChangedListener listener) {
+    public void removeDataChangedListener(Change.Listener listener) {
         dataListeners.removeListener(listener);
     }
     

@@ -2,6 +2,7 @@ package c1.event;
 
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.util.EventDispatcher;
+import common.event.Change;
 import common.event.SwappableList;
 
 import java.util.ArrayList;
@@ -30,11 +31,11 @@ public final class SimpleSwappableList
         dataChanged(DataChangedListener.CHANGED,0);
     }
 
-    public void addDataChangedListener(DataChangedListener listener) {
+    public void addDataChangedListener(Change.Listener listener) {
         dataListeners.addListener(listener);
     }
 
-    public void removeDataChangedListener(DataChangedListener listener) {
+    public void removeDataChangedListener(Change.Listener listener) {
         dataListeners.removeListener(listener);
     }
     

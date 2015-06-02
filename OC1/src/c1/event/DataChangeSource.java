@@ -1,8 +1,8 @@
 package c1.event;
 
-import com.codename1.ui.events.DataChangedListener;
+import common.event.Change;
 
 public interface DataChangeSource {
-    void addDataChangedListener(DataChangedListener listener);
-    void removeDataChangedListener(DataChangedListener listener);
+    void addDataChangedListener(Change.Listener listener);
+    void removeDataChangedListener(Change.Listener listener);
 }

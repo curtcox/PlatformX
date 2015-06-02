@@ -5,6 +5,7 @@ import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;
 import com.codename1.ui.util.EventDispatcher;
 import c1.event.LiveList;
+import common.event.Change;
 
 /**
  * A ListModel that uses a given list to store its elements.
@@ -23,10 +24,14 @@ public final class C1VirtualListModel<T>
 
     public static C1VirtualListModel of(LiveList items) {
         C1VirtualListModel model = new C1VirtualListModel(items);
-        items.addDataChangedListener(model);
+        items.addDataChangedListener(convert(model));
         return model;
     }
-    
+
+    private static Change.Listener convert(C1VirtualListModel model) {
+        return null;
+    }
+
     public T getItemAt(int index){
         return items.get(index);
     }
