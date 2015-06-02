@@ -103,6 +103,9 @@ public final class Mocks {
         factory.returns(null);
     }
 
+    /**
+     * Return the argument that the method was invoked with.
+     */
     public static <T> T arg() {
         return factory.arg();
     }
