@@ -31,11 +31,11 @@ public final class SimpleSwappableList
         dataChanged(DataChangedListener.CHANGED,0);
     }
 
-    public void addDataChangedListener(Change.Listener listener) {
+    public void addListener(Change.Listener listener) {
         dataListeners.addListener(listener);
     }
 
-    public void removeDataChangedListener(Change.Listener listener) {
+    public void removeListener(Change.Listener listener) {
         dataListeners.removeListener(listener);
     }
     

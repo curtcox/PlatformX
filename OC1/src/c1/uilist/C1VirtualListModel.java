@@ -24,7 +24,7 @@ public final class C1VirtualListModel<T>
 
     public static C1VirtualListModel of(LiveList items) {
         C1VirtualListModel model = new C1VirtualListModel(items);
-        items.addDataChangedListener(convert(model));
+        items.addListener(convert(model));
         return model;
     }
 

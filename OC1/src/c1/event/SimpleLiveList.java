@@ -19,11 +19,11 @@ public final class SimpleLiveList
         this.list = list;
     }
     
-    public void addDataChangedListener(Change.Listener listener) {
+    public void addListener(Change.Listener listener) {
         dataListeners.addListener(listener);
     }
 
-    public void removeDataChangedListener(Change.Listener listener) {
+    public void removeListener(Change.Listener listener) {
         dataListeners.removeListener(listener);
     }
     
