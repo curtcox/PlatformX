@@ -7,7 +7,6 @@ import fake.FakeSERegistryLoader;
 import fake.FakeUIManager;
 import org.junit.Before;
 import org.junit.Test;
-import org.junit.runner.RunWith;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
@@ -42,6 +41,7 @@ public class C1UIRendererTest {
         assertRendersAs(new UIColumn(),Container.class);
         assertRendersAs(new UIRow(),Container.class);
         assertRendersAs(new UIFlow(),Container.class);
+        assertRendersAs(new UIPeeredComponent(new Label()),Label.class);
     }
 
     private void assertRendersAs(UIComponent component, Class c) {
