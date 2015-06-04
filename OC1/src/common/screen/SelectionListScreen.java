@@ -4,8 +4,9 @@ import common.event.Action;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import common.uiwidget.UIComponent;
 import common.uiwidget.ISearchableList;
+import common.uiwidget.UIPeeredComponent;
+
 /**
  * A screen for selecting an item from a list of items.
  * Using this class for a specific list type typically involves:
@@ -26,9 +27,8 @@ public abstract class SelectionListScreen<T>
     }
 
     @Override
-    public UIComponent layoutForPortrait() {
-        return null;
-        //return new ScreenLayout(searchList.component);
+    public UIPeeredComponent layoutForPortrait() {
+        return new UIPeeredComponent(searchList.getComponent());
     }
 
     private void addSelectionListener() {

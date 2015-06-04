@@ -12,5 +12,6 @@ public interface ISearchableList<T> {
     }
 
     void onSelected(Action.Listener actionListener);
+    Object getComponent();
     T getSelected();
 }

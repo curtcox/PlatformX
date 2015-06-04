@@ -54,6 +54,11 @@ public final class C1SearchableList<T>
         filteredList.addActionListener(listener);
     }
 
+    @Override
+    public Object getComponent() {
+        return null;
+    }
+
     public T getSelected() {
         return filterListModel.getItemAt(filteredList.getSelectedIndex());
     }

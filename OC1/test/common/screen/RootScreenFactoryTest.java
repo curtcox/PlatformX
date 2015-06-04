@@ -1,14 +1,9 @@
 package common.screen;
 
-import c1.device.C1DeviceInfo;
 import c1.screenfactories.C1ItemListScreenFactoryFactory;
 import common.Registry;
 import common.device.IDeviceInfo;
 import common.log.ILogManager;
-import common.screen.RootScreenFactory;
-import common.screen.Screen;
-import common.screen.ScreenFactory;
-import common.screen.ScreenLink;
 import common.screen.dynamic.StringMapAsTaggedStringSources;
 import common.screen.dynamic.TaggedStringSources;
 import common.screenfactories.ItemListScreenFactoryFactory;

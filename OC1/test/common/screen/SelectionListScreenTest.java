@@ -4,6 +4,7 @@ import common.Registry;
 import common.log.ILogManager;
 import common.ui.IFormFactory;
 import common.uiwidget.ISearchableList;
+import common.uiwidget.UIPeeredComponent;
 import fake.FakeFormFactory;
 import fake.FakeLogManager;
 import junit.framework.TestCase;
@@ -14,9 +15,11 @@ import org.junit.Test;
 import static mach.Mocks._;
 import static mach.Mocks.wild;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertSame;
 
 public class SelectionListScreenTest {
 
+    Object peer = new Object();
     ScreenLink link;
     ISearchableList searchList;
     MySelectionListScreen testObject;
@@ -37,6 +40,8 @@ public class SelectionListScreenTest {
     public void setUp() {
         Mocks.init(this);
         _(); wild(null); searchList.onSelected(null);
+        _(peer); searchList.getComponent();
+
         Registry.put(ILogManager.class, new FakeLogManager());
         Registry.put(IFormFactory.class,new FakeFormFactory());
         testObject = new MySelectionListScreen(link,searchList);
@@ -46,4 +51,17 @@ public class SelectionListScreenTest {
     public void can_create() {
         assertNotNull(testObject);
     }
+
+    @Test
+    public void layoutForPortrait_returns_a_component() {
+        assertNotNull(testObject.layoutForPortrait());
+    }
+
+    @Test
+    public void layoutForPortrait_returns_component_from_searchList() {
+        UIPeeredComponent peeredComponent = testObject.layoutForPortrait();
+
+        assertSame(peer,peeredComponent.peer);
+    }
+
 }
