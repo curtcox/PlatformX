@@ -55,8 +55,8 @@ public final class C1SearchableList<T>
     }
 
     @Override
-    public Object getComponent() {
-        return null;
+    public Component getComponent() {
+        return component;
     }
 
     public T getSelected() {

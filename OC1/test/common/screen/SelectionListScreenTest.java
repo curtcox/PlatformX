@@ -16,6 +16,7 @@ import static mach.Mocks._;
 import static mach.Mocks.wild;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 
 public class SelectionListScreenTest {
 
@@ -53,8 +54,8 @@ public class SelectionListScreenTest {
     }
 
     @Test
-    public void layoutForPortrait_returns_a_component() {
-        assertNotNull(testObject.layoutForPortrait());
+    public void layoutForPortrait_returns_a_peered_component() {
+        assertTrue(testObject.layoutForPortrait() instanceof UIPeeredComponent);
     }
 
     @Test
