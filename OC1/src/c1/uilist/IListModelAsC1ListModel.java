@@ -8,28 +8,30 @@ import common.uilist.IListModel;
 public final class IListModelAsC1ListModel
    implements ListModel
 {
-    public IListModelAsC1ListModel(IListModel model) {
+    IListModel model;
 
+    public IListModelAsC1ListModel(IListModel model) {
+        this.model = model;
     }
 
     @Override
     public Object getItemAt(int i) {
-        return null;
+        return model.getItemAt(i);
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return model.getSize();
     }
 
     @Override
     public int getSelectedIndex() {
-        return 0;
+        return model.getSelectedIndex();
     }
 
     @Override
     public void setSelectedIndex(int i) {
-
+        model.setSelectedIndex(i);
     }
 
     @Override
@@ -54,7 +56,7 @@ public final class IListModelAsC1ListModel
 
     @Override
     public void addItem(Object o) {
-
+        model.addItem(o);
     }
 
     @Override

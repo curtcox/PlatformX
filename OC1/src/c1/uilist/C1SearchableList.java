@@ -4,8 +4,8 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
 import com.codename1.ui.list.ListModel;
-import common.event.LiveList;
 import c1.uiwidget.BorderContainer;
+import common.event.LiveList;
 import common.event.Action;
 import common.uilist.IListModel;
 import common.uilist.ListCellConfigurer;
@@ -39,7 +39,7 @@ public final class C1SearchableList<T>
     }
 
     private IListModel convert(C1FilterListModel<T> filterListModel) {
-        return null;
+        return new C1ListModelAsIListModel(filterListModel);
     }
 
     public C1SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
