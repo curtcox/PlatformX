@@ -72,12 +72,12 @@ public final class C1ListCell
 
     @Override
     public void setFirstRowText(String text) {
-
+        firstRow.setText(text);
     }
 
     @Override
     public void setSecondRowText(String text) {
-
+        secondRow.setText(text);
     }
 
     @Override
