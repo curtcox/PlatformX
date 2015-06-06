@@ -41,6 +41,8 @@ public class SEUIRendererTest {
         assertRendersAs(new UIColumn(),JPanel.class);
         assertRendersAs(new UIRow(),JPanel.class);
         assertRendersAs(new UIFlow(),JPanel.class);
+        assertRendersAs(new UIPeeredComponent(new JLabel()), JLabel.class);
+        assertRendersAs(new UIPeeredComponent(new JButton()), JButton.class);
     }
 
     private void assertRendersAs(UIComponent component, Class c) {

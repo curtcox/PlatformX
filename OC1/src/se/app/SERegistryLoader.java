@@ -1,10 +1,13 @@
 package se.app;
 
+import common.device.IDeviceInfo;
 import common.log.ILogManager;
 import common.Registry;
 import common.net.Network;
 import common.screen.RootScreenFactory;
 import common.screen.dynamic.TaggedStringSources;
+import common.screenfactories.ItemListScreenFactoryFactory;
+import se.device.SEDeviceInfo;
 import se.editor.ScreenEditor;
 import se.events.Events;
 import se.log.*;
@@ -13,6 +16,7 @@ import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import common.util.StringMap;
 import se.net.SERawNetwork;
+import se.screenfactories.SEItemListScreenFactoryFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
 import se.util.SimpleTaggedValueStringMap;
@@ -24,6 +28,15 @@ import se.util.TaggedValueStringMap;
 final class SERegistryLoader {
 
     static void load() {
+        loadStandardEditionPlatform();
+        loadPlatform();
+    }
+
+    private static void loadStandardEditionPlatform() {
+        put(IDeviceInfo.class,new SEDeviceInfo());
+    }
+
+    static void loadPlatform() {
         put(ILogManager.class,      new LogManager());
         put(LogWriter.class,        new LogWriter());
         put(Events.class,           new Events());
@@ -31,6 +44,7 @@ final class SERegistryLoader {
         put(IDisplay.class,         SEDisplay.of());
         put(Network.class,          new SERawNetwork());
         putTaggedValueStringMap();
+        put(ItemListScreenFactoryFactory.class, new SEItemListScreenFactoryFactory());
         put(ScreenFactory.class,    RootScreenFactory.of());
         put(ScreenEditor.class,     ScreenEditor.of());
     }

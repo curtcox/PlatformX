@@ -48,7 +48,7 @@ public final class Application {
     }
 
     private static void show() {
-        Screen.show(ScreenLink.of("Home"),screenFactory());
+        Screen.show(ScreenLink.of(""),screenFactory());
     }
 
     private static StringMap stringMap() {
