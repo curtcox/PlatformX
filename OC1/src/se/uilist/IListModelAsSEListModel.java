@@ -16,12 +16,12 @@ public final class IListModelAsSEListModel
 
     @Override
     public int getSize() {
-        return 0;
+        return model.getSize();
     }
 
     @Override
     public Object getElementAt(int i) {
-        return null;
+        return model.getItemAt(i);
     }
 
     @Override
