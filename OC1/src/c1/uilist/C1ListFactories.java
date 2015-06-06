@@ -7,6 +7,16 @@ import common.uilist.UIList;
 
 import static common.uilist.UIList.Factory;
 
+/**
+ * Some factories for producing UI lists.
+ * Multiple UI list implementations are an effort to understand (through trial and error) mysterious UI
+ * freezes viewing lists, which have so far only been seen on Mike's Samsung phone.
+ *
+ * The first two are wrappers for CodenameOne UI lists.
+ * http://codenameone.blogspot.com/2011/04/contain-that-list-bringing-containers.html
+ *
+ * The last one is mine.
+ */
 final class C1ListFactories {
 
     static Factory LIST = new Factory() {
