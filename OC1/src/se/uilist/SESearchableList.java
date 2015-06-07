@@ -31,9 +31,13 @@ public final class SESearchableList<T>
     private SESearchableList(UIList.Factory factory, LiveList<T> items, JComponent action, ListCellConfigurer configurer) {
         underlyingListModel = SEVirtualListModel.of(items);
         filterListModel = new SEFilterListModel(underlyingListModel);
-        filteredList = factory.of(convert(filterListModel),configurer);
-        component = new BorderContainer((JComponent)filteredList)
-             .addNorth(newNorthContainer(action));
+        filteredList = factory.of(convert(filterListModel), configurer);
+        component = component(action);
+    }
+
+    private JComponent component(JComponent action) {
+        return new BorderContainer(new JScrollPane((JComponent)filteredList))
+                .addNorth(newNorthContainer(action));
     }
 
     private IListModel convert(SEFilterListModel<T> filterListModel) {

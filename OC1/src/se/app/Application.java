@@ -7,13 +7,19 @@ import common.screen.ScreenLink;
 import common.util.StringMap;
 import mite.MiteHTTPServer;
 
+import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 
 public final class Application {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
+        setCrossPlatformLookAndFeel();
         launchUIOnEDT();
+    }
+
+    private static void setCrossPlatformLookAndFeel() throws Exception {
+        UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
     }
 
     private static void startServer() throws IOException {

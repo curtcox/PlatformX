@@ -14,7 +14,7 @@ public final class SEListCell
     extends JPanel
     implements IListCell
 {
-    public final JButton firstRow = new JButton("MultiButton");
+    public final JButton firstRow = new JButton();
     public final JButton secondRow = new JButton();
     public final JButton icon = new JButton();
 
@@ -23,6 +23,8 @@ public final class SEListCell
      */
     public SEListCell() {
         setLayout(new BorderLayout());
+        firstRow.setHorizontalAlignment(SwingConstants.LEFT);
+        secondRow.setHorizontalAlignment(SwingConstants.LEFT);
         add(BorderLayout.CENTER, createLabelsBorder(firstRow, secondRow));
         add(BorderLayout.WEST, createIconContainer(icon));
     }
