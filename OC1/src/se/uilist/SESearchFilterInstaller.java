@@ -12,7 +12,7 @@ public final class SESearchFilterInstaller
     implements ISearchFilterInstaller
 {
     
-    public static void c1SpecificInstall(final SESearchableList list, final StringToListFilter stringToListFilter) {
+    public static void seSpecificInstall(final SESearchableList list, final StringToListFilter stringToListFilter) {
         final JTextField search = list.searchTerm;
         search.addActionListener(new ActionListener() {
             @Override
@@ -29,6 +29,6 @@ public final class SESearchFilterInstaller
 
     @Override
     public void install(ISearchableList list, StringToListFilter stringToListFilter) {
-        c1SpecificInstall((SESearchableList) list,stringToListFilter);
+        seSpecificInstall((SESearchableList) list, stringToListFilter);
     }
 }

@@ -32,7 +32,7 @@ final class SEItemListScreenFactory<T>
 
     private ISearchableList<T> newSearchableList() {
         SESearchableList<T> list = new SESearchableList(new SELiveList(values),new JLabel(),new CellConfigurer());
-        SESearchFilterInstaller.c1SpecificInstall(list, new TextFilter());
+        SESearchFilterInstaller.seSpecificInstall(list, new TextFilter());
         return list;
     }
 
