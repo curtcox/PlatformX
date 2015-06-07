@@ -1,6 +1,7 @@
 package se.uilist;
 
 import common.uilist.CommonListModel;
+import common.uilist.ListFilter;
 import junit.framework.TestCase;
 import org.junit.Test;
 
@@ -35,6 +36,32 @@ public class SEFilterListModelTest {
     public void getElementAt_0_returns_1st_element() {
         Object expected = new Object();
         commonListModel.addItem(expected);
+        assertEquals(expected,testObject.getElementAt(0));
+    }
+
+    @Test
+    public void size_returns_filtered_size_when_set() {
+        commonListModel.addItem("stuff");
+        testObject.setFilter(new ListFilter() {
+            @Override
+            public boolean passes(Object item) {
+                return false;
+            }
+        });
+        assertEquals(0, testObject.getSize());
+    }
+
+    @Test
+    public void getElementAt_0_returns_1st_element_that_passes_filter() {
+        final Object expected = new Object();
+        commonListModel.addItem("unexpected");
+        commonListModel.addItem(expected);
+        testObject.setFilter(new ListFilter() {
+            @Override
+            public boolean passes(Object item) {
+                return item==expected;
+            }
+        });
         assertEquals(expected,testObject.getElementAt(0));
     }
 
