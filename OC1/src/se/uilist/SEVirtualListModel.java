@@ -5,6 +5,7 @@ import common.event.LiveList;
 
 import javax.swing.*;
 import javax.swing.event.ListDataListener;
+import java.util.List;
 
 /**
  * A ListModel that uses a given list to store its elements.
@@ -12,10 +13,9 @@ import javax.swing.event.ListDataListener;
 public final class SEVirtualListModel<T>
     implements ListModel<T>
 {
-    private int index;
-    private final java.util.List<T> items;
+    private final List<T> items;
 
-    private SEVirtualListModel(java.util.List items) {
+    private SEVirtualListModel(List items) {
         this.items = items;
     }
 
@@ -29,10 +29,6 @@ public final class SEVirtualListModel<T>
         return null;
     }
 
-    public T getItemAt(int index){
-        return items.get(index);
-    }
-    
     public int getSize() {
         return items.size();
     }
@@ -51,17 +47,6 @@ public final class SEVirtualListModel<T>
     public void removeListDataListener(ListDataListener listDataListener) {
 
     }
-
-    public int getSelectedIndex() {
-        return index;
-    }
-
-    public void setSelectedIndex(int index) {
-        this.index = index;
-    }
-
-    public void addItem(T item)       { throw unsupported(); }
-    public void removeItem(int index) { throw unsupported(); }
 
     private RuntimeException unsupported() {
         return new RuntimeException("Not supported yet.");
