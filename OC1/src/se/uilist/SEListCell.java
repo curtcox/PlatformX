@@ -11,7 +11,7 @@ import java.net.URI;
  * A compound list cell.
  */
 public final class SEListCell
-    extends JComponent
+    extends JPanel
     implements IListCell
 {
     public final JButton firstRow = new JButton("MultiButton");

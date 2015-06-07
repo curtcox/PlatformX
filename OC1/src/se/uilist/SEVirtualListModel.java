@@ -34,8 +34,8 @@ public final class SEVirtualListModel<T>
     }
 
     @Override
-    public T getElementAt(int i) {
-        return null;
+    public T getElementAt(int index) {
+        return items.get(index);
     }
 
     @Override

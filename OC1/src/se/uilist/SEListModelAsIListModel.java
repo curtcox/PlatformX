@@ -23,8 +23,8 @@ public class SEListModelAsIListModel
     }
 
     @Override
-    public Object getItemAt(int i) {
-        return null;
+    public Object getItemAt(int index) {
+        return model.getElementAt(index);
     }
 
     @Override

@@ -12,10 +12,9 @@ import java.awt.event.ActionListener;
 
 /**
  * For displaying items from a ListModel.
- * This class exists as an attempt to bypass a UI freeze with List.
  */
 final class SEBoxList
-    extends JComponent
+    extends JPanel
     implements UIList
 {
     private final ListModel model;

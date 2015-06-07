@@ -8,18 +8,20 @@ import javax.swing.event.ListDataListener;
 public final class SEFilterListModel<T>
     implements ListModel<T>
 {
-    public SEFilterListModel(ListModel<T> underlyingListModel) {
+    private final ListModel<T> filtered;
 
+    public SEFilterListModel(ListModel<T> filtered) {
+        this.filtered = filtered;
     }
 
     @Override
     public int getSize() {
-        return 0;
+        return filtered.getSize();
     }
 
     @Override
-    public T getElementAt(int i) {
-        return null;
+    public T getElementAt(int index) {
+        return filtered.getElementAt(index);
     }
 
     @Override
