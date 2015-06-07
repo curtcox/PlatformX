@@ -7,6 +7,12 @@ public interface ListFilter<T> {
             return true;
         }
     };
-    
+
+    public static ListFilter ALLOW_NONE = new ListFilter() {
+        public boolean passes(Object item) {
+            return false;
+        }
+    };
+
     boolean passes(T item);
 }

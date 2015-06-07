@@ -3,6 +3,7 @@ package se.uilist;
 import common.uilist.ListFilter;
 
 import javax.swing.*;
+import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
 
 public final class SEFilterListModel<T>
@@ -10,6 +11,7 @@ public final class SEFilterListModel<T>
 {
     private final ListModel<T> filtered;
     private ListFilter filter = ListFilter.ALLOW_ALL;
+    private ListDataListener listDataListener;
 
     public SEFilterListModel(ListModel<T> filtered) {
         this.filtered = filtered;
@@ -43,7 +45,7 @@ public final class SEFilterListModel<T>
 
     @Override
     public void addListDataListener(ListDataListener listDataListener) {
-
+        this.listDataListener = listDataListener;
     }
 
     @Override
@@ -53,8 +55,21 @@ public final class SEFilterListModel<T>
 
     public void setFilter(ListFilter filter) {
         this.filter = filter;
+        dataChanged();
     }
 
     public void dataChanged() {
+        if (listDataListener!=null) {
+            notifyDataListener();
+        }
     }
+
+    private void notifyDataListener() {
+        Object source = this;
+        int type = ListDataEvent.CONTENTS_CHANGED;
+        int first = 0;
+        int last = getSize() - 1;
+        listDataListener.contentsChanged(new ListDataEvent(source,type,first,last));
+    }
+
 }
