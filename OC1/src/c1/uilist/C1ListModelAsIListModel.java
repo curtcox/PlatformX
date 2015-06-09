@@ -1,6 +1,7 @@
 package c1.uilist;
 
 import com.codename1.ui.list.ListModel;
+import common.event.Change;
 import common.uilist.IListModel;
 
 public class C1ListModelAsIListModel
@@ -35,5 +36,10 @@ public class C1ListModelAsIListModel
     @Override
     public void setSelectedIndex(int i) {
         model.setSelectedIndex(i);
+    }
+
+    @Override
+    public void addListener(Change.Listener listener) {
+
     }
 }

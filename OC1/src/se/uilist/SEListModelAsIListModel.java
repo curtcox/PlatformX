@@ -1,5 +1,6 @@
 package se.uilist;
 
+import common.event.Change;
 import common.uilist.IListModel;
 
 import javax.swing.*;
@@ -34,5 +35,10 @@ public class SEListModelAsIListModel
 
     @Override
     public void setSelectedIndex(int i) {
+    }
+
+    @Override
+    public void addListener(Change.Listener listener) {
+
     }
 }

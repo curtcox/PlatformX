@@ -20,15 +20,15 @@ public final class SESearchFilterInstaller
             @Override public void keyPressed(KeyEvent e) {}
             @Override public void keyReleased(KeyEvent e) {}
             @Override public void keyTyped(KeyEvent e) {
-                setFilter(list.filterListModel);
-            }
-
-            void setFilter(SEFilterListModel model) {
-                model.setFilter(stringToListFilter.listFilterFor(search.getText()));
-                model.dataChanged();
+                setFilterText(list.filterListModel,stringToListFilter,search.getText());
             }
         });
 
+    }
+
+    static void setFilterText(SEFilterListModel model, StringToListFilter stringToListFilter, String text) {
+        model.setFilter(stringToListFilter.listFilterFor(text));
+        model.dataChanged();
     }
 
     @Override

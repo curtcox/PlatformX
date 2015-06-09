@@ -1,5 +1,7 @@
 package common.uilist;
 
+import common.event.Change;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,5 +34,10 @@ public final class CommonListModel
     @Override
     public void setSelectedIndex(int i) {
         selectedIndex = i;
+    }
+
+    @Override
+    public void addListener(Change.Listener listener) {
+
     }
 }
