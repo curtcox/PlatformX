@@ -62,6 +62,10 @@ final class Invocation {
         return wildcards.size() > i && Objects.areEqual(args.get(i),wildcards.get(i));
     }
 
+    public boolean returnsVoid() {
+        return method.getReturnType().equals(void.class);
+    }
+
     @Override
     public int hashCode() {
         return 0;
@@ -70,4 +74,5 @@ final class Invocation {
     public String toString() {
         return method.toString() + args + wildcards;
     }
+
 }

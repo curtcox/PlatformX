@@ -3,16 +3,30 @@ package se.uilist;
 import common.uilist.CommonListModel;
 import common.uilist.IListModel;
 import junit.framework.TestCase;
+import mach.Mocks;
+import org.junit.Before;
 import org.junit.Test;
 
+import javax.swing.event.ListDataListener;
+
+import static mach.Mocks._;
+import static mach.Mocks.verify;
+import static mach.Mocks.wild;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 
 public class IListModelAsSEListModelTest {
 
+    ListDataListener listDataListener;
     IListModel model = new CommonListModel();
     IListModelAsSEListModel testObject = new IListModelAsSEListModel(model);
+
+    @Before
+    public void setUp() {
+        Mocks.init(this);
+        _(); wild(null); listDataListener.contentsChanged(null);
+    }
 
     @Test
     public void can_create() {
@@ -37,4 +51,12 @@ public class IListModelAsSEListModelTest {
         assertSame(expected,testObject.getElementAt(0));
     }
 
+    @Test
+    public void addListDataListener_adds_a_listener_that_is_notified_when_model_changes() {
+        testObject.addListDataListener(listDataListener);
+        model.addItem("");
+
+        verify();
+        wild(null); listDataListener.contentsChanged(null);
+    }
 }

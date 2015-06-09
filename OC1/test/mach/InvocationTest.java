@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.Map;
 
 import static org.junit.Assert.*;
@@ -97,6 +98,24 @@ public class InvocationTest {
     public void different_method_is_not_equal() {
         Method different = proxy.getClass().getDeclaredMethods()[1];
         assertFalse(new Invocation(proxy, method,args(),wild()).equals(new Invocation(proxy, different,args(),wild())));
+    }
+
+    @Test
+    public void method_that_returns_void() throws NoSuchMethodException {
+        Method void_method = Iterator.class.getMethod("remove");
+        assertTrue(new Invocation(proxy,void_method,args(),wild()).returnsVoid());
+    }
+
+    @Test
+    public void method_that_returns_primitive() throws NoSuchMethodException {
+        Method void_method = Iterator.class.getMethod("hasNext");
+        assertFalse(new Invocation(proxy,void_method,args(),wild()).returnsVoid());
+    }
+
+    @Test
+    public void method_that_returns_object() throws NoSuchMethodException {
+        Method void_method = Iterator.class.getMethod("next");
+        assertFalse(new Invocation(proxy, void_method, args(), wild()).returnsVoid());
     }
 
     Object[] args(Object... args) {

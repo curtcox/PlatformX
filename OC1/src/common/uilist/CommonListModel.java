@@ -8,8 +8,9 @@ import java.util.List;
 public final class CommonListModel
     implements IListModel
 {
-    int selectedIndex;
-    List list = new ArrayList();
+    private int selectedIndex;
+    private List list = new ArrayList();
+    private Change.Listener listener;
 
     @Override
     public int getSize() {
@@ -19,6 +20,13 @@ public final class CommonListModel
     @Override
     public void addItem(Object o) {
         list.add(o);
+        notifyListener();
+    }
+
+    private void notifyListener() {
+        if (listener!=null) {
+            listener.onChange();
+        }
     }
 
     @Override
@@ -38,6 +46,6 @@ public final class CommonListModel
 
     @Override
     public void addListener(Change.Listener listener) {
-
+        this.listener = listener;
     }
 }

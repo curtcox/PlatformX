@@ -1,8 +1,10 @@
 package se.uilist;
 
+import common.event.Change;
 import common.uilist.IListModel;
 
 import javax.swing.*;
+import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
 
 public final class IListModelAsSEListModel
@@ -25,8 +27,17 @@ public final class IListModelAsSEListModel
     }
 
     @Override
-    public void addListDataListener(ListDataListener listDataListener) {
+    public void addListDataListener(final ListDataListener listDataListener) {
+        this.model.addListener(new Change.Listener() {
+            @Override
+            public void onChange() {
+                listDataListener.contentsChanged(everythingChanged());
+            }
+        });
+    }
 
+    private ListDataEvent everythingChanged() {
+        return new ListDataEvent(this,ListDataEvent.CONTENTS_CHANGED,0,getSize() - 1);
     }
 
     @Override

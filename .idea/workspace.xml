@@ -2,19 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/CellConfigurer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/ItemsScreen.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/common/uilist/StringToListFilterTest.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/uilist/TextFilter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/uilist/C1ListModelAsIListModel.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/C1ListModelAsIListModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/common/uilist/CommonListModelTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/uilist/CommonListModel.java" afterPath="$PROJECT_DIR$/OC1/src/common/uilist/CommonListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/uilist/IListModel.java" afterPath="$PROJECT_DIR$/OC1/src/common/uilist/IListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uilist/SEListModelAsIListModel.java" afterPath="$PROJECT_DIR$/OC1/src/se/uilist/SEListModelAsIListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java" afterPath="$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/uilist/StringToListFilter.java" afterPath="$PROJECT_DIR$/OC1/src/common/uilist/StringToListFilter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uilist/IListModelAsSEListModel.java" afterPath="$PROJECT_DIR$/OC1/src/se/uilist/IListModelAsSEListModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uilist/IListModelAsSEListModelTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uilist/IListModelAsSEListModelTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/Invocation.java" afterPath="$PROJECT_DIR$/OC1/test/mach/Invocation.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -52,8 +46,8 @@
             <file leaf-file-name="C1SearchFilterInstaller.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/C1SearchFilterInstaller.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.3469388" vertical-offset="0" max-vertical-offset="882">
-                    <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
+                  <state vertical-scroll-proportion="0.30839002" vertical-offset="0" max-vertical-offset="882">
+                    <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
@@ -69,24 +63,14 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="C1RegistryLoader.java" pinned="false" current-in-tab="false">
+            <file leaf-file-name="C1RegistryLoader.java" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="103" max-vertical-offset="1258">
+                  <state vertical-scroll-proportion="0.66368717" vertical-offset="103" max-vertical-offset="1258">
                     <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
                     <folding>
                       <element signature="imports" expanded="true" />
                     </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="SESearchFilterInstaller.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.38548753" vertical-offset="0" max-vertical-offset="882">
-                    <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -102,13 +86,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="SESearchFilterInstallerTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java">
+      <file leaf-file-name="CommonListModel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/CommonListModel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.45" vertical-offset="697" max-vertical-offset="1377">
-              <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.15735294" vertical-offset="216" max-vertical-offset="935">
+              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+                <element signature="e#658#659#0" expanded="true" />
+                <element signature="e#709#710#0" expanded="true" />
+                <element signature="e#745#746#0" expanded="true" />
+                <element signature="e#802#803#0" expanded="true" />
+                <element signature="e#835#836#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#946#947#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -122,10 +114,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/common/screen/SelectionListScreen.java" />
-        <option value="$PROJECT_DIR$/OC1/test/c1/uilist/C1SearchableListTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/common/screen/SelectionListScreenTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/c1/ui/C1UIRendererTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/ui/C1UIRenderer.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/uilist/C1SearchableList.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/uilist/C1FilterListModelAsIListModel.java" />
@@ -148,8 +136,6 @@
         <option value="$PROJECT_DIR$/OC1/test/se/ui/SEUIRendererTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/app/Application.java" />
-        <option value="$PROJECT_DIR$/OC1/test/se/uilist/IListModelAsSEListModelTest.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/uilist/IListModelAsSEListModel.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/uilist/SEBasicListCellRendererTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SEBasicListCellRenderer.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SEListCell.java" />
@@ -160,7 +146,6 @@
         <option value="$PROJECT_DIR$/OC1/test/se/uilist/SEVirtualListModelTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SEVirtualListModel.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/uilist/IListModel.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/uilist/CommonListModel.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SEListModelAsIListModel.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/uilist/C1ListModelAsIListModel.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java" />
@@ -173,6 +158,13 @@
         <option value="$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/se/uilist/IListModelAsSEListModelTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/common/uilist/CommonListModelTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/mach/Invocation.java" />
+        <option value="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/uilist/IListModelAsSEListModel.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/uilist/CommonListModel.java" />
       </list>
     </option>
   </component>
@@ -237,6 +229,46 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="se" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="se" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -293,10 +325,10 @@
     </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="common.uilist" />
+      <recent name="mach" />
       <recent name="se.uilist" />
       <recent name="c1.uilist" />
       <recent name="c1.ui" />
-      <recent name="common.uiwidget" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="se.device" />
@@ -306,7 +338,7 @@
       <recent name="se.screenfactories" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.All in OC1">
+  <component name="RunManager" selected="Application.Application">
     <configuration default="false" name="All in OC1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="OC1" />
@@ -358,7 +390,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="SEVirtualListModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="IListModelAsSEListModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="se.uilist.*" />
@@ -369,7 +401,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="se.uilist" />
-      <option name="MAIN_CLASS_NAME" value="se.uilist.SEVirtualListModelTest" />
+      <option name="MAIN_CLASS_NAME" value="se.uilist.IListModelAsSEListModelTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -386,18 +418,18 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="SESearchFilterInstallerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="CommonListModelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="se.uilist.*" />
+          <option name="PATTERN" value="common.uilist.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="se.uilist" />
-      <option name="MAIN_CLASS_NAME" value="se.uilist.SESearchFilterInstallerTest" />
+      <option name="PACKAGE_NAME" value="common.uilist" />
+      <option name="MAIN_CLASS_NAME" value="common.uilist.CommonListModelTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -414,20 +446,20 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="SESearchFilterInstallerTest.keyPress_change_list_size" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="InvocationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="se.uilist.*" />
+          <option name="PATTERN" value="mach.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="se.uilist" />
-      <option name="MAIN_CLASS_NAME" value="se.uilist.SESearchFilterInstallerTest" />
-      <option name="METHOD_NAME" value="keyPress_change_list_size" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="mach" />
+      <option name="MAIN_CLASS_NAME" value="mach.InvocationTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -438,13 +470,7 @@
       </option>
       <envs />
       <patterns />
-      <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="" />
-        <option name="TRANSPORT" value="0" />
-        <option name="LOCAL" value="true" />
-      </RunnerSettings>
       <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Debug" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -604,17 +630,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
       <item index="1" class="java.lang.String" itemvalue="Application.Application" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.SEVirtualListModelTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.SESearchFilterInstallerTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.SESearchFilterInstallerTest.keyPress_change_list_size" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.IListModelAsSEListModelTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.CommonListModelTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.InvocationTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.SESearchFilterInstallerTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.SESearchFilterInstallerTest.keyPress_change_list_size" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Application" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.SEVirtualListModelTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Application" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.All in OC1" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.CommonListModelTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.IListModelAsSEListModelTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.InvocationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -660,7 +686,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4062176" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2880829" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -681,14 +707,14 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4062176" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2880829" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31088084" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26632124" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26632124" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42902207" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1924307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -728,19 +754,19 @@
           <option name="timeStamp" value="58" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/OC1/src/se/uilist/SEBoxList.java</url>
-          <line>72</line>
+          <url>file://$PROJECT_DIR$/OC1/src/se/uilist/SEFilterListModel.java</url>
+          <line>71</line>
           <properties />
-          <option name="timeStamp" value="71" />
+          <option name="timeStamp" value="78" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java</url>
-          <line>31</line>
+          <url>file://$PROJECT_DIR$/OC1/src/se/uilist/SEBoxList.java</url>
+          <line>33</line>
           <properties />
-          <option name="timeStamp" value="72" />
+          <option name="timeStamp" value="83" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="78" />
+      <option name="time" value="84" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -749,108 +775,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.5" vertical-offset="408" max-vertical-offset="1088">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/javax/swing/JList.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119019836" vertical-offset="0" max-vertical-offset="26622">
-          <caret line="65" column="13" selection-start-line="65" selection-start-column="13" selection-end-line="65" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/javax/swing/ListCellRenderer.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.119019836" vertical-offset="0" max-vertical-offset="857">
-          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/ListCellConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.11396648" vertical-offset="0" max-vertical-offset="895">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/uilist/SEBasicListCellRendererTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.05" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-          <folding>
-            <element signature="e#948#949#0" expanded="false" />
-            <element signature="e#989#990#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/IListCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15" vertical-offset="0" max-vertical-offset="680">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/uilist/IListModelAsSEListModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#490#491#0" expanded="false" />
-            <element signature="e#531#532#0" expanded="false" />
-            <element signature="e#595#596#0" expanded="false" />
-            <element signature="e#647#648#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/CompositeScreenFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="50" max-vertical-offset="595">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="907" max-vertical-offset="2125">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/java/awt/Container.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.3964496" vertical-offset="5127" max-vertical-offset="37298">
-          <caret line="171" column="21" selection-start-line="171" selection-start-column="21" selection-end-line="171" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="782">
-          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
-          <folding>
-            <element signature="e#987#988#0" expanded="false" />
-            <element signature="e#1044#1045#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEForm.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="233" max-vertical-offset="1462">
@@ -874,7 +798,7 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
           <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -901,24 +825,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/app/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1190">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/javax/swing/ListModel.class">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1557252" vertical-offset="0" max-vertical-offset="655">
@@ -932,30 +838,6 @@
         <state vertical-scroll-proportion="0.15192308" vertical-offset="788" max-vertical-offset="1309">
           <caret line="64" column="6" selection-start-line="64" selection-start-column="6" selection-end-line="64" selection-end-column="6" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SEBoxList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="849" max-vertical-offset="1394">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/se/uilist/SEFilterListModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="782">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#931#932#0" expanded="false" />
-            <element signature="e#972#973#0" expanded="false" />
-            <element signature="e#1032#1033#0" expanded="false" />
-            <element signature="e#1084#1085#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -994,24 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="103" max-vertical-offset="1258">
-          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/CommonListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.72056514" vertical-offset="0" max-vertical-offset="637">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/C1ListModelAsIListModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7864992" vertical-offset="9" max-vertical-offset="663">
@@ -1027,25 +891,6 @@
         <state vertical-scroll-proportion="0.053375196" vertical-offset="0" max-vertical-offset="637">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/IListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18681319" vertical-offset="0" max-vertical-offset="637">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/IListModelAsSEListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18681319" vertical-offset="0" max-vertical-offset="637">
-          <caret line="10" column="10" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
-          <folding>
-            <element signature="e#265#266#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1089,39 +934,9 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
           <caret line="15" column="31" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="31" />
           <folding>
-            <element signature="e#308#309#0" expanded="true" />
-            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="false" />
+            <element signature="e#340#341#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SEFilterListModel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="74" max-vertical-offset="1343">
-          <caret line="15" column="33" selection-start-line="15" selection-start-column="29" selection-end-line="15" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
-            <element signature="e#465#466#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/C1SearchFilterInstaller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3469388" vertical-offset="0" max-vertical-offset="882">
-          <caret line="20" column="51" selection-start-line="20" selection-start-column="51" selection-end-line="20" selection-end-column="51" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38548753" vertical-offset="0" max-vertical-offset="882">
-          <caret line="28" column="16" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1130,16 +945,6 @@
         <state vertical-scroll-proportion="0.05" vertical-offset="0" max-vertical-offset="680">
           <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.575" vertical-offset="340" max-vertical-offset="1020">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding>
-            <element signature="e#1744#1745#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1155,20 +960,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/TextFilter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.325" vertical-offset="0" max-vertical-offset="680">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/common/uilist/StringToListFilterTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6" vertical-offset="0" max-vertical-offset="680">
           <caret line="24" column="12" selection-start-line="24" selection-start-column="12" selection-end-line="24" selection-end-column="12" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1220,9 +1017,9 @@
         <state vertical-scroll-proportion="0.25" vertical-offset="0" max-vertical-offset="680">
           <caret line="10" column="5" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#244#245#0" expanded="true" />
-            <element signature="e#299#300#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#244#245#0" expanded="false" />
+            <element signature="e#299#300#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1232,17 +1029,245 @@
         <state vertical-scroll-proportion="0.8" vertical-offset="0" max-vertical-offset="680">
           <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#677#678#0" expanded="true" />
-            <element signature="e#756#757#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#677#678#0" expanded="false" />
+            <element signature="e#756#757#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45" vertical-offset="697" max-vertical-offset="1377">
-          <caret line="59" column="15" selection-start-line="59" selection-start-column="15" selection-end-line="59" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="697" max-vertical-offset="1377">
+          <caret line="63" column="27" selection-start-line="63" selection-start-column="27" selection-end-line="63" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/app/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="884">
+          <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/TextFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="425">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding>
+            <element signature="e#184#379#0" expanded="true" />
+            <element signature="e#378#379#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="408" max-vertical-offset="1122">
+          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SEBoxList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="380" max-vertical-offset="1394">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/IListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12477064" vertical-offset="0" max-vertical-offset="545">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="176" max-vertical-offset="1190">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/java/lang/Object.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.28549618" vertical-offset="255" max-vertical-offset="969">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/mach/Mocks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33235294" vertical-offset="964" max-vertical-offset="1921">
+          <caret line="78" column="0" selection-start-line="78" selection-start-column="0" selection-end-line="78" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="1423" max-vertical-offset="2431">
+          <caret line="100" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/mach/MockFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1207">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/IListModelAsC1ListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="969">
+          <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/mach/InvocationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68235296" vertical-offset="1423" max-vertical-offset="2176">
+          <caret line="119" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/mach/Invocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7" vertical-offset="493" max-vertical-offset="1173">
+          <caret line="68" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding>
+            <element signature="e#1140#1141#0" expanded="true" />
+            <element signature="e#1207#1208#0" expanded="true" />
+            <element signature="e#1763#1764#0" expanded="true" />
+            <element signature="e#1856#1857#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/uilist/CommonListModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="646">
+          <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0/jre/lib/rt.jar!/javax/swing/event/ListDataEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39673278" vertical-offset="0" max-vertical-offset="857">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/uilist/SEFilterListModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33235294" vertical-offset="318" max-vertical-offset="1139">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/se/uilist/IListModelAsSEListModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7" vertical-offset="153" max-vertical-offset="833">
+          <caret line="55" column="31" selection-start-line="55" selection-start-column="31" selection-end-line="55" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/c1/uilist/IListModelAsC1ListModelTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33235294" vertical-offset="12" max-vertical-offset="714">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/uilist/CommonListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.15735294" vertical-offset="216" max-vertical-offset="935">
+          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+            <element signature="e#658#659#0" expanded="true" />
+            <element signature="e#709#710#0" expanded="true" />
+            <element signature="e#745#746#0" expanded="true" />
+            <element signature="e#802#803#0" expanded="true" />
+            <element signature="e#835#836#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#946#947#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4047619" vertical-offset="0" max-vertical-offset="882">
+          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SEFilterListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30839002" vertical-offset="0" max-vertical-offset="1377">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#465#466#0" expanded="true" />
+            <element signature="e#1177#1178#0" expanded="true" />
+            <element signature="e#1233#1234#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/IListModelAsSEListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34189945" vertical-offset="0" max-vertical-offset="895">
+          <caret line="29" column="16" selection-start-line="29" selection-start-column="16" selection-end-line="29" selection-end-column="16" />
+          <folding>
+            <element signature="e#670#847#0" expanded="true" />
+            <element signature="e#846#847#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66368717" vertical-offset="103" max-vertical-offset="1258">
+          <caret line="41" column="2" selection-start-line="41" selection-start-column="2" selection-end-line="41" selection-end-column="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/uilist/C1SearchFilterInstaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30839002" vertical-offset="0" max-vertical-offset="882">
+          <caret line="18" column="12" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

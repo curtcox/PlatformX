@@ -95,6 +95,9 @@ final class MockInvocationHandler
     }
 
     private Object result(Invocation invocation) throws Throwable {
+        if (invocation.returnsVoid()) {
+            return null;
+        }
         if (returns.containsKey(invocation)) {
             return returns.get(invocation);
         }
