@@ -30,7 +30,7 @@ public final class SESearchableList<T>
 
     private SESearchableList(UIList.Factory factory, LiveList<T> items, JComponent action, ListCellConfigurer configurer) {
         underlyingListModel = SEVirtualListModel.of(items);
-        filterListModel = new SEFilterListModel(underlyingListModel);
+        filterListModel = SEFilterListModel.of(underlyingListModel);
         filteredList = factory.of(convert(filterListModel), configurer);
         component = component(action);
     }

@@ -1,7 +1,10 @@
 package c1.uilist;
 
+import com.codename1.ui.events.DataChangedListener;
 import common.uilist.CommonListModel;
 import junit.framework.TestCase;
+import mach.Mocks;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
@@ -9,8 +12,15 @@ import static org.junit.Assert.assertSame;
 
 public class IListModelAsC1ListModelTest {
 
+    DataChangedListener dataChangedListener;
     CommonListModel model = new CommonListModel();
     IListModelAsC1ListModel testObject = new IListModelAsC1ListModel(model);
+
+    @Before
+    public void setUp() {
+        Mocks.init(this);
+        testObject.addDataChangedListener(dataChangedListener);
+    }
 
     @Test
     public void empty_list_has_size_0() {

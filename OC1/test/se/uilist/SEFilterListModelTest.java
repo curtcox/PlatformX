@@ -21,12 +21,13 @@ public class SEFilterListModelTest {
     ListDataListener listDataListener;
     CommonListModel commonListModel = new CommonListModel();
     IListModelAsSEListModel underlyingListModel = new IListModelAsSEListModel(commonListModel);
-    SEFilterListModel testObject = new SEFilterListModel(underlyingListModel);
+    SEFilterListModel testObject = SEFilterListModel.of(underlyingListModel);
 
     @Before
     public void setUp() {
         Mocks.init(this);
         _(); wild(null); listDataListener.contentsChanged(null);
+        testObject.addListDataListener(listDataListener);
     }
 
     @Test
@@ -75,7 +76,6 @@ public class SEFilterListModelTest {
 
     @Test
     public void dataListener_is_notified_when_filter_changes() {
-        testObject.addListDataListener(listDataListener);
         testObject.setFilter(ListFilter.ALLOW_NONE);
 
         verify();

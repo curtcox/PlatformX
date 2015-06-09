@@ -26,6 +26,7 @@ public class IListModelAsSEListModelTest {
     public void setUp() {
         Mocks.init(this);
         _(); wild(null); listDataListener.contentsChanged(null);
+        testObject.addListDataListener(listDataListener);
     }
 
     @Test
@@ -53,7 +54,6 @@ public class IListModelAsSEListModelTest {
 
     @Test
     public void addListDataListener_adds_a_listener_that_is_notified_when_model_changes() {
-        testObject.addListDataListener(listDataListener);
         model.addItem("");
 
         verify();

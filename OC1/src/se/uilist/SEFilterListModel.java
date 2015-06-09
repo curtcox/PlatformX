@@ -13,8 +13,34 @@ public final class SEFilterListModel<T>
     private ListFilter filter = ListFilter.ALLOW_ALL;
     private ListDataListener listDataListener;
 
-    public SEFilterListModel(ListModel<T> filtered) {
+    private SEFilterListModel(ListModel<T> filtered) {
         this.filtered = filtered;
+        listenForModelChanges();
+    }
+
+    public static SEFilterListModel of(ListModel filtered) {
+        SEFilterListModel model = new SEFilterListModel(filtered);
+        model.listenForModelChanges();
+        return model;
+    }
+
+    private void listenForModelChanges() {
+        filtered.addListDataListener(new ListDataListener() {
+            @Override
+            public void intervalAdded(ListDataEvent listDataEvent) {
+                dataChanged();
+            }
+
+            @Override
+            public void intervalRemoved(ListDataEvent listDataEvent) {
+                dataChanged();
+            }
+
+            @Override
+            public void contentsChanged(ListDataEvent listDataEvent) {
+                dataChanged();
+            }
+        });
     }
 
     @Override

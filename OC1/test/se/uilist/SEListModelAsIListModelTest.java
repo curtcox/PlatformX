@@ -17,7 +17,7 @@ public class SEListModelAsIListModelTest {
     List list = new ArrayList();
     SELiveList liveList = new SELiveList(list);
     SEVirtualListModel filtered = SEVirtualListModel.of(liveList);
-    SEFilterListModel model = new SEFilterListModel(filtered);
+    SEFilterListModel model = SEFilterListModel.of(filtered);
     SEListModelAsIListModel testObject = new SEListModelAsIListModel(model);
 
     @Test

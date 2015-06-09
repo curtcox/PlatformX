@@ -3,6 +3,7 @@ package c1.uilist;
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;
+import common.event.Change;
 import common.uilist.IListModel;
 
 public final class IListModelAsC1ListModel
@@ -35,8 +36,13 @@ public final class IListModelAsC1ListModel
     }
 
     @Override
-    public void addDataChangedListener(DataChangedListener dataChangedListener) {
-
+    public void addDataChangedListener(final DataChangedListener dataChangedListener) {
+        model.addListener(new Change.Listener() {
+            @Override
+            public void onChange() {
+                dataChangedListener.dataChanged(DataChangedListener.CHANGED,0);
+            }
+        });
     }
 
     @Override

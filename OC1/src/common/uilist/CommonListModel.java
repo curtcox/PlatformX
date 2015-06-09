@@ -24,9 +24,7 @@ public final class CommonListModel
     }
 
     private void notifyListener() {
-        if (listener!=null) {
-            listener.onChange();
-        }
+        listener.onChange();
     }
 
     @Override
