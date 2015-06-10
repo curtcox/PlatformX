@@ -85,9 +85,7 @@ public final class SEFilterListModel<T>
     }
 
     public void dataChanged() {
-        if (listDataListener!=null) {
-            notifyDataListener();
-        }
+        notifyDataListener();
     }
 
     private void notifyDataListener() {

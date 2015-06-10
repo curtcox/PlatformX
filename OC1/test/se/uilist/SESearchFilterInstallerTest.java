@@ -1,15 +1,16 @@
 package se.uilist;
 
 import common.event.LiveList;
-import common.uilist.ListCellConfigurer;
-import common.uilist.ListFilter;
-import common.uilist.StringToListFilter;
+import common.uilist.*;
 import junit.framework.TestCase;
+import mach.Mocks;
+import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 import se.event.SELiveList;
 
 import javax.swing.*;
+import javax.swing.event.ListDataListener;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
@@ -22,6 +23,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class SESearchFilterInstallerTest {
 
+    ListDataListener listDataListener;
     List list = new ArrayList();
     LiveList items = new SELiveList(list);
     JComponent action =  new JLabel();
@@ -30,13 +32,13 @@ public class SESearchFilterInstallerTest {
     StringToListFilter stringToListFilter = StringToListFilter.DEFAULT;
     SESearchFilterInstaller testObject = new SESearchFilterInstaller();
 
+    @Before
+    public void setUp() {
+        Mocks.init(this);
+    }
+
     @Test
     public void can_create() {
-        Frame frame = new Frame();
-        TextField text = new TextField();
-        frame.add(text);
-        frame.pack();
-        frame.setVisible(true);
         assertNotNull(new SESearchFilterInstaller());
     }
 
@@ -53,12 +55,18 @@ public class SESearchFilterInstallerTest {
         list.add("1");
         ListModel listModel = SEVirtualListModel.of(items);
         SEFilterListModel model = SEFilterListModel.of(listModel);
+        model.addListDataListener(listDataListener);
         SESearchFilterInstaller.setFilterText(model, stringToListFilter, "Q");
         assertEquals(0, model.getSize());
     }
 
     @Test @Ignore
     public void keyPress_changes_list_size() throws InvocationTargetException, InterruptedException {
+        Frame frame = new Frame();
+        TextField text = new TextField();
+        frame.add(text);
+        frame.pack();
+        frame.setVisible(true);
         list.add("1");
         testObject.install(searchableList, stringToListFilter);
         simulateKeyPress();

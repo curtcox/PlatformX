@@ -4,6 +4,7 @@ import common.event.Change;
 import common.event.LiveList;
 
 import javax.swing.*;
+import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
 import java.util.List;
 
@@ -13,9 +14,9 @@ import java.util.List;
 public final class SEVirtualListModel<T>
     implements ListModel<T>
 {
-    private final List<T> items;
+    private final LiveList<T> items;
 
-    private SEVirtualListModel(List items) {
+    private SEVirtualListModel(LiveList items) {
         this.items = items;
     }
 
@@ -39,17 +40,22 @@ public final class SEVirtualListModel<T>
     }
 
     @Override
-    public void addListDataListener(ListDataListener listDataListener) {
+    public void addListDataListener(final ListDataListener listDataListener) {
+        items.addListener(new Change.Listener() {
+            @Override
+            public void onChange() {
+                listDataListener.contentsChanged(dataChangedEvent());
+            }
+        });
+    }
 
+    private ListDataEvent dataChangedEvent() {
+        return new ListDataEvent(this,ListDataEvent.CONTENTS_CHANGED,0,items.size() - 1);
     }
 
     @Override
     public void removeListDataListener(ListDataListener listDataListener) {
 
-    }
-
-    private RuntimeException unsupported() {
-        return new RuntimeException("Not supported yet.");
     }
 
 }

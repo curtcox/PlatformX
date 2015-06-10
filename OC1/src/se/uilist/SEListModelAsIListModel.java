@@ -4,6 +4,8 @@ import common.event.Change;
 import common.uilist.IListModel;
 
 import javax.swing.*;
+import javax.swing.event.ListDataEvent;
+import javax.swing.event.ListDataListener;
 
 public class SEListModelAsIListModel
     implements IListModel
@@ -38,7 +40,17 @@ public class SEListModelAsIListModel
     }
 
     @Override
-    public void addListener(Change.Listener listener) {
-
+    public void addListener(final Change.Listener listener) {
+        model.addListDataListener(new ListDataListener() {
+            @Override public void intervalAdded(ListDataEvent listDataEvent) {
+                listener.onChange();
+            }
+            @Override public void intervalRemoved(ListDataEvent listDataEvent) {
+                listener.onChange();
+            }
+            @Override public void contentsChanged(ListDataEvent listDataEvent) {
+                listener.onChange();
+            }
+        });
     }
 }
