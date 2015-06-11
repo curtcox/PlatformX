@@ -32,28 +32,25 @@ final class SEBoxList
     
     private void addDataChangedListener() {
         model.addListDataListener(new ListDataListener() {
-            @Override
-            public void intervalAdded(ListDataEvent listDataEvent) {
+            @Override public void intervalAdded(ListDataEvent listDataEvent)   { dataChanged(); }
+            @Override public void intervalRemoved(ListDataEvent listDataEvent) {
                 dataChanged();
             }
-
-            @Override
-            public void intervalRemoved(ListDataEvent listDataEvent) {
-                dataChanged();
-            }
-
-            @Override
-            public void contentsChanged(ListDataEvent listDataEvent) {
-                dataChanged();
-            }
-
-            void dataChanged() {
-                addCellsFromModel();
-                SEBoxList.this.repaint();
-            }
+            @Override public void contentsChanged(ListDataEvent listDataEvent) { dataChanged(); }
         });
     }
-    
+
+    private void dataChanged() {
+        addCellsFromModel();
+        forceRepaint();
+    }
+
+    private void forceRepaint() {
+        validate();
+        invalidate();
+        repaint();
+    }
+
     public void addActionListener(Action.Listener actionListener) {
         this.actionListener = actionListener;
     }

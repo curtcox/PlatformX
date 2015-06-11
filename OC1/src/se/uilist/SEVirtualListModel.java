@@ -6,7 +6,6 @@ import common.event.LiveList;
 import javax.swing.*;
 import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
-import java.util.List;
 
 /**
  * A ListModel that uses a given list to store its elements.
@@ -22,12 +21,7 @@ public final class SEVirtualListModel<T>
 
     public static SEVirtualListModel of(LiveList items) {
         SEVirtualListModel model = new SEVirtualListModel(items);
-        items.addListener(convert(model));
         return model;
-    }
-
-    private static Change.Listener convert(SEVirtualListModel model) {
-        return null;
     }
 
     public int getSize() {
