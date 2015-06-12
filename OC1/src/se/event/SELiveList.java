@@ -3,27 +3,24 @@ package se.event;
 import common.event.Change;
 import common.event.LiveList;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public final class SELiveList
     implements LiveList
 {
     private final List list;
+    private Change.Listener listener;
 
     public SELiveList(List list) {
-        this.list = list;
+        this.list = new ArrayList(list);
+    }
+
+    public SELiveList() {
+        this(new ArrayList());
     }
 
     public void addListener(Change.Listener listener) {
-    }
-
-    public void removeListener(Change.Listener listener) {
-    }
-
-    public void dataChanged(int type, int index) {
+        this.listener = listener;
     }
 
     public Object get(int index) {
@@ -37,12 +34,17 @@ public final class SELiveList
         return list.size();
     }
 
+    public boolean add(Object object) {
+        boolean added = list.add(object);
+        listener.onChange();
+        return added;
+    }
+
     public boolean                       isEmpty() { throw unsupported(); }
     public boolean         contains(Object object) { throw unsupported(); }
     public Iterator                     iterator() { throw unsupported(); }
     public Object[]                      toArray() { throw unsupported(); }
     public Object[]        toArray(Object[] array) { throw unsupported(); }
-    public boolean              add(Object object) { throw unsupported(); }
     public boolean           remove(Object object) { throw unsupported(); }
     public void                            clear() { throw unsupported(); }
     public Object set(int location, Object object) { throw unsupported(); }

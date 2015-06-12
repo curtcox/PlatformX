@@ -1,6 +1,10 @@
 package se.uilist;
 
+import common.Registry;
 import common.event.Change;
+import common.uilist.ListFilter;
+import common.util.Runner;
+import fake.FakeRunner;
 import junit.framework.TestCase;
 import mach.Mocks;
 import org.junit.Before;
@@ -19,8 +23,7 @@ import static org.junit.Assert.assertSame;
 public class SEListModelAsIListModelTest {
 
     Change.Listener listener;
-    List list = new ArrayList();
-    SELiveList liveList = new SELiveList(list);
+    SELiveList liveList = new SELiveList();
     SEVirtualListModel filtered = SEVirtualListModel.of(liveList);
     SEFilterListModel model = SEFilterListModel.of(filtered);
     SEListModelAsIListModel testObject = new SEListModelAsIListModel(model);
@@ -28,6 +31,7 @@ public class SEListModelAsIListModelTest {
     @Before
     public void setUp() {
         Mocks.init(this);
+        Registry.put(Runner.class,new FakeRunner());
         testObject.addListener(listener);
     }
 
@@ -43,20 +47,20 @@ public class SEListModelAsIListModelTest {
 
     @Test
     public void getSize_returns_1_when_list_has_1_element() {
-        list.add("stuff");
+        liveList.add("stuff");
         assertEquals(1, testObject.getSize());
     }
 
     @Test
     public void getElementAt_0_returns_1st_element() {
         Object expected = new Object();
-        list.add(expected);
+        liveList.add(expected);
         assertSame(expected,testObject.getItemAt(0));
     }
 
     @Test
     public void listener_is_notified_when_model_changes() {
-        list.add("stuff");
+        model.setFilter(ListFilter.ALLOW_NONE);
 
         verify();
 

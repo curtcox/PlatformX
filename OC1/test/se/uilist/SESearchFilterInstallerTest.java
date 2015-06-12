@@ -1,5 +1,6 @@
 package se.uilist;
 
+import common.event.Change;
 import common.event.LiveList;
 import common.uilist.*;
 import junit.framework.TestCase;
@@ -15,17 +16,15 @@ import javax.swing.event.ListDataListener;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
 public class SESearchFilterInstallerTest {
 
+    Change.Listener listener;
     ListDataListener listDataListener;
-    List list = new ArrayList();
-    LiveList items = new SELiveList(list);
+    LiveList items = new SELiveList();
     JComponent action =  new JLabel();
     ListCellConfigurer configurer;
     SESearchableList searchableList = new SESearchableList(items,action,configurer);
@@ -35,6 +34,7 @@ public class SESearchFilterInstallerTest {
     @Before
     public void setUp() {
         Mocks.init(this);
+        items.addListener(listener);
     }
 
     @Test
@@ -44,7 +44,7 @@ public class SESearchFilterInstallerTest {
 
     @Test
     public void install_does_not_change_list_size() {
-        list.add("1");
+        items.add("1");
         assertEquals(1, searchableList.filterListModel.getSize());
         testObject.install(searchableList, stringToListFilter);
         assertEquals(1, searchableList.filterListModel.getSize());
@@ -52,7 +52,7 @@ public class SESearchFilterInstallerTest {
 
     @Test
     public void setFilterText_changes_list_size() throws InvocationTargetException, InterruptedException {
-        list.add("1");
+        items.add("1");
         ListModel listModel = SEVirtualListModel.of(items);
         SEFilterListModel model = SEFilterListModel.of(listModel);
         model.addListDataListener(listDataListener);
@@ -67,7 +67,7 @@ public class SESearchFilterInstallerTest {
         frame.add(text);
         frame.pack();
         frame.setVisible(true);
-        list.add("1");
+        items.add("1");
         testObject.install(searchableList, stringToListFilter);
         simulateKeyPress();
         assertEquals(0, searchableList.filterListModel.getSize());

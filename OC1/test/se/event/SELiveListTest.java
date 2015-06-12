@@ -1,7 +1,10 @@
 package se.event;
 
+import common.event.Change;
 import common.event.LiveList;
 import junit.framework.TestCase;
+import mach.Mocks;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -13,9 +16,16 @@ import static org.junit.Assert.assertTrue;
 
 public class SELiveListTest {
 
-    List list = new ArrayList();
-    SELiveList testObject = new SELiveList(list);
+    Change.Listener listener;
+    SELiveList testObject = new SELiveList();
 
+    @Before
+    public void setUp() {
+        Mocks.init(this);
+        testObject.addListener(listener);
+    }
+
+    @Test
     public void can_create() {
         assertNotNull(testObject);
     }
@@ -32,7 +42,7 @@ public class SELiveListTest {
 
     @Test
     public void size_returns_1_for_list_with_1_item() {
-        list.add("stuff");
+        testObject.add("stuff");
         assertEquals(1,testObject.size());
     }
 

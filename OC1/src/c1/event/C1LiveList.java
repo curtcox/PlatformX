@@ -5,10 +5,7 @@ import com.codename1.ui.util.EventDispatcher;
 import common.event.Change;
 import common.event.LiveList;
 
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public final class C1LiveList
     implements LiveList, DataChangedListener
@@ -17,9 +14,9 @@ public final class C1LiveList
     private final EventDispatcher dataListeners = new EventDispatcher();
 
     public C1LiveList(List list) {
-        this.list = list;
+        this.list = new ArrayList(list);
     }
-    
+
     public void addListener(Change.Listener listener) {
         dataListeners.addListener(listener);
     }

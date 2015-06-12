@@ -20,8 +20,7 @@ import static org.junit.Assert.assertSame;
 public class SEVirtualListModelTest {
 
     ListDataListener listDataListener;
-    List list = new ArrayList();
-    SELiveList liveList = new SELiveList(list);
+    SELiveList liveList = new SELiveList(new ArrayList());
     SEVirtualListModel testObject = SEVirtualListModel.of(liveList);
 
     @Before
@@ -42,20 +41,20 @@ public class SEVirtualListModelTest {
 
     @Test
     public void getSize_returns_1_when_list_has_1_element() {
-        list.add("stuff");
+        liveList.add("stuff");
         assertEquals(1, testObject.getSize());
     }
 
     @Test
     public void getElementAt_0_returns_1st_element() {
         Object expected = new Object();
-        list.add(expected);
+        liveList.add(expected);
         assertSame(expected,testObject.getElementAt(0));
     }
 
     @Test
     public void listener_is_notified_when_list_changes() {
-        list.add("stuff");
+        liveList.add("stuff");
 
         verify();
 
