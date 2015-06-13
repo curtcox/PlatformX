@@ -1,23 +1,17 @@
-package se.event;
+package common.event;
 
-import common.event.Change;
-import common.event.LiveList;
-import junit.framework.TestCase;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-public class SELiveListTest {
+public class CommonLiveListTest {
 
     Change.Listener listener;
-    SELiveList testObject = new SELiveList();
+    CommonLiveList testObject = new CommonLiveList();
 
     @Before
     public void setUp() {

@@ -1,32 +1,32 @@
-package se.uilist;
+package c1.uilist;
 
 import common.Registry;
 import common.event.Change;
+import common.event.CommonLiveList;
 import common.uilist.ListFilter;
 import common.util.Runner;
 import fake.FakeRunner;
+import junit.framework.TestCase;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
-import common.event.CommonLiveList;
 
 import static mach.Mocks.verify;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 
-public class SEListModelAsIListModelTest {
+public class C1ListModelAsIListModelTest {
 
     Change.Listener listener;
     CommonLiveList liveList = new CommonLiveList();
-    SEVirtualListModel filtered = SEVirtualListModel.of(liveList);
-    SEFilterListModel model = SEFilterListModel.of(filtered);
-    SEListModelAsIListModel testObject = new SEListModelAsIListModel(model);
+    C1VirtualListModel filtered = C1VirtualListModel.of(liveList);
+    C1FilterListModel model = C1FilterListModel.of(filtered);
+    C1ListModelAsIListModel testObject = new C1ListModelAsIListModel(model);
 
     @Before
     public void setUp() {
         Mocks.init(this);
-        Registry.put(Runner.class,new FakeRunner());
         testObject.addListener(listener);
     }
 
@@ -61,5 +61,4 @@ public class SEListModelAsIListModelTest {
 
         listener.onChange();
     }
-
 }

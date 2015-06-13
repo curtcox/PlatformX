@@ -7,7 +7,7 @@ import common.screenfactories.CellConfigurer;
 import common.screenfactories.ItemsScreen;
 import common.uilist.StringToListFilter;
 import common.uiwidget.ISearchableList;
-import se.event.SELiveList;
+import common.event.CommonLiveList;
 import se.uilist.SESearchFilterInstaller;
 import se.uilist.SESearchableList;
 
@@ -28,7 +28,7 @@ final class SEItemListScreenFactory<T>
     }     
 
     private ISearchableList<T> newSearchableList() {
-        SESearchableList<T> list = new SESearchableList(new SELiveList(values),new JLabel(),new CellConfigurer());
+        SESearchableList<T> list = new SESearchableList(new CommonLiveList(values),new JLabel(),new CellConfigurer());
         SESearchFilterInstaller.seSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }

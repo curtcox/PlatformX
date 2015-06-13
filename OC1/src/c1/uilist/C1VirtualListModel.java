@@ -1,78 +1,81 @@
 package c1.uilist;
 
+
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;
-import com.codename1.ui.util.EventDispatcher;
-import common.event.LiveList;
 import common.event.Change;
+import common.event.LiveList;
 
 /**
  * A ListModel that uses a given list to store its elements.
  */
 public final class C1VirtualListModel<T>
-    implements ListModel<T>, DataChangedListener
+    implements ListModel<T>
 {
-    private int index;
-    private final java.util.List<T> items;
-    private final EventDispatcher dataListeners = new EventDispatcher();
-    private final EventDispatcher selectionListeners = new EventDispatcher();
+    private final LiveList<T> items;
 
-    private C1VirtualListModel(java.util.List items) {
+    private C1VirtualListModel(LiveList items) {
         this.items = items;
     }
 
     public static C1VirtualListModel of(LiveList items) {
         C1VirtualListModel model = new C1VirtualListModel(items);
-        items.addListener(convert(model));
         return model;
     }
 
-    private static Change.Listener convert(C1VirtualListModel model) {
-        return null;
-    }
-
-    public T getItemAt(int index){
-        return items.get(index);
-    }
-    
     public int getSize() {
         return items.size();
     }
-    
+
+    @Override
     public int getSelectedIndex() {
-        return index;
+        return 0;
     }
 
-    public void setSelectedIndex(int index) {
-        this.index = index;
-    }
-    
-    public void addDataChangedListener(DataChangedListener listener) {
-        dataListeners.addListener(listener);
+    @Override
+    public void setSelectedIndex(int i) {
+
     }
 
-    public void removeDataChangedListener(DataChangedListener listener) {
-        dataListeners.removeListener(listener);
-    }
-    
-    public void dataChanged(int type, int index) {
-        dataListeners.fireDataChangeEvent(index, type);
-    }
-
-    public void addSelectionListener(SelectionListener listener) {
-        selectionListeners.addListener(listener);
+    @Override
+    public void addDataChangedListener(final DataChangedListener dataChangedListener) {
+        items.addListener(new Change.Listener() {
+            @Override
+            public void onChange() {
+                dataChangedListener.dataChanged(0,0);
+            }
+        });
     }
 
-    public void removeSelectionListener(SelectionListener listener) {
-        selectionListeners.removeListener(listener);
-    }
-    
-    public void addItem(T item)       { throw unsupported(); }   
-    public void removeItem(int index) { throw unsupported(); }
+    @Override
+    public void removeDataChangedListener(DataChangedListener dataChangedListener) {
 
-    private RuntimeException unsupported() {
-        return new RuntimeException("Not supported yet.");
+    }
+
+    @Override
+    public void addSelectionListener(SelectionListener selectionListener) {
+
+    }
+
+    @Override
+    public void removeSelectionListener(SelectionListener selectionListener) {
+
+    }
+
+    @Override
+    public void addItem(T t) {
+        items.add(t);
+    }
+
+    @Override
+    public void removeItem(int i) {
+
+    }
+
+    @Override
+    public T getItemAt(int index) {
+        return items.get(index);
     }
 
 }

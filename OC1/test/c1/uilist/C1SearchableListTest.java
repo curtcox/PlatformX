@@ -1,7 +1,7 @@
 package c1.uilist;
 
-import c1.event.C1LiveList;
 import com.codename1.ui.Component;
+import common.event.CommonLiveList;
 import common.event.LiveList;
 import common.uilist.ListCellConfigurer;
 import fake.FakeUIManager;
@@ -17,7 +17,7 @@ import static org.junit.Assert.assertTrue;
 public class C1SearchableListTest {
 
     List list = new ArrayList();
-    LiveList items = new C1LiveList(list);
+    LiveList items = new CommonLiveList(list);
     Component action;
     ListCellConfigurer configurer;
 

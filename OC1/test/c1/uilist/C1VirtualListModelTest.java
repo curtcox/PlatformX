@@ -1,33 +1,31 @@
-package se.uilist;
+package c1.uilist;
 
-import common.Registry;
-import common.event.Change;
-import common.uilist.ListFilter;
-import common.util.Runner;
-import fake.FakeRunner;
+import com.codename1.ui.events.DataChangedListener;
+import common.event.CommonLiveList;
+import common.event.LiveList;
+import junit.framework.TestCase;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
-import common.event.CommonLiveList;
+
+import javax.swing.event.ListDataListener;
 
 import static mach.Mocks.verify;
+import static mach.Mocks.wild;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 
-public class SEListModelAsIListModelTest {
+public class C1VirtualListModelTest {
 
-    Change.Listener listener;
-    CommonLiveList liveList = new CommonLiveList();
-    SEVirtualListModel filtered = SEVirtualListModel.of(liveList);
-    SEFilterListModel model = SEFilterListModel.of(filtered);
-    SEListModelAsIListModel testObject = new SEListModelAsIListModel(model);
+    DataChangedListener listDataListener;
+    LiveList liveList = new CommonLiveList();
+    C1VirtualListModel testObject = C1VirtualListModel.of(liveList);
 
     @Before
     public void setUp() {
         Mocks.init(this);
-        Registry.put(Runner.class,new FakeRunner());
-        testObject.addListener(listener);
+        testObject.addDataChangedListener(listDataListener);
     }
 
     @Test
@@ -54,12 +52,12 @@ public class SEListModelAsIListModelTest {
     }
 
     @Test
-    public void listener_is_notified_when_model_changes() {
-        model.setFilter(ListFilter.ALLOW_NONE);
+    public void listener_is_notified_when_list_changes() {
+        liveList.add("stuff");
 
         verify();
 
-        listener.onChange();
+        listDataListener.dataChanged(0,0);
     }
 
 }

@@ -1,5 +1,6 @@
 package c1.services;
 
+import common.event.CommonLiveList;
 import common.services.IGeocoder;
 import google.Geocoding;
 import google.GoogleLocation;
@@ -8,7 +9,6 @@ import java.util.List;
 import common.Registry;
 import common.domain.LocationDescription;
 import common.event.LiveList;
-import c1.event.C1LiveList;
 
 public final class Geocoder
     implements IGeocoder
@@ -24,7 +24,7 @@ public final class Geocoder
         for (GoogleLocation location : geocoding.searchFor(place)) {
             locations.add(locationFromGoogle(location));
         }
-        return new C1LiveList(locations);
+        return new CommonLiveList(locations);
     }
 
     private LocationDescription locationFromGoogle(GoogleLocation place) {

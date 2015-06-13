@@ -1,32 +1,23 @@
-package c1.event;
-
-import com.codename1.ui.events.DataChangedListener;
-import com.codename1.ui.util.EventDispatcher;
-import common.event.Change;
-import common.event.LiveList;
+package common.event;
 
 import java.util.*;
 
-public final class C1LiveList
-    implements LiveList, DataChangedListener
+public final class CommonLiveList
+    implements LiveList
 {
     private final List list;
-    private final EventDispatcher dataListeners = new EventDispatcher();
+    private Change.Listener listener;
 
-    public C1LiveList(List list) {
+    public CommonLiveList(List list) {
         this.list = new ArrayList(list);
     }
 
-    public void addListener(Change.Listener listener) {
-        dataListeners.addListener(listener);
+    public CommonLiveList() {
+        this(new ArrayList());
     }
 
-    public void removeListener(Change.Listener listener) {
-        dataListeners.removeListener(listener);
-    }
-    
-    public void dataChanged(int type, int index) {
-        dataListeners.fireDataChangeEvent(index, type);
+    public void addListener(Change.Listener listener) {
+        this.listener = listener;
     }
 
     public Object get(int index) {
@@ -40,12 +31,17 @@ public final class C1LiveList
         return list.size();
     }
 
+    public boolean add(Object object) {
+        boolean added = list.add(object);
+        listener.onChange();
+        return added;
+    }
+
     public boolean                       isEmpty() { throw unsupported(); }
     public boolean         contains(Object object) { throw unsupported(); }
     public Iterator                     iterator() { throw unsupported(); }
     public Object[]                      toArray() { throw unsupported(); }
     public Object[]        toArray(Object[] array) { throw unsupported(); }
-    public boolean              add(Object object) { throw unsupported(); }
     public boolean           remove(Object object) { throw unsupported(); }
     public void                            clear() { throw unsupported(); }
     public Object set(int location, Object object) { throw unsupported(); }

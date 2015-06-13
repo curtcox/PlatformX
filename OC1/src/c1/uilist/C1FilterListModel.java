@@ -36,7 +36,7 @@ import java.util.ArrayList;
  * @author Shai Almog
  */
 public final class C1FilterListModel<T>
-    implements ListModel<T>, DataChangedListener
+    implements ListModel<T>
 {
     private final ListModel<T> underlying;
     private ListFilter filter;
@@ -47,13 +47,27 @@ public final class C1FilterListModel<T>
      * The proxy is applied to the actual model and effectively hides it
      * @param underlying the "real" model for the list
      */
-    public C1FilterListModel(ListModel<T> underlying) {
+    private C1FilterListModel(ListModel<T> underlying) {
         this.underlying = underlying;
         this.filter = ListFilter.ALLOW_ALL;
-        calculateOffsets();
-        underlying.addDataChangedListener(this);
     }
-    
+
+    public static C1FilterListModel of(ListModel underlying) {
+        C1FilterListModel model = new C1FilterListModel(underlying);
+        model.calculateOffsets();
+        model.listenForModelChanges();
+        return model;
+    }
+
+    private void listenForModelChanges() {
+        underlying.addDataChangedListener(new DataChangedListener() {
+            @Override
+            public void dataChanged(int type, int index) {
+                C1FilterListModel.this.dataChanged(type,index);
+            }
+        });
+    }
+
     public T getItemAt(int index) {
         return underlying.getItemAt(offsets.get(index));
     }
@@ -78,8 +92,8 @@ public final class C1FilterListModel<T>
         }
     }
 
-    public void addDataChangedListener(DataChangedListener l) {
-        listeners.add(l);
+    public void addDataChangedListener(DataChangedListener listener) {
+        listeners.add(listener);
     }
 
     public void removeDataChangedListener(DataChangedListener listener) {
@@ -102,7 +116,7 @@ public final class C1FilterListModel<T>
         throw new RuntimeException();
     }
 
-    public void dataChanged(int type, int index) {
+    void dataChanged(int type, int index) {
         calculateOffsets();
         notifyListenersDataChanged(type,index);
     }

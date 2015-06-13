@@ -3,12 +3,11 @@ package se.uilist;
 import common.event.Change;
 import common.event.LiveList;
 import common.uilist.*;
-import junit.framework.TestCase;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import se.event.SELiveList;
+import common.event.CommonLiveList;
 
 import javax.swing.*;
 import javax.swing.event.ListDataListener;
@@ -24,7 +23,7 @@ public class SESearchFilterInstallerTest {
 
     Change.Listener listener;
     ListDataListener listDataListener;
-    LiveList items = new SELiveList();
+    LiveList items = new CommonLiveList();
     JComponent action =  new JLabel();
     ListCellConfigurer configurer;
     SESearchableList searchableList = new SESearchableList(items,action,configurer);

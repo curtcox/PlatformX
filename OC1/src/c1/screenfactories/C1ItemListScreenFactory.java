@@ -3,10 +3,10 @@ package c1.screenfactories;
 import com.codename1.ui.Label;
 import java.util.List;
 
+import common.event.CommonLiveList;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
-import c1.event.*;
 import c1.uilist.*;
 import common.screenfactories.CellConfigurer;
 import common.screenfactories.ItemsScreen;
@@ -27,7 +27,7 @@ final class C1ItemListScreenFactory<T>
     }     
 
     private ISearchableList<T> newSearchableList() {
-        C1SearchableList<T> list = new C1SearchableList(new C1LiveList(values),new Label(),new CellConfigurer());
+        C1SearchableList<T> list = new C1SearchableList(new CommonLiveList(values),new Label(),new CellConfigurer());
         C1SearchFilterInstaller.c1SpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }

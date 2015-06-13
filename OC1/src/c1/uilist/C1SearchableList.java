@@ -32,7 +32,7 @@ public final class C1SearchableList<T>
 
     private C1SearchableList(UIList.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer) {
         underlyingListModel = C1VirtualListModel.of(items);
-        filterListModel = new C1FilterListModel(underlyingListModel);
+        filterListModel = C1FilterListModel.of(underlyingListModel);
         filteredList = factory.of(convert(filterListModel),configurer);
         component = new BorderContainer((Component)filteredList)
              .addNorth(newNorthContainer(action));
