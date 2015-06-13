@@ -16,34 +16,68 @@ public final class SEListCell
 {
     public final JButton firstRow = new JButton();
     public final JButton secondRow = new JButton();
-    public final JButton icon = new JButton();
+    public final IconButton icon = new IconButton();
 
-    /**
-     * Default constructor allowing the designer to create an instance of this class
-     */
     public SEListCell() {
         setLayout(new BorderLayout());
         firstRow.setHorizontalAlignment(SwingConstants.LEFT);
         secondRow.setHorizontalAlignment(SwingConstants.LEFT);
-        add(BorderLayout.CENTER, createLabelsBorder(firstRow, secondRow));
-        add(BorderLayout.WEST, createIconContainer(icon));
+        add(BorderLayout.CENTER, new LabelsPanel(firstRow, secondRow));
+        add(BorderLayout.WEST, icon);
     }
 
-    private static JComponent createIconContainer(JButton icon) {
-        BorderLayout layout = new BorderLayout();
-        JComponent container = new JPanel(layout);
-        container.add(BorderLayout.CENTER, icon);
-        return container;
+    @Override
+    public Dimension getPreferredSize() {
+        int width = 500;
+        int height = 100;
+        return new Dimension(width, height);
     }
 
-    private static JComponent createLabelsBorder(JButton firstRow, JButton secondRow) {
-        JComponent labels = new JPanel();
-        labels.setLayout(new BoxLayout(labels,BoxLayout.Y_AXIS));
-        JComponent labelsBorder = new JPanel(new BorderLayout());
-        labelsBorder.add(BorderLayout.SOUTH, labels);
-        labelsBorder.add(BorderLayout.CENTER, firstRow);
-        labels.add(secondRow);
-        return labelsBorder;
+    @Override
+    public Dimension getSize() {
+        return getPreferredSize();
+    }
+
+    @Override
+    public Dimension getMinimumSize() {
+        return getPreferredSize();
+    }
+
+    @Override
+    public Dimension getMaximumSize() {
+        return getPreferredSize();
+    }
+
+    private static class LabelsPanel extends JPanel {
+        LabelsPanel(JButton firstRow, JButton secondRow) {
+            this.setLayout(new BorderLayout());
+            add(BorderLayout.CENTER, firstRow);
+            add(BorderLayout.SOUTH, secondRow);
+        }
+    }
+
+    private static class IconButton extends JButton {
+        @Override
+        public Dimension getPreferredSize() {
+            int width = 100;
+            int height = 100;
+            return new Dimension(width, height);
+        }
+
+        @Override
+        public Dimension getSize() {
+            return getPreferredSize();
+        }
+
+        @Override
+        public Dimension getMinimumSize() {
+            return getPreferredSize();
+        }
+
+        @Override
+        public Dimension getMaximumSize() {
+            return getPreferredSize();
+        }
     }
 
     @Override
@@ -68,4 +102,5 @@ public final class SEListCell
 
     public void setLeadComponent(JButton leadComponent) {
     }
+
 }
