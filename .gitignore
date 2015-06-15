@@ -24,8 +24,8 @@ Thumbs.db
 # IDE specific
 .classpath
 .project
-*.iml
-.idea
+#*.iml
+#.idea
 
 # Build tool specific
 .gradle

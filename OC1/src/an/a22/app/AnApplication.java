@@ -1,4 +1,4 @@
-package an.a22;
+package an.a22.app;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -7,7 +7,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
-public class FullscreenActivity extends Activity {
+public class AnApplication extends Activity {
 
 
     @Override
