@@ -1,6 +1,31 @@
+# Generated Binaries
 *.class
-
-# Package Files #
 *.war
 *.ear
+*.apk
+*.ap_
+*.dex
+
+# Generated folders
+build
+build/
+dist
+bin/
+gen/
 out/*
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# OS thumbnails
+Thumbs.db
+.DS_Store
+
+# IDE specific
+.classpath
+.project
+*.iml
+.idea
+
+# Build tool specific
+.gradle
