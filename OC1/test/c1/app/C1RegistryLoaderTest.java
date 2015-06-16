@@ -1,6 +1,6 @@
 package c1.app;
 
-import c1.net.RawNetwork;
+import c1.net.C1RawNetwork;
 import c1.services.ILocationManager;
 import com.codename1.io.Storage;
 import common.Registry;
@@ -32,7 +32,7 @@ public class C1RegistryLoaderTest {
 
     void loadPlatform() {
         Registry.put(Storage.class, new FakeStorage());
-        Registry.put(Network.class, new RawNetwork());
+        Registry.put(Network.class, new C1RawNetwork());
         Registry.put(IDisplay.class, new FakeDisplay());
         Registry.put(ILocationManager.class, new FakeLocationManager());
         Registry.put(IDeviceInfo.class, new FakeDeviceInfo());

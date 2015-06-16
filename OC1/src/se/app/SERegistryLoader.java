@@ -1,20 +1,21 @@
 package se.app;
 
-import common.device.IDeviceInfo;
-import common.log.ILogManager;
 import common.Registry;
+import common.device.IDeviceInfo;
+import common.log.CommonLogManager;
+import common.log.ILogManager;
+import common.log.CommonLogWriter;
 import common.net.Network;
 import common.screen.RootScreenFactory;
+import common.screen.ScreenFactory;
 import common.screen.dynamic.TaggedStringSources;
 import common.screenfactories.ItemListScreenFactoryFactory;
-import se.device.SEDeviceInfo;
-import se.editor.ScreenEditor;
-import se.events.Events;
-import se.log.*;
-import common.screen.ScreenFactory;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import common.util.StringMap;
+import se.device.SEDeviceInfo;
+import se.editor.ScreenEditor;
+import se.events.Events;
 import se.net.SERawNetwork;
 import se.screenfactories.SEItemListScreenFactoryFactory;
 import se.ui.SEDisplay;
@@ -37,8 +38,8 @@ final class SERegistryLoader {
     }
 
     static void loadPlatform() {
-        put(ILogManager.class,      new LogManager());
-        put(LogWriter.class,        new LogWriter());
+        put(ILogManager.class,      new CommonLogManager());
+        put(CommonLogWriter.class,        new CommonLogWriter());
         put(Events.class,           new Events());
         put(IFormFactory.class,     new SEFormFactory());
         put(IDisplay.class,         SEDisplay.of());

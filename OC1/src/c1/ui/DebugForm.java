@@ -66,7 +66,7 @@ final class DebugForm
     }
 
     private void log(String message) {
-        //LogManager.of().getLog(DebugForm.class).log(link + ":" + message);
+        //CommonLogManager.of().getLog(DebugForm.class).log(link + ":" + message);
     }
 
 }

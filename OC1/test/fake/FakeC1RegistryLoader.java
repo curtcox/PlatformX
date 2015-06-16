@@ -1,27 +1,27 @@
 package fake;
 
+import c1.services.C1Locations;
 import c1.services.ILocationManager;
+import c1.ui.C1FormFactory;
+import c1.ui.Icons;
 import com.codename1.impl.ImplementationFactory;
 import com.codename1.io.Storage;
 import com.codename1.ui.Display;
-import common.log.ILogManager;
-import common.app.CurrentState;
 import common.Registry;
+import common.app.CurrentState;
 import common.domain.ServiceProvider;
-import c1.log.C1LogManager;
-import common.log.LogWriter;
-import c1.services.C1Locations;
+import common.log.CommonLogManager;
+import common.log.ILogManager;
+import common.log.CommonLogWriter;
 import common.services.ServiceProviders;
-import c1.ui.C1FormFactory;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;
-import c1.ui.Icons;
 
 public class FakeC1RegistryLoader {
     
     public static void load() {
-        put(ILogManager.class,      new C1LogManager());
-        put(LogWriter.class,        new LogWriter());
+        put(ILogManager.class,      new CommonLogManager());
+        put(CommonLogWriter.class,        new CommonLogWriter());
         put(Storage.class,          new FakeStorage());
         put(ILocationManager.class, new FakeLocationManager());
         put(C1Locations.class,        new C1Locations());
