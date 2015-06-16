@@ -8,8 +8,8 @@ import common.log.ILogManager;
 import common.app.CurrentState;
 import common.Registry;
 import common.domain.ServiceProvider;
-import c1.log.LogManager;
-import c1.log.LogWriter;
+import c1.log.C1LogManager;
+import common.log.LogWriter;
 import c1.services.C1Locations;
 import common.services.ServiceProviders;
 import c1.ui.C1FormFactory;
@@ -20,7 +20,7 @@ import c1.ui.Icons;
 public class FakeC1RegistryLoader {
     
     public static void load() {
-        put(ILogManager.class,      new LogManager());
+        put(ILogManager.class,      new C1LogManager());
         put(LogWriter.class,        new LogWriter());
         put(Storage.class,          new FakeStorage());
         put(ILocationManager.class, new FakeLocationManager());

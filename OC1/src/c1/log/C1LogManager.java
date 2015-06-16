@@ -4,15 +4,15 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 
-public final class LogManager
+public final class C1LogManager
     implements ILogManager
 {
 
-    static LogManager of() {
-        return Registry.get(LogManager.class);
+    static C1LogManager of() {
+        return Registry.get(C1LogManager.class);
     }
     
     public ILog getLog(Class c) {
-        return new Log(c);
+        return new C1Log(c);
     }
 }

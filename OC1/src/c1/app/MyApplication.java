@@ -21,7 +21,7 @@ public class MyApplication {
         try {
             loadTheme();
             C1RegistryLoader.load();
-            ExceptionLogger.of().install();
+            C1ExceptionLogger.of().install();
         } catch(IOException e){
             log(e);
         }

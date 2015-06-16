@@ -5,7 +5,7 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Form;
 import com.codename1.ui.Graphics;
 import com.codename1.ui.animations.Transition;
-import c1.log.IssueReporter;
+import c1.log.C1IssueReporter;
 import common.command.Command;
 
 /**
@@ -31,7 +31,7 @@ final class DebugForm
     private static com.codename1.ui.Command submitIssue() {
         return new C1LoggedCommand(new Command("Report") {
             @Override public void action(Object...args) {
-                IssueReporter.sendEmail();
+                C1IssueReporter.sendEmail();
             }
         });
     }

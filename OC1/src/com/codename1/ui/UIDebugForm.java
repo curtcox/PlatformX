@@ -6,7 +6,7 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 import common.command.Command;
-import c1.log.IssueReporter;
+import c1.log.C1IssueReporter;
 
 /**
  * DebugForm in the same package, so we can intercept more methods.
@@ -32,7 +32,7 @@ public final class UIDebugForm
         return new C1LoggedCommand(new Command("Report") {
             @Override
             protected void action(Object...args) {
-                IssueReporter.sendEmail();
+                C1IssueReporter.sendEmail();
             }
         });
     }

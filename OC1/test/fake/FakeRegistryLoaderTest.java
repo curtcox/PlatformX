@@ -3,7 +3,7 @@ package fake;
 import com.codename1.io.Storage;
 import common.log.ILogManager;
 import common.Registry;
-import c1.log.LogManager;
+import c1.log.C1LogManager;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -22,7 +22,7 @@ public class FakeRegistryLoaderTest {
     @Test
     public void load_puts_LogManager_in_Registry() {
         FakeC1RegistryLoader.load();
-        assertTrue(Registry.get(ILogManager.class) instanceof LogManager);
+        assertTrue(Registry.get(ILogManager.class) instanceof C1LogManager);
     }
 
     @Test

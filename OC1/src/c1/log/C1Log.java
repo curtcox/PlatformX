@@ -2,17 +2,18 @@ package c1.log;
 
 import common.log.ILog;
 import common.Registry;
+import common.log.LogWriter;
 import common.ui.IDisplay;
 import common.ui.IForm;
 
-public final class Log
+public final class C1Log
     implements ILog
 {
 
     final Class clazz;
     final String prefix;
     
-    Log(Class clazz) {
+    C1Log(Class clazz) {
         this.clazz = clazz;
         prefix = ":" + clazz.getCanonicalName() + ":";
     }

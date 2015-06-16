@@ -7,9 +7,9 @@ import com.codename1.ui.events.ActionListener;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import c1.log.IssueReporter;
+import c1.log.C1IssueReporter;
 
-final class ExceptionLogger
+final class C1ExceptionLogger
     implements ActionListener
 {
 
@@ -22,18 +22,18 @@ final class ExceptionLogger
     }
 
     ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(ExceptionLogger.class);
+        return Registry.get(ILogManager.class).getLog(C1ExceptionLogger.class);
     }
 
-    static ExceptionLogger of() {
-        return new ExceptionLogger();
+    static C1ExceptionLogger of() {
+        return new C1ExceptionLogger();
     }
 
     public void actionPerformed(ActionEvent event) {
         event.consume();
         log(event);
         logDisplay();
-        IssueReporter.sendEmail();
+        C1IssueReporter.sendEmail();
     }
 
     void logDisplay() {

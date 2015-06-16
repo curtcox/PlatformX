@@ -5,6 +5,12 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import common.Registry;
+import common.log.ILog;
+import common.log.ILogManager;
+import common.screen.Screen;
+import common.screen.ScreenFactory;
+import common.screen.ScreenLink;
 
 
 public class AnApplication extends Activity {
@@ -13,7 +19,16 @@ public class AnApplication extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        displayUI();
+        log("onCreate(" +savedInstanceState + ") finished");
+    }
 
+    private void show() {
+        ScreenFactory factory = Registry.get(ScreenFactory.class);
+        Screen.show(ScreenLink.of(""), factory);
+    }
+
+    private void displayUI() {
         TextView label = new TextView(this);
         label.setText("Hello World");
         label.setTextSize(20);
@@ -26,6 +41,18 @@ public class AnApplication extends Activity {
         layout.addView(label);
 
         setContentView(layout);
+    }
+
+    private void log(Object context) {
+        getLog().log("init("+context +")");
+    }
+
+    private void log(Exception e) {
+        getLog().log(e);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(AnApplication.class);
     }
 
 }

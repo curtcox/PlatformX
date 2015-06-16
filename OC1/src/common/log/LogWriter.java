@@ -1,4 +1,4 @@
-package c1.log;
+package common.log;
 
 import common.Registry;
 import java.util.LinkedList;

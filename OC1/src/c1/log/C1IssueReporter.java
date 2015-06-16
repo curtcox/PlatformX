@@ -5,8 +5,9 @@ import com.codename1.ui.Display;
 import common.Registry;
 import c1.app.Version;
 import c1.device.C1DeviceInfo;
+import common.log.LogWriter;
 
-public final class IssueReporter {
+public final class C1IssueReporter {
 
     public static void sendEmail() {
         String[] recipients = new String[]{"curtcox@gmail.com"};

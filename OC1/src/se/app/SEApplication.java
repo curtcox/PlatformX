@@ -11,7 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 
-public final class Application {
+public final class SEApplication {
 
     public static void main(String[] args) throws Exception {
         setCrossPlatformLookAndFeel();

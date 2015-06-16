@@ -8,6 +8,7 @@ import common.Registry;
 import common.app.CurrentState;
 import common.device.IDeviceInfo;
 import common.domain.ServiceProvider;
+import common.log.LogWriter;
 import common.net.Network;
 import common.net.RootStringMap;
 import common.screen.RootScreenFactory;
@@ -46,8 +47,8 @@ final class C1RegistryLoader {
     }
 
     static void loadPlatform() {
-        put(ExceptionLogger.class,  new ExceptionLogger());
-        put(ILogManager.class,      new LogManager());
+        put(C1ExceptionLogger.class,  new C1ExceptionLogger());
+        put(ILogManager.class,      new C1LogManager());
         put(LogWriter.class,        new LogWriter());
         put(IFormFactory.class,     new C1FormFactory());
         put(MyRatings.class,        new MyRatings());
