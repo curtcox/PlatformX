@@ -12,7 +12,7 @@ import java.util.Map;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
-import c1.ui.Icons;
+import c1.ui.C1Icons;
 
 abstract class JsonResponseParser<T>
 {
@@ -54,7 +54,7 @@ abstract class JsonResponseParser<T>
         String string = stringFrom(map,key);
         try {
             URI uri = (string==null) ? null : new URI(string);
-            Icons.of().getImage(uri);
+            C1Icons.of().getImage(uri);
             return uri;
         } catch (URISyntaxException e) {
             log(e);

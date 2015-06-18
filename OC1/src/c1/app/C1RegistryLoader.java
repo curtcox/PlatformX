@@ -9,7 +9,7 @@ import c1.services.ILocationManager;
 import c1.services.LocationManager;
 import c1.ui.C1Display;
 import c1.ui.C1FormFactory;
-import c1.ui.Icons;
+import c1.ui.C1Icons;
 import com.codename1.io.Storage;
 import com.codename1.ui.Display;
 import common.Registry;
@@ -62,7 +62,7 @@ final class C1RegistryLoader {
         put(ServiceProviders.class, new ServiceProviders());
         put(Geocoder.class,         new Geocoder());
         put(CurrentState.class,     new CurrentState());
-        put(Icons.class,            new Icons());
+        put(C1Icons.class,            new C1Icons());
         StringMap stringMap = RootStringMap.of();
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));

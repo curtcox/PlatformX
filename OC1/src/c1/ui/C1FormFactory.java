@@ -7,7 +7,7 @@ import common.ui.IFormFactory;
 /**
  * For creating new FormS.
  * This exists to provide a single spot for Form configuration.
- * See DebugForm.
+ * See C1DebugForm.
  */
 public final class C1FormFactory
     implements IFormFactory

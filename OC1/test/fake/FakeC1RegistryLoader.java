@@ -3,7 +3,7 @@ package fake;
 import c1.services.C1Locations;
 import c1.services.ILocationManager;
 import c1.ui.C1FormFactory;
-import c1.ui.Icons;
+import c1.ui.C1Icons;
 import com.codename1.impl.ImplementationFactory;
 import com.codename1.io.Storage;
 import com.codename1.ui.Display;
@@ -28,7 +28,7 @@ public class FakeC1RegistryLoader {
         put(ServiceProvider.class,  ServiceProvider.NULL);
         put(ServiceProviders.class, new ServiceProviders());
         put(CurrentState.class,     new CurrentState());
-        put(Icons.class,            new Icons());
+        put(C1Icons.class,            new C1Icons());
         put(IFormFactory.class,     new C1FormFactory());
         put(IDisplay.class,         new FakeDisplay());
         initDisplay();

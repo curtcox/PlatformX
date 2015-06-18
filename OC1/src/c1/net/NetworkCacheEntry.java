@@ -9,7 +9,7 @@ import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
 import common.Registry;
-import c1.ui.EmptyImage;
+import c1.ui.C1EmptyImage;
 import common.uiwidget.UIImage;
 import common.util.Strings;
 
@@ -64,7 +64,7 @@ final class NetworkCacheEntry {
     }
 
     UIImage createImageToStorage(int w, int h) {
-        EncodedImage placeholder = new EmptyImage(w, h);
+        EncodedImage placeholder = new C1EmptyImage(w, h);
         URLImage image = URLImage.createToStorage(placeholder, fileName, uri.toString(), URLImage.RESIZE_SCALE_TO_FILL);
         image.fetch();
         //return image;

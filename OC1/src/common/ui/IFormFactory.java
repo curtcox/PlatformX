@@ -1,11 +1,11 @@
 package common.ui;
 
 import common.screen.ScreenLink;
-import common.ui.IForm;
 
 /**
  * For creating new FormS.
- * This exists to provide a single spot for Form configuration.
+ * Applications don't need to implement this interface.
+ * This exists to provide a single spot for Form fabrication and configuration.
  * See DebugForm.
  */
 public interface IFormFactory {

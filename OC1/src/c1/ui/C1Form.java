@@ -1,21 +1,22 @@
 package c1.ui;
 
+import c1.Components;
 import c1.command.C1LoggedCommand;
-import com.codename1.ui.Component;
 import com.codename1.ui.Form;
-import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.Layout;
+import common.command.Command;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
-import c1.Components;
-import common.command.Command;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
+/**
+ * A CodenameOne Form that is also an IForm.
+ */
 public class C1Form
     extends Form
     implements IForm
@@ -58,23 +59,23 @@ public class C1Form
         Screen.getShowing().refresh();
     }
 
-    public void layout(UIComponent component) {
+    final public void layout(UIComponent component) {
         removeAll();
-        setLayout(createLayout(component));
+        setLayout(createLayout());
         Components.addToContainer(C1UIRenderer.render(component), this);
     }
 
-    private Layout createLayout(UIComponent component) {
+    private Layout createLayout() {
         return new FlowLayout();
     }
 
     @Override
-    public void setBackCommand(Command back) {
+    final public void setBackCommand(Command back) {
         super.setBackCommand(new C1LoggedCommand(back));
     }
 
     @Override
-    public ScreenLink getScreenLink() {
+    final public ScreenLink getScreenLink() {
         return link;
     }
 

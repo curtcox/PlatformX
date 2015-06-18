@@ -5,6 +5,9 @@ import com.codename1.ui.Form;
 import common.ui.IDisplay;
 import common.ui.IForm;
 
+/**
+ * A wrapper to make a C1Display an IDisplay.
+ */
 public final class C1Display
     implements IDisplay
 {
