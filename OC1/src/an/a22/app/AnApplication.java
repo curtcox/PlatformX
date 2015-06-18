@@ -1,6 +1,7 @@
 package an.a22.app;
 
 import android.app.Activity;
+import android.content.Context;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.widget.LinearLayout;
@@ -19,7 +20,13 @@ public class AnApplication extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        displayUI();
+        try {
+            Registry.put(Context.class,this);
+            AnRegistryLoader.load();
+        } catch(Exception e){
+            log(e);
+        }
+        show();
         log("onCreate(" +savedInstanceState + ") finished");
     }
 

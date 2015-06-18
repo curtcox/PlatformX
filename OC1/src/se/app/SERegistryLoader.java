@@ -39,7 +39,7 @@ final class SERegistryLoader {
 
     static void loadPlatform() {
         put(ILogManager.class,      new CommonLogManager());
-        put(CommonLogWriter.class,        new CommonLogWriter());
+        put(CommonLogWriter.class,  new CommonLogWriter());
         put(Events.class,           new Events());
         put(IFormFactory.class,     new SEFormFactory());
         put(IDisplay.class,         SEDisplay.of());

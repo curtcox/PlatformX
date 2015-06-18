@@ -6,7 +6,7 @@ import common.uilist.IListModel;
 import common.uilist.ListCellConfigurer;
 import common.uilist.UIList;
 import common.uiwidget.ISearchableList;
-import se.uiwidget.BorderContainer;
+import se.uiwidget.SEBorderContainer;
 
 import javax.swing.*;
 
@@ -36,7 +36,7 @@ public final class SESearchableList<T>
     }
 
     private JComponent component(JComponent action) {
-        return new BorderContainer(new JScrollPane((JComponent)filteredList))
+        return new SEBorderContainer(new JScrollPane((JComponent)filteredList))
                 .addNorth(newNorthContainer(action));
     }
 
@@ -49,7 +49,7 @@ public final class SESearchableList<T>
     }
 
     private JComponent newNorthContainer(JComponent action) {
-        return new BorderContainer(searchTerm).addEast(action);
+        return new SEBorderContainer(searchTerm).addEast(action);
     }
     
     public void onSelected(final Action.Listener listener) {

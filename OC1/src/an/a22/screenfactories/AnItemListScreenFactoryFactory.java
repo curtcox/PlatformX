@@ -10,6 +10,6 @@ public final class AnItemListScreenFactoryFactory
 {
     @Override
     public ScreenFactory newFactory(List values) {
-        return null;
+        return new AnItemListScreenFactory(values);
     }
 }

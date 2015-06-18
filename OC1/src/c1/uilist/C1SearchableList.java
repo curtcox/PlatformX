@@ -4,7 +4,7 @@ import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
 import com.codename1.ui.list.ListModel;
-import c1.uiwidget.BorderContainer;
+import c1.uiwidget.C1BorderContainer;
 import common.event.LiveList;
 import common.event.Action;
 import common.uilist.IListModel;
@@ -34,7 +34,7 @@ public final class C1SearchableList<T>
         underlyingListModel = C1VirtualListModel.of(items);
         filterListModel = C1FilterListModel.of(underlyingListModel);
         filteredList = factory.of(convert(filterListModel),configurer);
-        component = new BorderContainer((Component)filteredList)
+        component = new C1BorderContainer((Component)filteredList)
              .addNorth(newNorthContainer(action));
     }
 
@@ -47,7 +47,7 @@ public final class C1SearchableList<T>
     }
 
     private Container newNorthContainer(Component action) {
-        return new BorderContainer(searchTerm).addEast(action);
+        return new C1BorderContainer(searchTerm).addEast(action);
     }
     
     public void onSelected(final Action.Listener listener) {
