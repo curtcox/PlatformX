@@ -1,7 +1,6 @@
 package an.a22.app;
 
 import an.a22.device.AnDeviceInfo;
-import an.a22.net.AnRawNetwork;
 import an.a22.screenfactories.AnItemListScreenFactoryFactory;
 import an.a22.ui.AnDisplay;
 import an.a22.ui.AnFormFactory;
@@ -11,6 +10,7 @@ import common.device.IDeviceInfo;
 import common.log.CommonLogManager;
 import common.log.CommonLogWriter;
 import common.log.ILogManager;
+import common.net.CommonRawNetwork;
 import common.net.Network;
 import common.net.RootStringMap;
 import common.screen.RootScreenFactory;
@@ -42,7 +42,7 @@ final class AnRegistryLoader {
         put(CommonLogWriter.class,  new CommonLogWriter());
         put(IFormFactory.class,     new AnFormFactory());
         put(CurrentState.class,     new CurrentState());
-        put(Network.class,          new AnRawNetwork());
+        put(Network.class,          new CommonRawNetwork());
         StringMap stringMap = RootStringMap.of();
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));

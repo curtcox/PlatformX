@@ -16,7 +16,7 @@ import common.util.StringMap;
 import se.device.SEDeviceInfo;
 import se.editor.ScreenEditor;
 import se.events.Events;
-import se.net.SERawNetwork;
+import common.net.CommonRawNetwork;
 import se.screenfactories.SEItemListScreenFactoryFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
@@ -43,7 +43,7 @@ final class SERegistryLoader {
         put(Events.class,           new Events());
         put(IFormFactory.class,     new SEFormFactory());
         put(IDisplay.class,         SEDisplay.of());
-        put(Network.class,          new SERawNetwork());
+        put(Network.class,          new CommonRawNetwork());
         putTaggedValueStringMap();
         put(ItemListScreenFactoryFactory.class, new SEItemListScreenFactoryFactory());
         put(ScreenFactory.class,    RootScreenFactory.of());
