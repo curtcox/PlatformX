@@ -9,6 +9,6 @@ public final class AnFormFactory
 {
     @Override
     public IForm newForm(ScreenLink link) {
-        return null;
+        return new AnForm(link);
     }
 }

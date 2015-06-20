@@ -6,6 +6,20 @@ import common.ui.IForm;
 public final class AnDisplay
     implements IDisplay
 {
+    AnForm form;
+    private static AnDisplay singleton;
+
+    static AnDisplay of() {
+        if (singleton==null) {
+            singleton = newDisplay();
+        }
+        return singleton;
+    }
+
+    private static AnDisplay newDisplay() {
+        return new AnDisplay();
+    }
+
     @Override
     public boolean isPortrait() {
         return false;
@@ -13,7 +27,11 @@ public final class AnDisplay
 
     @Override
     public IForm getCurrent() {
-        return null;
+        return form;
+    }
+
+    void show(AnForm form) {
+        this.form = form;
     }
 
     @Override

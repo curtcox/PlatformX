@@ -2,7 +2,6 @@ package se.ui;
 
 import common.ui.IDisplay;
 import common.ui.IForm;
-import hash.Run;
 
 import javax.swing.*;
 import java.awt.*;

@@ -3,9 +3,6 @@ package an.a22.app;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import android.view.Gravity;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
@@ -33,21 +30,6 @@ public class AnApplication extends Activity {
     private void show() {
         ScreenFactory factory = Registry.get(ScreenFactory.class);
         Screen.show(ScreenLink.of(""), factory);
-    }
-
-    private void displayUI() {
-        TextView label = new TextView(this);
-        label.setText("Hello World");
-        label.setTextSize(20);
-        label.setGravity(Gravity.CENTER_HORIZONTAL);
-
-        LinearLayout layout = new LinearLayout(this);
-        layout.setOrientation(LinearLayout.VERTICAL);
-        layout.setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT));
-        layout.setGravity(Gravity.CENTER);
-        layout.addView(label);
-
-        setContentView(layout);
     }
 
     private void log(Object context) {
