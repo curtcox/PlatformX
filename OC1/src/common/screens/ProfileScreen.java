@@ -1,6 +1,6 @@
 package common.screens;
 
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenLink;
 import common.uiwidget.UIBorderContainer;
 import common.uiwidget.UIComponent;
@@ -9,7 +9,7 @@ import common.uiwidget.UIComponent;
  * For viewing and manipulating the user profile.
  */
 final class ProfileScreen
-    extends Screen
+    extends Page
 {
 
     ProfileScreen(ScreenLink link) {
@@ -17,7 +17,7 @@ final class ProfileScreen
     }
 
     @Override
-    protected UIComponent layoutForPortrait() {
+    public UIComponent layoutForPortrait() {
         return new UIBorderContainer();
     }
     

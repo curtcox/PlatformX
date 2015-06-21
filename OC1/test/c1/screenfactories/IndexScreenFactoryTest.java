@@ -1,12 +1,12 @@
 package c1.screenfactories;
 
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
+import common.screenfactories.IndexScreenFactory;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
-import common.screenfactories.IndexScreenFactory;
 
 import java.util.Arrays;
 
@@ -32,23 +32,23 @@ public class IndexScreenFactoryTest {
     @Test
     public void empty_index_returns_1_index_screen() {
         ScreenLink link = ScreenLink.of("");
-        Screen[] screens = indexScreenFactory().create(link);
+        Page[] screens = indexScreenFactory().create(link);
         assertEquals(1, screens.length);
     }
 
     @Test
     public void index_with_3_values_returns_1_screen() {
         ScreenLink link = ScreenLink.of("");
-        Screen[] screens = indexScreenFactory("Moe","Larry","Curly").create(link);
+        Page[] screens = indexScreenFactory("Moe","Larry","Curly").create(link);
         assertEquals(1, screens.length);
     }
 
     @Test
     public void index_with_1_value_can_create_1_screen() {
         ScreenLink link = ScreenLink.of("moe");
-        Screen[] screens = indexScreenFactory("moe").create(link);
+        Page[] screens = indexScreenFactory("moe").create(link);
         assertEquals(1, screens.length);
-        Screen screen = screens[0];
+        Page screen = screens[0];
         assertEquals("moe", screen.link.tags.toString());
     }
 
@@ -61,9 +61,9 @@ public class IndexScreenFactoryTest {
     }
 
     void checkScreenFrom(ScreenFactory factory,String tag) {
-        Screen[] screens = factory.create(ScreenLink.of(tag));
+        Page[] screens = factory.create(ScreenLink.of(tag));
         assertEquals(1, screens.length);
-        Screen screen = screens[0];
+        Page screen = screens[0];
         assertEquals(tag,screen.link.tags.toString());
     }
 

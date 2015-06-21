@@ -1,6 +1,6 @@
 package common.screen.dynamic;
 
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenLink;
 import common.uiwidget.UIComponent;
 
@@ -8,24 +8,26 @@ import common.uiwidget.UIComponent;
  * A screen that is created by a dynamic layout method.
  */
 final class DynamicScreen
-    extends Screen
+    extends Page
 {
     final ScreenContext.Provider controller;
     final ScreenLayoutProvider layoutProvider;
+    final ScreenLink link;
     
     public DynamicScreen(ScreenLink link, ScreenContext.Provider controller, ScreenLayoutProvider layoutProvider) {
         super(link);
+        this.link = link;
         this.controller = controller;
         this.layoutProvider = layoutProvider;
     }
 
     @Override
-    protected UIComponent layoutForPortrait() {
+    public UIComponent layoutForPortrait() {
         return getLayout();
     }
 
     @Override
-    protected UIComponent layoutForLandscape() {
+    public UIComponent layoutForLandscape() {
         return getLayout();
     }
     

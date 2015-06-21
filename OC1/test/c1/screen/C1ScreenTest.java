@@ -1,38 +1,25 @@
 package c1.screen;
 
-import common.Registry;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.screen.Screen;
-import common.screen.ScreenFactory;
-import common.screen.ScreenLink;
-import common.uiwidget.UIContainer;
-import fake.FakeC1RegistryLoader;
-import java.util.concurrent.Callable;
 
-import common.ui.IForm;
 import c1.screens.FakeUI;
-
-import static mach.Mocks._;
-import static mach.Mocks.verify;
-import static mach.Mocks.wild;
-import static org.junit.Assert.*;
-
-import mach.Mocks;
+import common.screen.Page;
+import common.screen.Screen;
+import common.screen.ScreenLink;
+import common.ui.IForm;
+import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.assertNotNull;
+
 public class C1ScreenTest {
-    
+
+    ScreenLink link;
+    Page page;
     IForm form;
     Screen previous;
-
-    static class FakeScreen extends Screen {
-        FakeScreen() {
-            super(FakeUI.newForm(), ScreenLink.of("name"));
-        }
-        @Override protected UIContainer layoutForPortrait() { return null;}
-    }
 
     @Before
     public void setUp() {
@@ -41,7 +28,7 @@ public class C1ScreenTest {
 
     @Test
     public void can_create() {
-        new FakeScreen();
+        new Screen(link,page);
     }
     
     @Test
@@ -53,7 +40,7 @@ public class C1ScreenTest {
         return (Screen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
                 form = FakeUI.newForm();
-                return new FakeScreen();
+                return new Screen(link,page);
             }
         });
     }

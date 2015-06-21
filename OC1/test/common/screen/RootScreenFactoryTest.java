@@ -46,7 +46,7 @@ public class RootScreenFactoryTest {
     public void device_info() {
         ScreenLink link = ScreenLink.of("Device Info");
         assertEquals(1,screensFrom(link).length);
-        Screen screen = screensFrom(link)[0];
+        Page screen = screensFrom(link)[0];
         assertNotNull(screen);
         assertEquals(link,screen.link);
     }
@@ -55,12 +55,12 @@ public class RootScreenFactoryTest {
     public void home() {
         ScreenLink link = ScreenLink.of("");
         assertEquals(1,screensFrom(link).length);
-        Screen screen = screensFrom(link)[0];
+        Page screen = screensFrom(link)[0];
         assertNotNull(screen);
         assertEquals(link,screen.link);
     }
 
-    private Screen[] screensFrom(ScreenLink link) {
+    private Page[] screensFrom(ScreenLink link) {
         return testObject.create(link);
     }
 }

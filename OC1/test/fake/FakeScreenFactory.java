@@ -1,6 +1,6 @@
 package fake;
 
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 
@@ -8,7 +8,7 @@ public class FakeScreenFactory
     implements ScreenFactory
 {
     @Override
-    public Screen[] create(ScreenLink link) {
-        return new Screen[0];
+    public Page[] create(ScreenLink link) {
+        return new Page[0];
     }
 }

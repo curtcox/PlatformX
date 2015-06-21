@@ -1,14 +1,11 @@
 package common.screenfactories;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import common.Registry;
 import common.domain.Type;
-import common.screen.dynamic.GlobScreenFactory;
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
+import common.screen.dynamic.GlobScreenFactory;
 import common.screenparts.TypeListCellConfigurer;
 import common.screenparts.TypeTextFilter;
 import common.screens.FilterScreen;
@@ -16,12 +13,15 @@ import common.uilist.ISearchFilterInstaller;
 import common.uiwidget.ISearchableList;
 import common.uiwidget.UILabel;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public final class ServiceProviderFilterScreenFactory {
 
     public static ScreenFactory FACTORY = GlobScreenFactory.filter("Filter", new ScreenFactory() {
         @Override
-        public Screen[] create(ScreenLink link) {
-            return new Screen[]{new FilterScreen(link, newSearchableList())};
+        public Page[] create(ScreenLink link) {
+            return new Page[]{new FilterScreen(link, newSearchableList())};
         }
     });
 

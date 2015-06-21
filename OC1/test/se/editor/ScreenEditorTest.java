@@ -1,6 +1,7 @@
 package se.editor;
 
 import common.Registry;
+import common.screen.Page;
 import common.screen.Screen;
 import common.screen.ScreenLink;
 import common.screen.ScreenTags;
@@ -11,8 +12,8 @@ import org.junit.Before;
 import org.junit.Test;
 import se.events.Events;
 import se.ui.EditTaggedValueEvent;
-import se.util.TaggedValue;
 import se.util.SimpleTaggedValueStringMap;
+import se.util.TaggedValue;
 
 import static org.junit.Assert.*;
 
@@ -75,11 +76,13 @@ public class ScreenEditorTest {
     }
 
     Screen screen() {
-        return new Screen(new FakeForm(),ScreenLink.of("")) {
+        ScreenLink link = ScreenLink.of("");
+        Page page = new Page(link) {
             @Override
-            protected UIComponent layoutForPortrait() {
+            public UIComponent layoutForPortrait() {
                 return null;
             }
         };
+        return new Screen(new FakeForm(),link,page);
     }
 }

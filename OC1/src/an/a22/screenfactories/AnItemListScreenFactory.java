@@ -6,7 +6,7 @@ import android.content.Context;
 import android.widget.TextView;
 import common.Registry;
 import common.event.CommonLiveList;
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screenfactories.CellConfigurer;
@@ -25,8 +25,8 @@ final class AnItemListScreenFactory<T>
         this.values = values;
     }
     
-    public Screen[] create(ScreenLink link) {
-        return new Screen[] {new ItemsScreen(link,newSearchableList())};
+    public Page[] create(ScreenLink link) {
+        return new Page[] {new ItemsScreen(link,newSearchableList())};
     }     
 
     private ISearchableList<T> newSearchableList() {

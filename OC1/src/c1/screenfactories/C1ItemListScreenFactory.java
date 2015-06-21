@@ -1,17 +1,18 @@
 package c1.screenfactories;
 
+import c1.uilist.C1SearchFilterInstaller;
+import c1.uilist.C1SearchableList;
 import com.codename1.ui.Label;
-import java.util.List;
-
 import common.event.CommonLiveList;
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
-import c1.uilist.*;
 import common.screenfactories.CellConfigurer;
 import common.screenfactories.ItemsScreen;
-import common.uilist.*;
+import common.uilist.StringToListFilter;
 import common.uiwidget.ISearchableList;
+
+import java.util.List;
 
 final class C1ItemListScreenFactory<T>
     implements ScreenFactory
@@ -22,8 +23,8 @@ final class C1ItemListScreenFactory<T>
         this.values = values;
     }
     
-    public Screen[] create(ScreenLink link) {
-        return new Screen[] {new ItemsScreen(link,newSearchableList())};
+    public Page[] create(ScreenLink link) {
+        return new Page[] {new ItemsScreen(link,newSearchableList())};
     }     
 
     private ISearchableList<T> newSearchableList() {

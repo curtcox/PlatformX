@@ -1,30 +1,32 @@
 package common.screen.dynamic;
 
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.uiwidget.UIContainer;
 import fake.FakeC1RegistryLoader;
-import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
 
 public class GlobScreenFactoryTest {
 
-    Screen screen;
+    Page screen;
     ScreenFactory testObject = GlobScreenFactory.filter("stuff", new ScreenFactory() {
         @Override
-        public Screen[] create(ScreenLink link) {
-            return new Screen[] {screen};
+        public Page[] create(ScreenLink link) {
+            return new Page[] {screen};
         }
     });
     
     @Before
     public void setUp() {
         FakeC1RegistryLoader.load();
-        screen = new Screen(ScreenLink.of("whatever")) {
+        screen = new Page(ScreenLink.of("whatever")) {
             @Override
-            protected UIContainer layoutForPortrait() { return null; }
+            public UIContainer layoutForPortrait() { return null; }
         };
     }
     

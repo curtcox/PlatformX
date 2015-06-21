@@ -1,11 +1,10 @@
 package common.screen.dynamic;
 
 import common.event.StringSource;
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenLink;
 import common.screen.ScreenTags;
 import fake.FakeSERegistryLoader;
-import junit.framework.TestCase;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
@@ -38,7 +37,7 @@ public class LazyScreenFactoryTest {
         ScreenLink link = ScreenLink.of("");
         _(new StringSource[0]); sources.get(ScreenTags.of(""));
 
-        Screen[] actual = testObject.create(link);
+        Page[] actual = testObject.create(link);
 
         assertNotNull(actual);
         assertEquals(0,actual.length);
@@ -49,7 +48,7 @@ public class LazyScreenFactoryTest {
         ScreenLink link = ScreenLink.of("");
         _(new StringSource[]{source}); sources.get(ScreenTags.of(""));
 
-        Screen[] actual = testObject.create(link);
+        Page[] actual = testObject.create(link);
 
         assertNotNull(actual);
         assertEquals(1,actual.length);

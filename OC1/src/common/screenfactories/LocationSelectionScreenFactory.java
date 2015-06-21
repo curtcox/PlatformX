@@ -4,10 +4,10 @@ import common.Registry;
 import common.domain.LocationDescription;
 import common.event.LiveList;
 import common.event.SwappableList;
-import common.screen.dynamic.GlobScreenFactory;
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
+import common.screen.dynamic.GlobScreenFactory;
 import common.screenparts.LocationListCellConfigurer;
 import common.screens.LocationSelectionScreen;
 import common.uilist.IListContentInstaller;
@@ -20,8 +20,8 @@ public final class LocationSelectionScreenFactory {
 
     public static ScreenFactory FACTORY = GlobScreenFactory.filter("LocationSelection", new ScreenFactory() {
         @Override
-        public Screen[] create(ScreenLink link) {
-            return new Screen[]{of(link)};
+        public Page[] create(ScreenLink link) {
+            return new Page[]{of(link)};
         }
     });
             
