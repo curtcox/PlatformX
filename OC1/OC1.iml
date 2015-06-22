@@ -27,5 +27,11 @@
     <orderEntry type="library" name="robovm-cocoatouch-1.2.0" level="project" />
     <orderEntry type="library" name="robovm-objc-1.2.0" level="project" />
     <orderEntry type="library" name="robovm-rt-1.2.0" level="project" />
+    <orderEntry type="library" name="javax.servlet-api-3.0.1 (2)" level="project" />
+    <orderEntry type="library" name="vaadin-client-7.4.8 (2)" level="project" />
+    <orderEntry type="library" name="vaadin-server-7.4.8" level="project" />
+    <orderEntry type="library" name="vaadin-shared-7.4.8" level="project" />
+    <orderEntry type="library" name="vaadin-widgets-7.4.8" level="project" />
+    <orderEntry type="library" name="vaadin-client-compiler-7.4.8" level="project" />
   </component>
 </module>
