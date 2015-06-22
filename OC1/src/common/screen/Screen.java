@@ -19,7 +19,7 @@ public final class Screen {
     public final ScreenLink link;
     private Screen previous; // set once
     private Command back;    // set once
-    private final Page page;
+    final Page page;
     private static Screen showing; // the currently showing screen
     
     /**

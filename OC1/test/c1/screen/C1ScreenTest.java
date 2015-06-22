@@ -6,6 +6,7 @@ import common.screen.Page;
 import common.screen.Screen;
 import common.screen.ScreenLink;
 import common.ui.IForm;
+import common.uiwidget.UIComponent;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,8 +17,13 @@ import static org.junit.Assert.assertNotNull;
 
 public class C1ScreenTest {
 
-    ScreenLink link;
-    Page page;
+    ScreenLink link = ScreenLink.of("");
+    Page page = new Page(link) {
+        @Override
+        public UIComponent layoutForPortrait() {
+            return null;
+        }
+    };
     IForm form;
     Screen previous;
 

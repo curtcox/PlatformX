@@ -17,6 +17,8 @@ import static org.junit.Assert.assertTrue;
 
 public class C1ScreenButtonTest {
 
+    ScreenLink link = ScreenLink.of("");
+    TestPage page = new TestPage(link);
     static class TestPage extends Page {
 
         public boolean shown;
@@ -37,8 +39,6 @@ public class C1ScreenButtonTest {
         }
     }
 
-    ScreenLink link = ScreenLink.of("");
-    TestPage page = new TestPage(link);
 
     private UIButton createScreenButtonOnEDT(final String text, final Page page) throws Exception {
         return (UIButton) FakeUI.onEDT(new Callable(){

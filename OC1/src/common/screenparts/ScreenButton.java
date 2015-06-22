@@ -60,6 +60,7 @@ public final class ScreenButton
         }
         public Builder leadingTo(Page screen) {
             this.page = screen;
+            this.link = screen.link;
             return this;
         }
         public Builder leadingTo(String target) {

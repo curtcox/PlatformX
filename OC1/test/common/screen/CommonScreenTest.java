@@ -3,10 +3,12 @@ package common.screen;
 import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
+import common.ui.IFormFactory;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UIContainer;
 import fake.FakeCommonRegistryLoader;
 import fake.FakeForm;
+import fake.FakeFormFactory;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
@@ -23,6 +25,8 @@ public class CommonScreenTest {
     String name = random("link");
     UIComponent layout = new UIComponent();
     ScreenLink link = ScreenLink.of(name);
+    ScreenLink link1 = ScreenLink.of("first");
+    ScreenLink link2 = ScreenLink.of("second");
     ScreenFactory factory;
     ILog log;
     ILogManager logManager;
@@ -49,8 +53,9 @@ public class CommonScreenTest {
     @Before
     public void setup() {
         FakeCommonRegistryLoader.load();
+        Registry.put(IFormFactory.class,new FakeFormFactory());
         page = new ExamplePage(link);
-        screen = new Screen(link,page);
+        screen = new Screen(form,link,page);
         Mocks.init(this);
     }
 
@@ -74,7 +79,7 @@ public class CommonScreenTest {
 
     @Test
     public void refresh_sets_form_layout() {
-        page.refresh();
+        screen.refresh();
 
         assertSame(layout, form.layout);
     }
@@ -83,7 +88,7 @@ public class CommonScreenTest {
     public void show_sets_showing_screen() {
         screen.show();
 
-        assertSame(page,Screen.getShowing());
+        assertSame(screen,Screen.getShowing());
     }
 
     @Test
@@ -95,8 +100,8 @@ public class CommonScreenTest {
 
     @Test
     public void getShowing_returns_original_screen_after_going_back_to_it() {
-        Screen first = new Screen(new FakeForm(),null,new ExamplePage(ScreenLink.of("first")));
-        Screen second = new Screen(new FakeForm(),null,new ExamplePage(ScreenLink.of("second")));
+        Screen first = new Screen(new FakeForm(),link1,new ExamplePage(link1));
+        Screen second = new Screen(new FakeForm(),link2,new ExamplePage(link2));
 
         first.show();
         second.show();
@@ -109,8 +114,8 @@ public class CommonScreenTest {
     @Test
     public void back_shows_previously_shown_screen() {
         FakeForm form1 = new FakeForm();
-        Screen first = new Screen(form1,null,new ExamplePage(ScreenLink.of("first")));
-        Screen second = new Screen(new FakeForm(),null,new ExamplePage(ScreenLink.of("second")));
+        Screen first = new Screen(form1,link1,new ExamplePage(link1));
+        Screen second = new Screen(new FakeForm(),link2,new ExamplePage(link2));
 
         first.show();
         second.show();
@@ -124,8 +129,8 @@ public class CommonScreenTest {
     public void setBackCommand_is_called_when_there_is_a_previous_screen() {
         FakeForm form1 = new FakeForm();
         FakeForm form2 = new FakeForm();
-        Screen first = new Screen(form1,null,new ExamplePage(ScreenLink.of("first")));
-        Screen second = new Screen(form2,null,new ExamplePage(ScreenLink.of("second")));
+        Screen first = new Screen(form1,link1,new ExamplePage(link1));
+        Screen second = new Screen(form2,link2,new ExamplePage(link2));
 
         first.show();
         second.show();
@@ -139,23 +144,24 @@ public class CommonScreenTest {
         return name + toString();
     }
 
-    static class FakeScreen extends Page {
-        FakeScreen() {
+    static class FakePage extends Page {
+        FakePage() {
             super(ScreenLink.of("name"));
         }
         @Override public UIContainer layoutForPortrait() { return null;}
     }
 
     @Test
-    public void show_makes_screen_the_one_showing_when_factory_returns_one_link_for_it() {
+    public void show_makes_page_the_one_showing_when_factory_returns_one_link_for_it() {
         ScreenLink link = ScreenLink.of("foo");
-        Screen screen = new Screen(new FakeForm(),link,new FakeScreen());
-        Screen[] screens = new Screen[] { screen };
+        Page page = new FakePage();
+        Screen screen = new Screen(new FakeForm(),link,new FakePage());
+        Page[] screens = new Page[] { page };
         _(screens); factory.create(link);
 
         Screen.show(link,factory);
 
-        assertSame(screen, Screen.getShowing());
+        assertSame(page, Screen.getShowing().page);
     }
 
     static class ScreenThatThrowsExceptionOnLayout extends Page {
@@ -187,8 +193,8 @@ public class CommonScreenTest {
     @Test
     public void show_throws_and_exception_when_factory_returns_no_screens_for_link() {
         ScreenLink link = ScreenLink.of("foo");
-        Screen[] screens = new Screen[0];
-        _(screens); factory.create(link);
+        Page[] pages = new Page[0];
+        _(pages); factory.create(link);
 
         try {
             Screen.show(link, factory);

@@ -7,7 +7,7 @@ import common.Registry;
  */
 public interface ScreenFactory {
     
-    static final ScreenFactory DEFAULT = new ScreenFactory() {
+    ScreenFactory DEFAULT = new ScreenFactory() {
         public Page[] create(ScreenLink link) {
             return Registry.get(ScreenFactory.class).create(link);
         }
