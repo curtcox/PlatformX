@@ -16,7 +16,7 @@ import common.uiwidget.UIPeeredComponent;
  * @param <T> the type of things in this list
  */
 public abstract class SelectionListScreen<T>
-    extends Screen
+    extends Page
 {
     private final ISearchableList<T> searchList;
 

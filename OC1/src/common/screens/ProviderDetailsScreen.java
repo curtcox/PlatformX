@@ -1,26 +1,26 @@
 package common.screens;
 
-import java.net.URI;
-import java.util.Arrays;
-
-import common.screen.Screen;
+import common.domain.ServiceProvider;
+import common.domain.Type;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
+import common.screenparts.ProviderRatingButton;
+import common.ui.LinkButton;
 import common.uiwidget.UIButton;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
 import common.uiwidget.UITable;
-import common.domain.ServiceProvider;
-import common.domain.Type;
-import common.screenparts.ProviderRatingButton;
-import common.ui.LinkButton;
+
+import java.net.URI;
+import java.util.Arrays;
 
 /**
  * For showing details about a particular provider.
  */
 public final class ProviderDetailsScreen
-    extends Screen
+    extends Page
 {
     private final UILabel name = new UILabel();
     private final UILabel distance = new UILabel();
@@ -38,8 +38,8 @@ public final class ProviderDetailsScreen
 
     public static ScreenFactory FACTORY = GlobScreenFactory.filter("ProviderDetails", new ScreenFactory() {
         @Override
-        public Screen[] create(ScreenLink link) {
-            return new Screen[]{new ProviderDetailsScreen(link)};
+        public Page[] create(ScreenLink link) {
+            return new Page[]{new ProviderDetailsScreen(link)};
         }
     });
 

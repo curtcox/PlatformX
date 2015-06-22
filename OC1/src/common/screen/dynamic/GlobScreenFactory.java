@@ -1,6 +1,6 @@
 package common.screen.dynamic;
 
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.util.Glob;
@@ -20,11 +20,11 @@ public final class GlobScreenFactory
         return new GlobScreenFactory(glob,inner);
     }
 
-    public final Screen[] create(ScreenLink link) {
+    public final Page[] create(ScreenLink link) {
         if (glob.matches(link.tags)) {
             return inner.create(link);
         }
-        return new Screen[0];
+        return new Page[0];
     }
 
 }

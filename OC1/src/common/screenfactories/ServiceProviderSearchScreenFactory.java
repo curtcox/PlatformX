@@ -1,20 +1,22 @@
 package common.screenfactories;
 
-import java.util.*;
-
-import common.screenparts.ServiceProviderSearchParams;
-import common.screenparts.ServiceProviderTextFilter;
-import common.services.ServiceProviders;
 import common.Registry;
-import common.domain.*;
+import common.domain.ServiceProvider;
+import common.domain.Type;
 import common.event.SwappableList;
-import common.screen.Screen;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screen.dynamic.GlobScreenFactory;
+import common.screenparts.ServiceProviderSearchParams;
+import common.screenparts.ServiceProviderTextFilter;
 import common.screens.ServiceProviderSearchScreen;
+import common.services.ServiceProviders;
 import common.uilist.ISearchFilterInstaller;
 import common.uiwidget.ISearchableList;
+
+import java.util.Arrays;
+import java.util.List;
 
 public final class ServiceProviderSearchScreenFactory {
     
@@ -23,8 +25,8 @@ public final class ServiceProviderSearchScreenFactory {
 
     public static ScreenFactory FACTORY = GlobScreenFactory.filter("Search", new ScreenFactory() {
         @Override
-        public Screen[] create(ScreenLink link) {
-            return new Screen[]{searchScreenFromArgs(link, link.args)};
+        public Page[] create(ScreenLink link) {
+            return new Page[]{searchScreenFromArgs(link, link.args)};
         }
     });
         
@@ -32,7 +34,7 @@ public final class ServiceProviderSearchScreenFactory {
         return withTypesAndRadius(link,ALL_TYPES,STARTING_RADIUS);
     }
     
-    private static Screen searchScreenFromArgs(ScreenLink link,Object[] args) {
+    private static Page searchScreenFromArgs(ScreenLink link,Object[] args) {
         if (args.length==0) return ServiceProviderSearchScreenFactory.of(link);
         if (args.length==1) return ServiceProviderSearchScreenFactory.withTypes(link, types(args));
         if (args.length==2) return ServiceProviderSearchScreenFactory.withTypesAndRadius(link, types((Object[]) args[0]), (Integer) args[1]);

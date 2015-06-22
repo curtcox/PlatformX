@@ -1,12 +1,9 @@
 package common.screen.dynamic;
 
-import common.screens.Home;
 import common.Registry;
 import common.event.StringSource;
-import common.screen.Screen;
-import common.screen.ScreenFactory;
-import common.screen.ScreenLink;
-import common.screen.ScreenTags;
+import common.screen.*;
+import common.screens.Home;
 import common.ui.IFormFactory;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
@@ -49,7 +46,7 @@ public class DynamicScreenFactoryTest {
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(tags(""), controller, source1).build();
 
-        Screen[] screens = testObject.create(link);
+        Page[] screens = testObject.create(link);
 
         assertNotNull(screens);
         assertSame(link, formFactory.link);
@@ -61,7 +58,7 @@ public class DynamicScreenFactoryTest {
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(tags("tag1"), controller, source1).build();
 
-        Screen[] screens = testObject.create(link);
+        Page[] screens = testObject.create(link);
 
         assertNotNull(screens);
         assertEquals(1,screens.length);
@@ -73,7 +70,7 @@ public class DynamicScreenFactoryTest {
         ScreenLink link = link("");
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(tags(""), controller, source1).build();
-        testObject.create(link)[0].layoutForm();
+        testObject.create(link)[0].layoutForPortrait();
 
         assertSame(link, form.getScreenLink());
     }
@@ -82,7 +79,7 @@ public class DynamicScreenFactoryTest {
     public void map_produces_ScreenFactory_that_maps_to_screens_with_title_from_screen_link() {
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(tags("title"), controller, source1).build();
-        testObject.create(link("title"))[0].layoutForm();
+        testObject.create(link("title"))[0].layoutForPortrait();
 
         assertSame("title", form.getTitle());
     }
@@ -91,7 +88,7 @@ public class DynamicScreenFactoryTest {
     public void map_produces_ScreenFactory_that_maps_to_screens_with_contents_from_screen_link() {
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(tags("title"), controller, source1).build();
-        testObject.create(link("title"))[0].layoutForm();
+        testObject.create(link("title"))[0].layoutForPortrait();
 
         UIComponent layout = form.layout;
         UILabel label = (UILabel) layout;
@@ -106,7 +103,7 @@ public class DynamicScreenFactoryTest {
                 .map(tags("two"), controller, source2)
                 .build();
 
-        testObject.create(link("one"))[0].layoutForm();
+        testObject.create(link("one"))[0].layoutForPortrait();
 
         assertSame("one", form.getTitle());
         UIComponent layout = form.layout;
@@ -122,7 +119,7 @@ public class DynamicScreenFactoryTest {
                 .map(tags("two"), controller, source2)
                 .build();
 
-        testObject.create(link("two"))[0].layoutForm();
+        testObject.create(link("two"))[0].layoutForPortrait();
 
         assertSame("two", form.getTitle());
         UIComponent layout = form.layout;
@@ -138,7 +135,7 @@ public class DynamicScreenFactoryTest {
                 .map(tags("two"), controller, source2)
                 .build();
 
-        Screen[] screens = testObject.create(link(""));
+        Page[] screens = testObject.create(link(""));
 
         assertEquals(2,screens.length);
     }

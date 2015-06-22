@@ -6,8 +6,7 @@ import common.screen.ScreenLink;
 import common.ui.IForm;
 import common.ui.IFormFactory;
 import fake.FakeCommonRegistryLoader;
-import fake.FakeScreen;
-import junit.framework.TestCase;
+import fake.FakePage;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,8 +21,8 @@ public class ScreenButtonTest  {
     ScreenFactory screenFactory;
     String linkTarget = "test";
     ScreenLink link = ScreenLink.of(linkTarget);
-    FakeScreen screen;
-    FakeScreen[] screens;
+    FakePage page;
+    FakePage[] pages;
 
     @Before
     public void setUp() {
@@ -34,12 +33,12 @@ public class ScreenButtonTest  {
         _(form);    formFactory.newForm(link);
         _();        form.show();
 
-        screen = new FakeScreen(link);
-        screens = new FakeScreen[] {screen};
+        page = new FakePage(link);
+        pages = new FakePage[] {page};
 
-        _();             form.layout(screen.uiComponent);
+        _();             form.layout(page.uiComponent);
         _(); wild(null); form.setBackCommand(null);
-        _(screens);      screenFactory.create(link);
+        _(pages);      screenFactory.create(link);
     }
 
     @Test
@@ -48,13 +47,13 @@ public class ScreenButtonTest  {
             ScreenButton.builder().build();
             fail();
         } catch (RuntimeException e) {
-            assertEquals("No screen specified",e.getMessage());
+            assertEquals("No page specified",e.getMessage());
         }
     }
 
     @Test
     public void tapping_screen_button_shows_screen_specified_by_reference() {
-        ScreenButton.builder().leadingTo(screen).build().onTap();
+        ScreenButton.builder().leadingTo(page).build().onTap();
 
         verifyScreenShown();
     }
@@ -76,7 +75,7 @@ public class ScreenButtonTest  {
     @Test
     public void button_is_built_with_specified_text() {
         String expected = "button text";
-        String actual = ScreenButton.builder().text(expected).leadingTo(screen).build().getText();
+        String actual = ScreenButton.builder().text(expected).leadingTo(page).build().getText();
 
         assertEquals(expected, actual);
     }
@@ -84,15 +83,15 @@ public class ScreenButtonTest  {
     @Test
     public void button_is_built_with_specified_image() {
         String expected = "image name";
-        String actual = ScreenButton.builder().image(expected).leadingTo(screen).build().icon;
+        String actual = ScreenButton.builder().image(expected).leadingTo(page).build().icon;
 
         assertEquals(expected, actual);
     }
 
     void verifyScreenShown() {
         verify();
-        form.layout(screen.uiComponent);
+        form.layout(page.uiComponent);
         form.show();
-        assertTrue(screen.layoutForPortrait);
+        assertTrue(page.layoutForPortrait);
     }
 }

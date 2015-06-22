@@ -1,26 +1,49 @@
 package c1.screen;
 
-import common.screen.Screen;
-import common.screen.ScreenLink;
-import common.uiwidget.UIBorderContainer;
-import common.uiwidget.UIButton;
-import common.uiwidget.UIContainer;
-import fake.FakeC1RegistryLoader;
-import common.screenparts.ScreenButton;
-import java.util.concurrent.Callable;
-
-import common.ui.IForm;
 import c1.screens.FakeUI;
-import static org.junit.Assert.*;
+import common.screen.Page;
+import common.screen.ScreenLink;
+import common.screenparts.ScreenButton;
+import common.uiwidget.UIButton;
+import common.uiwidget.UIComponent;
+import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class C1ScreenButtonTest {
 
-    private UIButton createScreenButtonOnEDT(final String text, final Screen screen) throws Exception {
+    static class TestPage extends Page {
+
+        public boolean shown;
+        public boolean refreshed;
+
+        public TestPage(ScreenLink link) {
+            super(link);
+        }
+
+        @Override
+        public UIComponent layoutForPortrait() {
+            shown = true;
+            return null;
+        }
+
+        public void refresh() {
+            refreshed = true;
+        }
+    }
+
+    ScreenLink link = ScreenLink.of("");
+    TestPage page = new TestPage(link);
+
+    private UIButton createScreenButtonOnEDT(final String text, final Page page) throws Exception {
         return (UIButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return ScreenButton.builder().text(text).leadingTo(screen).build();
+                return ScreenButton.builder().text(text).leadingTo(page).build();
             }
         });
     }
@@ -33,58 +56,22 @@ public class C1ScreenButtonTest {
     @Test
     public void of_returns_ActionButton_with_given_text() throws Exception {
         String text = toString();
-        TestScreen screen = createScreenOnEDT();
-        UIButton button = createScreenButtonOnEDT(text,screen);
+        UIButton button = createScreenButtonOnEDT(text,page);
         assertEquals(text,button.getText());
     }
 
     @Test
     public void of_returns_ActionButton_that_shows_screen_onTap() throws Exception {
-        TestScreen screen = createScreenOnEDT();
-        UIButton button = createScreenButtonOnEDT("text",screen);
+        UIButton button = createScreenButtonOnEDT("text",page);
         button.onTap();
-        assertTrue(screen.shown);
+        assertTrue(page.shown);
     }
 
     @Test
     public void of_returns_ActionButton_that_refreshes_screen_onTap() throws Exception {
-        TestScreen screen = createScreenOnEDT();
-        UIButton button = createScreenButtonOnEDT("text",screen);
+        UIButton button = createScreenButtonOnEDT("text",page);
         button.onTap();
-        assertTrue(screen.refreshed);
-    }
-
-    static class TestScreen extends Screen {
-
-        boolean refreshed;
-        boolean shown;
-        
-        public TestScreen(IForm form) {
-            super(form,ScreenLink.of("test"));
-        }
-        
-        @Override
-        public void show() {
-            super.show();
-            shown = true;
-        }
-        
-        @Override
-        public void refresh() {
-            refreshed = true;
-        }
-
-        @Override
-        protected UIContainer layoutForPortrait() { return new UIBorderContainer();}
-    }
-    
-    private TestScreen createScreenOnEDT() throws Exception {
-        return (TestScreen) FakeUI.onEDT(new Callable(){
-            public Object call() throws Exception {
-                IForm form = FakeUI.newForm();
-                return new TestScreen(form){};
-            }
-        });
+        assertTrue(page.refreshed);
     }
 
 }

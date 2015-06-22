@@ -8,7 +8,7 @@ import common.Registry;
 public interface ScreenFactory {
     
     static final ScreenFactory DEFAULT = new ScreenFactory() {
-        public Screen[] create(ScreenLink link) {
+        public Page[] create(ScreenLink link) {
             return Registry.get(ScreenFactory.class).create(link);
         }
     };
@@ -18,6 +18,6 @@ public interface ScreenFactory {
      * If this factory doesn't support the given link,
      * it should generally return an empty array.
      */
-    Screen[] create(ScreenLink link);
+    Page[] create(ScreenLink link);
 
 }

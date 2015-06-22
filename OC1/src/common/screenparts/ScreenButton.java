@@ -1,23 +1,24 @@
 package common.screenparts;
 
+import common.event.StringSource;
+import common.screen.Page;
 import common.screen.Screen;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
-import common.event.StringSource;
 import common.uiwidget.UIButton;
 
 /**
- * A button that will go to the given screen when tapped.
+ * A button that will go to the given page when tapped.
  */
 public final class ScreenButton
     extends UIButton
 {
-    final Screen screen;
+    final Page page;
     public final ScreenLink link;
 
     private ScreenButton(Builder builder) {
         super(builder.text);
-        this.screen = builder.screen;
+        this.page = builder.page;
         this.link = builder.link;
         this.icon = builder.image;
     }
@@ -28,8 +29,8 @@ public final class ScreenButton
     }
 
     private Screen screen() {
-        if (screen!=null) {
-            return screen;
+        if (page!=null) {
+            return new Screen(link,page);
         }
         Screen.show(link, ScreenFactory.DEFAULT);
         return Screen.getShowing();
@@ -38,14 +39,14 @@ public final class ScreenButton
     public static class Builder {
         private String text;
         private String image;
-        private Screen screen;
+        private Page page;
         private ScreenLink link;
 
         public UIButton build() {
-            if (screen!=null || link !=null) {
+            if (page !=null || link !=null) {
                 return new ScreenButton(this);
             }
-            throw new IllegalStateException("No screen specified");
+            throw new IllegalStateException("No page specified");
         }
 
         public Builder text(StringSource s) { return this; }
@@ -57,8 +58,8 @@ public final class ScreenButton
             this.image = image;
             return this;
         }
-        public Builder leadingTo(Screen screen) {
-            this.screen = screen;
+        public Builder leadingTo(Page screen) {
+            this.page = screen;
             return this;
         }
         public Builder leadingTo(String target) {

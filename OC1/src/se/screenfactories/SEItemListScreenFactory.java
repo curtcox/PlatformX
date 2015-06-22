@@ -1,13 +1,13 @@
 package se.screenfactories;
 
-import common.screen.Screen;
+import common.event.CommonLiveList;
+import common.screen.Page;
 import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 import common.screenfactories.CellConfigurer;
 import common.screenfactories.ItemsScreen;
 import common.uilist.StringToListFilter;
 import common.uiwidget.ISearchableList;
-import common.event.CommonLiveList;
 import se.uilist.SESearchFilterInstaller;
 import se.uilist.SESearchableList;
 
@@ -23,8 +23,8 @@ final class SEItemListScreenFactory<T>
         this.values = values;
     }
     
-    public Screen[] create(ScreenLink link) {
-        return new Screen[] {new ItemsScreen(link,newSearchableList())};
+    public Page[] create(ScreenLink link) {
+        return new Page[] {new ItemsScreen(link,newSearchableList())};
     }     
 
     private ISearchableList<T> newSearchableList() {

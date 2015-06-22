@@ -13,29 +13,29 @@ import common.uiwidget.UIComponent;
  * The entire UI, as presented to the user, at a specific time.
  * Implementers will need to override at least one layout method to create the UI.
  */
-public abstract class Screen {
+public final class Screen {
 
     public final IForm form;
     public final ScreenLink link;
     private Screen previous; // set once
     private Command back;    // set once
+    private final Page page;
     private static Screen showing; // the currently showing screen
     
     /**
-     * Override this constructor to create a new screen.
-     * @param link to the Screen
+     * This constructor to create a new screen.
      */
-    public Screen(ScreenLink link) {
-        this(formFactory().newForm(link),link);
+    public Screen(ScreenLink link, Page page) {
+        this(formFactory().newForm(link),link,page);
     }
 
     /**
      * This constructor is exposed mostly for testing.
-     * @param form 
      */
-    public Screen(IForm form, ScreenLink link) {
+    public Screen(IForm form, ScreenLink link, Page page) {
         this.form = form;
         this.link = link;
+        this.page = page;
         log("created " + link);
     }
 
@@ -75,12 +75,14 @@ public abstract class Screen {
     }
 
     public static void show(ScreenLink link, ScreenFactory factory) {
-        Screen[] screens = factory.create(link);
+        Page[] screens = factory.create(link);
         if (screens.length==0) {
             throw new RuntimeException("No screens found for " + link);
         }
         if (screens.length==1) {
-            screens[0].show();
+            Page page = screens[0];
+            Screen screen = new Screen(link,page);
+            screen.show();
         }
     }
 
@@ -104,14 +106,14 @@ public abstract class Screen {
 
     /**
      * This is called whenever the screen is shown.
-     * Override it in order to update any screen state that might have
-     * changed since the last showing.
+     * It can also be called when the screen needs to be refreshed to reflect a change.
      */
     public void refresh() {
+        page.refresh();
         layoutForm();
     }
     
-    public final boolean isPortrait() {
+    final boolean isPortrait() {
         return Registry.get(IDisplay.class).isPortrait();
     }
 
@@ -123,10 +125,12 @@ public abstract class Screen {
         }
     }
 
-    protected abstract UIComponent layoutForPortrait();
+    private UIComponent layoutForPortrait() {
+        return page.layoutForPortrait();
+    }
 
     protected UIComponent layoutForLandscape() {
-        return layoutForPortrait();
+        return page.layoutForLandscape();
     }
 
     private void layout(UIComponent layout) {
