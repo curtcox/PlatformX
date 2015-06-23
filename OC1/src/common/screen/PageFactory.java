@@ -2,7 +2,7 @@ package common.screen;
 
 import common.Registry;
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 
 /**
  * For creating ScreenS from ScreenLinkS.
@@ -10,7 +10,7 @@ import common.page.ScreenLink;
 public interface PageFactory {
     
     PageFactory DEFAULT = new PageFactory() {
-        public Page[] create(ScreenLink link) {
+        public Page[] create(PageLink link) {
             return Registry.get(PageFactory.class).create(link);
         }
     };
@@ -20,6 +20,6 @@ public interface PageFactory {
      * If this factory doesn't support the given link,
      * it should generally return an empty array.
      */
-    Page[] create(ScreenLink link);
+    Page[] create(PageLink link);
 
 }

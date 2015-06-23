@@ -2,7 +2,7 @@ package c1.screen;
 
 import c1.screens.FakeUI;
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.screenparts.ScreenButton;
 import common.uiwidget.UIButton;
 import common.uiwidget.UIComponent;
@@ -17,14 +17,14 @@ import static org.junit.Assert.assertTrue;
 
 public class C1ScreenButtonTest {
 
-    ScreenLink link = ScreenLink.of("");
+    PageLink link = PageLink.of("");
     TestPage page = new TestPage(link);
     static class TestPage extends Page {
 
         public boolean shown;
         public boolean refreshed;
 
-        public TestPage(ScreenLink link) {
+        public TestPage(PageLink link) {
             super(link);
         }
 

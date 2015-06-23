@@ -1,7 +1,7 @@
 package common.screens;
 
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.uiwidget.UIBorderContainer;
 import common.uiwidget.UIComponent;
 
@@ -12,7 +12,7 @@ final class ProfileScreen
     extends Page
 {
 
-    ProfileScreen(ScreenLink link) {
+    ProfileScreen(PageLink link) {
         super(link);
     }
 

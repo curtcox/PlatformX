@@ -4,7 +4,7 @@ import common.event.StringSource;
 import common.page.Page;
 import common.screen.PageFactory;
 import common.screen.Screen;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.uiwidget.UIButton;
 
 /**
@@ -14,7 +14,7 @@ public final class ScreenButton
     extends UIButton
 {
     final Page page;
-    public final ScreenLink link;
+    public final PageLink link;
 
     private ScreenButton(Builder builder) {
         super(builder.text);
@@ -40,7 +40,7 @@ public final class ScreenButton
         private String text;
         private String image;
         private Page page;
-        private ScreenLink link;
+        private PageLink link;
 
         public UIButton build() {
             if (page !=null || link !=null) {
@@ -64,10 +64,10 @@ public final class ScreenButton
             return this;
         }
         public Builder leadingTo(String target) {
-            link = ScreenLink.of(target);
+            link = PageLink.of(target);
             return this;
         }
-        public Builder leadingTo(ScreenLink link) {
+        public Builder leadingTo(PageLink link) {
             this.link = link;
             return this;
         }

@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import common.Registry;
 import common.command.Command;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -16,12 +16,12 @@ public final class AnForm
     extends LinearLayout
     implements IForm
 {
-    private final ScreenLink link;
+    private final PageLink link;
     private Command back;
     private UIComponent layout;
     private Button backButton;
 
-    AnForm(ScreenLink link) {
+    AnForm(PageLink link) {
         super(context());
         this.link = link;
     }
@@ -56,7 +56,7 @@ public final class AnForm
     }
 
     @Override
-    public ScreenLink getScreenLink() {
+    public PageLink getScreenLink() {
         return link;
     }
 

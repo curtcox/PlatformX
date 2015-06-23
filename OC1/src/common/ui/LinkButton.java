@@ -4,7 +4,7 @@ import common.Registry;
 import common.screen.Screen;
 import common.uiwidget.UIButton;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 
 /**
  * A button that follows a link when you tap it.
@@ -12,9 +12,9 @@ import common.page.ScreenLink;
 public final class LinkButton
     extends UIButton
 {
-    private final ScreenLink.Factory linkFactory;
+    private final PageLink.Factory linkFactory;
 
-    public LinkButton(final String name, final ScreenLink.Factory linkFactory) {
+    public LinkButton(final String name, final PageLink.Factory linkFactory) {
         super(name);
         this.linkFactory = linkFactory;
     }

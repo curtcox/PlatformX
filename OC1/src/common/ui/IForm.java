@@ -1,7 +1,7 @@
 package common.ui;
 
 import common.command.Command;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.uiwidget.UIComponent;
 
 /**
@@ -44,5 +44,5 @@ public interface IForm {
     /**
      * Return the link used to create this form.
      */
-    ScreenLink getScreenLink();
+    PageLink getScreenLink();
 }

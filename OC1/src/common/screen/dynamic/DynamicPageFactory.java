@@ -2,7 +2,7 @@ package common.screen.dynamic;
 
 import common.event.StringSource;
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.page.ScreenTags;
 import common.screen.*;
 
@@ -34,7 +34,7 @@ public final class DynamicPageFactory
         this.ties = ties;
     }
     
-    public Page[] create(ScreenLink link) {
+    public Page[] create(PageLink link) {
         List<Page> list = new ArrayList<Page>();
         for (Tie tie : ties) {
             if (tie.tags.matches(link)) {

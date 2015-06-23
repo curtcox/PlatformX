@@ -1,6 +1,6 @@
 package se.ui;
 
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.ui.IFormFactory;
 
@@ -8,7 +8,7 @@ public final class SEFormFactory
     implements IFormFactory
 {
     @Override
-    public IForm newForm(ScreenLink link) {
+    public IForm newForm(PageLink link) {
         return new SEForm(link);
     }
 }

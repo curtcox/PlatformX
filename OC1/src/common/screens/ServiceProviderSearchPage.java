@@ -3,7 +3,7 @@ package common.screens;
 import common.app.CurrentState;
 import common.Registry;
 import common.domain.ServiceProvider;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.page.SelectionListPage;
 import common.uiwidget.ISearchableList;
 
@@ -13,7 +13,7 @@ import common.uiwidget.ISearchableList;
 public final class ServiceProviderSearchPage
     extends SelectionListPage<ServiceProvider>
 {
-    public ServiceProviderSearchPage(ScreenLink link, ISearchableList<ServiceProvider> searchList) {
+    public ServiceProviderSearchPage(PageLink link, ISearchableList<ServiceProvider> searchList) {
         super(link,searchList);
     }
 
@@ -23,9 +23,9 @@ public final class ServiceProviderSearchPage
     }
     
     @Override
-    protected ScreenLink useSelectedItem(ServiceProvider item) {
+    protected PageLink useSelectedItem(ServiceProvider item) {
         useSelectedProvider(item);
-        return ScreenLink.of("ProviderDetails",item);
+        return PageLink.of("ProviderDetails", item);
     }
 
 }

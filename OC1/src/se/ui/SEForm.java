@@ -1,7 +1,7 @@
 package se.ui;
 
 import common.command.Command;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -14,20 +14,20 @@ public final class SEForm
     extends JPanel
     implements IForm
 {
-    private final ScreenLink link;
+    private final PageLink link;
     private Command back;
     private Command edit;
     private JButton backButton;
     private JButton editButton;
     private UIComponent layout;
 
-    SEForm(ScreenLink link, Command edit) {
+    SEForm(PageLink link, Command edit) {
         this.link = link;
         this.edit = edit;
         setLayout(new BorderLayout());
     }
 
-    SEForm(ScreenLink link) {
+    SEForm(PageLink link) {
         this(link,new EditCommand());
     }
 
@@ -102,7 +102,7 @@ public final class SEForm
     }
 
     @Override
-    public ScreenLink getScreenLink() {
+    public PageLink getScreenLink() {
         return link;
     }
 

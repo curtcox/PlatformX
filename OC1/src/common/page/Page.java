@@ -6,10 +6,10 @@ import common.uiwidget.UIComponent;
 
 public abstract class Page {
 
-    public final ScreenLink link;
+    public final PageLink link;
     public final String title;
 
-    public Page(ScreenLink link) {
+    public Page(PageLink link) {
         this.link = link;
         this.title = link.title();
     }

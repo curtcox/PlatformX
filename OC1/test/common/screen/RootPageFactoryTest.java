@@ -5,7 +5,7 @@ import common.Registry;
 import common.device.IDeviceInfo;
 import common.log.ILogManager;
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.screen.dynamic.StringMapAsTaggedStringSources;
 import common.screen.dynamic.TaggedStringSources;
 import common.screenfactories.ItemListScreenFactoryFactory;
@@ -46,7 +46,7 @@ public class RootPageFactoryTest {
 
     @Test
     public void device_info() {
-        ScreenLink link = ScreenLink.of("Device Info");
+        PageLink link = PageLink.of("Device Info");
         assertEquals(1,screensFrom(link).length);
         Page screen = screensFrom(link)[0];
         assertNotNull(screen);
@@ -55,14 +55,14 @@ public class RootPageFactoryTest {
 
     @Test
     public void home() {
-        ScreenLink link = ScreenLink.of("");
+        PageLink link = PageLink.of("");
         assertEquals(1,screensFrom(link).length);
         Page screen = screensFrom(link)[0];
         assertNotNull(screen);
         assertEquals(link,screen.link);
     }
 
-    private Page[] screensFrom(ScreenLink link) {
+    private Page[] screensFrom(PageLink link) {
         return testObject.create(link);
     }
 }

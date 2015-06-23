@@ -4,13 +4,13 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class ScreenLinkTest {
+public class PageLinkTest {
 
     @Test
     public void uses_values_from_factory_method() {
         String name = random("name");
         String arg = random("arg");
-        ScreenLink testObject = ScreenLink.of(name,arg);
+        PageLink testObject = PageLink.of(name, arg);
 
         assertEquals(name,testObject.tags.toString());
         assertEquals(name, testObject.title());
@@ -20,11 +20,11 @@ public class ScreenLinkTest {
 
     @Test
     public void are_equal() {
-        assertEqual(ScreenLink.of(""), ScreenLink.of(""));
-        assertEqual(ScreenLink.of("x"), ScreenLink.of("x"));
+        assertEqual(PageLink.of(""), PageLink.of(""));
+        assertEqual(PageLink.of("x"), PageLink.of("x"));
     }
 
-    private void assertEqual(ScreenLink a, ScreenLink b) {
+    private void assertEqual(PageLink a, PageLink b) {
         assertTrue(a.equals(b));
         assertTrue(b.equals(a));
         assertEquals(a.hashCode(),b.hashCode());
@@ -32,10 +32,10 @@ public class ScreenLinkTest {
 
     @Test
     public void are_not_equal() {
-        assertNotEqual(ScreenLink.of("x"), ScreenLink.of("y"));
+        assertNotEqual(PageLink.of("x"), PageLink.of("y"));
     }
 
-    private void assertNotEqual(ScreenLink a, ScreenLink b) {
+    private void assertNotEqual(PageLink a, PageLink b) {
         assertFalse(a.equals(b));
         assertFalse(b.equals(a));
     }

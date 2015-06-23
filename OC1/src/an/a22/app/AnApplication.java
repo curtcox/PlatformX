@@ -8,7 +8,7 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.screen.PageFactory;
 import common.screen.Screen;
-import common.page.ScreenLink;
+import common.page.PageLink;
 
 
 public class AnApplication extends Activity {
@@ -28,7 +28,7 @@ public class AnApplication extends Activity {
 
     private void show() {
         PageFactory factory = Registry.get(PageFactory.class);
-        Screen.show(ScreenLink.of(""), factory);
+        Screen.show(PageLink.of(""), factory);
     }
 
     private void log(Object context) {

@@ -2,7 +2,7 @@ package se.ui;
 
 import common.Registry;
 import common.command.Command;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.uiwidget.UIComponent;
 import se.events.Events;
 import se.util.TaggedValue;
@@ -18,7 +18,7 @@ public final class EditCommand
 
     @Override
     protected void action(Object... args) {
-        ScreenLink link = (ScreenLink) args[0];
+        PageLink link = (PageLink) args[0];
         TaggedValue[] values = stringMap().getValuesFor(link.tags);
         if (values.length==0) {
             newTaggedValue(link);
@@ -30,7 +30,7 @@ public final class EditCommand
         }
     }
 
-    private void newTaggedValue(ScreenLink link) {
+    private void newTaggedValue(PageLink link) {
         TaggedValue value = stringMap().newValue();
         value.setTags(link.tags);
         postEventToEditSingleSource(value);
@@ -40,7 +40,7 @@ public final class EditCommand
         events().post(new EditTaggedValueEvent(value));
     }
 
-    private void postEventForAmbiguousSelection(ScreenLink link, UIComponent layout) {
+    private void postEventForAmbiguousSelection(PageLink link, UIComponent layout) {
         events().post(new EditLinkEvent(link,layout));
     }
 

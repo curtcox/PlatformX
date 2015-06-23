@@ -3,7 +3,7 @@ package common.screen.dynamic;
 import common.event.StringSource;
 import common.page.Page;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.util.Mirror;
 import common.util.Mirrors;
 
@@ -23,7 +23,7 @@ public final class LazyPageFactory
         this.sources = sources;
     }
     
-    public Page[] create(ScreenLink link) {
+    public Page[] create(PageLink link) {
         List<Page> list = new ArrayList();
         for (StringSource source : sources.get(link.tags)) {
             list.add(new DynamicScreen(link,controller(link), layoutProvider(source)));
@@ -31,7 +31,7 @@ public final class LazyPageFactory
         return list.toArray(new Page[0]);
     }
     
-    private ScreenContext.Provider controller(ScreenLink link) {
+    private ScreenContext.Provider controller(PageLink link) {
         Mirror mirror = Mirrors.of(tags(link));
         return (mirror==null) ? new EmptyScreenContextProvider() : new ScreenController(mirror.getTarget());
     }
@@ -40,7 +40,7 @@ public final class LazyPageFactory
         return new DynamicScreenLayoutProvider(source);
     }
 
-    private String tags(ScreenLink link) {
+    private String tags(PageLink link) {
         return link.tags.toString();
     }
 }

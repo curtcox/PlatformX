@@ -4,7 +4,7 @@ import common.domain.ServiceProvider;
 import common.domain.Type;
 import common.page.Page;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.ProviderRatingButton;
 import common.ui.LinkButton;
@@ -30,20 +30,20 @@ public final class ProviderDetailsScreen
     private final UILabel vicinity = new UILabel();
     private final UIButton icon = new LinkButton("",new SearchLinkFactory());
     
-    private final class SearchLinkFactory implements ScreenLink.Factory {
-        public ScreenLink create() {
-            return ScreenLink.of("Search",getType());
+    private final class SearchLinkFactory implements PageLink.Factory {
+        public PageLink create() {
+            return PageLink.of("Search", getType());
         }
     }
 
     public static PageFactory FACTORY = GlobPageFactory.filter("ProviderDetails", new PageFactory() {
         @Override
-        public Page[] create(ScreenLink link) {
+        public Page[] create(PageLink link) {
             return new Page[]{new ProviderDetailsScreen(link)};
         }
     });
 
-    ProviderDetailsScreen(ScreenLink link) {
+    ProviderDetailsScreen(PageLink link) {
         super(link);
     }
     

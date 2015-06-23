@@ -1,6 +1,6 @@
 package common.ui;
 
-import common.page.ScreenLink;
+import common.page.PageLink;
 
 /**
  * For creating new FormS.
@@ -9,5 +9,5 @@ import common.page.ScreenLink;
  * See DebugForm.
  */
 public interface IFormFactory {
-    IForm newForm(ScreenLink link);
+    IForm newForm(PageLink link);
 }

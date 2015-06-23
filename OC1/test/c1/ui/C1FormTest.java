@@ -1,7 +1,7 @@
 package c1.ui;
 
 import com.codename1.ui.layouts.FlowLayout;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 public class C1FormTest {
 
     String title = random("link");
-    ScreenLink link = ScreenLink.of(title);
+    PageLink link = PageLink.of(title);
     C1Form testObject;
 
     @Before

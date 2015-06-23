@@ -3,7 +3,7 @@ package se.editor;
 import common.Registry;
 import common.page.Page;
 import common.screen.Screen;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.page.ScreenTags;
 import common.uiwidget.UIComponent;
 import fake.FakeForm;
@@ -76,7 +76,7 @@ public class ScreenEditorTest {
     }
 
     Screen screen() {
-        ScreenLink link = ScreenLink.of("");
+        PageLink link = PageLink.of("");
         Page page = new Page(link) {
             @Override
             public UIComponent layoutForPortrait() {

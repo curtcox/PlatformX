@@ -31,7 +31,7 @@ public final class ScreenTags {
         return new ScreenTags(tags.toLowerCase());
     }
 
-    public boolean matches(ScreenLink link) {
+    public boolean matches(PageLink link) {
         return set.containsAll(link.tags.set);
     }
 

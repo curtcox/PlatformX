@@ -1,7 +1,7 @@
 package se.editor;
 
 import common.Registry;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.page.ScreenTags;
 import common.uiwidget.UIComponent;
 import se.events.Events;
@@ -32,7 +32,7 @@ public class ScreenEditorDemo {
 
     private static Events.Event editEvent() {
         String name = "test";
-        ScreenLink link = ScreenLink.of(name);
+        PageLink link = PageLink.of(name);
         UIComponent layout = null;
         return new EditLinkEvent(link,layout);
     }

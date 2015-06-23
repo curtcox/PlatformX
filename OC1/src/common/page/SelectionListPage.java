@@ -22,7 +22,7 @@ public abstract class SelectionListPage<T>
 {
     private final ISearchableList<T> searchList;
 
-    public SelectionListPage(ScreenLink link, ISearchableList<T> searchList) {
+    public SelectionListPage(PageLink link, ISearchableList<T> searchList) {
         super(link);
         this.searchList = searchList;
         addSelectionListener();
@@ -42,7 +42,7 @@ public abstract class SelectionListPage<T>
         });
     }
 
-    private void followLink(ScreenLink link) {
+    private void followLink(PageLink link) {
         Screen.show(link, screenFactory());
     }
 
@@ -55,7 +55,7 @@ public abstract class SelectionListPage<T>
      * @param item the selected item
      * @return link for the next screen
      */
-    protected abstract ScreenLink useSelectedItem(T item);
+    protected abstract PageLink useSelectedItem(T item);
     
     private void log(String message) {
         getLog().log(message);

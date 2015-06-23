@@ -5,22 +5,22 @@ import java.util.Arrays;
 /**
  * A link to a screen.  This is analogous to an HTML link.
  */
-public final class ScreenLink {
+public final class PageLink {
 
     public interface Factory {
-        ScreenLink create();
+        PageLink create();
     }
 
     public final ScreenTags tags;
     public final Object[] args;
 
-    private ScreenLink(String screen, Object... args) {
+    private PageLink(String screen, Object... args) {
         this.tags = ScreenTags.of(screen);
         this.args = args;
     }
 
-    public static ScreenLink of(String name, Object... args) {
-        return new ScreenLink(name,args);
+    public static PageLink of(String name, Object... args) {
+        return new PageLink(name,args);
     }
 
     public String title() {
@@ -34,7 +34,7 @@ public final class ScreenLink {
 
     @Override
     public boolean equals(Object o) {
-        ScreenLink that = (ScreenLink) o;
+        PageLink that = (PageLink) o;
         return tags.equals(that.tags);
     }
 

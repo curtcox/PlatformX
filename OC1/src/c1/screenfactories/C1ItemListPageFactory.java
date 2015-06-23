@@ -6,7 +6,7 @@ import com.codename1.ui.Label;
 import common.event.CommonLiveList;
 import common.page.Page;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.screenfactories.CellConfigurer;
 import common.screenfactories.ItemsPage;
 import common.uilist.StringToListFilter;
@@ -23,7 +23,7 @@ final class C1ItemListPageFactory<T>
         this.values = values;
     }
     
-    public Page[] create(ScreenLink link) {
+    public Page[] create(PageLink link) {
         return new Page[] {new ItemsPage(link,newSearchableList())};
     }     
 

@@ -1,6 +1,6 @@
 package common.screen.dynamic;
 
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.uiwidget.UIGrid;
 import common.uiwidget.UILabel;
 import common.uiwidget.UIContainer;
@@ -13,7 +13,7 @@ import static org.junit.Assert.*;
 public class DynamicScreenLayoutProviderTest {
 
     String sourceCode;
-    ScreenLink link;
+    PageLink link;
     ScreenContext context = new ScreenContext();
     StringSource source = new StringSource() {
         public String getString() {

@@ -1,7 +1,7 @@
 package fake;
 
 import common.command.Command;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -11,7 +11,7 @@ public class FakeForm
     public UIComponent layout;
     public boolean showWasCalled;
     public boolean showBackWasCalled;
-    public ScreenLink link;
+    public PageLink link;
     private Command backCommand;
 
     @Override
@@ -39,6 +39,6 @@ public class FakeForm
     }
 
     @Override  public String getTitle() { return link.title(); }
-    @Override  public ScreenLink getScreenLink() { return link; }
+    @Override  public PageLink getScreenLink() { return link; }
 
 }

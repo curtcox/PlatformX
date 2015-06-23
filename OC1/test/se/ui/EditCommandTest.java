@@ -4,7 +4,7 @@ import mach.Mocks;
 import org.junit.Before;
 import se.events.Events;
 import common.Registry;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
 import org.junit.Test;
@@ -18,7 +18,7 @@ public class EditCommandTest {
 
     UIComponent layout = new UILabel(random("label"));
     String title = random("link");
-    ScreenLink link = ScreenLink.of(title);
+    PageLink link = PageLink.of(title);
     Events.Listener listener;
     Events events = new Events();
     TaggedValue taggedValue;

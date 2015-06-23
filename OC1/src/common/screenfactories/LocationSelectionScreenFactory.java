@@ -6,7 +6,7 @@ import common.event.LiveList;
 import common.event.SwappableList;
 import common.page.Page;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.LocationListCellConfigurer;
 import common.screens.LocationSelectionPage;
@@ -20,12 +20,12 @@ public final class LocationSelectionScreenFactory {
 
     public static PageFactory FACTORY = GlobPageFactory.filter("LocationSelection", new PageFactory() {
         @Override
-        public Page[] create(ScreenLink link) {
+        public Page[] create(PageLink link) {
             return new Page[]{of(link)};
         }
     });
             
-    static LocationSelectionPage of(ScreenLink link) {
+    static LocationSelectionPage of(PageLink link) {
         ISearchableList<LocationDescription> searchList = newSearchableList();
         return new LocationSelectionPage(link,searchList);
     }

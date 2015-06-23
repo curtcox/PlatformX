@@ -2,7 +2,7 @@ package common.screen.dynamic;
 
 import common.page.Page;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.util.Glob;
 
 public final class GlobPageFactory
@@ -20,7 +20,7 @@ public final class GlobPageFactory
         return new GlobPageFactory(glob,inner);
     }
 
-    public final Page[] create(ScreenLink link) {
+    public final Page[] create(PageLink link) {
         if (glob.matches(link.tags)) {
             return inner.create(link);
         }

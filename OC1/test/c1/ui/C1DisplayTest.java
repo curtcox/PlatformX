@@ -2,7 +2,7 @@ package c1.ui;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import fake.FakeUIManager;
 import org.junit.Test;
@@ -21,7 +21,7 @@ public class C1DisplayTest {
         Display.getInstance();
         FakeUIManager.of();
         C1Display display = new C1Display();
-        new C1Form(ScreenLink.of("")).show();
+        new C1Form(PageLink.of("")).show();
 
         Thread.sleep(50);
         assertNotNull(display.getCurrent());

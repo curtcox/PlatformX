@@ -5,7 +5,7 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IDisplay;
 import common.ui.IForm;
 import common.ui.IFormFactory;
@@ -18,7 +18,7 @@ import common.uiwidget.UIComponent;
 public final class Screen {
 
     public final IForm form;
-    public final ScreenLink link;
+    public final PageLink link;
     private Screen previous; // set once
     private Command back;    // set once
     final Page page;
@@ -27,14 +27,14 @@ public final class Screen {
     /**
      * This constructor to create a new screen.
      */
-    public Screen(ScreenLink link, Page page) {
+    public Screen(PageLink link, Page page) {
         this(formFactory().newForm(link),link,page);
     }
 
     /**
      * This constructor is exposed mostly for testing.
      */
-    public Screen(IForm form, ScreenLink link, Page page) {
+    public Screen(IForm form, PageLink link, Page page) {
         this.form = form;
         this.link = link;
         this.page = page;
@@ -76,7 +76,7 @@ public final class Screen {
         }
     }
 
-    public static void show(ScreenLink link, PageFactory factory) {
+    public static void show(PageLink link, PageFactory factory) {
         Page[] screens = factory.create(link);
         if (screens.length==0) {
             throw new RuntimeException("No screens found for " + link);

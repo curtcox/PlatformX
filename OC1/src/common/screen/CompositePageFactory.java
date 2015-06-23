@@ -1,7 +1,7 @@
 package common.screen;
 
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 
 import java.util.Arrays;
 
@@ -21,7 +21,7 @@ public final class CompositePageFactory
      * Return a Screen from the first containing factory that matches the link,
      * or throw an IllegalArgumentException if none exists.
      */
-    public Page[] create(ScreenLink link) {
+    public Page[] create(PageLink link) {
         for (PageFactory factory : factories) {
             Page[] screen = factory.create(link);
             if (screen!=null) {

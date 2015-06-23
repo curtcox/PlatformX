@@ -2,7 +2,7 @@ package common.screenparts;
 
 import common.Registry;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.ui.IFormFactory;
 import fake.FakeCommonRegistryLoader;
@@ -20,7 +20,7 @@ public class ScreenButtonTest  {
     IFormFactory formFactory;
     PageFactory pageFactory;
     String linkTarget = "test";
-    ScreenLink link = ScreenLink.of(linkTarget);
+    PageLink link = PageLink.of(linkTarget);
     FakePage page;
     FakePage[] pages;
 

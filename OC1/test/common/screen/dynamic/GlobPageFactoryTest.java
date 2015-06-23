@@ -2,7 +2,7 @@ package common.screen.dynamic;
 
 import common.page.Page;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.uiwidget.UIContainer;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
@@ -16,7 +16,7 @@ public class GlobPageFactoryTest {
     Page screen;
     PageFactory testObject = GlobPageFactory.filter("stuff", new PageFactory() {
         @Override
-        public Page[] create(ScreenLink link) {
+        public Page[] create(PageLink link) {
             return new Page[]{screen};
         }
     });
@@ -24,7 +24,7 @@ public class GlobPageFactoryTest {
     @Before
     public void setUp() {
         FakeC1RegistryLoader.load();
-        screen = new Page(ScreenLink.of("whatever")) {
+        screen = new Page(PageLink.of("whatever")) {
             @Override
             public UIContainer layoutForPortrait() { return null; }
         };
@@ -32,12 +32,12 @@ public class GlobPageFactoryTest {
     
     @Test
     public void create_returns_results_of_doCreate_when_glob_matches() {
-         assertSame(screen,testObject.create(ScreenLink.of("stuff"))[0]);
+         assertSame(screen,testObject.create(PageLink.of("stuff"))[0]);
     }
 
     @Test
     public void create_returns_null_when_glob_does_not_match() {
-         assertEquals(null,testObject.create(ScreenLink.of("junk")));
+         assertEquals(null,testObject.create(PageLink.of("junk")));
     }
 
 }

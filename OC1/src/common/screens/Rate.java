@@ -4,7 +4,7 @@ import common.Registry;
 import common.app.CurrentState;
 import common.domain.ServiceProvider;
 import common.screenparts.ScreenButton;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.screenparts.ProviderDetailsButton;
 import common.domain.Rating;
 import common.stores.MyRatings;
@@ -26,7 +26,7 @@ public final class Rate {
     }
 
     UIButton change_location_button() {
-        return ScreenButton.builder().text("Pick a different location").leadingTo(ScreenLink.of("Search")).build();
+        return ScreenButton.builder().text("Pick a different location").leadingTo(PageLink.of("Search")).build();
     }
 
     UIButton about_rating_button() {

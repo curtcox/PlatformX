@@ -2,7 +2,7 @@ package common.screen.dynamic;
 
 import common.event.StringSource;
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.page.ScreenTags;
 import fake.FakeSERegistryLoader;
 import mach.Mocks;
@@ -34,7 +34,7 @@ public class LazyPageFactoryTest {
 
     @Test
     public void create_returns_empty_array_when_there_are_no_sources() {
-        ScreenLink link = ScreenLink.of("");
+        PageLink link = PageLink.of("");
         _(new StringSource[0]); sources.get(ScreenTags.of(""));
 
         Page[] actual = testObject.create(link);
@@ -45,7 +45,7 @@ public class LazyPageFactoryTest {
 
     @Test
     public void create_returns_single_matching_screen_when_there_is_one() {
-        ScreenLink link = ScreenLink.of("");
+        PageLink link = PageLink.of("");
         _(new StringSource[]{source}); sources.get(ScreenTags.of(""));
 
         Page[] actual = testObject.create(link);

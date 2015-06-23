@@ -1,7 +1,7 @@
 package common.screen.dynamic;
 
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.uiwidget.UIComponent;
 
 /**
@@ -12,9 +12,9 @@ final class DynamicScreen
 {
     final ScreenContext.Provider controller;
     final ScreenLayoutProvider layoutProvider;
-    final ScreenLink link;
+    final PageLink link;
     
-    public DynamicScreen(ScreenLink link, ScreenContext.Provider controller, ScreenLayoutProvider layoutProvider) {
+    public DynamicScreen(PageLink link, ScreenContext.Provider controller, ScreenLayoutProvider layoutProvider) {
         super(link);
         this.link = link;
         this.controller = controller;

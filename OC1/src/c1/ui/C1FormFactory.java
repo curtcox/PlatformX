@@ -1,6 +1,6 @@
 package c1.ui;
 
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.ui.IFormFactory;
 
@@ -13,7 +13,7 @@ public final class C1FormFactory
     implements IFormFactory
 {
 
-    public IForm newForm(ScreenLink link) {
+    public IForm newForm(PageLink link) {
         return new C1Form(link);
     }
 

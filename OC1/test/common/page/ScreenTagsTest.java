@@ -57,8 +57,8 @@ public class ScreenTagsTest {
         assertFalse(tags("g").matches(link("r g b")));
     }
 
-    private ScreenLink link(String s) {
-        return ScreenLink.of(s);
+    private PageLink link(String s) {
+        return PageLink.of(s);
     }
 
     private ScreenTags tags(String s) {

@@ -18,18 +18,18 @@ import static org.junit.Assert.*;
 public class SelectionListPageTest {
 
     Object peer = new Object();
-    ScreenLink link = ScreenLink.of("");
+    PageLink link = PageLink.of("");
     ISearchableList searchList;
     MySelectionListPage testObject;
 
     static final class MySelectionListPage extends SelectionListPage {
 
-        public MySelectionListPage(ScreenLink link, ISearchableList searchList) {
+        public MySelectionListPage(PageLink link, ISearchableList searchList) {
             super(link, searchList);
         }
 
         @Override
-        protected ScreenLink useSelectedItem(Object item) {
+        protected PageLink useSelectedItem(Object item) {
             return null;
         }
     }

@@ -4,7 +4,7 @@ package c1.screen;
 import c1.screens.FakeUI;
 import common.page.Page;
 import common.screen.Screen;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 import fake.FakeC1RegistryLoader;
@@ -17,7 +17,7 @@ import static org.junit.Assert.assertNotNull;
 
 public class C1ScreenTest {
 
-    ScreenLink link = ScreenLink.of("");
+    PageLink link = PageLink.of("");
     Page page = new Page(link) {
         @Override
         public UIComponent layoutForPortrait() {

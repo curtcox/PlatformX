@@ -2,7 +2,7 @@ package c1.screenfactories;
 
 import common.page.Page;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.screenfactories.IndexScreenFactory;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
@@ -31,21 +31,21 @@ public class IndexPageFactoryTest {
 
     @Test
     public void empty_index_returns_1_index_screen() {
-        ScreenLink link = ScreenLink.of("");
+        PageLink link = PageLink.of("");
         Page[] screens = indexScreenFactory().create(link);
         assertEquals(1, screens.length);
     }
 
     @Test
     public void index_with_3_values_returns_1_screen() {
-        ScreenLink link = ScreenLink.of("");
+        PageLink link = PageLink.of("");
         Page[] screens = indexScreenFactory("Moe","Larry","Curly").create(link);
         assertEquals(1, screens.length);
     }
 
     @Test
     public void index_with_1_value_can_create_1_screen() {
-        ScreenLink link = ScreenLink.of("moe");
+        PageLink link = PageLink.of("moe");
         Page[] screens = indexScreenFactory("moe").create(link);
         assertEquals(1, screens.length);
         Page screen = screens[0];
@@ -61,7 +61,7 @@ public class IndexPageFactoryTest {
     }
 
     void checkScreenFrom(PageFactory factory,String tag) {
-        Page[] screens = factory.create(ScreenLink.of(tag));
+        Page[] screens = factory.create(PageLink.of(tag));
         assertEquals(1, screens.length);
         Page screen = screens[0];
         assertEquals(tag,screen.link.tags.toString());

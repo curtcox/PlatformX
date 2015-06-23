@@ -3,7 +3,7 @@ package se.app;
 import common.Registry;
 import common.screen.Screen;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.util.StringMap;
 import mite.MiteHTTPServer;
 
@@ -54,7 +54,7 @@ public final class SEApplication {
     }
 
     private static void show() {
-        Screen.show(ScreenLink.of(""),screenFactory());
+        Screen.show(PageLink.of(""),screenFactory());
     }
 
     private static StringMap stringMap() {

@@ -3,7 +3,7 @@ package common.screen.dynamic;
 import common.event.StringSource;
 import common.page.Page;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.page.ScreenTags;
 import common.screens.Home;
 import common.uiwidget.UIComponent;
@@ -37,7 +37,7 @@ public class DynamicPageFactoryTest {
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_a_screen_array_for_empty_tag_set() {
-        ScreenLink link = link("");
+        PageLink link = link("");
 
         PageFactory testObject = DynamicPageFactory.builder().map(tags(""), controller, source1).build();
 
@@ -50,7 +50,7 @@ public class DynamicPageFactoryTest {
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_a_screen_for_one_tag() {
-        ScreenLink link = link("tag1");
+        PageLink link = link("tag1");
 
         PageFactory testObject = DynamicPageFactory.builder().map(tags("tag1"), controller, source1).build();
 
@@ -62,7 +62,7 @@ public class DynamicPageFactoryTest {
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_screens_with_the_same_link() {
-        ScreenLink link = link("");
+        PageLink link = link("");
 
         PageFactory testObject = DynamicPageFactory.builder().map(tags(""), controller, source1).build();
         Page page = testObject.create(link)[0];
@@ -139,8 +139,8 @@ public class DynamicPageFactoryTest {
         return ScreenTags.of(string);
     }
 
-    private ScreenLink link(String string) {
-        return ScreenLink.of(string);
+    private PageLink link(String string) {
+        return PageLink.of(string);
     }
 
 }

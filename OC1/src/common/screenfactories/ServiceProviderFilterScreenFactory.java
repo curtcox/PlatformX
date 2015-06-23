@@ -4,7 +4,7 @@ import common.Registry;
 import common.domain.Type;
 import common.page.Page;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.TypeListCellConfigurer;
 import common.screenparts.TypeTextFilter;
@@ -20,7 +20,7 @@ public final class ServiceProviderFilterScreenFactory {
 
     public static PageFactory FACTORY = GlobPageFactory.filter("Filter", new PageFactory() {
         @Override
-        public Page[] create(ScreenLink link) {
+        public Page[] create(PageLink link) {
             return new Page[]{new FilterPage(link, newSearchableList())};
         }
     });

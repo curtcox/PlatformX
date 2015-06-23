@@ -2,7 +2,7 @@ package common.screens;
 
 import common.Registry;
 import common.domain.LocationDescription;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.page.SelectionListPage;
 import common.services.LocationService;
 import common.uiwidget.ISearchableList;
@@ -14,14 +14,14 @@ public final class LocationSelectionPage
     extends SelectionListPage<LocationDescription>
 {
 
-    public LocationSelectionPage(ScreenLink link, ISearchableList<LocationDescription> searchList) {
+    public LocationSelectionPage(PageLink link, ISearchableList<LocationDescription> searchList) {
         super(link,searchList);
     }
 
     @Override
-    protected ScreenLink useSelectedItem(LocationDescription item) {
+    protected PageLink useSelectedItem(LocationDescription item) {
         locationService().selectLocation(item.toLocation());
-        return ScreenLink.of("ProviderDetails",item);
+        return PageLink.of("ProviderDetails", item);
     }
 
     private LocationService locationService() {

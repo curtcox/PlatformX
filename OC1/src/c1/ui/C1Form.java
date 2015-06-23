@@ -10,7 +10,7 @@ import com.codename1.ui.layouts.Layout;
 import common.command.Command;
 import common.screen.Screen;
 import common.screen.PageFactory;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -21,9 +21,9 @@ public class C1Form
     extends Form
     implements IForm
 {
-    private final ScreenLink link;
+    private final PageLink link;
 
-    public C1Form(ScreenLink link) {
+    public C1Form(PageLink link) {
         super(link.title());
         this.link = link;
         addCommand(goHome());
@@ -34,7 +34,7 @@ public class C1Form
     private static com.codename1.ui.Command goHome() {
         return new C1LoggedCommand(new Command("Home") {
             @Override public void action(Object...args) {
-                Screen.show(ScreenLink.of(""), PageFactory.DEFAULT);
+                Screen.show(PageLink.of(""), PageFactory.DEFAULT);
             }
         });
     }
@@ -75,7 +75,7 @@ public class C1Form
     }
 
     @Override
-    final public ScreenLink getScreenLink() {
+    final public PageLink getScreenLink() {
         return link;
     }
 

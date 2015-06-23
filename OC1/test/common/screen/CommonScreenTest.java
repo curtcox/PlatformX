@@ -4,7 +4,7 @@ import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.page.Page;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IFormFactory;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UIContainer;
@@ -26,9 +26,9 @@ public class CommonScreenTest {
     FakeForm form = new FakeForm();
     String name = random("link");
     UIComponent layout = new UIComponent();
-    ScreenLink link = ScreenLink.of(name);
-    ScreenLink link1 = ScreenLink.of("first");
-    ScreenLink link2 = ScreenLink.of("second");
+    PageLink link = PageLink.of(name);
+    PageLink link1 = PageLink.of("first");
+    PageLink link2 = PageLink.of("second");
     PageFactory factory;
     ILog log;
     ILogManager logManager;
@@ -37,7 +37,7 @@ public class CommonScreenTest {
 
     class ExamplePage extends Page {
 
-        public ExamplePage(ScreenLink link) {
+        public ExamplePage(PageLink link) {
             super(link);
         }
 
@@ -148,14 +148,14 @@ public class CommonScreenTest {
 
     static class FakePage extends Page {
         FakePage() {
-            super(ScreenLink.of("name"));
+            super(PageLink.of("name"));
         }
         @Override public UIContainer layoutForPortrait() { return null;}
     }
 
     @Test
     public void show_makes_page_the_one_showing_when_factory_returns_one_link_for_it() {
-        ScreenLink link = ScreenLink.of("foo");
+        PageLink link = PageLink.of("foo");
         Page page = new FakePage();
         Screen screen = new Screen(new FakeForm(),link,new FakePage());
         Page[] screens = new Page[] { page };
@@ -169,7 +169,7 @@ public class CommonScreenTest {
     static class ScreenThatThrowsExceptionOnLayout extends Page {
         RuntimeException e;
         ScreenThatThrowsExceptionOnLayout(RuntimeException e) {
-            super(ScreenLink.of("name"));
+            super(PageLink.of("name"));
             this.e = e;
         }
         @Override public UIContainer layoutForPortrait() {
@@ -194,7 +194,7 @@ public class CommonScreenTest {
 
     @Test
     public void show_throws_and_exception_when_factory_returns_no_screens_for_link() {
-        ScreenLink link = ScreenLink.of("foo");
+        PageLink link = PageLink.of("foo");
         Page[] pages = new Page[0];
         _(pages); factory.create(link);
 

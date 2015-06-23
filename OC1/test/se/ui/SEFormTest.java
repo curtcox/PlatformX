@@ -1,7 +1,7 @@
 package se.ui;
 
 import common.Registry;
-import common.page.ScreenLink;
+import common.page.PageLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
@@ -25,7 +25,7 @@ public class SEFormTest {
     String title = random("link");
     EditCommand editCommand = new EditCommand();
     Events.Listener listener;
-    ScreenLink link = ScreenLink.of(title);
+    PageLink link = PageLink.of(title);
     TaggedValue taggedValue;
     TaggedValueStringMap stringMap;
     SEForm testObject = new SEForm(link,editCommand);
@@ -38,12 +38,12 @@ public class SEFormTest {
 
     @Test
     public void can_create() {
-        assertNotNull(new SEForm(ScreenLink.of("")));
+        assertNotNull(new SEForm(PageLink.of("")));
     }
 
     @Test
     public void is_IForm() {
-        assertTrue(new SEForm(ScreenLink.of("")) instanceof IForm);
+        assertTrue(new SEForm(PageLink.of("")) instanceof IForm);
     }
 
     @Test
