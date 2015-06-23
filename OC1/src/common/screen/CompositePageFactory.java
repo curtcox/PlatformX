@@ -1,5 +1,8 @@
 package common.screen;
 
+import common.page.Page;
+import common.page.ScreenLink;
+
 import java.util.Arrays;
 
 /**

@@ -3,6 +3,7 @@ package common.screen;
 import java.util.Arrays;
 import java.util.List;
 import common.Registry;
+import common.page.ScreenTags;
 import common.screen.dynamic.DynamicPageFactory;
 import common.screen.dynamic.LazyPageFactory;
 import common.screen.dynamic.StringMapStringSource;

@@ -1,7 +1,7 @@
 package se.ui;
 
 import common.Registry;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;

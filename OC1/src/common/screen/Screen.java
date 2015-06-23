@@ -4,6 +4,8 @@ import common.command.Command;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
+import common.page.Page;
+import common.page.ScreenLink;
 import common.ui.IDisplay;
 import common.ui.IForm;
 import common.ui.IFormFactory;

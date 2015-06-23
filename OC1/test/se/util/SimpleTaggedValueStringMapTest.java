@@ -1,7 +1,7 @@
 package se.util;
 
 import common.event.StringSource;
-import common.screen.ScreenTags;
+import common.page.ScreenTags;
 import common.util.StringMap;
 import org.junit.Test;
 

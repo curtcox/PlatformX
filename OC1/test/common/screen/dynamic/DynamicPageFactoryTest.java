@@ -1,10 +1,10 @@
 package common.screen.dynamic;
 
 import common.event.StringSource;
-import common.screen.Page;
+import common.page.Page;
 import common.screen.PageFactory;
-import common.screen.ScreenLink;
-import common.screen.ScreenTags;
+import common.page.ScreenLink;
+import common.page.ScreenTags;
 import common.screens.Home;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;

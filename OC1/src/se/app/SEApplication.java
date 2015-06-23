@@ -3,7 +3,7 @@ package se.app;
 import common.Registry;
 import common.screen.Screen;
 import common.screen.PageFactory;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.util.StringMap;
 import mite.MiteHTTPServer;
 

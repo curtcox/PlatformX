@@ -1,7 +1,7 @@
 package common.screen.dynamic;
 
-import common.screen.Page;
-import common.screen.ScreenLink;
+import common.page.Page;
+import common.page.ScreenLink;
 import common.uiwidget.UIComponent;
 
 /**

@@ -1,6 +1,5 @@
 package common.screen.dynamic;
 
-import common.screen.ScreenLink;
 import hash.NamedExpression;
 import common.util.Check;
 import common.util.Mirror;

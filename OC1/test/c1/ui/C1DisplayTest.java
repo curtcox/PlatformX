@@ -2,10 +2,9 @@ package c1.ui;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import fake.FakeUIManager;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

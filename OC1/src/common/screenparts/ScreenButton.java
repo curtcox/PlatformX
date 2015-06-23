@@ -1,10 +1,10 @@
 package common.screenparts;
 
 import common.event.StringSource;
-import common.screen.Page;
+import common.page.Page;
 import common.screen.PageFactory;
 import common.screen.Screen;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.uiwidget.UIButton;
 
 /**

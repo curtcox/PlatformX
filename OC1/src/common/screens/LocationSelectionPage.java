@@ -2,8 +2,8 @@ package common.screens;
 
 import common.Registry;
 import common.domain.LocationDescription;
-import common.screen.ScreenLink;
-import common.screen.SelectionListPage;
+import common.page.ScreenLink;
+import common.page.SelectionListPage;
 import common.services.LocationService;
 import common.uiwidget.ISearchableList;
 

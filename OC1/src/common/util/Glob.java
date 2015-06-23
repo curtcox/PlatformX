@@ -1,6 +1,6 @@
 package common.util;
 
-import common.screen.ScreenTags;
+import common.page.ScreenTags;
 
 /**
  * A glob in the file system filename sense.

@@ -3,7 +3,7 @@ package common.screen.dynamic;
 import common.*;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.uiwidget.UIColumn;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UIGrid;

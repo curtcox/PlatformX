@@ -1,6 +1,6 @@
 package common.screen.dynamic;
 
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.uiwidget.UIGrid;
 import common.uiwidget.UILabel;
 import common.uiwidget.UIContainer;

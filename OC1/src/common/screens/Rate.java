@@ -4,7 +4,7 @@ import common.Registry;
 import common.app.CurrentState;
 import common.domain.ServiceProvider;
 import common.screenparts.ScreenButton;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.screenparts.ProviderDetailsButton;
 import common.domain.Rating;
 import common.stores.MyRatings;

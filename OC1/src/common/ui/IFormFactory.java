@@ -1,6 +1,6 @@
 package common.ui;
 
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 
 /**
  * For creating new FormS.

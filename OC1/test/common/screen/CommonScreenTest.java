@@ -3,6 +3,8 @@ package common.screen;
 import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
+import common.page.Page;
+import common.page.ScreenLink;
 import common.ui.IFormFactory;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UIContainer;

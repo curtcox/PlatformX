@@ -1,9 +1,9 @@
 package common.screen.dynamic;
 
 import common.event.StringSource;
-import common.screen.Page;
-import common.screen.ScreenLink;
-import common.screen.ScreenTags;
+import common.page.Page;
+import common.page.ScreenLink;
+import common.page.ScreenTags;
 import fake.FakeSERegistryLoader;
 import mach.Mocks;
 import org.junit.Before;

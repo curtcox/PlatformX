@@ -1,6 +1,6 @@
 package c1.ui;
 
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import common.ui.IFormFactory;
 

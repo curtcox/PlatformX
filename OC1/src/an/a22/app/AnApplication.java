@@ -8,7 +8,7 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.screen.PageFactory;
 import common.screen.Screen;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 
 
 public class AnApplication extends Activity {

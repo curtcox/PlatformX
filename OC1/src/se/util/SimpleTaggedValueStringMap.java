@@ -1,7 +1,7 @@
 package se.util;
 
 import common.event.StringSource;
-import common.screen.ScreenTags;
+import common.page.ScreenTags;
 
 import java.util.ArrayList;
 import java.util.List;

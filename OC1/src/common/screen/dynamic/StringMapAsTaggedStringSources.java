@@ -1,7 +1,7 @@
 package common.screen.dynamic;
 
 import common.event.StringSource;
-import common.screen.ScreenTags;
+import common.page.ScreenTags;
 import common.util.StringMap;
 
 public class StringMapAsTaggedStringSources

@@ -8,7 +8,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import common.Registry;
 import common.command.Command;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 

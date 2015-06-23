@@ -1,9 +1,11 @@
-package common.screen;
+package common.page;
 
 import common.event.Action;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
+import common.screen.PageFactory;
+import common.screen.Screen;
 import common.uiwidget.ISearchableList;
 import common.uiwidget.UIPeeredComponent;
 
@@ -41,7 +43,7 @@ public abstract class SelectionListPage<T>
     }
 
     private void followLink(ScreenLink link) {
-        Screen.show(link,screenFactory());
+        Screen.show(link, screenFactory());
     }
 
     private T getSelected() {

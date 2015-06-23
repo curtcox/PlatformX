@@ -1,10 +1,10 @@
 package se.editor;
 
 import common.Registry;
-import common.screen.Page;
+import common.page.Page;
 import common.screen.Screen;
-import common.screen.ScreenLink;
-import common.screen.ScreenTags;
+import common.page.ScreenLink;
+import common.page.ScreenTags;
 import common.uiwidget.UIComponent;
 import fake.FakeForm;
 import fake.FakeSERegistryLoader;

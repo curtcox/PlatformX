@@ -11,7 +11,7 @@ import common.log.ILogManager;
 import common.Registry;
 import common.screen.Screen;
 import common.screen.PageFactory;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 
 public class MyApplication {
 

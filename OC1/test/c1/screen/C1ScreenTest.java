@@ -2,9 +2,9 @@ package c1.screen;
 
 
 import c1.screens.FakeUI;
-import common.screen.Page;
+import common.page.Page;
 import common.screen.Screen;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 import fake.FakeC1RegistryLoader;

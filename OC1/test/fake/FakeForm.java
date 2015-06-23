@@ -1,7 +1,7 @@
 package fake;
 
 import common.command.Command;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 

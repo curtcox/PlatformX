@@ -1,9 +1,9 @@
 package se.screenfactories;
 
 import common.event.CommonLiveList;
-import common.screen.Page;
+import common.page.Page;
 import common.screen.PageFactory;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.screenfactories.CellConfigurer;
 import common.screenfactories.ItemsPage;
 import common.uilist.StringToListFilter;

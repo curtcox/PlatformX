@@ -1,4 +1,4 @@
-package common.screen;
+package common.page;
 
 import common.Registry;
 import common.log.ILogManager;

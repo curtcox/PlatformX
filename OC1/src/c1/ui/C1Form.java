@@ -10,7 +10,7 @@ import com.codename1.ui.layouts.Layout;
 import common.command.Command;
 import common.screen.Screen;
 import common.screen.PageFactory;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 

@@ -2,7 +2,7 @@ package c1.screens;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.plaf.UIManager;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import fake.FakeUIManager;
 import c1.ui.C1Form;
 import common.ui.IForm;

@@ -3,8 +3,8 @@ package common.screens;
 import common.app.CurrentState;
 import common.Registry;
 import common.domain.ServiceProvider;
-import common.screen.ScreenLink;
-import common.screen.SelectionListPage;
+import common.page.ScreenLink;
+import common.page.SelectionListPage;
 import common.uiwidget.ISearchableList;
 
 /**

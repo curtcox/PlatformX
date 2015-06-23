@@ -1,8 +1,8 @@
 package common.screen.dynamic;
 
-import common.screen.Page;
+import common.page.Page;
 import common.screen.PageFactory;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.uiwidget.UIContainer;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;

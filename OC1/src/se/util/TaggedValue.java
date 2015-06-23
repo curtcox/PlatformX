@@ -1,6 +1,6 @@
 package se.util;
 
-import common.screen.ScreenTags;
+import common.page.ScreenTags;
 
 public interface TaggedValue {
     void setTags(ScreenTags tags);

@@ -1,6 +1,6 @@
 package fake;
 
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import common.ui.IFormFactory;
 

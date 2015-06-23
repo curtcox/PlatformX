@@ -2,7 +2,7 @@ package common.screenparts;
 
 import common.Registry;
 import common.screen.PageFactory;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import common.ui.IFormFactory;
 import fake.FakeCommonRegistryLoader;

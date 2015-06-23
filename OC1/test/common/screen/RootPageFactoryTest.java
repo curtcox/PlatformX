@@ -4,6 +4,8 @@ import c1.screenfactories.C1ItemListScreenFactoryFactory;
 import common.Registry;
 import common.device.IDeviceInfo;
 import common.log.ILogManager;
+import common.page.Page;
+import common.page.ScreenLink;
 import common.screen.dynamic.StringMapAsTaggedStringSources;
 import common.screen.dynamic.TaggedStringSources;
 import common.screenfactories.ItemListScreenFactoryFactory;

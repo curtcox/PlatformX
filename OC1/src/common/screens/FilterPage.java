@@ -1,8 +1,8 @@
 package common.screens;
 
 import common.domain.Type;
-import common.screen.ScreenLink;
-import common.screen.SelectionListPage;
+import common.page.ScreenLink;
+import common.page.SelectionListPage;
 import common.uiwidget.ISearchableList;
 
 /**

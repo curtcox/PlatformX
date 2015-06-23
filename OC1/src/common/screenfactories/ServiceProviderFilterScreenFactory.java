@@ -2,9 +2,9 @@ package common.screenfactories;
 
 import common.Registry;
 import common.domain.Type;
-import common.screen.Page;
+import common.page.Page;
 import common.screen.PageFactory;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.TypeListCellConfigurer;
 import common.screenparts.TypeTextFilter;

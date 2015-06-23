@@ -4,7 +4,7 @@ import mach.Mocks;
 import org.junit.Before;
 import se.events.Events;
 import common.Registry;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
 import org.junit.Test;

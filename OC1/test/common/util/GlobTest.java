@@ -1,7 +1,6 @@
 package common.util;
 
-import common.screen.ScreenTags;
-import junit.framework.TestCase;
+import common.page.ScreenTags;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;

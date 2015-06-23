@@ -2,9 +2,9 @@ package common.screens;
 
 import common.domain.ServiceProvider;
 import common.domain.Type;
-import common.screen.Page;
+import common.page.Page;
 import common.screen.PageFactory;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.ProviderRatingButton;
 import common.ui.LinkButton;

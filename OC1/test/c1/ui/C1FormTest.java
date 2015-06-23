@@ -1,13 +1,12 @@
 package c1.ui;
 
 import com.codename1.ui.layouts.FlowLayout;
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
 import fake.FakeC1RegistryLoader;
 import fake.FakeUIManager;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 

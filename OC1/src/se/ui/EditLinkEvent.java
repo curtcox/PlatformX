@@ -1,6 +1,6 @@
 package se.ui;
 
-import common.screen.ScreenLink;
+import common.page.ScreenLink;
 import common.uiwidget.UIComponent;
 import se.events.Events;
 

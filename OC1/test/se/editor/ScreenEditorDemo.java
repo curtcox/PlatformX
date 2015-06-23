@@ -1,8 +1,8 @@
 package se.editor;
 
 import common.Registry;
-import common.screen.ScreenLink;
-import common.screen.ScreenTags;
+import common.page.ScreenLink;
+import common.page.ScreenTags;
 import common.uiwidget.UIComponent;
 import se.events.Events;
 import se.ui.EditLinkEvent;

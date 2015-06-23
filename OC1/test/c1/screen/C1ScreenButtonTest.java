@@ -1,8 +1,8 @@
 package c1.screen;
 
 import c1.screens.FakeUI;
-import common.screen.Page;
-import common.screen.ScreenLink;
+import common.page.Page;
+import common.page.ScreenLink;
 import common.screenparts.ScreenButton;
 import common.uiwidget.UIButton;
 import common.uiwidget.UIComponent;
