@@ -1,14 +1,13 @@
 package common.screen.dynamic;
 
-import common.Registry;
 import common.event.StringSource;
-import common.screen.*;
+import common.screen.Page;
+import common.screen.ScreenFactory;
+import common.screen.ScreenLink;
+import common.screen.ScreenTags;
 import common.screens.Home;
-import common.ui.IFormFactory;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
-import fake.FakeForm;
-import fake.FakeFormFactory;
 import fake.FakeSERegistryLoader;
 import mach.Mocks;
 import org.junit.Before;
@@ -19,8 +18,6 @@ import static org.junit.Assert.*;
 
 public class DynamicScreenFactoryTest {
 
-    FakeForm form = new FakeForm();
-    FakeFormFactory formFactory;
     Object controller=new Home();
     StringSource source1;
     StringSource source2;
@@ -31,8 +28,6 @@ public class DynamicScreenFactoryTest {
         _("layout{ one }"); source1.getString();
         _("layout{ two }"); source2.getString();
         FakeSERegistryLoader.load();
-        formFactory = (FakeFormFactory) Registry.get(IFormFactory.class);
-        formFactory.form = form;
     }
 
     @Test
@@ -49,7 +44,8 @@ public class DynamicScreenFactoryTest {
         Page[] screens = testObject.create(link);
 
         assertNotNull(screens);
-        assertSame(link, formFactory.link);
+        assertEquals(1,screens.length);
+        assertTrue(screens[0] instanceof Page);
     }
 
     @Test
@@ -62,7 +58,6 @@ public class DynamicScreenFactoryTest {
 
         assertNotNull(screens);
         assertEquals(1,screens.length);
-        assertSame(link, formFactory.link);
     }
 
     @Test
@@ -70,27 +65,27 @@ public class DynamicScreenFactoryTest {
         ScreenLink link = link("");
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(tags(""), controller, source1).build();
-        testObject.create(link)[0].layoutForPortrait();
+        Page page = testObject.create(link)[0];
 
-        assertSame(link, form.getScreenLink());
+        assertSame(link, page.link);
     }
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_screens_with_title_from_screen_link() {
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(tags("title"), controller, source1).build();
-        testObject.create(link("title"))[0].layoutForPortrait();
+        Page page = testObject.create(link("title"))[0];
 
-        assertSame("title", form.getTitle());
+        assertSame("title", page.title);
     }
 
     @Test
     public void map_produces_ScreenFactory_that_maps_to_screens_with_contents_from_screen_link() {
 
         ScreenFactory testObject = DynamicScreenFactory.builder().map(tags("title"), controller, source1).build();
-        testObject.create(link("title"))[0].layoutForPortrait();
 
-        UIComponent layout = form.layout;
+        UIComponent layout = testObject.create(link("title"))[0].layoutForPortrait();
+
         UILabel label = (UILabel) layout;
         assertEquals("one",label.text);
     }
@@ -103,10 +98,10 @@ public class DynamicScreenFactoryTest {
                 .map(tags("two"), controller, source2)
                 .build();
 
-        testObject.create(link("one"))[0].layoutForPortrait();
+        Page page = testObject.create(link("one"))[0];
+        UIComponent layout = page.layoutForPortrait();
 
-        assertSame("one", form.getTitle());
-        UIComponent layout = form.layout;
+        assertSame("one", page.title);
         UILabel label = (UILabel) layout;
         assertEquals("one", label.text);
     }
@@ -119,10 +114,10 @@ public class DynamicScreenFactoryTest {
                 .map(tags("two"), controller, source2)
                 .build();
 
-        testObject.create(link("two"))[0].layoutForPortrait();
+        Page page = testObject.create(link("two"))[0];
+        UIComponent layout = page.layoutForPortrait();
 
-        assertSame("two", form.getTitle());
-        UIComponent layout = form.layout;
+        assertSame("two", page.title);
         UILabel label = (UILabel) layout;
         assertEquals("two", label.text);
     }

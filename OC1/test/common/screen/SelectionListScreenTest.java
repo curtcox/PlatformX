@@ -7,21 +7,18 @@ import common.uiwidget.ISearchableList;
 import common.uiwidget.UIPeeredComponent;
 import fake.FakeFormFactory;
 import fake.FakeLogManager;
-import junit.framework.TestCase;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
 import static mach.Mocks._;
 import static mach.Mocks.wild;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class SelectionListScreenTest {
 
     Object peer = new Object();
-    ScreenLink link;
+    ScreenLink link = ScreenLink.of("");
     ISearchableList searchList;
     MySelectionListScreen testObject;
 

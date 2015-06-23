@@ -7,9 +7,11 @@ import common.uiwidget.UIComponent;
 public abstract class Page {
 
     public final ScreenLink link;
+    public final String title;
 
     public Page(ScreenLink link) {
         this.link = link;
+        this.title = link.title();
     }
 
     /**
