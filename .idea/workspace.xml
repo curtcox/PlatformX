@@ -2,9 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/Page.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/Page.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\an\a22\screenfactories\AnItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/screenfactories/AnItemListPageFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\screenfactories\C1ItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListPageFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screen\CompositeScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/CompositePageFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screen\ScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/PageFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screen\dynamic\DynamicScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicPageFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screen\dynamic\GlobScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobPageFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screen\dynamic\LazyScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/dynamic/LazyPageFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se\screenfactories\SEItemListScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListPageFactory.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\c1\screenfactories\IndexScreenFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexPageFactoryTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\screen\RootScreenFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/RootPageFactoryTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\screen\dynamic\DynamicScreenFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicPageFactoryTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\screen\dynamic\GlobScreenFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/GlobPageFactoryTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\screen\dynamic\LazyScreenFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/dynamic/LazyPageFactoryTest.java" />
+      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\fake\FakeScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakePageFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/screenfactories/AnItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/screenfactories/AnItemListScreenFactoryFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/app/AnRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/app/AnRegistryLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactoryFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screen/CommonScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/CommonScreenTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screens/CustomComponentScreen.java" afterPath="$PROJECT_DIR$/OC1/src/common/screens/CustomComponentScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenfactories/DeviceInfoScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/DeviceInfoScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenfactories/IndexScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/IndexScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenfactories/ItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/ItemListScreenFactoryFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/ui/LinkButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/LinkButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenfactories/LocationSelectionScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/LocationSelectionScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screens/ProviderDetailsScreen.java" afterPath="$PROJECT_DIR$/OC1/src/common/screens/ProviderDetailsScreen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/RootScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/RootScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/app/SEApplication.java" afterPath="$PROJECT_DIR$/OC1/src/se/app/SEApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListScreenFactoryFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/Screen.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/Screen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/SelectionListScreen.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/SelectionListScreen.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screen/SelectionListScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/SelectionListScreenTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenfactories/ServiceProviderFilterScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/ServiceProviderFilterScreenFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screenfactories/ServiceProviderSearchScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/screenfactories/ServiceProviderSearchScreenFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -19,10 +56,10 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/OysterCracker$All_in_OC1.coverage" NAME="All in OC1 Coverage Results" MODIFIED="1422063531431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
     <SUITE FILE_PATH="coverage/OysterCracker$SimpleAttributedStringRendererTest.coverage" NAME="SimpleAttributedStringRendererTest Coverage Results" MODIFIED="1421969045528" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>common.ui.*</FILTER>
     </SUITE>
+    <SUITE FILE_PATH="coverage/OysterCracker$All_in_OC1.coverage" NAME="All in OC1 Coverage Results" MODIFIED="1422063531431" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="CoverageViewManager">
     <option name="myFlattenPackages" value="true" />
@@ -30,9 +67,6 @@
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
-  </component>
-  <component name="DaemonCodeAnalyzer">
-    <disable_hints />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -43,23 +77,20 @@
       <file leaf-file-name="C1ScreenButtonTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="1185">
+            <state vertical-scroll-proportion="0.0">
               <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#690#691#0" expanded="true" />
-                <element signature="e#725#726#0" expanded="true" />
-                <element signature="e#887#888#0" expanded="true" />
-                <element signature="e#927#928#0" expanded="true" />
+                <element signature="e#1295#1296#0" expanded="false" />
+                <element signature="e#1338#1339#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DynamicScreenFactoryTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenFactoryTest.java">
+      <file leaf-file-name="DynamicPageFactoryTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicPageFactoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="2205">
+            <state vertical-scroll-proportion="0.0">
               <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -68,15 +99,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SelectionListScreenTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SelectionListScreenTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/SelectionListScreenTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5380201" vertical-offset="0" max-vertical-offset="795">
+            <state vertical-scroll-proportion="0.0">
               <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-              <folding>
-                <element signature="e#1324#1325#0" expanded="true" />
-                <element signature="e#1365#1366#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -84,8 +112,32 @@
       <file leaf-file-name="SelectionListScreen.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/SelectionListScreen.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="855">
+            <state vertical-scroll-proportion="0.0">
               <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#932#933#0" expanded="false" />
+                <element signature="e#1003#1004#0" expanded="false" />
+                <element signature="e#1346#1347#0" expanded="false" />
+                <element signature="e#1395#1396#0" expanded="false" />
+                <element signature="e#1426#1427#0" expanded="false" />
+                <element signature="e#1473#1474#0" expanded="false" />
+                <element signature="e#1730#1731#0" expanded="false" />
+                <element signature="e#1767#1768#0" expanded="false" />
+                <element signature="e#1796#1797#0" expanded="false" />
+                <element signature="e#1884#1885#0" expanded="false" />
+                <element signature="e#1934#1935#0" expanded="false" />
+                <element signature="e#1988#1989#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnApplicationTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/test/an/a22/app/AnApplicationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -94,9 +146,15 @@
       <file leaf-file-name="Page.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Page.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+            <state vertical-scroll-proportion="0.0">
               <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#617#618#0" expanded="false" />
+                <element signature="e#659#660#0" expanded="false" />
+                <element signature="e#700#701#0" expanded="false" />
+                <element signature="e#764#765#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -104,9 +162,21 @@
       <file leaf-file-name="FakeForm.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakeForm.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+            <state vertical-scroll-proportion="0.0">
               <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+                <element signature="e#407#408#0" expanded="false" />
+                <element signature="e#443#444#0" expanded="false" />
+                <element signature="e#483#484#0" expanded="false" />
+                <element signature="e#519#520#0" expanded="false" />
+                <element signature="e#588#589#0" expanded="false" />
+                <element signature="e#634#635#0" expanded="false" />
+                <element signature="e#673#674#0" expanded="false" />
+                <element signature="e#707#708#0" expanded="false" />
+                <element signature="e#751#752#0" expanded="false" />
+                <element signature="e#791#792#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -114,11 +184,36 @@
       <file leaf-file-name="MyUI.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OC1/src/va/app/MyUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="60" max-vertical-offset="705">
+            <state vertical-scroll-proportion="0.0">
               <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
               <folding>
-                <element signature="e#805#1009#0" expanded="false" />
-                <element signature="e#1008#1009#0" expanded="false" />
+                <element signature="e#910#911#0" expanded="false" />
+                <element signature="e#998#999#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AnApplication.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PageFactory.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/PageFactory.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.12809473">
+              <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+              <folding>
+                <element signature="e#161#309#0" expanded="true" />
+                <element signature="e#308#309#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,10 +231,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/an/a22/app/AnApplicationTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/ui/DebugForm.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/ui/C1DebugForm.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/ui/C1EmptyImage.java" />
@@ -150,7 +249,6 @@
         <option value="$PROJECT_DIR$/OC1/src/c1/ui/C1Display.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/ui/IDisplay.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" />
-        <option value="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java" />
         <option value="$PROJECT_DIR$/OC1/src/an/a22/ui/AnFormFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/an/a22/ui/AnDisplay.java" />
@@ -158,7 +256,6 @@
         <option value="$PROJECT_DIR$/OC1/src/an/a22/ui/AnUIRenderer.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/app/IosApplication.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/SelectionListScreen.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/screen/ScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screens/CustomComponentScreen.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screens/ProfileScreen.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screens/ProviderDetailsScreen.java" />
@@ -190,13 +287,20 @@
         <option value="$PROJECT_DIR$/OC1/src/common/screen/Page.java" />
         <option value="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/common/screen/SelectionListScreenTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/screen/ScreenFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/screen/PageFactory.java" />
       </list>
     </option>
   </component>
+  <component name="NamedScopeManager">
+    <order />
+  </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1920" />
-    <option name="height" value="1053" />
+    <option name="x" value="-1907" />
+    <option name="y" value="-28" />
+    <option name="width" value="1881" />
+    <option name="height" value="1065" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -222,6 +326,8 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -252,8 +358,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -424,7 +528,7 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="DynamicScreenFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="DynamicPageFactoryTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="common.screen.dynamic.*" />
@@ -435,7 +539,7 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="common.screen.dynamic" />
-      <option name="MAIN_CLASS_NAME" value="common.screen.dynamic.DynamicScreenFactoryTest" />
+      <option name="MAIN_CLASS_NAME" value="common.screen.dynamic.DynamicPageFactoryTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -456,6 +560,26 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
@@ -479,17 +603,27 @@
       <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+    <configuration default="true" type="Application" factoryName="Application">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="JAR_PATH" value="$PROJECT_DIR$/OC1/lib/vaadin-client-compiler-7.4.8.jar" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
       <envs />
       <method />
     </configuration>
@@ -509,17 +643,39 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="JarApplication" factoryName="JAR Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="JAR_PATH" value="$PROJECT_DIR$/OC1/lib/vaadin-client-compiler-7.4.8.jar" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -550,73 +706,17 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
-      <module name="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="USE_COMMAND_LINE" value="true" />
-      <option name="COMMAND_LINE" value="" />
-      <option name="WIPE_USER_DATA" value="false" />
-      <option name="DISABLE_BOOT_ANIMATION" value="false" />
-      <option name="NETWORK_SPEED" value="full" />
-      <option name="NETWORK_LATENCY" value="none" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
-      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
-      <method />
-    </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.AnApplicationTest" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.All in OC1 (2)" />
       <item index="3" class="java.lang.String" itemvalue="JUnit.AnRegistryLoaderTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.DynamicScreenFactoryTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.DynamicPageFactoryTest" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="JUnit.All in OC1" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.DynamicScreenFactoryTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.DynamicPageFactoryTest" />
         <item index="2" class="java.lang.String" itemvalue="JUnit.AnApplicationTest" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.AnRegistryLoaderTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.All in OC1 (2)" />
@@ -637,64 +737,64 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1920" height="1053" extended-state="6" />
+    <frame x="-1907" y="-28" width="1881" height="1065" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="RoboVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2880829" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27830687" sideWeight="0.30389065" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30792683" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30721003" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27830687" sideWeight="0.30389065" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19635417" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26321137" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42902207" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26227796" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19624665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29780564" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2880829" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29780564" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3292683" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="RoboVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42902207" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27830687" sideWeight="0.30389065" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="RoboVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2880829" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31088084" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42902207" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1924307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26632124" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="RoboVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1924307" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29844558" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2880829" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31088084" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -707,11 +807,6 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="myTodoPanelSettings">
-      <TodoPanelSettings />
-    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -744,44 +839,37 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6553255" vertical-offset="0" max-vertical-offset="0">
-          <caret line="62" column="11" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEFormFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10059172" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.10059172">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/OC1/lib/robovm-cocoatouch-1.2.0.jar!/org/robovm/apple/foundation/NSAutoreleasePool.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16962306" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.16962306">
           <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.45748118" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.45748118">
           <caret line="25" column="36" selection-start-line="25" selection-start-column="20" selection-end-line="25" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/MyViewController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4022082" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.4022082">
           <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/ui/AnUIRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5709779" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.5709779">
           <caret line="80" column="19" selection-start-line="80" selection-start-column="19" selection-end-line="80" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -791,18 +879,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/ui/AnFormFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24132492" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.24132492">
           <caret line="11" column="20" selection-start-line="11" selection-start-column="20" selection-end-line="11" selection-end-column="20" />
-          <folding>
-            <element signature="e#228#229#0" expanded="false" />
-            <element signature="e#267#268#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/ui/AnForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4637224" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.4637224">
           <caret line="75" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="false" />
@@ -816,309 +900,300 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="12" selection-start-line="14" selection-start-column="12" selection-end-line="14" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="31" column="11" selection-start-line="31" selection-start-column="11" selection-end-line="31" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/an/a22/app/AnApplicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="58" column="15" selection-start-line="58" selection-start-column="15" selection-end-line="58" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screens/CustomComponentScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="14" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screens/ProfileScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screens/ProviderDetailsScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="41" column="27" selection-start-line="41" selection-start-column="27" selection-end-line="41" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/screenfactories/AnItemListScreenFactory.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/screenfactories/AnItemListPageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListScreenFactory.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListPageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/CompositeScreenFactory.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/CompositePageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreenFactory.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicPageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="43" column="36" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="16" column="11" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/LazyScreenFactory.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/LazyPageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="28" column="17" selection-start-line="28" selection-start-column="17" selection-end-line="28" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screens/LocationSelectionScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobScreenFactory.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/dynamic/GlobPageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="18" column="62" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screenfactories/LocationSelectionScreenFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListScreenFactory.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListPageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="24" column="33" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="4" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screenfactories/ServiceProviderFilterScreenFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="27" selection-start-line="23" selection-start-column="27" selection-end-line="23" selection-end-column="27" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screenfactories/ServiceProviderSearchScreenFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screenfactories/ItemsScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.18769716" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.18769716">
           <caret line="9" column="11" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screens/FilterScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21451104" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.21451104">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="30" column="20" selection-start-line="30" selection-start-column="20" selection-end-line="30" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexScreenFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexPageFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/CommonScreenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/RootScreenFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/RootPageFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/dynamic/GlobScreenFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/dynamic/GlobPageFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/dynamic/LazyScreenFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/dynamic/LazyPageFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="50" column="12" selection-start-line="50" selection-start-column="12" selection-end-line="50" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakeScreenFactory.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakePageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="81" column="18" selection-start-line="81" selection-start-column="18" selection-end-line="81" selection-end-column="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="6" column="21" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+        <state vertical-scroll-proportion="0.0">
           <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
           <folding>
-            <element signature="e#618#619#0" expanded="false" />
-            <element signature="e#649#650#0" expanded="false" />
-            <element signature="e#2004#2005#0" expanded="false" />
-            <element signature="e#2040#2041#0" expanded="false" />
+            <element signature="e#616#617#0" expanded="false" />
+            <element signature="e#647#648#0" expanded="false" />
+            <element signature="e#2000#2001#0" expanded="false" />
+            <element signature="e#2036#2037#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/va/app/MyUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720">
+        <state vertical-scroll-proportion="0.0">
           <caret line="4" column="29" selection-start-line="4" selection-start-column="29" selection-end-line="4" selection-end-column="29" />
           <folding>
-            <element signature="e#805#1009#0" expanded="false" />
-            <element signature="e#1008#1009#0" expanded="false" />
+            <element signature="e#910#911#0" expanded="false" />
+            <element signature="e#998#999#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="214" max-vertical-offset="1185">
+        <state vertical-scroll-proportion="0.0">
           <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#725#726#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-            <element signature="e#927#928#0" expanded="true" />
+            <element signature="e#1295#1296#0" expanded="false" />
+            <element signature="e#1338#1339#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakeFormFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08608321" vertical-offset="0" max-vertical-offset="697">
+        <state vertical-scroll-proportion="0.08608321">
           <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/fake/FakeForm.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="555">
+        <state vertical-scroll-proportion="0.0">
           <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/ScreenFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38737446" vertical-offset="0" max-vertical-offset="697">
-          <caret line="20" column="11" selection-start-line="20" selection-start-column="11" selection-end-line="20" selection-end-column="11" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#407#408#0" expanded="false" />
+            <element signature="e#443#444#0" expanded="false" />
+            <element signature="e#483#484#0" expanded="false" />
+            <element signature="e#519#520#0" expanded="false" />
+            <element signature="e#588#589#0" expanded="false" />
+            <element signature="e#634#635#0" expanded="false" />
+            <element signature="e#673#674#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#751#752#0" expanded="false" />
+            <element signature="e#791#792#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Page.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+        <state vertical-scroll-proportion="0.0">
           <caret line="13" column="34" selection-start-line="13" selection-start-column="34" selection-end-line="13" selection-end-column="34" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#617#618#0" expanded="false" />
+            <element signature="e#659#660#0" expanded="false" />
+            <element signature="e#700#701#0" expanded="false" />
+            <element signature="e#764#765#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenFactoryTest.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicPageFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="2205">
+        <state vertical-scroll-proportion="0.0">
           <caret line="45" column="31" selection-start-line="45" selection-start-column="31" selection-end-line="45" selection-end-column="31" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1128,19 +1203,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/SelectionListScreen.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="38" max-vertical-offset="855">
+        <state vertical-scroll-proportion="0.0">
           <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#932#933#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
+            <element signature="e#1346#1347#0" expanded="false" />
+            <element signature="e#1395#1396#0" expanded="false" />
+            <element signature="e#1426#1427#0" expanded="false" />
+            <element signature="e#1473#1474#0" expanded="false" />
+            <element signature="e#1730#1731#0" expanded="false" />
+            <element signature="e#1767#1768#0" expanded="false" />
+            <element signature="e#1796#1797#0" expanded="false" />
+            <element signature="e#1884#1885#0" expanded="false" />
+            <element signature="e#1934#1935#0" expanded="false" />
+            <element signature="e#1988#1989#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/SelectionListScreenTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5380201" vertical-offset="0" max-vertical-offset="795">
+        <state vertical-scroll-proportion="0.0">
           <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/robolectric-2.4-jar-with-dependencies.jar!/org/robolectric/shadows/ShadowActivity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.34715822">
+          <caret line="268" column="16" selection-start-line="268" selection-start-column="16" selection-end-line="268" selection-end-column="16" />
           <folding>
-            <element signature="e#1324#1325#0" expanded="true" />
-            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#8322#8323#0" expanded="true" />
+            <element signature="e#8411#8412#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/an/a22/app/AnApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="18" column="32" selection-start-line="18" selection-start-column="32" selection-end-line="18" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="13" selection-start-line="29" selection-start-column="13" selection-end-line="29" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/PageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.12809473">
+          <caret line="7" column="21" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="21" />
+          <folding>
+            <element signature="e#161#309#0" expanded="true" />
+            <element signature="e#308#309#0" expanded="true" />
           </folding>
         </state>
       </provider>

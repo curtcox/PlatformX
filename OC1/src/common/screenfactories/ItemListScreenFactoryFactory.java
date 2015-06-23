@@ -1,9 +1,9 @@
 package common.screenfactories;
 
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 
 import java.util.List;
 
 public interface ItemListScreenFactoryFactory {
-    ScreenFactory newFactory(List values);
+    PageFactory newFactory(List values);
 }

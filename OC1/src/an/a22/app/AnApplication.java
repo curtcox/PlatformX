@@ -6,13 +6,12 @@ import android.os.Bundle;
 import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
+import common.screen.PageFactory;
 import common.screen.Screen;
-import common.screen.ScreenFactory;
 import common.screen.ScreenLink;
 
 
 public class AnApplication extends Activity {
-
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -28,7 +27,7 @@ public class AnApplication extends Activity {
     }
 
     private void show() {
-        ScreenFactory factory = Registry.get(ScreenFactory.class);
+        PageFactory factory = Registry.get(PageFactory.class);
         Screen.show(ScreenLink.of(""), factory);
     }
 

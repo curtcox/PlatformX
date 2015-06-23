@@ -7,7 +7,7 @@ import android.widget.TextView;
 import common.Registry;
 import common.event.CommonLiveList;
 import common.screen.Page;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
 import common.screenfactories.CellConfigurer;
 import common.screenfactories.ItemsScreen;
@@ -16,12 +16,12 @@ import common.uiwidget.ISearchableList;
 
 import java.util.List;
 
-final class AnItemListScreenFactory<T>
-    implements ScreenFactory
+final class AnItemListPageFactory<T>
+    implements PageFactory
 {
     final List<T> values;
 
-    AnItemListScreenFactory(List<T> values) {
+    AnItemListPageFactory(List<T> values) {
         this.values = values;
     }
     

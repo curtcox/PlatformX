@@ -1,6 +1,6 @@
 package se.screenfactories;
 
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screenfactories.ItemListScreenFactoryFactory;
 
 import java.util.List;
@@ -9,7 +9,7 @@ public final class SEItemListScreenFactoryFactory
     implements ItemListScreenFactoryFactory
 {
     @Override
-    public ScreenFactory newFactory(List values) {
-        return new SEItemListScreenFactory(values);
+    public PageFactory newFactory(List values) {
+        return new SEItemListPageFactory(values);
     }
 }

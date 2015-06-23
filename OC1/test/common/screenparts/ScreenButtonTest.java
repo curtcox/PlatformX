@@ -1,7 +1,7 @@
 package common.screenparts;
 
 import common.Registry;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
 import common.ui.IForm;
 import common.ui.IFormFactory;
@@ -18,7 +18,7 @@ public class ScreenButtonTest  {
 
     IForm form;
     IFormFactory formFactory;
-    ScreenFactory screenFactory;
+    PageFactory pageFactory;
     String linkTarget = "test";
     ScreenLink link = ScreenLink.of(linkTarget);
     FakePage page;
@@ -29,7 +29,7 @@ public class ScreenButtonTest  {
         Mocks.init(this);
         FakeCommonRegistryLoader.load();
         Registry.put(IFormFactory.class, formFactory);
-        Registry.put(ScreenFactory.class, screenFactory);
+        Registry.put(PageFactory.class, pageFactory);
         _(form);    formFactory.newForm(link);
         _();        form.show();
 
@@ -38,7 +38,7 @@ public class ScreenButtonTest  {
 
         _();             form.layout(page.uiComponent);
         _(); wild(null); form.setBackCommand(null);
-        _(pages);      screenFactory.create(link);
+        _(pages);      pageFactory.create(link);
     }
 
     @Test

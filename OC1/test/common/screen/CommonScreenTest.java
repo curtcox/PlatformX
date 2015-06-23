@@ -27,7 +27,7 @@ public class CommonScreenTest {
     ScreenLink link = ScreenLink.of(name);
     ScreenLink link1 = ScreenLink.of("first");
     ScreenLink link2 = ScreenLink.of("second");
-    ScreenFactory factory;
+    PageFactory factory;
     ILog log;
     ILogManager logManager;
     ExamplePage page;

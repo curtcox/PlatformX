@@ -5,9 +5,9 @@ import common.domain.ServiceProvider;
 import common.domain.Type;
 import common.event.SwappableList;
 import common.screen.Page;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
-import common.screen.dynamic.GlobScreenFactory;
+import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.ServiceProviderSearchParams;
 import common.screenparts.ServiceProviderTextFilter;
 import common.screens.ServiceProviderSearchScreen;
@@ -23,7 +23,7 @@ public final class ServiceProviderSearchScreenFactory {
     private static final int STARTING_RADIUS = 100;
     private static final Type[] ALL_TYPES = new Type[0];
 
-    public static ScreenFactory FACTORY = GlobScreenFactory.filter("Search", new ScreenFactory() {
+    public static PageFactory FACTORY = GlobPageFactory.filter("Search", new PageFactory() {
         @Override
         public Page[] create(ScreenLink link) {
             return new Page[]{searchScreenFromArgs(link, link.args)};

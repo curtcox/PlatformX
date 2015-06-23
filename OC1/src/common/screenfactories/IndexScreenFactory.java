@@ -1,13 +1,13 @@
 package common.screenfactories;
 
 import common.Registry;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 
 import java.util.List;
 
 public final class IndexScreenFactory {
 
-    public static ScreenFactory of(final List<String> index) {
+    public static PageFactory of(final List<String> index) {
         return factoryFactory().newFactory(index);
     }
 

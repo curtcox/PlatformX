@@ -2,7 +2,7 @@ package se.app;
 
 import common.Registry;
 import common.screen.Screen;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
 import common.util.StringMap;
 import mite.MiteHTTPServer;
@@ -61,8 +61,8 @@ public final class SEApplication {
         return Registry.get(StringMap.class);
     }
 
-    private static ScreenFactory screenFactory() {
-        return Registry.get(ScreenFactory.class);
+    private static PageFactory screenFactory() {
+        return Registry.get(PageFactory.class);
     }
 
 }

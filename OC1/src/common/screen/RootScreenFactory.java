@@ -3,8 +3,8 @@ package common.screen;
 import java.util.Arrays;
 import java.util.List;
 import common.Registry;
-import common.screen.dynamic.DynamicScreenFactory;
-import common.screen.dynamic.LazyScreenFactory;
+import common.screen.dynamic.DynamicPageFactory;
+import common.screen.dynamic.LazyPageFactory;
 import common.screen.dynamic.StringMapStringSource;
 import common.screen.dynamic.TaggedStringSources;
 import common.screenfactories.*;
@@ -14,7 +14,7 @@ import common.screens.ProviderDetailsScreen;
 import common.util.StringMap;
 
 /**
- * The top-level ScreenFactory.
+ * The top-level PageFactory.
  */
 public final class RootScreenFactory {
 
@@ -24,12 +24,12 @@ public final class RootScreenFactory {
             "Filter", "Search", "Custom"
     );
 
-    public static ScreenFactory of() {
+    public static PageFactory of() {
         return of(Registry.get(StringMap.class),Registry.get(TaggedStringSources.class));
     }
 
-    public static ScreenFactory of(StringMap layouts, TaggedStringSources taggedLayouts) {
-        return new CompositeScreenFactory(
+    public static PageFactory of(StringMap layouts, TaggedStringSources taggedLayouts) {
+        return new CompositePageFactory(
                 DeviceInfoScreenFactory.of(),
                 LocationSelectionScreenFactory.FACTORY,
                 ProviderDetailsScreen.FACTORY,
@@ -38,12 +38,12 @@ public final class RootScreenFactory {
                 CustomComponentScreen.FACTORY,
                 dynamicScreens(layouts),
                 IndexScreenFactory.of(index),
-                new LazyScreenFactory(taggedLayouts)
+                new LazyPageFactory(taggedLayouts)
         );
     }
 
-    private static ScreenFactory dynamicScreens(StringMap layouts) {
-        return DynamicScreenFactory.builder()
+    private static PageFactory dynamicScreens(StringMap layouts) {
+        return DynamicPageFactory.builder()
                 .map(ScreenTags.of("Home"), new Home(), new StringMapStringSource(layouts, "Home"))
                 .build();
     }

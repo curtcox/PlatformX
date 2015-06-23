@@ -74,7 +74,7 @@ public final class Screen {
         }
     }
 
-    public static void show(ScreenLink link, ScreenFactory factory) {
+    public static void show(ScreenLink link, PageFactory factory) {
         Page[] screens = factory.create(link);
         if (screens.length==0) {
             throw new RuntimeException("No screens found for " + link);

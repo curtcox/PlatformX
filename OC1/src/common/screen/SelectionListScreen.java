@@ -63,8 +63,8 @@ public abstract class SelectionListScreen<T>
         return Registry.get(ILogManager.class).getLog(SelectionListScreen.class);
     }
 
-    private static ScreenFactory screenFactory() {
-        return Registry.get(ScreenFactory.class);
+    private static PageFactory screenFactory() {
+        return Registry.get(PageFactory.class);
     }
 
 }

@@ -10,7 +10,7 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 import common.screen.Screen;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
 
 public class MyApplication {
@@ -68,7 +68,7 @@ public class MyApplication {
     }
 
     private void show() {
-        ScreenFactory factory = Registry.get(ScreenFactory.class);
+        PageFactory factory = Registry.get(PageFactory.class);
         Screen.show(ScreenLink.of(""),factory);
     }
     

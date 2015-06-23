@@ -3,9 +3,9 @@ package common.screens;
 import common.domain.ServiceProvider;
 import common.domain.Type;
 import common.screen.Page;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
-import common.screen.dynamic.GlobScreenFactory;
+import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.ProviderRatingButton;
 import common.ui.LinkButton;
 import common.uiwidget.UIButton;
@@ -36,7 +36,7 @@ public final class ProviderDetailsScreen
         }
     }
 
-    public static ScreenFactory FACTORY = GlobScreenFactory.filter("ProviderDetails", new ScreenFactory() {
+    public static PageFactory FACTORY = GlobPageFactory.filter("ProviderDetails", new PageFactory() {
         @Override
         public Page[] create(ScreenLink link) {
             return new Page[]{new ProviderDetailsScreen(link)};

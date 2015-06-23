@@ -3,9 +3,9 @@ package common.screenfactories;
 import common.Registry;
 import common.domain.Type;
 import common.screen.Page;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
-import common.screen.dynamic.GlobScreenFactory;
+import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.TypeListCellConfigurer;
 import common.screenparts.TypeTextFilter;
 import common.screens.FilterScreen;
@@ -18,7 +18,7 @@ import java.util.List;
 
 public final class ServiceProviderFilterScreenFactory {
 
-    public static ScreenFactory FACTORY = GlobScreenFactory.filter("Filter", new ScreenFactory() {
+    public static PageFactory FACTORY = GlobPageFactory.filter("Filter", new PageFactory() {
         @Override
         public Page[] create(ScreenLink link) {
             return new Page[]{new FilterScreen(link, newSearchableList())};

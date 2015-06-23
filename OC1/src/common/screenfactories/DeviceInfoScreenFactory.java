@@ -2,11 +2,11 @@ package common.screenfactories;
 
 import common.Registry;
 import common.device.IDeviceInfo;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 
 public final class DeviceInfoScreenFactory {
 
-    public static ScreenFactory of() {
+    public static PageFactory of() {
         return itemListScreenFactoryFactory().newFactory(deviceInfo().asDeviceKeyValuePairs());
     }
 

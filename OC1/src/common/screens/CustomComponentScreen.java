@@ -1,17 +1,16 @@
 package common.screens;
 
 import common.screen.Page;
-import common.screen.Screen;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
-import common.screen.dynamic.GlobScreenFactory;
+import common.screen.dynamic.GlobPageFactory;
 import common.uiwidget.UIComponent;
 
 public final class CustomComponentScreen
     extends Page
 {
     
-    public static final ScreenFactory FACTORY = GlobScreenFactory.filter("Custom", new ScreenFactory() {
+    public static final PageFactory FACTORY = GlobPageFactory.filter("Custom", new PageFactory() {
         @Override
         public Page[] create(ScreenLink link) {
             return new Page[]{new CustomComponentScreen(link)};

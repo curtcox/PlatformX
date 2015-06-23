@@ -3,7 +3,7 @@ package common.ui;
 import common.Registry;
 import common.screen.Screen;
 import common.uiwidget.UIButton;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
 
 /**
@@ -19,8 +19,8 @@ public final class LinkButton
         this.linkFactory = linkFactory;
     }
         
-    public static ScreenFactory screenFactory() {
-        return Registry.get(ScreenFactory.class);
+    public static PageFactory screenFactory() {
+        return Registry.get(PageFactory.class);
     }
 
     @Override

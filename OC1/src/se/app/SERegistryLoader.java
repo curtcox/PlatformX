@@ -7,7 +7,7 @@ import common.log.ILogManager;
 import common.log.CommonLogWriter;
 import common.net.Network;
 import common.screen.RootScreenFactory;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.dynamic.TaggedStringSources;
 import common.screenfactories.ItemListScreenFactoryFactory;
 import common.ui.IDisplay;
@@ -46,7 +46,7 @@ final class SERegistryLoader {
         put(Network.class,          new CommonRawNetwork());
         putTaggedValueStringMap();
         put(ItemListScreenFactoryFactory.class, new SEItemListScreenFactoryFactory());
-        put(ScreenFactory.class,    RootScreenFactory.of());
+        put(PageFactory.class,    RootScreenFactory.of());
         put(ScreenEditor.class,     ScreenEditor.of());
     }
 

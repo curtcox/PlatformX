@@ -5,9 +5,9 @@ import common.domain.LocationDescription;
 import common.event.LiveList;
 import common.event.SwappableList;
 import common.screen.Page;
-import common.screen.ScreenFactory;
+import common.screen.PageFactory;
 import common.screen.ScreenLink;
-import common.screen.dynamic.GlobScreenFactory;
+import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.LocationListCellConfigurer;
 import common.screens.LocationSelectionScreen;
 import common.uilist.IListContentInstaller;
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 public final class LocationSelectionScreenFactory {
 
-    public static ScreenFactory FACTORY = GlobScreenFactory.filter("LocationSelection", new ScreenFactory() {
+    public static PageFactory FACTORY = GlobPageFactory.filter("LocationSelection", new PageFactory() {
         @Override
         public Page[] create(ScreenLink link) {
             return new Page[]{of(link)};
