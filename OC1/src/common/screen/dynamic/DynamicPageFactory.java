@@ -40,7 +40,7 @@ public final class DynamicPageFactory
             if (tie.tags.matches(link)) {
                 ScreenLayoutProvider layoutProvider = new DynamicScreenLayoutProvider(tie.source);
                 ScreenContext.Provider controller = new ScreenController(tie.controller);
-                list.add(new DynamicScreen(link,controller,layoutProvider));
+                list.add(new DynamicPage(link,controller,layoutProvider));
             }
         }
         return list.toArray(new Page[0]);

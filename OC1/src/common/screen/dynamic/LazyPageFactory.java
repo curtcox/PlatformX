@@ -26,7 +26,7 @@ public final class LazyPageFactory
     public Page[] create(PageLink link) {
         List<Page> list = new ArrayList();
         for (StringSource source : sources.get(link.tags)) {
-            list.add(new DynamicScreen(link,controller(link), layoutProvider(source)));
+            list.add(new DynamicPage(link,controller(link), layoutProvider(source)));
         }
         return list.toArray(new Page[0]);
     }
