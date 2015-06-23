@@ -8,7 +8,7 @@ import common.screen.ScreenLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.TypeListCellConfigurer;
 import common.screenparts.TypeTextFilter;
-import common.screens.FilterScreen;
+import common.screens.FilterPage;
 import common.uilist.ISearchFilterInstaller;
 import common.uiwidget.ISearchableList;
 import common.uiwidget.UILabel;
@@ -21,7 +21,7 @@ public final class ServiceProviderFilterScreenFactory {
     public static PageFactory FACTORY = GlobPageFactory.filter("Filter", new PageFactory() {
         @Override
         public Page[] create(ScreenLink link) {
-            return new Page[]{new FilterScreen(link, newSearchableList())};
+            return new Page[]{new FilterPage(link, newSearchableList())};
         }
     });
 

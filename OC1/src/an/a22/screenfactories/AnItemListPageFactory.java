@@ -10,7 +10,7 @@ import common.screen.Page;
 import common.screen.PageFactory;
 import common.screen.ScreenLink;
 import common.screenfactories.CellConfigurer;
-import common.screenfactories.ItemsScreen;
+import common.screenfactories.ItemsPage;
 import common.uilist.StringToListFilter;
 import common.uiwidget.ISearchableList;
 
@@ -26,7 +26,7 @@ final class AnItemListPageFactory<T>
     }
     
     public Page[] create(ScreenLink link) {
-        return new Page[] {new ItemsScreen(link,newSearchableList())};
+        return new Page[] {new ItemsPage(link,newSearchableList())};
     }     
 
     private ISearchableList<T> newSearchableList() {

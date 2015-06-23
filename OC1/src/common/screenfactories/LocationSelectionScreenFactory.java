@@ -9,7 +9,7 @@ import common.screen.PageFactory;
 import common.screen.ScreenLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.LocationListCellConfigurer;
-import common.screens.LocationSelectionScreen;
+import common.screens.LocationSelectionPage;
 import common.uilist.IListContentInstaller;
 import common.uiwidget.ISearchableList;
 import common.uiwidget.UILabel;
@@ -25,9 +25,9 @@ public final class LocationSelectionScreenFactory {
         }
     });
             
-    static LocationSelectionScreen of(ScreenLink link) {
+    static LocationSelectionPage of(ScreenLink link) {
         ISearchableList<LocationDescription> searchList = newSearchableList();
-        return new LocationSelectionScreen(link,searchList);
+        return new LocationSelectionPage(link,searchList);
     }
     
     private static ISearchableList<LocationDescription> newSearchableList(LiveList locations) {

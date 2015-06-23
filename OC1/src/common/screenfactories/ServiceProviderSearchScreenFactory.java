@@ -10,7 +10,7 @@ import common.screen.ScreenLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.ServiceProviderSearchParams;
 import common.screenparts.ServiceProviderTextFilter;
-import common.screens.ServiceProviderSearchScreen;
+import common.screens.ServiceProviderSearchPage;
 import common.services.ServiceProviders;
 import common.uilist.ISearchFilterInstaller;
 import common.uiwidget.ISearchableList;
@@ -30,7 +30,7 @@ public final class ServiceProviderSearchScreenFactory {
         }
     });
         
-    private static ServiceProviderSearchScreen of(ScreenLink link) {
+    private static ServiceProviderSearchPage of(ScreenLink link) {
         return withTypesAndRadius(link,ALL_TYPES,STARTING_RADIUS);
     }
     
@@ -41,9 +41,9 @@ public final class ServiceProviderSearchScreenFactory {
         throw new IllegalArgumentException("args=" + Arrays.asList(args));
     }
 
-    public static ServiceProviderSearchScreen withTypesAndRadius(ScreenLink link,Type[] types, int radius) {
+    public static ServiceProviderSearchPage withTypesAndRadius(ScreenLink link,Type[] types, int radius) {
         ServiceProviderSearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,radius);
-        return new ServiceProviderSearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
+        return new ServiceProviderSearchPage(link,newSearchableList(getProviders(searchParams),searchParams));
     }
 
     private static Type[] types(Object[] objects) {
@@ -54,9 +54,9 @@ public final class ServiceProviderSearchScreenFactory {
         return types;
     }
     
-    public static ServiceProviderSearchScreen withTypes(ScreenLink link,Type[] types) {
+    public static ServiceProviderSearchPage withTypes(ScreenLink link,Type[] types) {
         ServiceProviderSearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
-        return new ServiceProviderSearchScreen(link,newSearchableList(getProviders(searchParams),searchParams));
+        return new ServiceProviderSearchPage(link,newSearchableList(getProviders(searchParams),searchParams));
     }
 
     private static ServiceProviderSearchParams zoomOutToSmallestRadiusWithMultipleHits(Type[] types, int radius) {
