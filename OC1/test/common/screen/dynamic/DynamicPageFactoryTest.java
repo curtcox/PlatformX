@@ -4,7 +4,7 @@ import common.event.StringSource;
 import common.page.Page;
 import common.screen.PageFactory;
 import common.page.PageLink;
-import common.page.ScreenTags;
+import common.page.PageTags;
 import common.screens.Home;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
@@ -135,8 +135,8 @@ public class DynamicPageFactoryTest {
         assertEquals(2,screens.length);
     }
 
-    private ScreenTags tags(String string) {
-        return ScreenTags.of(string);
+    private PageTags tags(String string) {
+        return PageTags.of(string);
     }
 
     private PageLink link(String string) {

@@ -6,27 +6,27 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
-public class ScreenTagsTest {
+public class PageTagsTest {
 
     @Test
     public void can_create() {
-        assertTrue(ScreenTags.of("word") instanceof ScreenTags);
+        assertTrue(PageTags.of("word") instanceof PageTags);
     }
 
     @Test
     public void toString_returns_lowercase_version_of_single_tag() {
-        assertEquals("what",ScreenTags.of("what").toString());
-        assertEquals("lower",ScreenTags.of("LOWER").toString());
-        assertEquals("case",ScreenTags.of("Case").toString());
+        assertEquals("what", PageTags.of("what").toString());
+        assertEquals("lower", PageTags.of("LOWER").toString());
+        assertEquals("case", PageTags.of("Case").toString());
     }
 
     @Test
     public void are_equal() {
-        assertEqual(ScreenTags.of(""), ScreenTags.of(""));
-        assertEqual(ScreenTags.of("x"), ScreenTags.of("x"));
+        assertEqual(PageTags.of(""), PageTags.of(""));
+        assertEqual(PageTags.of("x"), PageTags.of("x"));
     }
 
-    private void assertEqual(ScreenTags a, ScreenTags b) {
+    private void assertEqual(PageTags a, PageTags b) {
         assertTrue(a.equals(b));
         assertTrue(b.equals(a));
         assertEquals(a.hashCode(),b.hashCode());
@@ -34,10 +34,10 @@ public class ScreenTagsTest {
 
     @Test
     public void are_not_equal() {
-        assertNotEqual(ScreenTags.of("x"), ScreenTags.of("y"));
+        assertNotEqual(PageTags.of("x"), PageTags.of("y"));
     }
 
-    private void assertNotEqual(ScreenTags a, ScreenTags b) {
+    private void assertNotEqual(PageTags a, PageTags b) {
         assertFalse(a.equals(b));
         assertFalse(b.equals(a));
     }
@@ -61,7 +61,7 @@ public class ScreenTagsTest {
         return PageLink.of(s);
     }
 
-    private ScreenTags tags(String s) {
-        return ScreenTags.of(s);
+    private PageTags tags(String s) {
+        return PageTags.of(s);
     }
 }

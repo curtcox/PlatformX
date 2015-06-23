@@ -2,7 +2,7 @@ package se.editor;
 
 import common.Registry;
 import common.page.PageLink;
-import common.page.ScreenTags;
+import common.page.PageTags;
 import common.uiwidget.UIComponent;
 import se.events.Events;
 import se.ui.EditLinkEvent;
@@ -21,7 +21,7 @@ public class ScreenEditorDemo {
         SimpleTaggedValueStringMap stringMap = Registry.get(SimpleTaggedValueStringMap.class);
         TaggedValue taggedValue = stringMap.newValue();
         taggedValue.setContents("existing source");
-        taggedValue.setTags(ScreenTags.of("test"));
+        taggedValue.setTags(PageTags.of("test"));
     }
 
     private static void loadRegistry() {

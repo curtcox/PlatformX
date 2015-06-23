@@ -1,6 +1,6 @@
 package se.util;
 
-import common.page.ScreenTags;
+import common.page.PageTags;
 import org.junit.Test;
 
 import static org.junit.Assert.assertSame;
@@ -17,7 +17,7 @@ public class SimpleTaggedValueTest {
 
     @Test
     public void get_tags_returns_value_set() {
-        ScreenTags tags = ScreenTags.of("stuff");
+        PageTags tags = PageTags.of("stuff");
         testObject.setTags(tags);
 
         assertSame(tags, testObject.getTags());

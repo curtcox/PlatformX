@@ -3,7 +3,7 @@ package common.screen;
 import java.util.Arrays;
 import java.util.List;
 import common.Registry;
-import common.page.ScreenTags;
+import common.page.PageTags;
 import common.screen.dynamic.DynamicPageFactory;
 import common.screen.dynamic.LazyPageFactory;
 import common.screen.dynamic.StringMapStringSource;
@@ -45,7 +45,7 @@ public final class RootScreenFactory {
 
     private static PageFactory dynamicScreens(StringMap layouts) {
         return DynamicPageFactory.builder()
-                .map(ScreenTags.of("Home"), new Home(), new StringMapStringSource(layouts, "Home"))
+                .map(PageTags.of("Home"), new Home(), new StringMapStringSource(layouts, "Home"))
                 .build();
     }
 }

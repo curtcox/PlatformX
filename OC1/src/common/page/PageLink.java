@@ -11,11 +11,11 @@ public final class PageLink {
         PageLink create();
     }
 
-    public final ScreenTags tags;
+    public final PageTags tags;
     public final Object[] args;
 
     private PageLink(String screen, Object... args) {
-        this.tags = ScreenTags.of(screen);
+        this.tags = PageTags.of(screen);
         this.args = args;
     }
 

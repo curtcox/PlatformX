@@ -7,12 +7,12 @@ import java.util.Set;
 /**
  * Immutable set of screen tags.
  */
-public final class ScreenTags {
+public final class PageTags {
 
     final String tags;
     final Set<String> set;
 
-    private ScreenTags(String tags) {
+    private PageTags(String tags) {
         this.tags = tags;
         set = splitIntoSet(tags);
     }
@@ -27,8 +27,8 @@ public final class ScreenTags {
         return set;
     }
 
-    public static ScreenTags of(String tags) {
-        return new ScreenTags(tags.toLowerCase());
+    public static PageTags of(String tags) {
+        return new PageTags(tags.toLowerCase());
     }
 
     public boolean matches(PageLink link) {
@@ -42,7 +42,7 @@ public final class ScreenTags {
 
     @Override
     public boolean equals(Object o) {
-        ScreenTags that = (ScreenTags) o;
+        PageTags that = (PageTags) o;
         return tags.equals(that.tags);
     }
 

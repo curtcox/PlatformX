@@ -1,10 +1,10 @@
 package se.util;
 
-import common.page.ScreenTags;
+import common.page.PageTags;
 
 public interface TaggedValue {
-    void setTags(ScreenTags tags);
-    ScreenTags getTags();
+    void setTags(PageTags tags);
+    PageTags getTags();
     void setContents(String value);
     String getContents();
 }

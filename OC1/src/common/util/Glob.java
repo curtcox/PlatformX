@@ -1,6 +1,6 @@
 package common.util;
 
-import common.page.ScreenTags;
+import common.page.PageTags;
 
 /**
  * A glob in the file system filename sense.
@@ -18,7 +18,7 @@ public final class Glob {
         this.glob = glob.toLowerCase();
     }
 
-    public boolean matches(ScreenTags tags) {
+    public boolean matches(PageTags tags) {
         return matches(tags.toString());
     }
 

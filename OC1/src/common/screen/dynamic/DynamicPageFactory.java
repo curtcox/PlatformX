@@ -3,7 +3,7 @@ package common.screen.dynamic;
 import common.event.StringSource;
 import common.page.Page;
 import common.page.PageLink;
-import common.page.ScreenTags;
+import common.page.PageTags;
 import common.screen.*;
 
 import java.util.ArrayList;
@@ -17,11 +17,11 @@ public final class DynamicPageFactory
     implements PageFactory
 {
     private static class Tie {
-        final ScreenTags tags;
+        final PageTags tags;
         final Object controller;
         final StringSource source;
 
-        public Tie(ScreenTags tags, Object controller, StringSource source) {
+        public Tie(PageTags tags, Object controller, StringSource source) {
             this.tags = tags;
             this.controller = controller;
             this.source = source;
@@ -61,7 +61,7 @@ public final class DynamicPageFactory
          * @param source for looking up the layout source
          * @return this builder for chaining
          */
-        public Builder map(ScreenTags tags,Object controller,StringSource source) {
+        public Builder map(PageTags tags,Object controller,StringSource source) {
             list.add(new Tie(tags,controller,source));
             return this;
         }

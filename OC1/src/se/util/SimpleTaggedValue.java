@@ -1,20 +1,20 @@
 package se.util;
 
-import common.page.ScreenTags;
+import common.page.PageTags;
 
 final class SimpleTaggedValue
     implements TaggedValue
 {
-    private ScreenTags tags;
+    private PageTags tags;
     private String contents;
 
     @Override
-    public void setTags(ScreenTags tags) {
+    public void setTags(PageTags tags) {
         this.tags = tags;
     }
 
     @Override
-    public ScreenTags getTags() {
+    public PageTags getTags() {
         return tags;
     }
 

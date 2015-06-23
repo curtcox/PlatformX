@@ -1,7 +1,7 @@
 package se.util;
 
 import common.event.StringSource;
-import common.page.ScreenTags;
+import common.page.PageTags;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,7 +14,7 @@ public final class SimpleTaggedValueStringMap
 
     @Override
     public String get(String key) {
-        for (TaggedValue value : getValuesFor(ScreenTags.of(key))) {
+        for (TaggedValue value : getValuesFor(PageTags.of(key))) {
             return value.getContents();
         }
         return null;
@@ -26,7 +26,7 @@ public final class SimpleTaggedValueStringMap
         return value;
     }
 
-    public TaggedValue[] getValuesFor(ScreenTags tags) {
+    public TaggedValue[] getValuesFor(PageTags tags) {
         for (TaggedValue value : taggedValues) {
             if (value.getTags().equals(tags)) {
                 return new TaggedValue[] {value};
@@ -36,7 +36,7 @@ public final class SimpleTaggedValueStringMap
     }
 
     @Override
-    public StringSource[] get(ScreenTags tags) {
+    public StringSource[] get(PageTags tags) {
         for (final TaggedValue value : getValuesFor(tags)) {
             return new StringSource[] {asStringSource(value)};
         }

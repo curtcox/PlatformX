@@ -1,6 +1,6 @@
 package se.util;
 
-import common.page.ScreenTags;
+import common.page.PageTags;
 import common.screen.dynamic.TaggedStringSources;
 import common.util.StringMap;
 
@@ -8,5 +8,5 @@ public interface TaggedValueStringMap
     extends StringMap, TaggedStringSources
 {
     TaggedValue newValue();
-    TaggedValue[] getValuesFor(ScreenTags tags);
+    TaggedValue[] getValuesFor(PageTags tags);
 }

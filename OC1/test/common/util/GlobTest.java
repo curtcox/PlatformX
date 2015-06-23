@@ -1,6 +1,6 @@
 package common.util;
 
-import common.page.ScreenTags;
+import common.page.PageTags;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
@@ -29,7 +29,7 @@ public class GlobTest {
 
     @Test
     public void matches_tags_when_tag_screen_matches() {
-        assertTrue(Glob.of("APPLE").matches(ScreenTags.of("apple")));
-        assertFalse(Glob.of("red").matches(ScreenTags.of("green")));
+        assertTrue(Glob.of("APPLE").matches(PageTags.of("apple")));
+        assertFalse(Glob.of("red").matches(PageTags.of("green")));
     }
 }

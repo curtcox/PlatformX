@@ -4,7 +4,7 @@ import common.Registry;
 import common.page.Page;
 import common.screen.Screen;
 import common.page.PageLink;
-import common.page.ScreenTags;
+import common.page.PageTags;
 import common.uiwidget.UIComponent;
 import fake.FakeForm;
 import fake.FakeSERegistryLoader;
@@ -44,7 +44,7 @@ public class ScreenEditorTest {
     @Test
     public void sending_an_edit_command_event_causes_a_value_with_the_corresponding_tags_to_be_edited_when_registered() {
         TaggedValue value = stringMap.newValue();
-        value.setTags(ScreenTags.of("whatever"));
+        value.setTags(PageTags.of("whatever"));
         EditTaggedValueEvent event = new EditTaggedValueEvent(value);
 
         testObject.register();
@@ -56,7 +56,7 @@ public class ScreenEditorTest {
     @Test
     public void edit_makes_the_editing_frame_visible() {
         TaggedValue value = stringMap.newValue();
-        value.setTags(ScreenTags.of("use_for_title"));
+        value.setTags(PageTags.of("use_for_title"));
 
         testObject.edit(value);
 
@@ -66,7 +66,7 @@ public class ScreenEditorTest {
     @Test
     public void edit_puts_the_edited_text_in_the_editor() {
         TaggedValue value = stringMap.newValue();
-        value.setTags(ScreenTags.of("use_for_title"));
+        value.setTags(PageTags.of("use_for_title"));
         value.setContents("contents");
         screen().show();
 
