@@ -1,5 +1,6 @@
 package an.a22.ui;
 
+import android.app.Activity;
 import android.content.Context;
 import android.view.Display;
 import android.view.WindowManager;
@@ -36,6 +37,7 @@ public final class AnDisplay
 
     void show(AnForm form) {
         this.form = form;
+        activity().setContentView(form);
     }
 
     @Override
@@ -53,5 +55,9 @@ public final class AnDisplay
 
     Context context() {
         return Registry.get(Context.class);
+    }
+
+    Activity activity() {
+        return Registry.get(Activity.class);
     }
 }

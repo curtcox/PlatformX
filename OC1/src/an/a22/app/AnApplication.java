@@ -17,6 +17,7 @@ public class AnApplication extends Activity {
         super.onCreate(savedInstanceState);
         try {
             Registry.put(Context.class,this);
+            Registry.put(Activity.class,this);
             AnRegistryLoader.load();
         } catch(Exception e){
             log(e);
