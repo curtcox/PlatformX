@@ -28,14 +28,14 @@ public final class Screen {
     /**
      * This constructor to create a new screen.
      */
-    public Screen(PageLink link, Page page) {
-        this(formFactory().newForm(link),link,page);
+    public static Screen of(PageLink link, Page page) {
+        return new Screen(formFactory().newForm(link),link,page);
     }
 
     /**
      * This constructor is exposed mostly for testing.
      */
-    public Screen(IForm form, PageLink link, Page page) {
+    private Screen(IForm form, PageLink link, Page page) {
         this.form = form;
         this.link = link;
         this.page = page;
@@ -84,7 +84,7 @@ public final class Screen {
         }
         if (screens.length==1) {
             Page page = screens[0];
-            Screen screen = new Screen(link,page);
+            Screen screen = of(link,page);
             screen.show();
         }
     }

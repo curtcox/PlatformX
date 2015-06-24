@@ -11,7 +11,6 @@ import common.uiwidget.UIComponent;
 import common.uiwidget.UIContainer;
 import fake.FakeCommonRegistryLoader;
 import fake.FakeForm;
-import fake.FakeFormFactory;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
@@ -31,6 +30,7 @@ public class CommonScreenTest {
     PageLink link1 = PageLink.of("first");
     PageLink link2 = PageLink.of("second");
     PageFactory factory;
+    IFormFactory formFactory;
     ILog log;
     ILogManager logManager;
     ExamplePage page;
@@ -56,13 +56,13 @@ public class CommonScreenTest {
     @Before
     public void setup() {
         FakeCommonRegistryLoader.load();
-        Registry.put(IFormFactory.class,new FakeFormFactory());
-        Registry.put(PageFactory.class,factory);
         page = new ExamplePage(link);
-        screen = new Screen(form,link,page);
         Mocks.init(this);
+        Registry.put(PageFactory.class,factory);
+        Registry.put(IFormFactory.class,formFactory);
+        _(form); formFactory.newForm(link);
+        screen = Screen.of(link, page);
     }
-
 
     @Test
     public void can_create() {
@@ -104,8 +104,12 @@ public class CommonScreenTest {
 
     @Test
     public void getShowing_returns_original_screen_after_going_back_to_it() {
-        Screen first = new Screen(new FakeForm(),link1,new ExamplePage(link1));
-        Screen second = new Screen(new FakeForm(),link2,new ExamplePage(link2));
+        FakeForm form1 = new FakeForm();
+        FakeForm form2 = new FakeForm();
+        _(form1); formFactory.newForm(link1);
+        _(form2); formFactory.newForm(link2);
+        Screen first = Screen.of(link1,new ExamplePage(link1));
+        Screen second = Screen.of(link2,new ExamplePage(link2));
 
         first.show();
         second.show();
@@ -118,8 +122,11 @@ public class CommonScreenTest {
     @Test
     public void back_shows_previously_shown_screen() {
         FakeForm form1 = new FakeForm();
-        Screen first = new Screen(form1,link1,new ExamplePage(link1));
-        Screen second = new Screen(new FakeForm(),link2,new ExamplePage(link2));
+        FakeForm form2 = new FakeForm();
+        _(form1); formFactory.newForm(link1);
+        _(form2); formFactory.newForm(link2);
+        Screen first = Screen.of(link1, new ExamplePage(link1));
+        Screen second = Screen.of(link2,new ExamplePage(link2));
 
         first.show();
         second.show();
@@ -133,8 +140,10 @@ public class CommonScreenTest {
     public void setBackCommand_is_called_when_there_is_a_previous_screen() {
         FakeForm form1 = new FakeForm();
         FakeForm form2 = new FakeForm();
-        Screen first = new Screen(form1,link1,new ExamplePage(link1));
-        Screen second = new Screen(form2,link2,new ExamplePage(link2));
+        _(form1); formFactory.newForm(link1);
+        _(form2); formFactory.newForm(link2);
+        Screen first = Screen.of(link1, new ExamplePage(link1));
+        Screen second = Screen.of(link2, new ExamplePage(link2));
 
         first.show();
         second.show();
@@ -161,6 +170,7 @@ public class CommonScreenTest {
         Page page = new FakePage();
         Page[] screens = new Page[] { page };
         _(screens); factory.create(link);
+        _(form); formFactory.newForm(link);
 
         Screen.show(link);
 
@@ -185,7 +195,7 @@ public class CommonScreenTest {
         _(); wild("*"); log.log("*");
         _(); log.log(e);
         Registry.put(ILogManager.class, logManager);
-        Screen screen = new Screen(new FakeForm(),link,new ScreenThatThrowsExceptionOnLayout(e));
+        Screen screen = Screen.of(link,new ScreenThatThrowsExceptionOnLayout(e));
 
         screen.show();
 

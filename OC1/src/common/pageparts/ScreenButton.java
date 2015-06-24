@@ -29,7 +29,7 @@ public final class ScreenButton
 
     private Screen screen() {
         if (page!=null) {
-            return new Screen(link,page);
+            return Screen.of(link,page);
         }
         Screen.show(link);
         return Screen.getShowing();

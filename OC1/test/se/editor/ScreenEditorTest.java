@@ -2,11 +2,12 @@ package se.editor;
 
 import common.Registry;
 import common.page.Page;
-import common.screen.Screen;
 import common.page.PageLink;
 import common.page.PageTags;
+import common.screen.Screen;
+import common.ui.IFormFactory;
 import common.uiwidget.UIComponent;
-import fake.FakeForm;
+import fake.FakeFormFactory;
 import fake.FakeSERegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -28,6 +29,7 @@ public class ScreenEditorTest {
         FakeSERegistryLoader.load();
         Registry.put(Events.class,events);
         Registry.put(SimpleTaggedValueStringMap.class,stringMap);
+        Registry.put(IFormFactory.class,new FakeFormFactory());
         testObject = new ScreenEditor();
     }
 
@@ -83,6 +85,6 @@ public class ScreenEditorTest {
                 return null;
             }
         };
-        return new Screen(new FakeForm(),link,page);
+        return Screen.of(link, page);
     }
 }
