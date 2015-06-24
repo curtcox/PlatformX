@@ -2,6 +2,8 @@ package an.a22.ui;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.Display;
 import android.view.WindowManager;
 import x.Registry;
@@ -42,7 +44,7 @@ public final class AnDisplay
 
     @Override
     public void execute(String url) {
-
+        context().startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(url)));
     }
 
     Display display() {
