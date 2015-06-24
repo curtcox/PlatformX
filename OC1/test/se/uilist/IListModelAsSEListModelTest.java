@@ -1,6 +1,6 @@
 package se.uilist;
 
-import x.uilist.CommonListModel;
+import x.uilist.XListModel;
 import x.uilist.IListModel;
 import mach.Mocks;
 import org.junit.Before;
@@ -18,7 +18,7 @@ import static org.junit.Assert.assertSame;
 public class IListModelAsSEListModelTest {
 
     ListDataListener listDataListener;
-    IListModel model = new CommonListModel();
+    IListModel model = new XListModel();
     IListModelAsSEListModel testObject = new IListModelAsSEListModel(model);
 
     @Before

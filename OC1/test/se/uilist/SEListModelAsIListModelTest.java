@@ -8,7 +8,7 @@ import fake.FakeRunner;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
-import x.event.CommonLiveList;
+import x.event.XLiveList;
 
 import static mach.Mocks.verify;
 import static org.junit.Assert.assertEquals;
@@ -18,7 +18,7 @@ import static org.junit.Assert.assertSame;
 public class SEListModelAsIListModelTest {
 
     Change.Listener listener;
-    CommonLiveList liveList = new CommonLiveList();
+    XLiveList liveList = new XLiveList();
     SEVirtualListModel filtered = SEVirtualListModel.of(liveList);
     SEFilterListModel model = SEFilterListModel.of(filtered);
     SEListModelAsIListModel testObject = new SEListModelAsIListModel(model);

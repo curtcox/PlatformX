@@ -9,7 +9,7 @@ import x.page.PageLink;
 import x.ui.IFormFactory;
 import x.uiwidget.UIComponent;
 import x.uiwidget.UIContainer;
-import fake.FakeCommonRegistryLoader;
+import fake.FakeXRegistryLoader;
 import fake.FakeForm;
 import mach.Mocks;
 import org.junit.Before;
@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 /**
  * I'm ready for my closeup.
  */
-public class CommonScreenTest {
+public class XScreenTest {
 
     FakeForm form = new FakeForm();
     String name = random("link");
@@ -55,7 +55,7 @@ public class CommonScreenTest {
 
     @Before
     public void setup() {
-        FakeCommonRegistryLoader.load();
+        FakeXRegistryLoader.load();
         page = new ExamplePage(link);
         Mocks.init(this);
         Registry.put(PageFactory.class,factory);

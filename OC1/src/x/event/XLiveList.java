@@ -2,17 +2,17 @@ package x.event;
 
 import java.util.*;
 
-public final class CommonLiveList
+public final class XLiveList
     implements LiveList
 {
     private final List list;
     private Change.Listener listener;
 
-    public CommonLiveList(List list) {
+    public XLiveList(List list) {
         this.list = new ArrayList(list);
     }
 
-    public CommonLiveList() {
+    public XLiveList() {
         this(new ArrayList());
     }
 

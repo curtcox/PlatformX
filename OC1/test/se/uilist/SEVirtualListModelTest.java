@@ -3,7 +3,7 @@ package se.uilist;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
-import x.event.CommonLiveList;
+import x.event.XLiveList;
 
 import javax.swing.event.ListDataListener;
 import java.util.ArrayList;
@@ -17,7 +17,7 @@ import static org.junit.Assert.assertSame;
 public class SEVirtualListModelTest {
 
     ListDataListener listDataListener;
-    CommonLiveList liveList = new CommonLiveList(new ArrayList());
+    XLiveList liveList = new XLiveList(new ArrayList());
     SEVirtualListModel testObject = SEVirtualListModel.of(liveList);
 
     @Before

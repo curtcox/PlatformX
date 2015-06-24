@@ -1,7 +1,7 @@
 package c1.uilist;
 
 import x.event.Change;
-import x.event.CommonLiveList;
+import x.event.XLiveList;
 import x.uilist.ListFilter;
 import mach.Mocks;
 import org.junit.Before;
@@ -15,7 +15,7 @@ import static org.junit.Assert.assertSame;
 public class C1ListModelAsIListModelTest {
 
     Change.Listener listener;
-    CommonLiveList liveList = new CommonLiveList();
+    XLiveList liveList = new XLiveList();
     C1VirtualListModel filtered = C1VirtualListModel.of(liveList);
     C1FilterListModel model = C1FilterListModel.of(filtered);
     C1ListModelAsIListModel testObject = new C1ListModelAsIListModel(model);

@@ -5,7 +5,7 @@ import com.codename1.ui.Display;
 import x.Registry;
 import c1.app.Version;
 import c1.device.C1DeviceInfo;
-import x.log.CommonLogWriter;
+import x.log.XLogWriter;
 
 public final class C1IssueReporter {
 
@@ -31,8 +31,8 @@ public final class C1IssueReporter {
         return out.toString();
     }
 
-    private static CommonLogWriter getLogWriter() {
-        return CommonLogWriter.of();
+    private static XLogWriter getLogWriter() {
+        return XLogWriter.of();
     }
 
 }

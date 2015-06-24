@@ -1,7 +1,7 @@
 package c1.uilist;
 
 import com.codename1.ui.events.DataChangedListener;
-import x.uilist.CommonListModel;
+import x.uilist.XListModel;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,7 +12,7 @@ import static org.junit.Assert.assertSame;
 public class IListModelAsC1ListModelTest {
 
     DataChangedListener dataChangedListener;
-    CommonListModel model = new CommonListModel();
+    XListModel model = new XListModel();
     IListModelAsC1ListModel testObject = new IListModelAsC1ListModel(model);
 
     @Before

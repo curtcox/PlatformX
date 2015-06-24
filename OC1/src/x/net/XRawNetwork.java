@@ -10,7 +10,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 
-public final class CommonRawNetwork
+public final class XRawNetwork
     implements Network
 {
     @Override
@@ -38,7 +38,7 @@ public final class CommonRawNetwork
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(CommonRawNetwork.class);
+        return Registry.get(ILogManager.class).getLog(XRawNetwork.class);
     }
 
 }

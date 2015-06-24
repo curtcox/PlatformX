@@ -1,6 +1,6 @@
 package se.pagefactories;
 
-import x.event.CommonLiveList;
+import x.event.XLiveList;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
@@ -28,7 +28,7 @@ final class SEItemListPageFactory<T>
     }     
 
     private ISearchableList<T> newSearchableList() {
-        SESearchableList<T> list = new SESearchableList(new CommonLiveList(values),new JLabel(),new CellConfigurer());
+        SESearchableList<T> list = new SESearchableList(new XLiveList(values),new JLabel(),new CellConfigurer());
         SESearchFilterInstaller.seSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }

@@ -7,10 +7,10 @@ import an.a22.ui.AnFormFactory;
 import x.Registry;
 import x.app.CurrentState;
 import x.device.IDeviceInfo;
-import x.log.CommonLogManager;
-import x.log.CommonLogWriter;
+import x.log.XLogManager;
+import x.log.XLogWriter;
 import x.log.ILogManager;
-import x.net.CommonRawNetwork;
+import x.net.XRawNetwork;
 import x.net.Network;
 import x.net.RootStringMap;
 import x.page.PageFactory;
@@ -38,11 +38,11 @@ final class AnRegistryLoader {
     }
 
     static void loadPlatform() {
-        put(ILogManager.class,      new CommonLogManager());
-        put(CommonLogWriter.class,  new CommonLogWriter());
+        put(ILogManager.class,      new XLogManager());
+        put(XLogWriter.class,  new XLogWriter());
         put(IFormFactory.class,     new AnFormFactory());
         put(CurrentState.class,     new CurrentState());
-        put(Network.class,          new CommonRawNetwork());
+        put(Network.class,          new XRawNetwork());
         StringMap stringMap = RootStringMap.of();
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));

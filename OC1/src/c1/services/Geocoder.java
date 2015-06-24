@@ -1,6 +1,6 @@
 package c1.services;
 
-import x.event.CommonLiveList;
+import x.event.XLiveList;
 import x.services.IGeocoder;
 import google.Geocoding;
 import google.GoogleLocation;
@@ -24,7 +24,7 @@ public final class Geocoder
         for (GoogleLocation location : geocoding.searchFor(place)) {
             locations.add(locationFromGoogle(location));
         }
-        return new CommonLiveList(locations);
+        return new XLiveList(locations);
     }
 
     private LocationDescription locationFromGoogle(GoogleLocation place) {

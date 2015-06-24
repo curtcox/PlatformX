@@ -9,10 +9,10 @@ import static mach.Mocks._;
 import static mach.Mocks.verify;
 import static org.junit.Assert.assertNotNull;
 
-public class CommonListModelTest {
+public class XListModelTest {
 
     private Change.Listener listener;
-    private CommonListModel testObject = new CommonListModel();
+    private XListModel testObject = new XListModel();
 
     @Before
     public void setUp() {

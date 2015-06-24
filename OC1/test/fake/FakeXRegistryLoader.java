@@ -1,16 +1,16 @@
 package fake;
 
 import x.Registry;
-import x.log.CommonLogManager;
-import x.log.CommonLogWriter;
+import x.log.XLogManager;
+import x.log.XLogWriter;
 import x.log.ILogManager;
 import x.ui.IDisplay;
 
-public class FakeCommonRegistryLoader {
+public class FakeXRegistryLoader {
     
     public static void load() {
-        put(ILogManager.class,      new CommonLogManager());
-        put(CommonLogWriter.class,  new CommonLogWriter());
+        put(ILogManager.class,      new XLogManager());
+        put(XLogWriter.class,  new XLogWriter());
         put(IDisplay.class,         new FakeDisplay());
     }
     

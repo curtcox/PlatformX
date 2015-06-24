@@ -5,7 +5,7 @@ import an.a22.uilist.AnSearchableList;
 import android.content.Context;
 import android.widget.TextView;
 import x.Registry;
-import x.event.CommonLiveList;
+import x.event.XLiveList;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
@@ -30,7 +30,7 @@ final class AnItemListPageFactory<T>
     }     
 
     private ISearchableList<T> newSearchableList() {
-        AnSearchableList<T> list = new AnSearchableList(new CommonLiveList(values),new TextView(context()),new CellConfigurer());
+        AnSearchableList<T> list = new AnSearchableList(new XLiveList(values),new TextView(context()),new CellConfigurer());
         AnSearchFilterInstaller.anSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }

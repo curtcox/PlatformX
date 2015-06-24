@@ -7,7 +7,7 @@ import mach.Mocks;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import x.event.CommonLiveList;
+import x.event.XLiveList;
 
 import javax.swing.*;
 import javax.swing.event.ListDataListener;
@@ -23,7 +23,7 @@ public class SESearchFilterInstallerTest {
 
     Change.Listener listener;
     ListDataListener listDataListener;
-    LiveList items = new CommonLiveList();
+    LiveList items = new XLiveList();
     JComponent action =  new JLabel();
     ListCellConfigurer configurer;
     SESearchableList searchableList = new SESearchableList(items,action,configurer);

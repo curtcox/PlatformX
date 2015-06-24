@@ -5,7 +5,7 @@ import x.page.PageFactory;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.ui.IFormFactory;
-import fake.FakeCommonRegistryLoader;
+import fake.FakeXRegistryLoader;
 import fake.FakePage;
 import mach.Mocks;
 import org.junit.Before;
@@ -27,7 +27,7 @@ public class ScreenButtonTest  {
     @Before
     public void setUp() {
         Mocks.init(this);
-        FakeCommonRegistryLoader.load();
+        FakeXRegistryLoader.load();
         Registry.put(IFormFactory.class, formFactory);
         Registry.put(PageFactory.class, pageFactory);
         _(form);    formFactory.newForm(link);

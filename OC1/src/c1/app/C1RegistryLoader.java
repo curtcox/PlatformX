@@ -16,9 +16,9 @@ import x.Registry;
 import x.app.CurrentState;
 import x.device.IDeviceInfo;
 import x.domain.ServiceProvider;
-import x.log.CommonLogManager;
+import x.log.XLogManager;
 import x.log.ILogManager;
-import x.log.CommonLogWriter;
+import x.log.XLogWriter;
 import x.net.Network;
 import x.net.RootStringMap;
 import x.page.RootPageFactory;
@@ -53,8 +53,8 @@ final class C1RegistryLoader {
 
     static void loadPlatform() {
         put(C1ExceptionLogger.class,  new C1ExceptionLogger());
-        put(ILogManager.class,      new CommonLogManager());
-        put(CommonLogWriter.class,        new CommonLogWriter());
+        put(ILogManager.class,      new XLogManager());
+        put(XLogWriter.class,        new XLogWriter());
         put(IFormFactory.class,     new C1FormFactory());
         put(MyRatings.class,        new MyRatings());
         put(C1Locations.class,        new C1Locations());

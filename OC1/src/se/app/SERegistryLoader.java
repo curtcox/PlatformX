@@ -2,9 +2,9 @@ package se.app;
 
 import x.Registry;
 import x.device.IDeviceInfo;
-import x.log.CommonLogManager;
+import x.log.XLogManager;
 import x.log.ILogManager;
-import x.log.CommonLogWriter;
+import x.log.XLogWriter;
 import x.net.Network;
 import x.page.RootPageFactory;
 import x.page.PageFactory;
@@ -16,7 +16,7 @@ import x.util.StringMap;
 import se.device.SEDeviceInfo;
 import se.editor.ScreenEditor;
 import se.events.Events;
-import x.net.CommonRawNetwork;
+import x.net.XRawNetwork;
 import se.pagefactories.SEItemListPageFactoryFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
@@ -38,12 +38,12 @@ final class SERegistryLoader {
     }
 
     static void loadPlatform() {
-        put(ILogManager.class,      new CommonLogManager());
-        put(CommonLogWriter.class,  new CommonLogWriter());
+        put(ILogManager.class,      new XLogManager());
+        put(XLogWriter.class,  new XLogWriter());
         put(Events.class,           new Events());
         put(IFormFactory.class,     new SEFormFactory());
         put(IDisplay.class,         SEDisplay.of());
-        put(Network.class,          new CommonRawNetwork());
+        put(Network.class,          new XRawNetwork());
         putTaggedValueStringMap();
         put(ItemListPageFactoryFactory.class, new SEItemListPageFactoryFactory());
         put(PageFactory.class,    RootPageFactory.of());

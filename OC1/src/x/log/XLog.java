@@ -4,14 +4,14 @@ import x.Registry;
 import x.ui.IDisplay;
 import x.ui.IForm;
 
-public final class CommonLog
+public final class XLog
     implements ILog
 {
 
     final Class clazz;
     final String prefix;
     
-    CommonLog(Class clazz) {
+    XLog(Class clazz) {
         this.clazz = clazz;
         prefix = ":" + clazz.getCanonicalName() + ":";
     }
@@ -39,8 +39,8 @@ public final class CommonLog
         return "" + value;
     }
     
-    private CommonLogWriter getLogWriter() {
-        return CommonLogWriter.of();
+    private XLogWriter getLogWriter() {
+        return XLogWriter.of();
     }
 
     private String screen() {

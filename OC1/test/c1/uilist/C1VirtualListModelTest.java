@@ -1,7 +1,7 @@
 package c1.uilist;
 
 import com.codename1.ui.events.DataChangedListener;
-import x.event.CommonLiveList;
+import x.event.XLiveList;
 import x.event.LiveList;
 import mach.Mocks;
 import org.junit.Before;
@@ -15,7 +15,7 @@ import static org.junit.Assert.assertSame;
 public class C1VirtualListModelTest {
 
     DataChangedListener listDataListener;
-    LiveList liveList = new CommonLiveList();
+    LiveList liveList = new XLiveList();
     C1VirtualListModel testObject = C1VirtualListModel.of(liveList);
 
     @Before

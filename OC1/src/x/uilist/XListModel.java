@@ -5,7 +5,7 @@ import x.event.Change;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class CommonListModel
+public final class XListModel
     implements IListModel
 {
     private int selectedIndex;

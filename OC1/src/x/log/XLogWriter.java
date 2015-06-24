@@ -3,12 +3,12 @@ package x.log;
 import x.Registry;
 import java.util.LinkedList;
 
-public final class CommonLogWriter {
+public final class XLogWriter {
 
     LinkedList<String> log = new LinkedList<String>();
     
-    public static CommonLogWriter of() {
-        return Registry.get(CommonLogWriter.class);
+    public static XLogWriter of() {
+        return Registry.get(XLogWriter.class);
     }
     
     public void log(String message) {

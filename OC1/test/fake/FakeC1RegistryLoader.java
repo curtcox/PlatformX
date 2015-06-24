@@ -10,9 +10,9 @@ import com.codename1.ui.Display;
 import x.Registry;
 import x.app.CurrentState;
 import x.domain.ServiceProvider;
-import x.log.CommonLogManager;
+import x.log.XLogManager;
 import x.log.ILogManager;
-import x.log.CommonLogWriter;
+import x.log.XLogWriter;
 import x.services.ServiceProviders;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
@@ -20,8 +20,8 @@ import x.ui.IFormFactory;
 public class FakeC1RegistryLoader {
     
     public static void load() {
-        put(ILogManager.class,      new CommonLogManager());
-        put(CommonLogWriter.class,        new CommonLogWriter());
+        put(ILogManager.class,      new XLogManager());
+        put(XLogWriter.class,        new XLogWriter());
         put(Storage.class,          new FakeStorage());
         put(ILocationManager.class, new FakeLocationManager());
         put(C1Locations.class,        new C1Locations());
