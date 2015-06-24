@@ -4,14 +4,13 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
-import java.io.IOException;
-
+import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.Registry;
-import common.screen.Screen;
-import common.page.PageFactory;
 import common.page.PageLink;
+import common.screen.Screen;
+
+import java.io.IOException;
 
 public class MyApplication {
 
@@ -68,8 +67,7 @@ public class MyApplication {
     }
 
     private void show() {
-        PageFactory factory = Registry.get(PageFactory.class);
-        Screen.show(PageLink.of(""),factory);
+        Screen.show(PageLink.of(""));
     }
     
     public void stop() {

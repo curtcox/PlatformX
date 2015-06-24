@@ -1,9 +1,8 @@
 package se.app;
 
 import common.Registry;
-import common.screen.Screen;
-import common.page.PageFactory;
 import common.page.PageLink;
+import common.screen.Screen;
 import common.util.StringMap;
 import mite.MiteHTTPServer;
 
@@ -54,15 +53,10 @@ public final class SEApplication {
     }
 
     private static void show() {
-        Screen.show(PageLink.of(""),screenFactory());
+        Screen.show(PageLink.of(""));
     }
 
     private static StringMap stringMap() {
         return Registry.get(StringMap.class);
     }
-
-    private static PageFactory screenFactory() {
-        return Registry.get(PageFactory.class);
-    }
-
 }

@@ -2,79 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/common/pages/ProfilePage.java" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\CellConfigurer.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\DeviceInfoScreenFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\IndexScreenFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ItemListScreenFactoryFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ItemsPage.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\LocationSelectionScreenFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ServiceProviderFilterScreenFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ServiceProviderSearchScreenFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ZoomOutSearchButton.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\CustomComponentScreen.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\Home.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\HowTo.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\HowToMirror.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\LocationSelectionPage.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\ProviderDetailsScreen.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\Rate.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\screens\ProviderDetailsScreenTest.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\an\a22\screenfactories\AnItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/screenfactories/AnItemListPageFactoryFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\c1\screenfactories\C1ItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListPageFactoryFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\CellConfigurer.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/CellConfigurer.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\DeviceInfoScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/DeviceInfoPageFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\GeocoderStringToList.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/GeocoderStringToList.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\IndexScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/IndexPageFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/ItemListPageFactoryFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ItemsPage.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/ItemsPage.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\LocationSelectionScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/LocationSelectionPageFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ServiceProviderFilterScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/ServiceProviderFilterPageFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ServiceProviderSearchScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/ServiceProviderSearchScreenFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenfactories\ZoomOutSearchButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/pagefactories/ZoomOutSearchButton.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenparts\LocationListCellConfigurer.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/LocationListCellConfigurer.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenparts\ProviderDetailsButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/ProviderDetailsButton.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenparts\ProviderRatingButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/ProviderRatingButton.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenparts\ScreenButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/ScreenButton.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenparts\ServiceProviderListCellConfigurer.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/ServiceProviderListCellConfigurer.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenparts\ServiceProviderSearchParams.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/ServiceProviderSearchParams.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenparts\ServiceProviderTextFilter.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/ServiceProviderTextFilter.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenparts\TypeListCellConfigurer.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/TypeListCellConfigurer.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screenparts\TypeTextFilter.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/TypeTextFilter.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\CustomComponent.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/CustomComponent.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\CustomComponentScreen.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/CustomComponentPage.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\FilterPage.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/FilterPage.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\Home.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/Home.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\HomeMirror.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/HomeMirror.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\HowTo.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/HowTo.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\HowToMirror.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/HowToMirror.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\LocationSelectionPage.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/LocationSelectionPage.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\ProviderDetailsScreen.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/ProviderDetailsPage.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\Rate.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/Rate.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\RateMirror.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/RateMirror.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\common\screens\ServiceProviderSearchPage.java" afterPath="$PROJECT_DIR$/OC1/src/common/pages/ServiceProviderSearchPage.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se\screenfactories\SEItemListScreenFactoryFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListPageFactoryFactory.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\screenparts\ProviderRatingButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/pageparts/ProviderRatingButtonTest.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\screenparts\ScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/pageparts/ScreenButtonTest.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\common\screens\ProviderDetailsScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/pages/ProviderDetailsPageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/screenfactories/AnItemListPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/screenfactories/AnItemListPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/app/AnRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/app/AnRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/screen/CommonScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/screen/CommonScreenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/page/dynamic/DynamicPageComponentMethodsTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/page/dynamic/DynamicPageComponentMethodsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/page/dynamic/DynamicPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/page/dynamic/DynamicPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/page/dynamic/DynamicPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/page/dynamic/DynamicPageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/page/dynamic/DynamicScreenComponentMethods.java" afterPath="$PROJECT_DIR$/OC1/src/common/page/dynamic/DynamicScreenComponentMethods.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screenfactories/IndexPageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/page/dynamic/LazyPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/page/dynamic/LazyPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/util/Mirrors.java" afterPath="$PROJECT_DIR$/OC1/src/common/util/Mirrors.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/page/RootPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/page/RootPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/common/page/RootPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/common/page/RootPageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/screenfactories/SEItemListPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/ui/LinkButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/ui/LinkButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/page/PageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/common/page/PageFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/app/SEApplication.java" afterPath="$PROJECT_DIR$/OC1/src/se/app/SEApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/screen/Screen.java" afterPath="$PROJECT_DIR$/OC1/src/common/screen/Screen.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/pageparts/ScreenButton.java" afterPath="$PROJECT_DIR$/OC1/src/common/pageparts/ScreenButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/common/page/SelectionListPage.java" afterPath="$PROJECT_DIR$/OC1/src/common/page/SelectionListPage.java" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -106,80 +43,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Screen.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java">
+      <file leaf-file-name="AnApplicationTest.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OC1/test/an/a22/app/AnApplicationTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="76" column="23" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LocationListCellConfigurer.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/pageparts/LocationListCellConfigurer.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProfilePage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/ProfilePage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="66" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-              <folding>
-                <element signature="e#376#377#0" expanded="true" />
-                <element signature="e#422#423#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProviderDetailsPageTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/test/common/pages/ProviderDetailsPageTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProviderDetailsPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/ProviderDetailsPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-              <folding>
-                <element signature="e#1234#1395#0" expanded="true" />
-                <element signature="e#1394#1395#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CustomComponentPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/CustomComponentPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
-              <folding>
-                <element signature="e#332#493#0" expanded="true" />
-                <element signature="e#492#493#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilterPage.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/FilterPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14639397">
-              <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.47640118">
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -205,20 +73,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/common/screen/RootScreenFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/common/screen/dynamic/GlobScreenFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/common/screen/dynamic/LazyScreenFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/fake/FakeScreenFactory.java" />
-        <option value="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/fake/FakeScreen.java" />
-        <option value="$PROJECT_DIR$/OC1/test/fake/FakePage.java" />
-        <option value="$PROJECT_DIR$/OC1/test/common/screenparts/ScreenButtonTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screenparts/ScreenButton.java" />
         <option value="$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenButtonTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/Page.java" />
         <option value="$PROJECT_DIR$/OC1/test/common/screen/dynamic/DynamicScreenFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/common/screen/SelectionListScreenTest.java" />
-        <option value="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/ScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/PageFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/SelectionListScreen.java" />
@@ -232,7 +91,6 @@
         <option value="$PROJECT_DIR$/OC1/src/common/page/PageTags.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicScreen.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/dynamic/DynamicPage.java" />
-        <option value="$PROJECT_DIR$/OC1/src/common/page/PageFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/page/CompositePageFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/RootScreenFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/screen/RootPageFactory.java" />
@@ -256,6 +114,16 @@
         <option value="$PROJECT_DIR$/OC1/src/common/pages/ProviderDetailsPage.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/pages/CustomComponentScreen.java" />
         <option value="$PROJECT_DIR$/OC1/src/common/pages/CustomComponentPage.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/page/PageFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/screen/Screen.java" />
+        <option value="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" />
+        <option value="$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/app/SEApplication.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/page/SelectionListPage.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/ui/LinkButton.java" />
+        <option value="$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java" />
+        <option value="$PROJECT_DIR$/OC1/src/common/pageparts/ScreenButton.java" />
+        <option value="$PROJECT_DIR$/OC1/test/common/screen/CommonScreenTest.java" />
       </list>
     </option>
   </component>
@@ -319,34 +187,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -732,7 +572,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1907" y="-28" width="1881" height="1065" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -742,10 +582,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26227796" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26227796" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19624665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19624665" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.29780564" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -833,34 +673,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/screenfactories/AnItemListPageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="23" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/screenfactories/C1ItemListPageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="23" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/page/dynamic/DynamicPageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="43" column="36" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/LocationSelectionPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/page/dynamic/GlobPageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -903,13 +715,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/CommonScreenTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/common/page/dynamic/GlobPageFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -949,19 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="55" column="14" selection-start-line="55" selection-start-column="14" selection-end-line="55" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/pageparts/ScreenButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="60" column="23" selection-start-line="60" selection-start-column="23" selection-end-line="60" selection-end-column="23" />
-          <folding>
-            <element signature="e#604#605#0" expanded="false" />
-            <element signature="e#635#636#0" expanded="false" />
-            <element signature="e#1982#1983#0" expanded="false" />
-            <element signature="e#2018#2019#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1021,24 +813,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6519174">
-          <caret line="29" column="47" selection-start-line="29" selection-start-column="47" selection-end-line="29" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/an/a22/app/AnApplicationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22566372">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/common/page/PageLinkTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1079,26 +853,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/page/SelectionListPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="37" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/page/dynamic/DynamicPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="32" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/page/PageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
           <folding />
         </state>
       </provider>
@@ -1191,55 +949,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/FilterPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="23" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.20058997">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/pageparts/LocationListCellConfigurer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/ProfilePage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="66" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding>
-            <element signature="e#376#377#0" expanded="true" />
-            <element signature="e#422#423#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/common/pages/ProviderDetailsPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/ProviderDetailsPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
-          <folding>
-            <element signature="e#1234#1395#0" expanded="true" />
-            <element signature="e#1394#1395#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/CustomComponentPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.100294985">
           <caret line="8" column="38" selection-start-line="8" selection-start-column="38" selection-end-line="8" selection-end-column="38" />
           <folding>
             <element signature="e#332#493#0" expanded="true" />
@@ -1248,10 +968,147 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/FilterPage.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/ProviderDetailsPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14639397">
-          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        <state vertical-scroll-proportion="0.17551622">
+          <caret line="21" column="38" selection-start-line="21" selection-start-column="38" selection-end-line="21" selection-end-column="38" />
+          <folding>
+            <element signature="e#1234#1395#0" expanded="true" />
+            <element signature="e#1394#1395#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/pages/ProviderDetailsPageTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40117994">
+          <caret line="26" column="16" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/pages/ProfilePage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47640118">
+          <caret line="24" column="66" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding>
+            <element signature="e#376#377#0" expanded="true" />
+            <element signature="e#422#423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/pageparts/LocationListCellConfigurer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.100294985">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/page/PageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/screen/Screen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="45" selection-start-line="92" selection-start-column="45" selection-end-line="92" selection-end-column="45" />
+          <folding>
+            <element signature="e#2413#2414#0" expanded="true" />
+            <element signature="e#2467#2468#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="14" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#671#672#0" expanded="true" />
+            <element signature="e#715#716#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="69" column="14" selection-start-line="69" selection-start-column="14" selection-end-line="69" selection-end-column="14" />
+          <folding>
+            <element signature="e#1630#1631#0" expanded="true" />
+            <element signature="e#1674#1675#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SEApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="0" selection-start-line="61" selection-start-column="0" selection-end-line="61" selection-end-column="0" />
+          <folding>
+            <element signature="e#1322#1323#0" expanded="true" />
+            <element signature="e#1366#1367#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/page/SelectionListPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding>
+            <element signature="e#1365#1366#0" expanded="true" />
+            <element signature="e#1398#1399#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/ui/LinkButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="41" selection-start-line="21" selection-start-column="41" selection-end-line="21" selection-end-column="41" />
+          <folding>
+            <element signature="e#464#465#0" expanded="true" />
+            <element signature="e#514#515#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/c1/ui/C1Form.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="43" selection-start-line="35" selection-start-column="43" selection-end-line="35" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/common/pageparts/ScreenButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="24" selection-start-line="33" selection-start-column="24" selection-end-line="33" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/common/screen/CommonScreenTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/an/a22/app/AnApplicationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47640118">
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
           <folding />
         </state>
       </provider>

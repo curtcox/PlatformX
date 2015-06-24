@@ -8,9 +8,8 @@ import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.Layout;
 import common.command.Command;
-import common.screen.Screen;
-import common.page.PageFactory;
 import common.page.PageLink;
+import common.screen.Screen;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;
 
@@ -34,7 +33,7 @@ public class C1Form
     private static com.codename1.ui.Command goHome() {
         return new C1LoggedCommand(new Command("Home") {
             @Override public void action(Object...args) {
-                Screen.show(PageLink.of(""), PageFactory.DEFAULT);
+                Screen.show(PageLink.of(""));
             }
         });
     }

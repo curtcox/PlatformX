@@ -42,7 +42,7 @@ public abstract class SelectionListPage<T>
     }
 
     private void followLink(PageLink link) {
-        Screen.show(link, screenFactory());
+        Screen.show(link);
     }
 
     private T getSelected() {
@@ -63,9 +63,4 @@ public abstract class SelectionListPage<T>
     private ILog getLog() {
         return Registry.get(ILogManager.class).getLog(SelectionListPage.class);
     }
-
-    private static PageFactory screenFactory() {
-        return Registry.get(PageFactory.class);
-    }
-
 }

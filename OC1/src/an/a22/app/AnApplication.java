@@ -6,9 +6,8 @@ import android.os.Bundle;
 import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.page.PageFactory;
-import common.screen.Screen;
 import common.page.PageLink;
+import common.screen.Screen;
 
 
 public class AnApplication extends Activity {
@@ -27,8 +26,7 @@ public class AnApplication extends Activity {
     }
 
     private void show() {
-        PageFactory factory = Registry.get(PageFactory.class);
-        Screen.show(PageLink.of(""), factory);
+        Screen.show(PageLink.of(""));
     }
 
     private void log(Object context) {

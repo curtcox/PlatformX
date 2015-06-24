@@ -3,7 +3,7 @@ package common.page;
 import common.Registry;
 
 /**
- * For creating ScreenS from ScreenLinkS.
+ * For creating PageS from PageLinkS.
  */
 public interface PageFactory {
     

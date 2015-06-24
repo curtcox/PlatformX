@@ -2,9 +2,8 @@ package common.pageparts;
 
 import common.event.StringSource;
 import common.page.Page;
-import common.page.PageFactory;
-import common.screen.Screen;
 import common.page.PageLink;
+import common.screen.Screen;
 import common.uiwidget.UIButton;
 
 /**
@@ -32,7 +31,7 @@ public final class ScreenButton
         if (page!=null) {
             return new Screen(link,page);
         }
-        Screen.show(link, PageFactory.DEFAULT);
+        Screen.show(link);
         return Screen.getShowing();
     }
 

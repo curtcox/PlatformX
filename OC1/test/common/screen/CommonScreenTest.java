@@ -57,6 +57,7 @@ public class CommonScreenTest {
     public void setup() {
         FakeCommonRegistryLoader.load();
         Registry.put(IFormFactory.class,new FakeFormFactory());
+        Registry.put(PageFactory.class,factory);
         page = new ExamplePage(link);
         screen = new Screen(form,link,page);
         Mocks.init(this);
@@ -158,11 +159,10 @@ public class CommonScreenTest {
     public void show_makes_page_the_one_showing_when_factory_returns_one_link_for_it() {
         PageLink link = PageLink.of("foo");
         Page page = new FakePage();
-        Screen screen = new Screen(new FakeForm(),link,new FakePage());
         Page[] screens = new Page[] { page };
         _(screens); factory.create(link);
 
-        Screen.show(link,factory);
+        Screen.show(link);
 
         assertSame(page, Screen.getShowing().page);
     }
@@ -200,7 +200,7 @@ public class CommonScreenTest {
         _(pages); factory.create(link);
 
         try {
-            Screen.show(link, factory);
+            Screen.show(link);
             fail();
         } catch (RuntimeException e) {
             assertEquals("No pages found for " + link,e.getMessage());

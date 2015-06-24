@@ -1,10 +1,8 @@
 package common.ui;
 
-import common.Registry;
+import common.page.PageLink;
 import common.screen.Screen;
 import common.uiwidget.UIButton;
-import common.page.PageFactory;
-import common.page.PageLink;
 
 /**
  * A button that follows a link when you tap it.
@@ -19,12 +17,8 @@ public final class LinkButton
         this.linkFactory = linkFactory;
     }
         
-    public static PageFactory screenFactory() {
-        return Registry.get(PageFactory.class);
-    }
-
     @Override
     public void onTap() {
-         Screen.show(linkFactory.create(),screenFactory());
+         Screen.show(linkFactory.create());
     }
 }

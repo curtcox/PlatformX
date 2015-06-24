@@ -1,9 +1,9 @@
 package common.screen;
 
+import common.Registry;
 import common.command.Command;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.Registry;
 import common.page.Page;
 import common.page.PageFactory;
 import common.page.PageLink;
@@ -77,8 +77,8 @@ public final class Screen {
         }
     }
 
-    public static void show(PageLink link, PageFactory factory) {
-        Page[] screens = factory.create(link);
+    public static void show(PageLink link) {
+        Page[] screens = pageFactory().create(link);
         if (screens.length==0) {
             throw new RuntimeException("No pages found for " + link);
         }
@@ -87,6 +87,10 @@ public final class Screen {
             Screen screen = new Screen(link,page);
             screen.show();
         }
+    }
+
+    private static PageFactory pageFactory() {
+        return Registry.get(PageFactory.class);
     }
 
     public static Screen getShowing() {
