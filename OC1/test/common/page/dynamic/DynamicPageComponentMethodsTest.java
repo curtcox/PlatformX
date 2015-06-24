@@ -1,9 +1,8 @@
-package common.screen.dynamic;
+package common.page.dynamic;
 
 import common.screenparts.ScreenButton;
 import common.uiwidget.UILabel;
 import hash.NamedExpression;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.net.URI;

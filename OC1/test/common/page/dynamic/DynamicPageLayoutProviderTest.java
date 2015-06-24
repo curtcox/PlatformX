@@ -1,4 +1,4 @@
-package common.screen.dynamic;
+package common.page.dynamic;
 
 import common.page.PageLink;
 import common.uiwidget.UIGrid;

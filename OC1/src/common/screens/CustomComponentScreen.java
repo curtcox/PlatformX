@@ -3,7 +3,7 @@ package common.screens;
 import common.page.Page;
 import common.page.PageFactory;
 import common.page.PageLink;
-import common.screen.dynamic.GlobPageFactory;
+import common.page.dynamic.GlobPageFactory;
 import common.uiwidget.UIComponent;
 
 public final class CustomComponentScreen

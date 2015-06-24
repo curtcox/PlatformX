@@ -1,14 +1,11 @@
-package common.screen;
+package common.page;
 
 import c1.screenfactories.C1ItemListScreenFactoryFactory;
 import common.Registry;
 import common.device.IDeviceInfo;
 import common.log.ILogManager;
-import common.page.Page;
-import common.page.PageFactory;
-import common.page.PageLink;
-import common.screen.dynamic.StringMapAsTaggedStringSources;
-import common.screen.dynamic.TaggedStringSources;
+import common.page.dynamic.StringMapAsTaggedStringSources;
+import common.page.dynamic.TaggedStringSources;
 import common.screenfactories.ItemListScreenFactoryFactory;
 import common.ui.IFormFactory;
 import common.util.SimpleStringMap;
@@ -37,7 +34,7 @@ public class RootPageFactoryTest {
         Registry.put(IFormFactory.class, new FakeFormFactory());
         Registry.put(ILogManager.class, new FakeLogManager());
         FakeUIManager.of();
-        testObject = RootScreenFactory.of();
+        testObject = RootPageFactory.of();
     }
 
     @Test

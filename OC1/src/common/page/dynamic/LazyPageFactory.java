@@ -1,4 +1,4 @@
-package common.screen.dynamic;
+package common.page.dynamic;
 
 import common.event.StringSource;
 import common.page.Page;

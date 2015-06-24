@@ -14,9 +14,9 @@ import common.net.CommonRawNetwork;
 import common.net.Network;
 import common.net.RootStringMap;
 import common.page.PageFactory;
-import common.screen.RootScreenFactory;
-import common.screen.dynamic.StringMapAsTaggedStringSources;
-import common.screen.dynamic.TaggedStringSources;
+import common.page.RootPageFactory;
+import common.page.dynamic.StringMapAsTaggedStringSources;
+import common.page.dynamic.TaggedStringSources;
 import common.screenfactories.ItemListScreenFactoryFactory;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;
@@ -47,7 +47,7 @@ final class AnRegistryLoader {
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
         put(ItemListScreenFactoryFactory.class, new AnItemListScreenFactoryFactory());
-        put(PageFactory.class,    RootScreenFactory.of());
+        put(PageFactory.class,    RootPageFactory.of());
     }
 
     static void put(Class clazz, Object object) {

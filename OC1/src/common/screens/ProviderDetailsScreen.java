@@ -5,7 +5,7 @@ import common.domain.Type;
 import common.page.Page;
 import common.page.PageFactory;
 import common.page.PageLink;
-import common.screen.dynamic.GlobPageFactory;
+import common.page.dynamic.GlobPageFactory;
 import common.screenparts.ProviderRatingButton;
 import common.ui.LinkButton;
 import common.uiwidget.UIButton;
