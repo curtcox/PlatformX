@@ -1,8 +1,8 @@
 package c1.app;
 
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
 
 public final class Heartbeat
     implements Runnable

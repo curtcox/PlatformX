@@ -2,7 +2,7 @@ package c1.io;
 
 import fake.FakeC1RegistryLoader;
 import c1.JSON;
-import common.util.StringMap;
+import x.util.StringMap;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;

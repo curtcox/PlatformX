@@ -3,8 +3,8 @@ package c1.uilist;
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;
-import common.event.Change;
-import common.uilist.IListModel;
+import x.event.Change;
+import x.uilist.IListModel;
 
 public final class IListModelAsC1ListModel
    implements ListModel

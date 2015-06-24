@@ -7,11 +7,11 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.Layout;
-import common.command.Command;
-import common.page.PageLink;
-import common.screen.Screen;
-import common.ui.IForm;
-import common.uiwidget.UIComponent;
+import x.command.Command;
+import x.page.PageLink;
+import x.screen.Screen;
+import x.ui.IForm;
+import x.uiwidget.UIComponent;
 
 /**
  * A CodenameOne Form that is also an IForm.

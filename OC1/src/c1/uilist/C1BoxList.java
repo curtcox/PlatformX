@@ -7,9 +7,9 @@ import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.ListModel;
-import common.event.Action;
-import common.uilist.ListCellConfigurer;
-import common.uilist.UIList;
+import x.event.Action;
+import x.uilist.ListCellConfigurer;
+import x.uilist.UIList;
 
 /**
  * For displaying items from a ListModel.

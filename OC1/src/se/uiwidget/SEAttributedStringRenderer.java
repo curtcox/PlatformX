@@ -1,8 +1,8 @@
 package se.uiwidget;
 
-import common.ui.AttributedString;
-import common.ui.ColumnBoxFlowLayout;
-import common.ui.SimpleAttributedStringRenderer;
+import x.ui.AttributedString;
+import x.ui.ColumnBoxFlowLayout;
+import x.ui.SimpleAttributedStringRenderer;
 
 import java.awt.*;
 

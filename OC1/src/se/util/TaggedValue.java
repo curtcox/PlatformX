@@ -1,6 +1,6 @@
 package se.util;
 
-import common.page.PageTags;
+import x.page.PageTags;
 
 public interface TaggedValue {
     void setTags(PageTags tags);

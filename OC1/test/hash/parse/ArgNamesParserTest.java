@@ -2,7 +2,7 @@ package hash.parse;
 
 import hash.ArgNames;
 import hash.lex.Tokens;
-import common.util.Strings;
+import x.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 

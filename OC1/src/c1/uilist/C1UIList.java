@@ -3,8 +3,8 @@ package c1.uilist;
 import com.codename1.ui.List;
 import com.codename1.ui.list.ListCellRenderer;
 import com.codename1.ui.list.ListModel;
-import common.event.Action;
-import common.uilist.UIList;
+import x.event.Action;
+import x.uilist.UIList;
 
 final class C1UIList<T>
     extends List<T> 

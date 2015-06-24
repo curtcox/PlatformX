@@ -1,7 +1,7 @@
 package fake;
 
-import common.log.ILog;
-import common.log.ILogManager;
+import x.log.ILog;
+import x.log.ILogManager;
 
 public class FakeLogManager
     implements ILogManager

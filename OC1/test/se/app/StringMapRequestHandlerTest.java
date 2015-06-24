@@ -1,7 +1,7 @@
 package se.app;
 
-import common.util.SimpleStringMap;
-import common.util.StringMap;
+import x.util.SimpleStringMap;
+import x.util.StringMap;
 import mite.HTTPRequest;
 import mite.RequestHandler;
 import org.junit.Test;

@@ -1,9 +1,9 @@
 package se.ui;
 
-import common.Registry;
-import common.command.Command;
-import common.page.PageLink;
-import common.uiwidget.UIComponent;
+import x.Registry;
+import x.command.Command;
+import x.page.PageLink;
+import x.uiwidget.UIComponent;
 import se.events.Events;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;

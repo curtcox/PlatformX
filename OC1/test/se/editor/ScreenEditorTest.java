@@ -1,12 +1,12 @@
 package se.editor;
 
-import common.Registry;
-import common.page.Page;
-import common.page.PageLink;
-import common.page.PageTags;
-import common.screen.Screen;
-import common.ui.IFormFactory;
-import common.uiwidget.UIComponent;
+import x.Registry;
+import x.page.Page;
+import x.page.PageLink;
+import x.page.PageTags;
+import x.screen.Screen;
+import x.ui.IFormFactory;
+import x.uiwidget.UIComponent;
 import fake.FakeFormFactory;
 import fake.FakeSERegistryLoader;
 import org.junit.Before;

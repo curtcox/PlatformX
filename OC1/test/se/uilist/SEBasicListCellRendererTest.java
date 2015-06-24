@@ -1,8 +1,7 @@
 package se.uilist;
 
-import common.uilist.IListCell;
-import common.uilist.ListCellConfigurer;
-import junit.framework.TestCase;
+import x.uilist.IListCell;
+import x.uilist.ListCellConfigurer;
 import org.junit.Test;
 
 import javax.swing.*;

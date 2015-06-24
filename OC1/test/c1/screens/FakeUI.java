@@ -2,10 +2,10 @@ package c1.screens;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.plaf.UIManager;
-import common.page.PageLink;
+import x.page.PageLink;
 import fake.FakeUIManager;
 import c1.ui.C1Form;
-import common.ui.IForm;
+import x.ui.IForm;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;

@@ -1,8 +1,8 @@
 package se.device;
 
-import common.device.DeviceKeyValuePair;
-import common.device.IDeviceInfo;
-import common.device.ReportBuilder;
+import x.device.DeviceKeyValuePair;
+import x.device.IDeviceInfo;
+import x.device.ReportBuilder;
 
 import java.util.List;
 import java.util.Properties;

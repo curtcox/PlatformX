@@ -1,14 +1,14 @@
 package c1.services;
 
-import common.event.CommonLiveList;
-import common.services.IGeocoder;
+import x.event.CommonLiveList;
+import x.services.IGeocoder;
 import google.Geocoding;
 import google.GoogleLocation;
 import java.util.ArrayList;
 import java.util.List;
-import common.Registry;
-import common.domain.LocationDescription;
-import common.event.LiveList;
+import x.Registry;
+import x.domain.LocationDescription;
+import x.event.LiveList;
 
 public final class Geocoder
     implements IGeocoder

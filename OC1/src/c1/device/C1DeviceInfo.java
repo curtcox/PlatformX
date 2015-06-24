@@ -5,9 +5,9 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.LookAndFeel;
 import com.codename1.ui.plaf.UIManager;
-import common.device.DeviceKeyValuePair;
-import common.device.IDeviceInfo;
-import common.device.ReportBuilder;
+import x.device.DeviceKeyValuePair;
+import x.device.IDeviceInfo;
+import x.device.ReportBuilder;
 
 import java.util.List;
 

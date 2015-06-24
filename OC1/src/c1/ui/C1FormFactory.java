@@ -1,8 +1,8 @@
 package c1.ui;
 
-import common.page.PageLink;
-import common.ui.IForm;
-import common.ui.IFormFactory;
+import x.page.PageLink;
+import x.ui.IForm;
+import x.ui.IFormFactory;
 
 /**
  * For creating new FormS.

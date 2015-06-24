@@ -2,8 +2,8 @@ package c1.ui;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
-import common.page.PageLink;
-import common.ui.IForm;
+import x.page.PageLink;
+import x.ui.IForm;
 import fake.FakeUIManager;
 import org.junit.Test;
 

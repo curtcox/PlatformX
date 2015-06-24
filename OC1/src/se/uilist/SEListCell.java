@@ -1,7 +1,7 @@
 package se.uilist;
 
-import common.uilist.IListCell;
-import common.uiwidget.UIImage;
+import x.uilist.IListCell;
+import x.uiwidget.UIImage;
 
 import javax.swing.*;
 import java.awt.*;

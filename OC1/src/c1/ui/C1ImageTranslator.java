@@ -1,7 +1,7 @@
 package c1.ui;
 
 import com.codename1.ui.Image;
-import common.uiwidget.UIImage;
+import x.uiwidget.UIImage;
 
 public final class C1ImageTranslator {
 

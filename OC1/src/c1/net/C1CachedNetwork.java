@@ -1,12 +1,12 @@
 package c1.net;
 
 import com.codename1.io.Storage;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
-import common.net.Network;
-import common.stores.MapStorageIO;
-import common.uiwidget.UIImage;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
+import x.net.Network;
+import x.stores.MapStorageIO;
+import x.uiwidget.UIImage;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

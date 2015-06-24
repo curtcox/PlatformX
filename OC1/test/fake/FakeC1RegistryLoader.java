@@ -7,15 +7,15 @@ import c1.ui.C1Icons;
 import com.codename1.impl.ImplementationFactory;
 import com.codename1.io.Storage;
 import com.codename1.ui.Display;
-import common.Registry;
-import common.app.CurrentState;
-import common.domain.ServiceProvider;
-import common.log.CommonLogManager;
-import common.log.ILogManager;
-import common.log.CommonLogWriter;
-import common.services.ServiceProviders;
-import common.ui.IDisplay;
-import common.ui.IFormFactory;
+import x.Registry;
+import x.app.CurrentState;
+import x.domain.ServiceProvider;
+import x.log.CommonLogManager;
+import x.log.ILogManager;
+import x.log.CommonLogWriter;
+import x.services.ServiceProviders;
+import x.ui.IDisplay;
+import x.ui.IFormFactory;
 
 public class FakeC1RegistryLoader {
     

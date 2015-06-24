@@ -2,9 +2,9 @@ package c1.uilist;
 
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.DataChangedListener;
-import common.uilist.ISearchFilterInstaller;
-import common.uilist.StringToListFilter;
-import common.uiwidget.ISearchableList;
+import x.uilist.ISearchFilterInstaller;
+import x.uilist.StringToListFilter;
+import x.uiwidget.ISearchableList;
 
 public final class C1SearchFilterInstaller
     implements ISearchFilterInstaller

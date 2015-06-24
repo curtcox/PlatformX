@@ -1,8 +1,8 @@
 package se.util;
 
-import common.page.PageTags;
-import common.page.dynamic.TaggedStringSources;
-import common.util.StringMap;
+import x.page.PageTags;
+import x.page.dynamic.TaggedStringSources;
+import x.util.StringMap;
 
 public interface TaggedValueStringMap
     extends StringMap, TaggedStringSources

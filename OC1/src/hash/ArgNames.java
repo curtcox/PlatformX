@@ -1,7 +1,7 @@
 package hash;
 
 import java.util.Arrays;
-import common.util.Objects;
+import x.util.Objects;
 
 public final class ArgNames {
     

@@ -4,8 +4,8 @@ package c1.uilist;
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;
-import common.event.Change;
-import common.event.LiveList;
+import x.event.Change;
+import x.event.LiveList;
 
 /**
  * A ListModel that uses a given list to store its elements.

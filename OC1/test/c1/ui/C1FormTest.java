@@ -1,10 +1,10 @@
 package c1.ui;
 
 import com.codename1.ui.layouts.FlowLayout;
-import common.page.PageLink;
-import common.ui.IForm;
-import common.uiwidget.UIComponent;
-import common.uiwidget.UILabel;
+import x.page.PageLink;
+import x.ui.IForm;
+import x.uiwidget.UIComponent;
+import x.uiwidget.UILabel;
 import fake.FakeC1RegistryLoader;
 import fake.FakeUIManager;
 import org.junit.Before;

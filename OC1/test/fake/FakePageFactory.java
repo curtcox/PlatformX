@@ -1,8 +1,8 @@
 package fake;
 
-import common.page.Page;
-import common.page.PageFactory;
-import common.page.PageLink;
+import x.page.Page;
+import x.page.PageFactory;
+import x.page.PageLink;
 
 public class FakePageFactory
     implements PageFactory

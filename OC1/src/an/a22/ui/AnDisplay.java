@@ -3,9 +3,9 @@ package an.a22.ui;
 import android.content.Context;
 import android.view.Display;
 import android.view.WindowManager;
-import common.Registry;
-import common.ui.IDisplay;
-import common.ui.IForm;
+import x.Registry;
+import x.ui.IDisplay;
+import x.ui.IForm;
 
 public final class AnDisplay
     implements IDisplay

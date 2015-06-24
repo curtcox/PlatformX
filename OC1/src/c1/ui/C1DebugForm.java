@@ -6,7 +6,7 @@ import com.codename1.ui.Form;
 import com.codename1.ui.Graphics;
 import com.codename1.ui.animations.Transition;
 import c1.log.C1IssueReporter;
-import common.command.Command;
+import x.command.Command;
 
 /**
  * A Form with lots of extra debugging.

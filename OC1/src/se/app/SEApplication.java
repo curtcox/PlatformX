@@ -1,9 +1,9 @@
 package se.app;
 
-import common.Registry;
-import common.page.PageLink;
-import common.screen.Screen;
-import common.util.StringMap;
+import x.Registry;
+import x.page.PageLink;
+import x.screen.Screen;
+import x.util.StringMap;
 import mite.MiteHTTPServer;
 
 import javax.swing.*;

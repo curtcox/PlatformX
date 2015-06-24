@@ -1,9 +1,8 @@
 package se.uiwidget;
 
-import common.ui.AttributedString;
-import common.ui.AttributedString.PartRenderer;
-import common.ui.ColumnBoxFlowLayout;
-import common.uiwidget.UIAttributedText.*;
+import x.ui.AttributedString;
+import x.ui.ColumnBoxFlowLayout;
+import x.uiwidget.UIAttributedText.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -62,7 +61,7 @@ public class SEAttributedText
 
     protected void onTextSelected(SelectedEvent event) {}
 
-    private common.ui.Point uiPoint(Point point) {
+    private x.ui.Point uiPoint(Point point) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 }

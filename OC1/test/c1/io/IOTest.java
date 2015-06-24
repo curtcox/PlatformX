@@ -4,10 +4,10 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import common.IO;
-import common.Registry;
-import common.log.ILog;
-import common.log.ILogManager;
+import x.IO;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;

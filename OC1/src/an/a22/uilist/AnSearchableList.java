@@ -5,13 +5,13 @@ import android.content.Context;
 import android.view.View;
 import android.widget.ListAdapter;
 import android.widget.TextView;
-import common.Registry;
-import common.event.Action;
-import common.event.LiveList;
-import common.uilist.IListModel;
-import common.uilist.ListCellConfigurer;
-import common.uilist.UIList;
-import common.uiwidget.ISearchableList;
+import x.Registry;
+import x.event.Action;
+import x.event.LiveList;
+import x.uilist.IListModel;
+import x.uilist.ListCellConfigurer;
+import x.uilist.UIList;
+import x.uiwidget.ISearchableList;
 
 /**
  * A wrapper for a searchable list component.

@@ -14,9 +14,9 @@ import com.codename1.ui.plaf.UIManager;
 import java.util.Collection;
 import java.util.Vector;
 
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
 
 final class C1DebugList<T> extends List<T> {
 

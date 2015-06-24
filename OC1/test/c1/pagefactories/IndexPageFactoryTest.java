@@ -1,9 +1,9 @@
 package c1.pagefactories;
 
-import common.page.Page;
-import common.page.PageFactory;
-import common.page.PageLink;
-import common.pagefactories.IndexPageFactory;
+import x.page.Page;
+import x.page.PageFactory;
+import x.page.PageLink;
+import x.pagefactories.IndexPageFactory;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;

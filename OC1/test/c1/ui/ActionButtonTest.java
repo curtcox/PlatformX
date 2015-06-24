@@ -1,10 +1,10 @@
 package c1.ui;
 
-import common.event.StringSource;
-import common.uiwidget.UIButton;
+import x.event.StringSource;
+import x.uiwidget.UIButton;
 import fake.FakeC1RegistryLoader;
-import common.app.CurrentState;
-import common.event.Change;
+import x.app.CurrentState;
+import x.event.Change;
 import c1.screens.FakeUI;
 import java.util.concurrent.Callable;
 import static org.junit.Assert.*;

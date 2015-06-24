@@ -1,10 +1,10 @@
 package c1.net;
 
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
-import common.net.Network;
-import common.uiwidget.UIImage;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
+import x.net.Network;
+import x.uiwidget.UIImage;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;

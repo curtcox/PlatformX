@@ -1,6 +1,6 @@
 package an.a22.uilist;
 
-import common.uilist.ListCellConfigurer;
+import x.uilist.ListCellConfigurer;
 import javafx.scene.control.ListView;
 
 public final class AnBasicListCellRenderer<T>

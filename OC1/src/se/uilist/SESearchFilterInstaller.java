@@ -1,13 +1,11 @@
 package se.uilist;
 
-import common.uilist.ISearchFilterInstaller;
-import common.uilist.StringToListFilter;
-import common.uiwidget.ISearchableList;
+import x.uilist.ISearchFilterInstaller;
+import x.uilist.StringToListFilter;
+import x.uiwidget.ISearchableList;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 

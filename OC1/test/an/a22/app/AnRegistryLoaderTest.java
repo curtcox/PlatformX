@@ -1,11 +1,11 @@
 package an.a22.app;
 
 import com.codename1.io.Storage;
-import common.Registry;
-import common.device.IDeviceInfo;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.ui.IDisplay;
+import x.Registry;
+import x.device.IDeviceInfo;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.ui.IDisplay;
 import fake.FakeDeviceInfo;
 import fake.FakeDisplay;
 import fake.FakeStorage;

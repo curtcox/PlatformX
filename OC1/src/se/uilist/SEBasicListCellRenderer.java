@@ -1,6 +1,6 @@
 package se.uilist;
 
-import common.uilist.ListCellConfigurer;
+import x.uilist.ListCellConfigurer;
 
 import javax.swing.*;
 

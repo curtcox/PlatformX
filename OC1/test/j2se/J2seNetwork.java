@@ -2,8 +2,8 @@ package j2se;
 
 import java.io.*;
 import java.net.URI;
-import common.net.Network;
-import common.uiwidget.UIImage;
+import x.net.Network;
+import x.uiwidget.UIImage;
 
 /**
  * Testing network implementation that uses J2SE.

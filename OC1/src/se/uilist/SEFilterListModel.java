@@ -1,6 +1,6 @@
 package se.uilist;
 
-import common.uilist.ListFilter;
+import x.uilist.ListFilter;
 
 import javax.swing.*;
 import javax.swing.event.ListDataEvent;

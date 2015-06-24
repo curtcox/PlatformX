@@ -5,10 +5,10 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.*;
 import static com.codename1.ui.layouts.BoxLayout.*;
-import common.uiwidget.*;
-import common.Registry;
-import common.log.ILog;
-import common.log.ILogManager;
+import x.uiwidget.*;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
 
 final class C1UIRenderer {
 

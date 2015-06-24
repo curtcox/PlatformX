@@ -1,11 +1,11 @@
 package se.uilist;
 
-import common.event.Action;
-import common.event.LiveList;
-import common.uilist.IListModel;
-import common.uilist.ListCellConfigurer;
-import common.uilist.UIList;
-import common.uiwidget.ISearchableList;
+import x.event.Action;
+import x.event.LiveList;
+import x.uilist.IListModel;
+import x.uilist.ListCellConfigurer;
+import x.uilist.UIList;
+import x.uiwidget.ISearchableList;
 import se.uiwidget.SEBorderContainer;
 
 import javax.swing.*;

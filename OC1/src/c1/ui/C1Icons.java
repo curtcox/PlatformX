@@ -1,9 +1,9 @@
 package c1.ui;
 
 import com.codename1.ui.util.Resources;
-import common.Registry;
-import common.net.Network;
-import common.uiwidget.UIImage;
+import x.Registry;
+import x.net.Network;
+import x.uiwidget.UIImage;
 
 import java.net.URI;
 

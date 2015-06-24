@@ -1,13 +1,11 @@
 package se.uilist;
 
-import common.uilist.CommonListModel;
-import common.uilist.ListFilter;
-import junit.framework.TestCase;
+import x.uilist.CommonListModel;
+import x.uilist.ListFilter;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.swing.*;
 import javax.swing.event.ListDataListener;
 
 import static mach.Mocks._;

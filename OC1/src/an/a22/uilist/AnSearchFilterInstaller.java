@@ -1,8 +1,8 @@
 package an.a22.uilist;
 
-import common.uilist.ISearchFilterInstaller;
-import common.uilist.StringToListFilter;
-import common.uiwidget.ISearchableList;
+import x.uilist.ISearchFilterInstaller;
+import x.uilist.StringToListFilter;
+import x.uiwidget.ISearchableList;
 
 public final class AnSearchFilterInstaller
     implements ISearchFilterInstaller

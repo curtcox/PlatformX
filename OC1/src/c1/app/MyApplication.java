@@ -4,11 +4,11 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.UIManager;
 import com.codename1.ui.util.Resources;
-import common.Registry;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.page.PageLink;
-import common.screen.Screen;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.page.PageLink;
+import x.screen.Screen;
 
 import java.io.IOException;
 

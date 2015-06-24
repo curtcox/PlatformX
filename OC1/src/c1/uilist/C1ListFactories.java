@@ -1,11 +1,11 @@
 package c1.uilist;
 
 import com.codename1.ui.list.ListModel;
-import common.uilist.IListModel;
-import common.uilist.ListCellConfigurer;
-import common.uilist.UIList;
+import x.uilist.IListModel;
+import x.uilist.ListCellConfigurer;
+import x.uilist.UIList;
 
-import static common.uilist.UIList.Factory;
+import static x.uilist.UIList.Factory;
 
 /**
  * Some factories for producing UI lists.

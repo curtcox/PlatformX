@@ -2,8 +2,8 @@ package c1.event;
 
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.util.EventDispatcher;
-import common.event.Change;
-import common.event.SwappableList;
+import x.event.Change;
+import x.event.SwappableList;
 
 import java.util.ArrayList;
 import java.util.Collection;

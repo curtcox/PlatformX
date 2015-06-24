@@ -1,6 +1,6 @@
 package fake;
 
-import common.util.Runner;
+import x.util.Runner;
 
 public class FakeRunner
     implements Runner

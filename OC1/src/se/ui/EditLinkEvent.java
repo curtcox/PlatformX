@@ -1,7 +1,7 @@
 package se.ui;
 
-import common.page.PageLink;
-import common.uiwidget.UIComponent;
+import x.page.PageLink;
+import x.uiwidget.UIComponent;
 import se.events.Events;
 
 public final class EditLinkEvent

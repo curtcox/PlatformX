@@ -8,10 +8,10 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
-import common.Registry;
+import x.Registry;
 import c1.ui.C1EmptyImage;
-import common.uiwidget.UIImage;
-import common.util.Strings;
+import x.uiwidget.UIImage;
+import x.util.Strings;
 
 final class NetworkCacheEntry {
 

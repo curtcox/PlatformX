@@ -1,9 +1,9 @@
 package c1.app;
 
 import com.codename1.ui.Display;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
 
 public final class HeartbeatMonitor
     extends Thread

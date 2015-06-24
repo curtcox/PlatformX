@@ -27,8 +27,8 @@ import com.codename1.ui.Container;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
-import common.uilist.IListCell;
-import common.uiwidget.UIImage;
+import x.uilist.IListCell;
+import x.uiwidget.UIImage;
 
 import java.net.URI;
 

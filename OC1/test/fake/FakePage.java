@@ -1,8 +1,8 @@
 package fake;
 
-import common.page.Page;
-import common.page.PageLink;
-import common.uiwidget.UIComponent;
+import x.page.Page;
+import x.page.PageLink;
+import x.uiwidget.UIComponent;
 
 public class FakePage extends Page {
 

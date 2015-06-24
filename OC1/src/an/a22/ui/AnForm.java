@@ -6,11 +6,11 @@ import android.view.Gravity;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import common.Registry;
-import common.command.Command;
-import common.page.PageLink;
-import common.ui.IForm;
-import common.uiwidget.UIComponent;
+import x.Registry;
+import x.command.Command;
+import x.page.PageLink;
+import x.ui.IForm;
+import x.uiwidget.UIComponent;
 
 public final class AnForm
     extends LinearLayout

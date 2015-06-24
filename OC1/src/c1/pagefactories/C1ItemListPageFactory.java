@@ -3,14 +3,14 @@ package c1.pagefactories;
 import c1.uilist.C1SearchFilterInstaller;
 import c1.uilist.C1SearchableList;
 import com.codename1.ui.Label;
-import common.event.CommonLiveList;
-import common.page.Page;
-import common.page.PageFactory;
-import common.page.PageLink;
-import common.pagefactories.CellConfigurer;
-import common.pagefactories.ItemsPage;
-import common.uilist.StringToListFilter;
-import common.uiwidget.ISearchableList;
+import x.event.CommonLiveList;
+import x.page.Page;
+import x.page.PageFactory;
+import x.page.PageLink;
+import x.pagefactories.CellConfigurer;
+import x.pagefactories.ItemsPage;
+import x.uilist.StringToListFilter;
+import x.uiwidget.ISearchableList;
 
 import java.util.List;
 

@@ -1,8 +1,8 @@
 package se.uilist;
 
-import common.event.Action;
-import common.uilist.ListCellConfigurer;
-import common.uilist.UIList;
+import x.event.Action;
+import x.uilist.ListCellConfigurer;
+import x.uilist.UIList;
 
 import javax.swing.*;
 import javax.swing.event.ListDataEvent;

@@ -2,8 +2,8 @@ package an.a22.uilist;
 
 import android.content.Context;
 import android.widget.*;
-import common.event.Action;
-import common.uilist.UIList;
+import x.event.Action;
+import x.uilist.UIList;
 
 final class AnUIList<T>
     extends ListView

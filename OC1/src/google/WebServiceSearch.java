@@ -5,8 +5,8 @@ import java.io.InputStreamReader;
 import java.net.URI;
 import java.util.List;
 import java.util.Map;
-import common.Registry;
-import common.net.Network;
+import x.Registry;
+import x.net.Network;
 
 abstract class WebServiceSearch<T> {
     

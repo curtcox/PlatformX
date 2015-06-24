@@ -1,7 +1,7 @@
 package se.ui;
 
-import common.ui.IDisplay;
-import common.ui.IForm;
+import x.ui.IDisplay;
+import x.ui.IForm;
 
 import javax.swing.*;
 import java.awt.*;

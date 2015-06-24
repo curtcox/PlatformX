@@ -1,7 +1,7 @@
 package se.pagefactories;
 
-import common.page.PageFactory;
-import common.pagefactories.ItemListPageFactoryFactory;
+import x.page.PageFactory;
+import x.pagefactories.ItemListPageFactoryFactory;
 
 import java.util.List;
 

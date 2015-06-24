@@ -1,8 +1,8 @@
 package se.app;
 
-import common.Registry;
-import common.page.dynamic.TaggedStringSources;
-import common.util.StringMap;
+import x.Registry;
+import x.page.dynamic.TaggedStringSources;
+import x.util.StringMap;
 import org.junit.Test;
 import se.util.TaggedValueStringMap;
 

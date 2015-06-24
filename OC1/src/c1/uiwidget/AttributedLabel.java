@@ -2,7 +2,7 @@ package c1.uiwidget;
 
 import com.codename1.ui.Component;
 import com.codename1.ui.Graphics;
-import common.ui.Color;
+import x.ui.Color;
 
 import static com.codename1.ui.plaf.Style.*;
 

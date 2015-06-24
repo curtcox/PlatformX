@@ -2,10 +2,10 @@ package com.codename1.ui;
 
 import c1.command.C1LoggedCommand;
 import com.codename1.ui.animations.Transition;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
-import common.command.Command;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
+import x.command.Command;
 import c1.log.C1IssueReporter;
 
 /**

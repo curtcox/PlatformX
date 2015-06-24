@@ -1,6 +1,6 @@
 package se.ui;
 
-import common.page.PageLink;
+import x.page.PageLink;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

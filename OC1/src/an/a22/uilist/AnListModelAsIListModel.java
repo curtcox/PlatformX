@@ -1,8 +1,8 @@
 package an.a22.uilist;
 
 import android.widget.ListAdapter;
-import common.event.Change;
-import common.uilist.IListModel;
+import x.event.Change;
+import x.uilist.IListModel;
 
 public class AnListModelAsIListModel
     implements IListModel

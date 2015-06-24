@@ -1,6 +1,6 @@
 package se.ui;
 
-import common.uiwidget.*;
+import x.uiwidget.*;
 import fake.FakeSERegistryLoader;
 import org.junit.Before;
 import org.junit.Test;

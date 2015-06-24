@@ -5,12 +5,12 @@ import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
 import com.codename1.ui.list.ListModel;
 import c1.uiwidget.C1BorderContainer;
-import common.event.LiveList;
-import common.event.Action;
-import common.uilist.IListModel;
-import common.uilist.ListCellConfigurer;
-import common.uilist.UIList;
-import common.uiwidget.ISearchableList;
+import x.event.LiveList;
+import x.event.Action;
+import x.uilist.IListModel;
+import x.uilist.ListCellConfigurer;
+import x.uilist.UIList;
+import x.uiwidget.ISearchableList;
 
 /**
  * A wrapper for a searchable list component.

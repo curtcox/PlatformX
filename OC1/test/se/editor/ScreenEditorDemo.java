@@ -1,9 +1,9 @@
 package se.editor;
 
-import common.Registry;
-import common.page.PageLink;
-import common.page.PageTags;
-import common.uiwidget.UIComponent;
+import x.Registry;
+import x.page.PageLink;
+import x.page.PageTags;
+import x.uiwidget.UIComponent;
 import se.events.Events;
 import se.ui.EditLinkEvent;
 import se.util.TaggedValue;

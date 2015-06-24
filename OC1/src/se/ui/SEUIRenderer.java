@@ -1,9 +1,9 @@
 package se.ui;
 
-import common.Registry;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.uiwidget.*;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.uiwidget.*;
 
 import javax.swing.*;
 

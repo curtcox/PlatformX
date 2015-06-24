@@ -2,9 +2,9 @@ package google;
 
 import fake.FakeC1RegistryLoader;
 import j2se.J2seNetwork;
-import common.Registry;
-import common.net.Network;
-import common.util.Strings;
+import x.Registry;
+import x.net.Network;
+import x.util.Strings;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Ignore;

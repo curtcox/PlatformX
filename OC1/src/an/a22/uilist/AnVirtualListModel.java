@@ -4,7 +4,7 @@ import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
-import common.event.LiveList;
+import x.event.LiveList;
 
 /**
  * A ListModel that uses a given list to store its elements.

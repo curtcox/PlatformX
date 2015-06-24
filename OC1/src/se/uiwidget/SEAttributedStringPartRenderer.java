@@ -1,9 +1,9 @@
 package se.uiwidget;
 
-import common.ui.AttributedString;
-import common.ui.Color;
-import common.ui.Dimension;
-import common.ui.Point;
+import x.ui.AttributedString;
+import x.ui.Color;
+import x.ui.Dimension;
+import x.ui.Point;
 import java.awt.FontMetrics;
 
 import java.awt.Graphics2D;

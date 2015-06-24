@@ -1,11 +1,10 @@
 package c1.uilist;
 
 import com.codename1.ui.Component;
-import common.event.CommonLiveList;
-import common.event.LiveList;
-import common.uilist.ListCellConfigurer;
+import x.event.CommonLiveList;
+import x.event.LiveList;
+import x.uilist.ListCellConfigurer;
 import fake.FakeUIManager;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 

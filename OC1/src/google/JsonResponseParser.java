@@ -9,9 +9,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
 import c1.ui.C1Icons;
 
 abstract class JsonResponseParser<T>

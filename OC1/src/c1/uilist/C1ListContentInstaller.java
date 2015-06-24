@@ -2,10 +2,10 @@ package c1.uilist;
 
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.DataChangedListener;
-import common.event.SwappableList;
-import common.uilist.IListContentInstaller;
-import common.uilist.StringToList;
-import common.uiwidget.ISearchableList;
+import x.event.SwappableList;
+import x.uilist.IListContentInstaller;
+import x.uilist.StringToList;
+import x.uiwidget.ISearchableList;
 
 public final class C1ListContentInstaller
     implements IListContentInstaller {

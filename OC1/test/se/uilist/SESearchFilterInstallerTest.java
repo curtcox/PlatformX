@@ -1,13 +1,13 @@
 package se.uilist;
 
-import common.event.Change;
-import common.event.LiveList;
-import common.uilist.*;
+import x.event.Change;
+import x.event.LiveList;
+import x.uilist.*;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
-import common.event.CommonLiveList;
+import x.event.CommonLiveList;
 
 import javax.swing.*;
 import javax.swing.event.ListDataListener;

@@ -1,7 +1,7 @@
 package se.util;
 
-import common.event.StringSource;
-import common.page.PageTags;
+import x.event.StringSource;
+import x.page.PageTags;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -2,13 +2,13 @@ package c1.app;
 
 import c1.services.ILocationManager;
 import com.codename1.io.Storage;
-import common.Registry;
-import common.app.CurrentState;
+import x.Registry;
+import x.app.CurrentState;
 import fake.FakeLocationManager;
 import fake.FakeStorage;
-import common.event.Change;
+import x.event.Change;
 import c1.services.C1Locations;
-import common.services.ServiceProviders;
+import x.services.ServiceProviders;
 import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;

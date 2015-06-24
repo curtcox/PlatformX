@@ -1,17 +1,13 @@
 package c1.uilist;
 
 import com.codename1.ui.events.DataChangedListener;
-import common.event.CommonLiveList;
-import common.event.LiveList;
-import junit.framework.TestCase;
+import x.event.CommonLiveList;
+import x.event.LiveList;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
-import javax.swing.event.ListDataListener;
-
 import static mach.Mocks.verify;
-import static mach.Mocks.wild;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;

@@ -2,9 +2,9 @@ package an.a22.uilist;
 
 import android.content.Context;
 import android.widget.LinearLayout;
-import common.Registry;
-import common.uilist.IListCell;
-import common.uiwidget.UIImage;
+import x.Registry;
+import x.uilist.IListCell;
+import x.uiwidget.UIImage;
 
 import java.net.URI;
 

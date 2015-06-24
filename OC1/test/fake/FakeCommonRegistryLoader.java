@@ -1,10 +1,10 @@
 package fake;
 
-import common.Registry;
-import common.log.CommonLogManager;
-import common.log.CommonLogWriter;
-import common.log.ILogManager;
-import common.ui.IDisplay;
+import x.Registry;
+import x.log.CommonLogManager;
+import x.log.CommonLogWriter;
+import x.log.ILogManager;
+import x.ui.IDisplay;
 
 public class FakeCommonRegistryLoader {
     

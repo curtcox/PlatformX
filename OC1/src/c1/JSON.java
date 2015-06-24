@@ -7,11 +7,11 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
-import common.util.SimpleStringMap;
-import common.util.StringMap;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
+import x.util.SimpleStringMap;
+import x.util.StringMap;
 
 public final class JSON {
 

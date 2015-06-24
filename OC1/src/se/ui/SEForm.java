@@ -1,9 +1,9 @@
 package se.ui;
 
-import common.command.Command;
-import common.page.PageLink;
-import common.ui.IForm;
-import common.uiwidget.UIComponent;
+import x.command.Command;
+import x.page.PageLink;
+import x.ui.IForm;
+import x.uiwidget.UIComponent;
 
 import javax.swing.*;
 import java.awt.*;

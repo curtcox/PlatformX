@@ -6,10 +6,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import common.Registry;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.uiwidget.*;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.uiwidget.*;
 
 final class AnUIRenderer {
 

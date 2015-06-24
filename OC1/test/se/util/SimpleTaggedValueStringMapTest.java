@@ -1,8 +1,8 @@
 package se.util;
 
-import common.event.StringSource;
-import common.page.PageTags;
-import common.util.StringMap;
+import x.event.StringSource;
+import x.page.PageTags;
+import x.util.StringMap;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;

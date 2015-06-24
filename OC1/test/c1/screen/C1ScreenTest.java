@@ -2,11 +2,11 @@ package c1.screen;
 
 
 import c1.screens.FakeUI;
-import common.page.Page;
-import common.screen.Screen;
-import common.page.PageLink;
-import common.ui.IForm;
-import common.uiwidget.UIComponent;
+import x.page.Page;
+import x.screen.Screen;
+import x.page.PageLink;
+import x.ui.IForm;
+import x.uiwidget.UIComponent;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;

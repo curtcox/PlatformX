@@ -2,11 +2,11 @@ package c1.services;
 
 import com.codename1.location.Location;
 import com.codename1.location.LocationListener;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
-import common.services.LocationReading;
-import common.services.LocationService;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
+import x.services.LocationReading;
+import x.services.LocationService;
 
 public final class C1Locations
     implements LocationService, LocationListener

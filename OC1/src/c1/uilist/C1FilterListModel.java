@@ -26,7 +26,7 @@ package c1.uilist;
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.events.SelectionListener;
 import com.codename1.ui.list.ListModel;
-import common.uilist.ListFilter;
+import x.uilist.ListFilter;
 
 import java.util.ArrayList;
 

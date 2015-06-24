@@ -1,9 +1,9 @@
 package fake;
 
 import com.codename1.io.Storage;
-import common.Registry;
-import common.log.CommonLogManager;
-import common.log.ILogManager;
+import x.Registry;
+import x.log.CommonLogManager;
+import x.log.ILogManager;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

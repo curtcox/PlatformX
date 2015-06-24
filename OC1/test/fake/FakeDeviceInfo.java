@@ -1,7 +1,7 @@
 package fake;
 
-import common.device.DeviceKeyValuePair;
-import common.device.IDeviceInfo;
+import x.device.DeviceKeyValuePair;
+import x.device.IDeviceInfo;
 
 import java.util.ArrayList;
 import java.util.List;

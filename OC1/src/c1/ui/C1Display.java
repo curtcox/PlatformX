@@ -2,8 +2,8 @@ package c1.ui;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
-import common.ui.IDisplay;
-import common.ui.IForm;
+import x.ui.IDisplay;
+import x.ui.IForm;
 
 /**
  * A wrapper to make a C1Display an IDisplay.

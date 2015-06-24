@@ -1,7 +1,7 @@
 package c1.app;
 
 import com.codename1.ui.Display;
-import common.Registry;
+import x.Registry;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;

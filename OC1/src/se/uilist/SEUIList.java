@@ -1,7 +1,7 @@
 package se.uilist;
 
-import common.event.Action;
-import common.uilist.UIList;
+import x.event.Action;
+import x.uilist.UIList;
 
 import javax.swing.*;
 

@@ -2,7 +2,7 @@ package c1.net;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import common.util.Strings;
+import x.util.Strings;
 import static org.junit.Assert.*;
 import org.junit.Test;
 

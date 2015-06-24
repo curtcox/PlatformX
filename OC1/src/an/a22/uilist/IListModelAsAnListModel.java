@@ -4,7 +4,7 @@ import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
-import common.uilist.IListModel;
+import x.uilist.IListModel;
 
 public final class IListModelAsAnListModel
    implements ListAdapter

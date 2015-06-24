@@ -1,7 +1,7 @@
 package se.uilist;
 
-import common.event.Change;
-import common.event.LiveList;
+import x.event.Change;
+import x.event.LiveList;
 
 import javax.swing.*;
 import javax.swing.event.ListDataEvent;

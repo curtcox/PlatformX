@@ -1,10 +1,10 @@
 package se.ui;
 
-import common.Registry;
-import common.page.PageLink;
-import common.ui.IForm;
-import common.uiwidget.UIComponent;
-import common.uiwidget.UILabel;
+import x.Registry;
+import x.page.PageLink;
+import x.ui.IForm;
+import x.uiwidget.UIComponent;
+import x.uiwidget.UILabel;
 import fake.FakeSERegistryLoader;
 import mach.Mocks;
 import org.junit.Before;

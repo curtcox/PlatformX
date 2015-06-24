@@ -1,7 +1,7 @@
 package c1.net;
 
-import common.stores.PairIO;
-import common.util.Strings;
+import x.stores.PairIO;
+import x.util.Strings;
 import java.net.URI;
 import java.net.URISyntaxException;
 

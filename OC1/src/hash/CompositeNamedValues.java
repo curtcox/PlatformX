@@ -2,9 +2,9 @@ package hash;
 
 import java.util.Arrays;
 
-import common.log.ILog;
-import common.log.ILogManager;
-import common.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.Registry;
 
 /**
  * For checking a series of NamedValues until a match is found.

@@ -1,7 +1,7 @@
 package fake;
 
-import common.ui.IDisplay;
-import common.ui.IForm;
+import x.ui.IDisplay;
+import x.ui.IForm;
 
 public final class FakeDisplay
     implements IDisplay

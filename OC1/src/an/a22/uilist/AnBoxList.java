@@ -3,10 +3,10 @@ package an.a22.uilist;
 import android.content.Context;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
-import common.Registry;
-import common.event.Action;
-import common.uilist.ListCellConfigurer;
-import common.uilist.UIList;
+import x.Registry;
+import x.event.Action;
+import x.uilist.ListCellConfigurer;
+import x.uilist.UIList;
 
 /**
  * For displaying items from a ListModel.

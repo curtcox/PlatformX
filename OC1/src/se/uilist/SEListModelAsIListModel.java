@@ -1,7 +1,7 @@
 package se.uilist;
 
-import common.event.Change;
-import common.uilist.IListModel;
+import x.event.Change;
+import x.uilist.IListModel;
 
 import javax.swing.*;
 import javax.swing.event.ListDataEvent;

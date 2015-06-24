@@ -1,6 +1,6 @@
 package se.app;
 
-import common.util.StringMap;
+import x.util.StringMap;
 import mite.HTTPRequest;
 import mite.handlers.AbstractRequestHandler;
 

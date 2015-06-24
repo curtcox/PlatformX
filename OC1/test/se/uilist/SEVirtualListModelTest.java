@@ -3,7 +3,7 @@ package se.uilist;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
-import common.event.CommonLiveList;
+import x.event.CommonLiveList;
 
 import javax.swing.event.ListDataListener;
 import java.util.ArrayList;

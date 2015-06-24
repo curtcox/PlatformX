@@ -1,12 +1,12 @@
 package fake;
 
-import common.Registry;
-import common.domain.ServiceProvider;
-import common.log.CommonLogManager;
-import common.log.CommonLogWriter;
-import common.log.ILogManager;
-import common.ui.IDisplay;
-import common.ui.IFormFactory;
+import x.Registry;
+import x.domain.ServiceProvider;
+import x.log.CommonLogManager;
+import x.log.CommonLogWriter;
+import x.log.ILogManager;
+import x.ui.IDisplay;
+import x.ui.IFormFactory;
 
 public class FakeSERegistryLoader {
     

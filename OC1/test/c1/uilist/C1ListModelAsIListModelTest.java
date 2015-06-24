@@ -1,12 +1,8 @@
 package c1.uilist;
 
-import common.Registry;
-import common.event.Change;
-import common.event.CommonLiveList;
-import common.uilist.ListFilter;
-import common.util.Runner;
-import fake.FakeRunner;
-import junit.framework.TestCase;
+import x.event.Change;
+import x.event.CommonLiveList;
+import x.uilist.ListFilter;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;

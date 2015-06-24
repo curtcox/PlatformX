@@ -1,7 +1,7 @@
 package se.uiwidget;
 
-import common.ui.AttributedString;
-import common.uiwidget.UIAttributedText;
+import x.ui.AttributedString;
+import x.uiwidget.UIAttributedText;
 
 import javax.swing.*;
 import java.awt.*;

@@ -1,11 +1,11 @@
 package an.a22.uilist;
 
 import android.widget.ListAdapter;
-import common.uilist.IListModel;
-import common.uilist.ListCellConfigurer;
-import common.uilist.UIList;
+import x.uilist.IListModel;
+import x.uilist.ListCellConfigurer;
+import x.uilist.UIList;
 
-import static common.uilist.UIList.Factory;
+import static x.uilist.UIList.Factory;
 
 final class AnListFactories {
 

@@ -1,6 +1,6 @@
 package se.util;
 
-import common.page.PageTags;
+import x.page.PageTags;
 
 final class SimpleTaggedValue
     implements TaggedValue

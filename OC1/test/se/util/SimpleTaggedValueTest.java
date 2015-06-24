@@ -1,6 +1,6 @@
 package se.util;
 
-import common.page.PageTags;
+import x.page.PageTags;
 import org.junit.Test;
 
 import static org.junit.Assert.assertSame;

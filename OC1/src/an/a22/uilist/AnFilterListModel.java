@@ -4,7 +4,7 @@ import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
-import common.uilist.ListFilter;
+import x.uilist.ListFilter;
 
 public final class AnFilterListModel<T>
     implements ListAdapter

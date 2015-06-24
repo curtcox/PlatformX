@@ -1,8 +1,8 @@
 package se.editor;
 
-import common.Registry;
-import common.event.StringChange;
-import common.screen.Screen;
+import x.Registry;
+import x.event.StringChange;
+import x.screen.Screen;
 import se.events.Events;
 import se.ui.EditTaggedValueEvent;
 import se.uiwidget.StringEditor;

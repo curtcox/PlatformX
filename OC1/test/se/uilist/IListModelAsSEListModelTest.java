@@ -1,8 +1,7 @@
 package se.uilist;
 
-import common.uilist.CommonListModel;
-import common.uilist.IListModel;
-import junit.framework.TestCase;
+import x.uilist.CommonListModel;
+import x.uilist.IListModel;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;

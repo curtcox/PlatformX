@@ -1,6 +1,6 @@
 package se.uiwidget;
 
-import common.event.StringChange;
+import x.event.StringChange;
 import org.junit.Test;
 
 import javax.swing.*;

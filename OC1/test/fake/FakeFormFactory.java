@@ -1,8 +1,8 @@
 package fake;
 
-import common.page.PageLink;
-import common.ui.IForm;
-import common.ui.IFormFactory;
+import x.page.PageLink;
+import x.ui.IForm;
+import x.ui.IFormFactory;
 
 public class FakeFormFactory
     implements IFormFactory

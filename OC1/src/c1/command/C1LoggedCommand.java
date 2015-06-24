@@ -1,10 +1,10 @@
 package c1.command;
 
 import com.codename1.ui.events.ActionEvent;
-import common.Registry;
-import common.command.Command;
-import common.log.ILog;
-import common.log.ILogManager;
+import x.Registry;
+import x.command.Command;
+import x.log.ILog;
+import x.log.ILogManager;
 
 public class C1LoggedCommand
     extends com.codename1.ui.Command

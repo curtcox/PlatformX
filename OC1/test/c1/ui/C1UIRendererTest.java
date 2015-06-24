@@ -2,7 +2,7 @@ package c1.ui;
 
 import com.codename1.ui.*;
 import com.codename1.ui.layouts.*;
-import common.uiwidget.*;
+import x.uiwidget.*;
 import fake.FakeSERegistryLoader;
 import fake.FakeUIManager;
 import org.junit.Before;

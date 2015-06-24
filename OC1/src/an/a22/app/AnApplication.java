@@ -3,11 +3,11 @@ package an.a22.app;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import common.Registry;
-import common.log.ILog;
-import common.log.ILogManager;
-import common.page.PageLink;
-import common.screen.Screen;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.page.PageLink;
+import x.screen.Screen;
 
 
 public class AnApplication extends Activity {

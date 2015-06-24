@@ -1,9 +1,8 @@
 package c1.uilist;
 
 import com.codename1.ui.events.DataChangedListener;
-import common.uilist.CommonListModel;
-import common.uilist.ListFilter;
-import junit.framework.TestCase;
+import x.uilist.CommonListModel;
+import x.uilist.ListFilter;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
