@@ -2,9 +2,9 @@ package common.screen.dynamic;
 
 import common.event.StringSource;
 import common.page.Page;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.page.PageTags;
-import common.screen.*;
 
 import java.util.ArrayList;
 import java.util.List;

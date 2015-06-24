@@ -2,7 +2,7 @@ package se.screenfactories;
 
 import common.event.CommonLiveList;
 import common.page.Page;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.screenfactories.CellConfigurer;
 import common.screenfactories.ItemsPage;

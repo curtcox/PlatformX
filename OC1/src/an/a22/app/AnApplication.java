@@ -6,7 +6,7 @@ import android.os.Bundle;
 import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.screen.Screen;
 import common.page.PageLink;
 

@@ -1,6 +1,6 @@
 package common.screenfactories;
 
-import common.screen.PageFactory;
+import common.page.PageFactory;
 
 import java.util.List;
 

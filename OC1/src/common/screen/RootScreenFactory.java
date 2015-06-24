@@ -1,8 +1,8 @@
 package common.screen;
 
-import java.util.Arrays;
-import java.util.List;
 import common.Registry;
+import common.page.CompositePageFactory;
+import common.page.PageFactory;
 import common.page.PageTags;
 import common.screen.dynamic.DynamicPageFactory;
 import common.screen.dynamic.LazyPageFactory;
@@ -13,6 +13,9 @@ import common.screens.CustomComponentScreen;
 import common.screens.Home;
 import common.screens.ProviderDetailsScreen;
 import common.util.StringMap;
+
+import java.util.Arrays;
+import java.util.List;
 
 /**
  * The top-level PageFactory.

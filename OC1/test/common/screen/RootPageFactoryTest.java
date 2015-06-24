@@ -5,6 +5,7 @@ import common.Registry;
 import common.device.IDeviceInfo;
 import common.log.ILogManager;
 import common.page.Page;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.screen.dynamic.StringMapAsTaggedStringSources;
 import common.screen.dynamic.TaggedStringSources;

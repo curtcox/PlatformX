@@ -3,7 +3,7 @@ package common.screenfactories;
 import common.Registry;
 import common.domain.Type;
 import common.page.Page;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.TypeListCellConfigurer;

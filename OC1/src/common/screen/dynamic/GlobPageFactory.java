@@ -1,7 +1,7 @@
 package common.screen.dynamic;
 
 import common.page.Page;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.util.Glob;
 

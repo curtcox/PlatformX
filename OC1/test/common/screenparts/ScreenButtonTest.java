@@ -1,7 +1,7 @@
 package common.screenparts;
 
 import common.Registry;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.ui.IForm;
 import common.ui.IFormFactory;

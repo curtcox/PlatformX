@@ -2,7 +2,7 @@ package se.app;
 
 import common.Registry;
 import common.screen.Screen;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.util.StringMap;
 import mite.MiteHTTPServer;

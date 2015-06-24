@@ -1,7 +1,7 @@
 package c1.screenfactories;
 
 import common.page.Page;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.screenfactories.IndexScreenFactory;
 import fake.FakeC1RegistryLoader;

@@ -10,7 +10,7 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 import common.screen.Screen;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 
 public class MyApplication {

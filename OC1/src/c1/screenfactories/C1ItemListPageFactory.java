@@ -5,7 +5,7 @@ import c1.uilist.C1SearchableList;
 import com.codename1.ui.Label;
 import common.event.CommonLiveList;
 import common.page.Page;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.screenfactories.CellConfigurer;
 import common.screenfactories.ItemsPage;

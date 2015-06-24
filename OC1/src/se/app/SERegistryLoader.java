@@ -7,7 +7,7 @@ import common.log.ILogManager;
 import common.log.CommonLogWriter;
 import common.net.Network;
 import common.screen.RootScreenFactory;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.screen.dynamic.TaggedStringSources;
 import common.screenfactories.ItemListScreenFactoryFactory;
 import common.ui.IDisplay;

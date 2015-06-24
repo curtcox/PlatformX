@@ -1,7 +1,7 @@
 package common.screens;
 
 import common.page.Page;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.uiwidget.UIComponent;

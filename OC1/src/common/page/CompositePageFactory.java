@@ -1,7 +1,4 @@
-package common.screen;
-
-import common.page.Page;
-import common.page.PageLink;
+package common.page;
 
 import java.util.Arrays;
 

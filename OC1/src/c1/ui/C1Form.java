@@ -9,7 +9,7 @@ import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.Layout;
 import common.command.Command;
 import common.screen.Screen;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.ui.IForm;
 import common.uiwidget.UIComponent;

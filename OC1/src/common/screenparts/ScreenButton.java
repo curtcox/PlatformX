@@ -2,7 +2,7 @@ package common.screenparts;
 
 import common.event.StringSource;
 import common.page.Page;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.screen.Screen;
 import common.page.PageLink;
 import common.uiwidget.UIButton;

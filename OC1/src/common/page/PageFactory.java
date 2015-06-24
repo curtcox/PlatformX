@@ -1,8 +1,6 @@
-package common.screen;
+package common.page;
 
 import common.Registry;
-import common.page.Page;
-import common.page.PageLink;
 
 /**
  * For creating ScreenS from ScreenLinkS.

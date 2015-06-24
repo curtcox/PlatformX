@@ -3,7 +3,7 @@ package common.ui;
 import common.Registry;
 import common.screen.Screen;
 import common.uiwidget.UIButton;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 
 /**

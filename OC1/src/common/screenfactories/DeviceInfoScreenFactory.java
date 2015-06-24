@@ -2,7 +2,7 @@ package common.screenfactories;
 
 import common.Registry;
 import common.device.IDeviceInfo;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 
 public final class DeviceInfoScreenFactory {
 

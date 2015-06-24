@@ -5,7 +5,7 @@ import common.domain.LocationDescription;
 import common.event.LiveList;
 import common.event.SwappableList;
 import common.page.Page;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.screen.dynamic.GlobPageFactory;
 import common.screenparts.LocationListCellConfigurer;

@@ -4,6 +4,7 @@ import common.Registry;
 import common.log.ILog;
 import common.log.ILogManager;
 import common.page.Page;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.ui.IFormFactory;
 import common.uiwidget.UIComponent;

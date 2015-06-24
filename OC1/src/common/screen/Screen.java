@@ -5,6 +5,7 @@ import common.log.ILog;
 import common.log.ILogManager;
 import common.Registry;
 import common.page.Page;
+import common.page.PageFactory;
 import common.page.PageLink;
 import common.ui.IDisplay;
 import common.ui.IForm;

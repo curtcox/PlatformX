@@ -1,7 +1,7 @@
 package common.screenfactories;
 
 import common.Registry;
-import common.screen.PageFactory;
+import common.page.PageFactory;
 
 import java.util.List;
 
