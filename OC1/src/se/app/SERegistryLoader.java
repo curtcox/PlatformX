@@ -1,27 +1,27 @@
 package se.app;
 
-import x.Registry;
-import x.device.IDeviceInfo;
-import x.log.XLogManager;
-import x.log.ILogManager;
-import x.log.XLogWriter;
-import x.net.Network;
-import x.page.RootPageFactory;
-import x.page.PageFactory;
-import x.page.dynamic.TaggedStringSources;
-import x.pagefactories.ItemListPageFactoryFactory;
-import x.ui.IDisplay;
-import x.ui.IFormFactory;
-import x.util.StringMap;
 import se.device.SEDeviceInfo;
 import se.editor.ScreenEditor;
 import se.events.Events;
-import x.net.XRawNetwork;
 import se.pagefactories.SEItemListPageFactoryFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
 import se.util.SimpleTaggedValueStringMap;
 import se.util.TaggedValueStringMap;
+import x.Registry;
+import x.device.IDeviceInfo;
+import x.log.ILogManager;
+import x.log.XLogManager;
+import x.log.XLogWriter;
+import x.net.Network;
+import x.net.XRawNetwork;
+import x.page.PageFactory;
+import x.page.RootPageFactory;
+import x.page.dynamic.TaggedStringSources;
+import x.pagefactories.ItemListPageFactoryFactory;
+import x.ui.IDisplay;
+import x.ui.IFormFactory;
+import x.util.StringMap;
 
 /**
  * Loads the registry with all of the instances needed for startup.

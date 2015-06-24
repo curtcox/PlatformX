@@ -1,14 +1,19 @@
 package c1.ui;
 
-import com.codename1.ui.*;
+import com.codename1.ui.Button;
+import com.codename1.ui.Component;
+import com.codename1.ui.Container;
+import com.codename1.ui.Label;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
-import com.codename1.ui.layouts.*;
-import static com.codename1.ui.layouts.BoxLayout.*;
-import x.uiwidget.*;
+import com.codename1.ui.layouts.BoxLayout;
 import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
+import x.uiwidget.*;
+
+import static com.codename1.ui.layouts.BoxLayout.X_AXIS;
+import static com.codename1.ui.layouts.BoxLayout.Y_AXIS;
 
 final class C1UIRenderer {
 

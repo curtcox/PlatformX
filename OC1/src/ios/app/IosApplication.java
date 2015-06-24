@@ -1,11 +1,7 @@
 package ios.app;
 
 import org.robovm.apple.foundation.NSAutoreleasePool;
-import org.robovm.apple.uikit.UIApplication;
-import org.robovm.apple.uikit.UIApplicationDelegateAdapter;
-import org.robovm.apple.uikit.UIApplicationLaunchOptions;
-import org.robovm.apple.uikit.UIScreen;
-import org.robovm.apple.uikit.UIWindow;
+import org.robovm.apple.uikit.*;
 
 public class IosApplication extends UIApplicationDelegateAdapter {
     private UIWindow window;

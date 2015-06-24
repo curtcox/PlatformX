@@ -1,9 +1,10 @@
 package x.net;
 
-import java.net.URI;
 import x.IO;
 import x.Registry;
 import x.util.StringMap;
+
+import java.net.URI;
 
 public final class SimpleNetStringMap
     implements StringMap

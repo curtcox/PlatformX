@@ -5,11 +5,7 @@ import com.codename1.ui.util.EventDispatcher;
 import x.event.Change;
 import x.event.SwappableList;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.List;
-import java.util.ListIterator;
+import java.util.*;
 
 public final class C1SwappableList
     implements SwappableList

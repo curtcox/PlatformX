@@ -2,15 +2,12 @@ package x.services;
 
 import google.Place;
 import google.PlacesSearch;
+import x.Registry;
+import x.domain.*;
+import x.stores.MyRatings;
+
 import java.util.ArrayList;
 import java.util.List;
-import x.Registry;
-import x.domain.Address;
-import x.domain.ID;
-import x.domain.Name;
-import x.domain.ServiceProvider;
-import x.domain.Type;
-import x.stores.MyRatings;
 
 public final class ServiceProviders {
     

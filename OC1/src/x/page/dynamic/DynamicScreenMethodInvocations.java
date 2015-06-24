@@ -1,8 +1,9 @@
 package x.page.dynamic;
 
 import hash.NamedExpression;
-import java.util.HashMap;
 import x.util.Reflection;
+
+import java.util.HashMap;
 
 /**
  * A map of methods for dynamically invoking ScreenContext methods.

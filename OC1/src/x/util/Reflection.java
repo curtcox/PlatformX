@@ -2,9 +2,9 @@ package x.util;
 
 import com.codename1.ui.Button;
 import com.codename1.ui.Label;
+import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
-import x.Registry;
 
 public final class Reflection {
 

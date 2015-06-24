@@ -2,9 +2,9 @@ package x.pages;
 
 import x.Registry;
 import x.domain.ServiceProvider;
-import x.pageparts.ScreenButton;
 import x.pageparts.ProviderDetailsButton;
 import x.pageparts.ProviderRatingButton;
+import x.pageparts.ScreenButton;
 import x.services.LocationService;
 import x.ui.TextPosition;
 import x.uiwidget.UIButton;

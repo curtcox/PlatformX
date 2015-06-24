@@ -1,9 +1,9 @@
 package x.util;
 
+import x.pages.*;
+
 import java.util.HashMap;
 import java.util.Map;
-
-import x.pages.*;
 
 /**
  * For finding the Mirror for a given object.

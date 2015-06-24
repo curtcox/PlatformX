@@ -1,17 +1,17 @@
 package c1;
 
 import com.codename1.io.JSONParser;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.util.SimpleStringMap;
+import x.util.StringMap;
+
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
-
-import x.log.ILog;
-import x.log.ILogManager;
-import x.Registry;
-import x.util.SimpleStringMap;
-import x.util.StringMap;
 
 public final class JSON {
 

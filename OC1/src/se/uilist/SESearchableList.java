@@ -1,12 +1,12 @@
 package se.uilist;
 
+import se.uiwidget.SEBorderContainer;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.IListModel;
 import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;
 import x.uiwidget.ISearchableList;
-import se.uiwidget.SEBorderContainer;
 
 import javax.swing.*;
 

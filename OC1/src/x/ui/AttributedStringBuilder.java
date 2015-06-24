@@ -3,7 +3,6 @@ package x.ui;
 import x.util.Objects;
 
 import java.util.*;
-import java.util.List;
 
 public final class AttributedStringBuilder {
     StringBuilder text = new StringBuilder();

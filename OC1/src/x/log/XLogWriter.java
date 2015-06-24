@@ -1,6 +1,7 @@
 package x.log;
 
 import x.Registry;
+
 import java.util.LinkedList;
 
 public final class XLogWriter {

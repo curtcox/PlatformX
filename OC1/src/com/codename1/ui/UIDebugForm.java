@@ -1,12 +1,12 @@
 package com.codename1.ui;
 
 import c1.command.C1LoggedCommand;
+import c1.log.C1IssueReporter;
 import com.codename1.ui.animations.Transition;
-import x.log.ILog;
-import x.log.ILogManager;
 import x.Registry;
 import x.command.Command;
-import c1.log.C1IssueReporter;
+import x.log.ILog;
+import x.log.ILogManager;
 
 /**
  * DebugForm in the same package, so we can intercept more methods.

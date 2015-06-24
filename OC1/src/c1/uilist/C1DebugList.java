@@ -11,12 +11,12 @@ import com.codename1.ui.geom.Rectangle;
 import com.codename1.ui.list.ListCellRenderer;
 import com.codename1.ui.list.ListModel;
 import com.codename1.ui.plaf.UIManager;
-import java.util.Collection;
-import java.util.Vector;
-
+import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
-import x.Registry;
+
+import java.util.Collection;
+import java.util.Vector;
 
 final class C1DebugList<T> extends List<T> {
 

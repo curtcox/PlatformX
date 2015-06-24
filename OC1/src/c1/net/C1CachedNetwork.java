@@ -1,9 +1,9 @@
 package c1.net;
 
 import com.codename1.io.Storage;
+import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
-import x.Registry;
 import x.net.Network;
 import x.stores.MapStorageIO;
 import x.uiwidget.UIImage;

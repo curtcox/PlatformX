@@ -1,12 +1,12 @@
 package c1.uilist;
 
+import c1.uiwidget.C1BorderContainer;
 import com.codename1.ui.Component;
 import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
 import com.codename1.ui.list.ListModel;
-import c1.uiwidget.C1BorderContainer;
-import x.event.LiveList;
 import x.event.Action;
+import x.event.LiveList;
 import x.uilist.IListModel;
 import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;

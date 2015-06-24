@@ -6,11 +6,11 @@ import x.log.ILogManager;
 import x.uiwidget.*;
 
 import javax.swing.*;
-
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-import static javax.swing.BoxLayout.*;
+import static javax.swing.BoxLayout.X_AXIS;
+import static javax.swing.BoxLayout.Y_AXIS;
 
 final class SEUIRenderer {
 

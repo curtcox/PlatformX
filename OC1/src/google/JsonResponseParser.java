@@ -1,6 +1,11 @@
 package google;
 
+import c1.ui.C1Icons;
 import com.codename1.io.JSONParser;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.net.URI;
@@ -8,11 +13,6 @@ import java.net.URISyntaxException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-
-import x.log.ILog;
-import x.log.ILogManager;
-import x.Registry;
-import c1.ui.C1Icons;
 
 abstract class JsonResponseParser<T>
 {

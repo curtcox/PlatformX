@@ -1,5 +1,7 @@
 package se.pagefactories;
 
+import se.uilist.SESearchFilterInstaller;
+import se.uilist.SESearchableList;
 import x.event.XLiveList;
 import x.page.Page;
 import x.page.PageFactory;
@@ -8,8 +10,6 @@ import x.pagefactories.CellConfigurer;
 import x.pagefactories.ItemsPage;
 import x.uilist.StringToListFilter;
 import x.uiwidget.ISearchableList;
-import se.uilist.SESearchFilterInstaller;
-import se.uilist.SESearchableList;
 
 import javax.swing.*;
 import java.util.List;

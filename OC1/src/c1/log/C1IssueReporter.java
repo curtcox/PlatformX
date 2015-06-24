@@ -1,10 +1,10 @@
 package c1.log;
 
+import c1.app.Version;
+import c1.device.C1DeviceInfo;
 import com.codename1.messaging.Message;
 import com.codename1.ui.Display;
 import x.Registry;
-import c1.app.Version;
-import c1.device.C1DeviceInfo;
 import x.log.XLogWriter;
 
 public final class C1IssueReporter {

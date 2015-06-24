@@ -2,7 +2,7 @@ package se.uiwidget;
 
 import x.ui.AttributedString;
 import x.ui.ColumnBoxFlowLayout;
-import x.uiwidget.UIAttributedText.*;
+import x.uiwidget.UIAttributedText.SelectedEvent;
 
 import javax.swing.*;
 import java.awt.*;

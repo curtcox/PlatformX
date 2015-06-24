@@ -1,8 +1,8 @@
 package mite.handlers;
 
-import java.io.IOException;
+import mite.HTTPRequest;
 
-import mite.*;
+import java.io.IOException;
 
 /**
  * Simple handler mostly for demonstration and debugging.

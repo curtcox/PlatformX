@@ -1,8 +1,8 @@
 package se.ui;
 
+import se.events.Events;
 import x.page.PageLink;
 import x.uiwidget.UIComponent;
-import se.events.Events;
 
 public final class EditLinkEvent
     implements Events.Event

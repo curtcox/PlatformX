@@ -1,13 +1,13 @@
 package c1.app;
 
+import c1.log.C1IssueReporter;
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
+import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
-import x.Registry;
-import c1.log.C1IssueReporter;
 
 final class C1ExceptionLogger
     implements ActionListener

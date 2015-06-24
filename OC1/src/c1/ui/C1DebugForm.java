@@ -1,11 +1,11 @@
 package c1.ui;
 
 import c1.command.C1LoggedCommand;
+import c1.log.C1IssueReporter;
 import com.codename1.ui.Component;
 import com.codename1.ui.Form;
 import com.codename1.ui.Graphics;
 import com.codename1.ui.animations.Transition;
-import c1.log.C1IssueReporter;
 import x.command.Command;
 
 /**

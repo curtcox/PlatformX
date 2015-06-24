@@ -1,9 +1,9 @@
 package x.page;
 
+import x.Registry;
 import x.event.Action;
 import x.log.ILog;
 import x.log.ILogManager;
-import x.Registry;
 import x.screen.Screen;
 import x.uiwidget.ISearchableList;
 import x.uiwidget.UIPeeredComponent;

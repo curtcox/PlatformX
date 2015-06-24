@@ -1,7 +1,7 @@
 package hash.parse;
 
-import hash.NumericConstant;
 import hash.Number;
+import hash.NumericConstant;
 import hash.lex.Tokens;
 
 final class NumericConstantParser 

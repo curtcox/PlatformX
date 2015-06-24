@@ -3,8 +3,9 @@ package hash.parse;
 import hash.Identifier;
 import hash.Method;
 import hash.SyntaxError;
-import static hash.SyntaxError.Type.*;
 import hash.lex.Tokens;
+
+import static hash.SyntaxError.Type.*;
 
 /**
  * For parsing methods with syntax errors into syntax errors.

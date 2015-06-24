@@ -1,7 +1,7 @@
 package x.pages;
 
-import x.app.CurrentState;
 import x.Registry;
+import x.app.CurrentState;
 import x.domain.ServiceProvider;
 import x.page.PageLink;
 import x.page.SelectionListPage;

@@ -1,7 +1,8 @@
 package an.a22.uilist;
 
 import android.content.Context;
-import android.widget.*;
+import android.widget.ListAdapter;
+import android.widget.ListView;
 import x.event.Action;
 import x.uilist.UIList;
 

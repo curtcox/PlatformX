@@ -1,12 +1,13 @@
 package google;
 
+import x.Registry;
+import x.net.Network;
+
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URI;
 import java.util.List;
 import java.util.Map;
-import x.Registry;
-import x.net.Network;
 
 abstract class WebServiceSearch<T> {
     

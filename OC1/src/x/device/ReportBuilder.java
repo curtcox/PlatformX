@@ -1,6 +1,7 @@
 package x.device;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * For building a plain-text report.

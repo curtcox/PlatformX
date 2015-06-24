@@ -1,8 +1,9 @@
 package x.net;
 
-import java.net.URI;
 import x.IO;
 import x.util.StringMap;
+
+import java.net.URI;
 
 /**
  * A StringMap that gets values from the network.

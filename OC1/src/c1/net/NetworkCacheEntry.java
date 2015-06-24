@@ -1,17 +1,18 @@
 package c1.net;
 
+import c1.ui.C1EmptyImage;
 import com.codename1.io.Storage;
 import com.codename1.io.Util;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.URLImage;
+import x.Registry;
+import x.uiwidget.UIImage;
+import x.util.Strings;
+
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URI;
 import java.net.URISyntaxException;
-import x.Registry;
-import c1.ui.C1EmptyImage;
-import x.uiwidget.UIImage;
-import x.util.Strings;
 
 final class NetworkCacheEntry {
 

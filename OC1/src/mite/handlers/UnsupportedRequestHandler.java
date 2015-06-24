@@ -1,16 +1,12 @@
 package mite.handlers;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.Writer;
-import java.net.Socket;
-
 import mite.ContentType;
 import mite.HTTPVersion;
 import mite.RequestHandler;
 import mite.StatusCode;
+
+import java.io.*;
+import java.net.Socket;
 
 /**
  * To report to the client that the request is unsupported.

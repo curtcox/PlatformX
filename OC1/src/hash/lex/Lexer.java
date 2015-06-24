@@ -1,6 +1,7 @@
 package hash.lex;
 
 import hash.Identifier;
+
 import java.util.ArrayList;
 import java.util.List;
 

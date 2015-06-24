@@ -1,12 +1,15 @@
 package c1.screen;
 
 import com.codename1.capture.Capture;
-import com.codename1.components.*;
-import com.codename1.ui.*;
-import com.codename1.ui.events.*;
+import com.codename1.components.SpanButton;
+import com.codename1.ui.Display;
+import com.codename1.ui.Image;
+import com.codename1.ui.events.ActionEvent;
+import com.codename1.ui.events.ActionListener;
 import hash.NamedExpression;
+
 import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
 
 /**
  * A map of component methods for adding to a ScreenContext.

@@ -1,10 +1,10 @@
 package se.app;
 
+import mite.MiteHTTPServer;
 import x.Registry;
 import x.page.PageLink;
 import x.screen.Screen;
 import x.util.StringMap;
-import mite.MiteHTTPServer;
 
 import javax.swing.*;
 import java.awt.*;

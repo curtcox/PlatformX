@@ -1,10 +1,10 @@
 package x.pagefactories;
 
-import java.util.List;
-
 import x.Registry;
 import x.services.IGeocoder;
 import x.uilist.StringToList;
+
+import java.util.List;
 
 final class GeocoderStringToList
     implements StringToList

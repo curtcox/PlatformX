@@ -1,10 +1,10 @@
 package hash;
 
-import java.util.Arrays;
-
+import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
-import x.Registry;
+
+import java.util.Arrays;
 
 /**
  * For checking a series of NamedValues until a match is found.

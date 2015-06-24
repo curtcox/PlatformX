@@ -2,11 +2,11 @@ package x.pages;
 
 import x.Registry;
 import x.app.CurrentState;
+import x.domain.Rating;
 import x.domain.ServiceProvider;
-import x.pageparts.ScreenButton;
 import x.page.PageLink;
 import x.pageparts.ProviderDetailsButton;
-import x.domain.Rating;
+import x.pageparts.ScreenButton;
 import x.stores.MyRatings;
 import x.ui.IDisplay;
 import x.uiwidget.UIButton;

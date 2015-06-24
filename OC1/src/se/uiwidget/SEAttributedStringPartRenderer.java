@@ -4,9 +4,8 @@ import x.ui.AttributedString;
 import x.ui.Color;
 import x.ui.Dimension;
 import x.ui.Point;
-import java.awt.FontMetrics;
 
-import java.awt.Graphics2D;
+import java.awt.*;
 
 final class SEAttributedStringPartRenderer
     implements AttributedString.PartRenderer

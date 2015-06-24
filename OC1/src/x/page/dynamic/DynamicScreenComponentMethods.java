@@ -1,12 +1,13 @@
 package x.page.dynamic;
 
+import hash.NamedExpression;
+import x.pageparts.ScreenButton;
 import x.uiwidget.UIButton;
 import x.uiwidget.UILabel;
-import hash.NamedExpression;
-import java.net.*;
-import java.util.*;
 
-import x.pageparts.ScreenButton;
+import java.net.URI;
+import java.net.URISyntaxException;
+import java.util.HashMap;
 
 /**
  * A map of component methods for adding to a ScreenContext.

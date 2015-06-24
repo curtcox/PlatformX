@@ -1,12 +1,12 @@
 package se.ui;
 
+import se.events.Events;
+import se.util.TaggedValue;
+import se.util.TaggedValueStringMap;
 import x.Registry;
 import x.command.Command;
 import x.page.PageLink;
 import x.uiwidget.UIComponent;
-import se.events.Events;
-import se.util.TaggedValue;
-import se.util.TaggedValueStringMap;
 
 public final class EditCommand
     extends Command
