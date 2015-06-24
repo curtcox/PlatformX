@@ -1,7 +1,7 @@
 package an.a22.app;
 
 import an.a22.device.AnDeviceInfo;
-import an.a22.screenfactories.AnItemListPageFactoryFactory;
+import an.a22.pagefactories.AnItemListPageFactoryFactory;
 import an.a22.ui.AnDisplay;
 import an.a22.ui.AnFormFactory;
 import common.Registry;

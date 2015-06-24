@@ -2,7 +2,7 @@ package c1.app;
 
 import c1.device.C1DeviceInfo;
 import c1.net.C1CachedNetwork;
-import c1.screenfactories.C1ItemListPageFactoryFactory;
+import c1.pagefactories.C1ItemListPageFactoryFactory;
 import c1.services.C1Locations;
 import c1.services.Geocoder;
 import c1.services.ILocationManager;

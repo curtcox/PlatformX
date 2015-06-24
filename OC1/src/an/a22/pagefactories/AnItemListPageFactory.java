@@ -1,8 +1,10 @@
-package c1.screenfactories;
+package an.a22.pagefactories;
 
-import c1.uilist.C1SearchFilterInstaller;
-import c1.uilist.C1SearchableList;
-import com.codename1.ui.Label;
+import an.a22.uilist.AnSearchFilterInstaller;
+import an.a22.uilist.AnSearchableList;
+import android.content.Context;
+import android.widget.TextView;
+import common.Registry;
 import common.event.CommonLiveList;
 import common.page.Page;
 import common.page.PageFactory;
@@ -14,12 +16,12 @@ import common.uiwidget.ISearchableList;
 
 import java.util.List;
 
-final class C1ItemListPageFactory<T>
+final class AnItemListPageFactory<T>
     implements PageFactory
 {
     final List<T> values;
 
-    C1ItemListPageFactory(List<T> values) {
+    AnItemListPageFactory(List<T> values) {
         this.values = values;
     }
     
@@ -28,9 +30,13 @@ final class C1ItemListPageFactory<T>
     }     
 
     private ISearchableList<T> newSearchableList() {
-        C1SearchableList<T> list = new C1SearchableList(new CommonLiveList(values),new Label(),new CellConfigurer());
-        C1SearchFilterInstaller.c1SpecificInstall(list, StringToListFilter.DEFAULT);
+        AnSearchableList<T> list = new AnSearchableList(new CommonLiveList(values),new TextView(context()),new CellConfigurer());
+        AnSearchFilterInstaller.anSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
+    }
+
+    private Context context() {
+        return Registry.get(Context.class);
     }
 
 }

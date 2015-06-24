@@ -17,7 +17,7 @@ import se.device.SEDeviceInfo;
 import se.editor.ScreenEditor;
 import se.events.Events;
 import common.net.CommonRawNetwork;
-import se.screenfactories.SEItemListPageFactoryFactory;
+import se.pagefactories.SEItemListPageFactoryFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
 import se.util.SimpleTaggedValueStringMap;

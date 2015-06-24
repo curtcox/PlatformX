@@ -1,15 +1,15 @@
-package an.a22.screenfactories;
+package se.pagefactories;
 
 import common.page.PageFactory;
 import common.pagefactories.ItemListPageFactoryFactory;
 
 import java.util.List;
 
-public final class AnItemListPageFactoryFactory
+public final class SEItemListPageFactoryFactory
     implements ItemListPageFactoryFactory
 {
     @Override
     public PageFactory newFactory(List values) {
-        return new AnItemListPageFactory(values);
+        return new SEItemListPageFactory(values);
     }
 }

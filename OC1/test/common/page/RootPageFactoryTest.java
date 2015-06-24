@@ -1,6 +1,6 @@
 package common.page;
 
-import c1.screenfactories.C1ItemListPageFactoryFactory;
+import c1.pagefactories.C1ItemListPageFactoryFactory;
 import common.Registry;
 import common.device.IDeviceInfo;
 import common.log.ILogManager;

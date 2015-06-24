@@ -1,4 +1,4 @@
-package c1.screenfactories;
+package c1.pagefactories;
 
 import common.page.PageFactory;
 import common.pagefactories.ItemListPageFactoryFactory;

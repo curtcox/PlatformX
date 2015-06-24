@@ -1,5 +1,8 @@
-package se.screenfactories;
+package c1.pagefactories;
 
+import c1.uilist.C1SearchFilterInstaller;
+import c1.uilist.C1SearchableList;
+import com.codename1.ui.Label;
 import common.event.CommonLiveList;
 import common.page.Page;
 import common.page.PageFactory;
@@ -8,18 +11,15 @@ import common.pagefactories.CellConfigurer;
 import common.pagefactories.ItemsPage;
 import common.uilist.StringToListFilter;
 import common.uiwidget.ISearchableList;
-import se.uilist.SESearchFilterInstaller;
-import se.uilist.SESearchableList;
 
-import javax.swing.*;
 import java.util.List;
 
-final class SEItemListPageFactory<T>
+final class C1ItemListPageFactory<T>
     implements PageFactory
 {
     final List<T> values;
 
-    SEItemListPageFactory(List<T> values) {
+    C1ItemListPageFactory(List<T> values) {
         this.values = values;
     }
     
@@ -28,8 +28,8 @@ final class SEItemListPageFactory<T>
     }     
 
     private ISearchableList<T> newSearchableList() {
-        SESearchableList<T> list = new SESearchableList(new CommonLiveList(values),new JLabel(),new CellConfigurer());
-        SESearchFilterInstaller.seSpecificInstall(list, StringToListFilter.DEFAULT);
+        C1SearchableList<T> list = new C1SearchableList(new CommonLiveList(values),new Label(),new CellConfigurer());
+        C1SearchFilterInstaller.c1SpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }
 
