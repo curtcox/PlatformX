@@ -1,12 +1,16 @@
 package an.a22.ui;
 
+import android.content.Context;
+import android.view.Display;
+import android.view.WindowManager;
+import common.Registry;
 import common.ui.IDisplay;
 import common.ui.IForm;
 
 public final class AnDisplay
     implements IDisplay
 {
-    AnForm form;
+    private AnForm form;
     private static AnDisplay singleton;
 
     static AnDisplay of() {
@@ -22,7 +26,7 @@ public final class AnDisplay
 
     @Override
     public boolean isPortrait() {
-        return false;
+        return display().getOrientation()==0;
     }
 
     @Override
@@ -37,5 +41,17 @@ public final class AnDisplay
     @Override
     public void execute(String url) {
 
+    }
+
+    Display display() {
+        return windowManager().getDefaultDisplay();
+    }
+
+    WindowManager windowManager() {
+        return ((WindowManager) context().getSystemService(Context.WINDOW_SERVICE));
+    }
+
+    Context context() {
+        return Registry.get(Context.class);
     }
 }
