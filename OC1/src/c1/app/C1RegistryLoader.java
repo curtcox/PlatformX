@@ -2,7 +2,7 @@ package c1.app;
 
 import c1.device.C1DeviceInfo;
 import c1.net.C1CachedNetwork;
-import c1.screenfactories.C1ItemListScreenFactoryFactory;
+import c1.screenfactories.C1ItemListPageFactoryFactory;
 import c1.services.C1Locations;
 import c1.services.Geocoder;
 import c1.services.ILocationManager;
@@ -25,7 +25,7 @@ import common.page.RootPageFactory;
 import common.page.PageFactory;
 import common.page.dynamic.StringMapAsTaggedStringSources;
 import common.page.dynamic.TaggedStringSources;
-import common.screenfactories.ItemListScreenFactoryFactory;
+import common.pagefactories.ItemListPageFactoryFactory;
 import common.services.ServiceProviders;
 import common.stores.MyRatings;
 import common.ui.IDisplay;
@@ -66,7 +66,7 @@ final class C1RegistryLoader {
         StringMap stringMap = RootStringMap.of();
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
-        put(ItemListScreenFactoryFactory.class, new C1ItemListScreenFactoryFactory());
+        put(ItemListPageFactoryFactory.class, new C1ItemListPageFactoryFactory());
         put(PageFactory.class,    RootPageFactory.of());
     }
 

@@ -9,8 +9,8 @@ import common.event.CommonLiveList;
 import common.page.Page;
 import common.page.PageFactory;
 import common.page.PageLink;
-import common.screenfactories.CellConfigurer;
-import common.screenfactories.ItemsPage;
+import common.pagefactories.CellConfigurer;
+import common.pagefactories.ItemsPage;
 import common.uilist.StringToListFilter;
 import common.uiwidget.ISearchableList;
 

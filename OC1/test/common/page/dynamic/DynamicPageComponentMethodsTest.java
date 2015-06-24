@@ -1,6 +1,6 @@
 package common.page.dynamic;
 
-import common.screenparts.ScreenButton;
+import common.pageparts.ScreenButton;
 import common.uiwidget.UILabel;
 import hash.NamedExpression;
 import org.junit.Test;

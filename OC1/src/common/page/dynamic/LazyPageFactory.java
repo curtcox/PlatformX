@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A PageFactory that lazily creates screens.
+ * A PageFactory that lazily creates pages.
  * See DynamicPageFactory.
  */
 public final class LazyPageFactory

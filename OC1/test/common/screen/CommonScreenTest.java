@@ -203,7 +203,7 @@ public class CommonScreenTest {
             Screen.show(link, factory);
             fail();
         } catch (RuntimeException e) {
-            assertEquals("No screens found for " + link,e.getMessage());
+            assertEquals("No pages found for " + link,e.getMessage());
         }
     }
 

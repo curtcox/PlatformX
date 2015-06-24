@@ -3,7 +3,7 @@ package common.util;
 import java.util.HashMap;
 import java.util.Map;
 
-import common.screens.*;
+import common.pages.*;
 
 /**
  * For finding the Mirror for a given object.

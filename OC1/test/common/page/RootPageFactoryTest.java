@@ -1,12 +1,12 @@
 package common.page;
 
-import c1.screenfactories.C1ItemListScreenFactoryFactory;
+import c1.screenfactories.C1ItemListPageFactoryFactory;
 import common.Registry;
 import common.device.IDeviceInfo;
 import common.log.ILogManager;
 import common.page.dynamic.StringMapAsTaggedStringSources;
 import common.page.dynamic.TaggedStringSources;
-import common.screenfactories.ItemListScreenFactoryFactory;
+import common.pagefactories.ItemListPageFactoryFactory;
 import common.ui.IFormFactory;
 import common.util.SimpleStringMap;
 import common.util.StringMap;
@@ -29,7 +29,7 @@ public class RootPageFactoryTest {
         StringMap stringMap = new SimpleStringMap(null);
         Registry.put(StringMap.class, stringMap);
         Registry.put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
-        Registry.put(ItemListScreenFactoryFactory.class, new C1ItemListScreenFactoryFactory());
+        Registry.put(ItemListPageFactoryFactory.class, new C1ItemListPageFactoryFactory());
         Registry.put(IDeviceInfo.class, new FakeDeviceInfo());
         Registry.put(IFormFactory.class, new FakeFormFactory());
         Registry.put(ILogManager.class, new FakeLogManager());

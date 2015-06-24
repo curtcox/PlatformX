@@ -3,7 +3,7 @@ package c1.screen;
 import c1.screens.FakeUI;
 import common.page.Page;
 import common.page.PageLink;
-import common.screenparts.ScreenButton;
+import common.pageparts.ScreenButton;
 import common.uiwidget.UIButton;
 import common.uiwidget.UIComponent;
 import fake.FakeC1RegistryLoader;

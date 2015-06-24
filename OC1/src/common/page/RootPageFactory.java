@@ -5,10 +5,10 @@ import common.page.dynamic.DynamicPageFactory;
 import common.page.dynamic.LazyPageFactory;
 import common.page.dynamic.StringMapStringSource;
 import common.page.dynamic.TaggedStringSources;
-import common.screenfactories.*;
-import common.screens.CustomComponentScreen;
-import common.screens.Home;
-import common.screens.ProviderDetailsScreen;
+import common.pagefactories.*;
+import common.pages.CustomComponentPage;
+import common.pages.Home;
+import common.pages.ProviderDetailsPage;
 import common.util.StringMap;
 
 import java.util.Arrays;
@@ -31,14 +31,14 @@ public final class RootPageFactory {
 
     public static PageFactory of(StringMap layouts, TaggedStringSources taggedLayouts) {
         return new CompositePageFactory(
-                DeviceInfoScreenFactory.of(),
-                LocationSelectionScreenFactory.FACTORY,
-                ProviderDetailsScreen.FACTORY,
-                ServiceProviderFilterScreenFactory.FACTORY,
+                DeviceInfoPageFactory.of(),
+                LocationSelectionPageFactory.FACTORY,
+                ProviderDetailsPage.FACTORY,
+                ServiceProviderFilterPageFactory.FACTORY,
                 ServiceProviderSearchScreenFactory.FACTORY,
-                CustomComponentScreen.FACTORY,
+                CustomComponentPage.FACTORY,
                 dynamicScreens(layouts),
-                IndexScreenFactory.of(index),
+                IndexPageFactory.of(index),
                 new LazyPageFactory(taggedLayouts)
         );
     }

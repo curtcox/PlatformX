@@ -3,7 +3,7 @@ package c1.screenfactories;
 import common.page.Page;
 import common.page.PageFactory;
 import common.page.PageLink;
-import common.screenfactories.IndexScreenFactory;
+import common.pagefactories.IndexPageFactory;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,7 +21,7 @@ public class IndexPageFactoryTest {
     }
 
     static PageFactory indexScreenFactory(String... values) {
-        return IndexScreenFactory.of(Arrays.asList(values));
+        return IndexPageFactory.of(Arrays.asList(values));
     }
 
     @Test

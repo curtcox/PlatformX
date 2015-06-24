@@ -5,7 +5,7 @@ import common.page.Page;
 import common.page.PageFactory;
 import common.page.PageLink;
 import common.page.PageTags;
-import common.screens.Home;
+import common.pages.Home;
 import common.uiwidget.UIComponent;
 import common.uiwidget.UILabel;
 import fake.FakeSERegistryLoader;

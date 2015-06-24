@@ -9,7 +9,7 @@ import common.net.Network;
 import common.page.RootPageFactory;
 import common.page.PageFactory;
 import common.page.dynamic.TaggedStringSources;
-import common.screenfactories.ItemListScreenFactoryFactory;
+import common.pagefactories.ItemListPageFactoryFactory;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import common.util.StringMap;
@@ -17,7 +17,7 @@ import se.device.SEDeviceInfo;
 import se.editor.ScreenEditor;
 import se.events.Events;
 import common.net.CommonRawNetwork;
-import se.screenfactories.SEItemListScreenFactoryFactory;
+import se.screenfactories.SEItemListPageFactoryFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
 import se.util.SimpleTaggedValueStringMap;
@@ -45,7 +45,7 @@ final class SERegistryLoader {
         put(IDisplay.class,         SEDisplay.of());
         put(Network.class,          new CommonRawNetwork());
         putTaggedValueStringMap();
-        put(ItemListScreenFactoryFactory.class, new SEItemListScreenFactoryFactory());
+        put(ItemListPageFactoryFactory.class, new SEItemListPageFactoryFactory());
         put(PageFactory.class,    RootPageFactory.of());
         put(ScreenEditor.class,     ScreenEditor.of());
     }

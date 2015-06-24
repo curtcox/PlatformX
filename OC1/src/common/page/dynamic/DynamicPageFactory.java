@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A PageFactory that dynamically creates screens.
+ * A PageFactory that dynamically creates pages.
  * See LazyPageFactory.
  */
 public final class DynamicPageFactory

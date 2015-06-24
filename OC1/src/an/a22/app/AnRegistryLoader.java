@@ -1,7 +1,7 @@
 package an.a22.app;
 
 import an.a22.device.AnDeviceInfo;
-import an.a22.screenfactories.AnItemListScreenFactoryFactory;
+import an.a22.screenfactories.AnItemListPageFactoryFactory;
 import an.a22.ui.AnDisplay;
 import an.a22.ui.AnFormFactory;
 import common.Registry;
@@ -17,7 +17,7 @@ import common.page.PageFactory;
 import common.page.RootPageFactory;
 import common.page.dynamic.StringMapAsTaggedStringSources;
 import common.page.dynamic.TaggedStringSources;
-import common.screenfactories.ItemListScreenFactoryFactory;
+import common.pagefactories.ItemListPageFactoryFactory;
 import common.ui.IDisplay;
 import common.ui.IFormFactory;
 import common.util.StringMap;
@@ -46,7 +46,7 @@ final class AnRegistryLoader {
         StringMap stringMap = RootStringMap.of();
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
-        put(ItemListScreenFactoryFactory.class, new AnItemListScreenFactoryFactory());
+        put(ItemListPageFactoryFactory.class, new AnItemListPageFactoryFactory());
         put(PageFactory.class,    RootPageFactory.of());
     }
 
