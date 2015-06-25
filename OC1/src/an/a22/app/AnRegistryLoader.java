@@ -33,7 +33,7 @@ final class AnRegistryLoader {
     }
 
     static void loadAndroidPlatform() {
-        put(IDisplay.class,         new AnDisplay());
+        put(IDisplay.class,         AnDisplay.of());
         put(IDeviceInfo.class,      new AnDeviceInfo());
     }
 

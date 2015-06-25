@@ -27,7 +27,7 @@ public final class SEDisplay
         return new SEDisplay(frame());
     }
 
-    SEDisplay(JFrame frame) {
+    private SEDisplay(JFrame frame) {
         this.frame = frame;
     }
 

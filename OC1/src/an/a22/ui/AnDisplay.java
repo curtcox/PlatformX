@@ -16,7 +16,9 @@ public final class AnDisplay
     private AnForm form;
     private static AnDisplay singleton;
 
-    static AnDisplay of() {
+    private AnDisplay() {}
+
+    public static AnDisplay of() {
         if (singleton==null) {
             singleton = newDisplay();
         }
