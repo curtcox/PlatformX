@@ -1,5 +1,6 @@
 package fake;
 
+import c1.pagefactories.C1ItemListPageFactoryFactory;
 import c1.services.C1Locations;
 import c1.services.ILocationManager;
 import c1.ui.C1FormFactory;
@@ -13,6 +14,7 @@ import x.domain.ServiceProvider;
 import x.log.XLogManager;
 import x.log.ILogManager;
 import x.log.XLogWriter;
+import x.pagefactories.ItemListPageFactoryFactory;
 import x.services.ServiceProviders;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
@@ -20,17 +22,18 @@ import x.ui.IFormFactory;
 public class FakeC1RegistryLoader {
     
     public static void load() {
-        put(ILogManager.class,      new XLogManager());
-        put(XLogWriter.class,        new XLogWriter());
-        put(Storage.class,          new FakeStorage());
-        put(ILocationManager.class, new FakeLocationManager());
-        put(C1Locations.class,        new C1Locations());
-        put(ServiceProvider.class,  ServiceProvider.NULL);
-        put(ServiceProviders.class, new ServiceProviders());
-        put(CurrentState.class,     new CurrentState());
-        put(C1Icons.class,            new C1Icons());
-        put(IFormFactory.class,     new C1FormFactory());
-        put(IDisplay.class,         new FakeDisplay());
+        put(ILogManager.class,                new XLogManager());
+        put(XLogWriter.class,                 new XLogWriter());
+        put(Storage.class,                    new FakeStorage());
+        put(ILocationManager.class,           new FakeLocationManager());
+        put(C1Locations.class,                new C1Locations());
+        put(ServiceProvider.class,            ServiceProvider.NULL);
+        put(ServiceProviders.class,           new ServiceProviders());
+        put(CurrentState.class,               new CurrentState());
+        put(C1Icons.class,                    new C1Icons());
+        put(IFormFactory.class,               new C1FormFactory());
+        put(IDisplay.class,                   new FakeDisplay());
+        put(ItemListPageFactoryFactory.class, new C1ItemListPageFactoryFactory());
         initDisplay();
     }
     

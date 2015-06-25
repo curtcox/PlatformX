@@ -1,23 +1,28 @@
-package c1.pagefactories;
+package an.a22.pagefactories;
 
+import fake.FakeAnRegistryLoader;
+import org.junit.Before;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.robolectric.RobolectricTestRunner;
+import org.robolectric.annotation.Config;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.pagefactories.IndexPageFactory;
-import fake.FakeC1RegistryLoader;
-import org.junit.Before;
-import org.junit.Test;
 
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 
-public class IndexPageFactoryTest {
+@RunWith(RobolectricTestRunner.class)
+@Config(manifest=Config.NONE)
+public class AnIndexPageFactoryTest {
 
     @Before
     public void setUp() {
-        FakeC1RegistryLoader.load();
+        FakeAnRegistryLoader.load();
     }
 
     static PageFactory indexScreenFactory(String... values) {
