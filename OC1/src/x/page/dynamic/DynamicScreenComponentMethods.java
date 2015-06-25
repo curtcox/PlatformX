@@ -1,7 +1,7 @@
 package x.page.dynamic;
 
 import hash.NamedExpression;
-import x.pageparts.ScreenButton;
+import x.pageparts.XScreenButton;
 import x.uiwidget.UIButton;
 import x.uiwidget.UILabel;
 
@@ -78,11 +78,11 @@ final class DynamicScreenComponentMethods
     }
 
     private UIButton button(String text, String image, String leadingTo) {
-        return ScreenButton.builder().text(text).image(image).leadingTo(leadingTo).build();
+        return XScreenButton.builder().text(text).image(image).leadingTo(leadingTo).build();
     }
 
     private UIButton link(String text) {
-        return ScreenButton.builder().text(text).leadingTo(text).build();
+        return XScreenButton.builder().text(text).leadingTo(text).build();
     }
     
 }

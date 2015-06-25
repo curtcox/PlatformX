@@ -1,6 +1,6 @@
 package x.page.dynamic;
 
-import x.pageparts.ScreenButton;
+import x.pageparts.XScreenButton;
 import x.uiwidget.UILabel;
 import hash.NamedExpression;
 import org.junit.Test;
@@ -31,7 +31,7 @@ public class DynamicPageComponentMethodsTest {
         String text = "text";
         String image = "image";
         String leadingTo = "leading to";
-        ScreenButton button = (ScreenButton) invoke("button",text,image,leadingTo);
+        XScreenButton button = (XScreenButton) invoke("button",text,image,leadingTo);
         assertSame(text,button.text);
         assertSame(image,button.icon);
         assertSame(leadingTo,button.link.tags.toString());
@@ -47,7 +47,7 @@ public class DynamicPageComponentMethodsTest {
     @Test
     public void invoking_link_creates_button_leading_to_value_with_text_value() {
         String text = "text";
-        ScreenButton button = (ScreenButton) invoke("link",text);
+        XScreenButton button = (XScreenButton) invoke("link",text);
         assertSame(text,button.text);
         assertSame(text, button.link.tags.toString());
     }

@@ -1,9 +1,9 @@
-package c1.screen;
+package x.screen;
 
 import c1.screens.FakeUI;
 import x.page.Page;
 import x.page.PageLink;
-import x.pageparts.ScreenButton;
+import x.pageparts.XScreenButton;
 import x.uiwidget.UIButton;
 import x.uiwidget.UIComponent;
 import fake.FakeC1RegistryLoader;
@@ -15,7 +15,7 @@ import java.util.concurrent.Callable;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
-public class C1ScreenButtonTest {
+public class XScreenButtonTest {
 
     PageLink link = PageLink.of("");
     TestPage page = new TestPage(link);
@@ -43,7 +43,7 @@ public class C1ScreenButtonTest {
     private UIButton createScreenButtonOnEDT(final String text, final Page page) throws Exception {
         return (UIButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return ScreenButton.builder().text(text).leadingTo(page).build();
+                return XScreenButton.builder().text(text).leadingTo(page).build();
             }
         });
     }

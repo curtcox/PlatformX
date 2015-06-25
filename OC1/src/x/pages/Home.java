@@ -4,7 +4,7 @@ import x.Registry;
 import x.domain.ServiceProvider;
 import x.pageparts.ProviderDetailsButton;
 import x.pageparts.ProviderRatingButton;
-import x.pageparts.ScreenButton;
+import x.pageparts.XScreenButton;
 import x.services.LocationService;
 import x.ui.TextPosition;
 import x.uiwidget.UIButton;
@@ -27,7 +27,7 @@ public final class Home {
     }
 
     UIButton searchNearbyButton() {
-        UIButton button = ScreenButton.builder()
+        UIButton button = XScreenButton.builder()
                 .text("Search nearby")
                 .image("system-search-4.png")
                 .action(clearLocationSelection())

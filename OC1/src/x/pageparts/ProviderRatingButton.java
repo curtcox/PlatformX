@@ -12,7 +12,7 @@ public final class ProviderRatingButton {
     private ProviderRatingButton() {}
     
     public static UIButton of() {
-        return ScreenButton.builder()
+        return XScreenButton.builder()
                 .text(buttonText())
                 .leadingTo("Rate")
                 .build();

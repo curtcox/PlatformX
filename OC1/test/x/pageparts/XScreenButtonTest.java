@@ -14,7 +14,7 @@ import org.junit.Test;
 import static mach.Mocks.*;
 import static org.junit.Assert.*;
 
-public class ScreenButtonTest  {
+public class XScreenButtonTest {
 
     IForm form;
     IFormFactory formFactory;
@@ -44,7 +44,7 @@ public class ScreenButtonTest  {
     @Test
     public void builder_throws_exception_when_no_screen_specified() {
         try {
-            ScreenButton.builder().build();
+            XScreenButton.builder().build();
             fail();
         } catch (RuntimeException e) {
             assertEquals("No page specified",e.getMessage());
@@ -53,21 +53,21 @@ public class ScreenButtonTest  {
 
     @Test
     public void tapping_screen_button_shows_screen_specified_by_reference() {
-        ScreenButton.builder().leadingTo(page).build().onTap();
+        XScreenButton.builder().leadingTo(page).build().onTap();
 
         verifyScreenShown();
     }
 
     @Test
     public void tapping_screen_button_shows_screen_specified_by_link() {
-        ScreenButton.builder().leadingTo(link).build().onTap();
+        XScreenButton.builder().leadingTo(link).build().onTap();
 
         verifyScreenShown();
     }
 
     @Test
     public void tapping_screen_button_shows_screen_specified_by_link_target() {
-        ScreenButton.builder().leadingTo(linkTarget).build().onTap();
+        XScreenButton.builder().leadingTo(linkTarget).build().onTap();
 
         verifyScreenShown();
     }
@@ -75,7 +75,7 @@ public class ScreenButtonTest  {
     @Test
     public void button_is_built_with_specified_text() {
         String expected = "button text";
-        String actual = ScreenButton.builder().text(expected).leadingTo(page).build().getText();
+        String actual = XScreenButton.builder().text(expected).leadingTo(page).build().getText();
 
         assertEquals(expected, actual);
     }
@@ -83,7 +83,7 @@ public class ScreenButtonTest  {
     @Test
     public void button_is_built_with_specified_image() {
         String expected = "image name";
-        String actual = ScreenButton.builder().image(expected).leadingTo(page).build().icon;
+        String actual = XScreenButton.builder().image(expected).leadingTo(page).build().icon;
 
         assertEquals(expected, actual);
     }

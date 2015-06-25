@@ -6,7 +6,7 @@ import x.domain.Rating;
 import x.domain.ServiceProvider;
 import x.page.PageLink;
 import x.pageparts.ProviderDetailsButton;
-import x.pageparts.ScreenButton;
+import x.pageparts.XScreenButton;
 import x.stores.MyRatings;
 import x.ui.IDisplay;
 import x.uiwidget.UIButton;
@@ -26,7 +26,7 @@ public final class Rate {
     }
 
     UIButton change_location_button() {
-        return ScreenButton.builder().text("Pick a different location").leadingTo(PageLink.of("Search")).build();
+        return XScreenButton.builder().text("Pick a different location").leadingTo(PageLink.of("Search")).build();
     }
 
     UIButton about_rating_button() {

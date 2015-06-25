@@ -9,7 +9,7 @@ import x.uiwidget.UIButton;
 public final class ProviderDetailsButton {
 
     public static UIButton of() {
-        return ScreenButton.builder()
+        return XScreenButton.builder()
                 .text(ServiceProvider.getCurrentName())
                 .leadingTo("ProviderDetails")
                 .build();

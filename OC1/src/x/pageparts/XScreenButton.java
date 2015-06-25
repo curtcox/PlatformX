@@ -9,13 +9,13 @@ import x.uiwidget.UIButton;
 /**
  * A button that will go to the given page when tapped.
  */
-public final class ScreenButton
+public final class XScreenButton
     extends UIButton
 {
     final Page page;
     public final PageLink link;
 
-    private ScreenButton(Builder builder) {
+    private XScreenButton(Builder builder) {
         super(builder.text);
         this.page = builder.page;
         this.link = builder.link;
@@ -43,7 +43,7 @@ public final class ScreenButton
 
         public UIButton build() {
             if (page !=null || link !=null) {
-                return new ScreenButton(this);
+                return new XScreenButton(this);
             }
             throw new IllegalStateException("No page specified");
         }
