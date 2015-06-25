@@ -1,16 +1,13 @@
-package c1.io;
+package c1;
 
 import fake.FakeC1RegistryLoader;
-import c1.JSON;
-import x.util.StringMap;
-import org.junit.Test;
-import static org.junit.Assert.*;
 import org.junit.Before;
+import org.junit.Test;
+import x.util.StringMap;
 
-/**
- *
- * @author Curt
- */
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
 public class JSONTest {
     
     @Before

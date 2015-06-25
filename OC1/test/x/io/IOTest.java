@@ -1,20 +1,20 @@
-package c1.io;
+package x.io;
+
+import mach.Mocks;
+import org.junit.Before;
+import org.junit.Test;
+import x.IO;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import x.IO;
-import x.Registry;
-import x.log.ILog;
-import x.log.ILogManager;
-import mach.Mocks;
-import org.junit.Before;
-import org.junit.Test;
-
 import static mach.Mocks._;
 import static mach.Mocks.verify;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 
 public class IOTest {
 
