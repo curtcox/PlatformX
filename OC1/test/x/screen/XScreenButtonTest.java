@@ -1,6 +1,6 @@
 package x.screen;
 
-import c1.screens.FakeUI;
+import fake.FakeUI;
 import x.page.Page;
 import x.page.PageLink;
 import x.pageparts.XScreenButton;

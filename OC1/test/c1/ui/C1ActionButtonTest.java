@@ -1,17 +1,20 @@
 package c1.ui;
 
-import x.event.StringSource;
-import x.uiwidget.UIButton;
 import fake.FakeC1RegistryLoader;
-import x.app.CurrentState;
-import x.event.Change;
-import c1.screens.FakeUI;
-import java.util.concurrent.Callable;
-import static org.junit.Assert.*;
+import fake.FakeUI;
 import org.junit.Before;
 import org.junit.Test;
+import x.app.CurrentState;
+import x.event.Change;
+import x.event.StringSource;
+import x.uiwidget.UIButton;
 
-public class ActionButtonTest {
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
+
+public class C1ActionButtonTest {
 
     boolean tapped;
     Change.Listener listener;
@@ -47,7 +50,7 @@ public class ActionButtonTest {
         String expected = stringSource().getString();
         Change.Source change = new Change.Source() {
             public void addListener(Change.Listener listener) {
-                ActionButtonTest.this.listener = listener;
+                C1ActionButtonTest.this.listener = listener;
             }
         };
         button.updateTextOnChange(change, stringSource());
@@ -60,7 +63,7 @@ public class ActionButtonTest {
     StringSource stringSource() {
         return new StringSource() {
             public String getString() {
-                return ActionButtonTest.this.toString();
+                return C1ActionButtonTest.this.toString();
             }
         };
     }

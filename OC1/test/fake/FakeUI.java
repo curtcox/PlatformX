@@ -1,9 +1,8 @@
-package c1.screens;
+package fake;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.plaf.UIManager;
 import x.page.PageLink;
-import fake.FakeUIManager;
 import c1.ui.C1Form;
 import x.ui.IForm;
 

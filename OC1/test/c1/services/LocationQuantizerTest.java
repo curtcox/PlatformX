@@ -1,13 +1,11 @@
 package c1.services;
 
 import com.codename1.location.Location;
-import static org.junit.Assert.*;
 import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+
 public class LocationQuantizerTest {
     
     LocationQuantizer testObject = new LocationQuantizer();

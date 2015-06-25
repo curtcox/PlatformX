@@ -1,7 +1,7 @@
 package c1.screen;
 
 
-import c1.screens.FakeUI;
+import fake.FakeUI;
 import x.page.Page;
 import x.screen.Screen;
 import x.page.PageLink;

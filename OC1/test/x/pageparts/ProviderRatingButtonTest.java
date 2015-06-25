@@ -1,6 +1,6 @@
 package x.pageparts;
 
-import c1.screens.FakeUI;
+import fake.FakeUI;
 import x.uiwidget.UIButton;
 import fake.FakeC1RegistryLoader;
 import java.util.concurrent.Callable;

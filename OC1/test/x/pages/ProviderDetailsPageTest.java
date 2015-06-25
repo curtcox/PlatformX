@@ -1,6 +1,6 @@
 package x.pages;
 
-import c1.screens.FakeUI;
+import fake.FakeUI;
 import x.page.PageLink;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
