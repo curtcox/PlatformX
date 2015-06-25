@@ -82,7 +82,7 @@ final class AnUIRenderer {
     }
 
     private static Context context() {
-        return null;
+        return Registry.get(Context.class);
     }
 
     private static void log(Throwable t) {
