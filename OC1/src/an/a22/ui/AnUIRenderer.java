@@ -1,7 +1,6 @@
 package an.a22.ui;
 
 import android.content.Context;
-import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
@@ -64,11 +63,10 @@ final class AnUIRenderer {
         final UIButton button = (UIButton) layout;
         Button aButton = new Button(context());
         aButton.setText(button.text);
-        aButton.setOnTouchListener(new View.OnTouchListener() {
+        aButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onTouch(View view, MotionEvent motionEvent) {
+            public void onClick(View view) {
                 button.onTap();
-                return true;
             }
         });
         return aButton;
