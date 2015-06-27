@@ -15,8 +15,8 @@ import static org.junit.Assert.assertNotNull;
 public class SEFilterListModelTest {
 
     ListDataListener listDataListener;
-    DefaultListModel xListModel = new DefaultListModel();
-    SEFilterListModel testObject = SEFilterListModel.of(xListModel);
+    DefaultListModel listModel = new DefaultListModel();
+    SEFilterListModel testObject = SEFilterListModel.of(listModel);
 
     @Before
     public void setUp() {
@@ -37,20 +37,20 @@ public class SEFilterListModelTest {
 
     @Test
     public void size_is_1_when_list_has_1_item() {
-        xListModel.addElement("stuff");
+        listModel.addElement("stuff");
         assertEquals(1, testObject.getSize());
     }
 
     @Test
     public void getElementAt_0_returns_1st_element() {
         Object expected = new Object();
-        xListModel.addElement(expected);
+        listModel.addElement(expected);
         assertEquals(expected,testObject.getElementAt(0));
     }
 
     @Test
     public void size_returns_filtered_size_when_set() {
-        xListModel.addElement("stuff");
+        listModel.addElement("stuff");
         testObject.setFilter(ListFilter.ALLOW_NONE);
         assertEquals(0, testObject.getSize());
     }
@@ -58,8 +58,8 @@ public class SEFilterListModelTest {
     @Test
     public void getElementAt_0_returns_1st_element_that_passes_filter() {
         final Object expected = new Object();
-        xListModel.addElement("unexpected");
-        xListModel.addElement(expected);
+        listModel.addElement("unexpected");
+        listModel.addElement(expected);
         testObject.setFilter(new ListFilter() {
             @Override
             public boolean passes(Object item) {
@@ -72,6 +72,15 @@ public class SEFilterListModelTest {
     @Test
     public void dataListener_is_notified_when_filter_changes() {
         testObject.setFilter(ListFilter.ALLOW_NONE);
+
+        verify();
+
+        wild(null); listDataListener.contentsChanged(null);
+    }
+
+    @Test
+    public void dataListener_is_notified_when_value_added() {
+        listModel.addElement("stuff");
 
         verify();
 

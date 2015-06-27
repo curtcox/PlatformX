@@ -1,6 +1,8 @@
 package x.device;
 
-import java.util.ArrayList;
+import x.event.LiveList;
+import x.event.XLiveList;
+
 import java.util.List;
 
 /**
@@ -8,7 +10,7 @@ import java.util.List;
  */
 public final class ReportBuilder {
 
-    final List<DeviceKeyValuePair> list = new ArrayList<DeviceKeyValuePair>();
+    final LiveList list = new XLiveList();
     final StringBuilder out = new StringBuilder();
 
     public void value(String key, Object value) {
@@ -30,7 +32,7 @@ public final class ReportBuilder {
         return out.toString();
     }
 
-    public List<DeviceKeyValuePair> toKeyValuePairs() {
+    public LiveList<DeviceKeyValuePair> toKeyValuePairs() {
         return list;
     }
 }

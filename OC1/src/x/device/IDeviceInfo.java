@@ -1,7 +1,7 @@
 package x.device;
 
-import java.util.List;
+import x.event.LiveList;
 
 public interface IDeviceInfo {
-    List<DeviceKeyValuePair> asDeviceKeyValuePairs();
+    LiveList<DeviceKeyValuePair> asDeviceKeyValuePairs();
 }

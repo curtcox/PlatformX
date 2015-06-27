@@ -16,10 +16,12 @@ public final class XLiveList
         this(new ArrayList());
     }
 
+    @Override
     public void addListener(Change.Listener listener) {
         this.listener = listener;
     }
 
+    @Override
     public Object get(int index) {
         if (index<0) {
             return null;
@@ -27,20 +29,28 @@ public final class XLiveList
         return list.get(index);
     }
 
+    @Override
     public int size() {
         return list.size();
     }
 
+    @Override
     public boolean add(Object object) {
         boolean added = list.add(object);
-        listener.onChange();
+        if (listener!=null) {
+            listener.onChange();
+        }
         return added;
+    }
+
+    @Override
+    public Object[] toArray() {
+        return list.toArray();
     }
 
     public boolean                       isEmpty() { throw unsupported(); }
     public boolean         contains(Object object) { throw unsupported(); }
     public Iterator                     iterator() { throw unsupported(); }
-    public Object[]                      toArray() { throw unsupported(); }
     public Object[]        toArray(Object[] array) { throw unsupported(); }
     public boolean           remove(Object object) { throw unsupported(); }
     public void                            clear() { throw unsupported(); }

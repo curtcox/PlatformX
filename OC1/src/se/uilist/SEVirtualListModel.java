@@ -14,6 +14,7 @@ final class SEVirtualListModel<T>
     implements ListModel<T>
 {
     private final LiveList<T> items;
+    private ListDataListener listDataListener;
 
     private SEVirtualListModel(LiveList items) {
         this.items = items;
@@ -21,7 +22,17 @@ final class SEVirtualListModel<T>
 
     public static SEVirtualListModel of(LiveList items) {
         SEVirtualListModel model = new SEVirtualListModel(items);
+        model.listenForItemChanges();
         return model;
+    }
+
+    private void listenForItemChanges() {
+        items.addListener(new Change.Listener() {
+            @Override
+            public void onChange() {
+                listDataListener.contentsChanged(dataChangedEvent());
+            }
+        });
     }
 
     public int getSize() {
@@ -35,12 +46,7 @@ final class SEVirtualListModel<T>
 
     @Override
     public void addListDataListener(final ListDataListener listDataListener) {
-        items.addListener(new Change.Listener() {
-            @Override
-            public void onChange() {
-                listDataListener.contentsChanged(dataChangedEvent());
-            }
-        });
+        this.listDataListener = listDataListener;
     }
 
     private ListDataEvent dataChangedEvent() {

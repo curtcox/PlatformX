@@ -8,6 +8,7 @@ import com.codename1.ui.plaf.UIManager;
 import x.device.DeviceKeyValuePair;
 import x.device.IDeviceInfo;
 import x.device.ReportBuilder;
+import x.event.LiveList;
 
 import java.util.List;
 
@@ -18,7 +19,7 @@ public final class C1DeviceInfo
     implements IDeviceInfo
 {
 
-    public List asDeviceKeyValuePairs() {
+    public LiveList asDeviceKeyValuePairs() {
         return buildReport().toKeyValuePairs();
     }
 

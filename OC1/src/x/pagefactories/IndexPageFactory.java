@@ -1,13 +1,12 @@
 package x.pagefactories;
 
 import x.Registry;
+import x.event.LiveList;
 import x.page.PageFactory;
-
-import java.util.List;
 
 public final class IndexPageFactory {
 
-    public static PageFactory of(final List<String> index) {
+    public static PageFactory of(final LiveList<String> index) {
         return factoryFactory().newFactory(index);
     }
 

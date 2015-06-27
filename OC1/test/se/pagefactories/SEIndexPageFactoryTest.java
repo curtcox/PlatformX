@@ -3,6 +3,7 @@ package se.pagefactories;
 import fake.FakeSERegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
+import x.event.XLiveList;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
@@ -21,7 +22,7 @@ public class SEIndexPageFactoryTest {
     }
 
     static PageFactory indexScreenFactory(String... values) {
-        return IndexPageFactory.of(Arrays.asList(values));
+        return IndexPageFactory.of(new XLiveList(Arrays.asList(values)));
     }
 
     @Test

@@ -1,6 +1,5 @@
 package an.a22.uilist;
 
-import android.widget.ArrayAdapter;
 import fake.FakeDataSetObserver;
 import org.junit.Before;
 import org.junit.Test;

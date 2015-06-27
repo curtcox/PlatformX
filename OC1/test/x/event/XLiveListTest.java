@@ -4,9 +4,8 @@ import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static mach.Mocks.verify;
+import static org.junit.Assert.*;
 
 public class XLiveListTest {
 
@@ -16,7 +15,6 @@ public class XLiveListTest {
     @Before
     public void setUp() {
         Mocks.init(this);
-        testObject.addListener(listener);
     }
 
     @Test
@@ -40,4 +38,24 @@ public class XLiveListTest {
         assertEquals(1,testObject.size());
     }
 
+    @Test
+    public void listener_is_notified_when_item_is_added() {
+        testObject.addListener(listener);
+        testObject.add("stuff");
+
+        verify();
+
+        listener.onChange();
+    }
+
+    @Test
+    public void toArray_returns_array_with_1_item_when_there_is_one() {
+        Object item = this;
+        testObject.add(item);
+
+        Object[] array = testObject.toArray();
+
+        assertEquals(1, array.length);
+        assertSame(item,array[0]);
+    }
 }

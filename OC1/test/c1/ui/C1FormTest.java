@@ -53,8 +53,8 @@ public class C1FormTest {
     }
 
     @Test
-    public void there_are_2_components_when_none_have_been_added() {
-        assertEquals(2,testObject.getComponentCount());
+    public void there_are_3_components_when_none_have_been_added() {
+        assertEquals(3,testObject.getComponentCount());
     }
 
     @Test
@@ -63,7 +63,7 @@ public class C1FormTest {
 
         for (int i=0; i<3; i++) {
             testObject.layout(layout);
-            assertEquals(2, testObject.getComponentCount());
+            assertEquals(3, testObject.getComponentCount());
         }
     }
 

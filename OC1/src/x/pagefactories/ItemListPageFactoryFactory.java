@@ -1,9 +1,16 @@
 package x.pagefactories;
 
+import x.event.LiveList;
 import x.page.PageFactory;
 
-import java.util.List;
-
+/**
+ * For creating ItemList PageS from LiveLists.
+ */
 public interface ItemListPageFactoryFactory {
-    PageFactory newFactory(List values);
+
+    /**
+     * A LiveList is needed, rather than just a list, so that there is a mechanism
+     * to listen for updates.
+     */
+    PageFactory newFactory(LiveList values);
 }

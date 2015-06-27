@@ -3,6 +3,7 @@ package an.a22.device;
 import x.device.DeviceKeyValuePair;
 import x.device.IDeviceInfo;
 import x.device.ReportBuilder;
+import x.event.LiveList;
 
 import java.util.List;
 import java.util.Properties;
@@ -15,7 +16,7 @@ public final class AnDeviceInfo
     implements IDeviceInfo
 {
 
-    public List asDeviceKeyValuePairs() {
+    public LiveList asDeviceKeyValuePairs() {
         return buildReport().toKeyValuePairs();
     }
 
