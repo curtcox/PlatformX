@@ -4,6 +4,7 @@ import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
+import x.event.Change;
 import x.event.LiveList;
 
 /**
@@ -27,7 +28,6 @@ public final class AnVirtualListModel<T>
         return items.size();
     }
 
-
     @Override
     public boolean areAllItemsEnabled() {
         return false;
@@ -39,8 +39,13 @@ public final class AnVirtualListModel<T>
     }
 
     @Override
-    public void registerDataSetObserver(DataSetObserver dataSetObserver) {
-
+    public void registerDataSetObserver(final DataSetObserver dataSetObserver) {
+        items.addListener(new Change.Listener() {
+            @Override
+            public void onChange() {
+                dataSetObserver.onChanged();
+            }
+        });
     }
 
     @Override
@@ -50,12 +55,12 @@ public final class AnVirtualListModel<T>
 
     @Override
     public int getCount() {
-        return 0;
+        return items.size();
     }
 
     @Override
-    public Object getItem(int i) {
-        return null;
+    public Object getItem(int index) {
+        return items.get(index);
     }
 
     @Override
@@ -85,6 +90,6 @@ public final class AnVirtualListModel<T>
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return items.isEmpty();
     }
 }

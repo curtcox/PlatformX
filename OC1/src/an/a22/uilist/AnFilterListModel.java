@@ -10,6 +10,7 @@ public final class AnFilterListModel<T>
     implements ListAdapter
 {
     private final ListAdapter filtered;
+    private DataSetObserver dataSetObserver;
     private ListFilter filter = ListFilter.ALLOW_ALL;
 
     private AnFilterListModel(ListAdapter filtered) {
@@ -27,6 +28,7 @@ public final class AnFilterListModel<T>
     }
 
     public void dataChanged() {
+        dataSetObserver.onChanged();
     }
 
 
@@ -42,7 +44,8 @@ public final class AnFilterListModel<T>
 
     @Override
     public void registerDataSetObserver(DataSetObserver dataSetObserver) {
-
+        this.dataSetObserver = dataSetObserver;
+        filtered.registerDataSetObserver(dataSetObserver);
     }
 
     @Override
@@ -52,11 +55,27 @@ public final class AnFilterListModel<T>
 
     @Override
     public int getCount() {
-        return 0;
+        int passed = 0;
+        for (int i=0; i<filtered.getCount(); i++) {
+            if (filter.passes(filtered.getItem(i))) {
+                passed++;
+            }
+        }
+        return passed;
     }
 
     @Override
-    public Object getItem(int i) {
+    public Object getItem(int index) {
+        int passed = -1;
+        for (int i=0; i<filtered.getCount(); i++) {
+            Object item = filtered.getItem(i);
+            if (filter.passes(item)) {
+                passed++;
+            }
+            if (passed==index) {
+                return item;
+            }
+        }
         return null;
     }
 
@@ -87,6 +106,6 @@ public final class AnFilterListModel<T>
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return getCount()==0;
     }
 }

@@ -4,12 +4,13 @@ import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
+import x.event.Change;
 import x.uilist.IListModel;
 
 public final class IListModelAsAnListModel
    implements ListAdapter
 {
-    IListModel model;
+    private final IListModel model;
 
     public IListModelAsAnListModel(IListModel model) {
         this.model = model;
@@ -26,8 +27,13 @@ public final class IListModelAsAnListModel
     }
 
     @Override
-    public void registerDataSetObserver(DataSetObserver dataSetObserver) {
-
+    public void registerDataSetObserver(final DataSetObserver dataSetObserver) {
+        model.addListener(new Change.Listener() {
+            @Override
+            public void onChange() {
+                dataSetObserver.onChanged();
+            }
+        });
     }
 
     @Override
@@ -37,12 +43,12 @@ public final class IListModelAsAnListModel
 
     @Override
     public int getCount() {
-        return 0;
+        return model.getSize();
     }
 
     @Override
-    public Object getItem(int i) {
-        return null;
+    public Object getItem(int index) {
+        return model.getItemAt(index);
     }
 
     @Override
@@ -72,6 +78,6 @@ public final class IListModelAsAnListModel
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return model.getSize()==0;
     }
 }

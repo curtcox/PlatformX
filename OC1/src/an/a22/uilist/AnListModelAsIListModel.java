@@ -1,5 +1,6 @@
 package an.a22.uilist;
 
+import android.database.DataSetObserver;
 import android.widget.ListAdapter;
 import x.event.Change;
 import x.uilist.IListModel;
@@ -38,5 +39,11 @@ public class AnListModelAsIListModel
 
     @Override
     public void addListener(final Change.Listener listener) {
+        model.registerDataSetObserver(new DataSetObserver() {
+            @Override
+            public void onChanged() {
+                listener.onChange();
+            }
+        });
     }
 }

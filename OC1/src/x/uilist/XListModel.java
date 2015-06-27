@@ -9,7 +9,7 @@ public final class XListModel
     implements IListModel
 {
     private int selectedIndex;
-    private List list = new ArrayList();
+    private final List list = new ArrayList();
     private Change.Listener listener;
 
     @Override
