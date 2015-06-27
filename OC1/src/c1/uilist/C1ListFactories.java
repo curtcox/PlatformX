@@ -1,11 +1,8 @@
 package c1.uilist;
 
 import com.codename1.ui.list.ListModel;
-import x.uilist.IListModel;
 import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;
-
-import static x.uilist.UIList.Factory;
 
 /**
  * Some factories for producing UI lists.
@@ -19,30 +16,30 @@ import static x.uilist.UIList.Factory;
  */
 final class C1ListFactories {
 
+    interface Factory {
+        UIList of(ListModel model,ListCellConfigurer configurer);
+    }
+
     static Factory LIST = new Factory() {
-        public UIList of(IListModel model,ListCellConfigurer configurer) {
-            C1UIList list = new C1UIList(convert(model));
+        public UIList of(ListModel model,ListCellConfigurer configurer) {
+            C1UIList list = new C1UIList(model);
             list.setRenderer(new C1BasicListCellRenderer(configurer));
             return list;
         }
     };
 
     static Factory CONTAINER = new Factory() {
-        public UIList of(IListModel model,ListCellConfigurer configurer) {
-            C1UIContainerList list = new C1UIContainerList(convert(model));
+        public UIList of(ListModel model,ListCellConfigurer configurer) {
+            C1UIContainerList list = new C1UIContainerList(model);
             list.setRenderer(new C1BasicListCellRenderer(configurer));
             return list;
         }
     };
 
     static Factory BOX = new Factory() {
-        public UIList of(IListModel model,ListCellConfigurer configurer) {
-            return new C1BoxList(convert(model),configurer);
+        public UIList of(ListModel model,ListCellConfigurer configurer) {
+            return new C1BoxList(model,configurer);
         }
     };
-
-    private static ListModel convert(IListModel model) {
-        return new IListModelAsC1ListModel(model);
-    }
 
 }

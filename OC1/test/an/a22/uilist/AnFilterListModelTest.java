@@ -1,5 +1,6 @@
 package an.a22.uilist;
 
+import android.widget.ArrayAdapter;
 import fake.FakeDataSetObserver;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,7 +8,6 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import x.uilist.ListFilter;
-import x.uilist.XListModel;
 
 import static org.junit.Assert.*;
 
@@ -16,9 +16,8 @@ import static org.junit.Assert.*;
 public class AnFilterListModelTest {
 
     FakeDataSetObserver listDataListener = new FakeDataSetObserver();
-    XListModel xListModel = new XListModel();
-    IListModelAsAnListModel underlyingListModel = new IListModelAsAnListModel(xListModel);
-    AnFilterListModel testObject = AnFilterListModel.of(underlyingListModel);
+    DefaultListAdapter listModel = new DefaultListAdapter();
+    AnFilterListModel testObject = AnFilterListModel.of(listModel);
 
     @Before
     public void setUp() {
@@ -37,20 +36,20 @@ public class AnFilterListModelTest {
 
     @Test
     public void size_is_1_when_list_has_1_item() {
-        xListModel.addItem("stuff");
+        listModel.addItem("stuff");
         assertEquals(1, testObject.getCount());
     }
 
     @Test
     public void getElementAt_0_returns_1st_element() {
         Object expected = new Object();
-        xListModel.addItem(expected);
+        listModel.addItem(expected);
         assertEquals(expected,testObject.getItem(0));
     }
 
     @Test
     public void size_returns_filtered_size_when_set() {
-        xListModel.addItem("stuff");
+        listModel.addItem("stuff");
         testObject.setFilter(ListFilter.ALLOW_NONE);
         assertEquals(0, testObject.getCount());
     }
@@ -58,8 +57,8 @@ public class AnFilterListModelTest {
     @Test
     public void getElementAt_0_returns_1st_element_that_passes_filter() {
         final Object expected = new Object();
-        xListModel.addItem("unexpected");
-        xListModel.addItem(expected);
+        listModel.addItem("unexpected");
+        listModel.addItem(expected);
         testObject.setFilter(new ListFilter() {
             @Override
             public boolean passes(Object item) {

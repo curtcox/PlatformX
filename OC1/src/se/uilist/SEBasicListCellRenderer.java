@@ -9,7 +9,7 @@ final class SEBasicListCellRenderer<T>
 {
     private final ListCellConfigurer configurer;
 
-    public SEBasicListCellRenderer(ListCellConfigurer configurer) {
+    SEBasicListCellRenderer(ListCellConfigurer configurer) {
         this.configurer = configurer;
     }
 

@@ -3,7 +3,6 @@ package se.uilist;
 import se.uiwidget.SEBorderContainer;
 import x.event.Action;
 import x.event.LiveList;
-import x.uilist.IListModel;
 import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;
 import x.uiwidget.ISearchableList;
@@ -28,20 +27,16 @@ public final class SESearchableList<T>
      */
     public final JComponent component;
 
-    private SESearchableList(UIList.Factory factory, LiveList<T> items, JComponent action, ListCellConfigurer configurer) {
+    private SESearchableList(SEListFactories.Factory factory, LiveList<T> items, JComponent action, ListCellConfigurer configurer) {
         underlyingListModel = SEVirtualListModel.of(items);
         filterListModel = SEFilterListModel.of(underlyingListModel);
-        filteredList = factory.of(convert(filterListModel), configurer);
+        filteredList = factory.of(filterListModel, configurer);
         component = component(action);
     }
 
     private JComponent component(JComponent action) {
         return new SEBorderContainer(new JScrollPane((JComponent)filteredList))
                 .addNorth(newNorthContainer(action));
-    }
-
-    private IListModel convert(SEFilterListModel<T> filterListModel) {
-        return new SEListModelAsIListModel(filterListModel);
     }
 
     public SESearchableList(LiveList<T> items, JComponent action, ListCellConfigurer configurer) {

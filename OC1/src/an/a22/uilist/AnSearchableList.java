@@ -8,7 +8,6 @@ import android.widget.TextView;
 import x.Registry;
 import x.event.Action;
 import x.event.LiveList;
-import x.uilist.IListModel;
 import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;
 import x.uiwidget.ISearchableList;
@@ -32,16 +31,12 @@ public final class AnSearchableList<T>
      */
     public final View component;
 
-    private AnSearchableList(UIList.Factory factory, LiveList<T> items, View action, ListCellConfigurer configurer) {
+    private AnSearchableList(AnListFactories.Factory factory, LiveList<T> items, View action, ListCellConfigurer configurer) {
         underlyingListModel = AnVirtualListModel.of(items);
         filterListModel = AnFilterListModel.of(underlyingListModel);
-        filteredList = factory.of(convert(filterListModel),configurer);
+        filteredList = factory.of(filterListModel,configurer);
         component = AnBorderContainer.of((View) filteredList)
              .addNorth(newNorthContainer(action));
-    }
-
-    private IListModel convert(AnFilterListModel<T> filterListModel) {
-        return new AnListModelAsIListModel(filterListModel);
     }
 
     public AnSearchableList(LiveList<T> items, View action, ListCellConfigurer configurer) {

@@ -5,6 +5,10 @@ import x.uilist.ListCellConfigurer;
 
 import java.util.List;
 
+/**
+ * A graphical list of items that can be searched.
+ * @param <T>
+ */
 public interface ISearchableList<T> {
 
     interface Factory {
