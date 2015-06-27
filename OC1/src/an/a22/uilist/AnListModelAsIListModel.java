@@ -5,7 +5,7 @@ import android.widget.ListAdapter;
 import x.event.Change;
 import x.uilist.IListModel;
 
-public class AnListModelAsIListModel
+class AnListModelAsIListModel
     implements IListModel
 {
     private final ListAdapter model;

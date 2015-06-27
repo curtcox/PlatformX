@@ -10,7 +10,7 @@ import x.event.LiveList;
 /**
  * A ListModel that uses a given list to store its elements.
  */
-public final class C1VirtualListModel<T>
+final class C1VirtualListModel<T>
     implements ListModel<T>
 {
     private final LiveList<T> items;

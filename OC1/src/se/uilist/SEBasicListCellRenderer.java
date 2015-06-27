@@ -4,7 +4,7 @@ import x.uilist.ListCellConfigurer;
 
 import javax.swing.*;
 
-public final class SEBasicListCellRenderer<T>
+final class SEBasicListCellRenderer<T>
     implements ListCellRenderer<T>
 {
     private final ListCellConfigurer configurer;

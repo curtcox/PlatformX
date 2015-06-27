@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import x.uilist.ListFilter;
 
-public final class AnFilterListModel<T>
+final class AnFilterListModel<T>
     implements ListAdapter
 {
     private final ListAdapter filtered;

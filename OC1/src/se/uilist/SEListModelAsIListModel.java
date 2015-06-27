@@ -7,7 +7,7 @@ import javax.swing.*;
 import javax.swing.event.ListDataEvent;
 import javax.swing.event.ListDataListener;
 
-public class SEListModelAsIListModel
+final class SEListModelAsIListModel
     implements IListModel
 {
     private final ListModel model;

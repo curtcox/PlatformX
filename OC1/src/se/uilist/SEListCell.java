@@ -10,7 +10,7 @@ import java.net.URI;
 /**
  * A compound list cell.
  */
-public final class SEListCell
+final class SEListCell
     extends JPanel
     implements IListCell
 {

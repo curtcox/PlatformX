@@ -7,7 +7,7 @@ import x.uilist.IListContentInstaller;
 import x.uilist.StringToList;
 import x.uiwidget.ISearchableList;
 
-public final class C1ListContentInstaller
+final class C1ListContentInstaller
     implements IListContentInstaller {
 
     private static void c1SpecificInstall(final C1SearchableList list, final SwappableList items, final StringToList stringToList) {

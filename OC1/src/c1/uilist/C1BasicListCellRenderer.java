@@ -31,7 +31,7 @@ import com.codename1.ui.list.CellRenderer;
 import com.codename1.ui.list.ListCellRenderer;
 import x.uilist.ListCellConfigurer;
 
-public final class C1BasicListCellRenderer<T>
+final class C1BasicListCellRenderer<T>
     implements ListCellRenderer<T>, CellRenderer<T>
 {
     private final Label focusComponent = new Label();

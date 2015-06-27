@@ -35,7 +35,7 @@ import java.net.URI;
 /**
  * A compound list cell.
  */
-public final class C1ListCell
+final class C1ListCell
     extends Container
     implements IListCell
 {

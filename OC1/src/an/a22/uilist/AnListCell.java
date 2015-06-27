@@ -12,7 +12,7 @@ import java.net.URI;
 /**
  * A compound list cell.
  */
-public final class AnListCell
+final class AnListCell
     extends LinearLayout
     implements IListCell
 {

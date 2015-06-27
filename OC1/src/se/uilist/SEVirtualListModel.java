@@ -10,7 +10,7 @@ import javax.swing.event.ListDataListener;
 /**
  * A ListModel that uses a given list to store its elements.
  */
-public final class SEVirtualListModel<T>
+final class SEVirtualListModel<T>
     implements ListModel<T>
 {
     private final LiveList<T> items;

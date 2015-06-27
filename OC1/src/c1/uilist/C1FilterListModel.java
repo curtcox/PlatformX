@@ -35,7 +35,7 @@ import java.util.ArrayList;
  *
  * @author Shai Almog
  */
-public final class C1FilterListModel<T>
+final class C1FilterListModel<T>
     implements ListModel<T>
 {
     private final ListModel<T> underlying;

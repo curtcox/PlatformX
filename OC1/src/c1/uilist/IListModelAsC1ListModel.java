@@ -6,7 +6,7 @@ import com.codename1.ui.list.ListModel;
 import x.event.Change;
 import x.uilist.IListModel;
 
-public final class IListModelAsC1ListModel
+final class IListModelAsC1ListModel
    implements ListModel
 {
     IListModel model;
