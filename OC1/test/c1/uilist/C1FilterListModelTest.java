@@ -2,6 +2,7 @@ package c1.uilist;
 
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.list.DefaultListModel;
+import fake.FakeC1RegistryLoader;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
@@ -19,6 +20,7 @@ public class C1FilterListModelTest {
 
     @Before
     public void setUp() {
+        FakeC1RegistryLoader.load();
         Mocks.init(this);
         testObject.addDataChangedListener(listDataListener);
     }
@@ -75,4 +77,14 @@ public class C1FilterListModelTest {
 
         listDataListener.dataChanged(DataChangedListener.CHANGED,-1);
     }
+
+    @Test
+    public void dataListener_is_notified_when_value_added() {
+        listModel.addItem("stuff");
+
+        verify();
+
+        listDataListener.dataChanged(DataChangedListener.CHANGED,-1);
+    }
+
 }
