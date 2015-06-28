@@ -3,7 +3,9 @@ package ios.app;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.*;
 
-public class MyViewController extends UIViewController {
+public class MyViewController
+        extends UIViewController
+{
     private final UIButton button;
     private final UILabel label;
     private int clickCount;

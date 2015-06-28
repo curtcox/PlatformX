@@ -3,7 +3,9 @@ package ios.app;
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.*;
 
-public class IosApplication extends UIApplicationDelegateAdapter {
+public final class IosApplication
+        extends UIApplicationDelegateAdapter
+{
     private UIWindow window;
     private MyViewController rootViewController;
 
