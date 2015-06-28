@@ -8,10 +8,10 @@ import x.event.StringSource;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.page.PageLink;
-import x.uiwidget.UIColumn;
-import x.uiwidget.UIComponent;
-import x.uiwidget.UIGrid;
-import x.uiwidget.UILabel;
+import x.uiwidget.XColumn;
+import x.uiwidget.XComponent;
+import x.uiwidget.XGrid;
+import x.uiwidget.XLabel;
 
 /**
  * Provides a ScreenLayout that is dynamically generated at runtime.
@@ -26,7 +26,7 @@ public final class DynamicScreenLayoutProvider
         this.source = source;    
     }
 
-    public UIComponent getLayout(PageLink link, ScreenContext context) {
+    public XComponent getLayout(PageLink link, ScreenContext context) {
         String sourceCode = source.getString();
         if (!isValidHash(sourceCode)) {
             return messageScreen("Source is not valid Hash");
@@ -38,28 +38,28 @@ public final class DynamicScreenLayoutProvider
         return sourceCode!=null && sourceCode.length()>0;
     }
 
-    private UIComponent screenForResult(Object result) {
+    private XComponent screenForResult(Object result) {
         if (result==null)                   { return messageScreen("(null)");            }
-        if (result instanceof UIComponent)  { return (UIComponent) result;               }
+        if (result instanceof XComponent)  { return (XComponent) result;               }
         if (result instanceof String)       { return messageScreen((String) result);      }
         if (result instanceof SyntaxError)  { return errorScreen((SyntaxError) result);  }
         throw new IllegalArgumentException("result="+result);
     }
     
-    private UIComponent messageScreen(String message) {
+    private XComponent messageScreen(String message) {
         return label(message);
     }
 
-    private UIComponent errorScreen(SyntaxError error) {
-        return new UIColumn(
+    private XComponent errorScreen(SyntaxError error) {
+        return new XColumn(
                 label(error.type.toString()),
                 label(error.errorSource),
                 label(error.methodSource)
         );
     }
 
-    private UIComponent exception(Exception e) {
-        return new UIGrid(2,1,
+    private XComponent exception(Exception e) {
+        return new XGrid(2,1,
                 label(e.getClass().toString()),
                 label(e.getMessage()));
     }
@@ -77,8 +77,8 @@ public final class DynamicScreenLayoutProvider
         }
     }
 
-    private UILabel label(String text) {
-        return new UILabel(text);
+    private XLabel label(String text) {
+        return new XLabel(text);
     }
     
     private NamedValues asNamedValues(ScreenContext screenContext) {

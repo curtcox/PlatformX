@@ -69,18 +69,18 @@ final class DynamicScreenLayoutMethods
         };
     }
 
-    private UIComponent[] components(Object[] values, int offset) {
-        UIComponent[] components = new UIComponent[values.length-offset];
+    private XComponent[] components(Object[] values, int offset) {
+        XComponent[] components = new XComponent[values.length-offset];
         for (int i=0; i<components.length; i++) {
             components[i] = component(values[i+offset]);
         }
         return components;
     }
 
-    private UIComponent component(Object o) {
-        if (o == null)                 { return new UILabel(""); }
-        if (o instanceof UIComponent)  { return (UIComponent) o; }
-        return new UILabel(o.toString());
+    private XComponent component(Object o) {
+        if (o == null)                 { return new XLabel(""); }
+        if (o instanceof XComponent)  { return (XComponent) o; }
+        return new XLabel(o.toString());
     }
 
     private int integer(Object o) {
@@ -94,24 +94,24 @@ final class DynamicScreenLayoutMethods
         return 0;
     }
     
-    private UIComponent grid(int rows,int columns,UIComponent[] components) {
-        return new UIGrid(rows,columns,components);
+    private XComponent grid(int rows,int columns,XComponent[] components) {
+        return new XGrid(rows,columns,components);
     }
 
-    private UIComponent table(int rows,int columns,UIComponent[] components) {
-        return new UITable(rows,columns,components);
+    private XComponent table(int rows,int columns,XComponent[] components) {
+        return new XTable(rows,columns,components);
     }
 
-    private UIComponent flow(UIComponent[] components) {
-        return new UIFlow(components);
+    private XComponent flow(XComponent[] components) {
+        return new XFlow(components);
     }
 
-    private UIComponent column(UIComponent[] components) {
-        return new UIColumn(components);
+    private XComponent column(XComponent[] components) {
+        return new XColumn(components);
     }
 
-    private UIComponent row(UIComponent[] components) {
-        return new UIRow(components);
+    private XComponent row(XComponent[] components) {
+        return new XRow(components);
     }
 
 }

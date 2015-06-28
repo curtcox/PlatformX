@@ -2,7 +2,7 @@ package x.ui;
 
 import x.command.Command;
 import x.page.PageLink;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 /**
  * A place where ScreenS are shown.
@@ -17,7 +17,7 @@ public interface IForm {
     /**
      * Accept the given platform-independent layout.
      */
-    void layout(UIComponent layout);
+    void layout(XComponent layout);
 
     /**
      * Displays the current form.

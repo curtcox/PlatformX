@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import c1.JSON;
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -20,8 +20,8 @@ public class JsonIndexNetStringMapTest {
         public InputStream getStreamFor(URI uri) {
             return new ByteArrayInputStream(pages.get(uri).getBytes());
         }
-        public UIImage getImage(URI uri)               { throw new UnsupportedOperationException(); }
-        public UIImage getImage(URI uri, int w, int h) { throw new UnsupportedOperationException(); }
+        public XImage getImage(URI uri)               { throw new UnsupportedOperationException(); }
+        public XImage getImage(URI uri, int w, int h) { throw new UnsupportedOperationException(); }
     };
     
     URI index = URI("http://example.com/");

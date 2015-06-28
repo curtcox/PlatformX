@@ -8,14 +8,14 @@ import x.event.Action;
 import x.event.LiveList;
 import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 /**
  * A wrapper for a searchable list component.
  * @param <T> list item type
  */
 public final class IosSearchableList<T>
-    implements ISearchableList
+    implements XSearchableList
 {
 
     final UILabel searchTerm = new UILabel(new CGRect(20, 250, 280, 44));

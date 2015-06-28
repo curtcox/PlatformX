@@ -9,14 +9,14 @@ import x.event.Action;
 import x.event.LiveList;
 import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 /**
  * A wrapper for a searchable list component.
  * @param <T> list item type
  */
 public final class AnSearchableList<T>
-    implements ISearchableList
+    implements XSearchableList
 {
 
     final TextView searchTerm = new TextView(context());

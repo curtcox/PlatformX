@@ -5,7 +5,7 @@ import x.app.CurrentState;
 import x.domain.ServiceProvider;
 import x.page.PageLink;
 import x.page.SelectionListPage;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 /**
  * The screen used to search for service providers.
@@ -13,7 +13,7 @@ import x.uiwidget.ISearchableList;
 public final class ServiceProviderSearchPage
     extends SelectionListPage<ServiceProvider>
 {
-    public ServiceProviderSearchPage(PageLink link, ISearchableList<ServiceProvider> searchList) {
+    public ServiceProviderSearchPage(PageLink link, XSearchableList<ServiceProvider> searchList) {
         super(link,searchList);
     }
 

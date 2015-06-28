@@ -10,7 +10,7 @@ import x.page.PageLink;
 import x.pagefactories.CellConfigurer;
 import x.pagefactories.ItemsPage;
 import x.uilist.StringToListFilter;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ final class C1ItemListPageFactory<T>
         return new Page[] {new ItemsPage(link,newSearchableList())};
     }     
 
-    private ISearchableList<T> newSearchableList() {
+    private XSearchableList<T> newSearchableList() {
         C1SearchableList<T> list = new C1SearchableList(new XLiveList(values),new Label(),new CellConfigurer());
         C1SearchFilterInstaller.c1SpecificInstall(list, StringToListFilter.DEFAULT);
         return list;

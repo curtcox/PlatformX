@@ -4,12 +4,12 @@ import x.domain.ServiceProvider;
 import x.event.SwappableList;
 import x.pageparts.ServiceProviderSearchParams;
 import x.services.ServiceProviders;
-import x.uiwidget.UIButton;
+import x.uiwidget.XButton;
 
 import java.util.List;
 
 final class ZoomOutSearchButton
-    extends UIButton
+    extends XButton
 {
     private ServiceProviderSearchParams searchParams;
     private final SwappableList providers;

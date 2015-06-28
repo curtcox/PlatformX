@@ -2,7 +2,7 @@ package x.page.dynamic;
 
 import x.page.Page;
 import x.page.PageLink;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 /**
  * A page that is created by a dynamic layout method.
@@ -22,12 +22,12 @@ final class DynamicPage
     }
 
     @Override
-    public UIComponent layoutForPortrait() {
+    public XComponent layoutForPortrait() {
         return getLayout();
     }
 
     @Override
-    public UIComponent layoutForLandscape() {
+    public XComponent layoutForLandscape() {
         return getLayout();
     }
     
@@ -57,7 +57,7 @@ final class DynamicPage
         };    
     }
 
-    UIComponent getLayout() {
+    XComponent getLayout() {
         return layoutProvider.getLayout(link,getContext());
     }
 }

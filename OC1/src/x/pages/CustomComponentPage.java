@@ -4,7 +4,7 @@ import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.page.dynamic.GlobPageFactory;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 public final class CustomComponentPage
     extends Page
@@ -22,7 +22,7 @@ public final class CustomComponentPage
     }
     
     @Override
-    public UIComponent layoutForPortrait() {
+    public XComponent layoutForPortrait() {
         return new CustomComponent();
     }
 

@@ -9,36 +9,36 @@ import x.pageparts.ProviderDetailsButton;
 import x.pageparts.XScreenButton;
 import x.stores.MyRatings;
 import x.ui.IDisplay;
-import x.uiwidget.UIButton;
-import x.uiwidget.UILabel;
-import x.uiwidget.UITextArea;
+import x.uiwidget.XButton;
+import x.uiwidget.XLabel;
+import x.uiwidget.XTextArea;
 
 /**
  * See http://www.sagetraveling.com/Rating-System-Explanation/
  */
 public final class Rate {
-    final UILabel rating = new UILabel();
-    final UITextArea description = new UITextArea(
+    final XLabel rating = new XLabel();
+    final XTextArea description = new XTextArea(
         "                                                                    ");
     
     public Rate() {
         description.editable=false;
     }
 
-    UIButton change_location_button() {
+    XButton change_location_button() {
         return XScreenButton.builder().text("Pick a different location").leadingTo(PageLink.of("Search")).build();
     }
 
-    UIButton about_rating_button() {
-        return new UIButton("More about this rating scheme") {
+    XButton about_rating_button() {
+        return new XButton("More about this rating scheme") {
             public void onTap() {
                 display().execute("http://www.sagetraveling.com/Rating-System-Explanation/");
             }
         };
     }
     
-    UIButton rating_button(final String ratingText, final String ratingDescription) {
-        UIButton button = new UIButton("") {
+    XButton rating_button(final String ratingText, final String ratingDescription) {
+        XButton button = new XButton("") {
             public void onTap() {
                 rating.text=ratingText;
                 description.text=ratingDescription;
@@ -55,7 +55,7 @@ public final class Rate {
         CurrentState.get().broadcastChange();
     }
 
-    UIButton provider_details_button() {
+    XButton provider_details_button() {
         return ProviderDetailsButton.of();
     }
     

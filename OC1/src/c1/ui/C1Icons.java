@@ -3,7 +3,7 @@ package c1.ui;
 import com.codename1.ui.util.Resources;
 import x.Registry;
 import x.net.Network;
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 
 import java.net.URI;
 
@@ -17,15 +17,15 @@ public final class C1Icons {
         return Registry.get(C1Icons.class);
     }
 
-    public UIImage getImage(String icon) {
+    public XImage getImage(String icon) {
         return translator().translate(resources().getImage(icon));
     }
 
-    public UIImage getImage(URI uri) {
+    public XImage getImage(URI uri) {
         return Registry.get(Network.class).getImage(uri);
     }
 
-    public UIImage getImage(URI uri, int w, int h) {
+    public XImage getImage(URI uri, int w, int h) {
         return Registry.get(Network.class).getImage(uri,w,h);
     }
 

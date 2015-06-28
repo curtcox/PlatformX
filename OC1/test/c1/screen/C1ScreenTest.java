@@ -6,7 +6,7 @@ import x.page.Page;
 import x.screen.Screen;
 import x.page.PageLink;
 import x.ui.IForm;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -20,7 +20,7 @@ public class C1ScreenTest {
     PageLink link = PageLink.of("");
     Page page = new Page(link) {
         @Override
-        public UIComponent layoutForPortrait() {
+        public XComponent layoutForPortrait() {
             return null;
         }
     };

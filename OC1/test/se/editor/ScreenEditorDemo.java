@@ -3,7 +3,7 @@ package se.editor;
 import x.Registry;
 import x.page.PageLink;
 import x.page.PageTags;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 import se.events.Events;
 import se.ui.EditLinkEvent;
 import se.util.TaggedValue;
@@ -33,7 +33,7 @@ public class ScreenEditorDemo {
     private static Events.Event editEvent() {
         String name = "test";
         PageLink link = PageLink.of(name);
-        UIComponent layout = null;
+        XComponent layout = null;
         return new EditLinkEvent(link,layout);
     }
 

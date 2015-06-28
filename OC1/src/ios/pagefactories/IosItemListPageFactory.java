@@ -10,7 +10,7 @@ import x.page.PageLink;
 import x.pagefactories.CellConfigurer;
 import x.pagefactories.ItemsPage;
 import x.uilist.StringToListFilter;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ final class IosItemListPageFactory<T>
         return new Page[] {new ItemsPage(link,newSearchableList())};
     }     
 
-    private ISearchableList<T> newSearchableList() {
+    private XSearchableList<T> newSearchableList() {
         IosSearchableList<T> list = new IosSearchableList(new XLiveList(values),new UILabel(),new CellConfigurer());
         IosSearchFilterInstaller.anSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;

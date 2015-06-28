@@ -11,7 +11,7 @@ import x.Registry;
 import x.command.Command;
 import x.page.PageLink;
 import x.ui.IForm;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 public final class AnForm
     extends LinearLayout
@@ -29,7 +29,7 @@ public final class AnForm
     }
 
     @Override
-    public void layout(UIComponent layout) {
+    public void layout(XComponent layout) {
         removeAllViews();
         addView(titleLabel());
         addView(backButton);

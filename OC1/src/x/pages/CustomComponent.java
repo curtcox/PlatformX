@@ -1,9 +1,9 @@
 package x.pages;
 
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 final class CustomComponent
-    extends UIComponent
+    extends XComponent
 {
     int px;
     int py;

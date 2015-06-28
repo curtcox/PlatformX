@@ -1,6 +1,6 @@
 package x.net;
 
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 
 import java.io.InputStream;
 import java.net.URI;
@@ -17,7 +17,7 @@ public interface Network {
      */
     InputStream getStreamFor(URI uri);
 
-    UIImage getImage(URI uri);
+    XImage getImage(URI uri);
 
-    UIImage getImage(URI uri, int w, int h);
+    XImage getImage(URI uri, int w, int h);
 }

@@ -28,7 +28,7 @@ import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import x.uilist.IListCell;
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 
 import java.net.URI;
 
@@ -81,7 +81,7 @@ final class C1ListCell
     }
 
     @Override
-    public void setIcon(UIImage icon) {
+    public void setIcon(XImage icon) {
 
     }
 

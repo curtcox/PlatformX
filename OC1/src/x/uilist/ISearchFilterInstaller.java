@@ -1,7 +1,7 @@
 package x.uilist;
 
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 public interface ISearchFilterInstaller {
-    void install(final ISearchableList list, final StringToListFilter stringToListFilter);
+    void install(final XSearchableList list, final StringToListFilter stringToListFilter);
 }

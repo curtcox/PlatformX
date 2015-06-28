@@ -10,8 +10,8 @@ import x.pageparts.TypeListCellConfigurer;
 import x.pageparts.TypeTextFilter;
 import x.pages.FilterPage;
 import x.uilist.ISearchFilterInstaller;
-import x.uiwidget.ISearchableList;
-import x.uiwidget.UILabel;
+import x.uiwidget.XLabel;
+import x.uiwidget.XSearchableList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,14 +33,14 @@ public final class ServiceProviderFilterPageFactory {
         return list;
     }
 
-    private static ISearchableList<Type> newSearchableList() {
-        ISearchableList list = listFactory().from(getTypes(),new UILabel(),new TypeListCellConfigurer());
+    private static XSearchableList<Type> newSearchableList() {
+        XSearchableList list = listFactory().from(getTypes(),new XLabel(),new TypeListCellConfigurer());
         installer().install(list, new TypeTextFilter());
         return list;
     }
 
-    private static ISearchableList.Factory listFactory() {
-        return Registry.get(ISearchableList.Factory.class);
+    private static XSearchableList.Factory listFactory() {
+        return Registry.get(XSearchableList.Factory.class);
     }
 
     private static ISearchFilterInstaller installer() {

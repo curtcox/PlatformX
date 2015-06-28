@@ -3,7 +3,7 @@ package x.net;
 import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -24,12 +24,12 @@ public final class XRawNetwork
     }
 
     @Override
-    public UIImage getImage(URI uri) {
+    public XImage getImage(URI uri) {
         return null;
     }
 
     @Override
-    public UIImage getImage(URI uri, int w, int h) {
+    public XImage getImage(URI uri, int w, int h) {
         return null;
     }
 

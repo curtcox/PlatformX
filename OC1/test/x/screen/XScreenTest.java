@@ -7,8 +7,8 @@ import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.ui.IFormFactory;
-import x.uiwidget.UIComponent;
-import x.uiwidget.UIContainer;
+import x.uiwidget.XComponent;
+import x.uiwidget.XContainer;
 import fake.FakeXRegistryLoader;
 import fake.FakeForm;
 import mach.Mocks;
@@ -25,7 +25,7 @@ public class XScreenTest {
 
     FakeForm form = new FakeForm();
     String name = random("link");
-    UIComponent layout = new UIComponent();
+    XComponent layout = new XComponent();
     PageLink link = PageLink.of(name);
     PageLink link1 = PageLink.of("first");
     PageLink link2 = PageLink.of("second");
@@ -43,7 +43,7 @@ public class XScreenTest {
         }
 
         @Override
-        public UIComponent layoutForPortrait() {
+        public XComponent layoutForPortrait() {
             return layout;
         }
 
@@ -161,7 +161,7 @@ public class XScreenTest {
         FakePage() {
             super(PageLink.of("name"));
         }
-        @Override public UIContainer layoutForPortrait() { return null;}
+        @Override public XContainer layoutForPortrait() { return null;}
     }
 
     @Test
@@ -183,7 +183,7 @@ public class XScreenTest {
             super(PageLink.of("name"));
             this.e = e;
         }
-        @Override public UIContainer layoutForPortrait() {
+        @Override public XContainer layoutForPortrait() {
             throw e;
         }
     }

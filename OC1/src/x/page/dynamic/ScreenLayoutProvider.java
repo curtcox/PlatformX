@@ -1,8 +1,8 @@
 package x.page.dynamic;
 
 import x.page.PageLink;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 public interface ScreenLayoutProvider {
-    UIComponent getLayout(PageLink link, ScreenContext context);
+    XComponent getLayout(PageLink link, ScreenContext context);
 }

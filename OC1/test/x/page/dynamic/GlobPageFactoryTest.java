@@ -3,7 +3,7 @@ package x.page.dynamic;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
-import x.uiwidget.UIContainer;
+import x.uiwidget.XContainer;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +26,7 @@ public class GlobPageFactoryTest {
         FakeC1RegistryLoader.load();
         screen = new Page(PageLink.of("whatever")) {
             @Override
-            public UIContainer layoutForPortrait() { return null; }
+            public XContainer layoutForPortrait() { return null; }
         };
     }
     

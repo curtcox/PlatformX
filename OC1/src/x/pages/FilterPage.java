@@ -3,7 +3,7 @@ package x.pages;
 import x.domain.Type;
 import x.page.PageLink;
 import x.page.SelectionListPage;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 /**
  * For filtering provider types.
@@ -11,7 +11,7 @@ import x.uiwidget.ISearchableList;
 public final class FilterPage
     extends SelectionListPage<Type>
 {
-    public FilterPage(PageLink link, ISearchableList<Type> typeList) {
+    public FilterPage(PageLink link, XSearchableList<Type> typeList) {
         super(link,typeList);
     }
 

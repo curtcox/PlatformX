@@ -2,13 +2,13 @@ package x.ui;
 
 import x.page.PageLink;
 import x.screen.Screen;
-import x.uiwidget.UIButton;
+import x.uiwidget.XButton;
 
 /**
  * A button that follows a link when you tap it.
  */
 public final class LinkButton
-    extends UIButton
+    extends XButton
 {
     private final PageLink.Factory linkFactory;
 

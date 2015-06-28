@@ -2,7 +2,7 @@ package x.page;
 
 import x.Registry;
 import x.ui.IDisplay;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 public abstract class Page {
 
@@ -21,9 +21,9 @@ public abstract class Page {
      */
     public void refresh() {}
 
-    public abstract UIComponent layoutForPortrait();
+    public abstract XComponent layoutForPortrait();
 
-    public UIComponent layoutForLandscape() {
+    public XComponent layoutForLandscape() {
         return layoutForPortrait();
     }
 

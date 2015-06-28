@@ -5,8 +5,8 @@ import org.junit.Before;
 import se.events.Events;
 import x.Registry;
 import x.page.PageLink;
-import x.uiwidget.UIComponent;
-import x.uiwidget.UILabel;
+import x.uiwidget.XComponent;
+import x.uiwidget.XLabel;
 import org.junit.Test;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
@@ -16,7 +16,7 @@ import static org.junit.Assert.*;
 
 public class EditCommandTest {
 
-    UIComponent layout = new UILabel(random("label"));
+    XComponent layout = new XLabel(random("label"));
     String title = random("link");
     PageLink link = PageLink.of(title);
     Events.Listener listener;

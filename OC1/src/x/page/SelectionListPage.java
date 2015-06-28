@@ -5,8 +5,8 @@ import x.event.Action;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.screen.Screen;
-import x.uiwidget.ISearchableList;
-import x.uiwidget.UIPeeredComponent;
+import x.uiwidget.XPeeredComponent;
+import x.uiwidget.XSearchableList;
 
 /**
  * A screen for selecting an item from a list of items.
@@ -19,17 +19,17 @@ import x.uiwidget.UIPeeredComponent;
 public abstract class SelectionListPage<T>
     extends Page
 {
-    private final ISearchableList<T> searchList;
+    private final XSearchableList<T> searchList;
 
-    public SelectionListPage(PageLink link, ISearchableList<T> searchList) {
+    public SelectionListPage(PageLink link, XSearchableList<T> searchList) {
         super(link);
         this.searchList = searchList;
         addSelectionListener();
     }
 
     @Override
-    public UIPeeredComponent layoutForPortrait() {
-        return new UIPeeredComponent(searchList.getComponent());
+    public XPeeredComponent layoutForPortrait() {
+        return new XPeeredComponent(searchList.getComponent());
     }
 
     private void addSelectionListener() {

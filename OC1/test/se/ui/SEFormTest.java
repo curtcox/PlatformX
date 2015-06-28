@@ -3,8 +3,8 @@ package se.ui;
 import x.Registry;
 import x.page.PageLink;
 import x.ui.IForm;
-import x.uiwidget.UIComponent;
-import x.uiwidget.UILabel;
+import x.uiwidget.XComponent;
+import x.uiwidget.XLabel;
 import fake.FakeSERegistryLoader;
 import mach.Mocks;
 import org.junit.Before;
@@ -73,13 +73,13 @@ public class SEFormTest {
 
     @Test
     public void layout_produces_one_component_plus_navigation_panel_for_a_label() {
-        testObject.layout(new UILabel("!!"));
+        testObject.layout(new XLabel("!!"));
         assertEquals(2, testObject.getComponents().length);
     }
 
     @Test
     public void layout_is_idempotent() {
-        UIComponent layout = new UILabel("!!");
+        XComponent layout = new XLabel("!!");
 
         for (int i=0; i<3; i++) {
             testObject.layout(layout);
@@ -90,7 +90,7 @@ public class SEFormTest {
     @Test
     public void layout_produces_a_matching_label_for_a_label() {
         String text = random("text");
-        testObject.layout(new UILabel(text));
+        testObject.layout(new XLabel(text));
         JLabel label = (JLabel) testObject.getComponents()[0];
         assertSame(text, label.getText());
     }
@@ -98,7 +98,7 @@ public class SEFormTest {
     @Test
     public void editButtonClicked_triggers_edit_command_with_tagged_value_when_there_is_one_tagged_value_found() {
         FakeSERegistryLoader.load();
-        UIComponent layout = new UILabel(random("label"));
+        XComponent layout = new XLabel(random("label"));
         Events events = new Events();
         Registry.put(Events.class,events);
         Registry.put(TaggedValueStringMap.class,stringMap);
@@ -117,7 +117,7 @@ public class SEFormTest {
     @Test
     public void editButtonClicked_triggers_edit_command_with_title_and_layout_when_there_is_more_than_one_tagged_value_found() {
         FakeSERegistryLoader.load();
-        UIComponent layout = new UILabel(random("label"));
+        XComponent layout = new XLabel(random("label"));
         Events events = new Events();
         Registry.put(Events.class,events);
         Registry.put(TaggedValueStringMap.class,stringMap);

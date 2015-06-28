@@ -6,7 +6,7 @@ import se.util.TaggedValueStringMap;
 import x.Registry;
 import x.command.Command;
 import x.page.PageLink;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 public final class EditCommand
     extends Command
@@ -25,7 +25,7 @@ public final class EditCommand
         } else if (values.length==1) {
             postEventToEditSingleSource(values[0]);
         } else {
-            UIComponent layout = (UIComponent) args[1];
+            XComponent layout = (XComponent) args[1];
             postEventForAmbiguousSelection(link, layout);
         }
     }
@@ -40,7 +40,7 @@ public final class EditCommand
         events().post(new EditTaggedValueEvent(value));
     }
 
-    private void postEventForAmbiguousSelection(PageLink link, UIComponent layout) {
+    private void postEventForAmbiguousSelection(PageLink link, XComponent layout) {
         events().post(new EditLinkEvent(link,layout));
     }
 

@@ -11,7 +11,7 @@ import x.command.Command;
 import x.page.PageLink;
 import x.screen.Screen;
 import x.ui.IForm;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 /**
  * A CodenameOne Form that is also an IForm.
@@ -58,7 +58,7 @@ public class C1Form
         Screen.getShowing().refresh();
     }
 
-    final public void layout(UIComponent component) {
+    final public void layout(XComponent component) {
         removeAll();
         setLayout(createLayout());
         Components.addToContainer(C1UIRenderer.render(component), this);

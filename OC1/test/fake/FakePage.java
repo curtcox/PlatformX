@@ -2,20 +2,20 @@ package fake;
 
 import x.page.Page;
 import x.page.PageLink;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 public class FakePage extends Page {
 
     public boolean layoutForPortrait;
-    public UIComponent uiComponent = new UIComponent();
+    public XComponent xComponent = new XComponent();
 
     public FakePage(PageLink link) {
         super(link);
     }
 
     @Override
-    public UIComponent layoutForPortrait() {
+    public XComponent layoutForPortrait() {
         layoutForPortrait = true;
-        return uiComponent;
+        return xComponent;
     }
 }

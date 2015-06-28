@@ -4,7 +4,7 @@ import com.codename1.ui.TextField;
 import com.codename1.ui.events.DataChangedListener;
 import x.uilist.ISearchFilterInstaller;
 import x.uilist.StringToListFilter;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 public final class C1SearchFilterInstaller
     implements ISearchFilterInstaller
@@ -25,7 +25,7 @@ public final class C1SearchFilterInstaller
     }
 
     @Override
-    public void install(ISearchableList list, StringToListFilter stringToListFilter) {
+    public void install(XSearchableList list, StringToListFilter stringToListFilter) {
         c1SpecificInstall((C1SearchableList) list,stringToListFilter);
     }
 }

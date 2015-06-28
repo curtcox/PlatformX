@@ -4,7 +4,7 @@ import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.net.Network;
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 
 import java.io.ByteArrayInputStream;
 import java.io.IOException;
@@ -30,11 +30,11 @@ public final class C1RawNetwork
         }
     }
 
-    public UIImage getImage(URI uri) {
+    public XImage getImage(URI uri) {
         return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
     }
 
-    public UIImage getImage(URI uri, int w, int h) {
+    public XImage getImage(URI uri, int w, int h) {
         return NetworkCacheEntry.newEntryFor(uri).createImageToStorage();
     }
 

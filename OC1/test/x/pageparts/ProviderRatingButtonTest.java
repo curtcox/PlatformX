@@ -1,11 +1,11 @@
 package x.pageparts;
 
 import fake.FakeUI;
-import x.uiwidget.UIButton;
 import fake.FakeC1RegistryLoader;
 import java.util.concurrent.Callable;
 import static org.junit.Assert.*;
 import org.junit.Test;
+import x.uiwidget.XButton;
 
 public class ProviderRatingButtonTest {
     
@@ -15,8 +15,8 @@ public class ProviderRatingButtonTest {
         assertNotNull(createScreenButtonOnEDT());
     }
  
-    private UIButton createScreenButtonOnEDT() throws Exception {
-        return (UIButton) FakeUI.onEDT(new Callable() {
+    private XButton createScreenButtonOnEDT() throws Exception {
+        return (XButton) FakeUI.onEDT(new Callable() {
             public Object call() throws Exception {
                 return ProviderRatingButton.of();
             }

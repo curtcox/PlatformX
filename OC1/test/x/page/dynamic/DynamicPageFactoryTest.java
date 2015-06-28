@@ -6,8 +6,8 @@ import x.page.PageFactory;
 import x.page.PageLink;
 import x.page.PageTags;
 import x.pages.Home;
-import x.uiwidget.UIComponent;
-import x.uiwidget.UILabel;
+import x.uiwidget.XComponent;
+import x.uiwidget.XLabel;
 import fake.FakeSERegistryLoader;
 import mach.Mocks;
 import org.junit.Before;
@@ -84,9 +84,9 @@ public class DynamicPageFactoryTest {
 
         PageFactory testObject = DynamicPageFactory.builder().map(tags("title"), controller, source1).build();
 
-        UIComponent layout = testObject.create(link("title"))[0].layoutForPortrait();
+        XComponent layout = testObject.create(link("title"))[0].layoutForPortrait();
 
-        UILabel label = (UILabel) layout;
+        XLabel label = (XLabel) layout;
         assertEquals("one",label.text);
     }
 
@@ -99,10 +99,10 @@ public class DynamicPageFactoryTest {
                 .build();
 
         Page page = testObject.create(link("one"))[0];
-        UIComponent layout = page.layoutForPortrait();
+        XComponent layout = page.layoutForPortrait();
 
         assertSame("one", page.title);
-        UILabel label = (UILabel) layout;
+        XLabel label = (XLabel) layout;
         assertEquals("one", label.text);
     }
 
@@ -115,10 +115,10 @@ public class DynamicPageFactoryTest {
                 .build();
 
         Page page = testObject.create(link("two"))[0];
-        UIComponent layout = page.layoutForPortrait();
+        XComponent layout = page.layoutForPortrait();
 
         assertSame("two", page.title);
-        UILabel label = (UILabel) layout;
+        XLabel label = (XLabel) layout;
         assertEquals("two", label.text);
     }
 

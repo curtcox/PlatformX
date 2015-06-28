@@ -13,7 +13,7 @@ import x.pageparts.ServiceProviderTextFilter;
 import x.pages.ServiceProviderSearchPage;
 import x.services.ServiceProviders;
 import x.uilist.ISearchFilterInstaller;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 import java.util.Arrays;
 import java.util.List;
@@ -69,10 +69,10 @@ public final class ServiceProviderSearchScreenFactory {
         return searchParams;
     }
     
-    private static ISearchableList<ServiceProvider> newSearchableList(List<ServiceProvider> providers,ServiceProviderSearchParams searchParams) {
+    private static XSearchableList<ServiceProvider> newSearchableList(List<ServiceProvider> providers,ServiceProviderSearchParams searchParams) {
         SwappableList<ServiceProvider> swappable = newSwappableList(providers);
         ZoomOutSearchButton zoomButton = new ZoomOutSearchButton(searchParams,swappable);
-        ISearchableList list = null;//new SearchableList(swappable,zoomButton,new ServiceProviderListCellConfigurer());
+        XSearchableList list = null;//new SearchableList(swappable,zoomButton,new ServiceProviderListCellConfigurer());
         installer().install(list, new ServiceProviderTextFilter());
         return list;
     }

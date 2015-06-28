@@ -3,7 +3,7 @@ package se.ui;
 import x.command.Command;
 import x.page.PageLink;
 import x.ui.IForm;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 import javax.swing.*;
 import java.awt.*;
@@ -19,7 +19,7 @@ public final class SEForm
     private Command edit;
     private JButton backButton;
     private JButton editButton;
-    private UIComponent layout;
+    private XComponent layout;
 
     SEForm(PageLink link, Command edit) {
         this.link = link;
@@ -32,7 +32,7 @@ public final class SEForm
     }
 
     @Override
-    public void layout(UIComponent layout) {
+    public void layout(XComponent layout) {
         removeAll();
         this.layout = layout;
         add(SEUIRenderer.render(layout), BorderLayout.CENTER);

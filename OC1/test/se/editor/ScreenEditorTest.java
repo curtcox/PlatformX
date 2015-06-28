@@ -6,7 +6,7 @@ import x.page.PageLink;
 import x.page.PageTags;
 import x.screen.Screen;
 import x.ui.IFormFactory;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 import fake.FakeFormFactory;
 import fake.FakeSERegistryLoader;
 import org.junit.Before;
@@ -81,7 +81,7 @@ public class ScreenEditorTest {
         PageLink link = PageLink.of("");
         Page page = new Page(link) {
             @Override
-            public UIComponent layoutForPortrait() {
+            public XComponent layoutForPortrait() {
                 return null;
             }
         };

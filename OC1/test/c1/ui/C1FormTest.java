@@ -3,8 +3,8 @@ package c1.ui;
 import com.codename1.ui.layouts.FlowLayout;
 import x.page.PageLink;
 import x.ui.IForm;
-import x.uiwidget.UIComponent;
-import x.uiwidget.UILabel;
+import x.uiwidget.XComponent;
+import x.uiwidget.XLabel;
 import fake.FakeC1RegistryLoader;
 import fake.FakeUIManager;
 import org.junit.Before;
@@ -59,7 +59,7 @@ public class C1FormTest {
 
     @Test
     public void layout_is_idempotent() {
-        UIComponent layout = new UILabel("!!");
+        XComponent layout = new XLabel("!!");
 
         for (int i=0; i<3; i++) {
             testObject.layout(layout);
@@ -69,7 +69,7 @@ public class C1FormTest {
 
     @Test
     public void layout_uses_flow_layout() {
-        testObject.layout(new UILabel());
+        testObject.layout(new XLabel());
         assertTrue(testObject.getLayout() instanceof FlowLayout);
     }
 

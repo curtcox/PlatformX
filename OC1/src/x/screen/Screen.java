@@ -10,7 +10,7 @@ import x.page.PageLink;
 import x.ui.IDisplay;
 import x.ui.IForm;
 import x.ui.IFormFactory;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
@@ -132,15 +132,15 @@ public final class Screen {
         }
     }
 
-    private UIComponent layoutForPortrait() {
+    private XComponent layoutForPortrait() {
         return page.layoutForPortrait();
     }
 
-    protected UIComponent layoutForLandscape() {
+    protected XComponent layoutForLandscape() {
         return page.layoutForLandscape();
     }
 
-    private void layout(UIComponent layout) {
+    private void layout(XComponent layout) {
         form.layout(layout);
     }
 

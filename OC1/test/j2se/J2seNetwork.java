@@ -3,7 +3,7 @@ package j2se;
 import java.io.*;
 import java.net.URI;
 import x.net.Network;
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 
 /**
  * Testing network implementation that uses J2SE.
@@ -21,12 +21,12 @@ public class J2seNetwork
         }
     }
 
-    public UIImage getImage(URI uri) {
-        return new UIImage();
+    public XImage getImage(URI uri) {
+        return new XImage();
     }
 
-    public UIImage getImage(URI uri, int w, int h) {
-        return new UIImage();
+    public XImage getImage(URI uri, int w, int h) {
+        return new XImage();
     }
     
 }

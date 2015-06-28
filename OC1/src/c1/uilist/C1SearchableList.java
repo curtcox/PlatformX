@@ -8,14 +8,14 @@ import x.event.Action;
 import x.event.LiveList;
 import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 /**
  * A wrapper for a searchable list component.
  * @param <T> list item type
  */
 public final class C1SearchableList<T>
-    implements ISearchableList<T>
+    implements XSearchableList<T>
 {
 
     final TextField searchTerm = new TextField();

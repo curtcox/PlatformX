@@ -5,7 +5,7 @@ import com.codename1.ui.events.DataChangedListener;
 import x.event.SwappableList;
 import x.uilist.IListContentInstaller;
 import x.uilist.StringToList;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 final class C1ListContentInstaller
     implements IListContentInstaller {
@@ -19,7 +19,7 @@ final class C1ListContentInstaller
         });
     }
 
-    public void install(ISearchableList list, final SwappableList items, final StringToList stringToList) {
+    public void install(XSearchableList list, final SwappableList items, final StringToList stringToList) {
         c1SpecificInstall((C1SearchableList) list,items,stringToList);
     }
 }

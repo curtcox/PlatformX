@@ -9,8 +9,8 @@ import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import x.page.PageLink;
 import x.ui.IForm;
-import x.uiwidget.UIComponent;
-import x.uiwidget.UILabel;
+import x.uiwidget.XComponent;
+import x.uiwidget.XLabel;
 
 import static org.junit.Assert.*;
 
@@ -62,7 +62,7 @@ public class AnFormTest {
 
     @Test
     public void layout_is_idempotent() {
-        UIComponent layout = new UILabel("!!");
+        XComponent layout = new XLabel("!!");
 
         for (int i=0; i<3; i++) {
             testObject.layout(layout);

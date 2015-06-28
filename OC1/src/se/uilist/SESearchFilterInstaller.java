@@ -2,7 +2,7 @@ package se.uilist;
 
 import x.uilist.ISearchFilterInstaller;
 import x.uilist.StringToListFilter;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 import javax.swing.*;
 import java.awt.*;
@@ -40,7 +40,7 @@ public final class SESearchFilterInstaller
     }
 
     @Override
-    public void install(ISearchableList list, StringToListFilter stringToListFilter) {
+    public void install(XSearchableList list, StringToListFilter stringToListFilter) {
         seSpecificInstall((SESearchableList) list, stringToListFilter);
     }
 }

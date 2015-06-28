@@ -7,7 +7,7 @@ import org.junit.Test;
 import x.app.CurrentState;
 import x.event.Change;
 import x.event.StringSource;
-import x.uiwidget.UIButton;
+import x.uiwidget.XButton;
 
 import java.util.concurrent.Callable;
 
@@ -24,10 +24,10 @@ public class C1ActionButtonTest {
         FakeC1RegistryLoader.load();
     }
     
-    private UIButton createActionButtonOnEDT(final String text) throws Exception {
-        return (UIButton) FakeUI.onEDT(new Callable(){
+    private XButton createActionButtonOnEDT(final String text) throws Exception {
+        return (XButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
-                return new UIButton(text) {
+                return new XButton(text) {
                     @Override
                     public void onTap() {
                         tapped = true;
@@ -40,13 +40,13 @@ public class C1ActionButtonTest {
     @Test
     public void sets_text_to_constructor_value() throws Exception {
         String random = this.toString();
-        UIButton button = createActionButtonOnEDT(random);
+        XButton button = createActionButtonOnEDT(random);
         assertSame(random, button.getText());
     }
 
     @Test
     public void updateTextOnChange_with_specified_source_updates_text() throws Exception {
-        UIButton button = createActionButtonOnEDT("");
+        XButton button = createActionButtonOnEDT("");
         String expected = stringSource().getString();
         Change.Source change = new Change.Source() {
             public void addListener(Change.Listener listener) {
@@ -71,7 +71,7 @@ public class C1ActionButtonTest {
     @Test
     public void updateTextOnChange_updates_text_when_current_state_changes() throws Exception {
         FakeC1RegistryLoader.load();
-        UIButton button = createActionButtonOnEDT("");
+        XButton button = createActionButtonOnEDT("");
         String expected = stringSource().getString();
         button.updateTextOnChange(stringSource());
         CurrentState.get().broadcastChange();

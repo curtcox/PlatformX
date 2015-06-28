@@ -2,8 +2,8 @@ package x.page.dynamic;
 
 import hash.NamedExpression;
 import x.pageparts.XScreenButton;
-import x.uiwidget.UIButton;
-import x.uiwidget.UILabel;
+import x.uiwidget.XButton;
+import x.uiwidget.XLabel;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -45,7 +45,7 @@ final class DynamicScreenComponentMethods
             @Override
             public Object invoke(Object[] values) {
                 URI uri = uri(values[0]);
-                UILabel label = new UILabel();
+                XLabel label = new XLabel();
                 label.icon = uri;
                 return label;
             }
@@ -77,11 +77,11 @@ final class DynamicScreenComponentMethods
         return (value==null) ? "" : value.toString();
     }
 
-    private UIButton button(String text, String image, String leadingTo) {
+    private XButton button(String text, String image, String leadingTo) {
         return XScreenButton.builder().text(text).image(image).leadingTo(leadingTo).build();
     }
 
-    private UIButton link(String text) {
+    private XButton link(String text) {
         return XScreenButton.builder().text(text).leadingTo(text).build();
     }
     

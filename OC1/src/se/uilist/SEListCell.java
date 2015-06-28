@@ -1,7 +1,7 @@
 package se.uilist;
 
 import x.uilist.IListCell;
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 
 import javax.swing.*;
 import java.awt.*;
@@ -91,7 +91,7 @@ final class SEListCell
     }
 
     @Override
-    public void setIcon(UIImage icon) {
+    public void setIcon(XImage icon) {
 
     }
 

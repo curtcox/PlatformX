@@ -2,7 +2,7 @@ package ios.uilist;
 
 import x.uilist.ISearchFilterInstaller;
 import x.uilist.StringToListFilter;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 public final class IosSearchFilterInstaller
     implements ISearchFilterInstaller
@@ -17,7 +17,7 @@ public final class IosSearchFilterInstaller
     }
 
     @Override
-    public void install(ISearchableList list, StringToListFilter stringToListFilter) {
+    public void install(XSearchableList list, StringToListFilter stringToListFilter) {
         anSpecificInstall((IosSearchableList) list, stringToListFilter);
     }
 }

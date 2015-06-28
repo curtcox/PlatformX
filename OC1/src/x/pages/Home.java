@@ -7,7 +7,7 @@ import x.pageparts.ProviderRatingButton;
 import x.pageparts.XScreenButton;
 import x.services.LocationService;
 import x.ui.TextPosition;
-import x.uiwidget.UIButton;
+import x.uiwidget.XButton;
 
 /**
  * The home screen of the application.
@@ -18,16 +18,16 @@ public final class Home {
         return ServiceProvider.getSelected().id != null;
     }
 
-    UIButton provider_details() {
+    XButton provider_details() {
         return ProviderDetailsButton.of();
     }
 
-    UIButton provider_rating() {
+    XButton provider_rating() {
         return ProviderRatingButton.of();
     }
 
-    UIButton searchNearbyButton() {
-        UIButton button = XScreenButton.builder()
+    XButton searchNearbyButton() {
+        XButton button = XScreenButton.builder()
                 .text("Search nearby")
                 .image("system-search-4.png")
                 .action(clearLocationSelection())

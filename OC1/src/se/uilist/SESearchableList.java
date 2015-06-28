@@ -5,7 +5,7 @@ import x.event.Action;
 import x.event.LiveList;
 import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;
-import x.uiwidget.ISearchableList;
+import x.uiwidget.XSearchableList;
 
 import javax.swing.*;
 
@@ -14,7 +14,7 @@ import javax.swing.*;
  * @param <T> list item type
  */
 public final class SESearchableList<T>
-    implements ISearchableList<T>
+    implements XSearchableList<T>
 {
 
     final JTextField searchTerm = new JTextField();

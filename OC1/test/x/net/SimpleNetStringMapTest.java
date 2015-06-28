@@ -6,7 +6,7 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
@@ -19,8 +19,8 @@ public class SimpleNetStringMapTest {
         public InputStream getStreamFor(URI uri) {
             return new ByteArrayInputStream(pages.get(uri).getBytes());
         }
-        public UIImage getImage(URI uri) { throw new UnsupportedOperationException(""); }
-        public UIImage getImage(URI uri, int w, int h) { throw new UnsupportedOperationException(); }
+        public XImage getImage(URI uri) { throw new UnsupportedOperationException(""); }
+        public XImage getImage(URI uri, int w, int h) { throw new UnsupportedOperationException(); }
     };
     
     URI base = URI("http://example.com/");

@@ -11,8 +11,8 @@ import x.page.dynamic.GlobPageFactory;
 import x.pageparts.LocationListCellConfigurer;
 import x.pages.LocationSelectionPage;
 import x.uilist.IListContentInstaller;
-import x.uiwidget.ISearchableList;
-import x.uiwidget.UILabel;
+import x.uiwidget.XLabel;
+import x.uiwidget.XSearchableList;
 
 import java.util.ArrayList;
 
@@ -26,17 +26,17 @@ public final class LocationSelectionPageFactory {
     });
             
     static LocationSelectionPage of(PageLink link) {
-        ISearchableList<LocationDescription> searchList = newSearchableList();
+        XSearchableList<LocationDescription> searchList = newSearchableList();
         return new LocationSelectionPage(link,searchList);
     }
     
-    private static ISearchableList<LocationDescription> newSearchableList(LiveList locations) {
-        return searchableListFactory().from(locations, new UILabel(), new LocationListCellConfigurer());
+    private static XSearchableList<LocationDescription> newSearchableList(LiveList locations) {
+        return searchableListFactory().from(locations, new XLabel(), new LocationListCellConfigurer());
     }
 
-    private static ISearchableList<LocationDescription> newSearchableList() {
+    private static XSearchableList<LocationDescription> newSearchableList() {
         SwappableList<LocationDescription> locations = swappableListFactory().from(new ArrayList());
-        ISearchableList<LocationDescription> list = newSearchableList(locations);
+        XSearchableList<LocationDescription> list = newSearchableList(locations);
         contentInstaller().install(list, locations, new GeocoderStringToList());
         return list;
     }
@@ -45,8 +45,8 @@ public final class LocationSelectionPageFactory {
         return Registry.get(SwappableList.Factory.class);
     }
 
-    private static ISearchableList.Factory searchableListFactory() {
-        return Registry.get(ISearchableList.Factory.class);
+    private static XSearchableList.Factory searchableListFactory() {
+        return Registry.get(XSearchableList.Factory.class);
     }
 
     private static IListContentInstaller contentInstaller() {

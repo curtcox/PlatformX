@@ -1,7 +1,7 @@
 package x.page.dynamic;
 
 import x.pageparts.XScreenButton;
-import x.uiwidget.UILabel;
+import x.uiwidget.XLabel;
 import hash.NamedExpression;
 import org.junit.Test;
 
@@ -40,7 +40,7 @@ public class DynamicPageComponentMethodsTest {
     @Test
     public void invoking_image_creates_label() throws URISyntaxException {
         URI uri = new URI("image_uri");
-        UILabel label = (UILabel) invoke("image",uri);
+        XLabel label = (XLabel) invoke("image",uri);
         assertEquals(uri, label.icon);
     }
 

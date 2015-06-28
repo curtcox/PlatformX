@@ -6,7 +6,7 @@ import com.codename1.io.Util;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.URLImage;
 import x.Registry;
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 import x.util.Strings;
 
 import java.io.IOException;
@@ -60,11 +60,11 @@ final class NetworkCacheEntry {
         }
     }
 
-    UIImage createImageToStorage() {
+    XImage createImageToStorage() {
         return createImageToStorage(71,71);
     }
 
-    UIImage createImageToStorage(int w, int h) {
+    XImage createImageToStorage(int w, int h) {
         EncodedImage placeholder = new C1EmptyImage(w, h);
         URLImage image = URLImage.createToStorage(placeholder, fileName, uri.toString(), URLImage.RESIZE_SCALE_TO_FILL);
         image.fetch();

@@ -4,13 +4,13 @@ import x.event.StringSource;
 import x.page.Page;
 import x.page.PageLink;
 import x.screen.Screen;
-import x.uiwidget.UIButton;
+import x.uiwidget.XButton;
 
 /**
  * A button that will go to the given page when tapped.
  */
 public final class XScreenButton
-    extends UIButton
+    extends XButton
 {
     final Page page;
     public final PageLink link;
@@ -41,7 +41,7 @@ public final class XScreenButton
         private Page page;
         private PageLink link;
 
-        public UIButton build() {
+        public XButton build() {
             if (page !=null || link !=null) {
                 return new XScreenButton(this);
             }

@@ -1,7 +1,7 @@
 package se.uiwidget;
 
 import x.ui.AttributedString;
-import x.uiwidget.UIAttributedText;
+import x.uiwidget.XAttributedText;
 
 import javax.swing.*;
 import java.awt.*;
@@ -31,7 +31,7 @@ public class SEAttributedTextDemo {
 
     private static SEAttributedText attributedText() {
         return new SEAttributedText(crawl()) {
-            protected void onTextSelected(UIAttributedText.SelectedEvent event) {
+            protected void onTextSelected(XAttributedText.SelectedEvent event) {
                 System.out.println(event.toString());
             }
         };

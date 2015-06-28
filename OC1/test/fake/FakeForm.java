@@ -3,19 +3,19 @@ package fake;
 import x.command.Command;
 import x.page.PageLink;
 import x.ui.IForm;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XComponent;
 
 public class FakeForm
     implements IForm
 {
-    public UIComponent layout;
+    public XComponent layout;
     public boolean showWasCalled;
     public boolean showBackWasCalled;
     public PageLink link;
     private Command backCommand;
 
     @Override
-    public void layout(UIComponent layout) {
+    public void layout(XComponent layout) {
         this.layout = layout;
     }
 

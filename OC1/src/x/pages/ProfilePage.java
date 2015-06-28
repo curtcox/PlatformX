@@ -2,8 +2,8 @@ package x.pages;
 
 import x.page.Page;
 import x.page.PageLink;
-import x.uiwidget.UIBorderContainer;
-import x.uiwidget.UIComponent;
+import x.uiwidget.XBorderContainer;
+import x.uiwidget.XComponent;
 
 /**
  * For viewing and manipulating the user profile.
@@ -17,8 +17,8 @@ final class ProfilePage
     }
 
     @Override
-    public UIComponent layoutForPortrait() {
-        return new UIBorderContainer();
+    public XComponent layoutForPortrait() {
+        return new XBorderContainer();
     }
     
 }

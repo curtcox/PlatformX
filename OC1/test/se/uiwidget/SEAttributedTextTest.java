@@ -1,7 +1,7 @@
 package se.uiwidget;
 
 import x.ui.AttributedString;
-import x.uiwidget.UIAttributedText;
+import x.uiwidget.XAttributedText;
 import org.junit.Test;
 
 import javax.swing.*;
@@ -18,13 +18,13 @@ public class SEAttributedTextTest {
 
     static class TestAttributedText extends SEAttributedText {
 
-        UIAttributedText.SelectedEvent event;
+        XAttributedText.SelectedEvent event;
 
         TestAttributedText(AttributedString text) {
             super(text);
         }
 
-        protected void onTextSelected(UIAttributedText.SelectedEvent event) {
+        protected void onTextSelected(XAttributedText.SelectedEvent event) {
             this.event = event;
         }
 

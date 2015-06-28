@@ -36,7 +36,7 @@ public class XScreenButtonTest {
         page = new FakePage(link);
         pages = new FakePage[] {page};
 
-        _();             form.layout(page.uiComponent);
+        _();             form.layout(page.xComponent);
         _(); wild(null); form.setBackCommand(null);
         _(pages);      pageFactory.create(link);
     }
@@ -90,7 +90,7 @@ public class XScreenButtonTest {
 
     void verifyScreenShown() {
         verify();
-        form.layout(page.uiComponent);
+        form.layout(page.xComponent);
         form.show();
         assertTrue(page.layoutForPortrait);
     }

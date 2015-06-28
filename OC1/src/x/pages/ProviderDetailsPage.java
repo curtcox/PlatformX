@@ -8,10 +8,10 @@ import x.page.PageLink;
 import x.page.dynamic.GlobPageFactory;
 import x.pageparts.ProviderRatingButton;
 import x.ui.LinkButton;
-import x.uiwidget.UIButton;
-import x.uiwidget.UIComponent;
-import x.uiwidget.UILabel;
-import x.uiwidget.UITable;
+import x.uiwidget.XButton;
+import x.uiwidget.XComponent;
+import x.uiwidget.XLabel;
+import x.uiwidget.XTable;
 
 import java.net.URI;
 import java.util.Arrays;
@@ -22,13 +22,13 @@ import java.util.Arrays;
 public final class ProviderDetailsPage
     extends Page
 {
-    private final UILabel name = new UILabel();
-    private final UILabel distance = new UILabel();
-    private final UILabel types = new UILabel();
-    private final UILabel price = new UILabel();
-    private final UILabel rating = new UILabel();
-    private final UILabel vicinity = new UILabel();
-    private final UIButton icon = new LinkButton("",new SearchLinkFactory());
+    private final XLabel name = new XLabel();
+    private final XLabel distance = new XLabel();
+    private final XLabel types = new XLabel();
+    private final XLabel price = new XLabel();
+    private final XLabel rating = new XLabel();
+    private final XLabel vicinity = new XLabel();
+    private final XButton icon = new LinkButton("",new SearchLinkFactory());
     
     private final class SearchLinkFactory implements PageLink.Factory {
         public PageLink create() {
@@ -48,8 +48,8 @@ public final class ProviderDetailsPage
     }
     
     @Override
-    public UIComponent layoutForPortrait() {
-        return new UITable(8,1,
+    public XComponent layoutForPortrait() {
+        return new XTable(8,1,
                     name,
                     distance,
                     vicinity,

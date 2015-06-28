@@ -17,51 +17,51 @@ import static com.codename1.ui.layouts.BoxLayout.Y_AXIS;
 
 final class C1UIRenderer {
 
-    static Component render(UIComponent layout) {
-        if (layout instanceof UIPeeredComponent) { return peer(layout);}
-        if (layout instanceof UIButton)          { return button(layout); }
-        if (layout instanceof UILabel)           { return label(layout);  }
-        if (layout instanceof UIFlow)            { return flow(layout);  }
-        if (layout instanceof UIColumn)          { return column(layout);  }
-        if (layout instanceof UIRow)             { return row(layout);  }
+    static Component render(XComponent layout) {
+        if (layout instanceof XPeeredComponent) { return peer(layout);}
+        if (layout instanceof XButton)          { return button(layout); }
+        if (layout instanceof XLabel)           { return label(layout);  }
+        if (layout instanceof XFlow)            { return flow(layout);  }
+        if (layout instanceof XColumn)          { return column(layout);  }
+        if (layout instanceof XRow)             { return row(layout);  }
         String message = layout == null ? "null" : layout.getClass().getName();
         IllegalArgumentException e = new IllegalArgumentException(message);
         log(e);
         throw e;
     }
 
-    private static Component peer(UIComponent layout) {
-        UIPeeredComponent peeredComponent = (UIPeeredComponent) layout;
+    private static Component peer(XComponent layout) {
+        XPeeredComponent peeredComponent = (XPeeredComponent) layout;
         return (Component) peeredComponent.peer;
     }
 
-    static Container column(UIComponent layout) {
+    static Container column(XComponent layout) {
         return box(layout,Y_AXIS);
     }
 
-    static Container row(UIComponent layout) {
+    static Container row(XComponent layout) {
         return box(layout,X_AXIS);
     }
 
-    static Container box(UIComponent layout,int axis) {
+    static Container box(XComponent layout,int axis) {
         Container panel = new Container();
         panel.setLayout(new BoxLayout(axis));
-        for (UIComponent component : ((UIContainer) layout).components) {
+        for (XComponent component : ((XContainer) layout).components) {
             panel.addComponent(render(component));
         }
         return panel;
     }
 
-    static Container flow(UIComponent layout) {
+    static Container flow(XComponent layout) {
         Container panel = new Container();
-        for (UIComponent component : ((UIContainer) layout).components) {
+        for (XComponent component : ((XContainer) layout).components) {
             panel.addComponent(render(component));
         }
         return panel;
     }
 
-    static Button button(UIComponent layout) {
-        final UIButton button = (UIButton) layout;
+    static Button button(XComponent layout) {
+        final XButton button = (XButton) layout;
         Button cButton = new Button(button.text);
         cButton.addActionListener(new ActionListener() {
             @Override
@@ -72,8 +72,8 @@ final class C1UIRenderer {
         return cButton;
     }
 
-    static Label label(UIComponent layout) {
-        UILabel label = (UILabel) layout;
+    static Label label(XComponent layout) {
+        XLabel label = (XLabel) layout;
         Label cLabel = new Label(label.text);
         return cLabel;
     }

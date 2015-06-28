@@ -1,12 +1,12 @@
 package x.uilist;
 
-import x.uiwidget.UIImage;
+import x.uiwidget.XImage;
 
 import java.net.URI;
 
 public interface IListCell {
     void setFirstRowText(String text);
     void setSecondRowText(String text);
-    void setIcon(UIImage icon);
+    void setIcon(XImage icon);
     void setIcon(URI uri);
 }

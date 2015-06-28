@@ -14,7 +14,7 @@ import static org.junit.Assert.fail;
 
 public class C1UIRendererTest {
 
-    static class FakeButton extends UIButton {
+    static class FakeButton extends XButton {
 
         boolean tapped;
 
@@ -36,15 +36,15 @@ public class C1UIRendererTest {
 
     @Test
     public void render_returns_right_component_type() {
-        assertRendersAs(new UILabel(""),Label.class);
+        assertRendersAs(new XLabel(""),Label.class);
         assertRendersAs(new FakeButton(""), Button.class);
-        assertRendersAs(new UIColumn(),Container.class);
-        assertRendersAs(new UIRow(),Container.class);
-        assertRendersAs(new UIFlow(),Container.class);
-        assertRendersAs(new UIPeeredComponent(new Label()),Label.class);
+        assertRendersAs(new XColumn(),Container.class);
+        assertRendersAs(new XRow(),Container.class);
+        assertRendersAs(new XFlow(),Container.class);
+        assertRendersAs(new XPeeredComponent(new Label()),Label.class);
     }
 
-    private void assertRendersAs(UIComponent component, Class c) {
+    private void assertRendersAs(XComponent component, Class c) {
         assertTrue(c.isInstance(render(component)));
     }
 
@@ -60,7 +60,7 @@ public class C1UIRendererTest {
 
     @Test
     public void render_throws_IllegalArgumentException_for_unsupported_component_string() {
-        UIComponent component = new UIComponent();
+        XComponent component = new XComponent();
         try {
             render(component);
             fail();
@@ -71,7 +71,7 @@ public class C1UIRendererTest {
 
     @Test
     public void render_empty_flow_produces_proper_layout() {
-        UIFlow flow = new UIFlow();
+        XFlow flow = new XFlow();
         Container actual = (Container) render(flow);
         Layout layout = actual.getLayout();
         assertTrue(layout instanceof FlowLayout);
@@ -79,7 +79,7 @@ public class C1UIRendererTest {
 
     @Test
     public void render_empty_column_produces_proper_layout() {
-        UIColumn column = new UIColumn();
+        XColumn column = new XColumn();
         Container actual = (Container) render(column);
         BoxLayout layout = (BoxLayout) actual.getLayout();
         assertEquals(BoxLayout.Y_AXIS,layout.getAxis());
@@ -87,7 +87,7 @@ public class C1UIRendererTest {
 
     @Test
     public void render_empty_row_produces_proper_layout() {
-        UIRow row = new UIRow();
+        XRow row = new XRow();
         Container actual = (Container) render(row);
         BoxLayout layout = (BoxLayout) actual.getLayout();
         assertEquals(BoxLayout.X_AXIS,layout.getAxis());
@@ -96,7 +96,7 @@ public class C1UIRendererTest {
     @Test
     public void render_flow_with_a_label() {
         String text = toString();
-        UIFlow flow = new UIFlow(new UILabel(text));
+        XFlow flow = new XFlow(new XLabel(text));
         Container actual = (Container) render(flow);
         assertEquals(1,actual.getComponentCount());
         Label label = (Label) actual.getComponentAt(0);
@@ -106,7 +106,7 @@ public class C1UIRendererTest {
     @Test
     public void render_column_with_a_label() {
         String text = toString();
-        UIColumn column = new UIColumn(new UILabel(text));
+        XColumn column = new XColumn(new XLabel(text));
         Container actual = (Container) render(column);
         assertEquals(1,actual.getComponentCount());
         Label label = (Label) actual.getComponentAt(0);
@@ -116,7 +116,7 @@ public class C1UIRendererTest {
     @Test
     public void render_row_with_a_label() {
         String text = toString();
-        UIRow row = new UIRow(new UILabel(text));
+        XRow row = new XRow(new XLabel(text));
         Container actual = (Container) render(row);
         assertEquals(1,actual.getComponentCount());
         Label label = (Label) actual.getComponentAt(0);
@@ -126,14 +126,14 @@ public class C1UIRendererTest {
     @Test
     public void render_a_label() {
         String text = toString();
-        Label actual = (Label) render(new UILabel(text));
+        Label actual = (Label) render(new XLabel(text));
         assertEquals(text,actual.getText());
     }
 
     @Test
     public void render_a_button_produces_button_with_proper_text() {
         String text = toString();
-        UIButton button = new FakeButton("");
+        XButton button = new FakeButton("");
         button.text = text;
         Button actual = (Button) render(button);
 
@@ -152,14 +152,14 @@ public class C1UIRendererTest {
 
     @Test
     public void render_column_with_a_button_and_a_label() {
-        UIColumn column = new UIColumn(new FakeButton(""),new UILabel());
+        XColumn column = new XColumn(new FakeButton(""),new XLabel());
         Container actual = (Container) render(column);
         assertEquals(2,actual.getComponentCount());
         assertTrue(actual.getComponentAt(0) instanceof Button);
         assertTrue(actual.getComponentAt(1) instanceof Label);
     }
 
-    private Component render(UIComponent component) {
+    private Component render(XComponent component) {
         return C1UIRenderer.render(component);
     }
 }
