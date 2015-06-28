@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 public class XLiveListTest {
 
-    Change.Listener listener;
+    Change.Listener changeListener;
     XLiveList testObject = new XLiveList();
 
     @Before
@@ -33,6 +33,22 @@ public class XLiveListTest {
     }
 
     @Test
+    public void empty_list_iterates_properly() {
+        for (Object o : testObject) {
+            fail();
+        }
+    }
+
+    @Test
+    public void one_element_list_iterates_properly() {
+        Object item = this;
+        testObject.add(item);
+        for (Object o : testObject) {
+            assertSame(item, o);
+        }
+    }
+
+    @Test
     public void size_returns_1_for_list_with_1_item() {
         testObject.add("stuff");
         assertEquals(1,testObject.size());
@@ -40,12 +56,12 @@ public class XLiveListTest {
 
     @Test
     public void listener_is_notified_when_item_is_added() {
-        testObject.addListener(listener);
+        testObject.addListener(changeListener);
         testObject.add("stuff");
 
         verify();
 
-        listener.onChange();
+        changeListener.onChange();
     }
 
     @Test
@@ -58,4 +74,5 @@ public class XLiveListTest {
         assertEquals(1, array.length);
         assertSame(item,array[0]);
     }
+
 }

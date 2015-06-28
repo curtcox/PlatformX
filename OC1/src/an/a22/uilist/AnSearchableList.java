@@ -3,7 +3,6 @@ package an.a22.uilist;
 import an.a22.uiwidget.AnBorderContainer;
 import android.content.Context;
 import android.view.View;
-import android.widget.ListAdapter;
 import android.widget.TextView;
 import x.Registry;
 import x.event.Action;
@@ -23,7 +22,6 @@ public final class AnSearchableList<T>
     final TextView searchTerm = new TextView(context());
 
     final AnFilterListModel<T> filterListModel;
-    private final ListAdapter underlyingListModel;
     private final UIList filteredList;
 
     /**
@@ -32,8 +30,7 @@ public final class AnSearchableList<T>
     public final View component;
 
     private AnSearchableList(AnListFactories.Factory factory, LiveList<T> items, View action, ListCellConfigurer configurer) {
-        underlyingListModel = AnVirtualListModel.of(items);
-        filterListModel = AnFilterListModel.of(underlyingListModel);
+        filterListModel = AnFilterListModel.of(items);
         filteredList = factory.of(filterListModel,configurer);
         component = AnBorderContainer.of((View) filteredList)
              .addNorth(newNorthContainer(action));

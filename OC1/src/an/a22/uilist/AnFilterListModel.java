@@ -4,22 +4,37 @@ import android.database.DataSetObserver;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListAdapter;
+import x.event.Change;
+import x.event.LiveList;
 import x.uilist.ListFilter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 final class AnFilterListModel<T>
     implements ListAdapter
 {
-    private final ListAdapter filtered;
-    private DataSetObserver dataSetObserver;
+    private final LiveList filtered;
+    private List<DataSetObserver> dataSetObservers = new ArrayList();
     private ListFilter filter = ListFilter.ALLOW_ALL;
 
-    private AnFilterListModel(ListAdapter filtered) {
+    private AnFilterListModel(LiveList filtered) {
         this.filtered = filtered;
     }
 
-    public static AnFilterListModel of(ListAdapter filtered) {
+    public static AnFilterListModel of(LiveList filtered) {
         AnFilterListModel model = new AnFilterListModel(filtered);
+        model.listenForListChanges();
         return model;
+    }
+
+    private void listenForListChanges() {
+        filtered.addListener(new Change.Listener() {
+            @Override
+            public void onChange() {
+                dataChanged();
+            }
+        });
     }
 
     public void setFilter(ListFilter filter) {
@@ -28,9 +43,10 @@ final class AnFilterListModel<T>
     }
 
     public void dataChanged() {
-        dataSetObserver.onChanged();
+        for (DataSetObserver observer : dataSetObservers) {
+            observer.onChanged();
+        }
     }
-
 
     @Override
     public boolean areAllItemsEnabled() {
@@ -44,8 +60,7 @@ final class AnFilterListModel<T>
 
     @Override
     public void registerDataSetObserver(DataSetObserver dataSetObserver) {
-        this.dataSetObserver = dataSetObserver;
-        filtered.registerDataSetObserver(dataSetObserver);
+        dataSetObservers.add(dataSetObserver);
     }
 
     @Override
@@ -56,8 +71,8 @@ final class AnFilterListModel<T>
     @Override
     public int getCount() {
         int passed = 0;
-        for (int i=0; i<filtered.getCount(); i++) {
-            if (filter.passes(filtered.getItem(i))) {
+        for (int i=0; i<filtered.size(); i++) {
+            if (filter.passes(filtered.get(i))) {
                 passed++;
             }
         }
@@ -67,8 +82,8 @@ final class AnFilterListModel<T>
     @Override
     public Object getItem(int index) {
         int passed = -1;
-        for (int i=0; i<filtered.getCount(); i++) {
-            Object item = filtered.getItem(i);
+        for (int i=0; i<filtered.size(); i++) {
+            Object item = filtered.get(i);
             if (filter.passes(item)) {
                 passed++;
             }

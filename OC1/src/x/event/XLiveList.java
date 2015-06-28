@@ -48,9 +48,13 @@ public final class XLiveList
         return list.toArray();
     }
 
+    @Override
+    public Iterator iterator() {
+        return list.iterator();
+    }
+
     public boolean                       isEmpty() { throw unsupported(); }
     public boolean         contains(Object object) { throw unsupported(); }
-    public Iterator                     iterator() { throw unsupported(); }
     public Object[]        toArray(Object[] array) { throw unsupported(); }
     public boolean           remove(Object object) { throw unsupported(); }
     public void                            clear() { throw unsupported(); }
