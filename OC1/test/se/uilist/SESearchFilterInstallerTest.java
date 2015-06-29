@@ -52,8 +52,7 @@ public class SESearchFilterInstallerTest {
     @Test
     public void setFilterText_changes_list_size() throws InvocationTargetException, InterruptedException {
         items.add("1");
-        ListModel listModel = SEVirtualListModel.of(items);
-        SEFilterListModel model = SEFilterListModel.of(listModel);
+        SEFilterListModel model = SEFilterListModel.of(items);
         model.addListDataListener(listDataListener);
         SESearchFilterInstaller.setFilterText(model, stringToListFilter, "Q");
         assertEquals(0, model.getSize());

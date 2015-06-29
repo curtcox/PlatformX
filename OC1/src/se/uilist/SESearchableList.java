@@ -19,7 +19,6 @@ public final class SESearchableList<T>
 
     final JTextField searchTerm = new JTextField();
     final SEFilterListModel<T> filterListModel;
-    private final ListModel<T> underlyingListModel;
     private final UIList filteredList;
 
     /**
@@ -28,8 +27,7 @@ public final class SESearchableList<T>
     public final JComponent component;
 
     private SESearchableList(SEListFactories.Factory factory, LiveList<T> items, JComponent action, ListCellConfigurer configurer) {
-        underlyingListModel = SEVirtualListModel.of(items);
-        filterListModel = SEFilterListModel.of(underlyingListModel);
+        filterListModel = SEFilterListModel.of(items);
         filteredList = factory.of(filterListModel, configurer);
         component = component(action);
     }
