@@ -28,7 +28,7 @@ final class IosItemListPageFactory<T>
     }     
 
     private XSearchableList<T> newSearchableList() {
-        IosSearchableList<T> list = new IosSearchableList(new XLiveList(values),new UILabel(),new CellConfigurer());
+        IosSearchableList<T> list = IosSearchableList.of(new XLiveList(values),new UILabel(),new CellConfigurer());
         IosSearchFilterInstaller.anSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }

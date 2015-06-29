@@ -1,6 +1,6 @@
 package ios.uilist;
 
-import javafx.scene.control.ListView;
+import org.robovm.apple.uikit.UITableView;
 import x.uilist.ListCellConfigurer;
 
 final class IosBasicListCellRenderer<T>
@@ -11,7 +11,7 @@ final class IosBasicListCellRenderer<T>
         this.configurer = configurer;
     }
 
-    public IosListCell getListCellRendererComponent(ListView<? extends T> list, T value, int index,
+    public IosListCell getListCellRendererComponent(UITableView list, T value, int index,
              boolean isSelected,
              boolean cellHasFocus)
     {

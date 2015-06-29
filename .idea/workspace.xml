@@ -2,144 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\an\a22\uilist\AnVirtualListModel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\ios\uilist\IosVirtualListModel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\se\uilist\SEVirtualListModel.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\an\a22\uilist\AnVirtualListModelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\test\se\uilist\SEVirtualListModelTest.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/app/AnApplicationTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/app/AnApplicationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/ui/AnFormTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/ui/AnFormTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/ArgNamesParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/ArgNamesParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/ArgNamesTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/ArgNamesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/ArgsParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/ArgsParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/ArgsTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/ArgsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringBuilderTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringBuilderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringPartTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringPartTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/BoxFlowLayoutAssertions.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/BoxFlowLayoutAssertions.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/ui/C1ActionButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/ui/C1ActionButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/ui/C1DisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/ui/C1DisplayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/C1ExceptionLoggerTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/C1ExceptionLoggerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/uilist/C1FilterListModelTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/uilist/C1FilterListModelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/ui/C1FormTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/ui/C1FormTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/uilist/C1ListCellTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/uilist/C1ListCellTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/C1RegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/C1RegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/screen/C1ScreenTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/uilist/C1SearchableListTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/uilist/C1SearchableListTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/ui/C1UIRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/ui/C1UIRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/ColorTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/ColorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/ColumnBoxFlowLayoutTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/ColumnBoxFlowLayoutTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/CompositeParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/CompositeParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/ContextTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/ContextTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/CurrentStateTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/CurrentStateTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/DisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/DisplayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/services/DistanceCalculatorTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/services/DistanceCalculatorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mite/handlers/EchoRequestHandlerTest.java" afterPath="$PROJECT_DIR$/OC1/test/mite/handlers/EchoRequestHandlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/events/EventsTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/events/EventsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/ExpressionParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/ExpressionParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeAnRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeAnRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeC1RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeC1RegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeCodenameOneImplementation.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeCodenameOneImplementation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeCodenameOneImplementationTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeCodenameOneImplementationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeDeviceInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeDisplay.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeForm.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeFormFactory.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeFormFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeImplementationFactory.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeImplementationFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeImplementationFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeImplementationFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeLocationManager.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeLocationManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeLog.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeLog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeLogManager.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeLogManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRunner.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeSERegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeSERegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeStorage.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeStorage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeUI.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeUI.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeUIManager.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeUIManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeXRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeXRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/GeocodingTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/GeocodingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/GlobStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/GlobStringMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/GlobTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/GlobTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/HashInvokerTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/HashInvokerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/HashLines.java" afterPath="$PROJECT_DIR$/OC1/test/hash/HashLines.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/HashObjectMethodsTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/HashObjectMethodsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/HashParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/HashParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/HashTests.java" afterPath="$PROJECT_DIR$/OC1/test/hash/HashTests.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/HeartbeatTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/HeartbeatTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/io/IOTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/io/IOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/IdentifierTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/IdentifierTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/IdentityNamedValuesTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/IdentityNamedValuesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/InvalidMethodParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/InvalidMethodParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/Invocation.java" afterPath="$PROJECT_DIR$/OC1/test/mach/Invocation.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/InvocationParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/InvocationParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/InvocationTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/InvocationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/ui/IosDisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/ui/IosDisplayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/j2se/J2seNetwork.java" afterPath="$PROJECT_DIR$/OC1/test/j2se/J2seNetwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/JSONTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/JSONTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/net/JsonIndexNetStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/net/JsonIndexNetStringMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/services/LocationQuantizerTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/services/LocationQuantizerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/tests/MainScreenC1Test.java" afterPath="$PROJECT_DIR$/OC1/test/tests/MainScreenC1Test.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/lex/MethodSourceChunkerTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/lex/MethodSourceChunkerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/MethodTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/MethodTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockFactory.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandlerTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/Mocks.java" afterPath="$PROJECT_DIR$/OC1/test/mach/Mocks.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MocksTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MocksTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/MyApplicationTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/MyApplicationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsIOTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsIOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/NumberTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/NumberTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/NumericConstantParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/NumericConstantParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/NumericConstantTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/NumericConstantTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/ObjectsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/ObjectsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/Phase.java" afterPath="$PROJECT_DIR$/OC1/test/mach/Phase.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/PlacesSearchTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/PlacesSearchTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/PointTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/PointTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/RectangleTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/RectangleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/RegistryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/RegistryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/RunTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/RunTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedStringPartRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedStringPartRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextDemo.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uilist/SEBasicListCellRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uilist/SEBasicListCellRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/SEDisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEDisplayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uilist/SEFilterListModel.java" afterPath="$PROJECT_DIR$/OC1/src/se/uilist/SEFilterListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uilist/SEFilterListModelTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uilist/SEFilterListModelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/app/SERegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/app/SERegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/SEUIRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEUIRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java" afterPath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/SimpleAttributedStringRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/SimpleAttributedStringRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/SimpleExpressionTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/SimpleExpressionTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/events/SimpleListener.java" afterPath="$PROJECT_DIR$/OC1/test/se/events/SimpleListener.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/events/SimpleListenerTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/events/SimpleListenerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/net/SimpleNetStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/net/SimpleNetStringMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueStringMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/SplitterTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/SplitterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/StringConstantParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/StringConstantParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/StringConstantTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/StringConstantTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorDemo.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/app/StringMapRequestHandlerTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/app/StringMapRequestHandlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/uilist/StringToListFilterTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/uilist/StringToListFilterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/StringsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/StringsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/SwingRunner.java" afterPath="$PROJECT_DIR$/OC1/test/se/SwingRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/SyntaxErrorTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/SyntaxErrorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/TernaryParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/TernaryParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/TernaryTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/TernaryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/URLEncoderTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/URLEncoderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/ValidMethodParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/ValidMethodParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/event/XLiveListTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/event/XLiveListTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/screen/XScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/screen/XScreenButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/screen/XScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/screen/XScreenTest.java" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\ios\uilist\IosBoxList.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\ios\uilist\IosListFactories.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uilist/IosBasicListCellRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uilist/IosBasicListCellRenderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uilist/IosFilterListModel.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uilist/IosFilterListModel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uilist/IosListCell.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uilist/IosListCell.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uilist/IosUIList.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uilist/IosUIList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -171,17 +41,15 @@
     <favorites_list name="OysterCracker" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49938118">
+    <splitter split-orientation="horizontal" split-proportion="0.45692885">
       <split-first>
         <leaf>
-          <file leaf-file-name="SESearchableList.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java">
+          <file leaf-file-name="AnListFactories.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/uilist/AnListFactories.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state vertical-scroll-proportion="0.095639944">
+                  <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -190,14 +58,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="IosSearchableList.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java">
+          <file leaf-file-name="AnListFactories.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/uilist/AnListFactories.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state vertical-scroll-proportion="0.095639944">
+                  <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -224,7 +90,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/x/device/IDeviceInfo.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/pagefactories/C1ItemListPageFactoryFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/c1/device/C1DeviceInfo.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/pagefactories/IndexPageFactory.java" />
@@ -253,17 +118,10 @@
         <option value="$PROJECT_DIR$/OC1/src/ios/app/MyViewController.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/ui/IosDisplay.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java" />
-        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosBoxList.java" />
-        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosListCell.java" />
-        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosUIList.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/pagefactories/AnItemListPageFactoryFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactoryFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/app/IosRegistryLoader.java" />
-        <option value="$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/uiwidget/IosBorderContainer.java" />
-        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java" />
-        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosBasicListCellRenderer.java" />
-        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosListFactories.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosVirtualListModel.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/uiwidget/XSearchableList.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/ui/IosUIRenderer.java" />
@@ -275,6 +133,14 @@
         <option value="$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/uilist/SEVirtualListModelTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SEVirtualListModel.java" />
+        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosListCell.java" />
+        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosBoxList.java" />
+        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosBasicListCellRenderer.java" />
+        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosListFactories.java" />
+        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosUIList.java" />
+        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosFilterListModel.java" />
+        <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java" />
+        <option value="$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactory.java" />
       </list>
     </option>
   </component>
@@ -739,7 +605,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2520243" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15677084" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.165625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.201417" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -938,37 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosFormFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosDisplay.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <element signature="e#491#492#0" expanded="true" />
-            <element signature="e#518#519#0" expanded="true" />
-            <element signature="e#623#624#0" expanded="true" />
-            <element signature="e#655#656#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SEApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -991,127 +826,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1492#1493#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosBoxList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="7" selection-start-line="22" selection-start-column="7" selection-end-line="22" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosListCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosUIList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="31" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
-            <element signature="e#387#388#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactoryFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosRegistryLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/device/IosDeviceInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="48" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uiwidget/IosBorderContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosListFactories.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33898306">
-          <caret line="22" column="26" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosBasicListCellRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/uilist/AnFilterListModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.043165468">
           <caret line="34" column="30" selection-start-line="34" selection-start-column="30" selection-end-line="34" selection-end-column="30" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#867#1004#0" expanded="true" />
-            <element signature="e#1003#1004#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosUIRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3039514">
-          <caret line="80" column="0" selection-start-line="80" selection-start-column="0" selection-end-line="80" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#867#1004#0" expanded="false" />
+            <element signature="e#1003#1004#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1140,14 +862,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/MyViewController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SEFilterListModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1156,6 +870,194 @@
             <element signature="imports" expanded="true" />
             <element signature="e#803#940#0" expanded="true" />
             <element signature="e#939#940#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28691983">
+          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="9" column="8" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosRegistryLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="55" selection-start-line="48" selection-start-column="55" selection-end-line="48" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/MyViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/device/IosDeviceInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactoryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="34" selection-start-line="26" selection-start-column="34" selection-end-line="26" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosFormFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uiwidget/IosBorderContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.07083333">
+          <caret line="4" column="19" selection-start-line="4" selection-start-column="19" selection-end-line="4" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosUIRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.17708333">
+          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosUIList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.584375">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#474#475#0" expanded="true" />
+            <element signature="e#498#499#0" expanded="true" />
+            <element signature="e#564#565#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#694#695#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosListCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosBasicListCellRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.017708333">
+          <caret line="1" column="1" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosFilterListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.85833335">
+          <caret line="91" column="15" selection-start-line="91" selection-start-column="11" selection-end-line="91" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#811#812#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#939#940#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+            <element signature="e#1071#1072#0" expanded="true" />
+            <element signature="e#1098#1099#0" expanded="true" />
+            <element signature="e#1176#1177#0" expanded="true" />
+            <element signature="e#1200#1201#0" expanded="true" />
+            <element signature="e#1286#1287#0" expanded="true" />
+            <element signature="e#1313#1314#0" expanded="true" />
+            <element signature="e#1399#1400#0" expanded="true" />
+            <element signature="e#1426#1427#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1551#1552#0" expanded="true" />
+            <element signature="e#1648#1649#0" expanded="true" />
+            <element signature="e#1676#1677#0" expanded="true" />
+            <element signature="e#1764#1765#0" expanded="true" />
+            <element signature="e#1791#1792#0" expanded="true" />
+            <element signature="e#1898#1899#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#2261#2262#0" expanded="true" />
+            <element signature="e#2288#2289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchFilterInstaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.265625">
+          <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1172,11 +1074,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.8846695">
+          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62165964">
+          <caret line="30" column="56" selection-start-line="30" selection-start-column="56" selection-end-line="30" selection-end-column="56" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/uilist/AnListFactories.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.095639944">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

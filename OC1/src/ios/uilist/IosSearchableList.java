@@ -28,15 +28,15 @@ public final class IosSearchableList<T>
      */
     public final UIView component;
 
-    private IosSearchableList(IosListFactories.Factory factory, LiveList<T> items, UIView action, ListCellConfigurer configurer) {
+    private IosSearchableList(LiveList<T> items, UIView action, ListCellConfigurer configurer) {
         filterListModel = IosFilterListModel.of(items);
-        filteredList = factory.of(filterListModel,configurer);
+        filteredList = IosUIList.of(filterListModel,configurer);
         component = IosBorderContainer.of((UIView) filteredList)
              .addNorth(newNorthContainer(action));
     }
 
-    public IosSearchableList(LiveList<T> items, UIView action, ListCellConfigurer configurer) {
-        this(IosListFactories.BOX,items,action,configurer);
+    public static IosSearchableList of(LiveList items, UIView action, ListCellConfigurer configurer) {
+        return new IosSearchableList(items,action,configurer);
     }
 
     private UIView newNorthContainer(UIView action) {

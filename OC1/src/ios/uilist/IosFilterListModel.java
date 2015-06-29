@@ -1,21 +1,19 @@
 package ios.uilist;
 
-import android.database.DataSetObserver;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ListAdapter;
-import x.event.Change;
+import org.robovm.apple.foundation.NSIndexPath;
+import org.robovm.apple.uikit.UITableView;
+import org.robovm.apple.uikit.UITableViewCell;
+import org.robovm.apple.uikit.UITableViewCellEditingStyle;
+import org.robovm.apple.uikit.UITableViewDataSource;
 import x.event.LiveList;
 import x.uilist.ListFilter;
 
-import java.util.ArrayList;
 import java.util.List;
 
 final class IosFilterListModel<T>
-    implements ListAdapter
+    implements UITableViewDataSource
 {
     private final LiveList filtered;
-    private List<DataSetObserver> dataSetObservers = new ArrayList();
     private ListFilter filter = ListFilter.ALLOW_ALL;
 
     private IosFilterListModel(LiveList filtered) {
@@ -24,103 +22,74 @@ final class IosFilterListModel<T>
 
     public static IosFilterListModel of(LiveList filtered) {
         IosFilterListModel model = new IosFilterListModel(filtered);
-        model.listenForListChanges();
         return model;
-    }
-
-    private void listenForListChanges() {
-        filtered.addListener(new Change.Listener() {
-            @Override
-            public void onChange() {
-                dataChanged();
-            }
-        });
     }
 
     public void setFilter(ListFilter filter) {
         this.filter = filter;
-        dataChanged();
+    }
+
+
+    @Override
+    public long getNumberOfRowsInSection(UITableView uiTableView, long l) {
+        return 0;
+    }
+
+    @Override
+    public UITableViewCell getCellForRow(UITableView uiTableView, NSIndexPath nsIndexPath) {
+        return null;
+    }
+
+    @Override
+    public long getNumberOfSections(UITableView uiTableView) {
+        return 0;
+    }
+
+    @Override
+    public String getTitleForHeader(UITableView uiTableView, long l) {
+        return null;
+    }
+
+    @Override
+    public String getTitleForFooter(UITableView uiTableView, long l) {
+        return null;
+    }
+
+    @Override
+    public boolean canEditRow(UITableView uiTableView, NSIndexPath nsIndexPath) {
+        return false;
+    }
+
+    @Override
+    public boolean canMoveRow(UITableView uiTableView, NSIndexPath nsIndexPath) {
+        return false;
+    }
+
+    @Override
+    public List<String> getSectionIndexTitles(UITableView uiTableView) {
+        return null;
+    }
+
+    @Override
+    public long getSectionForSectionIndexTitle(UITableView uiTableView, String s, long l) {
+        return 0;
+    }
+
+    @Override
+    public void commitEditingStyleForRow(UITableView uiTableView, UITableViewCellEditingStyle uiTableViewCellEditingStyle, NSIndexPath nsIndexPath) {
+
+    }
+
+    @Override
+    public void moveRow(UITableView uiTableView, NSIndexPath nsIndexPath, NSIndexPath nsIndexPath1) {
+
+    }
+
+    public T getItem(int selectedIndex) {
+        return null;
     }
 
     public void dataChanged() {
-        for (DataSetObserver observer : dataSetObservers) {
-            observer.onChanged();
-        }
-    }
 
-    @Override
-    public boolean areAllItemsEnabled() {
-        return false;
-    }
-
-    @Override
-    public boolean isEnabled(int i) {
-        return false;
-    }
-
-    @Override
-    public void registerDataSetObserver(DataSetObserver dataSetObserver) {
-        dataSetObservers.add(dataSetObserver);
-    }
-
-    @Override
-    public void unregisterDataSetObserver(DataSetObserver dataSetObserver) {
-
-    }
-
-    @Override
-    public int getCount() {
-        int passed = 0;
-        for (int i=0; i<filtered.size(); i++) {
-            if (filter.passes(filtered.get(i))) {
-                passed++;
-            }
-        }
-        return passed;
-    }
-
-    @Override
-    public Object getItem(int index) {
-        int passed = -1;
-        for (int i=0; i<filtered.size(); i++) {
-            Object item = filtered.get(i);
-            if (filter.passes(item)) {
-                passed++;
-            }
-            if (passed==index) {
-                return item;
-            }
-        }
-        return null;
-    }
-
-    @Override
-    public long getItemId(int i) {
-        return 0;
-    }
-
-    @Override
-    public boolean hasStableIds() {
-        return false;
-    }
-
-    @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
-    }
-
-    @Override
-    public int getItemViewType(int i) {
-        return 0;
-    }
-
-    @Override
-    public int getViewTypeCount() {
-        return 0;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return getCount()==0;
     }
 }

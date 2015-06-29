@@ -1,9 +1,7 @@
 package ios.uilist;
 
-import android.content.Context;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import x.Registry;
+import org.robovm.apple.uikit.UILabel;
+import org.robovm.apple.uikit.UITableViewCell;
 import x.uilist.IListCell;
 import x.uiwidget.XImage;
 
@@ -13,20 +11,15 @@ import java.net.URI;
  * A compound list cell.
  */
 final class IosListCell
-    extends LinearLayout
+    extends UITableViewCell
     implements IListCell
 {
-    final TextView firstRow;
-    final TextView secondRow;
+    final UILabel firstRow;
+    final UILabel secondRow;
 
     public IosListCell() {
-        super(context());
-        firstRow = new TextView(context());
-        secondRow = new TextView(context());
-    }
-
-    private static Context context() {
-        return Registry.get(Context.class);
+        firstRow = new UILabel();
+        secondRow = new UILabel();
     }
 
     @Override
