@@ -7,6 +7,7 @@ import android.widget.ListAdapter;
 import x.event.Change;
 import x.event.LiveList;
 import x.uilist.ListFilter;
+import x.uilist.XListOffsets;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,10 +17,11 @@ final class AnFilterListModel<T>
 {
     private final LiveList filtered;
     private List<DataSetObserver> dataSetObservers = new ArrayList();
-    private ListFilter filter = ListFilter.ALLOW_ALL;
+    private final XListOffsets<T> offsets;
 
     private AnFilterListModel(LiveList filtered) {
         this.filtered = filtered;
+        this.offsets = XListOffsets.of(filtered);
     }
 
     public static AnFilterListModel of(LiveList filtered) {
@@ -38,7 +40,7 @@ final class AnFilterListModel<T>
     }
 
     public void setFilter(ListFilter filter) {
-        this.filter = filter;
+        offsets.setFilter(filter);
         dataChanged();
     }
 
@@ -70,28 +72,12 @@ final class AnFilterListModel<T>
 
     @Override
     public int getCount() {
-        int passed = 0;
-        for (int i=0; i<filtered.size(); i++) {
-            if (filter.passes(filtered.get(i))) {
-                passed++;
-            }
-        }
-        return passed;
+        return offsets.getSize();
     }
 
     @Override
     public Object getItem(int index) {
-        int passed = -1;
-        for (int i=0; i<filtered.size(); i++) {
-            Object item = filtered.get(i);
-            if (filter.passes(item)) {
-                passed++;
-            }
-            if (passed==index) {
-                return item;
-            }
-        }
-        return null;
+        return offsets.getElementAt(index);
     }
 
     @Override

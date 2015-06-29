@@ -8,6 +8,7 @@ final class SEBasicListCellRenderer<T>
     implements ListCellRenderer<T>
 {
     private final ListCellConfigurer configurer;
+    private final SEListCell cell = new SEListCell();
 
     SEBasicListCellRenderer(ListCellConfigurer configurer) {
         this.configurer = configurer;
@@ -18,7 +19,6 @@ final class SEBasicListCellRenderer<T>
              boolean isSelected,
              boolean cellHasFocus)
     {
-        SEListCell cell = new SEListCell();
         configurer.configureButton(cell,value);
         return cell;
     }

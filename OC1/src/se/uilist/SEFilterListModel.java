@@ -3,6 +3,7 @@ package se.uilist;
 import x.event.Change;
 import x.event.LiveList;
 import x.uilist.ListFilter;
+import x.uilist.XListOffsets;
 
 import javax.swing.*;
 import javax.swing.event.ListDataEvent;
@@ -12,12 +13,12 @@ final class SEFilterListModel<T>
     implements ListModel<T>
 {
     private final LiveList<T> filtered;
-    private ListFilter filter = ListFilter.ALLOW_ALL;
+    private final XListOffsets<T> offsets;
     private ListDataListener listDataListener;
 
     private SEFilterListModel(LiveList<T> filtered) {
         this.filtered = filtered;
-        listenForModelChanges();
+        this.offsets = XListOffsets.of(filtered);
     }
 
     public static SEFilterListModel of(LiveList filtered) {
@@ -37,28 +38,12 @@ final class SEFilterListModel<T>
 
     @Override
     public int getSize() {
-        int passed = 0;
-        for (int i=0; i<filtered.size(); i++) {
-            if (filter.passes(filtered.get(i))) {
-                passed++;
-            }
-        }
-        return passed;
+        return offsets.getSize();
     }
 
     @Override
     public T getElementAt(int index) {
-        int passed = -1;
-        for (int i=0; i<filtered.size(); i++) {
-            T item = filtered.get(i);
-            if (filter.passes(item)) {
-                passed++;
-            }
-            if (passed==index) {
-                return item;
-            }
-        }
-        return null;
+        return offsets.getElementAt(index);
     }
 
     @Override
@@ -72,11 +57,12 @@ final class SEFilterListModel<T>
     }
 
     public void setFilter(ListFilter filter) {
-        this.filter = filter;
+        offsets.setFilter(filter);
         dataChanged();
     }
 
     public void dataChanged() {
+        offsets.calculate();
         notifyDataListener();
     }
 

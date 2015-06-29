@@ -29,6 +29,7 @@ import com.codename1.ui.list.ListModel;
 import x.event.Change;
 import x.event.LiveList;
 import x.uilist.ListFilter;
+import x.uilist.XListOffsets;
 
 import java.util.ArrayList;
 
@@ -40,31 +41,29 @@ import java.util.ArrayList;
 final class C1FilterListModel<T>
     implements ListModel<T>
 {
-    private final LiveList<T> underlying;
-    private ListFilter filter;
-    private ArrayList<Integer> offsets = new ArrayList();
+    private final LiveList<T> filtered;
+    private final XListOffsets<T> offsets;
     private int selectedIndex = -1;
     private final ArrayList<SelectionListener> selectionListeners = new ArrayList<SelectionListener>();
     private final ArrayList<DataChangedListener> changedListeners = new ArrayList<DataChangedListener>();
     
     /**
      * The proxy is applied to the actual model and effectively hides it
-     * @param underlying the "real" model for the list
+     * @param filtered the "real" model for the list
      */
-    private C1FilterListModel(LiveList<T> underlying) {
-        this.underlying = underlying;
-        this.filter = ListFilter.ALLOW_ALL;
+    private C1FilterListModel(LiveList<T> filtered) {
+        this.filtered = filtered;
+        this.offsets = XListOffsets.of(filtered);
     }
 
     public static C1FilterListModel of(LiveList underlying) {
         C1FilterListModel model = new C1FilterListModel(underlying);
-        model.calculateOffsets();
         model.listenForModelChanges();
         return model;
     }
 
     private void listenForModelChanges() {
-        underlying.addListener(new Change.Listener() {
+        filtered.addListener(new Change.Listener() {
             @Override
             public void onChange() {
                 dataChanged();
@@ -73,11 +72,11 @@ final class C1FilterListModel<T>
     }
 
     public T getItemAt(int index) {
-        return underlying.get(offsets.get(index));
+        return offsets.getElementAt(index);
     }
 
     public int getSize() {
-        return offsets.size();
+        return offsets.getSize();
     }
 
     public int getSelectedIndex() {
@@ -116,8 +115,8 @@ final class C1FilterListModel<T>
     }
 
     void dataChanged(int type, int index) {
-        calculateOffsets();
-        notifyListenersDataChanged(type,index);
+        offsets.calculate();
+        notifyListenersDataChanged(type, index);
     }
 
     void dataChanged() {
@@ -130,18 +129,8 @@ final class C1FilterListModel<T>
         }
     }
 
-    private void calculateOffsets() {
-        offsets = new ArrayList();
-        for (int i=0; i<underlying.size(); i++) {
-            T item = underlying.get(i);
-            if (filter.passes(item)) {
-                offsets.add(i);
-            }
-        }
-    }
-
     public void setFilter(ListFilter filter) {
-        this.filter = filter;
+        offsets.setFilter(filter);
         dataChanged();
     }
 
