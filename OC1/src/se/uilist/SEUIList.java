@@ -19,13 +19,9 @@ final class SEUIList<T>
 
     }
 
-    public void setRenderer(SEBasicListCellRenderer renderer) {
-
-    }
-
     public static UIList of(ListModel model,ListCellConfigurer configurer) {
         SEUIList list = new SEUIList(model);
-        list.setRenderer(new SEBasicListCellRenderer(configurer));
+        list.setCellRenderer(new SEBasicListCellRenderer(configurer));
         return list;
     }
 }

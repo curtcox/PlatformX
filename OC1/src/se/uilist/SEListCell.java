@@ -100,7 +100,4 @@ final class SEListCell
 
     }
 
-    public void setLeadComponent(JButton leadComponent) {
-    }
-
 }
