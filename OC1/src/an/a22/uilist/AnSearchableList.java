@@ -29,15 +29,15 @@ public final class AnSearchableList<T>
      */
     public final View component;
 
-    private AnSearchableList(AnListFactories.Factory factory, LiveList<T> items, View action, ListCellConfigurer configurer) {
+    private AnSearchableList(LiveList<T> items, View action, ListCellConfigurer configurer) {
         filterListModel = AnFilterListModel.of(items);
-        filteredList = factory.of(filterListModel,configurer);
+        filteredList = AnUIList.of(filterListModel,configurer);
         component = AnBorderContainer.of((View) filteredList)
              .addNorth(newNorthContainer(action));
     }
 
-    public AnSearchableList(LiveList<T> items, View action, ListCellConfigurer configurer) {
-        this(AnListFactories.BOX,items,action,configurer);
+    public static AnSearchableList of(LiveList items, View action, ListCellConfigurer configurer) {
+        return new AnSearchableList(items,action,configurer);
     }
 
     private View newNorthContainer(View action) {

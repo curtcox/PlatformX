@@ -33,7 +33,7 @@ public class AnSearchableListTest {
     public void setUp() {
         FakeAnRegistryLoader.load();
         action = new View(context());
-        testObject = new AnSearchableList(items,action,configurer);
+        testObject = AnSearchableList.of(items,action,configurer);
     }
 
     private Context context() {

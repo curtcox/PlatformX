@@ -3,19 +3,30 @@ package an.a22.uilist;
 import android.content.Context;
 import android.widget.ListAdapter;
 import android.widget.ListView;
+import x.Registry;
 import x.event.Action;
+import x.uilist.ListCellConfigurer;
 import x.uilist.UIList;
 
 final class AnUIList<T>
     extends ListView
     implements UIList
 {
-    private AnUIList(Context context) {
-        super(context);
+    private final ListAdapter model;
+
+    private AnUIList(ListAdapter model) {
+        super(context());
+        this.model = model;
     }
 
     public static AnUIList of(ListAdapter model) {
-        return null;
+        return new AnUIList(model);
+    }
+
+    public static UIList of(ListAdapter model,ListCellConfigurer configurer) {
+        AnUIList list = AnUIList.of(model);
+        list.setRenderer(new AnBasicListCellRenderer(configurer));
+        return list;
     }
 
     @Override
@@ -31,4 +42,9 @@ final class AnUIList<T>
     public void setRenderer(AnBasicListCellRenderer renderer) {
 
     }
+
+    private static Context context() {
+        return Registry.get(Context.class);
+    }
+
 }

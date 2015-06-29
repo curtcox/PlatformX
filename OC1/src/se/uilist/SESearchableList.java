@@ -26,9 +26,9 @@ public final class SESearchableList<T>
      */
     public final JComponent component;
 
-    private SESearchableList(SEListFactories.Factory factory, LiveList<T> items, JComponent action, ListCellConfigurer configurer) {
+    private SESearchableList(LiveList<T> items, JComponent action, ListCellConfigurer configurer) {
         filterListModel = SEFilterListModel.of(items);
-        filteredList = factory.of(filterListModel, configurer);
+        filteredList = SEUIList.of(filterListModel, configurer);
         component = component(action);
     }
 
@@ -37,8 +37,8 @@ public final class SESearchableList<T>
                 .addNorth(newNorthContainer(action));
     }
 
-    public SESearchableList(LiveList<T> items, JComponent action, ListCellConfigurer configurer) {
-        this(SEListFactories.BOX,items,action,configurer);
+    public static SESearchableList of(LiveList items, JComponent action, ListCellConfigurer configurer) {
+        return new SESearchableList(items,action,configurer);
     }
 
     private JComponent newNorthContainer(JComponent action) {
