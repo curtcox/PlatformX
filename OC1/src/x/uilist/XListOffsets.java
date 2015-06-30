@@ -2,6 +2,10 @@ package x.uilist;
 
 import x.event.LiveList;
 
+/**
+ * A tool for accounting for filtering when determining list offsets.
+ * @param <T>
+ */
 public final class XListOffsets<T> {
 
     private final LiveList<T> filtered;
