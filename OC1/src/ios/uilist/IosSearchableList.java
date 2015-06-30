@@ -7,7 +7,6 @@ import org.robovm.apple.uikit.UIView;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.ListCellConfigurer;
-import x.uilist.UIList;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -21,7 +20,7 @@ public final class IosSearchableList<T>
     final UILabel searchTerm = new UILabel(new CGRect(20, 250, 280, 44));
 
     final IosFilterListModel<T> filterListModel;
-    private final UIList filteredList;
+    private final IosUIList filteredList;
 
     /**
      * The component itself, for embedding in a Screen.
@@ -31,7 +30,7 @@ public final class IosSearchableList<T>
     private IosSearchableList(LiveList<T> items, UIView action, ListCellConfigurer configurer) {
         filterListModel = IosFilterListModel.of(items);
         filteredList = IosUIList.of(filterListModel,configurer);
-        component = IosBorderContainer.of((UIView) filteredList)
+        component = IosBorderContainer.of(filteredList.getView())
              .addNorth(newNorthContainer(action));
     }
 

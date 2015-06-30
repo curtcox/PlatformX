@@ -9,7 +9,6 @@ import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.ListModel;
 import x.event.Action;
 import x.uilist.ListCellConfigurer;
-import x.uilist.UIList;
 
 /**
  * For displaying items from a ListModel.

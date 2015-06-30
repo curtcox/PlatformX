@@ -7,7 +7,6 @@ import com.codename1.ui.TextField;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.ListCellConfigurer;
-import x.uilist.UIList;
 import x.uiwidget.XSearchableList;
 
 /**

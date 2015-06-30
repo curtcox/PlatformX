@@ -2,7 +2,6 @@ package c1.uilist;
 
 import com.codename1.ui.list.ListModel;
 import x.uilist.ListCellConfigurer;
-import x.uilist.UIList;
 
 /**
  * Some factories for producing UI lists.

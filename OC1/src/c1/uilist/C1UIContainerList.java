@@ -3,7 +3,6 @@ package c1.uilist;
 import com.codename1.ui.list.ContainerList;
 import com.codename1.ui.list.ListModel;
 import x.event.Action;
-import x.uilist.UIList;
 
 final class C1UIContainerList<T>
     extends ContainerList 
