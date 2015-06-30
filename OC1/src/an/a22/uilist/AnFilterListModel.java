@@ -6,6 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import x.event.Change;
 import x.event.LiveList;
+import x.uilist.ListCellConfigurer;
 import x.uilist.ListFilter;
 import x.uilist.XListOffsets;
 
@@ -16,16 +17,18 @@ final class AnFilterListModel<T>
     implements ListAdapter
 {
     private final LiveList filtered;
+    private final AnBasicListCellRenderer renderer;
     private List<DataSetObserver> dataSetObservers = new ArrayList();
     private final XListOffsets<T> offsets;
 
-    private AnFilterListModel(LiveList filtered) {
+    private AnFilterListModel(LiveList filtered,AnBasicListCellRenderer renderer) {
         this.filtered = filtered;
+        this.renderer = renderer;
         this.offsets = XListOffsets.of(filtered);
     }
 
-    public static AnFilterListModel of(LiveList filtered) {
-        AnFilterListModel model = new AnFilterListModel(filtered);
+    public static AnFilterListModel of(LiveList filtered, ListCellConfigurer configurer) {
+        AnFilterListModel model = new AnFilterListModel(filtered,new AnBasicListCellRenderer(configurer));
         model.listenForListChanges();
         return model;
     }
@@ -52,12 +55,12 @@ final class AnFilterListModel<T>
 
     @Override
     public boolean areAllItemsEnabled() {
-        return false;
+        return true;
     }
 
     @Override
     public boolean isEnabled(int i) {
-        return false;
+        return true;
     }
 
     @Override
@@ -91,8 +94,8 @@ final class AnFilterListModel<T>
     }
 
     @Override
-    public View getView(int i, View view, ViewGroup viewGroup) {
-        return null;
+    public View getView(int index, View view, ViewGroup viewGroup) {
+        return renderer.getListCellRendererView(getItem(index));
     }
 
     @Override
@@ -102,7 +105,7 @@ final class AnFilterListModel<T>
 
     @Override
     public int getViewTypeCount() {
-        return 0;
+        return 1;
     }
 
     @Override

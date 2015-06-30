@@ -1,12 +1,14 @@
 package an.a22.uilist;
 
 import fake.FakeDataSetObserver;
+import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import x.event.XLiveList;
+import x.uilist.ListCellConfigurer;
 import x.uilist.ListFilter;
 
 import static org.junit.Assert.*;
@@ -16,11 +18,13 @@ import static org.junit.Assert.*;
 public class AnFilterListModelTest {
 
     FakeDataSetObserver listDataListener = new FakeDataSetObserver();
+    ListCellConfigurer configurer;
     XLiveList listModel = new XLiveList();
-    AnFilterListModel testObject = AnFilterListModel.of(listModel);
+    AnFilterListModel testObject = AnFilterListModel.of(listModel,configurer);
 
     @Before
     public void setUp() {
+        Mocks.init(this);
         testObject.registerDataSetObserver(listDataListener);
     }
 

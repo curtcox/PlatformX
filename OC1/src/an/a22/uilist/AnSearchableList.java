@@ -30,8 +30,8 @@ public final class AnSearchableList<T>
     public final View component;
 
     private AnSearchableList(LiveList<T> items, View action, ListCellConfigurer configurer) {
-        filterListModel = AnFilterListModel.of(items);
-        filteredList = AnUIList.of(filterListModel,configurer);
+        filterListModel = AnFilterListModel.of(items,configurer);
+        filteredList = AnUIList.of(filterListModel);
         component = AnBorderContainer.of((View) filteredList)
              .addNorth(newNorthContainer(action));
     }
