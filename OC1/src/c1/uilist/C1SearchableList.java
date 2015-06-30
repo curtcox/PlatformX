@@ -41,7 +41,8 @@ public final class C1SearchableList<T>
     private Container newNorthContainer(Component action) {
         return new C1BorderContainer(searchTerm).addEast(action);
     }
-    
+
+    @Override
     public void onSelected(final Action.Listener listener) {
         filteredList.addActionListener(listener);
     }
@@ -51,6 +52,7 @@ public final class C1SearchableList<T>
         return component;
     }
 
+    @Override
     public T getSelected() {
         return filterListModel.getItemAt(filteredList.getSelectedIndex());
     }

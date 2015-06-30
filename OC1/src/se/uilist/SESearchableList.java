@@ -4,7 +4,6 @@ import se.uiwidget.SEBorderContainer;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.ListCellConfigurer;
-import x.uilist.UIList;
 import x.uiwidget.XSearchableList;
 
 import javax.swing.*;
@@ -19,7 +18,7 @@ public final class SESearchableList<T>
 
     final JTextField searchTerm = new JTextField();
     final SEFilterListModel<T> filterListModel;
-    private final UIList filteredList;
+    private final SEUIList filteredList;
 
     /**
      * The component itself, for embedding in a Screen.
@@ -44,7 +43,8 @@ public final class SESearchableList<T>
     private JComponent newNorthContainer(JComponent action) {
         return new SEBorderContainer(searchTerm).addEast(action);
     }
-    
+
+    @Override
     public void onSelected(final Action.Listener listener) {
         filteredList.addActionListener(listener);
     }
@@ -54,6 +54,7 @@ public final class SESearchableList<T>
         return component;
     }
 
+    @Override
     public T getSelected() {
         return filterListModel.getElementAt(filteredList.getSelectedIndex());
     }
