@@ -4,6 +4,7 @@ import an.a22.device.AnDeviceInfo;
 import an.a22.pagefactories.AnItemListPageFactoryFactory;
 import an.a22.ui.AnDisplay;
 import an.a22.ui.AnFormFactory;
+import an.a22.util.AnRunner;
 import x.Registry;
 import x.app.CurrentState;
 import x.device.IDeviceInfo;
@@ -20,6 +21,7 @@ import x.page.dynamic.TaggedStringSources;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
+import x.util.Runner;
 import x.util.StringMap;
 
 /**
@@ -39,7 +41,8 @@ final class AnRegistryLoader {
 
     static void loadPlatform() {
         put(ILogManager.class,      new XLogManager());
-        put(XLogWriter.class,  new XLogWriter());
+        put(XLogWriter.class,       new XLogWriter());
+        put(Runner.class,           new AnRunner());
         put(IFormFactory.class,     new AnFormFactory());
         put(CurrentState.class,     new CurrentState());
         put(Network.class,          new XRawNetwork());

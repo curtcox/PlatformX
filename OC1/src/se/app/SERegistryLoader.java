@@ -6,6 +6,7 @@ import se.events.Events;
 import se.pagefactories.SEItemListPageFactoryFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
+import se.util.SERunner;
 import se.util.SimpleTaggedValueStringMap;
 import se.util.TaggedValueStringMap;
 import x.Registry;
@@ -21,6 +22,7 @@ import x.page.dynamic.TaggedStringSources;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
+import x.util.Runner;
 import x.util.StringMap;
 
 /**
@@ -39,22 +41,23 @@ final class SERegistryLoader {
 
     static void loadPlatform() {
         put(ILogManager.class,      new XLogManager());
-        put(XLogWriter.class,  new XLogWriter());
+        put(XLogWriter.class,       new XLogWriter());
         put(Events.class,           new Events());
+        put(Runner.class,           new SERunner());
         put(IFormFactory.class,     new SEFormFactory());
         put(IDisplay.class,         SEDisplay.of());
         put(Network.class,          new XRawNetwork());
         putTaggedValueStringMap();
         put(ItemListPageFactoryFactory.class, new SEItemListPageFactoryFactory());
-        put(PageFactory.class,    RootPageFactory.of());
+        put(PageFactory.class,      RootPageFactory.of());
         put(ScreenEditor.class,     ScreenEditor.of());
     }
 
     private static void putTaggedValueStringMap() {
         SimpleTaggedValueStringMap stringMap = new SimpleTaggedValueStringMap();
-        put(StringMap.class, stringMap);
+        put(StringMap.class,            stringMap);
         put(TaggedValueStringMap.class, stringMap);
-        put(TaggedStringSources.class,stringMap);
+        put(TaggedStringSources.class,  stringMap);
     }
 
     static void put(Class clazz, Object object) {

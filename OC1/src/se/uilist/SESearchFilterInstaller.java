@@ -1,11 +1,12 @@
 package se.uilist;
 
+import x.Registry;
 import x.uilist.ISearchFilterInstaller;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;
+import x.util.Runner;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
@@ -19,7 +20,7 @@ public final class SESearchFilterInstaller
             @Override public void keyPressed(KeyEvent e) {}
             @Override public void keyReleased(KeyEvent e) {}
             @Override public void keyTyped(KeyEvent e) {
-                EventQueue.invokeLater(new Runnable() {
+                runner().invokeLater(new Runnable() {
                     @Override
                     public void run() {
                         applyCurrentFilter(list, stringToListFilter, search.getText());
@@ -42,5 +43,9 @@ public final class SESearchFilterInstaller
     @Override
     public void install(XSearchableList list, StringToListFilter stringToListFilter) {
         seSpecificInstall((SESearchableList) list, stringToListFilter);
+    }
+
+    private static Runner runner() {
+        return Registry.get(Runner.class);
     }
 }

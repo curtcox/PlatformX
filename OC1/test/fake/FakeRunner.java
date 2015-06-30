@@ -6,7 +6,7 @@ public class FakeRunner
     implements Runner
 {
     @Override
-    public void run(Runnable runnable) {
+    public void invokeLater(Runnable runnable) {
         runnable.run();
     }
 }
