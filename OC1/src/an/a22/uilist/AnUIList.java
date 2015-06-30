@@ -6,11 +6,9 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import x.Registry;
 import x.event.Action;
-import x.uilist.UIList;
 
 final class AnUIList<T>
     extends ListView
-    implements UIList
 {
     private final AnFilterListModel model;
 
@@ -23,7 +21,6 @@ final class AnUIList<T>
         return new AnUIList(model);
     }
 
-    @Override
     public void addActionListener(final Action.Listener listener) {
         setOnItemSelectedListener(new OnItemSelectedListener() {
             @Override
@@ -35,7 +32,6 @@ final class AnUIList<T>
         });
     }
 
-    @Override
     public int getSelectedIndex() {
         return super.getSelectedItemPosition();
     }

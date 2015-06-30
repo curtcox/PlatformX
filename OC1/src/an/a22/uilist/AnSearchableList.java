@@ -8,7 +8,6 @@ import x.Registry;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.ListCellConfigurer;
-import x.uilist.UIList;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -22,7 +21,7 @@ public final class AnSearchableList<T>
     final TextView searchTerm = new TextView(context());
 
     final AnFilterListModel<T> filterListModel;
-    private final UIList filteredList;
+    private final AnUIList filteredList;
 
     /**
      * The component itself, for embedding in a Screen.
