@@ -15,7 +15,7 @@ import static org.junit.Assert.*;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest=Config.NONE)
-public class IosDisplayTest {
+public class AnDisplayTest {
 
     @Before
     public void setUp() {
