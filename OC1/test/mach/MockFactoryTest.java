@@ -1,5 +1,6 @@
 package mach;
 
+import config.ShouldRun;
 import org.junit.Before;
 import org.junit.ComparisonFailure;
 import org.junit.Test;
@@ -10,6 +11,8 @@ import java.lang.reflect.Proxy;
 import static org.junit.Assert.*;
 import static mach.Mocks.no;
 import static mach.Mocks.verify;
+import static org.junit.Assume.assumeTrue;
+
 public class MockFactoryTest {
 
     MockFactory testObject;
@@ -18,8 +21,16 @@ public class MockFactoryTest {
         String methodWithOneArg(String arg);
         boolean methodThatReturnsBoolean();
     }
-    Method methodWithNoArgs = method(Sample.class, "methodWithNoArgs");
-    Method methodWithOneArg = method(Sample.class, "methodWithOneArg");
+    Method methodWithNoArgs;
+    Method methodWithOneArg;
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Mach);
+        methodWithNoArgs = method(Sample.class, "methodWithNoArgs");
+        methodWithOneArg = method(Sample.class, "methodWithOneArg");
+        testObject = new MockFactory();
+    }
 
     private static Method method(Class c, String name) {
         for (Method method : c.getDeclaredMethods()) {
@@ -28,11 +39,6 @@ public class MockFactoryTest {
             }
         }
         throw new IllegalArgumentException(name);
-    }
-
-    @Before
-    public void init() {
-        testObject = new MockFactory();
     }
 
     @Test

@@ -1,5 +1,6 @@
 package se.uilist;
 
+import config.ShouldRun;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +13,7 @@ import javax.swing.event.ListDataListener;
 import static mach.Mocks.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class SEFilterListModelTest {
 
@@ -21,6 +23,7 @@ public class SEFilterListModelTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
         Mocks.init(this);
         _(); wild(null); listDataListener.contentsChanged(null);
         testObject.addListDataListener(listDataListener);

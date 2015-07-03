@@ -1,19 +1,21 @@
 package x.screen;
 
+import config.ShouldRun;
 import fake.FakeUI;
+import fake.FakeXRegistryLoader;
+import org.junit.Before;
+import org.junit.Test;
 import x.page.Page;
 import x.page.PageLink;
 import x.pageparts.XScreenButton;
 import x.uiwidget.XButton;
 import x.uiwidget.XComponent;
-import fake.FakeC1RegistryLoader;
-import org.junit.Before;
-import org.junit.Test;
 
 import java.util.concurrent.Callable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class XScreenButtonTest {
 
@@ -39,7 +41,6 @@ public class XScreenButtonTest {
         }
     }
 
-
     private XButton createScreenButtonOnEDT(final String text, final Page page) throws Exception {
         return (XButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
@@ -50,7 +51,8 @@ public class XScreenButtonTest {
 
     @Before
     public void setUp() {
-        FakeC1RegistryLoader.load();
+        assumeTrue(ShouldRun.X);
+        FakeXRegistryLoader.load();
     }
 
     @Test

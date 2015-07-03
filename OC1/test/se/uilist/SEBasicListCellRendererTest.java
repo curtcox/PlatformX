@@ -1,5 +1,7 @@
 package se.uilist;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.uilist.IListCell;
 import x.uilist.ListCellConfigurer;
 import org.junit.Test;
@@ -9,6 +11,7 @@ import javax.swing.*;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class SEBasicListCellRendererTest {
 
@@ -30,6 +33,11 @@ public class SEBasicListCellRendererTest {
             this.value = value;
         }
     };
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
+    }
 
     @Test
     public void can_create() {

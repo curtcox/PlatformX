@@ -1,14 +1,17 @@
 package x.page.dynamic;
 
+import config.ShouldRun;
+import fake.FakeXRegistryLoader;
+import hash.NamedExpression;
+import org.junit.Before;
+import org.junit.Test;
+import x.uiwidget.XContainer;
 import x.uiwidget.XGrid;
 import x.uiwidget.XLabel;
-import x.uiwidget.XContainer;
 import x.uiwidget.XTable;
-import fake.FakeC1RegistryLoader;
-import hash.NamedExpression;
-import org.junit.Test;
-import static org.junit.Assert.*;
-import org.junit.Before;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assume.assumeTrue;
 
 public class DynamicPageLayoutMethodsTest {
     
@@ -16,7 +19,8 @@ public class DynamicPageLayoutMethodsTest {
     
     @Before
     public void setUp() {
-        FakeC1RegistryLoader.load();
+        assumeTrue(ShouldRun.X);
+        FakeXRegistryLoader.load();
     }
 
     @Test

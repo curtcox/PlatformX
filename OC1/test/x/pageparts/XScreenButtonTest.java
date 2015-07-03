@@ -1,18 +1,20 @@
 package x.pageparts;
 
+import config.ShouldRun;
+import fake.FakePage;
+import fake.FakeXRegistryLoader;
+import mach.Mocks;
+import org.junit.Before;
+import org.junit.Test;
 import x.Registry;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.ui.IFormFactory;
-import fake.FakeXRegistryLoader;
-import fake.FakePage;
-import mach.Mocks;
-import org.junit.Before;
-import org.junit.Test;
 
 import static mach.Mocks.*;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class XScreenButtonTest {
 
@@ -26,6 +28,7 @@ public class XScreenButtonTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.X);
         Mocks.init(this);
         FakeXRegistryLoader.load();
         Registry.put(IFormFactory.class, formFactory);

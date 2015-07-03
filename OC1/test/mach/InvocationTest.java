@@ -1,5 +1,7 @@
 package mach;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.lang.reflect.Method;
@@ -9,11 +11,17 @@ import java.util.Iterator;
 import java.util.Map;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class InvocationTest {
 
     Object proxy = new Object();
     Method method = proxy.getClass().getDeclaredMethods()[0];
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Mach);
+    }
 
     @Test
     public void can_create_with_empty_array() {

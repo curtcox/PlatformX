@@ -1,5 +1,6 @@
 package se.events;
 
+import config.ShouldRun;
 import junit.framework.TestCase;
 import mach.Mocks;
 import org.junit.Before;
@@ -10,6 +11,7 @@ import static mach.Mocks.verify;
 import static mach.Mocks.wild;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assume.assumeTrue;
 
 public class EventsTest {
 
@@ -19,6 +21,7 @@ public class EventsTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
         Mocks.init(this);
     }
 

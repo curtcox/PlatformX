@@ -1,5 +1,7 @@
 package se.uiwidget;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.ui.AttributedString;
 import x.uiwidget.XAttributedText;
 import org.junit.Test;
@@ -9,6 +11,7 @@ import java.awt.*;
 import java.awt.event.MouseEvent;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class SEAttributedTextTest {
 
@@ -28,6 +31,11 @@ public class SEAttributedTextTest {
             this.event = event;
         }
 
+    }
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
     }
 
     @Test

@@ -1,6 +1,13 @@
 package x.page;
 
 import c1.pagefactories.C1ItemListPageFactoryFactory;
+import config.ShouldRun;
+import fake.FakeDeviceInfo;
+import fake.FakeFormFactory;
+import fake.FakeLogManager;
+import fake.FakeUIManager;
+import org.junit.Before;
+import org.junit.Test;
 import x.Registry;
 import x.device.IDeviceInfo;
 import x.log.ILogManager;
@@ -10,15 +17,10 @@ import x.pagefactories.ItemListPageFactoryFactory;
 import x.ui.IFormFactory;
 import x.util.SimpleStringMap;
 import x.util.StringMap;
-import fake.FakeDeviceInfo;
-import fake.FakeFormFactory;
-import fake.FakeLogManager;
-import fake.FakeUIManager;
-import org.junit.Before;
-import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class RootPageFactoryTest {
 
@@ -26,6 +28,7 @@ public class RootPageFactoryTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.X);
         StringMap stringMap = new SimpleStringMap(null);
         Registry.put(StringMap.class, stringMap);
         Registry.put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));

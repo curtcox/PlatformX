@@ -1,19 +1,21 @@
 package x.page;
 
-import x.Registry;
-import x.log.ILogManager;
-import x.ui.IFormFactory;
-import x.uiwidget.XSearchableList;
-import x.uiwidget.XPeeredComponent;
+import config.ShouldRun;
 import fake.FakeFormFactory;
 import fake.FakeLogManager;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
+import x.Registry;
+import x.log.ILogManager;
+import x.ui.IFormFactory;
+import x.uiwidget.XPeeredComponent;
+import x.uiwidget.XSearchableList;
 
 import static mach.Mocks._;
 import static mach.Mocks.wild;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class SelectionListPageTest {
 
@@ -36,6 +38,7 @@ public class SelectionListPageTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.X);
         Mocks.init(this);
         _(); wild(null); searchList.onSelected(null);
         _(peer); searchList.getComponent();

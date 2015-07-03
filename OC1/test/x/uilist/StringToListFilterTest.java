@@ -1,11 +1,19 @@
 package x.uilist;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class StringToListFilterTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
 
     @Test
     public void DEFAULT_filter_passes_all_for_empty_string() {

@@ -1,5 +1,6 @@
 package se.ui;
 
+import config.ShouldRun;
 import x.uiwidget.*;
 import fake.FakeSERegistryLoader;
 import org.junit.Before;
@@ -12,6 +13,7 @@ import java.awt.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import static org.junit.Assume.assumeTrue;
 
 public class SEUIRendererTest {
 
@@ -31,6 +33,7 @@ public class SEUIRendererTest {
 
     @Before
     public void setup() {
+        assumeTrue(ShouldRun.JavaSE);
         FakeSERegistryLoader.load();
     }
 

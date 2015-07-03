@@ -1,5 +1,6 @@
 package x.io;
 
+import config.ShouldRun;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +16,7 @@ import java.io.InputStream;
 import static mach.Mocks._;
 import static mach.Mocks.verify;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assume.assumeTrue;
 
 public class IOTest {
 
@@ -23,6 +25,7 @@ public class IOTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.X);
         Mocks.init(this);
         _(log); logManager.getLog(IO.class);
         Registry.put(ILogManager.class,logManager);

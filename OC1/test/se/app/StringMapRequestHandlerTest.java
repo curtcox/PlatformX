@@ -1,5 +1,7 @@
 package se.app;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.util.SimpleStringMap;
 import x.util.StringMap;
 import mite.HTTPRequest;
@@ -11,12 +13,18 @@ import java.util.HashMap;
 import java.util.Map;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class StringMapRequestHandlerTest {
 
     Map map = new HashMap();
     StringMap stringMap = new SimpleStringMap(map);
     StringMapRequestHandler testObject = new StringMapRequestHandler(stringMap);
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
+    }
 
     @Test
     public void can_create() {

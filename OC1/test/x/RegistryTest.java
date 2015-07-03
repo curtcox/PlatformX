@@ -1,14 +1,20 @@
 package x;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import static org.junit.Assert.*;
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
+import java.util.*;
+
+import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
+
 public class RegistryTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
 
     @Test
     public void test_get_throws_exception_when_no_value_for_key() {

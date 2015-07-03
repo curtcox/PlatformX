@@ -1,14 +1,19 @@
 package x.page.dynamic;
 
+import config.ShouldRun;
+import fake.FakeXRegistryLoader;
+import org.junit.Before;
+import org.junit.Test;
+import x.event.StringSource;
 import x.page.PageLink;
+import x.uiwidget.XContainer;
 import x.uiwidget.XGrid;
 import x.uiwidget.XLabel;
-import x.uiwidget.XContainer;
-import fake.FakeC1RegistryLoader;
-import x.event.StringSource;
 import x.util.Strings;
-import org.junit.*;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class DynamicPageLayoutProviderTest {
 
@@ -24,7 +29,8 @@ public class DynamicPageLayoutProviderTest {
     
     @Before
     public void setUp() {
-        FakeC1RegistryLoader.load();
+        assumeTrue(ShouldRun.X);
+        FakeXRegistryLoader.load();
     }
 
     @Test

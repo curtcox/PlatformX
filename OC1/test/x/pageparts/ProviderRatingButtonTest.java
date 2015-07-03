@@ -1,17 +1,27 @@
 package x.pageparts;
 
+import config.ShouldRun;
 import fake.FakeUI;
-import fake.FakeC1RegistryLoader;
-import java.util.concurrent.Callable;
-import static org.junit.Assert.*;
+import fake.FakeXRegistryLoader;
+import org.junit.Before;
 import org.junit.Test;
 import x.uiwidget.XButton;
 
+import java.util.concurrent.Callable;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
+
 public class ProviderRatingButtonTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
+
     @Test
     public void test_can_create() throws Exception {
-        FakeC1RegistryLoader.load();
+        FakeXRegistryLoader.load();
         assertNotNull(createScreenButtonOnEDT());
     }
  

@@ -1,14 +1,20 @@
 package mach;
 
+import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
 
-import java.io.StringBufferInputStream;
 import java.lang.reflect.Proxy;
 
-import static org.junit.Assert.*;
 import static mach.Mocks.*;
+import static mach.Mocks.no;
+import static mach.Mocks.returns;
+import static mach.Mocks.verify;
 import static mach.Phase.*;
+import static mach.Phase.no;
+import static mach.Phase.verify;
+import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class MocksTest {
 
@@ -18,6 +24,11 @@ public class MocksTest {
     interface Sample {
         String getValue();
         String getNext(String current);
+    }
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Mach);
     }
 
     @Before

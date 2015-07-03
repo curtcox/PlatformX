@@ -1,14 +1,19 @@
 package x.util;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assume.assumeTrue;
+
 public class SplitterTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
+
     @Test
     public void split_returns_right_counts_for_no_delimiters() {
         assertEquals(1,Splitter.split("",     "").length);

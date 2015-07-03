@@ -7,9 +7,12 @@ import java.util.HashMap;
 import java.util.Map;
 
 import c1.JSON;
+import config.ShouldRun;
 import x.uiwidget.XImage;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
+
 import org.junit.Before;
 
 public class JsonIndexNetStringMapTest {
@@ -35,6 +38,7 @@ public class JsonIndexNetStringMapTest {
     
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.X);
         String indexJSON = JSON(
             "{",
                 "'Vodka':'http://absolute/value_page' ,",
@@ -45,7 +49,7 @@ public class JsonIndexNetStringMapTest {
         pages.put(absoulteUrlValuePage, absoluteValue);
         pages.put(URI("http://example.com/relative_value_page"), relativeValue);
     }
-    
+
     private String JSON(String... lines) {
         StringBuilder out = new StringBuilder();
         for (String line : lines) {

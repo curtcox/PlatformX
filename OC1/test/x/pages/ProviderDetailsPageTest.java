@@ -1,22 +1,26 @@
 package x.pages;
 
-import fake.FakeUI;
-import x.page.PageLink;
+import config.ShouldRun;
 import fake.FakeC1RegistryLoader;
+import fake.FakeUI;
+import fake.FakeXRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
+import x.page.PageLink;
 
 import java.util.concurrent.Callable;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class ProviderDetailsPageTest {
     
     @Before
     public void setUp() {
-        FakeC1RegistryLoader.load();
+        assumeTrue(ShouldRun.X);
+        FakeXRegistryLoader.load();
     }
-    
+
     @Test
     public void test_can_create() throws Exception {
         FakeC1RegistryLoader.load();

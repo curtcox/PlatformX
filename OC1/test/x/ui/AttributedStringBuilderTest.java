@@ -1,12 +1,21 @@
 package x.ui;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 import x.ui.AttributedString.Part;
-import static x.ui.AttributedString.Decoration.*;
+
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
+import static x.ui.AttributedString.Decoration.None;
 
 public class AttributedStringBuilderTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
+
     @Test
     public void can_create() {
         assertTrue(new AttributedStringBuilder().build() instanceof AttributedString);

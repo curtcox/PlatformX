@@ -1,17 +1,23 @@
 package se.util;
 
+import config.ShouldRun;
+import org.junit.Before;
+import org.junit.Test;
 import x.event.StringSource;
 import x.page.PageTags;
 import x.util.StringMap;
-import org.junit.Test;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class SimpleTaggedValueStringMapTest {
 
     SimpleTaggedValueStringMap testObject = new SimpleTaggedValueStringMap();
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
+    }
 
     @Test
     public void can_create() {

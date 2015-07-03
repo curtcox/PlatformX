@@ -1,30 +1,31 @@
 package x.stores;
 
 import com.codename1.io.Storage;
-import fake.FakeC1RegistryLoader;
+import config.ShouldRun;
 import fake.FakeStorage;
+import fake.FakeXRegistryLoader;
+import org.junit.Before;
+import org.junit.Test;
 import x.Registry;
 import x.domain.ID;
 import x.domain.Rating;
-import java.io.ByteArrayInputStream;
-import static org.junit.Assert.*;
-import org.junit.Before;
-import org.junit.Test;
 
-/**
- *
- * @author Curt
- */
+import java.io.ByteArrayInputStream;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assume.assumeTrue;
+
 public class MyRatingsTest {
     
     MyRatings ratings1;
     
     @Before
     public void setUp() {
-        FakeC1RegistryLoader.load();
+        assumeTrue(ShouldRun.X);
+        FakeXRegistryLoader.load();
         ratings1 = new MyRatings();
     }
-    
+
     @Test
     public void test_getFor_returns_value_previously_put_in_storage() {
         ID id = new ID("" + hashCode());

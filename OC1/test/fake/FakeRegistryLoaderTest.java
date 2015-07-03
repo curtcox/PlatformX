@@ -1,14 +1,22 @@
 package fake;
 
 import com.codename1.io.Storage;
-import x.Registry;
-import x.log.XLogManager;
-import x.log.ILogManager;
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
+import x.Registry;
+import x.log.ILogManager;
+import x.log.XLogManager;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class FakeRegistryLoaderTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
+    }
 
     @Test
     public void can_load() {

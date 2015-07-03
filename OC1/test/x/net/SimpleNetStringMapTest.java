@@ -6,9 +6,12 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
+import config.ShouldRun;
 import x.uiwidget.XImage;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
+
 import org.junit.Before;
 
 public class SimpleNetStringMapTest {
@@ -32,10 +35,11 @@ public class SimpleNetStringMapTest {
     
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.X);
         pages.put(valuePage, value);
         pages.put(URI("http://example.com/relative_value_page"), relativeValue);
     }
-    
+
     @Test
     public void get_uses_network_to_return_value_from_key() {
         String expected = value;

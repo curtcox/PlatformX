@@ -1,5 +1,7 @@
 package x.page.dynamic;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.pageparts.XScreenButton;
 import x.uiwidget.XLabel;
 import hash.NamedExpression;
@@ -9,10 +11,16 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class DynamicPageComponentMethodsTest {
 
     DynamicScreenComponentMethods testObject = new DynamicScreenComponentMethods();
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
 
     @Test
     public void can_create() {

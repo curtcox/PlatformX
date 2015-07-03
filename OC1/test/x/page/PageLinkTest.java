@@ -1,10 +1,18 @@
 package x.page;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class PageLinkTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
 
     @Test
     public void uses_values_from_factory_method() {

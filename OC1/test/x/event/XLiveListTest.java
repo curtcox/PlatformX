@@ -1,11 +1,13 @@
 package x.event;
 
+import config.ShouldRun;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
 import static mach.Mocks.verify;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class XLiveListTest {
 
@@ -14,6 +16,7 @@ public class XLiveListTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.X);
         Mocks.init(this);
     }
 

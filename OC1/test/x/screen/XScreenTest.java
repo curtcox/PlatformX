@@ -1,5 +1,11 @@
 package x.screen;
 
+import config.ShouldRun;
+import fake.FakeForm;
+import fake.FakeXRegistryLoader;
+import mach.Mocks;
+import org.junit.Before;
+import org.junit.Test;
 import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
@@ -9,14 +15,10 @@ import x.page.PageLink;
 import x.ui.IFormFactory;
 import x.uiwidget.XComponent;
 import x.uiwidget.XContainer;
-import fake.FakeXRegistryLoader;
-import fake.FakeForm;
-import mach.Mocks;
-import org.junit.Before;
-import org.junit.Test;
 
 import static mach.Mocks.*;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 /**
  * I'm ready for my closeup.
@@ -55,6 +57,7 @@ public class XScreenTest {
 
     @Before
     public void setup() {
+        assumeTrue(ShouldRun.X);
         FakeXRegistryLoader.load();
         page = new ExamplePage(link);
         Mocks.init(this);

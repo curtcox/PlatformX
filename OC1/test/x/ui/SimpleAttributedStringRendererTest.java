@@ -1,14 +1,15 @@
 package x.ui;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class SimpleAttributedStringRendererTest {
 
@@ -30,6 +31,11 @@ public class SimpleAttributedStringRendererTest {
     }
 
     SimpleAttributedStringRenderer testObject = new SimpleAttributedStringRenderer();
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
 
     @Test
     public void can_create() {

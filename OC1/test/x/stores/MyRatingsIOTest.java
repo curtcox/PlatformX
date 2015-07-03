@@ -1,19 +1,24 @@
 package x.stores;
 
+import config.ShouldRun;
+import org.junit.Before;
+import org.junit.Test;
 import x.domain.ID;
 import x.domain.Rating;
-import static org.junit.Assert.*;
 
-import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
-/**
- *
- * @author Curt
- */
 public class MyRatingsIOTest {
     
     MyRatingsIO testObject = new MyRatingsIO();
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
+
     @Test
     public void readKey_returns_expected_key() {
         ID expected = new ID(random());

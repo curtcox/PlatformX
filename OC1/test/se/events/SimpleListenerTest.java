@@ -1,12 +1,19 @@
 package se.events;
 
-import junit.framework.TestCase;
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class SimpleListenerTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
+    }
 
     @Test
     public void implements_Listener() {

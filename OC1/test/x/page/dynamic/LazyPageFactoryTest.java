@@ -1,17 +1,19 @@
 package x.page.dynamic;
 
+import config.ShouldRun;
+import fake.FakeXRegistryLoader;
+import mach.Mocks;
+import org.junit.Before;
+import org.junit.Test;
 import x.event.StringSource;
 import x.page.Page;
 import x.page.PageLink;
 import x.page.PageTags;
-import fake.FakeSERegistryLoader;
-import mach.Mocks;
-import org.junit.Before;
-import org.junit.Test;
 
 import static mach.Mocks._;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class LazyPageFactoryTest {
 
@@ -21,8 +23,9 @@ public class LazyPageFactoryTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.X);
         Mocks.init(this);
-        FakeSERegistryLoader.load();
+        FakeXRegistryLoader.load();
 
         testObject = new LazyPageFactory(sources);
     }

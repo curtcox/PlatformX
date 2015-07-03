@@ -10,7 +10,7 @@ import static org.junit.Assume.assumeTrue;
 
 public class TernaryParserTest {
     
-    TernaryParser parser =  new TernaryParser();
+    TernaryParser parser;
     
     private void assertAreEqual(Ternary a, Ternary b) {
         assertEquals(a,b);
@@ -21,6 +21,7 @@ public class TernaryParserTest {
     @Before
     public void setUp() {
         assumeTrue(ShouldRun.Hash);
+        parser =  new TernaryParser();
     }
 
     @Test

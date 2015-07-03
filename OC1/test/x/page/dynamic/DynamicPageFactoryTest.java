@@ -1,5 +1,10 @@
 package x.page.dynamic;
 
+import config.ShouldRun;
+import fake.FakeXRegistryLoader;
+import mach.Mocks;
+import org.junit.Before;
+import org.junit.Test;
 import x.event.StringSource;
 import x.page.Page;
 import x.page.PageFactory;
@@ -8,13 +13,10 @@ import x.page.PageTags;
 import x.pages.Home;
 import x.uiwidget.XComponent;
 import x.uiwidget.XLabel;
-import fake.FakeSERegistryLoader;
-import mach.Mocks;
-import org.junit.Before;
-import org.junit.Test;
 
 import static mach.Mocks._;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class DynamicPageFactoryTest {
 
@@ -24,10 +26,11 @@ public class DynamicPageFactoryTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.X);
         Mocks.init(this);
         _("layout{ one }"); source1.getString();
         _("layout{ two }"); source2.getString();
-        FakeSERegistryLoader.load();
+        FakeXRegistryLoader.load();
     }
 
     @Test

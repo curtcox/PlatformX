@@ -1,14 +1,20 @@
 package x.util;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
+
 public class ObjectsTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.X);
+    }
+
     @Test
     public void areEqual_returns_true_if_arrays_are_equal() {
         assertTrue(Objects.areEqual(new Object[]{},new Object[]{}));

@@ -1,5 +1,6 @@
 package se.ui;
 
+import config.ShouldRun;
 import mach.Mocks;
 import org.junit.Before;
 import se.events.Events;
@@ -13,6 +14,7 @@ import se.util.TaggedValueStringMap;
 
 import static mach.Mocks.*;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class EditCommandTest {
 
@@ -27,6 +29,7 @@ public class EditCommandTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
         Mocks.init(this);
         _(); wild(null); listener.onEvent(null);
         _(); taggedValue.setTags(link.tags);

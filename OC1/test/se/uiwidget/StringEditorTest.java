@@ -1,5 +1,7 @@
 package se.uiwidget;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.event.StringChange;
 import org.junit.Test;
 
@@ -10,6 +12,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class StringEditorTest {
 
@@ -17,6 +20,11 @@ public class StringEditorTest {
     StringChangeListener stringChangeListener = new StringChangeListener();
     TextKeyListener keyListener = new TextKeyListener();
     StringEditor testObject = new StringEditor(textArea,stringChangeListener,keyListener);
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
+    }
 
     final class StringChangeListener implements StringChange.Listener {
 

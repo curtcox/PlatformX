@@ -1,5 +1,6 @@
 package se.ui;
 
+import config.ShouldRun;
 import x.Registry;
 import x.page.PageLink;
 import x.ui.IForm;
@@ -19,6 +20,7 @@ import java.awt.*;
 
 import static mach.Mocks.*;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class SEFormTest {
 
@@ -32,6 +34,7 @@ public class SEFormTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
         Mocks.init(this);
         _(); wild(null); listener.onEvent(null);
     }

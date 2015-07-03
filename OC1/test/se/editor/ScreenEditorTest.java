@@ -1,5 +1,6 @@
 package se.editor;
 
+import config.ShouldRun;
 import x.Registry;
 import x.page.Page;
 import x.page.PageLink;
@@ -17,6 +18,7 @@ import se.util.SimpleTaggedValueStringMap;
 import se.util.TaggedValue;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class ScreenEditorTest {
 
@@ -26,6 +28,7 @@ public class ScreenEditorTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
         FakeSERegistryLoader.load();
         Registry.put(Events.class,events);
         Registry.put(SimpleTaggedValueStringMap.class,stringMap);

@@ -1,5 +1,6 @@
 package se.uilist;
 
+import config.ShouldRun;
 import x.event.Change;
 import x.event.LiveList;
 import x.uilist.*;
@@ -18,6 +19,7 @@ import java.lang.reflect.InvocationTargetException;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class SESearchFilterInstallerTest {
 
@@ -32,6 +34,7 @@ public class SESearchFilterInstallerTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
         Mocks.init(this);
         items.addListener(listener);
     }

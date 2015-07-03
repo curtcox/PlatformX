@@ -1,5 +1,7 @@
 package mach;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
 import java.lang.reflect.Method;
@@ -8,6 +10,7 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.fail;
 import static mach.Phase.current;
+import static org.junit.Assume.assumeTrue;
 
 public class MockInvocationHandlerTest {
 
@@ -18,6 +21,11 @@ public class MockInvocationHandlerTest {
     Object[] args;
 
     MockInvocationHandler testObject = new MockInvocationHandler(factory,clazz,name);
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Mach);
+    }
 
     @Test
     public void can_create() {

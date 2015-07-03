@@ -1,5 +1,7 @@
 package se.app;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.Registry;
 import x.page.dynamic.TaggedStringSources;
 import x.util.StringMap;
@@ -7,8 +9,14 @@ import org.junit.Test;
 import se.util.TaggedValueStringMap;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class SERegistryLoaderTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.JavaSE);
+    }
 
     @Test
     public void registry_contains_required_instances_after_loading() {

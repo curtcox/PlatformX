@@ -1,14 +1,19 @@
 package google;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assume.assumeTrue;
+
 public class URLEncoderTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Google);
+    }
+
     @Test
     public void encode() throws Exception {
         assertEncoding("Delmar","Delmar");
