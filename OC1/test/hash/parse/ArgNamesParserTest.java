@@ -1,18 +1,22 @@
 package hash.parse;
 
+import config.ShouldRun;
 import hash.ArgNames;
 import hash.lex.Tokens;
+import org.junit.Before;
 import x.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
-/**
- *
- * @author curt
- */
 public class ArgNamesParserTest {
 
     ArgNamesParser parser = new ArgNamesParser();
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
 
     @Test
     public void equals_returns_true_for_params_with_the_same_values() {

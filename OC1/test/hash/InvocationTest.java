@@ -1,16 +1,22 @@
 package hash;
 
+import config.ShouldRun;
+import org.junit.Before;
+import org.junit.Test;
+import x.util.Strings;
+
 import java.util.HashMap;
 import java.util.Map;
-import x.util.Strings;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
+import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
+
 public class InvocationTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
 
     @Test
     public void equals_returns_true_for_invocations_with_the_same_values() {

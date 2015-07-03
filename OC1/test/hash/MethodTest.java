@@ -1,15 +1,16 @@
 package hash;
 
-import java.util.HashMap;
-import x.util.Strings;
+import config.ShouldRun;
 import org.junit.Assert;
-import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
+import x.util.Strings;
 
-/**
- *
- * @author Curt
- */
+import java.util.HashMap;
+
+import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
+
 public class MethodTest {
     
     final Context[] expressionResult = new Context[1]; 
@@ -19,7 +20,12 @@ public class MethodTest {
             return expressionResult;
         }
     };
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void equals_returns_true_for_methods_with_the_same_values() {
         assertEquals(new Method("",Expression.EMPTY),new Method("",Expression.EMPTY));

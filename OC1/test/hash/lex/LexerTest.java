@@ -1,10 +1,18 @@
 package hash.lex;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class LexerTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void split_returns_proper_parts() {
         split("");    

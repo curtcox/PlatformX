@@ -1,15 +1,27 @@
 package hash.parse;
 
-import hash.*;
-import static hash.SyntaxError.Type.*;
+import config.ShouldRun;
+import hash.Expression;
+import hash.HashLines;
+import hash.Method;
+import hash.SyntaxError;
 import hash.lex.Tokens;
+import org.junit.Before;
 import org.junit.Test;
+
+import static hash.SyntaxError.Type.*;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class InvalidMethodParserTest {
 
     InvalidMethodParser testObject = new InvalidMethodParser();
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void canParseTokens_returns_false_when_there_are_no_tokens() {
         assertFalse(testObject.canParseTokens(Tokens.from("")));

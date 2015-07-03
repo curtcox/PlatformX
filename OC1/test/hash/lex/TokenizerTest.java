@@ -1,10 +1,18 @@
 package hash.lex;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class TokenizerTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void tokenize_returns_right_counts_for_all_delimiters() {
         assertEquals(1,tokenize("=", "=").length);

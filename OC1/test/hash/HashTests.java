@@ -1,8 +1,18 @@
 package hash;
-import static org.junit.Assert.*;
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+import static org.junit.Assume.assumeTrue;
+
 public class HashTests {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
 
     @Test
     public void get_returns_null_value_when_none_found() {

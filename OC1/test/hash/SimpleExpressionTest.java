@@ -1,14 +1,16 @@
 package hash;
 
+import config.ShouldRun;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.Map;
-import org.junit.Test;
-import static org.junit.Assert.*;
 
-/**
- *
- * @author Curt
- */
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertSame;
+import static org.junit.Assume.assumeTrue;
+
 public class SimpleExpressionTest {
 
     String name = "name";
@@ -24,6 +26,11 @@ public class SimpleExpressionTest {
 
     Map<String,Expression> contextMap = new HashMap<String,Expression>();
     Context context = new Context("#",contextMap);
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
 
     @Test
     public void constructor_uses_values() {

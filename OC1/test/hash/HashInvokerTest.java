@@ -1,14 +1,23 @@
 package hash;
 
+import config.ShouldRun;
 import hash.parse.HashParser;
-import static org.junit.Assert.*;
-import static hash.SyntaxError.Type.*;
-import x.util.Strings;
+import org.junit.Before;
 import org.junit.Test;
+import x.util.Strings;
+
+import static hash.SyntaxError.Type.*;
+import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class HashInvokerTest {
 
     HashParser parser = new HashParser();
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
 
     @Test
     public void invoke_method_body_that_returns_syntax_error() {

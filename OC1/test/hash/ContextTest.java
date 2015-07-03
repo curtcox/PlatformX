@@ -1,10 +1,16 @@
 package hash;
 
+import config.ShouldRun;
+import org.junit.Before;
+import org.junit.Test;
+import x.util.Strings;
+
 import java.util.HashMap;
 import java.util.Map;
-import x.util.Strings;
-import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class ContextTest {
 
@@ -18,7 +24,12 @@ public class ContextTest {
         }
     };
     Context context = new Context("#",NamedExpression.namedValues(new Hash(),invokable));
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void get_returns_named_invokable_from_context() {
         assertSame(invokable,context.get(name));

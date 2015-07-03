@@ -1,19 +1,23 @@
 package hash.parse;
 
+import config.ShouldRun;
 import hash.*;
 import hash.lex.Tokens;
+import org.junit.Before;
 import x.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
-/**
- *
- * @author Curt
- */
 public class InvocationParserTest {
 
     InvocationParser parser = new InvocationParser();
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     private void assertAreEqual(Invocation a, Invocation b) {
         assertEquals(a,b);
         assertEquals(b,a);

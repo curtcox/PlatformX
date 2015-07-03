@@ -1,11 +1,19 @@
 package hash.lex;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class TokensTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void from_creates_empty_tokens_for_empty_string() {
         Tokens tokens = Tokens.from("");

@@ -1,14 +1,22 @@
 package hash;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 /**
  * For methods that Hash inherits from Object. 
  */
 public class HashObjectMethodsTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void equals_returns_true_for_hashes_with_the_same_methods() {
         assertEquals(new Hash(),new Hash());

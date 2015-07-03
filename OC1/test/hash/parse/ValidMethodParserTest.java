@@ -1,14 +1,23 @@
 package hash.parse;
 
+import config.ShouldRun;
 import hash.*;
 import hash.lex.Tokens;
-import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Test;
+
+import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class ValidMethodParserTest {
     
     final ValidMethodParser parser = new ValidMethodParser();
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void canParse_empty_method() {
         assertTrue(canParse("x{}"));

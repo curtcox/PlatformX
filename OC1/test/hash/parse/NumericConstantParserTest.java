@@ -1,18 +1,22 @@
 package hash.parse;
 
+import config.ShouldRun;
 import hash.*;
 import hash.lex.Tokens;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
-/**
- *
- * @author Curt
- */
 public class NumericConstantParserTest {
     
     NumericConstantParser parser = new NumericConstantParser();
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     private void assertAreEqual(NumericConstant a, NumericConstant b) {
         assertEquals(a,b);
         assertEquals(b,a);

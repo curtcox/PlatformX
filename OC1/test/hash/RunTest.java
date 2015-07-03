@@ -1,10 +1,18 @@
 package hash;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class RunTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void run_method_that_returns_constant() {
         Object value = Run

@@ -1,14 +1,22 @@
 package hash.parse;
 
+import config.ShouldRun;
 import hash.*;
 import hash.lex.Tokens;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class StringConstantParserTest {
     
     StringConstantParser parser = new StringConstantParser();
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     private void assertAreEqual(StringConstant a, StringConstant b) {
         assertEquals(a,b);
         assertEquals(b,a);

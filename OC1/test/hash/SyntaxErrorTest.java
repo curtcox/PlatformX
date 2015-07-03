@@ -1,11 +1,19 @@
 package hash;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import static hash.SyntaxError.Type.*;
+import static org.junit.Assume.assumeTrue;
 
 public class SyntaxErrorTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
 
     @Test
     public void equals_returns_true_for_params_with_the_same_values() {

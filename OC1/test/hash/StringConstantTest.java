@@ -1,15 +1,19 @@
 package hash;
 
+import config.ShouldRun;
+import org.junit.Before;
 import x.util.Strings;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
-/**
- *
- * @author Curt
- */
 public class StringConstantTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void equals_returns_true_for_constants_with_the_same_values() {
         assertAreEqual(new StringConstant(""),new StringConstant(""));

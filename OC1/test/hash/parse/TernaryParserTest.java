@@ -1,9 +1,12 @@
 package hash.parse;
 
+import config.ShouldRun;
 import hash.*;
 import hash.lex.Tokens;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class TernaryParserTest {
     
@@ -13,6 +16,11 @@ public class TernaryParserTest {
         assertEquals(a,b);
         assertEquals(b,a);
         assertEquals(a.hashCode(),b.hashCode());
+    }
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
     }
 
     @Test

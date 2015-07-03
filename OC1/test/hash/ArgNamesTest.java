@@ -1,10 +1,20 @@
 package hash;
 
-import x.util.Strings;
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import x.util.Strings;
+
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class ArgNamesTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
 
     @Test
     public void equals_returns_true_for_params_with_the_same_values() {

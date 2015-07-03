@@ -1,11 +1,19 @@
 package hash.lex;
 
+import config.ShouldRun;
 import hash.HashLines;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class MethodSourceChunkerTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void split_returns_method_itself_for_single_valid_method() {
         splitsAs("f{}");    

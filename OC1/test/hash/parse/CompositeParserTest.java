@@ -1,20 +1,24 @@
 package hash.parse;
 
+import config.ShouldRun;
 import hash.Args;
 import hash.Invocation;
 import hash.StringConstant;
 import hash.lex.Tokens;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
-/**
- *
- * @author Curt
- */
 public class CompositeParserTest {
     
     CompositeParser testObject = new CompositeParser(new StringConstantParser(),new InvocationParser());
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
+
     @Test
     public void canParse_returns_true_if_any_component_can_parse() {
         assertTrue(testObject.canParse(Tokens.from("\"constant\"")));

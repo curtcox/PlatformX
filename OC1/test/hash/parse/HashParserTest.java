@@ -1,25 +1,26 @@
 package hash.parse;
 
-import hash.ArgNames;
-import hash.Args;
-import hash.Expression;
-import hash.Hash;
-import hash.HashLines;
-import hash.Invocation;
-import hash.Method;
-import hash.NumericConstant;
-import hash.StringConstant;
-import hash.SyntaxError;
-import static hash.SyntaxError.Type.*;
-import hash.Ternary;
+import config.ShouldRun;
+import hash.*;
+import org.junit.Before;
+import org.junit.Test;
+
 import java.util.ArrayList;
 import java.util.List;
-import static org.junit.Assert.*;
-import org.junit.Test;
+
+import static hash.SyntaxError.Type.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
+import static org.junit.Assume.assumeTrue;
 
 public class HashParserTest {
 
     HashParser testObject = new HashParser();
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Hash);
+    }
 
     @Test
     public void parse_method_body_with_syntax_error() {
