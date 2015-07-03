@@ -2,8 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\com\codename1\ui\UIDebugForm.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/config/ShouldRun.java" afterPath="$PROJECT_DIR$/OC1/test/config/ShouldRun.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/app/VaApplication.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaBasicListCellRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/uiwidget/VaBorderContainer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/device/VaDeviceInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaFilterListModel.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaForm.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaFormFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/pagefactories/VaItemListPageFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/pagefactories/VaItemListPageFactoryFactory.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaListCell.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/app/VaRegistryLoader.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchFilterInstaller.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchableList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaUIList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/app/MyUI.java" afterPath="$PROJECT_DIR$/OC1/src/va/app/MyUI.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -35,17 +51,16 @@
     <favorites_list name="OysterCracker" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44759557">
+    <splitter split-orientation="horizontal" split-proportion="0.5320592">
       <split-first>
         <leaf>
-          <file leaf-file-name="SyntaxErrorTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/test/hash/SyntaxErrorTest.java">
+          <file leaf-file-name="VaBorderContainer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/va/uiwidget/VaBorderContainer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.19074334">
-                  <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+                <state vertical-scroll-proportion="0.50070125">
+                  <caret line="27" column="8" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
                   <folding>
-                    <element signature="e#296#297#0" expanded="true" />
-                    <element signature="e#338#339#0" expanded="true" />
+                    <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -55,14 +70,12 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="ObjCClass.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/test/org/robovm/objc/ObjCClass.java">
+          <file leaf-file-name="SESearchableList.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state vertical-scroll-proportion="0.6676017">
+                  <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -90,24 +103,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/event/XLiveListTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/io/IOTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/net/JsonIndexNetStringMapTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/net/SimpleNetStringMapTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/PageLinkTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageComponentMethodsTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageLayoutMethodsTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageLayoutProviderTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/dynamic/GlobPageFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/dynamic/LazyPageFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/dynamic/StringMapAsTaggedStringSourcesTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/PageTagsTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/page/SelectionListPageTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/x/pageparts/ProviderRatingButtonTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/x/pageparts/XScreenButtonTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/x/pages/ProviderDetailsPageTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/x/screen/XScreenButtonTest.java" />
@@ -141,6 +136,24 @@
         <option value="$PROJECT_DIR$/OC1/test/hash/parse/TernaryParserTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/config/ShouldRun.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/app/VaApplication.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/app/device/VaDeviceInfo.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/pagefactories/VaItemListPageFactoryFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/app/VaRegistryLoader.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/pagefactories/VaItemListPageFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/uiwidget/VaBorderContainer.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchFilterInstaller.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/ui/VaFormFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/uilist/VaUIList.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/uilist/VaListCell.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/uilist/VaFilterListModel.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchableList.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/ui/VaForm.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/app/MyUI.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/uilist/VaBasicListCellRenderer.java" />
       </list>
     </option>
   </component>
@@ -201,20 +214,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OysterCracker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="OC1" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -288,11 +287,11 @@
       <recent name="c1.uilist" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="fake" />
-      <recent name="ios.pagefactories" />
-      <recent name="ios.uiwidget" />
-      <recent name="ios.app" />
-      <recent name="ios.device" />
+      <recent name="va.uiwidget" />
+      <recent name="va.uilist" />
+      <recent name="va.ui" />
+      <recent name="va.pagefactories" />
+      <recent name="va.app.device" />
     </key>
   </component>
   <component name="RunManager" selected="JUnit.All in OC1">
@@ -617,10 +616,10 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -674,296 +673,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/net/JsonIndexNetStringMapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/net/SimpleNetStringMapTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/PageLinkTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding>
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageComponentMethodsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#493#494#0" expanded="true" />
-            <element signature="e#532#533#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageLayoutMethodsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="27" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageLayoutProviderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/dynamic/GlobPageFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="0" selection-start-line="35" selection-start-column="0" selection-end-line="35" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/dynamic/LazyPageFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/dynamic/StringMapAsTaggedStringSourcesTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#230#231#0" expanded="true" />
-            <element signature="e#269#270#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/PageTagsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
-          <folding>
-            <element signature="e#234#235#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/SelectionListPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/pageparts/ProviderRatingButtonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding>
-            <element signature="e#382#383#0" expanded="true" />
-            <element signature="e#421#422#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/pageparts/XScreenButtonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/pages/ProviderDetailsPageTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/screen/XScreenButtonTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="42" column="4" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/screen/XScreenTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/stores/MyRatingsIOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding>
-            <element signature="e#390#391#0" expanded="true" />
-            <element signature="e#429#430#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/ui/AttributedStringBuilderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding>
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#374#375#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/ui/AttributedStringPartTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-          <folding>
-            <element signature="e#298#299#0" expanded="true" />
-            <element signature="e#337#338#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/ui/AttributedStringTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding>
-            <element signature="e#326#327#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/ui/ColorTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="e#240#241#0" expanded="true" />
-            <element signature="e#279#280#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/ui/BoxFlowLayoutAssertions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#231#232#0" expanded="true" />
-            <element signature="e#278#279#0" expanded="true" />
-            <element signature="e#350#351#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/ui/ColumnBoxFlowLayoutTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-          <folding>
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#282#283#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/ui/PointTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="24" selection-start-line="13" selection-start-column="24" selection-end-line="13" selection-end-column="24" />
-          <folding>
-            <element signature="e#229#230#0" expanded="true" />
-            <element signature="e#268#269#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/ui/RectangleTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/ui/SimpleAttributedStringRendererTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
-          <folding>
-            <element signature="e#941#942#0" expanded="true" />
-            <element signature="e#980#981#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/uilist/StringToListFilterTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
-          <folding>
-            <element signature="e#299#300#0" expanded="true" />
-            <element signature="e#338#339#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/x/uiwidget/XPeeredComponentTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
-            <element signature="e#255#256#0" expanded="true" />
-            <element signature="e#294#295#0" expanded="true" />
+            <element signature="e#255#256#0" expanded="false" />
+            <element signature="e#294#295#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -973,8 +689,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
           <folding>
-            <element signature="e#292#293#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#292#293#0" expanded="false" />
+            <element signature="e#331#332#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -984,8 +700,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="22" selection-start-line="15" selection-start-column="22" selection-end-line="15" selection-end-column="22" />
           <folding>
-            <element signature="e#307#308#0" expanded="true" />
-            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#307#308#0" expanded="false" />
+            <element signature="e#346#347#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -995,8 +711,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
           <folding>
-            <element signature="e#286#287#0" expanded="true" />
-            <element signature="e#325#326#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="false" />
+            <element signature="e#325#326#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1006,8 +722,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
-            <element signature="e#245#246#0" expanded="true" />
-            <element signature="e#284#285#0" expanded="true" />
+            <element signature="e#245#246#0" expanded="false" />
+            <element signature="e#284#285#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1017,8 +733,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#272#273#0" expanded="true" />
+            <element signature="e#233#234#0" expanded="false" />
+            <element signature="e#272#273#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1028,9 +744,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#250#251#0" expanded="true" />
-            <element signature="e#289#290#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#250#251#0" expanded="false" />
+            <element signature="e#289#290#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1040,9 +756,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="19" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#454#455#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#454#455#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1052,8 +768,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="23" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
           <folding>
-            <element signature="e#381#382#0" expanded="true" />
-            <element signature="e#425#426#0" expanded="true" />
+            <element signature="e#381#382#0" expanded="false" />
+            <element signature="e#425#426#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1063,11 +779,11 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="40" selection-start-line="14" selection-start-column="40" selection-end-line="14" selection-end-column="40" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#322#323#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
-            <element signature="e#453#454#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#273#274#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
+            <element signature="e#385#386#0" expanded="false" />
+            <element signature="e#453#454#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1077,8 +793,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="15" selection-end-column="5" />
           <folding>
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#315#316#0" expanded="false" />
+            <element signature="e#364#365#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1088,8 +804,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
           <folding>
-            <element signature="e#311#312#0" expanded="true" />
-            <element signature="e#360#361#0" expanded="true" />
+            <element signature="e#311#312#0" expanded="false" />
+            <element signature="e#360#361#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1099,9 +815,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#355#356#0" expanded="true" />
-            <element signature="e#404#405#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#355#356#0" expanded="false" />
+            <element signature="e#404#405#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1111,9 +827,9 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="35" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#247#248#0" expanded="true" />
-            <element signature="e#291#292#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#247#248#0" expanded="false" />
+            <element signature="e#291#292#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1147,7 +863,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1172,11 +888,297 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/hash/SyntaxErrorTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19074334">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
             <element signature="e#296#297#0" expanded="true" />
             <element signature="e#338#339#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosRegistryLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/ui/VerticalLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="43" selection-start-line="28" selection-start-column="43" selection-end-line="28" selection-end-column="43" />
+          <folding>
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1084#1085#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/ui/Component.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65520835">
+          <caret line="64" column="17" selection-start-line="64" selection-start-column="17" selection-end-line="64" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/ui/AbstractOrderedLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="29" selection-start-line="61" selection-start-column="29" selection-end-line="61" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/ui/Label.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="108" column="11" selection-start-line="108" selection-start-column="11" selection-end-line="108" selection-end-column="11" />
+          <folding>
+            <element signature="e#3328#3329#0" expanded="true" />
+            <element signature="e#3352#3353#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/org/robovm/objc/ObjCClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="29" selection-start-line="35" selection-start-column="29" selection-end-line="35" selection-end-column="29" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SEUIList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="32" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="20" selection-start-line="39" selection-start-column="20" selection-end-line="39" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SEFilterListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/ui/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23020834">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/ui/SEForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.18645833">
+          <caret line="12" column="19" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/ui/GridLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="345" column="16" selection-start-line="345" selection-start-column="16" selection-end-line="345" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6676017">
+          <caret line="34" column="53" selection-start-line="34" selection-start-column="53" selection-end-line="34" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/app/MyUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/app/VaApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="35" column="49" selection-start-line="35" selection-start-column="49" selection-end-line="35" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/app/VaRegistryLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="48" column="61" selection-start-line="48" selection-start-column="61" selection-end-line="48" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/device/VaDeviceInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/pagefactories/VaItemListPageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="31" column="39" selection-start-line="31" selection-start-column="39" selection-end-line="31" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/pagefactories/VaItemListPageFactoryFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="38" selection-start-line="27" selection-start-column="38" selection-end-line="27" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1187#1188#0" expanded="true" />
+            <element signature="e#1223#1224#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaFormFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#203#204#0" expanded="true" />
+            <element signature="e#242#243#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uilist/VaBasicListCellRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="54" selection-start-line="13" selection-start-column="54" selection-end-line="13" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uilist/VaFilterListModel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="118" column="1" selection-start-line="118" selection-start-column="1" selection-end-line="118" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uilist/VaListCell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="33" column="26" selection-start-line="33" selection-start-column="26" selection-end-line="33" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#643#644#0" expanded="true" />
+            <element signature="e#683#684#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uilist/VaSearchableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="92" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uilist/VaSearchFilterInstaller.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uilist/VaUIList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uiwidget/VaBorderContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50070125">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

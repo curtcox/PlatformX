@@ -1,10 +1,7 @@
 package va.app;
 
-import com.vaadin.annotations.Theme;
-import com.vaadin.annotations.VaadinServletConfiguration;
-import com.vaadin.annotations.Widgetset;
-import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinServlet;
+import com.vaadin.annotations.*;
+import com.vaadin.server.*;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 import com.vaadin.ui.Label;
@@ -13,9 +10,6 @@ import com.vaadin.ui.VerticalLayout;
 
 import javax.servlet.annotation.WebServlet;
 
-/**
- *
- */
 @Theme("mytheme")
 @Widgetset("va.app.MyAppWidgetset")
 public class MyUI extends UI {

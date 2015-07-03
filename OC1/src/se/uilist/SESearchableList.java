@@ -32,7 +32,7 @@ public final class SESearchableList<T>
     }
 
     private JComponent component(JComponent action) {
-        return new SEBorderContainer(new JScrollPane((JComponent)filteredList))
+        return new SEBorderContainer(new JScrollPane(filteredList))
                 .addNorth(newNorthContainer(action));
     }
 
