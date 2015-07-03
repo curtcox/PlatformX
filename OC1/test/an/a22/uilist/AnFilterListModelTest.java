@@ -1,5 +1,6 @@
 package an.a22.uilist;
 
+import config.ShouldRun;
 import fake.FakeDataSetObserver;
 import mach.Mocks;
 import org.junit.Before;
@@ -12,6 +13,7 @@ import x.uilist.ListCellConfigurer;
 import x.uilist.ListFilter;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest=Config.NONE)
@@ -20,11 +22,13 @@ public class AnFilterListModelTest {
     FakeDataSetObserver listDataListener = new FakeDataSetObserver();
     ListCellConfigurer configurer;
     XLiveList listModel = new XLiveList();
-    AnFilterListModel testObject = AnFilterListModel.of(listModel,configurer);
+    AnFilterListModel testObject;
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.Android);
         Mocks.init(this);
+        testObject = AnFilterListModel.of(listModel,configurer);
         testObject.registerDataSetObserver(listDataListener);
     }
 

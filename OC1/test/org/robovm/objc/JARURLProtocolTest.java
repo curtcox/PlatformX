@@ -15,13 +15,12 @@
  */
 package org.robovm.objc;
 
-import org.junit.Assume;
+import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
 import org.robovm.apple.foundation.NSString;
 import org.robovm.apple.foundation.NSStringEncoding;
 import org.robovm.apple.foundation.NSURL;
-import org.robovm.rt.bro.Bro;
 
 import java.io.*;
 import java.net.URL;
@@ -30,6 +29,7 @@ import java.util.zip.ZipEntry;
 import java.util.zip.ZipOutputStream;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assume.assumeTrue;
 
 /**
  * Tests our native <code>NSURLProtocol</code> which handles <code>jar:</code>
@@ -39,7 +39,7 @@ public class JARURLProtocolTest {
 
     @Before
     public void setUp() {
-        Assume.assumeTrue(Bro.IS_DARWIN);
+        assumeTrue(ShouldRun.RoboVM);
     }
 
     @Test

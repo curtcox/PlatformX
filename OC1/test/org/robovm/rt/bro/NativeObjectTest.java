@@ -15,15 +15,23 @@
  */
 package org.robovm.rt.bro;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 /**
  * Tests {@link NativeObject}.
  */
 public class NativeObjectTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.RoboVM);
+    }
 
     static class A extends NativeObject {
         A(long h) { setHandle(h); }

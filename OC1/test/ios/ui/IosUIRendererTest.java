@@ -1,5 +1,6 @@
 package ios.ui;
 
+import config.ShouldRun;
 import fake.FakeIosRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -9,6 +10,7 @@ import org.robovm.apple.uikit.UIView;
 import x.uiwidget.*;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class IosUIRendererTest {
 
@@ -28,6 +30,7 @@ public class IosUIRendererTest {
 
     @Before
     public void setup() {
+        assumeTrue(ShouldRun.RoboVM);
         FakeIosRegistryLoader.load();
     }
 

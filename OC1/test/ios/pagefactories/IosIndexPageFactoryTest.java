@@ -1,5 +1,6 @@
 package ios.pagefactories;
 
+import config.ShouldRun;
 import fake.FakeIosRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,11 +14,13 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class IosIndexPageFactoryTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.RoboVM);
         FakeIosRegistryLoader.load();
     }
 

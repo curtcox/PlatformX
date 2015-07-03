@@ -1,5 +1,6 @@
 package ios.ui;
 
+import config.ShouldRun;
 import fake.FakeIosRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -10,11 +11,13 @@ import x.ui.IForm;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class IosDisplayTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.RoboVM);
         FakeIosRegistryLoader.load();
     }
 

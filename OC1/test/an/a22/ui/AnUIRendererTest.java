@@ -5,6 +5,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import config.ShouldRun;
 import fake.FakeAnRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +16,7 @@ import x.Registry;
 import x.uiwidget.*;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest=Config.NONE)
@@ -36,6 +38,7 @@ public class AnUIRendererTest {
 
     @Before
     public void setup() {
+        assumeTrue(ShouldRun.Android);
         FakeAnRegistryLoader.load();
     }
 

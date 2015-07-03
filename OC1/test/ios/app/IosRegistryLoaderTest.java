@@ -1,9 +1,11 @@
 package ios.app;
 
 import com.codename1.io.Storage;
+import config.ShouldRun;
 import fake.FakeDeviceInfo;
 import fake.FakeDisplay;
 import fake.FakeStorage;
+import org.junit.Before;
 import org.junit.Test;
 import x.Registry;
 import x.device.IDeviceInfo;
@@ -11,7 +13,14 @@ import x.log.ILog;
 import x.log.ILogManager;
 import x.ui.IDisplay;
 
+import static org.junit.Assume.assumeTrue;
+
 public class IosRegistryLoaderTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.RoboVM);
+    }
 
     @Test
     public void load_with_fake_storage_and_raw_network() {

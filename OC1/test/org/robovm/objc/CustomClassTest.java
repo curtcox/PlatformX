@@ -15,7 +15,7 @@
  */
 package org.robovm.objc;
 
-import org.junit.Assume;
+import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
 import org.robovm.apple.foundation.NSObject;
@@ -24,7 +24,6 @@ import org.robovm.apple.foundation.NSString;
 import org.robovm.objc.annotation.BindSelector;
 import org.robovm.objc.annotation.CustomClass;
 import org.robovm.objc.annotation.NotImplemented;
-import org.robovm.rt.bro.Bro;
 import org.robovm.rt.bro.NativeObject;
 import org.robovm.rt.bro.annotation.Callback;
 
@@ -33,12 +32,14 @@ import java.util.Set;
 import java.util.TreeSet;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 /**
  * Tests that the {@code ObjCMemberPlugin} generates the expected
  * {@link Callback} methods for classes subclassing native ObjC classes.
  */
 public class CustomClassTest {
+
 
     public static class SubClass1 extends NSObject {
         @Override
@@ -110,7 +111,7 @@ public class CustomClassTest {
 
     @Before
     public void setUp() {
-        Assume.assumeTrue(Bro.IS_DARWIN);
+        assumeTrue(ShouldRun.RoboVM);
     }
 
     @Test

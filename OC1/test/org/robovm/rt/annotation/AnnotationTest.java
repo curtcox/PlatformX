@@ -15,6 +15,8 @@
  */
 package org.robovm.rt.annotation;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 import org.robovm.rt.bro.annotation.Bridge;
 
@@ -25,12 +27,18 @@ import java.lang.annotation.Target;
 import java.util.Arrays;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 /**
  * Tests the annotation implementation classes the {@code AnnotationImplPlugin}
  * compiler plugin generates.
  */
 public class AnnotationTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.RoboVM);
+    }
 
     public @interface Anno1 {}
 

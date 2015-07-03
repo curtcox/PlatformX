@@ -1,5 +1,6 @@
 package ios.uilist;
 
+import config.ShouldRun;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,6 +8,7 @@ import x.event.XLiveList;
 import x.uilist.ListFilter;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class IosFilterListModelTest {
 
@@ -15,6 +17,7 @@ public class IosFilterListModelTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.RoboVM);
         Mocks.init(this);
     }
 

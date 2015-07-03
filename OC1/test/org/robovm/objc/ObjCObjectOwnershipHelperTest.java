@@ -15,7 +15,7 @@
  */
 package org.robovm.objc;
 
-import org.junit.Assume;
+import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
 import org.robovm.apple.corefoundation.CFString;
@@ -23,9 +23,9 @@ import org.robovm.apple.foundation.NSCache;
 import org.robovm.apple.foundation.NSCacheDelegate;
 import org.robovm.apple.foundation.NSObject;
 import org.robovm.apple.uikit.UIView;
-import org.robovm.rt.bro.Bro;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assume.assumeTrue;
 
 public class ObjCObjectOwnershipHelperTest {
 
@@ -56,7 +56,7 @@ public class ObjCObjectOwnershipHelperTest {
 
     @Before
     public void setUp() {
-        Assume.assumeTrue(Bro.IS_DARWIN);
+        assumeTrue(ShouldRun.RoboVM);
     }
 
     /**
@@ -65,8 +65,6 @@ public class ObjCObjectOwnershipHelperTest {
      */
     @Test
     public void testIfCustomObjectsAreRetained() {
-        Assume.assumeTrue(System.getProperty("os.name").contains("iOS"));
-
         CustomUIView c1 = new CustomUIView();
         CustomNSCacheDelegateAdapter c2 = new CustomNSCacheDelegateAdapter();
         CustomCFString c3 = new CustomCFString("");
@@ -86,8 +84,6 @@ public class ObjCObjectOwnershipHelperTest {
      */
     @Test
     public void testIfOnlyCustomObjectsAreRetained() {
-        Assume.assumeTrue(System.getProperty("os.name").contains("iOS"));
-
         CustomUIView custom = new CustomUIView();
         NSObject default1 = new NSObject();
         UIView default2 = new UIView();
@@ -132,8 +128,6 @@ public class ObjCObjectOwnershipHelperTest {
      */
     @Test
     public void testIfCustomObjectsAreCorrectlyReferenced() {
-        Assume.assumeTrue(System.getProperty("os.name").contains("iOS"));
-
         CustomUIView custom = new CustomUIView();
 
         NSCache cache = new NSCache();

@@ -1,6 +1,8 @@
 package an.a22.app;
 
 import com.codename1.io.Storage;
+import config.ShouldRun;
+import org.junit.Before;
 import x.Registry;
 import x.device.IDeviceInfo;
 import x.log.ILog;
@@ -11,7 +13,14 @@ import fake.FakeDisplay;
 import fake.FakeStorage;
 import org.junit.Test;
 
+import static org.junit.Assume.assumeTrue;
+
 public class AnRegistryLoaderTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.Android);
+    }
 
     @Test
     public void load_with_fake_storage_and_raw_network() {

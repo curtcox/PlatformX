@@ -1,5 +1,6 @@
 package ios.uilist;
 
+import config.ShouldRun;
 import fake.FakeAnRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class IosSearchableListTest {
 
@@ -24,6 +26,7 @@ public class IosSearchableListTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.RoboVM);
         FakeAnRegistryLoader.load();
         action = new UIView();
         testObject = IosSearchableList.of(items,action,configurer);

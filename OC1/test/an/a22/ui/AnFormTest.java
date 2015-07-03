@@ -1,6 +1,7 @@
 package an.a22.ui;
 
 import android.widget.LinearLayout;
+import config.ShouldRun;
 import fake.FakeAnRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +14,7 @@ import x.uiwidget.XComponent;
 import x.uiwidget.XLabel;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest=Config.NONE)
@@ -24,6 +26,7 @@ public class AnFormTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.Android);
         FakeAnRegistryLoader.load();
         testObject = new AnForm(link);
     }

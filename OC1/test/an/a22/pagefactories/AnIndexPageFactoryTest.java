@@ -1,5 +1,6 @@
 package an.a22.pagefactories;
 
+import config.ShouldRun;
 import fake.FakeAnRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,6 +17,7 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest=Config.NONE)
@@ -23,6 +25,7 @@ public class AnIndexPageFactoryTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.Android);
         FakeAnRegistryLoader.load();
     }
 

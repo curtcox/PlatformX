@@ -2,6 +2,7 @@ package an.a22.uilist;
 
 import android.content.Context;
 import android.view.View;
+import config.ShouldRun;
 import fake.FakeAnRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -17,6 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest=Config.NONE)
@@ -31,6 +33,7 @@ public class AnSearchableListTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.Android);
         FakeAnRegistryLoader.load();
         action = new View(context());
         testObject = AnSearchableList.of(items,action,configurer);

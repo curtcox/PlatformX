@@ -1,5 +1,6 @@
 package an.a22.uilist;
 
+import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,6 +9,7 @@ import org.robolectric.annotation.Config;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assume.assumeTrue;
 
 @RunWith(RobolectricTestRunner.class)
 @Config(manifest=Config.NONE)
@@ -17,6 +19,7 @@ public class AnListCellTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.Android);
         testObject = new AnListCell();
     }
 
