@@ -1,5 +1,6 @@
 package c1;
 
+import config.ShouldRun;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -7,11 +8,13 @@ import x.util.StringMap;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class JSONTest {
     
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeC1RegistryLoader.load();
     }
 

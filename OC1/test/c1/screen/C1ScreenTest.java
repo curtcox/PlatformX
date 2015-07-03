@@ -1,6 +1,7 @@
 package c1.screen;
 
 
+import config.ShouldRun;
 import fake.FakeUI;
 import x.page.Page;
 import x.screen.Screen;
@@ -14,6 +15,7 @@ import org.junit.Test;
 import java.util.concurrent.Callable;
 
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class C1ScreenTest {
 
@@ -29,6 +31,7 @@ public class C1ScreenTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeC1RegistryLoader.load();
     }
 

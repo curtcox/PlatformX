@@ -1,10 +1,18 @@
 package c1.services;
 
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class DistanceCalculatorTest {
-    
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
+    }
+
     @Test
     public void acos() {
         acos(-1.0);

@@ -1,5 +1,6 @@
 package c1.ui;
 
+import config.ShouldRun;
 import fake.FakeC1RegistryLoader;
 import fake.FakeUI;
 import org.junit.Before;
@@ -13,6 +14,7 @@ import java.util.concurrent.Callable;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assume.assumeTrue;
 
 public class C1ActionButtonTest {
 
@@ -21,9 +23,10 @@ public class C1ActionButtonTest {
     
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeC1RegistryLoader.load();
     }
-    
+
     private XButton createActionButtonOnEDT(final String text) throws Exception {
         return (XButton) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {

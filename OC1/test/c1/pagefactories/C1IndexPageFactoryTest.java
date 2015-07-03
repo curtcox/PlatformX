@@ -1,5 +1,6 @@
 package c1.pagefactories;
 
+import config.ShouldRun;
 import fake.FakeC1RegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -13,11 +14,13 @@ import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class C1IndexPageFactoryTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeC1RegistryLoader.load();
     }
 

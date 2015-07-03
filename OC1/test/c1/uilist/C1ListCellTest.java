@@ -1,5 +1,6 @@
 package c1.uilist;
 
+import config.ShouldRun;
 import fake.FakeCodenameOneImplementationTest;
 import fake.FakeUIManager;
 import junit.framework.TestCase;
@@ -8,6 +9,7 @@ import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assume.assumeTrue;
 
 public class C1ListCellTest  {
 
@@ -15,6 +17,7 @@ public class C1ListCellTest  {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeUIManager.of();
         testObject = new C1ListCell();
     }

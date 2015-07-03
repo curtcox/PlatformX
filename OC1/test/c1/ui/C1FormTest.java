@@ -1,6 +1,7 @@
 package c1.ui;
 
 import com.codename1.ui.layouts.FlowLayout;
+import config.ShouldRun;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
@@ -11,6 +12,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class C1FormTest {
 
@@ -20,6 +22,7 @@ public class C1FormTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeC1RegistryLoader.load();
         FakeUIManager.of();
         testObject = new C1Form(link);

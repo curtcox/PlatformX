@@ -1,14 +1,22 @@
 package c1.services;
 
 import com.codename1.location.Location;
+import config.ShouldRun;
+import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class LocationQuantizerTest {
     
     LocationQuantizer testObject = new LocationQuantizer();
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
+    }
 
     @Test
     public void test_can_create() {

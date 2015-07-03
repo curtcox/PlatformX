@@ -2,6 +2,7 @@ package c1.app;
 
 import c1.services.ILocationManager;
 import com.codename1.io.Storage;
+import config.ShouldRun;
 import x.Registry;
 import x.app.CurrentState;
 import fake.FakeLocationManager;
@@ -10,6 +11,8 @@ import x.event.Change;
 import c1.services.C1Locations;
 import x.services.ServiceProviders;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -28,13 +31,14 @@ public class CurrentStateTest {
     
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         Registry.put(Storage.class, new FakeStorage());
         Registry.put(ILocationManager.class, new FakeLocationManager());
         Registry.put(C1Locations.class, new C1Locations());
         Registry.put(ServiceProviders.class, new ServiceProviders());
         testObject = new CurrentState();
     }
-    
+
     @Test
     public void is_not_null() {
         assertNotNull(testObject);

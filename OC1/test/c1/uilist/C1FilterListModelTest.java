@@ -2,6 +2,7 @@ package c1.uilist;
 
 import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.events.SelectionListener;
+import config.ShouldRun;
 import fake.FakeC1RegistryLoader;
 import mach.Mocks;
 import org.junit.Before;
@@ -12,6 +13,7 @@ import x.uilist.ListFilter;
 import static mach.Mocks.verify;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assume.assumeTrue;
 
 public class C1FilterListModelTest {
 
@@ -23,6 +25,7 @@ public class C1FilterListModelTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeC1RegistryLoader.load();
         Mocks.init(this);
         testObject.addDataChangedListener(listDataListener);

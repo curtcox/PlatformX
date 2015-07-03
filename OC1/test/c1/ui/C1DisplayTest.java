@@ -2,14 +2,22 @@ package c1.ui;
 
 import com.codename1.ui.Display;
 import com.codename1.ui.Form;
+import config.ShouldRun;
+import org.junit.Before;
 import x.page.PageLink;
 import x.ui.IForm;
 import fake.FakeUIManager;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
 
 public class C1DisplayTest {
+
+    @Before
+    public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
+    }
 
     @Test
     public void can_create() {

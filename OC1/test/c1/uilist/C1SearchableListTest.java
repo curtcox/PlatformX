@@ -1,6 +1,7 @@
 package c1.uilist;
 
 import com.codename1.ui.Component;
+import config.ShouldRun;
 import x.event.XLiveList;
 import x.event.LiveList;
 import x.uilist.ListCellConfigurer;
@@ -12,6 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class C1SearchableListTest {
 
@@ -24,6 +26,7 @@ public class C1SearchableListTest {
 
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeUIManager.of();
         action = new Component() {};
         testObject = new C1SearchableList(items,action,configurer);

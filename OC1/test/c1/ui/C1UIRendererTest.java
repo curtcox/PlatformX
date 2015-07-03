@@ -2,6 +2,7 @@ package c1.ui;
 
 import com.codename1.ui.*;
 import com.codename1.ui.layouts.*;
+import config.ShouldRun;
 import x.uiwidget.*;
 import fake.FakeSERegistryLoader;
 import fake.FakeUIManager;
@@ -11,6 +12,7 @@ import org.junit.Test;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.fail;
+import static org.junit.Assume.assumeTrue;
 
 public class C1UIRendererTest {
 
@@ -30,6 +32,7 @@ public class C1UIRendererTest {
 
     @Before
     public void setup() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeUIManager.of();
         FakeSERegistryLoader.load();
     }
