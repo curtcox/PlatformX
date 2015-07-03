@@ -2,74 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringBuilderTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringBuilderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringPartTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringPartTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/AttributedStringTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/ColorTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/ColorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/ColumnBoxFlowLayoutTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/ColumnBoxFlowLayoutTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/DisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/DisplayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageComponentMethodsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageComponentMethodsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageLayoutMethodsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageLayoutMethodsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageLayoutProviderTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/dynamic/DynamicPageLayoutProviderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mite/handlers/EchoRequestHandlerTest.java" afterPath="$PROJECT_DIR$/OC1/test/mite/handlers/EchoRequestHandlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/events/EventsTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/events/EventsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeCodenameOneImplementationTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeCodenameOneImplementationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeImplementationFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeImplementationFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/dynamic/GlobPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/dynamic/GlobPageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/GlobStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/GlobStringMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/GlobTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/GlobTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/io/IOTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/io/IOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/net/JsonIndexNetStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/net/JsonIndexNetStringMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/dynamic/LazyPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/dynamic/LazyPageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandlerTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MockInvocationHandlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/MocksTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/MocksTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsIOTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsIOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/ObjectsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/ObjectsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/PageLinkTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/PageLinkTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/PageTagsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/PageTagsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/PointTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/PointTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/pages/ProviderDetailsPageTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/pages/ProviderDetailsPageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/pageparts/ProviderRatingButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/pageparts/ProviderRatingButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/RectangleTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/RectangleTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/RegistryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/RegistryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedStringPartRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedStringPartRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/SEAttributedTextTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uilist/SEBasicListCellRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uilist/SEBasicListCellRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/SEDisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEDisplayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uilist/SEFilterListModelTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uilist/SEFilterListModelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/pagefactories/SEIndexPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/pagefactories/SEIndexPageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/app/SERegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/app/SERegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/SEUIRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEUIRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/SelectionListPageTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/SelectionListPageTest.java" />
+      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\com\codename1\ui\UIDebugForm.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/config/ShouldRun.java" afterPath="$PROJECT_DIR$/OC1/test/config/ShouldRun.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/ui/SimpleAttributedStringRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/ui/SimpleAttributedStringRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/events/SimpleListenerTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/events/SimpleListenerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/net/SimpleNetStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/net/SimpleNetStringMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueStringMapTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueStringMapTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/util/SimpleTaggedValueTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/SplitterTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/SplitterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/uiwidget/StringEditorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/dynamic/StringMapAsTaggedStringSourcesTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/dynamic/StringMapAsTaggedStringSourcesTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/app/StringMapRequestHandlerTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/app/StringMapRequestHandlerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/uilist/StringToListFilterTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/uilist/StringToListFilterTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/StringsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/StringsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/hash/parse/TernaryParserTest.java" afterPath="$PROJECT_DIR$/OC1/test/hash/parse/TernaryParserTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/URLEncoderTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/URLEncoderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/event/XLiveListTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/event/XLiveListTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/uiwidget/XPeeredComponentTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/uiwidget/XPeeredComponentTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/pageparts/XScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/pageparts/XScreenButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/screen/XScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/screen/XScreenButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/screen/XScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/screen/XScreenTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -107,8 +42,9 @@
             <entry file="file://$PROJECT_DIR$/OC1/test/hash/SyntaxErrorTest.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state vertical-scroll-proportion="0.19074334">
-                  <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+                  <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
                   <folding>
+                    <element signature="e#296#297#0" expanded="true" />
                     <element signature="e#338#339#0" expanded="true" />
                   </folding>
                 </state>
@@ -199,12 +135,12 @@
         <option value="$PROJECT_DIR$/OC1/test/fake/FakeCodenameOneImplementationTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/fake/FakeImplementationFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/config/ShouldRun.java" />
         <option value="$PROJECT_DIR$/OC1/test/google/URLEncoderTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/se/ui/SEUIRendererTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/hash/parse/TernaryParserTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/MockFactoryTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/config/ShouldRun.java" />
       </list>
     </option>
   </component>
@@ -265,6 +201,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -657,7 +607,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-38" width="1936" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -670,7 +620,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15520833" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -724,14 +674,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/io/IOTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/x/net/JsonIndexNetStringMapTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1164,14 +1106,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/config/ShouldRun.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/google/URLEncoderTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1228,11 +1162,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/config/ShouldRun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.28611502">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/hash/SyntaxErrorTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19074334">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding>
+            <element signature="e#296#297#0" expanded="true" />
             <element signature="e#338#339#0" expanded="true" />
           </folding>
         </state>
