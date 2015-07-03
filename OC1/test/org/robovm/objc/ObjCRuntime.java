@@ -116,152 +116,152 @@ public class ObjCRuntime {
 
     @Bridge
     @Pointer
-    public static   long objc_getClass(@Pointer long var0) { throw never(); }
+    public static long objc_getClass(@Pointer long var0) { throw never(); }
 
     @Bridge
-    public static   BytePtr sel_getName(Selector var0) { throw never(); }
+    public static BytePtr sel_getName(Selector var0) { throw never(); }
 
     @Bridge
-    public static   Selector sel_registerName(BytePtr var0)  { throw never(); }
+    public static Selector sel_registerName(BytePtr var0)  { throw never(); }
 
     @Bridge
-    public static   void objc_setAssociatedObject(@Pointer long var0, @Pointer long var2, @Pointer long var4, int var6)  { throw never(); }
-
-    @Bridge
-    @Pointer
-    public static   long objc_getAssociatedObject(@Pointer long var0, @Pointer long var2)  { throw never(); }
+    public static void objc_setAssociatedObject(@Pointer long var0, @Pointer long var2, @Pointer long var4, int var6)  { throw never(); }
 
     @Bridge
     @Pointer
-    public static   long objc_allocateClassPair(@Pointer long var0, @Pointer long var2, @Pointer long var4)  { throw never(); }
-
-    @Bridge
-    public static   void objc_registerClassPair(@Pointer long var0)  { throw never(); }
+    public static long objc_getAssociatedObject(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge
     @Pointer
-    public static   long object_getClass(@Pointer long var0)  { throw never(); }
+    public static long objc_allocateClassPair(@Pointer long var0, @Pointer long var2, @Pointer long var4)  { throw never(); }
+
+    @Bridge
+    public static void objc_registerClassPair(@Pointer long var0)  { throw never(); }
 
     @Bridge
     @Pointer
-    public static   long object_getClassName(@Pointer long var0)  { throw never(); }
-    @Bridge
-    @Pointer
-    public static   long class_getSuperclass(@Pointer long var0)  { throw never(); }
+    public static long object_getClass(@Pointer long var0)  { return var0; }
 
     @Bridge
     @Pointer
-    public static   long class_getName(@Pointer long var0)  { throw never(); }
+    public static long object_getClassName(@Pointer long var0)  { throw never(); }
+    @Bridge
+    @Pointer
+    public static long class_getSuperclass(@Pointer long var0)  { throw never(); }
 
     @Bridge
     @Pointer
-    public static   long class_getInstanceMethod(@Pointer long var0, @Pointer long var2)  { throw never(); }
+    public static long class_getName(@Pointer long var0)  { throw never(); }
 
     @Bridge
     @Pointer
-    public static   long class_getClassMethod(@Pointer long var0, @Pointer long var2)  { throw never(); }
-
-    @Bridge
-    public static   boolean class_addMethod(@Pointer long var0, @Pointer long var2, @Pointer long var4, @Pointer long var6)  { throw never(); }
+    public static long class_getInstanceMethod(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge
     @Pointer
-    public static   long class_replaceMethod(@Pointer long var0, @Pointer long var2, @Pointer long var4, @Pointer long var6)  { throw never(); }
+    public static long class_getClassMethod(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge
-    public static   boolean class_addIvar(@Pointer long var0, @Pointer long var2, int var4, byte var5, @Pointer long var6)  { throw never(); }
-
-    @Bridge
-    @Pointer
-    public static   long class_getInstanceVariable(@Pointer long var0, @Pointer long var2)  { throw never(); }
-    @Bridge
-    @Pointer
-    public static   long class_getIvarLayout(@Pointer long var0)  { throw never(); }
-    @Bridge
-    public static   int ivar_getOffset(@Pointer long var0)  { throw never(); }
+    public static boolean class_addMethod(@Pointer long var0, @Pointer long var2, @Pointer long var4, @Pointer long var6)  { throw never(); }
 
     @Bridge
     @Pointer
-    public static   long method_getTypeEncoding(@Pointer long var0)  { throw never(); }
+    public static long class_replaceMethod(@Pointer long var0, @Pointer long var2, @Pointer long var4, @Pointer long var6)  { throw never(); }
+
+    @Bridge
+    public static boolean class_addIvar(@Pointer long var0, @Pointer long var2, int var4, byte var5, @Pointer long var6)  { throw never(); }
 
     @Bridge
     @Pointer
-    public static   long method_getImplementation(@Pointer long var0)  { throw never(); }
+    public static long class_getInstanceVariable(@Pointer long var0, @Pointer long var2)  { throw never(); }
+    @Bridge
+    @Pointer
+    public static long class_getIvarLayout(@Pointer long var0)  { throw never(); }
+    @Bridge
+    public static int ivar_getOffset(@Pointer long var0)  { throw never(); }
 
     @Bridge
     @Pointer
-    public static   long method_setImplementation(@Pointer long var0, @Pointer long var2)  { throw never(); }
+    public static long method_getTypeEncoding(@Pointer long var0)  { throw never(); }
+
+    @Bridge
+    @Pointer
+    public static long method_getImplementation(@Pointer long var0)  { throw never(); }
+
+    @Bridge
+    @Pointer
+    public static long method_setImplementation(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend"
     )
     @Pointer
-    public static   long ptr_objc_msgSend(@Pointer long var0, @Pointer long var2)  { throw never(); }
+    public static long ptr_objc_msgSend(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSendSuper"
     )
     @Pointer
-    public static   long ptr_objc_msgSendSuper(@Pointer long var0, @Pointer long var2)  { throw never(); }
+    public static long ptr_objc_msgSendSuper(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend"
     )
-    public static   void void_objc_msgSend(@Pointer long var0, @Pointer long var2)  { throw never(); }
+    public static void void_objc_msgSend(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSendSuper"
     )
-    public static   void void_objc_msgSendSuper(@Pointer long var0, @Pointer long var2)  { throw never(); }
+    public static void void_objc_msgSendSuper(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend"
     )
-    public static   boolean boolean_objc_msgSend(@Pointer long var0, @Pointer long var2)  { throw never(); }
+    public static boolean boolean_objc_msgSend(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend"
     )
-    public static   void void_objc_msgSend_ptr(@Pointer long var0, @Pointer long var2, @Pointer long var4)  { throw never(); }
+    public static void void_objc_msgSend_ptr(@Pointer long var0, @Pointer long var2, @Pointer long var4)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend"
     )
-    public static   void void_objc_msgSend_boolean(@Pointer long var0, @Pointer long var2, boolean var4)  { throw never(); }
+    public static void void_objc_msgSend_boolean(@Pointer long var0, @Pointer long var2, boolean var4)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend"
     )
-    public static   int int_objc_msgSend(@Pointer long var0, @Pointer long var2)  { throw never(); }
-
-    @Bridge(
-            symbol = "objc_msgSend"
-    )
-    @Pointer
-    public static   long ptr_objc_msgSend_ptr(@Pointer long var0, @Pointer long var2, @Pointer long var4)  { throw never(); }
+    public static int int_objc_msgSend(@Pointer long var0, @Pointer long var2)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend"
     )
     @Pointer
-    public static   long ptr_objc_msgSend_int(@Pointer long var0, @Pointer long var2, int var4)  { throw never(); }
+    public static long ptr_objc_msgSend_ptr(@Pointer long var0, @Pointer long var2, @Pointer long var4)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend"
     )
     @Pointer
-    public static   long ptr_objc_msgSend_long(@Pointer long var0, @Pointer long var2, long var4)  { throw never(); }
+    public static long ptr_objc_msgSend_int(@Pointer long var0, @Pointer long var2, int var4)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend"
     )
-    public static   char char_objc_msgSend_int(@Pointer long var0, @Pointer long var2, int var4)  { throw never(); }
+    @Pointer
+    public static long ptr_objc_msgSend_long(@Pointer long var0, @Pointer long var2, long var4)  { throw never(); }
+
+    @Bridge(
+            symbol = "objc_msgSend"
+    )
+    public static char char_objc_msgSend_int(@Pointer long var0, @Pointer long var2, int var4)  { throw never(); }
 
     @Bridge(
             symbol = "objc_msgSend_stret",
             optional = true
     )
-    public static   void objc_msgSend_stret(@StructRet @Pointer long var0, @Pointer long var2, @Pointer long var4)  { throw never(); }
+    public static void objc_msgSend_stret(@StructRet @Pointer long var0, @Pointer long var2, @Pointer long var4)  { throw never(); }
 //    static {
 //        Bro.bind();
 //    }
