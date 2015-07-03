@@ -1,8 +1,3 @@
-//
-// Source code recreated from a .class file by IntelliJ IDEA
-// (powered by Fernflower decompiler)
-//
-
 package org.robovm.objc;
 
 import org.robovm.rt.bro.NativeObject;

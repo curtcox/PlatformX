@@ -6,8 +6,7 @@ import x.util.StringMap;
 import org.junit.Test;
 import se.util.TaggedValueStringMap;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
+import static org.junit.Assert.*;
 
 public class SERegistryLoaderTest {
 
