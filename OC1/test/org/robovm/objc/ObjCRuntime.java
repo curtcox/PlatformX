@@ -151,7 +151,11 @@ public class ObjCRuntime {
 
     @Bridge
     @Pointer
-    public static long class_getName(@Pointer long var0)  { throw never(); }
+    public static long class_getName(@Pointer long classHandle)  {
+        Class c = (Class) LongPointer.value(classHandle);
+        String name = c.getName();
+        return LongPointer.to(name);
+    }
 
     @Bridge
     @Pointer
