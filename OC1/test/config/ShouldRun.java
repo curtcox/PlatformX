@@ -6,7 +6,7 @@ public class ShouldRun {
     private static final boolean All = false;
 
     public static final boolean CodenameOne = All || false;
-    public static final boolean      RoboVM = All || false;
+    public static final boolean      RoboVM = All || true;
     public static final boolean     Android = All || false;
     public static final boolean      JavaSE = All || false;
 

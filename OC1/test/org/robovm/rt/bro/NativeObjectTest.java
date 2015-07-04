@@ -44,11 +44,27 @@ public class NativeObjectTest {
     }
 
     @Test
-    public void testAs() {
+    public void test_A_As_B() {
         A a = new A(123);
         B b = a.as(B.class);
         assertEquals(B.class, b.getClass());
         assertEquals(a.getHandle(), b.getHandle());
+    }
+
+    @Test
+    public void test_B_as_C() {
+        B b = new B(1234);
+        C c = b.as(C.class);
+        assertEquals(C.class, c.getClass());
+        assertEquals(b.getHandle(), c.getHandle());
+        assertTrue(c == c.as(C.class));
+        assertTrue(c == c.as(B.class));
+    }
+
+    @Test
+    public void test_A_as_B_as_C() {
+        A a = new A(123);
+        B b = a.as(B.class);
         C c = b.as(C.class);
         assertEquals(C.class, c.getClass());
         assertEquals(b.getHandle(), c.getHandle());

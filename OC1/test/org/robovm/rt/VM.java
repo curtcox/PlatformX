@@ -1,9 +1,12 @@
 package org.robovm.rt;
 
 import libcore.util.EmptyArray;
+import org.robovm.rt.bro.NativeObject;
 
 import java.io.UnsupportedEncodingException;
+import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
@@ -92,7 +95,30 @@ public final class VM {
 
     public static final  void free(long var0) {}
 
-    public static final  <T> T allocateObject(Class<T> var0) { throw never(); }
+    public static final  <T> T allocateObject(Class<T> c) {
+        try {
+            if (NativeObject.class.isAssignableFrom(c)) {
+                return allocateNativeObject(c);
+            } else {
+                return allocateNonNativeObject(c);
+            }
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    static final  <T> T allocateNonNativeObject(Class<T> c) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+        Constructor constructor = c.getConstructor(new Class[0]);
+        Object instance = constructor.newInstance(new Object[0]);
+        return (T) instance;
+    }
+
+    static final  <T> T allocateNativeObject(Class<T> c) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
+        Constructor constructor = c.getDeclaredConstructor(new Class[]{long.class});
+        constructor.setAccessible(true);
+        Object instance = constructor.newInstance(new Object[] {0});
+        return (T) instance;
+    }
 
     public static final  ByteBuffer newDirectByteBuffer(long var0, long var2) { throw never(); }
 
