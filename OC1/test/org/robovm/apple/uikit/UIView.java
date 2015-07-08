@@ -10,6 +10,14 @@ public class UIView
         extends UIResponder
         implements NSCoding, UIAppearanceContainer, UIDynamicItem, UITraitEnvironment, UICoordinateSpace, UIAccessibilityIdentification
 {
+
+    public UIView() {
+    }
+
+    public UIView(CGRect frame) {
+
+    }
+
     @Override
     public void encode(NSCoder nsCoder) {
 
@@ -77,6 +85,10 @@ public class UIView
 
     @Override
     public void traitCollectionDidChange(UITraitCollection uiTraitCollection) {
+
+    }
+
+    public void setFrame(CGRect var1) {
 
     }
 }

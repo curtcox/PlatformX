@@ -1,7 +1,7 @@
 package ios.uilist;
 
 import config.ShouldRun;
-import fake.FakeAnRegistryLoader;
+import fake.FakeIosRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 import org.robovm.apple.uikit.UIView;
@@ -27,7 +27,7 @@ public class IosSearchableListTest {
     @Before
     public void setUp() {
         assumeTrue(ShouldRun.RoboVM);
-        FakeAnRegistryLoader.load();
+        FakeIosRegistryLoader.load();
         action = new UIView();
         testObject = IosSearchableList.of(items,action,configurer);
     }
