@@ -9,6 +9,11 @@ final class IosUIList<T>
     extends UITableViewController
 {
     private IosBasicListCellRenderer renderer;
+    private UITableViewDataSource model;
+
+    private IosUIList(UITableViewDataSource model) {
+        this.model = model;
+    }
 
     public void addActionListener(Action.Listener listener) {
 
@@ -23,7 +28,7 @@ final class IosUIList<T>
     }
 
     public static IosUIList of(UITableViewDataSource model) {
-        return null;
+        return new IosUIList(model);
     }
 
     public static IosUIList of(UITableViewDataSource model,ListCellConfigurer configurer) {

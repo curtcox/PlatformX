@@ -6,6 +6,16 @@ public class UIViewController
         extends UIResponder
         implements NSCoding, UIAppearanceContainer, UITraitEnvironment, UIStateRestoring, NSExtensionRequestHandling
 {
+    private UIView view;
+
+    public UIView getView() {
+        return view;
+    }
+
+    public void setView(UIView view) {
+        this.view = view;
+    }
+
     @Override
     public void encode(NSCoder nsCoder) {
 

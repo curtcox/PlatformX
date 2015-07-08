@@ -6,6 +6,7 @@ import org.robovm.apple.foundation.NSCoding;
 public class UILabel extends UIView implements NSCoding {
 
     private String text;
+    private UIFont font;
 
     public UILabel() {}
 
@@ -19,5 +20,13 @@ public class UILabel extends UIView implements NSCoding {
 
     public void setText(String text) {
         this.text = text;
+    }
+
+    public  UIFont getFont() {
+        return font;
+    }
+
+    public  void setFont(UIFont font) {
+        this.font = font;
     }
 }
