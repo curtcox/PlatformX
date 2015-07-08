@@ -6,7 +6,7 @@ public class UIButton
         extends UIControl
         implements NSCoding
 {
-    private UILabel titleLabel;
+    private UILabel titleLabel = new UILabel();
 
     public static UIButton create(UIButtonType var0) {
         return new UIButton();

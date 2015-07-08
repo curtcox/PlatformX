@@ -12,8 +12,7 @@ public class UIView
 {
     private CGRect frame;
 
-    public UIView() {
-    }
+    public UIView() {}
 
     public UIView(CGRect frame) {
         this.frame = frame;
@@ -91,5 +90,9 @@ public class UIView
 
     public void setFrame(CGRect frame) {
         this.frame = frame;
+    }
+
+    public void addSubview(UIView view) {
+
     }
 }
