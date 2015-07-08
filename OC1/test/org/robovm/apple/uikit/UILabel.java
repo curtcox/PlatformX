@@ -5,6 +5,8 @@ import org.robovm.apple.foundation.NSCoding;
 
 public class UILabel extends UIView implements NSCoding {
 
+    private String text;
+
     public UILabel() {}
 
     public UILabel(CGRect frame) {
@@ -12,10 +14,10 @@ public class UILabel extends UIView implements NSCoding {
     }
 
     public String getText() {
-        return null;
+        return text;
     }
 
-    public void setText(String var1) {
-
+    public void setText(String text) {
+        this.text = text;
     }
 }

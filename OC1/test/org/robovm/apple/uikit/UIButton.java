@@ -7,6 +7,6 @@ public class UIButton
         implements NSCoding
 {
     public static UIButton create(UIButtonType var0) {
-        return null;
+        return new UIButton();
     }
 }
