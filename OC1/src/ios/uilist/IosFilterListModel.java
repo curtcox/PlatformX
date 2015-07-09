@@ -31,7 +31,7 @@ final class IosFilterListModel<T>
 
 
     @Override
-    public long getNumberOfRowsInSection(UITableView uiTableView, long l) {
+    public long getNumberOfRowsInSection(UITableView tableView, long section) {
         return 0;
     }
 

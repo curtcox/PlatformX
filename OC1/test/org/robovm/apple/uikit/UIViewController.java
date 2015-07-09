@@ -6,7 +6,8 @@ public class UIViewController
         extends UIResponder
         implements NSCoding, UIAppearanceContainer, UITraitEnvironment, UIStateRestoring, NSExtensionRequestHandling
 {
-    private UIView view;
+    private UIView view = new UIView();
+    private final NSArray<UIViewController> viewControllers = new NSArray<UIViewController>();
 
     public UIView getView() {
         return view;
@@ -62,6 +63,6 @@ public class UIViewController
     }
 
     public NSArray<UIViewController> getChildViewControllers() {
-        return null;
+        return viewControllers;
     }
 }
