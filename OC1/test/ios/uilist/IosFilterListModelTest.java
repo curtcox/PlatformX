@@ -13,6 +13,7 @@ import static org.junit.Assume.assumeTrue;
 public class IosFilterListModelTest {
 
     XLiveList listModel = new XLiveList();
+
     IosFilterListModel testObject = IosFilterListModel.of(listModel);
 
     @Before

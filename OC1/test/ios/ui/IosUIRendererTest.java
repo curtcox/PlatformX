@@ -36,11 +36,11 @@ public class IosUIRendererTest {
 
     @Test
     public void render_returns_right_component_type() {
-        assertRendersAs(new XLabel(""), UILabel.class);
+        assertRendersAs(new XLabel(""),     UILabel.class);
         assertRendersAs(new FakeButton(""), UIButton.class);
-        assertRendersAs(new XColumn(),UIView.class);
-        assertRendersAs(new XRow(), UIView.class);
-        assertRendersAs(new XFlow(),UIView.class);
+        assertRendersAs(new XColumn(),      UIView.class);
+        assertRendersAs(new XRow(),         UIView.class);
+        assertRendersAs(new XFlow(),        UIView.class);
         assertRendersAs(new XPeeredComponent(new UILabel()),UILabel.class);
     }
 

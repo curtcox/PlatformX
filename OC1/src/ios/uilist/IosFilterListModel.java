@@ -7,6 +7,7 @@ import org.robovm.apple.uikit.UITableViewCellEditingStyle;
 import org.robovm.apple.uikit.UITableViewDataSource;
 import x.event.LiveList;
 import x.uilist.ListFilter;
+import x.uilist.XListOffsets;
 
 import java.util.List;
 
@@ -14,10 +15,12 @@ final class IosFilterListModel<T>
     implements UITableViewDataSource
 {
     private final LiveList filtered;
+    private final XListOffsets<T> offsets;
     private ListFilter filter = ListFilter.ALLOW_ALL;
 
     private IosFilterListModel(LiveList filtered) {
         this.filtered = filtered;
+        this.offsets = XListOffsets.of(filtered);
     }
 
     public static IosFilterListModel of(LiveList filtered) {
@@ -26,13 +29,14 @@ final class IosFilterListModel<T>
     }
 
     public void setFilter(ListFilter filter) {
-        this.filter = filter;
+        offsets.setFilter(filter);
+        dataChanged();
     }
 
 
     @Override
     public long getNumberOfRowsInSection(UITableView tableView, long section) {
-        return filtered.size();
+        return offsets.getSize();
     }
 
     @Override
@@ -86,7 +90,7 @@ final class IosFilterListModel<T>
     }
 
     public T getItem(int selectedIndex) {
-        return (T) filtered.get(selectedIndex);
+        return (T) offsets.getElementAt(selectedIndex);
     }
 
     public void dataChanged() {
