@@ -26,30 +26,32 @@ final class IosUIRenderer {
         return (UIView) peered.peer;
     }
 
-    static UIView column(XComponent layout) {
+    static UICollectionView column(XComponent layout) {
         return box(layout);
     }
 
-    static UIView row(XComponent layout) {
+    static UICollectionView row(XComponent layout) {
         return box(layout);
     }
 
-    static UIView box(XComponent layout) {
+    static UICollectionView box(XComponent layout) {
+        UICollectionView box = new UICollectionView();
         for (XComponent component : ((XContainer) layout).components) {
         }
-        return null;
+        return box;
     }
 
-    static UIView flow(XComponent layout) {
+    static UICollectionView flow(XComponent layout) {
+        UICollectionView box = new UICollectionView();
         for (XComponent component : ((XContainer) layout).components) {
         }
-        return null;
+        return box;
     }
 
     static UIButton button(XComponent layout) {
         final XButton button = (XButton) layout;
         UIButton uiButton = new UIButton();
-        uiButton.setTitle(button.text,null);
+        uiButton.setTitle(button.text, null);
         uiButton.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
             @Override
             public void onTouchUpInside (UIControl control, UIEvent event) {
