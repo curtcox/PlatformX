@@ -32,7 +32,7 @@ final class IosFilterListModel<T>
 
     @Override
     public long getNumberOfRowsInSection(UITableView tableView, long section) {
-        return 0;
+        return filtered.size();
     }
 
     @Override
@@ -42,7 +42,7 @@ final class IosFilterListModel<T>
 
     @Override
     public long getNumberOfSections(UITableView uiTableView) {
-        return 0;
+        return 1;
     }
 
     @Override
@@ -86,7 +86,7 @@ final class IosFilterListModel<T>
     }
 
     public T getItem(int selectedIndex) {
-        return null;
+        return (T) filtered.get(selectedIndex);
     }
 
     public void dataChanged() {

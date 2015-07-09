@@ -1,8 +1,6 @@
 package ios.ui;
 
-import org.robovm.apple.uikit.UIButton;
-import org.robovm.apple.uikit.UILabel;
-import org.robovm.apple.uikit.UIView;
+import org.robovm.apple.uikit.*;
 import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
@@ -49,24 +47,23 @@ final class IosUIRenderer {
     }
 
     static UIButton button(XComponent layout) {
-//        final XButton button = (XButton) layout;
-//        Button aButton = new Button(context());
-//        aButton.setText(button.text);
-//        aButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                button.onTap();
-//            }
-//        });
-        return null;
+        final XButton button = (XButton) layout;
+        UIButton uiButton = new UIButton();
+        uiButton.setTitle(button.text,null);
+        uiButton.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
+            @Override
+            public void onTouchUpInside (UIControl control, UIEvent event) {
+                button.onTap();
+            }
+        });
+        return uiButton;
     }
 
     static UILabel label(XComponent layout) {
-//        XLabel label = (XLabel) layout;
-//        TextView aLabel = new TextView(context());
-//        aLabel.setText(label.text);
-//        return aLabel;
-        return null;
+        XLabel label = (XLabel) layout;
+        UILabel aLabel = new UILabel();
+        aLabel.setText(label.text);
+        return aLabel;
     }
 
     private static void log(Throwable t) {

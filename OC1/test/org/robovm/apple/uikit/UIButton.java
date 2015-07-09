@@ -8,6 +8,8 @@ public class UIButton
 {
     private UILabel titleLabel = new UILabel();
 
+    public UIButton() {}
+
     public static UIButton create(UIButtonType var0) {
         return new UIButton();
     }
