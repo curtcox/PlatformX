@@ -33,5 +33,6 @@
     <orderEntry type="library" name="vaadin-shared-7.4.8" level="project" />
     <orderEntry type="library" name="vaadin-widgets-7.4.8" level="project" />
     <orderEntry type="library" name="vaadin-client-compiler-7.4.8" level="project" />
+    <orderEntry type="library" name="jsoup-1.8.1" level="project" />
   </component>
 </module>
