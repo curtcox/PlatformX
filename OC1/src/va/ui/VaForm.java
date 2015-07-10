@@ -8,7 +8,8 @@ import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
 
-public final class VaForm extends GridLayout
+public final class VaForm
+        extends GridLayout
     implements IForm
 {
     private final PageLink link;

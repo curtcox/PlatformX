@@ -1,7 +1,8 @@
-package ios.ui;
+package va.ui;
 
+import com.vaadin.ui.Component;
 import config.ShouldRun;
-import fake.FakeIosRegistryLoader;
+import fake.FakeVaRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 import org.robovm.apple.uikit.UIButton;
@@ -13,7 +14,7 @@ import x.uiwidget.*;
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
-public class IosUIRendererTest {
+public class VaUIRendererTest {
 
     static class FakeButton extends XButton {
 
@@ -31,8 +32,8 @@ public class IosUIRendererTest {
 
     @Before
     public void setup() {
-        assumeTrue(ShouldRun.RoboVM);
-        FakeIosRegistryLoader.load();
+        assumeTrue(ShouldRun.Vaadin);
+        FakeVaRegistryLoader.load();
     }
 
     @Test
@@ -73,7 +74,7 @@ public class IosUIRendererTest {
     @Test
     public void render_empty_flow_produces_proper_layout() {
         XFlow flow = new XFlow();
-        UIView actual = render(flow);
+        Component actual = render(flow);
         assertTrue(actual instanceof UIView);
     }
 
@@ -155,8 +156,8 @@ public class IosUIRendererTest {
 //        assertTrue(actual.getChildAt(1) instanceof TextView);
 //    }
 
-    private UIView render(XComponent component) {
-        return IosUIRenderer.render(component);
+    private Component render(XComponent component) {
+        return VaUIRenderer.render(component);
     }
 
 }
