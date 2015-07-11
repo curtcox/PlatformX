@@ -2,7 +2,7 @@ package ios.uilist;
 
 import org.robovm.apple.uikit.UILabel;
 import org.robovm.apple.uikit.UITableViewCell;
-import x.uilist.IListCell;
+import x.uilist.IXListCell;
 import x.uiwidget.XImage;
 
 import java.net.URI;
@@ -12,7 +12,7 @@ import java.net.URI;
  */
 final class IosListCell
     extends UITableViewCell
-    implements IListCell
+    implements IXListCell
 {
     final UILabel firstRow;
     final UILabel secondRow;

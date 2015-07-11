@@ -2,7 +2,7 @@ package se.uilist;
 
 import config.ShouldRun;
 import org.junit.Before;
-import x.uilist.IListCell;
+import x.uilist.IXListCell;
 import x.uilist.ListCellConfigurer;
 import org.junit.Test;
 
@@ -24,11 +24,11 @@ public class SEBasicListCellRendererTest {
     boolean hasFocus;
 
     static class MyListCellConfigurer implements ListCellConfigurer {
-        IListCell button;
+        IXListCell button;
         Object value;
 
         @Override
-        public void configureButton(IListCell button, Object value) {
+        public void configureButton(IXListCell button, Object value) {
             this.button = button;
             this.value = value;
         }

@@ -1,14 +1,14 @@
 package x.pageparts;
 
 import x.domain.Type;
-import x.uilist.IListCell;
+import x.uilist.IXListCell;
 import x.uilist.ListCellConfigurer;
 import x.util.Strings;
 
 public final class TypeListCellConfigurer
     implements ListCellConfigurer<Type>
 {
-    public void configureButton(IListCell button, Type type) {
+    public void configureButton(IXListCell button, Type type) {
         button.setFirstRowText(friendly(type.toString()));
     }
 

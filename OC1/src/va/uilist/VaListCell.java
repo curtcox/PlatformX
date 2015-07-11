@@ -3,7 +3,7 @@ package va.uilist;
 import com.vaadin.ui.AbstractLayout;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Label;
-import x.uilist.IListCell;
+import x.uilist.IXListCell;
 import x.uiwidget.XImage;
 
 import java.net.URI;
@@ -14,7 +14,7 @@ import java.util.Iterator;
  */
 final class VaListCell
     extends AbstractLayout
-    implements IListCell
+    implements IXListCell
 {
     final Label firstRow;
     final Label secondRow;

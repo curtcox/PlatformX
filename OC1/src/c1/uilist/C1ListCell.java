@@ -27,7 +27,7 @@ import com.codename1.ui.Container;
 import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
-import x.uilist.IListCell;
+import x.uilist.IXListCell;
 import x.uiwidget.XImage;
 
 import java.net.URI;
@@ -37,7 +37,7 @@ import java.net.URI;
  */
 final class C1ListCell
     extends Container
-    implements IListCell
+    implements IXListCell
 {
     public final Button firstRow = new Button("MultiButton");
     public final Button secondRow = new Button();

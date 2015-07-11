@@ -1,12 +1,12 @@
 package x.pagefactories;
 
-import x.uilist.IListCell;
+import x.uilist.IXListCell;
 import x.uilist.ListCellConfigurer;
 
 public final class CellConfigurer
         implements ListCellConfigurer
 {
-    public void configureButton(IListCell button, Object item) {
+    public void configureButton(IXListCell button, Object item) {
         button.setFirstRowText(item.toString());
     }
 }

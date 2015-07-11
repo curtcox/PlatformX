@@ -4,7 +4,7 @@ import android.content.Context;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import x.Registry;
-import x.uilist.IListCell;
+import x.uilist.IXListCell;
 import x.uiwidget.XImage;
 
 import java.net.URI;
@@ -14,7 +14,7 @@ import java.net.URI;
  */
 final class AnListCell
     extends LinearLayout
-    implements IListCell
+    implements IXListCell
 {
     final TextView firstRow;
     final TextView secondRow;

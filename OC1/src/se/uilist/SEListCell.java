@@ -1,6 +1,6 @@
 package se.uilist;
 
-import x.uilist.IListCell;
+import x.uilist.IXListCell;
 import x.uiwidget.XImage;
 
 import javax.swing.*;
@@ -12,7 +12,7 @@ import java.net.URI;
  */
 final class SEListCell
     extends JPanel
-    implements IListCell
+    implements IXListCell
 {
     public final JButton firstRow = new JButton();
     public final JButton secondRow = new JButton();
