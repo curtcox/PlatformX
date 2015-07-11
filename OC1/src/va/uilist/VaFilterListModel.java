@@ -6,16 +6,23 @@ import com.vaadin.data.Property;
 import com.vaadin.data.util.filter.UnsupportedFilterException;
 import x.event.LiveList;
 import x.uilist.ListFilter;
+import x.uilist.XListOffsets;
 
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.List;
 
 final class VaFilterListModel<T>
-    implements Container.Filterable {
+    implements Container.Filterable
+{
     private final LiveList filtered;
     private ListFilter filter = ListFilter.ALLOW_ALL;
+    private final XListOffsets<T> offsets;
+    private final List propertyIds = Arrays.asList("first","second","icon");
 
     private VaFilterListModel(LiveList filtered) {
         this.filtered = filtered;
+        this.offsets = XListOffsets.of(filtered);
     }
 
     public static VaFilterListModel of(LiveList filtered) {
@@ -25,95 +32,99 @@ final class VaFilterListModel<T>
 
     public void setFilter(ListFilter filter) {
         this.filter = filter;
+        dataChanged();
     }
-
 
     @Override
     public void addContainerFilter(Filter filter) throws UnsupportedFilterException {
-
+        throw never();
     }
 
     @Override
     public void removeContainerFilter(Filter filter) {
-
+        throw never();
     }
 
     @Override
     public void removeAllContainerFilters() {
-
+        throw never();
     }
 
     @Override
     public Collection<Filter> getContainerFilters() {
-        return null;
+        throw never();
     }
 
     @Override
     public Item getItem(Object itemId) {
-        return null;
+        return (Item) offsets.getElementAt((Integer) itemId);
     }
 
     @Override
     public Collection<?> getContainerPropertyIds() {
-        return null;
+        return propertyIds;
     }
 
     @Override
     public Collection<?> getItemIds() {
-        return null;
+        throw never();
     }
 
     @Override
     public Property getContainerProperty(Object itemId, Object propertyId) {
-        return null;
+        throw never();
     }
 
     @Override
     public Class<?> getType(Object propertyId) {
-        return null;
+        throw never();
     }
 
     @Override
     public int size() {
-        return 0;
+        return offsets.getSize();
     }
 
     @Override
     public boolean containsId(Object itemId) {
-        return false;
+        throw never();
     }
 
     @Override
     public Item addItem(Object itemId) throws UnsupportedOperationException {
-        return null;
+        throw never();
     }
 
     @Override
     public Object addItem() throws UnsupportedOperationException {
-        return null;
+        throw never();
     }
 
     @Override
     public boolean removeItem(Object itemId) throws UnsupportedOperationException {
-        return false;
+        throw never();
     }
 
     @Override
     public boolean addContainerProperty(Object propertyId, Class<?> type, Object defaultValue) throws UnsupportedOperationException {
-        return false;
+        throw never();
     }
 
     @Override
     public boolean removeContainerProperty(Object propertyId) throws UnsupportedOperationException {
-        return false;
+        throw never();
     }
 
     @Override
     public boolean removeAllItems() throws UnsupportedOperationException {
-        return false;
+        throw never();
     }
 
     public void dataChanged() {
+        offsets.calculate();
+    }
 
+    private RuntimeException never() {
+        return new RuntimeException();
     }
 }

@@ -22,7 +22,9 @@ final class VaUIList<T>
     }
 
     public static VaUIList of(VaFilterListModel model) {
-        return null;
+        VaUIList list =  new VaUIList();
+        list.setContainerDataSource(model);
+        return list;
     }
 
     public static VaUIList of(VaFilterListModel model,ListCellConfigurer configurer) {

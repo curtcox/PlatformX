@@ -7,6 +7,10 @@ import org.junit.Test;
 import x.event.XLiveList;
 import x.uilist.ListFilter;
 
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assume.assumeTrue;
@@ -67,4 +71,14 @@ public class VaFilterListModelTest {
         assertEquals(expected,testObject.getItem(0));
     }
 
+    @Test
+    public void getContainerPropertyIds_returns_first_second_and_icon() {
+        Collection actual = testObject.getContainerPropertyIds();
+        List list = new ArrayList(actual);
+
+        assertEquals(3,list.size());
+        assertEquals("first", list.get(0));
+        assertEquals("second",list.get(1));
+        assertEquals("icon",  list.get(2));
+    }
 }
