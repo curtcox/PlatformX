@@ -5,7 +5,7 @@ import com.vaadin.ui.TextField;
 import va.uiwidget.VaBorderContainer;
 import x.event.Action;
 import x.event.LiveList;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -26,14 +26,14 @@ public final class VaSearchableList<T>
      */
     public final Component component;
 
-    private VaSearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
+    private VaSearchableList(LiveList<T> items, Component action, IXListCell.ConfigProducer configurer) {
         filterListModel = VaFilterListModel.of(items);
         filteredList = VaUIList.of(filterListModel,configurer);
         component = VaBorderContainer.of(filteredList)
              .addNorth(newNorthContainer(action));
     }
 
-    public static VaSearchableList of(LiveList items, Component action, ListCellConfigurer configurer) {
+    public static VaSearchableList of(LiveList items, Component action, IXListCell.ConfigProducer configurer) {
         return new VaSearchableList(items,action,configurer);
     }
 

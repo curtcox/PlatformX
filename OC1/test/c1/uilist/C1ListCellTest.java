@@ -1,11 +1,10 @@
 package c1.uilist;
 
 import config.ShouldRun;
-import fake.FakeCodenameOneImplementationTest;
 import fake.FakeUIManager;
-import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
+import x.uilist.IXListCell;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
@@ -31,7 +30,7 @@ public class C1ListCellTest  {
     public void setFirstRowText_sets_text() {
         String expected = random();
 
-        testObject.setFirstRowText(expected);
+        testObject.apply(new IXListCell.Config(expected));
 
         assertSame(expected,testObject.firstRow.getText());
     }
@@ -40,7 +39,7 @@ public class C1ListCellTest  {
     public void setSecondRowText_sets_text() {
         String expected = random();
 
-        testObject.setSecondRowText(expected);
+        testObject.apply(new IXListCell.Config("?",expected,null));
 
         assertSame(expected,testObject.secondRow.getText());
     }

@@ -1,13 +1,13 @@
 package va.uilist;
 
 import com.vaadin.ui.Table;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 final class VaBasicListCellRenderer<T>
 {
-    private final ListCellConfigurer configurer;
+    private final IXListCell.ConfigProducer configurer;
 
-    public VaBasicListCellRenderer(ListCellConfigurer configurer) {
+    public VaBasicListCellRenderer(IXListCell.ConfigProducer configurer) {
         this.configurer = configurer;
     }
 
@@ -16,7 +16,7 @@ final class VaBasicListCellRenderer<T>
              boolean cellHasFocus)
     {
         VaListCell cell = new VaListCell();
-        configurer.configureButton(cell,value);
+        cell.apply(configurer.configFor(value));
         return cell;
     }
 }

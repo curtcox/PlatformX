@@ -1,7 +1,7 @@
 package se.uilist;
 
 import x.event.Action;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 import javax.swing.*;
 import javax.swing.event.ListSelectionEvent;
@@ -14,7 +14,7 @@ final class SEUIList<T>
         super(model);
     }
 
-    public static SEUIList of(ListModel model,ListCellConfigurer configurer) {
+    public static SEUIList of(ListModel model,IXListCell.ConfigProducer configurer) {
         SEUIList list = new SEUIList(model);
         list.setCellRenderer(new SEBasicListCellRenderer(configurer));
         return list;

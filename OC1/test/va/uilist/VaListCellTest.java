@@ -3,6 +3,7 @@ package va.uilist;
 import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
+import x.uilist.IXListCell;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
@@ -27,7 +28,7 @@ public class VaListCellTest {
     public void setFirstRowText_sets_text() {
         String expected = random();
 
-        testObject.setFirstRowText(expected);
+        testObject.apply(new IXListCell.Config(expected));
 
         assertSame(expected,testObject.firstRow.getValue());
     }
@@ -36,7 +37,7 @@ public class VaListCellTest {
     public void setSecondRowText_sets_text() {
         String expected = random();
 
-        testObject.setSecondRowText(expected);
+        testObject.apply(new IXListCell.Config("?",expected,null));
 
         assertSame(expected,testObject.secondRow.getValue());
     }

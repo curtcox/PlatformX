@@ -2,15 +2,12 @@ package se.uilist;
 
 import config.ShouldRun;
 import org.junit.Before;
-import x.uilist.IXListCell;
-import x.uilist.ListCellConfigurer;
 import org.junit.Test;
+import x.uilist.IXListCell;
 
 import javax.swing.*;
 
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
 public class SEBasicListCellRendererTest {
@@ -23,14 +20,13 @@ public class SEBasicListCellRendererTest {
     boolean selected;
     boolean hasFocus;
 
-    static class MyListCellConfigurer implements ListCellConfigurer {
-        IXListCell button;
+    static class MyListCellConfigurer implements IXListCell.ConfigProducer {
         Object value;
 
         @Override
-        public void configureButton(IXListCell button, Object value) {
-            this.button = button;
+        public IXListCell.Config configFor(Object value) {
             this.value = value;
+            return null;
         }
     };
 
@@ -52,7 +48,6 @@ public class SEBasicListCellRendererTest {
     @Test
     public void getListCellRendererComponent_configures_returned_ListCell() {
         SEListCell cell = getListCellRendererComponent();
-        assertSame(cell,configurer.button);
         assertSame(value,configurer.value);
     }
 

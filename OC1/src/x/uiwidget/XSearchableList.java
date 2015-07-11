@@ -1,7 +1,7 @@
 package x.uiwidget;
 
 import x.event.Action;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 import java.util.List;
 
@@ -12,7 +12,7 @@ import java.util.List;
 public interface XSearchableList<T> {
 
     interface Factory {
-        XSearchableList from(List items, XComponent action, ListCellConfigurer configurer);
+        XSearchableList from(List items, XComponent action, IXListCell.ConfigProducer configurer);
     }
 
     void onSelected(Action.Listener actionListener);

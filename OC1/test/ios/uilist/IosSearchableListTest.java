@@ -7,7 +7,7 @@ import org.junit.Test;
 import org.robovm.apple.uikit.UIView;
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class IosSearchableListTest {
     List list = new ArrayList();
     LiveList items = new XLiveList(list);
     UIView action;
-    ListCellConfigurer configurer;
+    IXListCell.ConfigProducer configurer;
 
     IosSearchableList testObject;
 

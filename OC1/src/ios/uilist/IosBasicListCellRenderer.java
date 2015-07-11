@@ -1,13 +1,13 @@
 package ios.uilist;
 
 import org.robovm.apple.uikit.UITableView;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 final class IosBasicListCellRenderer<T>
 {
-    private final ListCellConfigurer configurer;
+    private final IXListCell.ConfigProducer configurer;
 
-    public IosBasicListCellRenderer(ListCellConfigurer configurer) {
+    public IosBasicListCellRenderer(IXListCell.ConfigProducer configurer) {
         this.configurer = configurer;
     }
 
@@ -16,7 +16,7 @@ final class IosBasicListCellRenderer<T>
              boolean cellHasFocus)
     {
         IosListCell cell = new IosListCell();
-        configurer.configureButton(cell,value);
+        cell.apply(configurer.configFor(value));
         return cell;
     }
 }

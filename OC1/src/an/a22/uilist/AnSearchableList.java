@@ -7,7 +7,7 @@ import android.widget.TextView;
 import x.Registry;
 import x.event.Action;
 import x.event.LiveList;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -28,14 +28,14 @@ public final class AnSearchableList<T>
      */
     public final View component;
 
-    private AnSearchableList(LiveList<T> items, View action, ListCellConfigurer configurer) {
+    private AnSearchableList(LiveList<T> items, View action, IXListCell.ConfigProducer configurer) {
         filterListModel = AnFilterListModel.of(items,configurer);
         filteredList = AnUIList.of(filterListModel);
         component = AnBorderContainer.of((View) filteredList)
              .addNorth(newNorthContainer(action));
     }
 
-    public static AnSearchableList of(LiveList items, View action, ListCellConfigurer configurer) {
+    public static AnSearchableList of(LiveList items, View action, IXListCell.ConfigProducer configurer) {
         return new AnSearchableList(items,action,configurer);
     }
 

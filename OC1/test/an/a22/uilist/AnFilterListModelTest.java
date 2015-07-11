@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import x.event.XLiveList;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 import x.uilist.ListFilter;
 
 import static org.junit.Assert.*;
@@ -20,7 +20,7 @@ import static org.junit.Assume.assumeTrue;
 public class AnFilterListModelTest {
 
     FakeDataSetObserver listDataListener = new FakeDataSetObserver();
-    ListCellConfigurer configurer;
+    IXListCell.ConfigProducer configurer;
     XLiveList listModel = new XLiveList();
     AnFilterListModel testObject;
 

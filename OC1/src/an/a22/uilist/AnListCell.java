@@ -5,9 +5,6 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import x.Registry;
 import x.uilist.IXListCell;
-import x.uiwidget.XImage;
-
-import java.net.URI;
 
 /**
  * A compound list cell.
@@ -30,22 +27,8 @@ final class AnListCell
     }
 
     @Override
-    public void setFirstRowText(String text) {
-        firstRow.setText(text);
-    }
-
-    @Override
-    public void setSecondRowText(String text) {
-        secondRow.setText(text);
-    }
-
-    @Override
-    public void setIcon(XImage icon) {
-
-    }
-
-    @Override
-    public void setIcon(URI uri) {
-
+    public void apply(Config config) {
+        firstRow.setText(config.first);
+        secondRow.setText(config.second);
     }
 }

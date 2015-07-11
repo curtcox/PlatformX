@@ -8,7 +8,7 @@ import com.codename1.ui.events.DataChangedListener;
 import com.codename1.ui.layouts.BoxLayout;
 import com.codename1.ui.list.ListModel;
 import x.event.Action;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 /**
  * For displaying items from a ListModel.
@@ -20,10 +20,10 @@ final class C1BoxList
 {
     private final ListModel model;
     private Action.Listener actionListener;
-    private final ListCellConfigurer configurer;
+    private final IXListCell.ConfigProducer configurer;
     private int selectedIndex;
     
-    C1BoxList(ListModel model, ListCellConfigurer configurer) {
+    C1BoxList(ListModel model, IXListCell.ConfigProducer configurer) {
         this.model = model;
         this.configurer = configurer;
         addCellsFromModel();
@@ -55,9 +55,9 @@ final class C1BoxList
         }
     }
 
-    private C1ListCell newListCell(ListCellConfigurer configurer,final int index) {
+    private C1ListCell newListCell(IXListCell.ConfigProducer configurer,final int index) {
         C1ListCell cell = new C1ListCell();
-        configurer.configureButton(cell, model.getItemAt(index));
+        cell.apply(configurer.configFor(model.getItemAt(index)));
         cell.setLeadComponent(cell.firstRow);
         addSelectedListener(cell.firstRow,index);
         return cell;

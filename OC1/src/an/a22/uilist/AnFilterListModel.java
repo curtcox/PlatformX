@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import android.widget.ListAdapter;
 import x.event.Change;
 import x.event.LiveList;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 import x.uilist.ListFilter;
 import x.uilist.XListOffsets;
 
@@ -27,7 +27,7 @@ final class AnFilterListModel<T>
         this.offsets = XListOffsets.of(filtered);
     }
 
-    public static AnFilterListModel of(LiveList filtered, ListCellConfigurer configurer) {
+    public static AnFilterListModel of(LiveList filtered, IXListCell.ConfigProducer configurer) {
         AnFilterListModel model = new AnFilterListModel(filtered,new AnBasicListCellRenderer(configurer));
         model.listenForListChanges();
         return model;

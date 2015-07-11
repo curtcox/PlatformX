@@ -12,7 +12,7 @@ import org.robolectric.annotation.Config;
 import x.Registry;
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,7 +27,7 @@ public class AnSearchableListTest {
     List list = new ArrayList();
     LiveList items = new XLiveList(list);
     View action;
-    ListCellConfigurer configurer;
+    IXListCell.ConfigProducer configurer;
 
     AnSearchableList testObject;
 

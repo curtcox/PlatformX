@@ -2,7 +2,7 @@ package va.uilist;
 
 import com.vaadin.ui.Table;
 import x.event.Action;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 final class VaUIList<T>
     extends Table
@@ -27,7 +27,7 @@ final class VaUIList<T>
         return list;
     }
 
-    public static VaUIList of(VaFilterListModel model,ListCellConfigurer configurer) {
+    public static VaUIList of(VaFilterListModel model,IXListCell.ConfigProducer configurer) {
         VaUIList list = VaUIList.of(model);
         list.setRenderer(new VaBasicListCellRenderer(configurer));
         return list;

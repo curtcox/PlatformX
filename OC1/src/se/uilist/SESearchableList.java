@@ -3,7 +3,7 @@ package se.uilist;
 import se.uiwidget.SEBorderContainer;
 import x.event.Action;
 import x.event.LiveList;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 import x.uiwidget.XSearchableList;
 
 import javax.swing.*;
@@ -25,7 +25,7 @@ public final class SESearchableList<T>
      */
     public final JComponent component;
 
-    private SESearchableList(LiveList<T> items, JComponent action, ListCellConfigurer configurer) {
+    private SESearchableList(LiveList<T> items, JComponent action, IXListCell.ConfigProducer configurer) {
         filterListModel = SEFilterListModel.of(items);
         filteredList = SEUIList.of(filterListModel, configurer);
         component = component(action);
@@ -36,7 +36,7 @@ public final class SESearchableList<T>
                 .addNorth(newNorthContainer(action));
     }
 
-    public static SESearchableList of(LiveList items, JComponent action, ListCellConfigurer configurer) {
+    public static SESearchableList of(LiveList items, JComponent action, IXListCell.ConfigProducer configurer) {
         return new SESearchableList(items,action,configurer);
     }
 

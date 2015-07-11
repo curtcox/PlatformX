@@ -1,12 +1,12 @@
 package x.pagefactories;
 
 import x.uilist.IXListCell;
-import x.uilist.ListCellConfigurer;
 
 public final class CellConfigurer
-        implements ListCellConfigurer
+        implements IXListCell.ConfigProducer
 {
-    public void configureButton(IXListCell button, Object item) {
-        button.setFirstRowText(item.toString());
+    @Override
+    public IXListCell.Config configFor(Object item) {
+        return new IXListCell.Config(item.toString());
     }
 }

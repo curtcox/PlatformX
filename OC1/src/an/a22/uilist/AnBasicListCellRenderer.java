@@ -1,18 +1,18 @@
 package an.a22.uilist;
 
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 final class AnBasicListCellRenderer<T>
 {
-    private final ListCellConfigurer configurer;
+    private final IXListCell.ConfigProducer configurer;
     private final AnListCell cell = new AnListCell();
 
-    AnBasicListCellRenderer(ListCellConfigurer configurer) {
+    AnBasicListCellRenderer(IXListCell.ConfigProducer configurer) {
         this.configurer = configurer;
     }
 
     AnListCell getListCellRendererView(T value) {
-        configurer.configureButton(cell,value);
+        cell.apply(configurer.configFor(value));
         return cell;
     }
 }

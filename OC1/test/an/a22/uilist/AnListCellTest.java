@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
+import x.uilist.IXListCell;
 
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
@@ -32,7 +33,7 @@ public class AnListCellTest {
     public void setFirstRowText_sets_text() {
         String expected = random();
 
-        testObject.setFirstRowText(expected);
+        testObject.apply(new IXListCell.Config(expected));
 
         assertSame(expected,testObject.firstRow.getText());
     }
@@ -41,7 +42,7 @@ public class AnListCellTest {
     public void setSecondRowText_sets_text() {
         String expected = random();
 
-        testObject.setSecondRowText(expected);
+        testObject.apply(new IXListCell.Config("???",expected,null));
 
         assertSame(expected,testObject.secondRow.getText());
     }

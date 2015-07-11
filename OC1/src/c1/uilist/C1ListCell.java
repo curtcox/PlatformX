@@ -28,9 +28,6 @@ import com.codename1.ui.Label;
 import com.codename1.ui.layouts.BorderLayout;
 import com.codename1.ui.layouts.BoxLayout;
 import x.uilist.IXListCell;
-import x.uiwidget.XImage;
-
-import java.net.URI;
 
 /**
  * A compound list cell.
@@ -71,22 +68,8 @@ final class C1ListCell
     }
 
     @Override
-    public void setFirstRowText(String text) {
-        firstRow.setText(text);
-    }
-
-    @Override
-    public void setSecondRowText(String text) {
-        secondRow.setText(text);
-    }
-
-    @Override
-    public void setIcon(XImage icon) {
-
-    }
-
-    @Override
-    public void setIcon(URI uri) {
-
+    public void apply(Config config) {
+        firstRow.setText(config.first);
+        secondRow.setText(config.second);
     }
 }

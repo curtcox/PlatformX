@@ -1,16 +1,16 @@
 package se.uilist;
 
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 import javax.swing.*;
 
 final class SEBasicListCellRenderer<T>
     implements ListCellRenderer<T>
 {
-    private final ListCellConfigurer configurer;
+    private final IXListCell.ConfigProducer configurer;
     private final SEListCell cell = new SEListCell();
 
-    SEBasicListCellRenderer(ListCellConfigurer configurer) {
+    SEBasicListCellRenderer(IXListCell.ConfigProducer configurer) {
         this.configurer = configurer;
     }
 
@@ -19,7 +19,7 @@ final class SEBasicListCellRenderer<T>
              boolean isSelected,
              boolean cellHasFocus)
     {
-        configurer.configureButton(cell,value);
+        cell.apply(configurer.configFor(value));
         return cell;
     }
 }

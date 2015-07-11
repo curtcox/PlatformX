@@ -29,7 +29,7 @@ import com.codename1.ui.Label;
 import com.codename1.ui.List;
 import com.codename1.ui.list.CellRenderer;
 import com.codename1.ui.list.ListCellRenderer;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 final class C1BasicListCellRenderer<T>
     implements ListCellRenderer<T>, CellRenderer<T>
@@ -38,9 +38,9 @@ final class C1BasicListCellRenderer<T>
     private final C1ListCell selected = new C1ListCell();
     private final C1ListCell unselected = new C1ListCell();
     private final Label selectedEntries;
-    private final ListCellConfigurer configurer;
+    private final IXListCell.ConfigProducer configurer;
     
-    public C1BasicListCellRenderer(ListCellConfigurer configurer) {
+    public C1BasicListCellRenderer(IXListCell.ConfigProducer configurer) {
         this.configurer = configurer;
         focusComponent.setUIID(selected.getUIID() + "Focus");
         focusComponent.setFocus(true);
@@ -65,7 +65,7 @@ final class C1BasicListCellRenderer<T>
     }
 
     private void configure(C1ListCell cell, T value) {
-        configurer.configureButton(cell, value);
+        cell.apply(configurer.configFor(value));
     }
     
     private boolean shouldTreatAsSelected(Component list, boolean isSelected) {

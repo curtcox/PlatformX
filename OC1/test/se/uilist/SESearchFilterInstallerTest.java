@@ -27,7 +27,7 @@ public class SESearchFilterInstallerTest {
     ListDataListener listDataListener;
     LiveList items = new XLiveList();
     JComponent action =  new JLabel();
-    ListCellConfigurer configurer;
+    IXListCell.ConfigProducer configurer;
     SESearchableList searchableList = SESearchableList.of(items,action,configurer);
     StringToListFilter stringToListFilter = StringToListFilter.DEFAULT;
     SESearchFilterInstaller testObject = new SESearchFilterInstaller();

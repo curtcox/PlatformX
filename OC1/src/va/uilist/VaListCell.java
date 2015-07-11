@@ -4,9 +4,7 @@ import com.vaadin.ui.AbstractLayout;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.Label;
 import x.uilist.IXListCell;
-import x.uiwidget.XImage;
 
-import java.net.URI;
 import java.util.Iterator;
 
 /**
@@ -25,26 +23,6 @@ final class VaListCell
     }
 
     @Override
-    public void setFirstRowText(String text) {
-        firstRow.setValue(text);
-    }
-
-    @Override
-    public void setSecondRowText(String text) {
-        secondRow.setValue(text);
-    }
-
-    @Override
-    public void setIcon(XImage icon) {
-
-    }
-
-    @Override
-    public void setIcon(URI uri) {
-
-    }
-
-    @Override
     public void replaceComponent(Component oldComponent, Component newComponent) {
 
     }
@@ -57,5 +35,11 @@ final class VaListCell
     @Override
     public Iterator<Component> iterator() {
         return null;
+    }
+
+    @Override
+    public void apply(Config config) {
+        firstRow.setValue(config.first);
+        secondRow.setValue(config.second);
     }
 }

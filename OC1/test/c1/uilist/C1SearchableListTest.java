@@ -2,12 +2,12 @@ package c1.uilist;
 
 import com.codename1.ui.Component;
 import config.ShouldRun;
-import x.event.XLiveList;
-import x.event.LiveList;
-import x.uilist.ListCellConfigurer;
 import fake.FakeUIManager;
 import org.junit.Before;
 import org.junit.Test;
+import x.event.LiveList;
+import x.event.XLiveList;
+import x.uilist.IXListCell;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ public class C1SearchableListTest {
     List list = new ArrayList();
     LiveList items = new XLiveList(list);
     Component action;
-    ListCellConfigurer configurer;
+    IXListCell.ConfigProducer configurer;
 
     C1SearchableList testObject;
 

@@ -2,19 +2,17 @@ package x.pageparts;
 
 import x.domain.ServiceProvider;
 import x.uilist.IXListCell;
-import x.uilist.ListCellConfigurer;
 
 public final class ServiceProviderListCellConfigurer
-    implements ListCellConfigurer<ServiceProvider>
+    implements IXListCell.ConfigProducer<ServiceProvider>
 {
-
-    public void configureButton(IXListCell button, ServiceProvider provider) {
-        button.setFirstRowText(ratingAndDistance(provider));
-        button.setSecondRowText(provider.toString());
-        button.setIcon(provider.icon);
-    }
 
     private String ratingAndDistance(ServiceProvider provider) {
         return provider.myRating().toString() + " " + provider.distanceFromCurrentLocation();
+    }
+
+    @Override
+    public IXListCell.Config configFor(ServiceProvider provider) {
+        return new IXListCell.Config(ratingAndDistance(provider),provider.toString(),provider.icon);
     }
 }

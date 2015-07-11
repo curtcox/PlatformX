@@ -1,11 +1,9 @@
 package se.uilist;
 
 import x.uilist.IXListCell;
-import x.uiwidget.XImage;
 
 import javax.swing.*;
 import java.awt.*;
-import java.net.URI;
 
 /**
  * A compound list cell.
@@ -81,23 +79,9 @@ final class SEListCell
     }
 
     @Override
-    public void setFirstRowText(String text) {
-        firstRow.setText(text);
-    }
-
-    @Override
-    public void setSecondRowText(String text) {
-        secondRow.setText(text);
-    }
-
-    @Override
-    public void setIcon(XImage icon) {
-
-    }
-
-    @Override
-    public void setIcon(URI uri) {
-
+    public void apply(Config config) {
+        firstRow.setText(config.first);
+        secondRow.setText(config.second);
     }
 
 }

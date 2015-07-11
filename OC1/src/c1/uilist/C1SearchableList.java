@@ -6,7 +6,7 @@ import com.codename1.ui.Container;
 import com.codename1.ui.TextField;
 import x.event.Action;
 import x.event.LiveList;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -26,14 +26,14 @@ public final class C1SearchableList<T>
      */
     public final Component component;
 
-    private C1SearchableList(C1ListFactories.Factory factory, LiveList<T> items, Component action, ListCellConfigurer configurer) {
+    private C1SearchableList(C1ListFactories.Factory factory, LiveList<T> items, Component action, IXListCell.ConfigProducer configurer) {
         filterListModel = C1FilterListModel.of(items);
         filteredList = factory.of(filterListModel,configurer);
         component = new C1BorderContainer((Component)filteredList)
              .addNorth(newNorthContainer(action));
     }
 
-    public C1SearchableList(LiveList<T> items, Component action, ListCellConfigurer configurer) {
+    public C1SearchableList(LiveList<T> items, Component action, IXListCell.ConfigProducer configurer) {
         this(C1ListFactories.BOX,items,action,configurer);
     }
 

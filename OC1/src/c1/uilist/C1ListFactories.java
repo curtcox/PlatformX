@@ -1,7 +1,7 @@
 package c1.uilist;
 
 import com.codename1.ui.list.ListModel;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 
 /**
  * Some factories for producing UI lists.
@@ -16,11 +16,11 @@ import x.uilist.ListCellConfigurer;
 final class C1ListFactories {
 
     interface Factory {
-        UIList of(ListModel model,ListCellConfigurer configurer);
+        UIList of(ListModel model,IXListCell.ConfigProducer configurer);
     }
 
     static Factory LIST = new Factory() {
-        public UIList of(ListModel model,ListCellConfigurer configurer) {
+        public UIList of(ListModel model,IXListCell.ConfigProducer configurer) {
             C1UIList list = new C1UIList(model);
             list.setRenderer(new C1BasicListCellRenderer(configurer));
             return list;
@@ -28,7 +28,7 @@ final class C1ListFactories {
     };
 
     static Factory CONTAINER = new Factory() {
-        public UIList of(ListModel model,ListCellConfigurer configurer) {
+        public UIList of(ListModel model,IXListCell.ConfigProducer configurer) {
             C1UIContainerList list = new C1UIContainerList(model);
             list.setRenderer(new C1BasicListCellRenderer(configurer));
             return list;
@@ -36,7 +36,7 @@ final class C1ListFactories {
     };
 
     static Factory BOX = new Factory() {
-        public UIList of(ListModel model,ListCellConfigurer configurer) {
+        public UIList of(ListModel model,IXListCell.ConfigProducer configurer) {
             return new C1BoxList(model,configurer);
         }
     };

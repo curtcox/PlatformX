@@ -6,7 +6,7 @@ import org.robovm.apple.uikit.UILabel;
 import org.robovm.apple.uikit.UIView;
 import x.event.Action;
 import x.event.LiveList;
-import x.uilist.ListCellConfigurer;
+import x.uilist.IXListCell;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -27,14 +27,14 @@ public final class IosSearchableList<T>
      */
     public final UIView component;
 
-    private IosSearchableList(LiveList<T> items, UIView action, ListCellConfigurer configurer) {
+    private IosSearchableList(LiveList<T> items, UIView action, IXListCell.ConfigProducer configurer) {
         filterListModel = IosFilterListModel.of(items);
         filteredList = IosUIList.of(filterListModel,configurer);
         component = IosBorderContainer.of(filteredList.getView())
              .addNorth(newNorthContainer(action));
     }
 
-    public static IosSearchableList of(LiveList items, UIView action, ListCellConfigurer configurer) {
+    public static IosSearchableList of(LiveList items, UIView action, IXListCell.ConfigProducer configurer) {
         return new IosSearchableList(items,action,configurer);
     }
 
