@@ -12,7 +12,8 @@ import static org.junit.Assume.assumeTrue;
 
 public class SEBasicListCellRendererTest {
 
-    MyListCellConfigurer configurer = new MyListCellConfigurer();
+    MyConfigProducer configurer = new MyConfigProducer();
+    IXListCell.Config config = new IXListCell.Config("?","??","???");
     SEBasicListCellRenderer testObject = new SEBasicListCellRenderer(configurer);
     JList list = null;
     Object value = new Object();
@@ -20,13 +21,13 @@ public class SEBasicListCellRendererTest {
     boolean selected;
     boolean hasFocus;
 
-    static class MyListCellConfigurer implements IXListCell.ConfigProducer {
+    class MyConfigProducer implements IXListCell.ConfigProducer {
         Object value;
 
         @Override
         public IXListCell.Config configFor(Object value) {
             this.value = value;
-            return null;
+            return config;
         }
     };
 
@@ -46,9 +47,16 @@ public class SEBasicListCellRendererTest {
     }
 
     @Test
+    public void getListCellRendererComponent_uses_given_ConfigProducer() {
+        getListCellRendererComponent();
+        assertSame(value,configurer.value);
+    }
+
+    @Test
     public void getListCellRendererComponent_configures_returned_ListCell() {
         SEListCell cell = getListCellRendererComponent();
-        assertSame(value,configurer.value);
+        assertSame(config.first,cell.firstRow.getText());
+        assertSame(config.second,cell.secondRow.getText());
     }
 
     SEListCell getListCellRendererComponent() {
