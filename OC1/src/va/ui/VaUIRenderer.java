@@ -1,8 +1,6 @@
 package va.ui;
 
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Component;
-import com.vaadin.ui.Label;
+import com.vaadin.ui.*;
 import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
@@ -29,23 +27,21 @@ final class VaUIRenderer {
     }
 
     static Component column(XComponent layout) {
-        return box(layout);
+        VerticalLayout column = new VerticalLayout();
+        for (XComponent component : ((XContainer) layout).components) {
+        }
+        return column;
     }
 
     static Component row(XComponent layout) {
-        return box(layout);
-    }
-
-    static Component box(XComponent layout) {
+        HorizontalLayout row = new HorizontalLayout();
         for (XComponent component : ((XContainer) layout).components) {
         }
-        return null;
+        return row;
     }
 
     static Component flow(XComponent layout) {
-        for (XComponent component : ((XContainer) layout).components) {
-        }
-        return null;
+        return new HorizontalLayout();
     }
 
     static Component button(XComponent layout) {

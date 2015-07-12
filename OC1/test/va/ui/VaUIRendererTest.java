@@ -1,8 +1,6 @@
 package va.ui;
 
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Component;
-import com.vaadin.ui.Label;
+import com.vaadin.ui.*;
 import config.ShouldRun;
 import fake.FakeVaRegistryLoader;
 import org.junit.Before;
@@ -38,8 +36,8 @@ public class VaUIRendererTest {
     public void render_returns_right_component_type() {
         assertRendersAs(new XLabel(""),     Label.class);
         assertRendersAs(new FakeButton(""), Button.class);
-        assertRendersAs(new XColumn(),      Component.class);
-        assertRendersAs(new XRow(),         Component.class);
+        assertRendersAs(new XColumn(),      VerticalLayout.class);
+        assertRendersAs(new XRow(),         HorizontalLayout.class);
         assertRendersAs(new XFlow(),        Component.class);
         assertRendersAs(new XPeeredComponent(new Label()),Label.class);
     }
@@ -124,7 +122,7 @@ public class VaUIRendererTest {
     public void render_a_label() {
         String text = toString();
         Label actual = (Label) render(new XLabel(text));
-        assertEquals(text,actual.getValue());
+        assertEquals(text, actual.getValue());
     }
 
     @Test

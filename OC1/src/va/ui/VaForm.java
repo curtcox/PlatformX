@@ -23,14 +23,11 @@ public final class VaForm
 
     @Override
     public void layout(XComponent layout) {
-        removeAllViews();
+        removeAllComponents();
         addComponent(titleLabel());
         addComponent(backButton);
         addComponent(VaUIRenderer.render(layout));
         show();
-    }
-
-    private void removeAllViews() {
     }
 
     private Label titleLabel() {
