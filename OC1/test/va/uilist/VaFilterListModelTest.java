@@ -5,26 +5,29 @@ import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 import x.event.XLiveList;
+import x.uilist.IXListCell;
 import x.uilist.ListFilter;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static mach.Mocks._;
+import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
 public class VaFilterListModelTest {
 
     XLiveList listModel = new XLiveList();
 
-    VaFilterListModel testObject = VaFilterListModel.of(listModel);
+    IXListCell.ConfigProducer producer;
+    VaFilterListModel testObject;
 
     @Before
     public void setUp() {
         assumeTrue(ShouldRun.Vaadin);
         Mocks.init(this);
+        testObject = VaFilterListModel.of(listModel,producer);
     }
 
     @Test
@@ -44,10 +47,15 @@ public class VaFilterListModelTest {
     }
 
     @Test
-    public void getElementAt_0_returns_1st_element() {
-        Object expected = new Object();
-        listModel.add(expected);
-        assertEquals(expected,testObject.getItem(0));
+    public void getElementAt_0_returns_Item_with_config_for_1st_element() {
+        Object value = new Object();
+        listModel.add(value);
+        IXListCell.Config config = new IXListCell.Config("");
+        _(config);  producer.configFor(value);
+
+        VaListItem item = (VaListItem) testObject.getItem(0);
+
+        assertSame(config, item.config);
     }
 
     @Test
@@ -62,13 +70,18 @@ public class VaFilterListModelTest {
         final Object expected = new Object();
         listModel.add("unexpected");
         listModel.add(expected);
+        IXListCell.Config config = new IXListCell.Config("");
+        _(config);  producer.configFor(expected);
         testObject.setFilter(new ListFilter() {
             @Override
             public boolean passes(Object item) {
                 return item==expected;
             }
         });
-        assertEquals(expected,testObject.getItem(0));
+
+        VaListItem item = (VaListItem) testObject.getItem(0);
+
+        assertSame(config, item.config);
     }
 
     @Test

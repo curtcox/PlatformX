@@ -27,7 +27,7 @@ public final class VaSearchableList<T>
     public final Component component;
 
     private VaSearchableList(LiveList<T> items, Component action, IXListCell.ConfigProducer configurer) {
-        filterListModel = VaFilterListModel.of(items);
+        filterListModel = VaFilterListModel.of(items,configurer);
         filteredList = VaUIList.of(filterListModel,configurer);
         component = VaBorderContainer.of(filteredList)
              .addNorth(newNorthContainer(action));
