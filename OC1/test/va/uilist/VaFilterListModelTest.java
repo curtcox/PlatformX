@@ -41,9 +41,20 @@ public class VaFilterListModelTest {
     }
 
     @Test
+    public void getItemIds_is_empty_when_list_is_empty() {
+        assertEquals(0, testObject.getItemIds().size());
+    }
+
+    @Test
     public void size_is_1_when_list_has_1_item() {
         listModel.add("stuff");
         assertEquals(1, testObject.size());
+    }
+
+    @Test
+    public void getItemIds_is_has_1_item_when_list_has_1_item() {
+        listModel.add("stuff");
+        assertEquals(1, testObject.getItemIds().size());
     }
 
     @Test
@@ -63,6 +74,13 @@ public class VaFilterListModelTest {
         listModel.add("stuff");
         testObject.setFilter(ListFilter.ALLOW_NONE);
         assertEquals(0, testObject.size());
+    }
+
+    @Test
+    public void getItemIds_returns_filtered_size_when_set() {
+        listModel.add("stuff");
+        testObject.setFilter(ListFilter.ALLOW_NONE);
+        assertEquals(0, testObject.getItemIds().size());
     }
 
     @Test

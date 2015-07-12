@@ -3,11 +3,13 @@ package va.uilist;
 import com.vaadin.data.Container;
 import com.vaadin.data.Item;
 import com.vaadin.data.Property;
+import x.event.Change;
 import x.event.LiveList;
 import x.uilist.IXListCell;
 import x.uilist.ListFilter;
 import x.uilist.XListOffsets;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
@@ -16,6 +18,7 @@ final class VaFilterListModel<T>
     implements Container.Filterable
 {
     private final XListOffsets<T> offsets;
+    private final List<Integer> ids = new ArrayList();
     private final List propertyIds = Arrays.asList("first","second","icon");
     private final IXListCell.ConfigProducer producer;
 
@@ -26,12 +29,30 @@ final class VaFilterListModel<T>
 
     public static VaFilterListModel of(LiveList filtered, IXListCell.ConfigProducer producer) {
         VaFilterListModel model = new VaFilterListModel(filtered,producer);
+        model.setIds();
+        model.listenTo(filtered);
         return model;
+    }
+
+    private void listenTo(LiveList filtered) {
+        filtered.addListener(new Change.Listener() {
+            @Override
+            public void onChange() {
+                dataChanged();
+            }
+        });
     }
 
     public void setFilter(ListFilter filter) {
         offsets.setFilter(filter);
         dataChanged();
+    }
+
+    private void setIds() {
+        ids.clear();
+        for (int i=0; i<offsets.getSize(); i++) {
+            ids.add(i);
+        }
     }
 
     @Override
@@ -56,6 +77,7 @@ final class VaFilterListModel<T>
 
     public void dataChanged() {
         offsets.calculate();
+        setIds();
     }
 
     private UnsupportedOperationException never() {
@@ -64,7 +86,7 @@ final class VaFilterListModel<T>
 
     @Override
     public Collection<?> getItemIds() {
-        throw never();
+        return ids;
     }
 
     @Override
