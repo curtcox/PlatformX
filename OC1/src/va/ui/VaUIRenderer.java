@@ -1,6 +1,8 @@
 package va.ui;
 
+import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
+import com.vaadin.ui.Label;
 import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
@@ -47,24 +49,23 @@ final class VaUIRenderer {
     }
 
     static Component button(XComponent layout) {
-//        final XButton button = (XButton) layout;
-//        Button aButton = new Button(context());
-//        aButton.setText(button.text);
-//        aButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                button.onTap();
-//            }
-//        });
-        return null;
+        final XButton button = (XButton) layout;
+        Button vButton = new Button();
+        vButton.setCaption(button.text);
+        vButton.addClickListener(new Button.ClickListener() {
+            @Override
+            public void buttonClick(Button.ClickEvent event) {
+                button.onTap();
+            }
+        });
+        return vButton;
     }
 
     static Component label(XComponent layout) {
-//        XLabel label = (XLabel) layout;
-//        TextView aLabel = new TextView(context());
-//        aLabel.setText(label.text);
-//        return aLabel;
-        return null;
+        XLabel label = (XLabel) layout;
+        Label vLabel = new Label();
+        vLabel.setValue(label.text);
+        return vLabel;
     }
 
     private static void log(Throwable t) {

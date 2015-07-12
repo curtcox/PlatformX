@@ -1,14 +1,12 @@
 package va.ui;
 
+import com.vaadin.ui.Button;
 import com.vaadin.ui.Component;
+import com.vaadin.ui.Label;
 import config.ShouldRun;
 import fake.FakeVaRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
-import org.robovm.apple.uikit.UIButton;
-import org.robovm.apple.uikit.UICollectionView;
-import org.robovm.apple.uikit.UILabel;
-import org.robovm.apple.uikit.UIView;
 import x.uiwidget.*;
 
 import static org.junit.Assert.*;
@@ -38,12 +36,12 @@ public class VaUIRendererTest {
 
     @Test
     public void render_returns_right_component_type() {
-        assertRendersAs(new XLabel(""),     UILabel.class);
-        assertRendersAs(new FakeButton(""), UIButton.class);
-        assertRendersAs(new XColumn(),      UIView.class);
-        assertRendersAs(new XRow(),         UIView.class);
-        assertRendersAs(new XFlow(),        UIView.class);
-        assertRendersAs(new XPeeredComponent(new UILabel()),UILabel.class);
+        assertRendersAs(new XLabel(""),     Label.class);
+        assertRendersAs(new FakeButton(""), Button.class);
+        assertRendersAs(new XColumn(),      Component.class);
+        assertRendersAs(new XRow(),         Component.class);
+        assertRendersAs(new XFlow(),        Component.class);
+        assertRendersAs(new XPeeredComponent(new Label()),Label.class);
     }
 
     private void assertRendersAs(XComponent component, Class c) {
@@ -75,20 +73,20 @@ public class VaUIRendererTest {
     public void render_empty_flow_produces_proper_layout() {
         XFlow flow = new XFlow();
         Component actual = render(flow);
-        assertTrue(actual instanceof UIView);
+        assertTrue(actual instanceof Component);
     }
 
     @Test
     public void render_empty_column_produces_proper_layout() {
         XColumn column = new XColumn();
-        UICollectionView actual = (UICollectionView) render(column);
+        Component actual = (Component) render(column);
 //        assertEquals(LinearLayout.VERTICAL,actual.getOrientation());
     }
 
     @Test
     public void render_empty_row_produces_proper_layout() {
         XColumn column = new XColumn();
-        UICollectionView actual = (UICollectionView) render(column);
+        Component actual = (Component) render(column);
 //        assertEquals(LinearLayout.HORIZONTAL,actual.getOrientation());
     }
 
@@ -125,8 +123,8 @@ public class VaUIRendererTest {
     @Test
     public void render_a_label() {
         String text = toString();
-        UILabel actual = (UILabel) render(new XLabel(text));
-        assertEquals(text,actual.getText());
+        Label actual = (Label) render(new XLabel(text));
+        assertEquals(text,actual.getValue());
     }
 
     @Test
@@ -134,7 +132,7 @@ public class VaUIRendererTest {
         String text = toString();
         XButton button = new FakeButton("");
         button.text = text;
-        UIButton actual = (UIButton) render(button);
+        Button actual = (Button) render(button);
 
 //        assertEquals(text,actual.getTitleLabel().getText());
     }

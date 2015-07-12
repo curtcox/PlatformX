@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaListItem.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/va/uilist/VaListItemTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/uilist/VaFilterListModel.java" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaFilterListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/va/uilist/VaFilterListModelTest.java" afterPath="$PROJECT_DIR$/OC1/test/va/uilist/VaFilterListModelTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchableList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/va/ui/VaUIRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/va/ui/VaUIRendererTest.java" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -44,33 +40,14 @@
     <splitter split-orientation="horizontal" split-proportion="0.44169185">
       <split-first>
         <leaf>
-          <file leaf-file-name="VaFilterListModel.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/src/va/uilist/VaFilterListModel.java">
+          <file leaf-file-name="VaUIRenderer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3324397" vertical-offset="322" max-vertical-offset="1830">
-                  <caret line="38" column="37" selection-start-line="38" selection-start-column="37" selection-end-line="38" selection-end-column="37" />
+                <state vertical-scroll-proportion="0.33646113" vertical-offset="199" max-vertical-offset="1065">
+                  <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
                   <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1244#1245#0" expanded="true" />
-                    <element signature="e#1294#1295#0" expanded="true" />
-                    <element signature="e#1508#1509#0" expanded="true" />
-                    <element signature="e#1543#1544#0" expanded="true" />
-                    <element signature="e#1596#1597#0" expanded="true" />
-                    <element signature="e#1654#1655#0" expanded="true" />
-                    <element signature="e#2099#2100#0" expanded="true" />
-                    <element signature="e#2128#2129#0" expanded="true" />
-                    <element signature="e#2173#2174#0" expanded="true" />
-                    <element signature="e#2202#2203#0" expanded="true" />
-                    <element signature="e#2264#2265#0" expanded="true" />
-                    <element signature="e#2293#2294#0" expanded="true" />
-                    <element signature="e#2405#2406#0" expanded="true" />
-                    <element signature="e#2434#2435#0" expanded="true" />
-                    <element signature="e#2513#2514#0" expanded="true" />
-                    <element signature="e#2542#2543#0" expanded="true" />
-                    <element signature="e#2595#2596#0" expanded="true" />
-                    <element signature="e#2624#2625#0" expanded="true" />
-                    <element signature="e#2691#2692#0" expanded="true" />
-                    <element signature="e#2720#2721#0" expanded="true" />
+                    <element signature="e#1772#1941#0" expanded="true" />
+                    <element signature="e#1940#1941#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -80,15 +57,17 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="VaFilterListModelTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/test/va/uilist/VaFilterListModelTest.java">
+          <file leaf-file-name="VaUIRendererTest.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/test/va/ui/VaUIRendererTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.90909094" vertical-offset="465" max-vertical-offset="1470">
-                  <caret line="81" column="0" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.33333334" vertical-offset="287" max-vertical-offset="2430">
+                  <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1965#2117#0" expanded="true" />
-                    <element signature="e#2116#2117#0" expanded="true" />
+                    <element signature="e#1218#1219#0" expanded="true" />
+                    <element signature="e#1277#1278#0" expanded="true" />
+                    <element signature="e#5020#5021#0" expanded="true" />
+                    <element signature="e#5073#5074#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -112,11 +91,9 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/va/pagefactories/VaIndexPageFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/va/ui/VaDisplayTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/va/ui/VaForm.java" />
         <option value="$PROJECT_DIR$/OC1/test/va/ui/VaFormTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/va/ui/VaUIRendererTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/config/ShouldRun.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/uilist/IListCell.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/uilist/XListCell.java" />
@@ -163,6 +140,8 @@
         <option value="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchableList.java" />
         <option value="$PROJECT_DIR$/OC1/src/va/uilist/VaFilterListModel.java" />
         <option value="$PROJECT_DIR$/OC1/test/va/uilist/VaFilterListModelTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" />
+        <option value="$PROJECT_DIR$/OC1/test/va/ui/VaUIRendererTest.java" />
       </list>
     </option>
   </component>
@@ -732,7 +711,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.13802083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23814134" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23814134" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42902207" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -812,41 +791,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/data/Container.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="21.241531" vertical-offset="0" max-vertical-offset="0">
-          <caret line="986" column="21" selection-start-line="986" selection-start-column="21" selection-end-line="986" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/ItemListPageFactoryFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2817919" vertical-offset="0" max-vertical-offset="0">
-          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/DeviceInfoPageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="9" column="51" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/device/IDeviceInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="5" column="25" selection-start-line="5" selection-start-column="25" selection-end-line="5" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/domain/ServiceProvider.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33278418" vertical-offset="0" max-vertical-offset="0">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/uilist/AnBasicListCellRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19604613" vertical-offset="0" max-vertical-offset="0">
@@ -1282,6 +1226,55 @@
             <element signature="imports" expanded="true" />
             <element signature="e#1965#2117#0" expanded="true" />
             <element signature="e#2116#2117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/ui/Button.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.516086" vertical-offset="8040" max-vertical-offset="10020">
+          <caret line="52" column="13" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33646113" vertical-offset="199" max-vertical-offset="1065">
+          <caret line="40" column="9" selection-start-line="40" selection-start-column="9" selection-end-line="40" selection-end-column="9" />
+          <folding>
+            <element signature="e#1772#1941#0" expanded="true" />
+            <element signature="e#1940#1941#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/va/ui/VaFormTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="154" max-vertical-offset="900">
+          <caret line="65" column="0" selection-start-line="65" selection-start-column="0" selection-end-line="65" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/va/pagefactories/VaIndexPageFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="182" max-vertical-offset="945">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/va/ui/VaUIRendererTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="287" max-vertical-offset="2430">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1277#1278#0" expanded="true" />
+            <element signature="e#5020#5021#0" expanded="true" />
+            <element signature="e#5073#5074#0" expanded="true" />
           </folding>
         </state>
       </provider>
