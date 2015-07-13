@@ -1,6 +1,7 @@
 package se.uilist;
 
 import se.uiwidget.SEBorderContainer;
+import se.uiwidget.SEGhostText;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.IXListCell;
@@ -29,6 +30,7 @@ public final class SESearchableList<T>
         filterListModel = SEFilterListModel.of(items);
         filteredList = SEUIList.of(filterListModel, configurer);
         component = component(action);
+        SEGhostText.installOn(searchTerm,"Search for ...");
     }
 
     private JComponent component(JComponent action) {
