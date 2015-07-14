@@ -76,7 +76,11 @@
             bootclasspath="lib/CLDC11.jar" excludes="${excludes}"
             classpath="${javac.classpath}:${build.classes.dir}">
             <src path="${src.dir}"/>
+            <exclude name="an/**"/>
+            <exclude name="ios/**"/>
             <exclude name="se/**"/>
+            <exclude name="va/**"/>
+            <exclude name="x/net/XRawNetwork.java"/>
             <exclude name="mite/**"/>
         </javac>        
     </target>
