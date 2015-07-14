@@ -38,23 +38,27 @@ import x.util.StringMap;
 final class C1RegistryLoader {
 
     static void load() {
+        loadLogging();
         loadCodenameOnePlatform();
         loadPlatform();
     }
 
+    static void loadLogging() {
+        put(C1ExceptionLogger.class, new C1ExceptionLogger());
+        put(ILogManager.class,       new XLogManager());
+        put(XLogWriter.class,        new XLogWriter());
+    }
+    
     static void loadCodenameOnePlatform() {
+        put(IDisplay.class,         new C1Display());
         put(Storage.class,          new Storage());
         put(Network.class,          new C1CachedNetwork());
-        put(IDisplay.class,         new C1Display());
         put(Display.class,          Display.getInstance());
         put(ILocationManager.class, new LocationManager());
         put(IDeviceInfo.class,      new C1DeviceInfo());
     }
 
     static void loadPlatform() {
-        put(C1ExceptionLogger.class,  new C1ExceptionLogger());
-        put(ILogManager.class,      new XLogManager());
-        put(XLogWriter.class,        new XLogWriter());
         put(IFormFactory.class,     new C1FormFactory());
         put(MyRatings.class,        new MyRatings());
         put(C1Locations.class,        new C1Locations());
