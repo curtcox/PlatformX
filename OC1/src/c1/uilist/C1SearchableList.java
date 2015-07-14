@@ -27,6 +27,7 @@ public final class C1SearchableList<T>
     public final Component component;
 
     private C1SearchableList(C1ListFactories.Factory factory, LiveList<T> items, Component action, IXListCell.ConfigProducer configurer) {
+        searchTerm.setHint("Search for ...");
         filterListModel = C1FilterListModel.of(items);
         filteredList = factory.of(filterListModel,configurer);
         component = new C1BorderContainer((Component)filteredList)
