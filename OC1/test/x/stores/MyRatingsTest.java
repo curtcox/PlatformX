@@ -1,6 +1,5 @@
 package x.stores;
 
-import com.codename1.io.Storage;
 import config.ShouldRun;
 import fake.FakeStorage;
 import fake.FakeXRegistryLoader;
@@ -31,7 +30,7 @@ public class MyRatingsTest {
         ID id = new ID("" + hashCode());
         Rating rating = new Rating(toString());
         ratings1.put(id, rating);
-        FakeStorage storage = (FakeStorage) Registry.get(Storage.class);
+        FakeStorage storage = (FakeStorage) Registry.get(XStorage.class);
         storage.inputStream = new ByteArrayInputStream(storage.outputStream.toByteArray());
         
         MyRatings ratings2 = new MyRatings();

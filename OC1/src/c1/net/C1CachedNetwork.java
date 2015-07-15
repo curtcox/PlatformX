@@ -1,11 +1,11 @@
 package c1.net;
 
-import com.codename1.io.Storage;
 import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.net.Network;
 import x.stores.MapStorageIO;
+import x.stores.XStorage;
 import x.uiwidget.XImage;
 
 import java.io.ByteArrayInputStream;
@@ -31,8 +31,8 @@ public final class C1CachedNetwork
         loadEntriesFromStorage();    
     }
 
-    private Storage getStorage() {
-        return Registry.get(Storage.class);
+    private XStorage getStorage() {
+        return Registry.get(XStorage.class);
     }
 
     public InputStream getStreamFor(URI uri) {

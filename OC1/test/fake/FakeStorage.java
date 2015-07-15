@@ -1,6 +1,8 @@
 package fake;
 
 import com.codename1.io.Storage;
+import x.stores.XStorage;
+
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -11,6 +13,7 @@ import java.util.Set;
 
 public class FakeStorage
     extends Storage
+    implements XStorage
 {
     public Set<String> names = new HashSet<String>();
     public ByteArrayInputStream inputStream = new ByteArrayInputStream(new byte[0]);

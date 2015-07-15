@@ -2,7 +2,6 @@ package c1.app;
 
 import c1.net.C1RawNetwork;
 import c1.services.ILocationManager;
-import com.codename1.io.Storage;
 import config.ShouldRun;
 import fake.FakeDeviceInfo;
 import fake.FakeDisplay;
@@ -15,6 +14,7 @@ import x.device.IDeviceInfo;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.net.Network;
+import x.stores.XStorage;
 import x.ui.IDisplay;
 
 import static org.junit.Assume.assumeTrue;
@@ -38,7 +38,7 @@ public class C1RegistryLoaderTest {
     }
 
     void loadPlatform() {
-        Registry.put(Storage.class, new FakeStorage());
+        Registry.put(XStorage.class, new FakeStorage());
         Registry.put(Network.class, new C1RawNetwork());
         Registry.put(IDisplay.class, new FakeDisplay());
         Registry.put(ILocationManager.class, new FakeLocationManager());
