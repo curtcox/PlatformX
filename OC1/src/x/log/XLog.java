@@ -1,5 +1,6 @@
 package x.log;
 
+import java.util.logging.*;
 import x.Registry;
 import x.ui.IDisplay;
 import x.ui.IForm;
@@ -9,21 +10,27 @@ public final class XLog
 {
 
     final Class clazz;
+    final String name;
     final String prefix;
+    final Logger log;
     
     XLog(Class clazz) {
         this.clazz = clazz;
-        prefix = ":" + clazz.getCanonicalName() + ":";
+        name = clazz.getCanonicalName();
+        prefix = ":" + name + ":";
+        log = Logger.getLogger(name);
     }
 
     public void log(Throwable e) {
         log("Caught exception");
         log("class=" + e.getClass());
         log("message=" + e.getMessage());
+        log.info(e.getMessage());
         e.printStackTrace();
     }
 
     public void log(String message) {
+        log.info(message);
         getLogWriter().log(now() + ":" + thread() + ":" + screen() + prefix + message);
     }
     
