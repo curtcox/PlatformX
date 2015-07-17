@@ -41,16 +41,17 @@ public final class SEForm
     }
 
     private JPanel navigationPanel() {
-        JPanel panel = new JPanel();
-        panel.setLayout(new BorderLayout());
-        backButton = backButton();
         editButton = editButton();
-        panel.add(backButton,BorderLayout.WEST);
-        panel.add(editButton,BorderLayout.EAST);
+        backButton = backButton();
+        return new SEBorderContainer(address())
+                .west(backButton)
+                .east(editButton);
+    }
+
+    JTextField address() {
         JTextField address = new JTextField();
-        address.setText(link.tags.toString());
-        panel.add(address,BorderLayout.CENTER);
-        return panel;
+        address.setText(link.title());
+        return address;
     }
 
     JButton editButton() {

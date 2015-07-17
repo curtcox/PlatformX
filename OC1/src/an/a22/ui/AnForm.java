@@ -54,6 +54,7 @@ public final class AnForm
     private Button backButton() {
         Button button = new Button(context());
         button.setText("<");
+        button.setEnabled(false);
         button.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
