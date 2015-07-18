@@ -1,5 +1,6 @@
 package an.a22.ui;
 
+import an.a22.uiwidget.AnBorderContainer;
 import android.content.Context;
 import android.view.Gravity;
 import android.view.MotionEvent;
@@ -25,16 +26,30 @@ public final class AnForm
         super(context());
         this.link = link;
         configureLayout();
-        this.backButton = backButton();
     }
 
     @Override
     public void layout(XComponent layout) {
         removeAllViews();
-        addView(titleLabel());
-        addView(backButton);
-        addView(AnUIRenderer.render(layout));
+        addView(renderedForm(layout));
         show();
+    }
+
+    private View renderedForm(XComponent layout) {
+        return center(AnUIRenderer.render(layout))
+                .north(navigationPanel())
+                .layout();
+    }
+
+    private View navigationPanel() {
+        backButton = backButton();
+        return center(address())
+                .west(backButton)
+                .layout();
+    }
+
+    private AnBorderContainer center(View view) {
+        return AnBorderContainer.of(view);
     }
 
     private void configureLayout() {
@@ -43,7 +58,7 @@ public final class AnForm
         setGravity(Gravity.CENTER);
     }
 
-    private TextView titleLabel() {
+    private TextView address() {
         TextView label = new TextView(context());
         label.setText(link.title());
         label.setTextSize(20);
@@ -54,6 +69,7 @@ public final class AnForm
     private Button backButton() {
         Button button = new Button(context());
         button.setText("<");
+        button.setEnabled(false);
         button.setOnTouchListener(new OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {

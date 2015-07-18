@@ -32,7 +32,7 @@ public final class AnSearchableList<T>
         filterListModel = AnFilterListModel.of(items,configurer);
         filteredList = AnUIList.of(filterListModel);
         component = AnBorderContainer.of((View) filteredList)
-             .addNorth(newNorthContainer(action));
+             .north(newNorthContainer(action));
     }
 
     public static AnSearchableList of(LiveList items, View action, IXListCell.ConfigProducer configurer) {
@@ -40,7 +40,7 @@ public final class AnSearchableList<T>
     }
 
     private View newNorthContainer(View action) {
-        return AnBorderContainer.of(searchTerm).addEast(action);
+        return AnBorderContainer.of(searchTerm).east(action).layout();
     }
     
     public void onSelected(final Action.Listener listener) {

@@ -37,17 +37,19 @@ public final class AnForm
 
     private View renderedForm(XComponent layout) {
         return center(AnUIRenderer.render(layout))
-                .north(navigationPanel());
+                .north(navigationPanel())
+                .layout();
     }
 
     private View navigationPanel() {
         backButton = backButton();
         return center(address())
-                .west(backButton);
+                .west(backButton)
+                .layout();
     }
 
     private AnBorderContainer center(View view) {
-        return new AnBorderContainer(view,context());
+        return AnBorderContainer.of(view);
     }
 
     private void configureLayout() {

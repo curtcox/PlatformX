@@ -40,7 +40,7 @@ public final class AnSearchableList<T>
     }
 
     private View newNorthContainer(View action) {
-        return AnBorderContainer.of(searchTerm).east(action);
+        return AnBorderContainer.of(searchTerm).east(action).layout();
     }
     
     public void onSelected(final Action.Listener listener) {
