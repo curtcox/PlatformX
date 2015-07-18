@@ -7,6 +7,7 @@ import android.widget.RelativeLayout;
 import x.Registry;
 
 import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
+import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
 import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
 
 public final class AnBorderContainer
@@ -20,10 +21,13 @@ public final class AnBorderContainer
     AnBorderContainer(View center, Context context) {
         super(context);
         this.center = center;
+        LayoutParams params = new LayoutParams(MATCH_PARENT, MATCH_PARENT);
+        setLayoutParams(params);
     }
 
     public static AnBorderContainer of(View center) {
-        return new AnBorderContainer(center,context());
+        AnBorderContainer container = new AnBorderContainer(center,context());
+        return container;
     }
 
     private static Context context() {
@@ -61,17 +65,17 @@ public final class AnBorderContainer
         if (north!=null) {
             params.addRule(BELOW,north.getId());
         } else {
-            params.addRule(ALIGN_PARENT_TOP);
+            params.addRule(ALIGN_TOP);
         }
         if (west!=null) {
             params.addRule(RIGHT_OF,west.getId());
         } else {
-            params.addRule(ALIGN_PARENT_LEFT);
+            params.addRule(ALIGN_LEFT);
         }
         if (east!=null) {
             params.addRule(LEFT_OF,east.getId());
         } else {
-            params.addRule(ALIGN_PARENT_RIGHT);
+            params.addRule(ALIGN_RIGHT);
         }
         addView(center,params);
     }
@@ -97,6 +101,7 @@ public final class AnBorderContainer
         params.addRule(ABOVE,center.getId());
         params.addRule(CENTER_HORIZONTAL);
         params.addRule(ALIGN_PARENT_TOP);
+        params.addRule(ALIGN_TOP);
         addView(north, params);
     }
 }

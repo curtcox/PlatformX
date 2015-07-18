@@ -27,7 +27,9 @@ final class AnUIRenderer {
 
     private static View peer(XComponent layout) {
         XPeeredComponent peered = (XPeeredComponent) layout;
-        return (View) peered.peer;
+        View peer = (View) peered.peer;
+        log(layout + ">" + peer);
+        return peer;
     }
 
     static LinearLayout column(XComponent layout) {
@@ -46,6 +48,7 @@ final class AnUIRenderer {
         for (XComponent component : ((XContainer) layout).components) {
             aLayout.addView(render(component));
         }
+        log(layout + ">" + aLayout);
         return aLayout;
     }
 
@@ -56,6 +59,7 @@ final class AnUIRenderer {
         for (XComponent component : ((XContainer) layout).components) {
             aLayout.addView(render(component));
         }
+        log(layout + ">" + aLayout);
         return aLayout;
     }
 
@@ -69,6 +73,7 @@ final class AnUIRenderer {
                 button.onTap();
             }
         });
+        log(button + ">" + aButton);
         return aButton;
     }
 
@@ -76,11 +81,16 @@ final class AnUIRenderer {
         XLabel label = (XLabel) layout;
         TextView aLabel = new TextView(context());
         aLabel.setText(label.text);
+        log(label + ">" + aLabel);
         return aLabel;
     }
 
     private static Context context() {
         return Registry.get(Context.class);
+    }
+
+    private static void log(String message) {
+        getLog().log(message);
     }
 
     private static void log(Throwable t) {

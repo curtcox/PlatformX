@@ -31,8 +31,13 @@ public final class AnSearchableList<T>
     private AnSearchableList(LiveList<T> items, View action, IXListCell.ConfigProducer configurer) {
         filterListModel = AnFilterListModel.of(items,configurer);
         filteredList = AnUIList.of(filterListModel);
-        component = AnBorderContainer.of((View) filteredList)
-             .north(newNorthContainer(action));
+        component = component(action);
+    }
+
+    private View component(View action) {
+        return AnBorderContainer.of(filteredList)
+                .north(newNorthContainer(action))
+                .layout();
     }
 
     public static AnSearchableList of(LiveList items, View action, IXListCell.ConfigProducer configurer) {

@@ -13,6 +13,7 @@ import x.command.Command;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
+import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
 
 public final class AnForm
     extends LinearLayout
@@ -36,9 +37,13 @@ public final class AnForm
     }
 
     private View renderedForm(XComponent layout) {
-        return center(AnUIRenderer.render(layout))
+        return center(render(layout))
                 .north(navigationPanel())
                 .layout();
+    }
+
+    private View render(XComponent layout) {
+        return AnUIRenderer.render(layout);
     }
 
     private View navigationPanel() {
@@ -48,13 +53,13 @@ public final class AnForm
                 .layout();
     }
 
-    private AnBorderContainer center(View view) {
-        return AnBorderContainer.of(view);
+    private AnBorderContainer center(View center) {
+        return AnBorderContainer.of(center);
     }
 
     private void configureLayout() {
         setOrientation(LinearLayout.VERTICAL);
-        setLayoutParams(new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.FILL_PARENT));
+        setLayoutParams(new LayoutParams(FILL_PARENT, FILL_PARENT));
         setGravity(Gravity.CENTER);
     }
 

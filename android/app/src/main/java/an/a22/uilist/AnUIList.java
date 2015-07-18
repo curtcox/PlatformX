@@ -10,15 +10,14 @@ import x.event.Action;
 final class AnUIList<T>
     extends ListView
 {
-    private final AnFilterListModel model;
-
-    private AnUIList(AnFilterListModel model) {
+    private AnUIList() {
         super(context());
-        this.model = model;
     }
 
     static AnUIList of(AnFilterListModel model) {
-        return new AnUIList(model);
+        AnUIList list =  new AnUIList();
+        list.setAdapter(model);
+        return list;
     }
 
     public void addActionListener(final Action.Listener listener) {
