@@ -64,9 +64,10 @@ public class SEFormTest {
     }
 
     @Test
-    public void uses_border_layout() {
-        LayoutManager layout = testObject.getLayout();
-        assertTrue(layout instanceof BorderLayout);
+    public void uses_border_container() {
+        testObject.layout(new XLabel("!!"));
+        Component container = testObject.getComponents()[0];
+        assertTrue(container instanceof SEBorderContainer);
     }
 
     @Test
@@ -77,7 +78,8 @@ public class SEFormTest {
     @Test
     public void layout_produces_one_component_plus_navigation_panel_for_a_label() {
         testObject.layout(new XLabel("!!"));
-        assertEquals(2, testObject.getComponents().length);
+        SEBorderContainer container = (SEBorderContainer) testObject.getComponents()[0];
+        assertEquals(2, container.getComponents().length);
     }
 
     @Test
@@ -86,7 +88,7 @@ public class SEFormTest {
 
         for (int i=0; i<3; i++) {
             testObject.layout(layout);
-            assertEquals(2, testObject.getComponents().length);
+            assertEquals(1, testObject.getComponents().length);
         }
     }
 
@@ -94,7 +96,8 @@ public class SEFormTest {
     public void layout_produces_a_matching_label_for_a_label() {
         String text = random("text");
         testObject.layout(new XLabel(text));
-        JLabel label = (JLabel) testObject.getComponents()[0];
+        SEBorderContainer container = (SEBorderContainer) testObject.getComponents()[0];
+        JLabel label = (JLabel) container.getComponents()[0];
         assertSame(text, label.getText());
     }
 

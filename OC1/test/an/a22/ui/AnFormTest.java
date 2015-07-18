@@ -69,7 +69,7 @@ public class AnFormTest {
 
         for (int i=0; i<3; i++) {
             testObject.layout(layout);
-            assertEquals(3, testObject.getChildCount());
+            assertEquals(1, testObject.getChildCount());
         }
     }
 
