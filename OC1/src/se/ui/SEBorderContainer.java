@@ -20,4 +20,10 @@ final class SEBorderContainer
         add(west,BorderLayout.WEST);
         return this;
     }
+
+    SEBorderContainer north(JComponent north) {
+        add(north,BorderLayout.NORTH);
+        return this;
+    }
+
 }

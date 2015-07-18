@@ -8,7 +8,7 @@ import x.Registry;
 public final class AnBorderContainer
     extends RelativeLayout
 {
-    private AnBorderContainer(View center, Context context) {
+    public AnBorderContainer(View center, Context context) {
         super(context);
         addView(center);
     }
@@ -21,13 +21,19 @@ public final class AnBorderContainer
         return Registry.get(Context.class);
     }
 
-    public AnBorderContainer addNorth(View north) {
+    public AnBorderContainer north(View north) {
         addView(north);
         return this;
     }
 
-    public AnBorderContainer addEast(View east) {
+    public AnBorderContainer east(View east) {
         addView(east);
         return this;
     }
+
+    public AnBorderContainer west(View west) {
+        addView(west);
+        return this;
+    }
+
 }

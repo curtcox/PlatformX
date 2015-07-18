@@ -45,14 +45,14 @@ public class AnBorderContainerTest {
 
     @Test
     public void adding_child_views_can_be_chained() {
-        assertSame(testObject,testObject.addNorth(view()));
-        assertSame(testObject,testObject.addEast(view()));
+        assertSame(testObject,testObject.north(view()));
+        assertSame(testObject,testObject.east(view()));
     }
 
     @Test
     public void addNorth_adds_the_view_as_a_child_view() {
         View north = view();
-        testObject.addNorth(north);
+        testObject.north(north);
         assertTrue(testObject.getChildCount() == 2);
         assertSame(north,testObject.getChildAt(1));
     }
@@ -60,7 +60,7 @@ public class AnBorderContainerTest {
     @Test
     public void addEast_adds_the_view_as_a_child_view() {
         View east = view();
-        testObject.addEast(east);
+        testObject.east(east);
         assertTrue(testObject.getChildCount()==2);
         assertSame(east,testObject.getChildAt(1));
     }
