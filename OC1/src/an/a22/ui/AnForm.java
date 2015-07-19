@@ -13,7 +13,7 @@ import x.command.Command;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
-import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
+import static android.view.ViewGroup.LayoutParams.*;
 
 public final class AnForm
     extends LinearLayout
@@ -59,8 +59,12 @@ public final class AnForm
 
     private void configureLayout() {
         setOrientation(LinearLayout.VERTICAL);
-        setLayoutParams(new LayoutParams(FILL_PARENT, FILL_PARENT));
+        setLayoutParams(stretchXY());
         setGravity(Gravity.CENTER);
+    }
+
+    private static LayoutParams stretchXY() {
+        return new LayoutParams(MATCH_PARENT, MATCH_PARENT);
     }
 
     private TextView address() {

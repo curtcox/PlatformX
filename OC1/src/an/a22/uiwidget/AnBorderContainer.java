@@ -3,31 +3,45 @@ package an.a22.uiwidget;
 import android.content.Context;
 import android.view.Gravity;
 import android.view.View;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import x.Registry;
 
-import static android.view.ViewGroup.LayoutParams.FILL_PARENT;
-import static android.view.ViewGroup.LayoutParams.MATCH_PARENT;
-import static android.view.ViewGroup.LayoutParams.WRAP_CONTENT;
+import static android.view.ViewGroup.LayoutParams.*;
 
+/**
+ * For building and adding components to a container that acts like a
+ * Swing border layout.
+ */
+// After much struggling to do this with a relative layout, I gave up and
+// switched to this nested linear layout.
 public final class AnBorderContainer
-    extends RelativeLayout
+        extends LinearLayout
 {
     private final View center;
     private View north;
     private View east;
     private View west;
+    private LinearLayout westCenterEast;
 
     AnBorderContainer(View center, Context context) {
         super(context);
         this.center = center;
-        LayoutParams params = new LayoutParams(MATCH_PARENT, MATCH_PARENT);
-        setLayoutParams(params);
+        westCenterEast = centerRow(context);
+        setOrientation(LinearLayout.VERTICAL);
+        setLayoutParams(stretchXY());
+        setGravity(Gravity.FILL);
+    }
+
+    private static LinearLayout centerRow(Context context) {
+        LinearLayout layout = new LinearLayout(context);
+        layout.setOrientation(LinearLayout.HORIZONTAL);
+        layout.setLayoutParams(stretchXY());
+        layout.setGravity(Gravity.FILL);
+        return layout;
     }
 
     public static AnBorderContainer of(View center) {
-        AnBorderContainer container = new AnBorderContainer(center,context());
-        return container;
+        return new AnBorderContainer(center,context());
     }
 
     private static Context context() {
@@ -50,58 +64,34 @@ public final class AnBorderContainer
     }
 
     public AnBorderContainer layout() {
-        setGravity(Gravity.CENTER);
-        if (north!=null) { layoutNorth(); }
-        if (east!=null)  { layoutEast();  }
-        if (west!=null)  { layoutWest();  }
-        layoutCenter();
+        if (north!=null) {
+            addView(north, stretchX());
+        }
+        layoutCenterRow();
         return this;
     }
 
-    private void layoutCenter() {
-        LayoutParams params = new LayoutParams(FILL_PARENT, FILL_PARENT);
-        params.addRule(CENTER_VERTICAL);
-        params.addRule(CENTER_HORIZONTAL);
-        if (north!=null) {
-            params.addRule(BELOW,north.getId());
-        } else {
-            params.addRule(ALIGN_TOP);
-        }
+    private void layoutCenterRow() {
         if (west!=null) {
-            params.addRule(RIGHT_OF,west.getId());
-        } else {
-            params.addRule(ALIGN_LEFT);
+            westCenterEast.addView(west, stretchY());
         }
+        westCenterEast.addView(center, stretchXY());
         if (east!=null) {
-            params.addRule(LEFT_OF,east.getId());
-        } else {
-            params.addRule(ALIGN_RIGHT);
+            westCenterEast.addView(east, stretchY());
         }
-        addView(center,params);
+        addView(westCenterEast,stretchXY());
     }
 
-    private void layoutWest() {
-        LayoutParams params = new LayoutParams(WRAP_CONTENT, FILL_PARENT);
-        params.addRule(LEFT_OF,center.getId());
-        params.addRule(CENTER_VERTICAL);
-        params.addRule(ALIGN_PARENT_LEFT);
-        addView(west,params);
+    private static LayoutParams stretchX() {
+        return new LayoutParams(MATCH_PARENT, WRAP_CONTENT);
     }
 
-    private void layoutEast() {
-        LayoutParams params = new LayoutParams(WRAP_CONTENT, FILL_PARENT);
-        params.addRule(RIGHT_OF,center.getId());
-        params.addRule(CENTER_VERTICAL);
-        params.addRule(ALIGN_PARENT_RIGHT);
-        addView(east, params);
+    private static LayoutParams stretchY() {
+        return new LayoutParams(WRAP_CONTENT, MATCH_PARENT);
     }
 
-    private void layoutNorth() {
-        LayoutParams params = new LayoutParams(FILL_PARENT, WRAP_CONTENT);
-        params.addRule(ABOVE,center.getId());
-        params.addRule(CENTER_HORIZONTAL);
-        params.addRule(ALIGN_PARENT_TOP);
-        params.addRule(ALIGN_TOP);
-        addView(north, params);
+    private static LayoutParams stretchXY() {
+        return new LayoutParams(MATCH_PARENT, MATCH_PARENT);
     }
+
 }
