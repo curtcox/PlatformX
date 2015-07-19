@@ -22,9 +22,25 @@ final class AnUIList<T>
 
     public void addActionListener(final Action.Listener listener) {
         setOnItemSelectedListener(new OnItemSelectedListener() {
+            /**
+             * <p>Callback method to be invoked when an item in this view has been
+             * selected. This callback is invoked only when the newly selected
+             * position is different from the previously selected position or if
+             * there was no selected item.</p>
+             *
+             * Impelmenters can call getItemAtPosition(position) if they need to access the
+             * data associated with the selected item.
+             *
+             * @param parent The AdapterView where the selection happened
+             * @param view The view within the AdapterView that was clicked
+             * @param position The position of the view in the adapter
+             * @param id The row id of the item that is selected
+             */
             @Override
-            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
-                listener.actionPerformed(new Action(AnUIList.this));
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (view!=null) {
+                    listener.actionPerformed(new Action(AnUIList.this));
+                }
             }
             @Override
             public void onNothingSelected(AdapterView<?> adapterView) {}
