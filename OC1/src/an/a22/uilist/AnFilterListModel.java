@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 final class AnFilterListModel<T>
-    implements ListAdapter
+        implements ListAdapter
 {
     private final LiveList filtered;
     private final AnBasicListCellRenderer renderer;
@@ -94,8 +94,11 @@ final class AnFilterListModel<T>
     }
 
     @Override
-    public View getView(int index, View view, ViewGroup viewGroup) {
-        return renderer.getListCellRendererView(getItem(index));
+    public View getView(int index, View convertView, ViewGroup viewGroup) {
+        AnListCell cell = (convertView==null)
+                ? new AnListCell()
+                : (AnListCell) convertView;
+        return renderer.getListCellRendererView(cell, getItem(index));
     }
 
     @Override
