@@ -3,7 +3,7 @@ package an.a22.uilist;
 import an.a22.uiwidget.AnBorderContainer;
 import android.content.Context;
 import android.view.View;
-import android.widget.TextView;
+import android.widget.EditText;
 import x.Registry;
 import x.event.Action;
 import x.event.LiveList;
@@ -18,7 +18,7 @@ public final class AnSearchableList<T>
     implements XSearchableList
 {
 
-    final TextView searchTerm = new TextView(context());
+    final EditText searchTerm = new EditText(context());
 
     final AnFilterListModel<T> filterListModel;
     private final AnUIList filteredList;

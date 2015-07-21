@@ -9,7 +9,7 @@ import org.robolectric.annotation.Config;
 import x.uilist.IXListCell;
 
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertSame;
+import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
 @RunWith(RobolectricTestRunner.class)
@@ -35,7 +35,7 @@ public class AnListCellTest {
 
         testObject.apply(new IXListCell.Config(expected));
 
-        assertSame(expected,testObject.firstRow.getText());
+        assertEquals(expected,testObject.getText());
     }
 
     @Test
@@ -44,7 +44,7 @@ public class AnListCellTest {
 
         testObject.apply(new IXListCell.Config("???",expected,null));
 
-        assertSame(expected,testObject.secondRow.getText());
+        assertEquals("???" + expected,testObject.getText());
     }
 
     private String random() {
