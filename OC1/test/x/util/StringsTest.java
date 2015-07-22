@@ -55,4 +55,28 @@ public class StringsTest {
         assertTrue(Strings.isEmpty(""));
         assertFalse(Strings.isEmpty("!"));
     }
+
+    @Test
+    public void elided_is_limited_to_first_100_characters() {
+        String string = random("1") + random("2") + random("3") +random("4");
+        assertTrue(string.length()>100);
+        String actual = Strings.elided(string);
+
+        assertEquals(100, actual.length());
+        assertTrue(actual.endsWith("..."));
+        assertEquals(string.substring(0,97),actual.substring(0,97));
+    }
+
+    @Test
+    public void elided_is_same_when_short_enough() {
+        String string = random("1");
+        assertTrue(string.length()<90);
+        String actual = Strings.elided(string);
+
+        assertEquals(string,actual);
+    }
+
+    private String random(String prefix) {
+        return prefix + toString();
+    }
 }

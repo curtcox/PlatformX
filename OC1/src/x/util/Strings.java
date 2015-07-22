@@ -1,10 +1,6 @@
 
 package x.util;
 
-/**
- *
- * @author Curt
- */
 public final class Strings {
     
     public static String[] split(String string,String token) {
@@ -32,4 +28,10 @@ public final class Strings {
         return string.length() == 0;
     }
 
+    public static String elided(String title) {
+        if (title.length()<=100) {
+            return title;
+        }
+        return title.substring(0,97) + "...";
+    }
 }

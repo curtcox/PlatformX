@@ -47,6 +47,20 @@ public class AnFormTest {
     }
 
     @Test
+    public void address_is_limited_to_first_100_characters() {
+        title = random("1") + random("2") + random("3") + random("4");
+        link = PageLink.of(title);
+        assertTrue(title.length()>100);
+        testObject = new AnForm(link);
+        testObject.layout(new XLabel(""));
+        String actual = testObject.address.getText().toString();
+
+        assertEquals(100, actual.length());
+        assertTrue(actual.endsWith("..."));
+        assertEquals(title.substring(0,97),actual.substring(0, 97));
+    }
+
+    @Test
     public void link_is_set_from_constructor() {
         AnForm testObject = new AnForm(link);
 
