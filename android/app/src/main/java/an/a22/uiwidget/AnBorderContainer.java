@@ -64,11 +64,21 @@ public final class AnBorderContainer
     }
 
     public AnBorderContainer layout() {
+        ensureOrphans(center,north,east,west);
         if (north!=null) {
             addView(north, stretchX());
         }
         layoutCenterRow();
         return this;
+    }
+
+    private void ensureOrphans(View... views) {
+        for (View view : views) {
+            if (view!=null && view.getParent()!=null) {
+                LinearLayout parent = (LinearLayout) view.getParent();
+                parent.removeView(view);
+            }
+        }
     }
 
     private void layoutCenterRow() {
