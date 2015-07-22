@@ -90,4 +90,23 @@ public class AnFilterListModelTest {
         assertTrue(listDataListener.onChangedCalled);
     }
 
+    @Test
+    public void areAllItemsEnabled_returns_true() {
+        assertTrue(testObject.areAllItemsEnabled());
+    }
+
+    @Test
+    public void isEnabled_returns_true() {
+        assertTrue(testObject.isEnabled(0));
+    }
+
+    @Test
+    public void getViewTypeCount_returns_1() {
+        assertEquals(1,testObject.getViewTypeCount());
+    }
+
+    @Test
+    public void getItemViewType_returns_0() {
+        assertEquals(0,testObject.getItemViewType(0));
+    }
 }

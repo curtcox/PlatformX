@@ -1,4 +1,4 @@
-package x.util;
+package c1;
 
 import com.codename1.ui.Button;
 import com.codename1.ui.Label;
@@ -6,7 +6,7 @@ import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 
-public final class Reflection {
+public final class C1Reflection {
 
     public static void set(Object object, String field, Object value) {
         log("object " + object + " field " + field + " value " + value);
@@ -19,7 +19,7 @@ public final class Reflection {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(Reflection.class);
+        return Registry.get(ILogManager.class).getLog(C1Reflection.class);
     }
 
 }

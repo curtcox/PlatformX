@@ -6,7 +6,6 @@ import x.ui.IForm;
 import x.uiwidget.XComponent;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -24,7 +23,6 @@ public final class SEForm
     SEForm(PageLink link, Command edit) {
         this.link = link;
         this.edit = edit;
-        setLayout(new BorderLayout());
     }
 
     SEForm(PageLink link) {
@@ -35,22 +33,27 @@ public final class SEForm
     public void layout(XComponent layout) {
         removeAll();
         this.layout = layout;
-        add(SEUIRenderer.render(layout), BorderLayout.CENTER);
-        add(navigationPanel(), BorderLayout.NORTH);
+        add(renderedForm());
         show();
     }
 
+    private JComponent renderedForm() {
+        return new SEBorderContainer(SEUIRenderer.render(layout))
+                .north(navigationPanel());
+    }
+
     private JPanel navigationPanel() {
-        JPanel panel = new JPanel();
-        panel.setLayout(new BorderLayout());
-        backButton = backButton();
         editButton = editButton();
-        panel.add(backButton,BorderLayout.WEST);
-        panel.add(editButton,BorderLayout.EAST);
+        backButton = backButton();
+        return new SEBorderContainer(address())
+                .west(backButton)
+                .east(editButton);
+    }
+
+    JTextField address() {
         JTextField address = new JTextField();
-        address.setText(link.tags.toString());
-        panel.add(address,BorderLayout.CENTER);
-        return panel;
+        address.setText(link.title());
+        return address;
     }
 
     JButton editButton() {

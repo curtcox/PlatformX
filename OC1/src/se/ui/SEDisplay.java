@@ -56,7 +56,6 @@ public final class SEDisplay
         JFrame frame = new JFrame();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-        frame.setPreferredSize(new Dimension(400, 400));
         return frame;
     }
 

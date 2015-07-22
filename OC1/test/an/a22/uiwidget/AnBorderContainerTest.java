@@ -2,7 +2,7 @@ package an.a22.uiwidget;
 
 import android.content.Context;
 import android.view.View;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import config.ShouldRun;
 import fake.FakeAnRegistryLoader;
@@ -33,36 +33,39 @@ public class AnBorderContainerTest {
     }
 
     @Test
-    public void is_RelativeLayout() {
-        assertTrue(testObject instanceof RelativeLayout);
+    public void is_LinearLayout() {
+        assertTrue(testObject instanceof LinearLayout);
     }
 
     @Test
     public void center_is_a_child_view() {
+        testObject.layout();
         assertTrue(testObject.getChildCount()==1);
-        assertSame(center,testObject.getChildAt(0));
+        LinearLayout centerRow = (LinearLayout) testObject.getChildAt(0);
+        assertSame(center,centerRow.getChildAt(0));
     }
 
     @Test
     public void adding_child_views_can_be_chained() {
-        assertSame(testObject,testObject.addNorth(view()));
-        assertSame(testObject,testObject.addEast(view()));
+        assertSame(testObject,testObject.north(view()));
+        assertSame(testObject,testObject.east(view()));
     }
 
     @Test
-    public void addNorth_adds_the_view_as_a_child_view() {
+    public void addNorth_adds_the_view_as_a_child_view_when_laid_out() {
         View north = view();
-        testObject.addNorth(north);
+        testObject.north(north).layout();
         assertTrue(testObject.getChildCount() == 2);
-        assertSame(north,testObject.getChildAt(1));
+        assertSame(north,testObject.getChildAt(0));
     }
 
     @Test
-    public void addEast_adds_the_view_as_a_child_view() {
+    public void addEast_adds_the_view_as_a_child_view_when_laid_out() {
         View east = view();
-        testObject.addEast(east);
-        assertTrue(testObject.getChildCount()==2);
-        assertSame(east,testObject.getChildAt(1));
+        testObject.east(east).layout();
+        assertTrue(testObject.getChildCount()==1);
+        LinearLayout centerRow = (LinearLayout) testObject.getChildAt(0);
+        assertSame(east,centerRow.getChildAt(1));
     }
 
     private View view() {
