@@ -1,5 +1,6 @@
 package ios.ui;
 
+import ios.uiwidget.IosBorderContainer;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.*;
 import x.command.Command;
@@ -23,10 +24,29 @@ public final class IosForm
     @Override
     public void layout(XComponent layout) {
         removeAllViews();
-        addView(titleLabel());
-        addView(backButton);
-        addView(IosUIRenderer.render(layout));
+        addView(renderedForm(layout));
         show();
+    }
+
+    private UIView renderedForm(XComponent layout) {
+        return center(render(layout))
+                .north(navigationPanel())
+                .layout();
+    }
+
+    private UIView render(XComponent layout) {
+        return IosUIRenderer.render(layout);
+    }
+
+    private UIView navigationPanel() {
+        backButton = backButton();
+        return center(address())
+                .west(backButton)
+                .layout();
+    }
+
+    private IosBorderContainer center(UIView center) {
+        return IosBorderContainer.of(center);
     }
 
     private void removeAllViews() {
@@ -36,7 +56,7 @@ public final class IosForm
         getView().addSubview(view);
     }
 
-    private UILabel titleLabel() {
+    private UILabel address() {
         UILabel label = new UILabel(new CGRect(20, 250, 280, 44));
         label.setText(link.title());
         return label;

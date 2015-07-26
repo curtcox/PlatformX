@@ -12,11 +12,19 @@ public final class IosBorderContainer
         return new IosBorderContainer();
     }
 
-    public IosBorderContainer addNorth(UIView component) {
+    public IosBorderContainer north(UIView component) {
         return this;
     }
 
-    public IosBorderContainer addEast(UIView component) {
+    public IosBorderContainer east(UIView component) {
+        return this;
+    }
+
+    public IosBorderContainer west(UIView component) {
+        return this;
+    }
+
+    public IosBorderContainer layout() {
         return this;
     }
 }
