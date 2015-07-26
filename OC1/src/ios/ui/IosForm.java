@@ -7,8 +7,9 @@ import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
 
-public final class IosForm extends UIViewController
-    implements IForm
+public final class IosForm
+        extends UIViewController
+     implements IForm
 {
     private final PageLink link;
     private Command back;

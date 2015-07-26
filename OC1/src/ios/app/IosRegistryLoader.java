@@ -39,13 +39,13 @@ final class IosRegistryLoader {
 
     static void loadPlatform() {
         put(ILogManager.class,      new XLogManager());
-        put(XLogWriter.class,  new XLogWriter());
+        put(XLogWriter.class,       new XLogWriter());
         put(IFormFactory.class,     new IosFormFactory());
         put(CurrentState.class,     new CurrentState());
         put(Network.class,          new XRawNetwork());
         StringMap stringMap = RootStringMap.of();
         put(StringMap.class,        stringMap);
-        put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
+        put(TaggedStringSources.class,        new StringMapAsTaggedStringSources(stringMap));
         put(ItemListPageFactoryFactory.class, new IosItemListPageFactoryFactory());
         put(PageFactory.class,    RootPageFactory.of());
     }
