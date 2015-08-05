@@ -34,7 +34,7 @@ public class VaApplication extends UI {
     }
 
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
-    @VaadinServletConfiguration(ui = MyUI.class, productionMode = false)
+    @VaadinServletConfiguration(ui = VaApplication.class, productionMode = false)
     public static class MyUIServlet extends VaadinServlet {
     }
 }
