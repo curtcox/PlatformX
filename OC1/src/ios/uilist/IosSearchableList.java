@@ -31,8 +31,7 @@ public final class IosSearchableList<T>
         filterListModel = IosFilterListModel.of(items);
         filteredList = IosUIList.of(filterListModel,configurer);
         component = IosBorderContainer.of(filteredList.getView())
-             .north(newNorthContainer(action))
-             .layout();
+             .north(newNorthContainer(action));
     }
 
     public static IosSearchableList of(LiveList items, UIView action, IXListCell.ConfigProducer configurer) {
@@ -40,7 +39,7 @@ public final class IosSearchableList<T>
     }
 
     private UIView newNorthContainer(UIView action) {
-        return IosBorderContainer.of(searchTerm).east(action).layout();
+        return IosBorderContainer.of(searchTerm).east(action);
     }
     
     public void onSelected(final Action.Listener listener) {

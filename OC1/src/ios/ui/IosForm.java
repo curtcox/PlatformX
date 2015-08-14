@@ -30,8 +30,7 @@ public final class IosForm
 
     private UIView renderedForm(XComponent layout) {
         return center(render(layout))
-                .north(navigationPanel())
-                .layout();
+                .north(navigationPanel());
     }
 
     private UIView render(XComponent layout) {
@@ -41,8 +40,7 @@ public final class IosForm
     private UIView navigationPanel() {
         backButton = backButton();
         return center(address())
-                .west(backButton)
-                .layout();
+                .west(backButton);
     }
 
     private IosBorderContainer center(UIView center) {
