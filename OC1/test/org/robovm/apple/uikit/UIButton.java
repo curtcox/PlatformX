@@ -21,4 +21,8 @@ public class UIButton
     public UILabel getTitleLabel() {
         return titleLabel;
     }
+
+    public void setBackgroundColor(UIColor color) {
+
+    }
 }

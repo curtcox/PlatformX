@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uiwidget/IosBorderContainer.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uiwidget/IosBorderContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java" afterPath="$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/ios/uiwidget/IosBorderDemoController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/ios/uiwidget/IosDemoApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/org/robovm/apple/uikit/UIButton.java" afterPath="$PROJECT_DIR$/OC1/test/org/robovm/apple/uikit/UIButton.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -55,76 +56,13 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="AnBorderContainer.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/uiwidget/AnBorderContainer.java">
+          <file leaf-file-name="IosDemoApplication.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/test/ios/uiwidget/IosDemoApplication.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1455">
-                  <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VaRegistryLoader.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/va/app/VaRegistryLoader.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-                  <caret line="27" column="12" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IosBorderContainer.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/ios/uiwidget/IosBorderContainer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="1.1111112" vertical-offset="240" max-vertical-offset="1515">
-                  <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+                <state vertical-scroll-proportion="0.5533597" vertical-offset="0" max-vertical-offset="759">
+                  <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#1146#1147#0" expanded="true" />
-                    <element signature="e#1218#1219#0" expanded="true" />
-                    <element signature="e#1499#1500#0" expanded="true" />
-                    <element signature="e#1587#1588#0" expanded="true" />
-                    <element signature="e#1612#1613#0" expanded="true" />
-                    <element signature="e#1720#1721#0" expanded="true" />
-                    <element signature="e#1748#1749#0" expanded="true" />
-                    <element signature="e#1806#1807#0" expanded="true" />
-                    <element signature="e#1835#1836#0" expanded="true" />
-                    <element signature="e#1897#1898#0" expanded="true" />
-                    <element signature="e#1919#1920#0" expanded="true" />
-                    <element signature="e#1964#1965#0" expanded="true" />
-                    <element signature="e#1997#1998#0" expanded="true" />
-                    <element signature="e#2058#2059#0" expanded="true" />
-                    <element signature="e#2092#2093#0" expanded="true" />
-                    <element signature="e#2154#2155#0" expanded="true" />
-                    <element signature="e#2186#2187#0" expanded="true" />
-                    <element signature="e#2251#2252#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IosForm.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
-                  <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IosSearchableList.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.6836461" vertical-offset="0" max-vertical-offset="765">
-                  <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
-                  <folding>
-                    <element signature="e#1305#1306#0" expanded="true" />
-                    <element signature="e#1374#1375#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -148,9 +86,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java" />
-        <option value="$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java" />
-        <option value="$PROJECT_DIR$/OC1/src/x/XJSON.java" />
         <option value="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/stores/AbstractPairIO.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/stores/MapStorageIO.java" />
@@ -199,6 +134,9 @@
         <option value="$PROJECT_DIR$/OC1/src/ios/uiwidget/IosBorderContainer.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java" />
+        <option value="$PROJECT_DIR$/OC1/test/ios/uiwidget/IosBorderDemoController.java" />
+        <option value="$PROJECT_DIR$/OC1/test/org/robovm/apple/uikit/UIButton.java" />
+        <option value="$PROJECT_DIR$/OC1/test/ios/uiwidget/IosDemoApplication.java" />
       </list>
     </option>
   </component>
@@ -791,29 +729,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/uiwidget/AnBorderContainer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="840" max-vertical-offset="1455">
-          <caret line="66" column="25" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/va/app/VaRegistryLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/util/AnRunner.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/an/a22/uilist/AnFilterListModel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.030241935" vertical-offset="0" max-vertical-offset="0">
@@ -954,13 +869,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosRegistryLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -1028,13 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <caret line="32" column="0" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/org/robovm/apple/uikit/UIButton.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1142,9 +1043,30 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4743083" vertical-offset="0" max-vertical-offset="1395">
+          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6836461" vertical-offset="0" max-vertical-offset="765">
+          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+          <folding>
+            <element signature="e#1305#1306#0" expanded="true" />
+            <element signature="e#1374#1375#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/ios/uiwidget/IosBorderContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1111112" vertical-offset="240" max-vertical-offset="1515">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1515">
           <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -1170,23 +1092,47 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java">
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/robovm-cocoatouch-1.2.0.jar!/org/robovm/apple/foundation/NSAutoreleasePool.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1395">
-          <caret line="24" column="34" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+        <state vertical-scroll-proportion="-5.4" vertical-offset="0" max-vertical-offset="540">
+          <caret line="18" column="11" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/ios/uiwidget/IosBorderDemoController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="31" column="26" selection-start-line="31" selection-start-column="26" selection-end-line="31" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/org/robovm/apple/uikit/UIButton.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="480">
+          <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#462#463#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchableList.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6836461" vertical-offset="0" max-vertical-offset="765">
-          <caret line="41" column="61" selection-start-line="41" selection-start-column="61" selection-end-line="41" selection-end-column="61" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="645">
+          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="48" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/ios/uiwidget/IosDemoApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5533597" vertical-offset="0" max-vertical-offset="759">
+          <caret line="28" column="50" selection-start-line="28" selection-start-column="50" selection-end-line="28" selection-end-column="50" />
           <folding>
-            <element signature="e#1305#1306#0" expanded="true" />
-            <element signature="e#1374#1375#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
