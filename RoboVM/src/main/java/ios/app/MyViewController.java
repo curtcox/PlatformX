@@ -1,19 +1,11 @@
 package ios.app;
 
 import org.robovm.apple.coregraphics.CGRect;
-import org.robovm.apple.uikit.NSTextAlignment;
-import org.robovm.apple.uikit.UIButton;
-import org.robovm.apple.uikit.UIButtonType;
-import org.robovm.apple.uikit.UIColor;
-import org.robovm.apple.uikit.UIControl;
-import org.robovm.apple.uikit.UIControlState;
-import org.robovm.apple.uikit.UIEvent;
-import org.robovm.apple.uikit.UIFont;
-import org.robovm.apple.uikit.UILabel;
-import org.robovm.apple.uikit.UIView;
-import org.robovm.apple.uikit.UIViewController;
+import org.robovm.apple.uikit.*;
 
-public class MyViewController extends UIViewController {
+public class MyViewController
+        extends UIViewController
+{
     private final UIButton button;
     private final UILabel label;
     private int clickCount;
