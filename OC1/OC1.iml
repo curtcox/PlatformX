@@ -34,5 +34,8 @@
     <orderEntry type="library" name="vaadin-widgets-7.4.8" level="project" />
     <orderEntry type="library" name="vaadin-client-compiler-7.4.8" level="project" />
     <orderEntry type="library" name="jsoup-1.8.1" level="project" />
+    <orderEntry type="library" name="robovm-cocoatouch-1.6.0" level="project" />
+    <orderEntry type="library" name="robovm-objc-1.6.0" level="project" />
+    <orderEntry type="library" name="robovm-rt-1.6.0" level="project" />
   </component>
 </module>
