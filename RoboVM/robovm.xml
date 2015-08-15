@@ -1,6 +1,7 @@
 <config>
   <executableName>${app.executable}</executableName>
   <mainClass>${app.mainclass}</mainClass>
+  <forceLinkClasses><pattern>java.util.logging.*</pattern></forceLinkClasses>
   <os>ios</os>
   <arch>thumbv7</arch>
   <resources>
