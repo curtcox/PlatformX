@@ -1,7 +1,6 @@
 package ios.ui;
 
 import ios.uiwidget.IosBorderContainer;
-import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.*;
 import x.command.Command;
 import x.page.PageLink;
@@ -10,7 +9,7 @@ import x.uiwidget.XComponent;
 
 public final class IosForm
         extends UIViewController
-     implements IForm
+        implements IForm
 {
     private final PageLink link;
     private Command back;
@@ -23,15 +22,13 @@ public final class IosForm
 
     @Override
     public void layout(XComponent layout) {
-        removeAllViews();
-        addView(renderedForm(layout));
+        setView(renderedForm(layout));
         show();
     }
 
     private UIView renderedForm(XComponent layout) {
         return center(render(layout))
-                .north(navigationPanel())
-                .layout();
+                .north(navigationPanel());
     }
 
     private UIView render(XComponent layout) {
@@ -41,30 +38,21 @@ public final class IosForm
     private UIView navigationPanel() {
         backButton = backButton();
         return center(address())
-                .west(backButton)
-                .layout();
+                .west(backButton);
     }
 
     private IosBorderContainer center(UIView center) {
         return IosBorderContainer.of(center);
     }
 
-    private void removeAllViews() {
-    }
-
-    private void addView(UIView view) {
-        getView().addSubview(view);
-    }
-
     private UILabel address() {
-        UILabel label = new UILabel(new CGRect(20, 250, 280, 44));
+        UILabel label = new UILabel();
         label.setText(link.title());
         return label;
     }
 
     private UIButton backButton() {
         UIButton button = UIButton.create(UIButtonType.RoundedRect);
-        button.setFrame(new CGRect(110, 150, 100, 40));
         button.setTitle("<", UIControlState.Normal);
         button.getTitleLabel().setFont(UIFont.getBoldSystemFont(22));
 
@@ -79,6 +67,7 @@ public final class IosForm
 
     @Override
     public void show() {
+        getView().setNeedsDisplay();
         display().show(this);
     }
 

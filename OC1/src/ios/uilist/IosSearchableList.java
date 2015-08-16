@@ -1,7 +1,6 @@
 package ios.uilist;
 
 import ios.uiwidget.IosBorderContainer;
-import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.UILabel;
 import org.robovm.apple.uikit.UIView;
 import x.event.Action;
@@ -17,7 +16,7 @@ public final class IosSearchableList<T>
     implements XSearchableList
 {
 
-    final UILabel searchTerm = new UILabel(new CGRect(20, 250, 280, 44));
+    final UILabel searchTerm = new UILabel();
 
     final IosFilterListModel<T> filterListModel;
     private final IosUIList filteredList;

@@ -29,7 +29,7 @@ final class IosItemListPageFactory<T>
 
     private XSearchableList<T> newSearchableList() {
         IosSearchableList<T> list = IosSearchableList.of(new XLiveList(values),new UILabel(),new CellConfigurer());
-        IosSearchFilterInstaller.anSpecificInstall(list, StringToListFilter.DEFAULT);
+        IosSearchFilterInstaller.iosSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }
 

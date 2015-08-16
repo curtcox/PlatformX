@@ -8,7 +8,7 @@ public final class IosSearchFilterInstaller
     implements ISearchFilterInstaller
 {
     
-    public static void anSpecificInstall(final IosSearchableList list, final StringToListFilter stringToListFilter) {
+    public static void iosSpecificInstall(final IosSearchableList list, final StringToListFilter stringToListFilter) {
     }
 
     static void setFilterText(IosFilterListModel model, StringToListFilter stringToListFilter, String text) {
@@ -18,6 +18,6 @@ public final class IosSearchFilterInstaller
 
     @Override
     public void install(XSearchableList list, StringToListFilter stringToListFilter) {
-        anSpecificInstall((IosSearchableList) list, stringToListFilter);
+        iosSpecificInstall((IosSearchableList) list, stringToListFilter);
     }
 }
