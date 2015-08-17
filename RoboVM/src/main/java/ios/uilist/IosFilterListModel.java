@@ -9,22 +9,25 @@ import x.event.LiveList;
 import x.uilist.ListFilter;
 import x.uilist.XListOffsets;
 
+import java.util.Collections;
 import java.util.List;
 
 final class IosFilterListModel<T>
     implements UITableViewDataSource
 {
     private final LiveList filtered;
+    private IosBasicListCellRenderer renderer;
     private final XListOffsets<T> offsets;
     private ListFilter filter = ListFilter.ALLOW_ALL;
 
-    private IosFilterListModel(LiveList filtered) {
+    private IosFilterListModel(LiveList filtered, IosBasicListCellRenderer renderer) {
         this.filtered = filtered;
+        this.renderer = renderer;
         this.offsets = XListOffsets.of(filtered);
     }
 
-    public static IosFilterListModel of(LiveList filtered) {
-        IosFilterListModel model = new IosFilterListModel(filtered);
+    public static IosFilterListModel of(LiveList filtered,IosBasicListCellRenderer renderer) {
+        IosFilterListModel model = new IosFilterListModel(filtered,renderer);
         return model;
     }
 
@@ -33,15 +36,18 @@ final class IosFilterListModel<T>
         dataChanged();
     }
 
-
     @Override
     public long getNumberOfRowsInSection(UITableView tableView, long section) {
         return offsets.getSize();
     }
 
     @Override
-    public UITableViewCell getCellForRow(UITableView uiTableView, NSIndexPath nsIndexPath) {
-        return null;
+    public UITableViewCell getCellForRow(UITableView tableView, NSIndexPath indexPath) {
+        return renderer.getListCellView(tableView,offsets.getElementAt(index(indexPath)));
+    }
+
+    private int index(NSIndexPath indexPath) {
+        return indexPath.getItem();
     }
 
     @Override
@@ -50,13 +56,13 @@ final class IosFilterListModel<T>
     }
 
     @Override
-    public String getTitleForHeader(UITableView uiTableView, long l) {
-        return null;
+    public String getTitleForHeader(UITableView uiTableView, long section) {
+        return "";
     }
 
     @Override
-    public String getTitleForFooter(UITableView uiTableView, long l) {
-        return null;
+    public String getTitleForFooter(UITableView uiTableView, long section) {
+        return "";
     }
 
     @Override
@@ -71,7 +77,7 @@ final class IosFilterListModel<T>
 
     @Override
     public List<String> getSectionIndexTitles(UITableView uiTableView) {
-        return null;
+        return Collections.emptyList();
     }
 
     @Override

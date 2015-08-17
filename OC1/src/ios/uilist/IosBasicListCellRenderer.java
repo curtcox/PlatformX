@@ -11,10 +11,7 @@ final class IosBasicListCellRenderer<T>
         this.configurer = configurer;
     }
 
-    public IosListCell getListCellRendererComponent(UITableView list, T value, int index,
-             boolean isSelected,
-             boolean cellHasFocus)
-    {
+    public IosListCell getListCellView(UITableView tableView, T value) {
         IosListCell cell = new IosListCell();
         cell.apply(configurer.configFor(value));
         return cell;
