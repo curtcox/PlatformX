@@ -27,6 +27,7 @@ public final class IosSearchableList<T>
     public final UIView component;
 
     private IosSearchableList(LiveList<T> items, UIView action, IXListCell.ConfigProducer configurer) {
+        System.out.println("IosSearchableList items = " + items);
         filterListModel = IosFilterListModel.of(items,new IosBasicListCellRenderer(configurer));
         filteredList = IosUIList.of(filterListModel,configurer);
         component = IosBorderContainer.of(filteredList.getView())

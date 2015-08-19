@@ -13,6 +13,7 @@ final class IosUIList<T>
 
     private IosUIList(UITableViewDataSource model) {
         this.model = model;
+        getTableView().setDataSource(model);
     }
 
     public void addActionListener(Action.Listener listener) {
