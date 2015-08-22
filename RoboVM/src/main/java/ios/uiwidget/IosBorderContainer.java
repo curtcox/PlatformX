@@ -39,6 +39,7 @@ public final class IosBorderContainer
         return this;
     }
 
+    @Override
     public void layoutSubviews() {
         if (north!=null) {
             layoutTopRow();
@@ -57,6 +58,10 @@ public final class IosBorderContainer
         if (east!=null) {
             layoutEast();
         }
+        layoutCenter();
+    }
+
+    void layoutCenter() {
         center.setFrame(new CGRect(width(west), height(north), centerWidth(), bottomHeight()));
     }
 

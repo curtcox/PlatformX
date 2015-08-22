@@ -2,7 +2,10 @@ package ios.ui;
 
 import ios.uiwidget.IosBorderContainer;
 import org.robovm.apple.uikit.*;
+import x.Registry;
 import x.command.Command;
+import x.log.ILog;
+import x.log.ILogManager;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
@@ -52,7 +55,7 @@ public final class IosForm
     }
 
     private UIButton backButton() {
-        UIButton button = UIButton.create(UIButtonType.RoundedRect);
+        UIButton button = UIButton.create(UIButtonType.System);
         button.setTitle("<", UIControlState.Normal);
         button.getTitleLabel().setFont(UIFont.getBoldSystemFont(22));
 
@@ -67,6 +70,8 @@ public final class IosForm
 
     @Override
     public void show() {
+        log("show" + this);
+        getView().setNeedsLayout();
         getView().setNeedsDisplay();
         display().show(this);
     }
@@ -92,8 +97,20 @@ public final class IosForm
         return link;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + " link = " + link.toString();
+    }
+
     private IosDisplay display() {
         return IosDisplay.of();
     }
 
+    private void log(String message) {
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(IosForm.class);
+    }
 }

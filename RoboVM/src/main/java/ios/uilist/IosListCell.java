@@ -16,7 +16,6 @@ final class IosListCell
     @Override
     public void apply(Config config) {
         getTextLabel().setText(config.first);
-        System.out.println(config);
     }
 
 

@@ -6,7 +6,10 @@ import org.robovm.apple.uikit.UITableView;
 import org.robovm.apple.uikit.UITableViewCell;
 import org.robovm.apple.uikit.UITableViewCellEditingStyle;
 import org.robovm.apple.uikit.UITableViewDataSource;
+import x.Registry;
 import x.event.LiveList;
+import x.log.ILog;
+import x.log.ILogManager;
 import x.uilist.ListFilter;
 import x.uilist.XListOffsets;
 
@@ -23,7 +26,7 @@ final class IosFilterListModel<T>
     private ListFilter filter = ListFilter.ALLOW_ALL;
 
     private IosFilterListModel(LiveList filtered, IosBasicListCellRenderer renderer) {
-        System.out.println("filtered = " + filtered + " renderer = " + renderer);
+        log("filtered = " + filtered + " renderer = " + renderer);
         this.filtered = filtered;
         this.renderer = renderer;
         this.offsets = XListOffsets.of(filtered);
@@ -41,7 +44,7 @@ final class IosFilterListModel<T>
 
     @Override
     public long getNumberOfRowsInSection(UITableView tableView, long section) {
-        System.out.println("offsets = " + offsets.getSize());
+        log("offsets = " + offsets.getSize());
         return offsets.getSize();
     }
 
@@ -56,7 +59,7 @@ final class IosFilterListModel<T>
 
     @Override
     public long getNumberOfSections(UITableView tableView) {
-        System.out.println("getNumberOfSections = " + tableView);
+        log("getNumberOfSections = " + tableView);
         return 1;
     }
 
@@ -82,13 +85,13 @@ final class IosFilterListModel<T>
 
     @Override
     public List<String> getSectionIndexTitles(UITableView tableView) {
-        System.out.println("getSectionIndexTitles = " + tableView);
+        log("getSectionIndexTitles = " + tableView);
         return Collections.emptyList();
     }
 
     @Override
     public long getSectionForSectionIndexTitle(UITableView tableView, String title, long index) {
-        System.out.println("getSectionForSectionIndexTitle = " + tableView);
+        log("getSectionForSectionIndexTitle = " + tableView);
         return 0;
     }
 
@@ -109,4 +112,13 @@ final class IosFilterListModel<T>
     public void dataChanged() {
 
     }
+
+    private void log(String message) {
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(IosFilterListModel.class);
+    }
+
 }
