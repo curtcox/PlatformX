@@ -1,8 +1,9 @@
 package ios.uilist;
 
-import ios.uiwidget.IosBorderContainer;
+import ios.uiwidget.IosBorderViewController;
 import org.robovm.apple.uikit.UILabel;
 import org.robovm.apple.uikit.UIView;
+import org.robovm.apple.uikit.UIViewController;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.IXListCell;
@@ -24,12 +25,12 @@ public final class IosSearchableList<T>
     /**
      * The component itself, for embedding in a Screen.
      */
-    public final UIView component;
+    public final UIViewController component;
 
     private IosSearchableList(LiveList<T> items, UIView action, IXListCell.ConfigProducer configurer) {
         filterListModel = IosFilterListModel.of(items,new IosBasicListCellRenderer(configurer));
         filteredList = IosUIList.of(filterListModel,configurer);
-        component = IosBorderContainer.of(filteredList.getView())
+        component = IosBorderViewController.of(filteredList.getView())
              .north(newNorthContainer(action));
     }
 
@@ -37,8 +38,8 @@ public final class IosSearchableList<T>
         return new IosSearchableList(items,action,configurer);
     }
 
-    private UIView newNorthContainer(UIView action) {
-        return IosBorderContainer.of(searchTerm).east(action);
+    private UIViewController newNorthContainer(UIView action) {
+        return IosBorderViewController.of(searchTerm).east(action);
     }
     
     public void onSelected(final Action.Listener listener) {
@@ -46,7 +47,7 @@ public final class IosSearchableList<T>
     }
 
     @Override
-    public UIView getComponent() {
+    public UIViewController getComponent() {
         return component;
     }
 

@@ -1,6 +1,6 @@
 package ios.ui;
 
-import ios.uiwidget.IosBorderContainer;
+import ios.uiwidget.IosBorderViewController;
 import org.robovm.apple.uikit.*;
 import x.Registry;
 import x.command.Command;
@@ -25,11 +25,11 @@ public final class IosForm
 
     @Override
     public void layout(XComponent layout) {
-        setView(renderedForm(layout));
+        addChildViewController(renderedForm(layout));
         show();
     }
 
-    private UIView renderedForm(XComponent layout) {
+    private UIViewController renderedForm(XComponent layout) {
         return center(render(layout))
                 .north(navigationPanel());
     }
@@ -38,14 +38,14 @@ public final class IosForm
         return IosUIRenderer.render(layout);
     }
 
-    private UIView navigationPanel() {
+    private UIViewController navigationPanel() {
         backButton = backButton();
         return center(address())
                 .west(backButton);
     }
 
-    private IosBorderContainer center(UIView center) {
-        return IosBorderContainer.of(center);
+    private IosBorderViewController center(UIView center) {
+        return IosBorderViewController.of(center);
     }
 
     private UILabel address() {

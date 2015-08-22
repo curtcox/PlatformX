@@ -4,7 +4,7 @@ import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.coregraphics.CGSize;
 import org.robovm.apple.uikit.UIView;
 
-public final class IosBorderContainer
+final class IosBorderContainer
         extends UIView
 {
     private UIView center;
@@ -14,7 +14,7 @@ public final class IosBorderContainer
 
     private IosBorderContainer() {}
 
-    public static IosBorderContainer of(UIView center) {
+    static IosBorderContainer of(UIView center) {
         IosBorderContainer borderView = new IosBorderContainer();
         borderView.center = center;
         borderView.addSubview(center);
