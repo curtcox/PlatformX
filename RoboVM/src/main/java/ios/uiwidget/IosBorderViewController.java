@@ -1,12 +1,11 @@
 package ios.uiwidget;
 
-import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
 
 public final class IosBorderViewController
     extends UIViewController
 {
-    public static IosBorderViewController of(UIView center) {
+    public static IosBorderViewController of(UIViewController center) {
         IosBorderViewController controller = new IosBorderViewController();
         return controller;
     }
@@ -15,11 +14,11 @@ public final class IosBorderViewController
         return this;
     }
 
-    public IosBorderViewController west(UIView west) {
+    public IosBorderViewController west(UIViewController west) {
         return this;
     }
 
-    public IosBorderViewController east(UIView east) {
+    public IosBorderViewController east(UIViewController east) {
         return this;
     }
 }

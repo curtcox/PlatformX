@@ -1,6 +1,8 @@
 package ios.ui;
 
 import ios.uiwidget.IosBorderViewController;
+import ios.uiwidget.IosButtonViewController;
+import ios.uiwidget.IosLabelViewController;
 import org.robovm.apple.uikit.*;
 import x.Registry;
 import x.command.Command;
@@ -8,7 +10,9 @@ import x.log.ILog;
 import x.log.ILogManager;
 import x.page.PageLink;
 import x.ui.IForm;
+import x.uiwidget.XButton;
 import x.uiwidget.XComponent;
+import x.uiwidget.XLabel;
 
 public final class IosForm
         extends UIViewController
@@ -16,7 +20,7 @@ public final class IosForm
 {
     private final PageLink link;
     private Command back;
-    private UIButton backButton;
+    private IosButtonViewController backButton;
 
     IosForm(PageLink link) {
         this.link = link;
@@ -34,7 +38,7 @@ public final class IosForm
                 .north(navigationPanel());
     }
 
-    private UIView render(XComponent layout) {
+    private UIViewController render(XComponent layout) {
         return IosUIRenderer.render(layout);
     }
 
@@ -44,28 +48,21 @@ public final class IosForm
                 .west(backButton);
     }
 
-    private IosBorderViewController center(UIView center) {
+    private IosBorderViewController center(UIViewController center) {
         return IosBorderViewController.of(center);
     }
 
-    private UILabel address() {
-        UILabel label = new UILabel();
-        label.setText(link.title());
-        return label;
+    private IosLabelViewController address() {
+        return IosLabelViewController.of(new XLabel(link.title()));
     }
 
-    private UIButton backButton() {
-        UIButton button = UIButton.create(UIButtonType.System);
-        button.setTitle("<", UIControlState.Normal);
-        button.getTitleLabel().setFont(UIFont.getBoldSystemFont(22));
-
-        button.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
+    private IosButtonViewController backButton() {
+        return IosButtonViewController.of(new XButton("<") {
             @Override
-            public void onTouchUpInside (UIControl control, UIEvent event) {
+            public void onTap() {
                 back.go();
             }
         });
-        return button;
     }
 
     @Override

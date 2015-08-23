@@ -1,12 +1,12 @@
 package ios.uilist;
 
 import ios.uiwidget.IosBorderViewController;
-import org.robovm.apple.uikit.UILabel;
-import org.robovm.apple.uikit.UIView;
+import ios.uiwidget.IosLabelViewController;
 import org.robovm.apple.uikit.UIViewController;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.IXListCell;
+import x.uiwidget.XLabel;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -16,8 +16,7 @@ import x.uiwidget.XSearchableList;
 public final class IosSearchableList<T>
     implements XSearchableList
 {
-
-    final UILabel searchTerm = new UILabel();
+    final IosLabelViewController searchTerm = IosLabelViewController.of(new XLabel());
 
     final IosFilterListModel<T> filterListModel;
     private final IosUIList filteredList;
@@ -27,18 +26,18 @@ public final class IosSearchableList<T>
      */
     public final UIViewController component;
 
-    private IosSearchableList(LiveList<T> items, UIView action, IXListCell.ConfigProducer configurer) {
+    private IosSearchableList(LiveList<T> items, UIViewController action, IXListCell.ConfigProducer configurer) {
         filterListModel = IosFilterListModel.of(items,new IosBasicListCellRenderer(configurer));
         filteredList = IosUIList.of(filterListModel,configurer);
-        component = IosBorderViewController.of(filteredList.getView())
+        component = IosBorderViewController.of(filteredList)
              .north(newNorthContainer(action));
     }
 
-    public static IosSearchableList of(LiveList items, UIView action, IXListCell.ConfigProducer configurer) {
+    public static IosSearchableList of(LiveList items, UIViewController action, IXListCell.ConfigProducer configurer) {
         return new IosSearchableList(items,action,configurer);
     }
 
-    private UIViewController newNorthContainer(UIView action) {
+    private UIViewController newNorthContainer(UIViewController action) {
         return IosBorderViewController.of(searchTerm).east(action);
     }
     
