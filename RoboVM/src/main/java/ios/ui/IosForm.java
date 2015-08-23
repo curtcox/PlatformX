@@ -21,6 +21,7 @@ public final class IosForm
     private final PageLink link;
     private Command back;
     private IosButtonViewController backButton;
+    private UIViewController rendered;
 
     IosForm(PageLink link) {
         this.link = link;
@@ -29,7 +30,9 @@ public final class IosForm
 
     @Override
     public void layout(XComponent layout) {
-        addChildViewController(renderedForm(layout));
+        rendered = renderedForm(layout);
+        addChildViewController(rendered);
+        getView().addSubview(rendered.getView());
         show();
     }
 
@@ -68,6 +71,7 @@ public final class IosForm
     @Override
     public void show() {
         log("show" + this);
+        rendered.getView().setFrame(getView().getFrame());
         getView().setNeedsLayout();
         getView().setNeedsDisplay();
         display().show(this);
