@@ -1,5 +1,6 @@
 package ios.ui;
 
+import ios.IosUtil;
 import ios.uiwidget.IosBorderViewController;
 import ios.uiwidget.IosButtonViewController;
 import ios.uiwidget.IosLabelViewController;
@@ -71,10 +72,26 @@ public final class IosForm
     @Override
     public void show() {
         log("show" + this);
-        rendered.getView().setFrame(getView().getFrame());
         getView().setNeedsLayout();
         getView().setNeedsDisplay();
         display().show(this);
+    }
+
+    @Override
+    public void viewWillLayoutSubviews() {
+        rendered.getView().setFrame(getView().getFrame());
+        log("viewWillLayoutSubviews" + this + getView());
+    }
+
+    @Override
+    public void viewDidLayoutSubviews() {
+        log("viewDidLayoutSubviews" + this + getView());
+        dump();
+    }
+
+    void dump() {
+        IosUtil.dumpController(this);
+        IosUtil.dumpView(getView());
     }
 
     @Override

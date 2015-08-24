@@ -1,6 +1,5 @@
 package ios.ui;
 
-import ios.IosUtil;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.UIScreen;
 import org.robovm.apple.uikit.UIWindow;
@@ -42,12 +41,7 @@ public final class IosDisplay
     void show(IosForm form) {
         this.form = form;
         showFormInWindow(form, newWindow());
-        dumpForm();
-    }
-
-    private void dumpForm() {
-        IosUtil.dumpController(form);
-        IosUtil.dumpView(form.getView());
+        //form.dump();
     }
 
     private void showFormInWindow(IosForm form, UIWindow window) {

@@ -1,6 +1,9 @@
 package ios.uiwidget;
 
 import org.robovm.apple.uikit.UIViewController;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
 
 public final class IosBorderViewController
     extends UIViewController
@@ -44,5 +47,18 @@ public final class IosBorderViewController
         addChildViewController(east);
         borderView.east(east.getView());
         return this;
+    }
+
+    @Override
+    public void viewWillLayoutSubviews() {
+        log("viewWillLayoutSubviews" + this + getView());
+    }
+
+    private void log(String message) {
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(IosBorderViewController.class);
     }
 }

@@ -78,11 +78,15 @@ final class IosBorderContainer
     }
 
     double bottomHeight() {
-        return getBounds().getHeight() - height(north);
+        return height() - height(north);
     }
 
     double width() {
-        return getBounds().getWidth();
+        return getFrame().getWidth();
+    }
+
+    double height() {
+        return getFrame().getHeight();
     }
 
     double width(UIView view) {
