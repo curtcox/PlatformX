@@ -10,7 +10,7 @@ public final class IosUtil {
 
     private IosUtil() {}
 
-    public static void dumpView(UIView view) {
+    public static void dumpViewHierarchy(UIView view) {
         log("Starting dump of " + view);
         printView(view, "");
         log("Finished dump of " + view);
@@ -27,7 +27,7 @@ public final class IosUtil {
         log(prefix + view);
     }
 
-    public static void dumpController(UIViewController controller) {
+    public static void dumpControllerHierarchy(UIViewController controller) {
         log("Starting dump of " + controller);
         printView(controller, "");
         log("Finished dump of " + controller);
@@ -42,6 +42,40 @@ public final class IosUtil {
 
     private static void print(UIViewController view, String prefix) {
         log(prefix + view);
+    }
+
+    public static void viewInfo(UIView view) {
+        log("description=" + view.description());
+        log("isUserInteractionEnabled=" + view.isUserInteractionEnabled());
+        log("frame=" + view.getFrame());
+        log("bounds=" + view.getBounds());
+        log("center=" + view.getCenter());
+        log("transform=" + view.getTransform());
+        log("contentScaleFactor=" + view.getContentScaleFactor());
+        log("isMultipleTouchEnabled=" + view.isMultipleTouchEnabled());
+        log("isExclusiveTouch=" + view.isExclusiveTouch());
+        log("autoresizes Subviews=" + view.autoresizesSubviews());
+        log("superview=" + view.getSuperview());
+        log("subviews=" + view.getSubviews());
+        log("window=" + view.getWindow());
+        log("layoutMargins=" + view.getLayoutMargins());
+        log("preservesSuperviewLayoutMargins=" + view.preservesSuperviewLayoutMargins());
+        log("clipsToBounds=" + view.clipsToBounds());
+        log("backgroundColor=" + view.getBackgroundColor());
+        log("alpha=" + view.getAlpha());
+        log("opaque=" + view.isOpaque());
+        log("clearsContextBeforeDrawing=" + view.clearsContextBeforeDrawing());
+        log("Hidden=" + view.isHidden());
+        log("contentMode=" + view.getContentMode());
+        log("contentStretch=" + view.getContentStretch());
+        log("maskView=" + view.getMaskView());
+        log("tintColor=" + view.getTintColor());
+        log("tintAdjustmentMode=" + view.getTintAdjustmentMode());
+        log("gestureRecognizers=" + view.getGestureRecognizers());
+        log("restorationIdentifier=" + view.getRestorationIdentifier());
+        log("traitCollection=" + view.getTraitCollection());
+        log("accessibilityIdentifier=" + view.getAccessibilityIdentifier());
+        log("description=" + view.description());
     }
 
     public static void viewControllerInfo(UIViewController controller) {

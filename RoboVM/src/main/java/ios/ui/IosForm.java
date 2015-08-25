@@ -4,6 +4,8 @@ import ios.IosUtil;
 import ios.uiwidget.IosBorderViewController;
 import ios.uiwidget.IosButtonViewController;
 import ios.uiwidget.IosLabelViewController;
+import ios.uiwidget.IosPassthruView;
+import org.robovm.apple.foundation.NSSet;
 import org.robovm.apple.uikit.*;
 import x.Registry;
 import x.command.Command;
@@ -33,13 +35,15 @@ public final class IosForm
     public void layout(XComponent layout) {
         rendered = renderedForm(layout);
         addChildViewController(rendered);
-        getView().addSubview(rendered.getView());
+        IosPassthruView passthru = new IosPassthruView();
+        passthru.addSubview(rendered.getView());
+        setView(passthru);
         show();
     }
 
     private UIViewController renderedForm(XComponent layout) {
-        return center(render(layout))
-                .north(navigationPanel());
+        return center(render(layout));
+                //.north(navigationPanel());
     }
 
     private UIViewController render(XComponent layout) {
@@ -75,6 +79,7 @@ public final class IosForm
         getView().setNeedsLayout();
         getView().setNeedsDisplay();
         display().show(this);
+        this.becomeFirstResponder();
     }
 
     @Override
@@ -90,8 +95,16 @@ public final class IosForm
     }
 
     void dump() {
-        IosUtil.dumpController(this);
-        IosUtil.dumpView(getView());
+        IosUtil.dumpControllerHierarchy(this);
+        IosUtil.dumpViewHierarchy(getView());
+        IosUtil.viewControllerInfo(this);
+        IosUtil.viewInfo(getView());
+    }
+
+    @Override
+    public void touchesBegan(NSSet<UITouch> touches, UIEvent event) {
+        super.touchesBegan(touches,event);
+        log("touchesBegan touches=" + touches + " event = " + event);
     }
 
     @Override

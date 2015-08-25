@@ -1,5 +1,6 @@
 package ios.ui;
 
+import ios.IosUtil;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.UIScreen;
 import org.robovm.apple.uikit.UIWindow;
@@ -13,6 +14,7 @@ public final class IosDisplay
     implements IDisplay
 {
     private IosForm form;
+    private UIWindow window;
     private static IosDisplay singleton;
 
     private IosDisplay() {}
@@ -40,8 +42,10 @@ public final class IosDisplay
 
     void show(IosForm form) {
         this.form = form;
-        showFormInWindow(form, newWindow());
+        showFormInWindow(form, window());
         //form.dump();
+        IosUtil.viewInfo(window);
+        IosUtil.dumpViewHierarchy(window);
     }
 
     private void showFormInWindow(IosForm form, UIWindow window) {
@@ -50,8 +54,12 @@ public final class IosDisplay
         window.makeKeyAndVisible();
     }
 
-    private UIWindow newWindow() {
-        return new UIWindow(frame());
+    private UIWindow window() {
+        if (window!=null) {
+            return window;
+        }
+        window = new UIWindow(frame());
+        return window;
     }
 
     private CGRect frame() {

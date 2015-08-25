@@ -29,8 +29,8 @@ public final class IosSearchableList<T>
     private IosSearchableList(LiveList<T> items, UIViewController action, IXListCell.ConfigProducer configurer) {
         filterListModel = IosFilterListModel.of(items,new IosBasicListCellRenderer(configurer));
         filteredList = IosUIList.of(filterListModel,configurer);
-        component = IosBorderViewController.of(filteredList)
-             .north(newNorthContainer(action));
+        component = IosBorderViewController.of(filteredList);
+             //.north(newNorthContainer(action));
     }
 
     public static IosSearchableList of(LiveList items, UIViewController action, IXListCell.ConfigProducer configurer) {

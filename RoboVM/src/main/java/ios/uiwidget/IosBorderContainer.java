@@ -1,8 +1,13 @@
 package ios.uiwidget;
 
+import org.robovm.apple.coregraphics.CGPoint;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.coregraphics.CGSize;
+import org.robovm.apple.uikit.UIEvent;
 import org.robovm.apple.uikit.UIView;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
 
 final class IosBorderContainer
         extends UIView
@@ -99,6 +104,25 @@ final class IosBorderContainer
 
     CGSize size(UIView view) {
         return view.getSizeThatFits(getFrame().getSize());
+    }
+
+    @Override
+    public boolean isPointInside(CGPoint point, UIEvent event) {
+        log("is point inside ? " + point + " event = " + event);
+        return super.isPointInside(point,event);
+    }
+
+    public UIView hitTest(CGPoint point, UIEvent event) {
+        log("hit test ? " + point + " event = " + event);
+        return super.hitTest(point,event);
+    }
+
+    private void log(String message) {
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(IosBorderContainer.class);
     }
 
 }
