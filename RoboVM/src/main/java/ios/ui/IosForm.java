@@ -79,7 +79,6 @@ public final class IosForm
         getView().setNeedsLayout();
         getView().setNeedsDisplay();
         display().show(this);
-        this.becomeFirstResponder();
     }
 
     @Override
@@ -91,7 +90,7 @@ public final class IosForm
     @Override
     public void viewDidLayoutSubviews() {
         log("viewDidLayoutSubviews" + this + getView());
-        dump();
+        //dump();
     }
 
     void dump() {
