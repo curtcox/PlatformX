@@ -5,8 +5,7 @@ import ios.uiwidget.IosBorderViewController;
 import ios.uiwidget.IosButtonViewController;
 import ios.uiwidget.IosLabelViewController;
 import ios.uiwidget.IosPassthruView;
-import org.robovm.apple.foundation.NSSet;
-import org.robovm.apple.uikit.*;
+import org.robovm.apple.uikit.UIViewController;
 import x.Registry;
 import x.command.Command;
 import x.log.ILog;
@@ -42,8 +41,8 @@ public final class IosForm
     }
 
     private UIViewController renderedForm(XComponent layout) {
-        return center(render(layout));
-                //.north(navigationPanel());
+        return center(render(layout))
+                .north(navigationPanel());
     }
 
     private UIViewController render(XComponent layout) {
@@ -98,12 +97,6 @@ public final class IosForm
         IosUtil.dumpViewHierarchy(getView());
         IosUtil.viewControllerInfo(this);
         IosUtil.viewInfo(getView());
-    }
-
-    @Override
-    public void touchesBegan(NSSet<UITouch> touches, UIEvent event) {
-        super.touchesBegan(touches,event);
-        log("touchesBegan touches=" + touches + " event = " + event);
     }
 
     @Override

@@ -114,7 +114,7 @@ final class IosFilterListModel<T>
     }
 
     private void log(String message) {
-        getLog().log(message);
+        //getLog().log(message);
     }
 
     private ILog getLog() {
