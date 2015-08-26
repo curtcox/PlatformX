@@ -2,10 +2,7 @@ package ios.uilist;
 
 import org.robovm.apple.uikit.UITableViewController;
 import org.robovm.apple.uikit.UITableViewDataSource;
-import x.Registry;
 import x.event.Action;
-import x.log.ILog;
-import x.log.ILogManager;
 import x.uilist.IXListCell;
 
 final class IosUIList<T>
@@ -17,7 +14,7 @@ final class IosUIList<T>
     private IosUIList(UITableViewDataSource model) {
         this.model = model;
         getTableView().setDataSource(model);
-        getTableView().setScrollEnabled(true);
+//        getTableView().setScrollEnabled(true);
     }
 
     public void addActionListener(Action.Listener listener) {
@@ -42,17 +39,4 @@ final class IosUIList<T>
         return list;
     }
 
-    @Override
-    public void viewDidLoad() {
-        super.viewDidLoad();
-        log("viewDidLoad " + this);
-    }
-
-    private void log(String message) {
-        getLog().log(message);
-    }
-
-    private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(IosUIList.class);
-    }
 }

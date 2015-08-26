@@ -1,12 +1,11 @@
 package ios.uilist;
 
 import ios.uiwidget.IosBorderViewController;
-import ios.uiwidget.IosLabelViewController;
+import ios.uiwidget.IosTextController;
 import org.robovm.apple.uikit.UIViewController;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.IXListCell;
-import x.uiwidget.XLabel;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -16,7 +15,7 @@ import x.uiwidget.XSearchableList;
 public final class IosSearchableList<T>
     implements XSearchableList
 {
-    final IosLabelViewController searchTerm = IosLabelViewController.of(new XLabel());
+    final IosTextController searchTerm = IosTextController.of();
 
     final IosFilterListModel<T> filterListModel;
     private final IosUIList filteredList;
@@ -31,6 +30,7 @@ public final class IosSearchableList<T>
         filteredList = IosUIList.of(filterListModel,configurer);
         component = IosBorderViewController.of(filteredList)
              .north(newNorthContainer(action));
+        searchTerm.setPlaceholder("Search for ...");
     }
 
     public static IosSearchableList of(LiveList items, UIViewController action, IXListCell.ConfigProducer configurer) {

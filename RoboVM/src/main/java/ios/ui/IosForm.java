@@ -89,7 +89,7 @@ public final class IosForm
     @Override
     public void viewDidLayoutSubviews() {
         log("viewDidLayoutSubviews" + this + getView());
-        //dump();
+        dump();
     }
 
     void dump() {
