@@ -101,4 +101,25 @@ final class IosBorderContainer
         return view.getSizeThatFits(getFrame().getSize());
     }
 
+    @Override
+    public CGSize getSizeThatFits(CGSize size) {
+        return new CGSize(widthThatFits(),heightThatFits());
+    }
+
+    private double widthThatFits() {
+        return max(width(north), width(east) + width(west) + width(center));
+    }
+
+    private double heightThatFits() {
+        return height(north) + max(height(east),height(west),height(center));
+    }
+
+    private static double max(double a, double b, double c) {
+        return max(max(a, b), c);
+    }
+
+    private static double max(double a, double b) {
+        return Math.max(a,b);
+    }
+
 }
