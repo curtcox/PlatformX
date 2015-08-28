@@ -13,6 +13,7 @@ final class IosUIList<T>
 
     private IosUIList(UITableViewDataSource model) {
         this.model = model;
+        getTableView().setDataSource(model);
     }
 
     public void addActionListener(Action.Listener listener) {
@@ -35,5 +36,9 @@ final class IosUIList<T>
         IosUIList list = IosUIList.of(model);
         list.setRenderer(new IosBasicListCellRenderer(configurer));
         return list;
+    }
+
+    public void reloadData() {
+        getTableView().reloadData();
     }
 }

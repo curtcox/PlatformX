@@ -1,9 +1,10 @@
 package x.log;
 
-import java.util.logging.*;
 import x.Registry;
 import x.ui.IDisplay;
 import x.ui.IForm;
+
+import java.util.logging.Logger;
 
 public final class XLog
     implements ILog
@@ -30,7 +31,7 @@ public final class XLog
     }
 
     public void log(String message) {
-        log.info(message);
+        //log.info(message);
         getLogWriter().log(now() + ":" + thread() + ":" + screen() + prefix + message);
     }
     

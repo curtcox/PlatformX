@@ -1,5 +1,7 @@
 package ios.ui;
 
+import ios.uiwidget.IosButtonViewController;
+import ios.uiwidget.IosLabelViewController;
 import org.robovm.apple.uikit.*;
 import x.Registry;
 import x.log.ILog;
@@ -8,7 +10,7 @@ import x.uiwidget.*;
 
 final class IosUIRenderer {
 
-    static UIView render(XComponent layout) {
+    static UIViewController render(XComponent layout) {
         if (layout instanceof XPeeredComponent)  { return peer(layout);   }
         if (layout instanceof XButton)           { return button(layout); }
         if (layout instanceof XLabel)            { return label(layout);  }
@@ -21,51 +23,41 @@ final class IosUIRenderer {
         throw e;
     }
 
-    private static UIView peer(XComponent layout) {
+    private static UIViewController peer(XComponent layout) {
         XPeeredComponent peered = (XPeeredComponent) layout;
-        return (UIView) peered.peer;
+        return (UIViewController) peered.peer;
     }
 
-    static UICollectionView column(XComponent layout) {
+    static UICollectionViewController column(XComponent layout) {
         return box(layout);
     }
 
-    static UICollectionView row(XComponent layout) {
+    static UICollectionViewController row(XComponent layout) {
         return box(layout);
     }
 
-    static UICollectionView box(XComponent layout) {
-        UICollectionView box = new UICollectionView();
+    static UICollectionViewController box(XComponent layout) {
+        UICollectionViewController box = new UICollectionViewController();
         for (XComponent component : ((XContainer) layout).components) {
         }
         return box;
     }
 
-    static UICollectionView flow(XComponent layout) {
-        UICollectionView box = new UICollectionView();
+    static UICollectionViewController flow(XComponent layout) {
+        UICollectionViewController box = new UICollectionViewController();
         for (XComponent component : ((XContainer) layout).components) {
         }
         return box;
     }
 
-    static UIButton button(XComponent layout) {
+    static IosButtonViewController button(XComponent layout) {
         final XButton button = (XButton) layout;
-        UIButton uiButton = new UIButton();
-        uiButton.setTitle(button.text, null);
-        uiButton.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
-            @Override
-            public void onTouchUpInside (UIControl control, UIEvent event) {
-                button.onTap();
-            }
-        });
-        return uiButton;
+        return IosButtonViewController.of(button);
     }
 
-    static UILabel label(XComponent layout) {
+    static IosLabelViewController label(XComponent layout) {
         XLabel label = (XLabel) layout;
-        UILabel aLabel = new UILabel();
-        aLabel.setText(label.text);
-        return aLabel;
+        return IosLabelViewController.of(label);
     }
 
     private static void log(Throwable t) {

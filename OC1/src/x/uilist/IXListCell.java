@@ -22,6 +22,10 @@ public interface IXListCell {
         public Config(String first) {
             this(first,"",null);
         }
+        @Override
+        public String toString() {
+            return "first=" + first + " second = " + second;
+        }
     }
 
     /**

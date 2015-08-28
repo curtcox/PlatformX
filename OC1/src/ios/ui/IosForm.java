@@ -1,11 +1,20 @@
 package ios.ui;
 
-import ios.uiwidget.IosBorderContainer;
-import org.robovm.apple.uikit.*;
+import ios.IosUtil;
+import ios.uiwidget.IosBorderViewController;
+import ios.uiwidget.IosButtonViewController;
+import ios.uiwidget.IosLabelViewController;
+import ios.uiwidget.IosPassthruView;
+import org.robovm.apple.uikit.UIViewController;
+import x.Registry;
 import x.command.Command;
+import x.log.ILog;
+import x.log.ILogManager;
 import x.page.PageLink;
 import x.ui.IForm;
+import x.uiwidget.XButton;
 import x.uiwidget.XComponent;
+import x.uiwidget.XLabel;
 
 public final class IosForm
         extends UIViewController
@@ -13,7 +22,8 @@ public final class IosForm
 {
     private final PageLink link;
     private Command back;
-    private UIButton backButton;
+    private IosButtonViewController backButton;
+    private UIViewController rendered;
 
     IosForm(PageLink link) {
         this.link = link;
@@ -22,53 +32,71 @@ public final class IosForm
 
     @Override
     public void layout(XComponent layout) {
-        setView(renderedForm(layout));
+        rendered = renderedForm(layout);
+        addChildViewController(rendered);
+        IosPassthruView passthru = new IosPassthruView();
+        passthru.addSubview(rendered.getView());
+        setView(passthru);
         show();
     }
 
-    private UIView renderedForm(XComponent layout) {
+    private UIViewController renderedForm(XComponent layout) {
         return center(render(layout))
                 .north(navigationPanel());
     }
 
-    private UIView render(XComponent layout) {
+    private UIViewController render(XComponent layout) {
         return IosUIRenderer.render(layout);
     }
 
-    private UIView navigationPanel() {
+    private UIViewController navigationPanel() {
         backButton = backButton();
         return center(address())
                 .west(backButton);
     }
 
-    private IosBorderContainer center(UIView center) {
-        return IosBorderContainer.of(center);
+    private IosBorderViewController center(UIViewController center) {
+        return IosBorderViewController.of(center);
     }
 
-    private UILabel address() {
-        UILabel label = new UILabel();
-        label.setText(link.title());
-        return label;
+    private IosLabelViewController address() {
+        return IosLabelViewController.of(new XLabel(link.title()));
     }
 
-    private UIButton backButton() {
-        UIButton button = UIButton.create(UIButtonType.RoundedRect);
-        button.setTitle("<", UIControlState.Normal);
-        button.getTitleLabel().setFont(UIFont.getBoldSystemFont(22));
-
-        button.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
+    private IosButtonViewController backButton() {
+        return IosButtonViewController.of(new XButton("<") {
             @Override
-            public void onTouchUpInside (UIControl control, UIEvent event) {
+            public void onTap() {
                 back.go();
             }
         });
-        return button;
     }
 
     @Override
     public void show() {
+        log("show" + this);
+        getView().setNeedsLayout();
         getView().setNeedsDisplay();
         display().show(this);
+    }
+
+    @Override
+    public void viewWillLayoutSubviews() {
+        rendered.getView().setFrame(getView().getFrame());
+        log("viewWillLayoutSubviews" + this + getView());
+    }
+
+    @Override
+    public void viewDidLayoutSubviews() {
+        log("viewDidLayoutSubviews" + this + getView());
+        dump();
+    }
+
+    void dump() {
+        IosUtil.dumpControllerHierarchy(this);
+        IosUtil.dumpViewHierarchy(getView());
+        IosUtil.viewControllerInfo(this);
+        IosUtil.viewInfo(getView());
     }
 
     @Override
@@ -92,8 +120,20 @@ public final class IosForm
         return link;
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + " link = " + link.toString();
+    }
+
     private IosDisplay display() {
         return IosDisplay.of();
     }
 
+    private void log(String message) {
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(IosForm.class);
+    }
 }
