@@ -20,6 +20,7 @@ public final class IosLabelViewController
     private static UILabel newLabel(XLabel xLabel) {
         UILabel uiLabel = new UILabel();
         uiLabel.setText(xLabel.text);
+        uiLabel.setBackgroundColor(UIColor.brown());
         return uiLabel;
     }
 

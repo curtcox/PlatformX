@@ -23,6 +23,7 @@ public final class IosButtonViewController
         UIButton uiButton = UIButton.create(UIButtonType.System);
         uiButton.setTitle(xButton.getText(), UIControlState.Normal);
         uiButton.getTitleLabel().setFont(UIFont.getBoldSystemFont(22));
+        uiButton.setBackgroundColor(UIColor.white());
         uiButton.addOnTouchUpInsideListener(new UIControl.OnTouchUpInsideListener() {
             @Override
             public void onTouchUpInside(UIControl control, UIEvent event) {

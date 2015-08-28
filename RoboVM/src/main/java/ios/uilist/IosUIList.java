@@ -38,4 +38,7 @@ final class IosUIList<T>
         return list;
     }
 
+    public void reloadData() {
+        getTableView().reloadData();
+    }
 }

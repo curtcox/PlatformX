@@ -39,7 +39,6 @@ final class IosFilterListModel<T>
 
     public void setFilter(ListFilter filter) {
         offsets.setFilter(filter);
-        dataChanged();
     }
 
     @Override
@@ -109,12 +108,8 @@ final class IosFilterListModel<T>
         return (T) offsets.getElementAt(selectedIndex);
     }
 
-    public void dataChanged() {
-
-    }
-
     private void log(String message) {
-        //getLog().log(message);
+        getLog().log(message);
     }
 
     private ILog getLog() {

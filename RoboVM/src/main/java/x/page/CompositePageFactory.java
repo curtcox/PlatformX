@@ -1,5 +1,9 @@
 package x.page;
 
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+
 import java.util.Arrays;
 
 /**
@@ -22,10 +26,20 @@ public final class CompositePageFactory
         for (PageFactory factory : factories) {
             Page[] screen = factory.create(link);
             if (screen!=null) {
+                log(screen + " created by " + factory);
                 return screen;
             }
         }
         String message = "No screen for " + link + " in " + Arrays.asList(factories);
         throw new IllegalArgumentException(message);
     }
+
+    private void log(String message) {
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(CompositePageFactory.class);
+    }
+
 }

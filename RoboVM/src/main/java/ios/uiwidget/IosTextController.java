@@ -1,5 +1,6 @@
 package ios.uiwidget;
 
+import org.robovm.apple.uikit.UIColor;
 import org.robovm.apple.uikit.UITextField;
 import org.robovm.apple.uikit.UITextFieldDelegate;
 import org.robovm.apple.uikit.UIViewController;
@@ -13,6 +14,7 @@ public final class IosTextController
     private IosTextController() {
         textField = newTextView();
         setView(textField);
+        textField.setBackgroundColor(UIColor.orange());
     }
 
     public static IosTextController of() {

@@ -54,4 +54,7 @@ public final class IosSearchableList<T>
         return filterListModel.getItem(filteredList.getSelectedIndex());
     }
 
+    public void reloadData() {
+        filteredList.reloadData();
+    }
 }
