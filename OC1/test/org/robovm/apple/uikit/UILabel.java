@@ -29,4 +29,8 @@ public class UILabel extends UIView implements NSCoding {
     public  void setFont(UIFont font) {
         this.font = font;
     }
+
+    public void setBackgroundColor(UIColor var1) {
+
+    }
 }

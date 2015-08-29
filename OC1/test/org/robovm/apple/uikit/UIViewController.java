@@ -65,4 +65,8 @@ public class UIViewController
     public NSArray<UIViewController> getChildViewControllers() {
         return viewControllers;
     }
+
+    public  void addChildViewController(UIViewController var1) {
+
+    }
 }

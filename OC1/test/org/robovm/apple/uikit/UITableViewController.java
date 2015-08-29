@@ -10,6 +10,8 @@ public class UITableViewController
         extends UIViewController
         implements UITableViewDelegate, UITableViewDataSource
 {
+    UITableView tableView = new UITableView();
+
     public UITableViewController() {}
 
     public UITableViewController(UITableViewStyle style) {
@@ -304,5 +306,9 @@ public class UITableViewController
     @Override
     public void performActionForRow(UITableView uiTableView, Selector selector, NSIndexPath nsIndexPath, NSObject nsObject) {
 
+    }
+
+    public UITableView getTableView() {
+          return tableView;
     }
 }
