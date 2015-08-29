@@ -12,17 +12,17 @@ public class IosPassthruView
 {
     @Override
     public boolean isPointInside(CGPoint point, UIEvent event) {
-        //log("is point inside ? " + point + " event = " + event);
+        log("isPointInside",point,event);
         return true;
     }
 
     public UIView hitTest(CGPoint point, UIEvent event) {
-        //log("hit test ? " + point + " event = " + event);
+        log("hitTest",point,event);
         return super.hitTest(point,event);
     }
 
-    private void log(String message) {
-        getLog().log(message);
+    private void log(String method, CGPoint point, UIEvent event) {
+        // getLog().log(method + " point=" + point + " event=" +event);
     }
 
     private ILog getLog() {

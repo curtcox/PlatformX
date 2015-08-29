@@ -18,48 +18,36 @@ public final class IosSearchFilterInstaller
     public static void iosSpecificInstall(final IosSearchableList list, final StringToListFilter stringToListFilter) {
         final IosTextController search = list.searchTerm;
         search.setDelegate(new UITextFieldDelegateAdapter() {
-            @Override public boolean shouldClear(UITextField textField) {
-                log("shouldClear " + textField);
-                return true;
-            }
-
-            @Override public boolean shouldBeginEditing(UITextField textField) {
-                log("shouldBeginEditing " + textField);
-                return true;
-            }
-
             @Override public boolean shouldReturn(UITextField textField) {
-                log("shouldReturn " + textField);
+                log("shouldReturn",textField);
                 endEditing(textField);
                 return true;
             }
 
             @Override public boolean shouldEndEditing(UITextField textField) {
-                log("shouldEndEditing " + textField);
+                log("shouldEndEditing",textField);
                 applyCurrentFilter(list, stringToListFilter, search.getText());
                 return true;
             }
 
             @Override public boolean shouldChangeCharacters(UITextField textField, NSRange range, String string) {
-                log("shouldChangeCharacters " + textField);
+                log("shouldChangeCharacters",textField);
                 applyCurrentFilter(list, stringToListFilter, search.getText());
                 return true;
             }
 
             @Override public void didBeginEditing(UITextField textField) {
-                log("didBeginEditing " + textField);
+                log("didBeginEditing",textField);
                 applyCurrentFilter(list, stringToListFilter, search.getText());
             }
 
             @Override public void didEndEditing(UITextField textField) {
                 applyCurrentFilter(list, stringToListFilter, search.getText());
-                log("didEndEditing " + textField);
+                log("didEndEditing",textField);
             }
 
             void endEditing(UITextField textField) {
                 textField.resignFirstResponder();
-                boolean resigned = textField.endEditing(true);
-                log(textField + "resigned ? " + resigned);
             }
         });
         log("Delegate installed on " + search);
@@ -79,6 +67,9 @@ public final class IosSearchFilterInstaller
         iosSpecificInstall((IosSearchableList) list, stringToListFilter);
     }
 
+    private static void log(String message,UITextField textField) {
+        getLog().log(message + " " + textField);
+    }
     private static void log(String message) {
         getLog().log(message);
     }

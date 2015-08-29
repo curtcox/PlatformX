@@ -58,7 +58,7 @@ final class IosFilterListModel<T>
 
     @Override
     public long getNumberOfSections(UITableView tableView) {
-        log("getNumberOfSections = " + tableView);
+        log("getNumberOfSections",tableView);
         return 1;
     }
 
@@ -84,13 +84,13 @@ final class IosFilterListModel<T>
 
     @Override
     public List<String> getSectionIndexTitles(UITableView tableView) {
-        log("getSectionIndexTitles = " + tableView);
+        log("getSectionIndexTitles",tableView);
         return Collections.emptyList();
     }
 
     @Override
     public long getSectionForSectionIndexTitle(UITableView tableView, String title, long index) {
-        log("getSectionForSectionIndexTitle = " + tableView);
+        log("getSectionForSectionIndexTitle",tableView);
         return 0;
     }
 
@@ -108,8 +108,12 @@ final class IosFilterListModel<T>
         return (T) offsets.getElementAt(selectedIndex);
     }
 
+    private void log(String method,UITableView tableView) {
+        log(method + tableView);
+    }
+
     private void log(String message) {
-        getLog().log(message);
+        //getLog().log(message);
     }
 
     private ILog getLog() {
