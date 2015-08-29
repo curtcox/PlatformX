@@ -24,4 +24,7 @@ public final class IosLabelViewController
         return uiLabel;
     }
 
+    public String getText() {
+        return label.text;
+    }
 }

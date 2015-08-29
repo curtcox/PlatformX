@@ -7,6 +7,8 @@ public class UITableViewCell
         extends UIView
         implements NSCoding, UIGestureRecognizerDelegate
 {
+    UILabel textLabel = new UILabel();
+
     public UITableViewCell() {}
 
     public UITableViewCell(UITableViewCellStyle style, String reuseIdentifier) {
@@ -14,6 +16,10 @@ public class UITableViewCell
 
     public UITableViewCell(CGRect frame) {
         super(frame);
+    }
+
+    public UILabel getTextLabel() {
+        return textLabel;
     }
 
     @Override

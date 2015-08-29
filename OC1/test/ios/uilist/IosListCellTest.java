@@ -30,16 +30,7 @@ public class IosListCellTest {
 
         testObject.apply(new IXListCell.Config(expected));
 
-        assertSame(expected,testObject.firstRow.getText());
-    }
-
-    @Test
-    public void setSecondRowText_sets_text() {
-        String expected = random();
-
-        testObject.apply(new IXListCell.Config("?",expected,null));
-
-        assertSame(expected,testObject.secondRow.getText());
+        assertSame(expected,testObject.getTextLabel().getText());
     }
 
     private String random() {

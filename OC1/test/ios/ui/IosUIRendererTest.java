@@ -2,12 +2,11 @@ package ios.ui;
 
 import config.ShouldRun;
 import fake.FakeIosRegistryLoader;
+import ios.uiwidget.IosButtonViewController;
+import ios.uiwidget.IosLabelViewController;
 import org.junit.Before;
 import org.junit.Test;
-import org.robovm.apple.uikit.UIButton;
-import org.robovm.apple.uikit.UICollectionView;
-import org.robovm.apple.uikit.UILabel;
-import org.robovm.apple.uikit.UIView;
+import org.robovm.apple.uikit.*;
 import x.uiwidget.*;
 
 import static org.junit.Assert.*;
@@ -73,21 +72,21 @@ public class IosUIRendererTest {
     @Test
     public void render_empty_flow_produces_proper_layout() {
         XFlow flow = new XFlow();
-        UIView actual = render(flow);
-        assertTrue(actual instanceof UIView);
+        UIViewController actual = render(flow);
+        assertTrue(actual instanceof UIViewController);
     }
 
     @Test
     public void render_empty_column_produces_proper_layout() {
         XColumn column = new XColumn();
-        UICollectionView actual = (UICollectionView) render(column);
+        UICollectionViewController actual = (UICollectionViewController) render(column);
 //        assertEquals(LinearLayout.VERTICAL,actual.getOrientation());
     }
 
     @Test
     public void render_empty_row_produces_proper_layout() {
         XColumn column = new XColumn();
-        UICollectionView actual = (UICollectionView) render(column);
+        UICollectionViewController actual = (UICollectionViewController) render(column);
 //        assertEquals(LinearLayout.HORIZONTAL,actual.getOrientation());
     }
 
@@ -124,7 +123,7 @@ public class IosUIRendererTest {
     @Test
     public void render_a_label() {
         String text = toString();
-        UILabel actual = (UILabel) render(new XLabel(text));
+        IosLabelViewController actual = (IosLabelViewController) render(new XLabel(text));
         assertEquals(text,actual.getText());
     }
 
@@ -133,7 +132,7 @@ public class IosUIRendererTest {
         String text = toString();
         XButton button = new FakeButton("");
         button.text = text;
-        UIButton actual = (UIButton) render(button);
+        IosButtonViewController actual = (IosButtonViewController) render(button);
 
 //        assertEquals(text,actual.getTitleLabel().getText());
     }
@@ -155,7 +154,7 @@ public class IosUIRendererTest {
 //        assertTrue(actual.getChildAt(1) instanceof TextView);
 //    }
 
-    private UIView render(XComponent component) {
+    private UIViewController render(XComponent component) {
         return IosUIRenderer.render(component);
     }
 

@@ -121,8 +121,7 @@ public class IosFilterListModelTest {
 
         IosListCell cell = (IosListCell) testObject.getCellForRow(null,indexPath);
 
-        assertSame(first, cell.firstRow.getText());
-        assertSame(second, cell.secondRow.getText());
+        assertSame(first, cell.getTextLabel().getText());
     }
 
     private Object random() {

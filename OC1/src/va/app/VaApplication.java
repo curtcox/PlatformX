@@ -1,28 +1,42 @@
 package va.app;
 
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Button.ClickEvent;
-import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.VerticalLayout;
+import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.page.PageLink;
+import x.screen.Screen;
 
-public final class VaApplication extends UI {
+public final class VaApplication
+        extends UI
+{
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        final VerticalLayout layout = new VerticalLayout();
-        layout.setMargin(true);
-        setContent(layout);
+        try {
+            Registry.put(UI.class,this);
+            VaRegistryLoader.load();
+        } catch (Exception e) {
+            log(e);
+        }
+        show();
+        log("init(" + vaadinRequest + ") finished");
+    }
 
-        Button button = new Button("Click Me");
-        button.addClickListener(new Button.ClickListener() {
-            @Override
-            public void buttonClick(ClickEvent event) {
-                layout.addComponent(new Label("Thank you for clicking"));
-            }
-        });
-        layout.addComponent(button);
+    private void show() {
+        Screen.show(PageLink.of(""));
+    }
+
+    private void log(String message) {
+        getLog().log(message);
+    }
+    private void log(Exception e) {
+        getLog().log(e);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(VaApplication.class);
     }
 
 }

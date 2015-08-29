@@ -1,5 +1,7 @@
 package va.ui;
 
+import com.vaadin.ui.UI;
+import x.Registry;
 import x.ui.IDisplay;
 import x.ui.IForm;
 
@@ -34,6 +36,11 @@ public final class VaDisplay
 
     void show(VaForm form) {
         this.form = form;
+        ui().setContent(form);
+    }
+
+    UI ui() {
+        return Registry.get(UI.class);
     }
 
     @Override

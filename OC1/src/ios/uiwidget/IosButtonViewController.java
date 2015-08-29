@@ -19,7 +19,7 @@ public final class IosButtonViewController
         return new IosButtonViewController(button);
     }
 
-    private static UIButton newButton(XButton xButton) {
+    private static UIButton newButton(final XButton xButton) {
         UIButton uiButton = UIButton.create(UIButtonType.System);
         uiButton.setTitle(xButton.getText(), UIControlState.Normal);
         uiButton.getTitleLabel().setFont(UIFont.getBoldSystemFont(22));
