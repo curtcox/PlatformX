@@ -95,4 +95,8 @@ public class UIView
     public void addSubview(UIView view) {
 
     }
+
+    public void setNeedsLayout() {}
+
+    public void setNeedsDisplay() {}
 }

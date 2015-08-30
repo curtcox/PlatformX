@@ -323,4 +323,8 @@ public class UITextField
     public void setPlaceholder(String var1) {
 
     }
+
+    public  void setDelegate(UITextFieldDelegate var1) {
+
+    }
 }
