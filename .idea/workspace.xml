@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/copy_to_vaadin.sh" afterPath="$PROJECT_DIR$/copy_to_vaadin.sh" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/uiwidget/VaBorderContainer.java" afterPath="$PROJECT_DIR$/OC1/src/va/uiwidget/VaBorderContainer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/ui/VaForm.java" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaForm.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -40,12 +43,38 @@
     <splitter split-orientation="horizontal" split-proportion="0.39652956">
       <split-first>
         <leaf>
-          <file leaf-file-name="IosSearchableListTest.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/test/ios/uilist/IosSearchableListTest.java">
+          <file leaf-file-name="VaForm.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaForm.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3432836" vertical-offset="0" max-vertical-offset="1005">
-                  <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+                  <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+                  <folding>
+                    <element signature="e#977#1120#0" expanded="true" />
+                    <element signature="e#1119#1120#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VaDisplay.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.49899194" vertical-offset="0" max-vertical-offset="992">
+                  <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="VaUIRenderer.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="1125">
+                  <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+                  <folding>
+                    <element signature="e#2450#2451#0" expanded="true" />
+                    <element signature="e#2487#2488#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -54,110 +83,20 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="VaadinService.java" pinned="false" current-in-tab="false">
-            <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/server/VaadinService.java">
+          <file leaf-file-name="VaBorderContainer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/va/uiwidget/VaBorderContainer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="19125" max-vertical-offset="27060">
-                  <caret line="1394" column="16" selection-start-line="1394" selection-start-column="16" selection-end-line="1394" selection-end-column="16" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VaApplication.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/va/app/VaApplication.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
-                  <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VaDisplay.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.43283582" vertical-offset="0" max-vertical-offset="1005">
-                  <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.46268657" vertical-offset="0" max-vertical-offset="1005">
+                  <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
                   <folding>
-                    <element signature="e#736#737#0" expanded="true" />
-                    <element signature="e#781#782#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VaRegistryLoader.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/va/app/VaRegistryLoader.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-                  <caret line="42" column="47" selection-start-line="42" selection-start-column="47" selection-end-line="42" selection-end-column="47" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VaFormFactory.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaFormFactory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240">
-                  <caret line="11" column="22" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Screen.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/screen/Screen.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-29.555555" vertical-offset="1017" max-vertical-offset="1995">
-                  <caret line="151" column="19" selection-start-line="151" selection-start-column="19" selection-end-line="151" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#3705#3706#0" expanded="true" />
-                    <element signature="e#3736#3737#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ILog.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/log/ILog.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-                  <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ILogManager.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/log/ILogManager.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="165">
-                  <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="XLog.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/log/XLog.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="855">
-                  <caret line="8" column="19" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="VaForm.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaForm.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
-                  <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-                  <folding>
-                    <element signature="e#1157#1158#0" expanded="true" />
-                    <element signature="e#1193#1194#0" expanded="true" />
+                    <element signature="e#355#356#0" expanded="true" />
+                    <element signature="e#391#392#0" expanded="true" />
+                    <element signature="e#451#452#0" expanded="true" />
+                    <element signature="e#503#504#0" expanded="true" />
+                    <element signature="e#882#883#0" expanded="true" />
+                    <element signature="e#924#925#0" expanded="true" />
+                    <element signature="e#983#984#0" expanded="true" />
+                    <element signature="e#1029#1030#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -181,9 +120,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/se/ui/SEDisplay.java" />
-        <option value="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" />
-        <option value="$PROJECT_DIR$/OC1/src/an/a22/ui/AnUIRenderer.java" />
         <option value="$PROJECT_DIR$/OC1/test/an/a22/uiwidget/AnBorderContainerTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/an/a22/uilist/AnFilterListModelTest.java" />
         <option value="$PROJECT_DIR$/OC1/src/an/a22/uilist/AnFilterListModel.java" />
@@ -210,7 +146,6 @@
         <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosFilterListModel.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/uilist/IosBasicListCellRenderer.java" />
         <option value="$PROJECT_DIR$/OC1/src/va/app/VaApplication.java" />
-        <option value="$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java" />
         <option value="$PROJECT_DIR$/OC1/src/ios/uiwidget/IosButtonViewController.java" />
         <option value="$PROJECT_DIR$/OC1/test/ios/uilist/IosFilterListModelTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/ios/uilist/IosListCellTest.java" />
@@ -232,6 +167,10 @@
         <option value="$PROJECT_DIR$/OC1/src/va/app/ScssCacheEntry.java" />
         <option value="$PROJECT_DIR$/OC1/src/va/app/VaApplicationServlet.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/screen/Screen.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/ui/VaForm.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/uiwidget/VaBorderContainer.java" />
+        <option value="$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java" />
       </list>
     </option>
   </component>
@@ -384,6 +323,32 @@
               <option name="myItemId" value="va" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uiwidget" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="va" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uilist" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -404,6 +369,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="va" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -852,7 +835,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18958333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42902207" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23814134" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
@@ -941,34 +924,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/ios/uilist/IosListCell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/ios/uilist/IosListCellTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="34" column="4" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/ios/uilist/IosFilterListModelTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="123" column="38" selection-start-line="123" selection-start-column="38" selection-end-line="123" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/OC1/lib/robovm-cocoatouch-1.6.0.jar!/org/robovm/apple/uikit/UITableViewCell.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.148148" vertical-offset="0" max-vertical-offset="0">
-          <caret line="60" column="36" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/org/robovm/apple/uikit/UITableViewCell.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -1101,7 +1056,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/ios/uilist/IosSearchableListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3432836" vertical-offset="0" max-vertical-offset="1005">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="465">
           <caret line="36" column="72" selection-start-line="36" selection-start-column="72" selection-end-line="36" selection-end-column="72" />
           <folding />
         </state>
@@ -1227,19 +1182,11 @@
         <state vertical-scroll-proportion="-15.0" vertical-offset="4500" max-vertical-offset="20340">
           <caret line="349" column="33" selection-start-line="349" selection-start-column="33" selection-end-line="349" selection-end-column="33" />
           <folding>
-            <element signature="e#0#51038#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#50963#50964#0" expanded="true" />
-            <element signature="e#51033#51034#0" expanded="true" />
+            <element signature="e#0#51038#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#50963#50964#0" expanded="false" />
+            <element signature="e#51033#51034#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/server/VaadinService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="19125" max-vertical-offset="27060">
-          <caret line="1394" column="16" selection-start-line="1394" selection-start-column="16" selection-end-line="1394" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,33 +1241,93 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaForm.java">
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/server/VaadinService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="19125" max-vertical-offset="27060">
+          <caret line="1394" column="16" selection-start-line="1394" selection-start-column="16" selection-end-line="1394" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/OC1/lib/vaadin-server-7.4.8.jar!/com/vaadin/ui/AbstractOrderedLayout.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3326613" vertical-offset="5025" max-vertical-offset="7875">
+          <caret line="417" column="16" selection-start-line="417" selection-start-column="16" selection-end-line="417" selection-end-column="16" />
           <folding>
-            <element signature="e#1157#1158#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
+            <element signature="e#13120#13121#0" expanded="false" />
+            <element signature="e#13170#13171#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uilist/VaSearchableList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="735">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uilist/VaUIList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="525">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/va/app/VaApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <caret line="41" column="1" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="495">
+          <caret line="36" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="39" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/uiwidget/VaBorderContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46268657" vertical-offset="0" max-vertical-offset="1005">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#355#356#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#451#452#0" expanded="true" />
+            <element signature="e#503#504#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#924#925#0" expanded="true" />
+            <element signature="e#983#984#0" expanded="true" />
+            <element signature="e#1029#1030#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="13" max-vertical-offset="1125">
+          <caret line="12" column="50" selection-start-line="12" selection-start-column="50" selection-end-line="12" selection-end-column="50" />
+          <folding>
+            <element signature="e#2450#2451#0" expanded="true" />
+            <element signature="e#2487#2488#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaForm.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1065">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
+          <folding>
+            <element signature="e#977#1120#0" expanded="true" />
+            <element signature="e#1119#1120#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43283582" vertical-offset="0" max-vertical-offset="1005">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#736#737#0" expanded="true" />
-            <element signature="e#781#782#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.49899194" vertical-offset="0" max-vertical-offset="992">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

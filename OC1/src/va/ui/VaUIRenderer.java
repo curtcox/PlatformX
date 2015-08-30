@@ -9,6 +9,12 @@ import x.uiwidget.*;
 final class VaUIRenderer {
 
     static Component render(XComponent layout) {
+        Component component =  render0(layout);
+        log(layout + " rendered as " + component);
+        return component;
+    }
+
+    private static Component render0(XComponent layout) {
         if (layout instanceof XPeeredComponent)  { return peer(layout);   }
         if (layout instanceof XButton)           { return button(layout); }
         if (layout instanceof XLabel)            { return label(layout);  }
@@ -68,6 +74,9 @@ final class VaUIRenderer {
         getLog().log(t);
     }
 
+    private static void log(String message) {
+        getLog().log(message);
+    }
     private static ILog getLog() {
         return Registry.get(ILogManager.class).getLog(VaUIRenderer.class);
     }

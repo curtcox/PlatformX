@@ -1,15 +1,15 @@
 package va.ui;
 
 import com.vaadin.ui.Button;
-import com.vaadin.ui.GridLayout;
 import com.vaadin.ui.Label;
+import com.vaadin.ui.VerticalLayout;
 import x.command.Command;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
 
 public final class VaForm
-        extends GridLayout
+        extends VerticalLayout
     implements IForm
 {
     private final PageLink link;
@@ -19,6 +19,7 @@ public final class VaForm
     VaForm(PageLink link) {
         this.link = link;
         this.backButton = backButton();
+        setMargin(true);
     }
 
     @Override

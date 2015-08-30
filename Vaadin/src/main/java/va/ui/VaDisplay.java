@@ -2,6 +2,8 @@ package va.ui;
 
 import com.vaadin.ui.UI;
 import x.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
 import x.ui.IDisplay;
 import x.ui.IForm;
 
@@ -35,6 +37,7 @@ public final class VaDisplay
     }
 
     void show(VaForm form) {
+        log("show " + form + " on " + ui());
         this.form = form;
         ui().setContent(form);
     }
@@ -45,5 +48,13 @@ public final class VaDisplay
 
     @Override
     public void execute(String url) {
+    }
+
+    private void log(String message) {
+        getLog().log(message);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(VaDisplay.class);
     }
 }
