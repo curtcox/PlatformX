@@ -1,21 +1,20 @@
 package va.uiwidget;
 
-import com.vaadin.ui.AbstractLayout;
 import com.vaadin.ui.Component;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
+import com.vaadin.ui.HorizontalLayout;
+import com.vaadin.ui.VerticalLayout;
 
 public final class VaBorderContainer
-    extends AbstractLayout
+    extends VerticalLayout
 {
-    final Component center;
     Component north;
     Component east;
+    final Component center;
+    final HorizontalLayout row = new HorizontalLayout();
 
     private VaBorderContainer(Component center) {
         this.center = center;
+        addComponent(row);
     }
 
     public static VaBorderContainer of(Component center) {
@@ -24,39 +23,18 @@ public final class VaBorderContainer
 
     public VaBorderContainer addNorth(Component north) {
         this.north = north;
+        this.removeAllComponents();
+        addComponent(north);
+        addComponent(row);
         return this;
     }
 
     public VaBorderContainer addEast(Component east) {
         this.east = east;
+        row.removeAllComponents();
+        row.addComponent(east);
+        row.addComponent(center);
         return this;
-    }
-
-    @Override
-    public void replaceComponent(Component oldComponent, Component newComponent) {
-
-    }
-
-    @Override
-    public int getComponentCount() {
-        return components().size();
-    }
-
-    @Override
-    public Iterator<Component> iterator() {
-        return components().iterator();
-    }
-
-    List<Component> components() {
-        List list = new ArrayList<Component>();
-        list.add(center);
-        if (north!=null) {
-            list.add(north);
-        }
-        if (east!=null) {
-            list.add(east);
-        }
-        return list;
     }
 
 }
