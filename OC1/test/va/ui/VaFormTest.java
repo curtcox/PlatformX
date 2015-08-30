@@ -1,9 +1,12 @@
 package va.ui;
 
+import com.vaadin.ui.UI;
 import config.ShouldRun;
 import fake.FakeVaRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
+import va.app.VaApplication;
+import x.Registry;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
@@ -49,6 +52,7 @@ public class VaFormTest {
 
     @Test
     public void can_show() {
+        Registry.put(UI.class,new VaApplication());
         testObject.show();
     }
 

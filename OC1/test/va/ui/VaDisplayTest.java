@@ -1,9 +1,11 @@
 package va.ui;
 
+import com.vaadin.ui.UI;
 import config.ShouldRun;
 import fake.FakeVaRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
+import va.app.VaApplication;
 import x.Registry;
 import x.page.PageLink;
 import x.ui.IDisplay;
@@ -30,6 +32,7 @@ public class VaDisplayTest {
     public void getCurrent_returns_IForm_when_IForm() throws InterruptedException {
         VaDisplay display = VaDisplay.of();
         Registry.put(IDisplay.class, display);
+        Registry.put(UI.class,new VaApplication());
         new VaForm(PageLink.of("")).show();
 
         Thread.sleep(50);
