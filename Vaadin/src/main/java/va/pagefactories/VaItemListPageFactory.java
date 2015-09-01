@@ -29,7 +29,7 @@ final class VaItemListPageFactory<T>
 
     private XSearchableList<T> newSearchableList() {
         VaSearchableList<T> list = VaSearchableList.of(new XLiveList(values),new Label(),new CellConfigurer());
-        VaSearchFilterInstaller.anSpecificInstall(list, StringToListFilter.DEFAULT);
+        VaSearchFilterInstaller.vaSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }
 

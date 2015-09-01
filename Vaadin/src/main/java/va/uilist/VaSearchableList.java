@@ -9,6 +9,7 @@ import x.event.LiveList;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.uilist.IXListCell;
+import x.uilist.ListFilter;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -22,7 +23,7 @@ public final class VaSearchableList<T>
     final TextField searchTerm = new TextField();
 
     final VaFilterListModel<T> filterListModel;
-    private final VaUIList filteredList;
+    final VaUIList filteredList;
 
     /**
      * The component itself, for embedding in a Screen.
@@ -56,6 +57,11 @@ public final class VaSearchableList<T>
 
     public Object getSelected() {
         return filterListModel.getItem(filteredList.getSelectedIndex());
+    }
+
+    void setFilter(ListFilter filter) {
+        filterListModel.setFilter(filter);
+        filteredList.markAsDirtyRecursive();
     }
 
     private static void log(String message) {

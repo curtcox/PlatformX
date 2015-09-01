@@ -43,7 +43,7 @@ final class VaFilterListModel<T>
         });
     }
 
-    public void setFilter(ListFilter filter) {
+    void setFilter(ListFilter filter) {
         offsets.setFilter(filter);
         dataChanged();
     }
