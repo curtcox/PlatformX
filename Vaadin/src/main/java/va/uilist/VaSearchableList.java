@@ -35,6 +35,7 @@ public final class VaSearchableList<T>
         filteredList = VaUIList.of(filterListModel,configurer);
         component = VaBorderContainer.of(filteredList)
              .addNorth(newNorthContainer(action));
+        searchTerm.setInputPrompt("Search for ...");
     }
 
     public static VaSearchableList of(LiveList items, Component action, IXListCell.ConfigProducer configurer) {
