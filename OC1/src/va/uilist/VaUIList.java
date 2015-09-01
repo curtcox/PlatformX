@@ -1,7 +1,10 @@
 package va.uilist;
 
 import com.vaadin.ui.Table;
+import x.Registry;
 import x.event.Action;
+import x.log.ILog;
+import x.log.ILogManager;
 import x.uilist.IXListCell;
 
 final class VaUIList<T>
@@ -24,6 +27,7 @@ final class VaUIList<T>
     public static VaUIList of(VaFilterListModel model) {
         VaUIList list =  new VaUIList();
         list.setContainerDataSource(model);
+        log(list + " of " + model);
         return list;
     }
 
@@ -32,4 +36,13 @@ final class VaUIList<T>
         list.setRenderer(new VaBasicListCellRenderer(configurer));
         return list;
     }
+
+    private static void log(String message) {
+        getLog().log(message);
+    }
+
+    private static ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(VaUIList.class);
+    }
+
 }

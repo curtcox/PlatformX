@@ -43,7 +43,7 @@ final class VaFilterListModel<T>
         });
     }
 
-    public void setFilter(ListFilter filter) {
+    void setFilter(ListFilter filter) {
         offsets.setFilter(filter);
         dataChanged();
     }
@@ -91,12 +91,12 @@ final class VaFilterListModel<T>
 
     @Override
     public Property getContainerProperty(Object itemId, Object propertyId) {
-        throw never();
+        return getItem(itemId).getItemProperty(propertyId);
     }
 
     @Override
     public Class<?> getType(Object propertyId) {
-        throw never();
+        return String.class;
     }
 
     @Override

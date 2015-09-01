@@ -3,9 +3,13 @@ package va.uilist;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.TextField;
 import va.uiwidget.VaBorderContainer;
+import x.Registry;
 import x.event.Action;
 import x.event.LiveList;
+import x.log.ILog;
+import x.log.ILogManager;
 import x.uilist.IXListCell;
+import x.uilist.ListFilter;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -19,7 +23,7 @@ public final class VaSearchableList<T>
     final TextField searchTerm = new TextField();
 
     final VaFilterListModel<T> filterListModel;
-    private final VaUIList filteredList;
+    final VaUIList filteredList;
 
     /**
      * The component itself, for embedding in a Screen.
@@ -31,9 +35,11 @@ public final class VaSearchableList<T>
         filteredList = VaUIList.of(filterListModel,configurer);
         component = VaBorderContainer.of(filteredList)
              .addNorth(newNorthContainer(action));
+        searchTerm.setInputPrompt("Search for ...");
     }
 
     public static VaSearchableList of(LiveList items, Component action, IXListCell.ConfigProducer configurer) {
+        log(items + " action " + action + " configurer " + configurer);
         return new VaSearchableList(items,action,configurer);
     }
 
@@ -52,6 +58,19 @@ public final class VaSearchableList<T>
 
     public Object getSelected() {
         return filterListModel.getItem(filteredList.getSelectedIndex());
+    }
+
+    void setFilter(ListFilter filter) {
+        filterListModel.setFilter(filter);
+        filteredList.markAsDirtyRecursive();
+    }
+
+    private static void log(String message) {
+        getLog().log(message);
+    }
+
+    private static ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(VaSearchableList.class);
     }
 
 }
