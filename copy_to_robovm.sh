@@ -11,6 +11,6 @@ cp -R OC1/src/x RoboVM/src/main/java/
 cp -R OC1/src/hash RoboVM/src/main/java/
 cp -R OC1/src/google RoboVM/src/main/java/
 
-# The follow line copies any changes made directly in the iOS project,
+# The following line copies any changes made directly in the iOS project,
 # back to the shared project.
 # cp -R  RoboVM/src/main/java/ OC1/src/
