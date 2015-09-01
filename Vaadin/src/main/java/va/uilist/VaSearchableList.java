@@ -3,8 +3,11 @@ package va.uilist;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.TextField;
 import va.uiwidget.VaBorderContainer;
+import x.Registry;
 import x.event.Action;
 import x.event.LiveList;
+import x.log.ILog;
+import x.log.ILogManager;
 import x.uilist.IXListCell;
 import x.uiwidget.XSearchableList;
 
@@ -34,6 +37,7 @@ public final class VaSearchableList<T>
     }
 
     public static VaSearchableList of(LiveList items, Component action, IXListCell.ConfigProducer configurer) {
+        log(items + " action " + action + " configurer " + configurer);
         return new VaSearchableList(items,action,configurer);
     }
 
@@ -52,6 +56,14 @@ public final class VaSearchableList<T>
 
     public Object getSelected() {
         return filterListModel.getItem(filteredList.getSelectedIndex());
+    }
+
+    private static void log(String message) {
+        getLog().log(message);
+    }
+
+    private static ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(VaSearchableList.class);
     }
 
 }

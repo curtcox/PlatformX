@@ -14,6 +14,7 @@ public final class VaBorderContainer
 
     private VaBorderContainer(Component center) {
         this.center = center;
+        row.addComponent(center);
         addComponent(row);
     }
 
