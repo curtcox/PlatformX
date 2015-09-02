@@ -14,6 +14,8 @@ public abstract class Page {
         this.title = link.title();
     }
 
+
+
     /**
      * This is called whenever the screen is shown.
      * Override it in order to update any screen state that might have

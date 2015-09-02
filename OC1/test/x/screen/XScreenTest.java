@@ -207,10 +207,8 @@ public class XScreenTest {
     }
 
     @Test
-    public void show_throws_and_exception_when_factory_returns_no_screens_for_link() {
-        PageLink link = PageLink.of("foo");
-        Page[] pages = new Page[0];
-        _(pages); factory.create(link);
+    public void show_throws_and_exception_when_factory_returns_no_pages_for_link() {
+        _(new Page[0]); factory.create(link);
 
         try {
             Screen.show(link);
@@ -218,6 +216,16 @@ public class XScreenTest {
         } catch (RuntimeException e) {
             assertEquals("No pages found for " + link,e.getMessage());
         }
+    }
+
+    @Test
+    public void show_shows_single_page_when_factory_returns_1_page_for_link() {
+        _(new Page[] {page}); factory.create(link);
+
+        Screen.show(link);
+
+        FakeForm form = (FakeForm) Screen.getShowing().form;
+        assertSame(layout,form.layout);
     }
 
 }
