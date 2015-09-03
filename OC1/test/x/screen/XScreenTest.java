@@ -61,9 +61,11 @@ public class XScreenTest {
         FakeXRegistryLoader.load();
         page = new ExamplePage(link);
         Mocks.init(this);
+        Registry.put(ILogManager.class, logManager);
         Registry.put(PageFactory.class, pageFactory);
         Registry.put(IFormFactory.class,formFactory);
         _(form); formFactory.newForm(link);
+        _(log); logManager.getLog(Screen.class);
         screen = Screen.of(link, page);
     }
 
@@ -181,18 +183,51 @@ public class XScreenTest {
     }
 
     @Test
-    public void show_logs_exception_if_one_is_thrown() {
+    public void show_logs_exception_if_one_is_thrown_by_screen() {
         RuntimeException e = new RuntimeException();
-        _(log); logManager.getLog(Screen.class);
-        _(); wild("*"); log.log("*");
         _(); log.log(e);
-        Registry.put(ILogManager.class, logManager);
         Screen screen = Screen.of(link,new ScreenThatThrowsExceptionOnLayout(e));
 
         screen.show();
 
         verify();
         log.log(e);
+    }
+
+    @Test
+    public void show_logs_an_exception_when_factory_returns_no_pages_for_link() {
+        _(); wild(null); log.log((Throwable) null);
+
+        _(new Page[0]); pageFactory.create(link);
+
+        RuntimeException thrown = null;
+        try {
+            Screen.show(link);
+            fail();
+        } catch (RuntimeException e) {
+            thrown = e;
+        }
+
+        verify();
+        log.log(thrown);
+    }
+
+    @Test
+    public void show_logs_an_exception_when_factory_returns_multiple_pages_for_link() {
+        _(); wild(null); log.log((Throwable) null);
+
+        _(new Page[2]); pageFactory.create(link);
+
+        RuntimeException thrown = null;
+        try {
+            Screen.show(link);
+            fail();
+        } catch (RuntimeException e) {
+            thrown = e;
+        }
+
+        verify();
+        log.log(thrown);
     }
 
     @Test

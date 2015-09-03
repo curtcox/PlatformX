@@ -14,7 +14,8 @@ import x.uiwidget.XComponent;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
- * Implementers will need to override at least one layout method to create the UI.
+ * There is a 1-to-1 relationship between ScreenS and PagesS.
+ * Only one Screen is showing at a time.
  */
 public final class Screen {
 
@@ -83,12 +84,18 @@ public final class Screen {
 
     public static void show(PageLink link, Page[] pages) {
         if (pages.length==0) {
-            throw new RuntimeException("No pages found for " + link);
+            throw loggedException("No pages found for " + link);
         }
         if (pages.length>1) {
-            throw new RuntimeException("Multiple pages (" + pages.length + ") found for " + link);
+            throw loggedException("Multiple pages (" + pages.length + ") found for " + link);
         }
         show(pages[0]);
+    }
+
+    private static RuntimeException loggedException(String message) {
+        RuntimeException exception = new RuntimeException(message);
+        log(exception);
+        return exception;
     }
 
     private static void show(Page page) {
@@ -155,11 +162,11 @@ public final class Screen {
         getLog().log(message);
     }
 
-    private void log(Exception e) {
+    private static void log(Exception e) {
         getLog().log(e);
     }
 
-    private ILog getLog() {
+    private static ILog getLog() {
         return Registry.get(ILogManager.class).getLog(Screen.class);
     }
 

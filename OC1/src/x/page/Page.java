@@ -4,6 +4,11 @@ import x.Registry;
 import x.ui.IDisplay;
 import x.uiwidget.XComponent;
 
+/**
+ * The entire UI, as presented to the user, at a specific time.
+ * Implementers will need to override at least one layout method to create the UI.
+ * See Screen.
+ */
 public abstract class Page {
 
     public final PageLink link;
@@ -13,8 +18,6 @@ public abstract class Page {
         this.link = link;
         this.title = link.title();
     }
-
-
 
     /**
      * This is called whenever the screen is shown.
