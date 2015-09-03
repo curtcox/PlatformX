@@ -78,15 +78,22 @@ public final class Screen {
     }
 
     public static void show(PageLink link) {
-        Page[] screens = pageFactory().create(link);
-        if (screens.length==0) {
+        show(link, pageFactory().create(link));
+    }
+
+    public static void show(PageLink link, Page[] pages) {
+        if (pages.length==0) {
             throw new RuntimeException("No pages found for " + link);
         }
-        if (screens.length==1) {
-            Page page = screens[0];
-            Screen screen = of(link,page);
-            screen.show();
+        if (pages.length>1) {
+            throw new RuntimeException("Multiple pages (" + pages.length + ") found for " + link);
         }
+        show(pages[0]);
+    }
+
+    private static void show(Page page) {
+        Screen screen = of(page.link,page);
+        screen.show();
     }
 
     private static PageFactory pageFactory() {

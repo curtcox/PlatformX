@@ -31,7 +31,7 @@ public class XScreenTest {
     PageLink link = PageLink.of(name);
     PageLink link1 = PageLink.of("first");
     PageLink link2 = PageLink.of("second");
-    PageFactory factory;
+    PageFactory pageFactory;
     IFormFactory formFactory;
     ILog log;
     ILogManager logManager;
@@ -61,7 +61,7 @@ public class XScreenTest {
         FakeXRegistryLoader.load();
         page = new ExamplePage(link);
         Mocks.init(this);
-        Registry.put(PageFactory.class,factory);
+        Registry.put(PageFactory.class, pageFactory);
         Registry.put(IFormFactory.class,formFactory);
         _(form); formFactory.newForm(link);
         screen = Screen.of(link, page);
@@ -160,20 +160,9 @@ public class XScreenTest {
         return name + toString();
     }
 
-    static class FakePage extends Page {
-        FakePage() {
-            super(PageLink.of("name"));
-        }
-        @Override public XContainer layoutForPortrait() { return null;}
-    }
-
     @Test
     public void show_makes_page_the_one_showing_when_factory_returns_one_link_for_it() {
-        PageLink link = PageLink.of("foo");
-        Page page = new FakePage();
-        Page[] screens = new Page[] { page };
-        _(screens); factory.create(link);
-        _(form); formFactory.newForm(link);
+        _(new Page[] {page}); pageFactory.create(link);
 
         Screen.show(link);
 
@@ -207,8 +196,8 @@ public class XScreenTest {
     }
 
     @Test
-    public void show_throws_and_exception_when_factory_returns_no_pages_for_link() {
-        _(new Page[0]); factory.create(link);
+    public void show_throws_an_exception_when_factory_returns_no_pages_for_link() {
+        _(new Page[0]); pageFactory.create(link);
 
         try {
             Screen.show(link);
@@ -220,12 +209,24 @@ public class XScreenTest {
 
     @Test
     public void show_shows_single_page_when_factory_returns_1_page_for_link() {
-        _(new Page[] {page}); factory.create(link);
+        _(new Page[] {page}); pageFactory.create(link);
 
         Screen.show(link);
 
         FakeForm form = (FakeForm) Screen.getShowing().form;
         assertSame(layout,form.layout);
+    }
+
+    @Test
+    public void show_throws_and_exception_when_factory_returns_multiple_pages_for_link() {
+        _(new Page[2]); pageFactory.create(link);
+
+        try {
+            Screen.show(link);
+            fail();
+        } catch (RuntimeException e) {
+            assertEquals("Multiple pages (2) found for " + link,e.getMessage());
+        }
     }
 
 }
