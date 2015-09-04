@@ -9,12 +9,12 @@ import java.util.Arrays;
 /**
  * A PageFactory that delegates to other ScreenFactories.
  */
-public final class CompositePageFactory
+public final class FirstMatchingPageCompositePageFactory
     implements PageFactory
 {
     private final PageFactory[] factories;
     
-    public CompositePageFactory(PageFactory... factories) {
+    public FirstMatchingPageCompositePageFactory(PageFactory... factories) {
         this.factories = factories;
     }
     
@@ -24,10 +24,10 @@ public final class CompositePageFactory
      */
     public Page[] create(PageLink link) {
         for (PageFactory factory : factories) {
-            Page[] screen = factory.create(link);
-            if (screen!=null) {
-                log(screen + " created by " + factory);
-                return screen;
+            Page[] pages = factory.create(link);
+            if (pages!=null) {
+                log(pages + " created by " + factory);
+                return pages;
             }
         }
         String message = "No screen for " + link + " in " + Arrays.asList(factories);
@@ -39,7 +39,7 @@ public final class CompositePageFactory
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(CompositePageFactory.class);
+        return Registry.get(ILogManager.class).getLog(FirstMatchingPageCompositePageFactory.class);
     }
 
 }
