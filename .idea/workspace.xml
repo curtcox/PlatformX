@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/x/page/FirstMatchingPageCompositePageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/FirstMatchingPageCompositePageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/FirstMatchingPageCompositePageFactoryTest.java" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,12 +42,12 @@
           <file leaf-file-name="FirstMatchingPageCompositePageFactoryTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/OC1/test/x/page/FirstMatchingPageCompositePageFactoryTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.37549406" vertical-offset="0" max-vertical-offset="759">
-                  <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+                <state vertical-scroll-proportion="1.0281501" vertical-offset="283" max-vertical-offset="1320">
+                  <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#342#343#0" expanded="true" />
-                    <element signature="e#416#417#0" expanded="true" />
+                    <element signature="e#751#752#0" expanded="true" />
+                    <element signature="e#825#826#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -1117,8 +1116,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="300">
           <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
           <folding>
-            <element signature="e#200#201#0" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#200#201#0" expanded="false" />
+            <element signature="e#257#258#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1165,14 +1164,14 @@
         <state vertical-scroll-proportion="0.011857707" vertical-offset="246" max-vertical-offset="2220">
           <caret line="27" column="4" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
           <folding>
-            <element signature="e#821#822#0" expanded="true" />
-            <element signature="e#903#904#0" expanded="true" />
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1183#1184#0" expanded="true" />
-            <element signature="e#1943#1944#0" expanded="true" />
-            <element signature="e#1997#1998#0" expanded="true" />
-            <element signature="e#4020#4021#0" expanded="true" />
-            <element signature="e#4051#4052#0" expanded="true" />
+            <element signature="e#821#822#0" expanded="false" />
+            <element signature="e#903#904#0" expanded="false" />
+            <element signature="e#1128#1129#0" expanded="false" />
+            <element signature="e#1183#1184#0" expanded="false" />
+            <element signature="e#1943#1944#0" expanded="false" />
+            <element signature="e#1997#1998#0" expanded="false" />
+            <element signature="e#4020#4021#0" expanded="false" />
+            <element signature="e#4051#4052#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1195,12 +1194,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/x/page/FirstMatchingPageCompositePageFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.37549406" vertical-offset="0" max-vertical-offset="759">
-          <caret line="19" column="70" selection-start-line="19" selection-start-column="70" selection-end-line="19" selection-end-column="70" />
+        <state vertical-scroll-proportion="1.0281501" vertical-offset="283" max-vertical-offset="1320">
+          <caret line="70" column="9" selection-start-line="70" selection-start-column="9" selection-end-line="70" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#342#343#0" expanded="true" />
-            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
           </folding>
         </state>
       </provider>
