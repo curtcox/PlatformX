@@ -37,7 +37,7 @@ public class C1ScreenTest {
 
     @Test
     public void can_create() {
-        Screen.of(link,page);
+        Screen.of(page);
     }
     
     @Test
@@ -49,7 +49,7 @@ public class C1ScreenTest {
         return (Screen) FakeUI.onEDT(new Callable(){
             public Object call() throws Exception {
                 form = FakeUI.newForm();
-                return Screen.of(link,page);
+                return Screen.of(page);
             }
         });
     }

@@ -88,6 +88,6 @@ public class ScreenEditorTest {
                 return null;
             }
         };
-        return Screen.of(link, page);
+        return Screen.of(page);
     }
 }

@@ -66,7 +66,7 @@ public class XScreenTest {
         Registry.put(IFormFactory.class,formFactory);
         _(form); formFactory.newForm(link);
         _(log); logManager.getLog(Screen.class);
-        screen = Screen.of(link, page);
+        screen = Screen.of(page);
     }
 
     @Test
@@ -84,6 +84,14 @@ public class XScreenTest {
         screen.show();
 
         assertSame(layout, form.layout);
+    }
+
+    @Test
+    public void show_logs_page_link() {
+        screen.show();
+
+        verify();
+        log.log("show " + link.toString());
     }
 
     @Test
@@ -113,8 +121,8 @@ public class XScreenTest {
         FakeForm form2 = new FakeForm();
         _(form1); formFactory.newForm(link1);
         _(form2); formFactory.newForm(link2);
-        Screen first = Screen.of(link1,new ExamplePage(link1));
-        Screen second = Screen.of(link2,new ExamplePage(link2));
+        Screen first = Screen.of(new ExamplePage(link1));
+        Screen second = Screen.of(new ExamplePage(link2));
 
         first.show();
         second.show();
@@ -130,8 +138,8 @@ public class XScreenTest {
         FakeForm form2 = new FakeForm();
         _(form1); formFactory.newForm(link1);
         _(form2); formFactory.newForm(link2);
-        Screen first = Screen.of(link1, new ExamplePage(link1));
-        Screen second = Screen.of(link2,new ExamplePage(link2));
+        Screen first = Screen.of(new ExamplePage(link1));
+        Screen second = Screen.of(new ExamplePage(link2));
 
         first.show();
         second.show();
@@ -147,8 +155,8 @@ public class XScreenTest {
         FakeForm form2 = new FakeForm();
         _(form1); formFactory.newForm(link1);
         _(form2); formFactory.newForm(link2);
-        Screen first = Screen.of(link1, new ExamplePage(link1));
-        Screen second = Screen.of(link2, new ExamplePage(link2));
+        Screen first = Screen.of(new ExamplePage(link1));
+        Screen second = Screen.of(new ExamplePage(link2));
 
         first.show();
         second.show();
@@ -173,8 +181,8 @@ public class XScreenTest {
 
     static class ScreenThatThrowsExceptionOnLayout extends Page {
         RuntimeException e;
-        ScreenThatThrowsExceptionOnLayout(RuntimeException e) {
-            super(PageLink.of("name"));
+        ScreenThatThrowsExceptionOnLayout(PageLink link, RuntimeException e) {
+            super(link);
             this.e = e;
         }
         @Override public XContainer layoutForPortrait() {
@@ -186,7 +194,7 @@ public class XScreenTest {
     public void show_logs_exception_if_one_is_thrown_by_screen() {
         RuntimeException e = new RuntimeException();
         _(); log.log(e);
-        Screen screen = Screen.of(link,new ScreenThatThrowsExceptionOnLayout(e));
+        Screen screen = Screen.of(new ScreenThatThrowsExceptionOnLayout(link,e));
 
         screen.show();
 

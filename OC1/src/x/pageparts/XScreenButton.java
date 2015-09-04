@@ -29,7 +29,7 @@ public final class XScreenButton
 
     private Screen screen() {
         if (page!=null) {
-            return Screen.of(link,page);
+            return Screen.of(page);
         }
         Screen.show(link);
         return Screen.getShowing();
