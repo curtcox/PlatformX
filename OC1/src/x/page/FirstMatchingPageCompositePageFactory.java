@@ -5,7 +5,7 @@ import x.log.ILog;
 import x.log.ILogManager;
 
 /**
- * A PageFactory that delegates to other ScreenFactories.
+ * A PageFactory that returns the first matching page from the factories it contains.
  */
 public final class FirstMatchingPageCompositePageFactory
     implements PageFactory

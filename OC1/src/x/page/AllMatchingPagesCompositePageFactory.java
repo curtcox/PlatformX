@@ -5,7 +5,10 @@ import edu.emory.mathcs.backport.java.util.Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AllMatchingPagesCompositePageFactory
+/**
+ * A PageFactory that returns all of the matching pages from the factories it contains.
+ */
+public final class AllMatchingPagesCompositePageFactory
     implements PageFactory
 {
     private final PageFactory[] factories;
