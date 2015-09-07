@@ -11,6 +11,11 @@ public final class PageLink {
         PageLink create();
     }
 
+    /**
+     * The (possibly null) page this link references.
+     * If the page is null, then the tags and args will be used to find
+     * the matching page or pages.
+     */
     public final Page page;
     public final PageTags tags;
     public final Object[] args;
