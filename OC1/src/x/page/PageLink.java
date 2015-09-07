@@ -11,16 +11,22 @@ public final class PageLink {
         PageLink create();
     }
 
+    public final Page page;
     public final PageTags tags;
     public final Object[] args;
 
-    private PageLink(String screen, Object... args) {
+    private PageLink(Page page, String screen, Object... args) {
+        this.page = page;
         this.tags = PageTags.of(screen);
         this.args = args;
     }
 
+    public static PageLink of(Page page, String name, Object... args) {
+        return new PageLink(page,name);
+    }
+
     public static PageLink of(String name, Object... args) {
-        return new PageLink(name,args);
+        return new PageLink(null,name,args);
     }
 
     public String title() {

@@ -35,7 +35,6 @@ public abstract class SelectionListPage<T>
     private void addSelectionListener() {
         searchList.onSelected(new Action.Listener() {
             public void actionPerformed(Action event) {
-                log("selected " + getSelected());
                 followLink(useSelectedItem(getSelected()));
             }
         });
@@ -56,6 +55,7 @@ public abstract class SelectionListPage<T>
      */
     protected abstract PageLink useSelectedItem(T item);
 
+    @Override
     public String toString() {
         return "SelectionListPage search list=" + searchList;
     }

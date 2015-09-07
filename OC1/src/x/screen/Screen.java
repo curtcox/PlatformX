@@ -76,7 +76,11 @@ public final class Screen {
     }
 
     public static void show(PageLink link) {
-        show(link, pageFactory().create(link));
+        if (link.page!=null) {
+            show(link.page);
+        } else {
+            show(link, pageFactory().create(link));
+        }
     }
 
     public static void show(PageLink link, Page[] pages) {
