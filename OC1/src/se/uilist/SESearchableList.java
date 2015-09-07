@@ -61,4 +61,8 @@ public final class SESearchableList<T>
         return filterListModel.getElementAt(filteredList.getSelectedIndex());
     }
 
+    @Override
+    public String toString() {
+        return "SESearchableList filterListModel=" + filterListModel;
+    }
 }

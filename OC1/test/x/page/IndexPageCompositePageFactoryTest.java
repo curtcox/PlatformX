@@ -3,9 +3,12 @@ package x.page;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
+import x.Registry;
+import x.pagefactories.ItemListPageFactoryFactory;
 import x.uiwidget.XComponent;
 
 import static mach.Mocks._;
+import static mach.Mocks.wild;
 import static org.junit.Assert.*;
 
 public class IndexPageCompositePageFactoryTest  {
@@ -17,12 +20,22 @@ public class IndexPageCompositePageFactoryTest  {
             return null;
         }
     };
+    Page indexPage = new Page(link) {
+        @Override
+        public XComponent layoutForPortrait() {
+            return null;
+        }
+    };
+    ItemListPageFactoryFactory itemListPageFactoryFactory;
+    PageFactory itemListPageFactory;
     IndexPageCompositePageFactory factory;
     PageFactory inner;
 
     @Before
     public void setUp() {
         Mocks.init(this);
+        Registry.put(ItemListPageFactoryFactory.class, itemListPageFactoryFactory);
+
         factory = new IndexPageCompositePageFactory(inner);
     }
 
@@ -56,12 +69,15 @@ public class IndexPageCompositePageFactoryTest  {
     }
 
     @Test
-    public void returns_1_page_when_underlying_factory_returns_multiple_pages() {
+    public void returns_1_index_page_when_underlying_factory_returns_multiple_pages() {
         _(new Page[2]); inner.create(link);
+        _(itemListPageFactory); wild(null); itemListPageFactoryFactory.newFactory(null);
+        _(new Page[] {indexPage}); itemListPageFactory.create(link);
 
         Page[] actual = factory.create(link);
 
-        assertEquals(1,actual.length);
+        assertEquals(1, actual.length);
+        assertSame(indexPage,actual[0]);
     }
 
 }

@@ -55,7 +55,11 @@ public abstract class SelectionListPage<T>
      * @return link for the next screen
      */
     protected abstract PageLink useSelectedItem(T item);
-    
+
+    public String toString() {
+        return "SelectionListPage search list=" + searchList;
+    }
+
     private void log(String message) {
         getLog().log(message);
     }

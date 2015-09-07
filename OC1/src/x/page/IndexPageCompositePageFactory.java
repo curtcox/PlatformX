@@ -1,5 +1,11 @@
 package x.page;
 
+import x.Registry;
+import x.event.XLiveList;
+import x.pagefactories.ItemListPageFactoryFactory;
+
+import java.util.Arrays;
+
 /**
  * A PageFactory that returns either:
  * - a single page from the underlying page factory
@@ -17,6 +23,22 @@ public final class IndexPageCompositePageFactory
     @Override
     public Page[] create(PageLink link) {
         Page[] pages =  inner.create(link);
-        return pages.length > 1 ? new Page[1] : pages;
+        return pages.length > 1 ? indexPage(link,pages) : pages;
+    }
+
+    private Page[] indexPage(PageLink link, Page[] pages) {
+        return indexPageFactory(pages).create(link);
+    }
+
+    private PageFactory indexPageFactory(Page[] pages) {
+        return itemListScreenFactoryFactory().newFactory(liveList(pages));
+    }
+
+    private XLiveList liveList(Page[] pages) {
+        return new XLiveList(Arrays.asList(pages));
+    }
+
+    private static ItemListPageFactoryFactory itemListScreenFactoryFactory() {
+        return Registry.get(ItemListPageFactoryFactory.class);
     }
 }

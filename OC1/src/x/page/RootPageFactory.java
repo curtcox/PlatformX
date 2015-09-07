@@ -27,10 +27,18 @@ public final class RootPageFactory {
     );
 
     public static PageFactory of() {
-        return of(Registry.get(StringMap.class),Registry.get(TaggedStringSources.class));
+        return index(pageFactory());
     }
 
-    public static PageFactory of(StringMap layouts, TaggedStringSources taggedLayouts) {
+    private static PageFactory index(PageFactory factory) {
+        return new IndexPageCompositePageFactory(factory);
+    }
+
+    private static PageFactory pageFactory() {
+        return pageFactory(Registry.get(StringMap.class), Registry.get(TaggedStringSources.class));
+    }
+
+    private static PageFactory pageFactory(StringMap layouts, TaggedStringSources taggedLayouts) {
         return new AllMatchingPagesCompositePageFactory(
                 DeviceInfoPageFactory.of(),
                 LocationSelectionPageFactory.FACTORY,
