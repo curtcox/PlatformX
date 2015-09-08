@@ -12,5 +12,5 @@ public interface ItemListPageFactoryFactory {
      * A LiveList is needed, rather than just a list, so that there is a mechanism
      * to listen for updates.
      */
-    PageFactory newFactory(LiveList values);
+    PageFactory newFactory(LiveList values, ItemToPageLink itemToPageLink);
 }

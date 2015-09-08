@@ -8,6 +8,7 @@ import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.pagefactories.CellConfigurer;
+import x.pagefactories.ItemToPageLink;
 import x.pagefactories.ItemsPage;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;
@@ -18,13 +19,15 @@ final class C1ItemListPageFactory<T>
     implements PageFactory
 {
     final List<T> values;
+    final ItemToPageLink itemToPageLink;
 
-    C1ItemListPageFactory(List<T> values) {
+    C1ItemListPageFactory(List<T> values, ItemToPageLink itemToPageLink) {
         this.values = values;
+        this.itemToPageLink = itemToPageLink;
     }
     
     public Page[] create(PageLink link) {
-        return new Page[] {new ItemsPage(link,newSearchableList())};
+        return new Page[] {new ItemsPage(link,newSearchableList(),itemToPageLink)};
     }     
 
     private XSearchableList<T> newSearchableList() {

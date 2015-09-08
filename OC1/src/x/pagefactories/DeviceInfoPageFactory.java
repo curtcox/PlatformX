@@ -7,7 +7,8 @@ import x.page.PageFactory;
 public final class DeviceInfoPageFactory {
 
     public static PageFactory of() {
-        return itemListScreenFactoryFactory().newFactory(deviceInfo().asDeviceKeyValuePairs());
+        return itemListScreenFactoryFactory()
+                .newFactory(deviceInfo().asDeviceKeyValuePairs(),itemToPageLink());
     }
 
     private static ItemListPageFactoryFactory itemListScreenFactoryFactory() {
@@ -16,5 +17,9 @@ public final class DeviceInfoPageFactory {
 
     private static IDeviceInfo deviceInfo() {
         return Registry.get(IDeviceInfo.class);
+    }
+
+    private static ItemToPageLink itemToPageLink() {
+        return ItemToPageLink.TO_STRING;
     }
 }

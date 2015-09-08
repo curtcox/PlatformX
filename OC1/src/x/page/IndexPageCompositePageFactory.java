@@ -3,6 +3,7 @@ package x.page;
 import x.Registry;
 import x.event.XLiveList;
 import x.pagefactories.ItemListPageFactoryFactory;
+import x.pagefactories.ItemToPageLink;
 
 import java.util.Arrays;
 
@@ -31,7 +32,7 @@ public final class IndexPageCompositePageFactory
     }
 
     private PageFactory indexPageFactory(Page[] pages) {
-        return itemListScreenFactoryFactory().newFactory(liveList(pages));
+        return itemListScreenFactoryFactory().newFactory(liveList(pages), ItemToPageLink.PAGE);
     }
 
     private XLiveList liveList(Page[] pages) {

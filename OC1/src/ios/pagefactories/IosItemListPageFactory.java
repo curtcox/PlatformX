@@ -11,6 +11,7 @@ import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.pagefactories.CellConfigurer;
+import x.pagefactories.ItemToPageLink;
 import x.pagefactories.ItemsPage;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XLabel;
@@ -22,13 +23,15 @@ final class IosItemListPageFactory<T>
     implements PageFactory
 {
     final List<T> values;
+    final ItemToPageLink itemToPageLink;
 
-    IosItemListPageFactory(List<T> values) {
+    IosItemListPageFactory(List<T> values, ItemToPageLink itemToPageLink) {
         this.values = values;
+        this.itemToPageLink = itemToPageLink;
     }
     
     public Page[] create(PageLink link) {
-        return new Page[] {new ItemsPage(link,newSearchableList())};
+        return new Page[] {new ItemsPage(link,newSearchableList(),itemToPageLink)};
     }     
 
     private XSearchableList<T> newSearchableList() {
