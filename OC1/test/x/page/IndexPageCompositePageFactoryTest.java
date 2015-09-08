@@ -71,7 +71,7 @@ public class IndexPageCompositePageFactoryTest  {
     @Test
     public void returns_1_index_page_when_underlying_factory_returns_multiple_pages() {
         _(new Page[2]); inner.create(link);
-        _(itemListPageFactory); wild(null); itemListPageFactoryFactory.newFactory(null,null);
+        _(itemListPageFactory); wild(null,null); itemListPageFactoryFactory.newFactory(null,null);
         _(new Page[] {indexPage}); itemListPageFactory.create(link);
 
         Page[] actual = factory.create(link);

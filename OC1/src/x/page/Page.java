@@ -19,6 +19,20 @@ public abstract class Page {
         this.title = link.title();
     }
 
+    private Page(String title) {
+        this.title = title;
+        link = PageLink.of(this, title);
+    }
+
+    public static final Page withFixedLayout(final String title, final XComponent layout) {
+        return new Page(title) {
+            @Override
+            public XComponent layoutForPortrait() {
+                return layout;
+            }
+        };
+    }
+
     /**
      * This is called whenever the screen is shown.
      * Override it in order to update any screen state that might have
