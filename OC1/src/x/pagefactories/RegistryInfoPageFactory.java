@@ -7,15 +7,15 @@ public final class RegistryInfoPageFactory {
 
     public static PageFactory of() {
         return itemListScreenFactoryFactory()
-                .newFactory(deviceInfo().asKeyValuePairs(),new KeyValuePairToPageLink());
+                .newFactory(registryInfo().asKeyValuePairs(),new KeyValuePairToPageLink());
     }
 
     private static ItemListPageFactoryFactory itemListScreenFactoryFactory() {
         return Registry.get(ItemListPageFactoryFactory.class);
     }
 
-    private static KeyValuePairListSource deviceInfo() {
-        return Registry.get(KeyValuePairListSource.class);
+    private static KeyValuePairListSource registryInfo() {
+        return Registry.get(Registry.class);
     }
 
 }
