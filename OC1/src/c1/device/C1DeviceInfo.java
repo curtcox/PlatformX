@@ -6,7 +6,7 @@ import com.codename1.ui.Form;
 import com.codename1.ui.plaf.LookAndFeel;
 import com.codename1.ui.plaf.UIManager;
 import x.pagefactories.KeyValuePair;
-import x.device.IDeviceInfo;
+import x.device.KeyValuePairListSource;
 import x.device.ReportBuilder;
 import x.event.LiveList;
 
@@ -16,10 +16,10 @@ import java.util.List;
  * For generating a dump of device-specific info.
  */
 public final class C1DeviceInfo
-    implements IDeviceInfo
+    implements KeyValuePairListSource
 {
 
-    public LiveList asDeviceKeyValuePairs() {
+    public LiveList asKeyValuePairs() {
         return buildReport().toKeyValuePairs();
     }
 

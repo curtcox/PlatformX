@@ -6,7 +6,7 @@ import va.ui.VaDisplay;
 import va.ui.VaFormFactory;
 import x.Registry;
 import x.app.CurrentState;
-import x.device.IDeviceInfo;
+import x.device.KeyValuePairListSource;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;
@@ -34,7 +34,7 @@ final class VaRegistryLoader {
 
     static void loadIosPlatform() {
         put(IDisplay.class,         VaDisplay.of());
-        put(IDeviceInfo.class,      new VaDeviceInfo());
+        put(KeyValuePairListSource.class,      new VaDeviceInfo());
     }
 
     static void loadPlatform() {

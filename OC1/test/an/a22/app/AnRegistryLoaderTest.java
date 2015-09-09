@@ -4,7 +4,7 @@ import com.codename1.io.Storage;
 import config.ShouldRun;
 import org.junit.Before;
 import x.Registry;
-import x.device.IDeviceInfo;
+import x.device.KeyValuePairListSource;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.ui.IDisplay;
@@ -36,7 +36,7 @@ public class AnRegistryLoaderTest {
     void loadPlatform() {
         Registry.put(Storage.class, new FakeStorage());
         Registry.put(IDisplay.class, new FakeDisplay());
-        Registry.put(IDeviceInfo.class, new FakeDeviceInfo());
+        Registry.put(KeyValuePairListSource.class, new FakeDeviceInfo());
         AnRegistryLoader.loadPlatform();
     }
 

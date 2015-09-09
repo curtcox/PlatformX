@@ -1,7 +1,7 @@
 package ios.device;
 
 import x.pagefactories.KeyValuePair;
-import x.device.IDeviceInfo;
+import x.device.KeyValuePairListSource;
 import x.device.ReportBuilder;
 import x.event.LiveList;
 
@@ -13,10 +13,10 @@ import java.util.TreeSet;
  * For generating a dump of device-specific info.
  */
 public final class IosDeviceInfo
-    implements IDeviceInfo
+    implements KeyValuePairListSource
 {
 
-    public LiveList asDeviceKeyValuePairs() {
+    public LiveList asKeyValuePairs() {
         return buildReport().toKeyValuePairs();
     }
 

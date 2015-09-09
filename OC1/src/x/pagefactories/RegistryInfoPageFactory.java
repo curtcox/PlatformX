@@ -4,7 +4,7 @@ import x.Registry;
 import x.device.KeyValuePairListSource;
 import x.page.PageFactory;
 
-public final class DeviceInfoPageFactory {
+public final class RegistryInfoPageFactory {
 
     public static PageFactory of() {
         return itemListScreenFactoryFactory()
