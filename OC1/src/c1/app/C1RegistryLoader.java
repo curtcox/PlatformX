@@ -14,7 +14,7 @@ import c1.ui.C1Icons;
 import com.codename1.ui.Display;
 import x.Registry;
 import x.app.CurrentState;
-import x.device.KeyValuePairListSource;
+import x.pagefactories.KeyValuePairListSource;
 import x.domain.ServiceProvider;
 import x.log.ILogManager;
 import x.log.XLogManager;

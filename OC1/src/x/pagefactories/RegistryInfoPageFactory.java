@@ -1,7 +1,6 @@
 package x.pagefactories;
 
 import x.Registry;
-import x.device.KeyValuePairListSource;
 import x.page.PageFactory;
 
 public final class RegistryInfoPageFactory {

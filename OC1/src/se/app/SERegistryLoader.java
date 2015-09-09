@@ -10,7 +10,7 @@ import se.util.SERunner;
 import se.util.SimpleTaggedValueStringMap;
 import se.util.TaggedValueStringMap;
 import x.Registry;
-import x.device.KeyValuePairListSource;
+import x.pagefactories.KeyValuePairListSource;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;

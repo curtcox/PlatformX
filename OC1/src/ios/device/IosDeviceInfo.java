@@ -1,7 +1,7 @@
 package ios.device;
 
 import x.pagefactories.KeyValuePair;
-import x.device.KeyValuePairListSource;
+import x.pagefactories.KeyValuePairListSource;
 import x.device.ReportBuilder;
 import x.event.LiveList;
 

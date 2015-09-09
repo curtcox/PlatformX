@@ -1,7 +1,6 @@
-package x.device;
+package x.pagefactories;
 
 import x.event.LiveList;
-import x.pagefactories.KeyValuePair;
 
 public interface KeyValuePairListSource {
     LiveList<KeyValuePair> asKeyValuePairs();

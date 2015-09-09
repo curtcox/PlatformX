@@ -1,7 +1,7 @@
 package fake;
 
 import x.pagefactories.KeyValuePair;
-import x.device.KeyValuePairListSource;
+import x.pagefactories.KeyValuePairListSource;
 import x.event.LiveList;
 import x.event.XLiveList;
 

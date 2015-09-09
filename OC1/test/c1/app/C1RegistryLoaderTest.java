@@ -10,7 +10,7 @@ import fake.FakeStorage;
 import org.junit.Before;
 import org.junit.Test;
 import x.Registry;
-import x.device.KeyValuePairListSource;
+import x.pagefactories.KeyValuePairListSource;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.net.Network;

@@ -6,7 +6,7 @@ import va.ui.VaDisplay;
 import va.ui.VaFormFactory;
 import x.Registry;
 import x.app.CurrentState;
-import x.device.KeyValuePairListSource;
+import x.pagefactories.KeyValuePairListSource;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;

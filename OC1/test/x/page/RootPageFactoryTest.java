@@ -9,7 +9,7 @@ import fake.FakeUIManager;
 import org.junit.Before;
 import org.junit.Test;
 import x.Registry;
-import x.device.KeyValuePairListSource;
+import x.pagefactories.KeyValuePairListSource;
 import x.log.ILogManager;
 import x.page.dynamic.StringMapAsTaggedStringSources;
 import x.page.dynamic.TaggedStringSources;

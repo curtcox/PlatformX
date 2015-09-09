@@ -6,7 +6,7 @@ import com.codename1.ui.Form;
 import com.codename1.ui.plaf.LookAndFeel;
 import com.codename1.ui.plaf.UIManager;
 import x.pagefactories.KeyValuePair;
-import x.device.KeyValuePairListSource;
+import x.pagefactories.KeyValuePairListSource;
 import x.device.ReportBuilder;
 import x.event.LiveList;
 
