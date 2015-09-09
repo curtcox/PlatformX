@@ -1,6 +1,6 @@
 package ios.device;
 
-import x.device.DeviceKeyValuePair;
+import x.pagefactories.KeyValuePair;
 import x.device.IDeviceInfo;
 import x.device.ReportBuilder;
 import x.event.LiveList;
@@ -31,7 +31,7 @@ public final class IosDeviceInfo
         return out;
     }
 
-    private static List<DeviceKeyValuePair> runtimeInfo() {
+    private static List<KeyValuePair> runtimeInfo() {
         Runtime runtime = Runtime.getRuntime();
         ReportBuilder out = new ReportBuilder();
         out.value("free memory", runtime.freeMemory());
@@ -40,7 +40,7 @@ public final class IosDeviceInfo
         return out.toKeyValuePairs();
     }
 
-    private static List<DeviceKeyValuePair> systemInfo() {
+    private static List<KeyValuePair> systemInfo() {
         Properties properties = System.getProperties();
         ReportBuilder out = new ReportBuilder();
         for (Object key : new TreeSet(properties.keySet())) {

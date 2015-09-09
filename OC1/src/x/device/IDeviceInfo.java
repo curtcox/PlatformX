@@ -1,7 +1,8 @@
 package x.device;
 
 import x.event.LiveList;
+import x.pagefactories.KeyValuePair;
 
 public interface IDeviceInfo {
-    LiveList<DeviceKeyValuePair> asDeviceKeyValuePairs();
+    LiveList<KeyValuePair> asDeviceKeyValuePairs();
 }
