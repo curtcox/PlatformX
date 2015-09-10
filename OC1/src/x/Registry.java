@@ -18,7 +18,7 @@ public final class Registry
 
     private static final Map<Class,Object> values = new HashMap<Class,Object>();
     static {
-        put(Registry.class,new Registry());
+        put(Registry.class, new Registry());
     }
 
     public static <T> T get(Class<T> clazz) {
@@ -34,13 +34,14 @@ public final class Registry
 
     @Override
     public LiveList<KeyValuePair> asKeyValuePairs() {
-        Map map = new HashMap(values);
         List list = new ArrayList();
-        for (Object key : map.keySet()) {
-            String keyString = "" + key;
-            Object value = map.get(key);
-            list.add(new KeyValuePair(keyString,value));
+        for (Object object : values.entrySet()) {
+            list.add(keyValuePair((Map.Entry) object));
         }
         return new XLiveList(list);
+    }
+
+    private KeyValuePair keyValuePair(Map.Entry entry) {
+        return new KeyValuePair("" + entry.getKey(), entry.getValue());
     }
 }
