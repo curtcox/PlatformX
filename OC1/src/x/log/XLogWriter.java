@@ -1,10 +1,16 @@
 package x.log;
 
 import x.Registry;
+import x.event.LiveList;
+import x.event.XLiveList;
+import x.pagefactories.KeyValuePair;
+import x.pagefactories.KeyValuePairListSource;
 
 import java.util.LinkedList;
 
-public final class XLogWriter {
+public final class XLogWriter
+        implements KeyValuePairListSource
+{
 
     LinkedList<String> log = new LinkedList<String>();
     
@@ -28,4 +34,8 @@ public final class XLogWriter {
         return out.toString();
     }
 
+    @Override
+    public LiveList<KeyValuePair> asKeyValuePairs() {
+        return new XLiveList(log);
+    }
 }

@@ -41,6 +41,7 @@ public final class RootPageFactory {
     private static PageFactory pageFactory(StringMap layouts, TaggedStringSources taggedLayouts) {
         return new AllMatchingPagesCompositePageFactory(
                 DeviceInfoPageFactory.of(),
+                LogEntryPageFactory.of(),
                 RegistryInfoPageFactory.of(),
                 LocationSelectionPageFactory.FACTORY,
                 ProviderDetailsPage.FACTORY,
