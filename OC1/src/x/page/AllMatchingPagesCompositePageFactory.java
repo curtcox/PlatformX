@@ -8,12 +8,12 @@ import java.util.List;
 /**
  * A PageFactory that returns all of the matching pages from the factories it contains.
  */
-public final class AllMatchingPagesCompositePageFactory
+final class AllMatchingPagesCompositePageFactory
     implements PageFactory
 {
     private final PageFactory[] factories;
 
-    public AllMatchingPagesCompositePageFactory(PageFactory... factories) {
+    AllMatchingPagesCompositePageFactory(PageFactory... factories) {
         this.factories = factories;
     }
 

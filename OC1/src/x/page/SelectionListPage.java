@@ -57,7 +57,7 @@ public abstract class SelectionListPage<T>
 
     @Override
     public String toString() {
-        return "SelectionListPage search list=" + searchList;
+        return link.title();
     }
 
     private void log(String message) {

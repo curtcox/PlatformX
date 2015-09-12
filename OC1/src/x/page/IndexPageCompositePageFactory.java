@@ -12,12 +12,12 @@ import java.util.Arrays;
  * - a single page from the underlying page factory
  * - an index of the pages from the underlying factory
  */
-public final class IndexPageCompositePageFactory
+final class IndexPageCompositePageFactory
     implements PageFactory
 {
     private final PageFactory inner;
 
-    public IndexPageCompositePageFactory(PageFactory inner) {
+    IndexPageCompositePageFactory(PageFactory inner) {
         this.inner = inner;
     }
 

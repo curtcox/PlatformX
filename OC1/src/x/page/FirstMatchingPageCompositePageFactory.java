@@ -7,12 +7,12 @@ import x.log.ILogManager;
 /**
  * A PageFactory that returns the first matching page from the factories it contains.
  */
-public final class FirstMatchingPageCompositePageFactory
+final class FirstMatchingPageCompositePageFactory
     implements PageFactory
 {
     private final PageFactory[] factories;
     
-    public FirstMatchingPageCompositePageFactory(PageFactory... factories) {
+    FirstMatchingPageCompositePageFactory(PageFactory... factories) {
         this.factories = factories;
     }
     

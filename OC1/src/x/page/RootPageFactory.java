@@ -27,11 +27,7 @@ public final class RootPageFactory {
     );
 
     public static PageFactory of() {
-        return index(pageFactory());
-    }
-
-    private static PageFactory index(PageFactory factory) {
-        return new IndexPageCompositePageFactory(factory);
+        return pageFactory();
     }
 
     private static PageFactory pageFactory() {
@@ -39,7 +35,7 @@ public final class RootPageFactory {
     }
 
     private static PageFactory pageFactory(StringMap layouts, TaggedStringSources taggedLayouts) {
-        return new AllMatchingPagesCompositePageFactory(
+        return new MatchingIndexedPagesCompositePageFactory(
                 DeviceInfoPageFactory.of(),
                 LogEntryPageFactory.of(),
                 RegistryInfoPageFactory.of(),
