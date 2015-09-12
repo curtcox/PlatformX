@@ -30,7 +30,7 @@ final class SEItemListPageFactory<T>
     }
     
     public Page[] create(PageLink link) {
-        return new Page[] {new ItemsPage(tags,link,newSearchableList(),itemToPageLink)};
+        return new Page[] {ItemsPage.of(tags,link,newSearchableList(),itemToPageLink)};
     }     
 
     private XSearchableList<T> newSearchableList() {

@@ -14,10 +14,14 @@ public final class ItemsPage
     final PageTags tagsThatDescribeThisPage;
     final ItemToPageLink howMakeALinkForTheNextSelectedPage;
 
-    public ItemsPage(PageTags tagsThatDescribeThisPage, PageLink linkUsedToGetToThisPage, XSearchableList values, ItemToPageLink howMakeALinkForTheNextSelectedPage) {
+    private ItemsPage(PageTags tagsThatDescribeThisPage, PageLink linkUsedToGetToThisPage, XSearchableList values, ItemToPageLink howMakeALinkForTheNextSelectedPage) {
         super(linkUsedToGetToThisPage,values);
         this.tagsThatDescribeThisPage = tagsThatDescribeThisPage;
         this.howMakeALinkForTheNextSelectedPage = howMakeALinkForTheNextSelectedPage;
+    }
+
+    public static ItemsPage of(PageTags tagsThatDescribeThisPage, PageLink linkUsedToGetToThisPage, XSearchableList values, ItemToPageLink howMakeALinkForTheNextSelectedPage) {
+        return new ItemsPage(tagsThatDescribeThisPage,linkUsedToGetToThisPage,values,howMakeALinkForTheNextSelectedPage);
     }
 
     @Override
