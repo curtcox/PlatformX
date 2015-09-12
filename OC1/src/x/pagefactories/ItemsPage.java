@@ -1,5 +1,6 @@
 package x.pagefactories;
 
+import x.page.Page;
 import x.page.PageLink;
 import x.page.PageTags;
 import x.page.SelectionListPage;
@@ -20,8 +21,14 @@ public final class ItemsPage
         this.howMakeALinkForTheNextSelectedPage = howMakeALinkForTheNextSelectedPage;
     }
 
-    public static ItemsPage of(PageTags tagsThatDescribeThisPage, PageLink linkUsedToGetToThisPage, XSearchableList values, ItemToPageLink howMakeALinkForTheNextSelectedPage) {
-        return new ItemsPage(tagsThatDescribeThisPage,linkUsedToGetToThisPage,values,howMakeALinkForTheNextSelectedPage);
+    public static Page[] of(PageTags tagsThatDescribeThisPage, PageLink linkUsedToGetToThisPage, XSearchableList values, ItemToPageLink howMakeALinkForTheNextSelectedPage) {
+        return new Page[] {
+                new ItemsPage(
+                        tagsThatDescribeThisPage,
+                        linkUsedToGetToThisPage,
+                        values,
+                        howMakeALinkForTheNextSelectedPage)
+        };
     }
 
     @Override
