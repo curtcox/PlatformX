@@ -1,6 +1,7 @@
 package x.pagefactories;
 
 import x.page.PageLink;
+import x.page.PageTags;
 import x.page.SelectionListPage;
 import x.uiwidget.XSearchableList;
 
@@ -10,18 +11,22 @@ import x.uiwidget.XSearchableList;
 public final class ItemsPage
     extends SelectionListPage
 {
+    final PageTags tagsThatDescribeThisPage;
+    final ItemToPageLink howMakeALinkForTheNextSelectedPage;
 
-    final ItemToPageLink itemToPageLink;
-
-    public ItemsPage(PageLink link, XSearchableList values, ItemToPageLink itemToPageLink) {
-        super(link,values);
-        this.itemToPageLink = itemToPageLink;
+    public ItemsPage(PageTags tagsThatDescribeThisPage, PageLink linkUsedToGetToThisPage, XSearchableList values, ItemToPageLink howMakeALinkForTheNextSelectedPage) {
+        super(linkUsedToGetToThisPage,values);
+        this.tagsThatDescribeThisPage = tagsThatDescribeThisPage;
+        this.howMakeALinkForTheNextSelectedPage = howMakeALinkForTheNextSelectedPage;
     }
 
     @Override
     protected PageLink useSelectedItem(Object item) {
-        return itemToPageLink.pageLink(item);
+        return howMakeALinkForTheNextSelectedPage.pageLink(item);
     }
 
-
+    @Override
+    public String toString() {
+        return tagsThatDescribeThisPage.toString();
+    }
 }

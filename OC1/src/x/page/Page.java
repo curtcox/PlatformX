@@ -11,6 +11,9 @@ import x.uiwidget.XComponent;
  */
 public abstract class Page {
 
+    /**
+     * The link used to get to this page.
+     */
     public final PageLink link;
     public final String title;
 

@@ -1,9 +1,6 @@
 package x.page;
 
-import x.Registry;
 import x.event.Action;
-import x.log.ILog;
-import x.log.ILogManager;
 import x.screen.Screen;
 import x.uiwidget.XPeeredComponent;
 import x.uiwidget.XSearchableList;
@@ -55,16 +52,4 @@ public abstract class SelectionListPage<T>
      */
     protected abstract PageLink useSelectedItem(T item);
 
-    @Override
-    public String toString() {
-        return link.title();
-    }
-
-    private void log(String message) {
-        getLog().log(message);
-    }
-
-    private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(SelectionListPage.class);
-    }
 }

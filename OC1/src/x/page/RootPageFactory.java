@@ -45,7 +45,7 @@ public final class RootPageFactory {
                 ServiceProviderSearchScreenFactory.FACTORY,
                 CustomComponentPage.FACTORY,
                 dynamicScreens(layouts),
-                IndexPageFactory.of(index),
+                IndexPageFactory.of(PageTags.of("Index"),index),
                 new LazyPageFactory(taggedLayouts)
         );
     }

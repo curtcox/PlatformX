@@ -3,12 +3,15 @@ package x.pagefactories;
 import x.Registry;
 import x.log.XLogWriter;
 import x.page.PageFactory;
+import x.page.PageTags;
 
 public final class LogEntryPageFactory {
 
     public static PageFactory of() {
-        return itemListScreenFactoryFactory()
-                .newFactory(logEntries().asKeyValuePairs(),new KeyValuePairToPageLink());
+        return itemListScreenFactoryFactory().newFactory(
+                PageTags.of("Log"),
+                logEntries().asKeyValuePairs(),
+                new KeyValuePairToPageLink());
     }
 
     private static ItemListPageFactoryFactory itemListScreenFactoryFactory() {

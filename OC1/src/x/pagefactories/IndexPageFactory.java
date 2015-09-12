@@ -3,11 +3,12 @@ package x.pagefactories;
 import x.Registry;
 import x.event.LiveList;
 import x.page.PageFactory;
+import x.page.PageTags;
 
 public final class IndexPageFactory {
 
-    public static PageFactory of(final LiveList<String> index) {
-        return factoryFactory().newFactory(index,ItemToPageLink.TO_STRING);
+    public static PageFactory of(PageTags tags,final LiveList<String> index) {
+        return factoryFactory().newFactory(tags,index,ItemToPageLink.TO_STRING);
     }
 
     private static ItemListPageFactoryFactory factoryFactory() {

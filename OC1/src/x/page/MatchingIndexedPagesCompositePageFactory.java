@@ -30,21 +30,24 @@ final class MatchingIndexedPagesCompositePageFactory
                 if (pages.length==1) {
                     all.add(pages[0]);
                 } else {
-                    all.addAll(Arrays.asList(indexPage(factory, link, pages)));
+                    all.addAll(Arrays.asList(indexPage(indexTags(factory,link), link, pages)));
                 }
             }
         }
         Page[] pages = all.toArray(new Page[0]);
-        return pages.length > 1 ? indexPage(this,link,pages) : pages;
+        return pages.length > 1 ? indexPage(indexTags(this,link),link,pages) : pages;
     }
 
-    private Page[] indexPage(PageFactory factory, PageLink link, Page[] pages) {
-        PageLink indexLink = PageLink.of(factory + " " + link);
-        return indexPageFactory(pages).create(indexLink);
+    private PageTags indexTags(PageFactory factory, PageLink link) {
+        return PageTags.of(factory + " " + link);
     }
 
-    private PageFactory indexPageFactory(Page[] pages) {
-        return itemListScreenFactoryFactory().newFactory(liveList(pages), ItemToPageLink.PAGE);
+    private Page[] indexPage(PageTags tags, PageLink link, Page[] pages) {
+        return indexPageFactory(tags,pages).create(link);
+    }
+
+    private PageFactory indexPageFactory(PageTags tags, Page[] pages) {
+        return itemListScreenFactoryFactory().newFactory(tags, liveList(pages), ItemToPageLink.PAGE);
     }
 
     private XLiveList liveList(Page[] pages) {

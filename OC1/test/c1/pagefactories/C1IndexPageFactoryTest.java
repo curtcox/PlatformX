@@ -25,7 +25,7 @@ public class C1IndexPageFactoryTest {
     }
 
     static PageFactory indexScreenFactory(String... values) {
-        return IndexPageFactory.of(new XLiveList(Arrays.asList(values)));
+        return IndexPageFactory.of(null,new XLiveList(Arrays.asList(values)));
     }
 
     @Test

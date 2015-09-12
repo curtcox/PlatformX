@@ -7,6 +7,7 @@ import x.event.XLiveList;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
+import x.page.PageTags;
 import x.pagefactories.CellConfigurer;
 import x.pagefactories.ItemToPageLink;
 import x.pagefactories.ItemsPage;
@@ -18,16 +19,18 @@ import java.util.List;
 final class VaItemListPageFactory<T>
     implements PageFactory
 {
+    final PageTags tags;
     final List<T> values;
     final ItemToPageLink itemToPageLink;
 
-    VaItemListPageFactory(List<T> values, ItemToPageLink itemToPageLink) {
+    VaItemListPageFactory(PageTags tags, List<T> values, ItemToPageLink itemToPageLink) {
+        this.tags = tags;
         this.values = values;
         this.itemToPageLink = itemToPageLink;
     }
     
     public Page[] create(PageLink link) {
-        return new Page[] {new ItemsPage(link,newSearchableList(),itemToPageLink)};
+        return new Page[] {new ItemsPage(tags,link,newSearchableList(),itemToPageLink)};
     }     
 
     private XSearchableList<T> newSearchableList() {
