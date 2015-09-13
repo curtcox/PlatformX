@@ -55,7 +55,7 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
     @Before
     public void setUp() {
         Mocks.init(this);
-        _(log); logManager.getLog(AllMatchingPagesCompositePageFactory.class);
+        _(log); logManager.getLog(MatchingIndexedPagesCompositePageFactory.class);
         Registry.put(ItemListPageFactoryFactory.class, itemListPageFactoryFactory);
         Registry.put(ILogManager.class,logManager);
         factory = new MatchingIndexedPagesCompositePageFactory(inner);
@@ -70,7 +70,7 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
 
     @Test
     public void create_return_an_empty_array_when_there_are_no_factories() {
-        PageFactory factory = new AllMatchingPagesCompositePageFactory();
+        PageFactory factory = new MatchingIndexedPagesCompositePageFactory();
 
         Page[] actual = factory.create(link);
 
@@ -79,7 +79,7 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
 
     @Test
     public void create_returns_page_from_only_factory_when_it_matches() {
-        PageFactory factory = new AllMatchingPagesCompositePageFactory(factory1);
+        PageFactory factory = new MatchingIndexedPagesCompositePageFactory(factory1);
 
         _(new Page[] {page1}); factory1.create(link);
 
@@ -91,7 +91,7 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
 
     @Test
     public void create_returns_page_from_1st_factory_when_it_is_the_only_one_that_matches() {
-        PageFactory factory = new AllMatchingPagesCompositePageFactory(factory1,factory2);
+        PageFactory factory = new MatchingIndexedPagesCompositePageFactory(factory1,factory2);
 
         _(new Page[]{page1}); factory1.create(link);
         _(new Page[0]);        factory2.create(link);
@@ -104,7 +104,7 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
 
     @Test
     public void create_returns_page_from_2nd_factory_when_it_is_the_only_one_that_matches() {
-        PageFactory factory = new AllMatchingPagesCompositePageFactory(factory1,factory2);
+        PageFactory factory = new MatchingIndexedPagesCompositePageFactory(factory1,factory2);
 
         _(new Page[0]); factory1.create(link);
         _(new Page[] {page1}); factory2.create(link);
@@ -117,10 +117,12 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
 
     @Test
     public void create_returns_page_from_both_factories_when_they_match() {
-        PageFactory factory = new AllMatchingPagesCompositePageFactory(factory1,factory2);
+        PageFactory factory = new MatchingIndexedPagesCompositePageFactory(factory1,factory2);
 
         _(new Page[] {page1}); factory1.create(link);
         _(new Page[] {page2}); factory2.create(link);
+        _(itemListPageFactory); wild(null, null, null); itemListPageFactoryFactory.newFactory(null, null, null);
+        _(new Page[] {page1,page2}); itemListPageFactory.create(link);
 
         Page[] actual = factory.create(link);
 
@@ -128,7 +130,6 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
         assertSame(page1, actual[0]);
         assertSame(page2, actual[1]);
     }
-
 
     @Test
     public void is_a_PageFactory() {

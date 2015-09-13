@@ -6,7 +6,6 @@ import x.pagefactories.ItemListPageFactoryFactory;
 import x.pagefactories.ItemToPageLink;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -23,6 +22,11 @@ final class MatchingIndexedPagesCompositePageFactory
 
     @Override
     public Page[] create(PageLink link) {
+        Page[] pages = pages(link);
+        return pages.length > 1 ? indexPage(indexTags(this,link),link,pages) : pages;
+    }
+
+    private Page[] pages(PageLink link) {
         List<Page> all = new ArrayList();
         for (PageFactory factory : factories) {
             Page[] pages = factory.create(link);
@@ -30,12 +34,11 @@ final class MatchingIndexedPagesCompositePageFactory
                 if (pages.length==1) {
                     all.add(pages[0]);
                 } else {
-                    all.addAll(Arrays.asList(indexPage(indexTags(factory,link), link, pages)));
+                    all.add(indexPage(indexTags(factory,link), link, pages)[0]);
                 }
             }
         }
-        Page[] pages = all.toArray(new Page[0]);
-        return pages.length > 1 ? indexPage(indexTags(this,link),link,pages) : pages;
+        return all.toArray(new Page[0]);
     }
 
     private PageTags indexTags(PageFactory factory, PageLink link) {
