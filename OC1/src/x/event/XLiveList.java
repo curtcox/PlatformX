@@ -2,10 +2,10 @@ package x.event;
 
 import java.util.*;
 
-public final class XLiveList
-    implements LiveList
+public final class XLiveList<E>
+    implements LiveList<E>
 {
-    private final List list;
+    private final List<E> list;
     private Change.Listener listener;
 
     public XLiveList(List list) {
@@ -22,7 +22,7 @@ public final class XLiveList
     }
 
     @Override
-    public Object get(int index) {
+    public E get(int index) {
         if (index<0) {
             return null;
         }
@@ -35,7 +35,7 @@ public final class XLiveList
     }
 
     @Override
-    public boolean add(Object object) {
+    public boolean add(E object) {
         boolean added = list.add(object);
         if (listener!=null) {
             listener.onChange();
@@ -58,9 +58,9 @@ public final class XLiveList
     public Object[]        toArray(Object[] array) { throw unsupported(); }
     public boolean           remove(Object object) { throw unsupported(); }
     public void                            clear() { throw unsupported(); }
-    public Object set(int location, Object object) { throw unsupported(); }
-    public void   add(int location, Object object) { throw unsupported(); }
-    public Object             remove(int location) { throw unsupported(); }
+    public E set(int location, E object) { throw unsupported(); }
+    public void   add(int location, E object) { throw unsupported(); }
+    public E             remove(int location) { throw unsupported(); }
     public int              indexOf(Object object) { throw unsupported(); }
     public int          lastIndexOf(Object object) { throw unsupported(); }
     public ListIterator             listIterator() { throw unsupported(); }
