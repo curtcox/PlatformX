@@ -17,7 +17,7 @@ final class Invocation {
     final List<Object> args = new ArrayList();
     final List<Object> wildcards = new ArrayList();
 
-    public Invocation(Object proxy, Method method, Object[] args, Object[] wildcards) {
+    Invocation(Object proxy, Method method, Object[] args, Object[] wildcards) {
         this.proxy = proxy;
         this.method = method;
         if (args!=null) {
@@ -46,12 +46,22 @@ final class Invocation {
     }
 
     private boolean argValuesMatch(Invocation that) {
-        return args.equals(that.args) || sameWithWildcardMatches(that);
+        return areEqual(args,that.args) || sameWithWildcardMatches(that);
+    }
+
+    private boolean areEqual(Object a, Object b) {
+        if (a==null && b==null) {
+            return false;
+        }
+        if (a!=null && b!=null) {
+            return a.equals(b);
+        }
+        return false;
     }
 
     private boolean sameWithWildcardMatches(Invocation that) {
         for (int i=0; i<args.size(); i++) {
-            if (!isWild(i) && !that.isWild(i) && !args.get(i).equals(that.args.get(i))) {
+            if (!isWild(i) && !that.isWild(i) && !areEqual(args.get(i),that.args.get(i))) {
                 return false;
             }
         }

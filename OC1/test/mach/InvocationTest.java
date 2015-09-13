@@ -29,14 +29,23 @@ public class InvocationTest {
 
         assertSame(proxy,invocation.proxy);
         assertSame(method,invocation.method);
-        assertEquals(0,invocation.args.size());
+        assertEquals(0, invocation.args.size());
+    }
+
+    private Invocation withArgs(Object[] args) {
+        return new Invocation(proxy,method,args,null);
+    }
+
+    private Invocation withArgsWild(Object[] args, Object[] wild) {
+        return new Invocation(proxy,method,args,wild);
     }
 
     @Test
     public void can_create_with_null_wildcard_array() {
-        new Invocation(proxy,method,args(),null);
-        new Invocation(proxy,method,args(1),null);
-        new Invocation(proxy,method,args(1,2),null);
+        withArgs(args());
+        withArgs(args(1));
+        withArgs(args(1,2));
+        withArgs(args(1,2,3));
     }
 
     @Test
@@ -61,21 +70,36 @@ public class InvocationTest {
 
     @Test
     public void equal_values_are_equals_when_there_are_no_wildcards() {
-        assertEqual(new Invocation(proxy, method, args(), null), new Invocation(proxy, method, args(), null));
-        assertEqual(new Invocation(proxy, method, args(""), null), new Invocation(proxy, method, args(""), null));
-        assertEqual(new Invocation(proxy, method, args(new ArrayList()), null), new Invocation(proxy, method, args(Collections.emptyList()), null));
+        assertEqual(withArgs( args()), withArgs(args()));
+        assertEqual(withArgs(args("")), withArgs(args("")));
+        assertEqual(withArgs(args(new ArrayList())), withArgs(args(Collections.emptyList())));
     }
 
     @Test
     public void equal_values_are_equals_when_there_are_wildcards() {
-        assertEquals(new Invocation(proxy,method,args("x"),wild("z")),new Invocation(proxy,method,args("x"),wild("y")));
+        assertEqual(withArgsWild(args("x"),      wild("z")),      withArgsWild( args("x"),      wild("y")));
+        assertEqual(withArgsWild(args("x", "y"), wild("*", "*")), withArgsWild( args("x", "y"), wild("", "")));
+    }
+
+    @Test
+    public void equal_values_are_equals_when_wildcards_are_null() {
+        assertEqual(withArgsWild(args("x"),        wild(null)),          withArgsWild(args("x"),        wild(null)));
+        assertEqual(withArgsWild(args("x","y"),    wild(null,null)),     withArgsWild(args("x","y"),    wild(null,null)));
+        assertEqual(withArgsWild(args("x","y","z"),wild(null,null,null)),withArgsWild(args("x","y","z"),wild(null,null,null)));
+    }
+
+    @Test
+    public void null_values_are_equals_when_wildcards_are_null() {
+        assertEqual(withArgsWild(args("x"),        wild(null)),          withArgsWild(args(null),          wild(null)));
+        assertEqual(withArgsWild(args("x","y"),    wild(null,null)),     withArgsWild(args(null,null),     wild(null,null)));
+        assertEqual(withArgsWild(args("x","y","z"),wild(null,null,null)),withArgsWild(args(null,null,null),wild(null,null,null)));
     }
 
     @Test
     public void equal_values_are_equals_when_there_are_wildcards_in_unequal_spots() {
-        assertEqual(new Invocation(proxy, method, args("x"), wild("x")), new Invocation(proxy, method, args("y"), null));
-        assertEqual(new Invocation(proxy, method, args("x"), wild("x")), new Invocation(proxy, method, args("y"), wild("z")));
-        assertEqual(new Invocation(proxy, method, args("f", "*", "x"), wild("", "*", "")), new Invocation(proxy, method, args("f", "o", "x"), wild("", "", "")));
+        assertEqual(withArgsWild( args("x"),           wild("x")),         withArgsWild( args("y"),           null));
+        assertEqual(withArgsWild( args("x"),           wild("x")),         withArgsWild( args("y"),           wild("z")));
+        assertEqual(withArgsWild( args("f", "*", "x"), wild("", "*", "")), withArgsWild( args("f", "o", "x"), wild("", "", "")));
     }
 
     private void assertEqual(Invocation a, Invocation b) {
@@ -92,8 +116,10 @@ public class InvocationTest {
 
     @Test
     public void different_arguments_are_not_equal() {
-        assertFalse(new Invocation(proxy, method,args(),null).equals(new Invocation(proxy, method,args(null),null)));
-        assertFalse(new Invocation(proxy, method,args(0),null).equals(new Invocation(proxy, method,args(1),null)));
+        assertFalse(withArgs(args()).equals(withArgs(args(null))));
+        assertFalse(withArgs(args(0)).equals(withArgs( args(1))));
+        assertFalse(withArgs(args("")).equals(withArgs( args(null))));
+        assertFalse(withArgs(args(null)).equals(withArgs( args(""))));
     }
 
     @Test
