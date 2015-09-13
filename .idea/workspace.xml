@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/test/x/page/MatchingIndexedPagesCompositePageFactoryTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/Invocation.java" afterPath="$PROJECT_DIR$/OC1/test/mach/Invocation.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" afterPath="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/util/Objects.java" afterPath="$PROJECT_DIR$/OC1/src/x/util/Objects.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/util/ObjectsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/util/ObjectsTest.java" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -36,25 +36,36 @@
     <favorites_list name="OysterCracker" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.49114582">
+    <splitter split-orientation="horizontal" split-proportion="0.5875">
       <split-first>
         <leaf>
-          <file leaf-file-name="MatchingIndexedPagesCompositePageFactoryTest.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="MatchingIndexedPagesCompositePageFactoryTest.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/OC1/test/x/page/MatchingIndexedPagesCompositePageFactoryTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+                <state vertical-scroll-proportion="0.18205805">
+                  <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="InvocationTest.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="InvocationTest.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/OC1/test/mach/InvocationTest.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.024011299">
-                  <caret line="13" column="54" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
-                  <folding />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="119" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+                  <folding>
+                    <element signature="e#471#472#0" expanded="true" />
+                    <element signature="e#513#514#0" expanded="true" />
+                    <element signature="e#844#845#0" expanded="true" />
+                    <element signature="e#905#906#0" expanded="true" />
+                    <element signature="e#974#975#0" expanded="true" />
+                    <element signature="e#1035#1036#0" expanded="true" />
+                    <element signature="e#4705#4706#0" expanded="true" />
+                    <element signature="e#4747#4748#0" expanded="true" />
+                    <element signature="e#5033#5034#0" expanded="true" />
+                    <element signature="e#5068#5069#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -63,14 +74,48 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Invocation.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Invocation.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/OC1/test/mach/Invocation.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.84322035">
-                  <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
                   <folding>
                     <element signature="e#1128#1129#0" expanded="true" />
                     <element signature="e#1195#1196#0" expanded="true" />
+                    <element signature="e#1250#1251#0" expanded="true" />
+                    <element signature="e#1302#1303#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Objects.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/x/util/Objects.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.7757256">
+                  <caret line="36" column="81" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ObjectsTest.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/OC1/test/x/util/ObjectsTest.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0">
+                  <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#338#339#0" expanded="true" />
+                    <element signature="e#377#378#0" expanded="true" />
+                    <element signature="e#2480#2481#0" expanded="true" />
+                    <element signature="e#2518#2519#0" expanded="true" />
+                    <element signature="e#3049#3050#0" expanded="true" />
+                    <element signature="e#3105#3106#0" expanded="true" />
+                    <element signature="e#3600#3601#0" expanded="true" />
+                    <element signature="e#3642#3643#0" expanded="true" />
+                    <element signature="e#3928#3929#0" expanded="true" />
+                    <element signature="e#3963#3964#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -99,8 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/x/page/FirstMatchingPageCompositePageFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/src/x/page/IndexPageFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SEUIList.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/screen/Screen.java" />
@@ -150,6 +193,8 @@
         <option value="$PROJECT_DIR$/OC1/test/x/page/MatchingIndexedPagesCompositePageFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/Invocation.java" />
         <option value="$PROJECT_DIR$/OC1/test/mach/InvocationTest.java" />
+        <option value="$PROJECT_DIR$/OC1/test/x/util/ObjectsTest.java" />
+        <option value="$PROJECT_DIR$/OC1/src/x/util/Objects.java" />
       </list>
     </option>
   </component>
@@ -315,11 +360,11 @@
       <recent name="x.screen" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="x.util" />
       <recent name="x.page" />
       <recent name="an.a22.uiwidget" />
       <recent name="va.uilist" />
       <recent name="org.robovm.objc" />
-      <recent name="org.robovm.rt" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="x.page" />
@@ -329,31 +374,8 @@
       <recent name="va.ui" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.MatchingIndexedPagesCompositePageFactoryTest.returns_1_index_page_when_underlying_factory_returns_multiple_pages">
+  <component name="RunManager" selected="JUnit.MatchingIndexedPagesCompositePageFactoryTest">
     <configuration default="false" name="All in OC1 (4)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="OC1" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="package" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="All in OC1 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="OC1" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -442,6 +464,32 @@
       <option name="MAIN_CLASS_NAME" value="x.page.MatchingIndexedPagesCompositePageFactoryTest" />
       <option name="METHOD_NAME" value="returns_1_index_page_when_underlying_factory_returns_multiple_pages" />
       <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ObjectsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="x.util.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="OC1" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="x.util" />
+      <option name="MAIN_CLASS_NAME" value="x.util.ObjectsTest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -635,18 +683,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Application.SEApplication" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.All in OC1 (4)" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.All in OC1 (1)" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.MatchingIndexedPagesCompositePageFactoryTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.InvocationTest" />
-      <item index="5" class="java.lang.String" itemvalue="JUnit.MatchingIndexedPagesCompositePageFactoryTest.returns_1_index_page_when_underlying_factory_returns_multiple_pages" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.MatchingIndexedPagesCompositePageFactoryTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.InvocationTest" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.MatchingIndexedPagesCompositePageFactoryTest.returns_1_index_page_when_underlying_factory_returns_multiple_pages" />
+      <item index="5" class="java.lang.String" itemvalue="JUnit.ObjectsTest" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.MatchingIndexedPagesCompositePageFactoryTest.returns_1_index_page_when_underlying_factory_returns_multiple_pages" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.MatchingIndexedPagesCompositePageFactoryTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.InvocationTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.All in OC1 (4)" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.All in OC1 (1)" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.MatchingIndexedPagesCompositePageFactoryTest" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.InvocationTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ObjectsTest" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.MatchingIndexedPagesCompositePageFactoryTest.returns_1_index_page_when_underlying_factory_returns_multiple_pages" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.All in OC1 (4)" />
       </list>
     </recent_temporary>
   </component>
@@ -670,7 +718,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -680,7 +728,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2391094" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2391094" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.13802083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -688,7 +736,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2875121" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2875121" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -772,27 +820,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/log/C1IssueReporter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6177924">
-          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63131315">
-          <caret line="50" column="66" selection-start-line="50" selection-start-column="66" selection-end-line="50" selection-end-column="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/log/XLogWriter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07413509">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/x/log/XLog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.07413509">
@@ -1176,14 +1203,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/MatchingIndexedPagesCompositePageFactoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/x/page/MatchingIndexedPagesCompositePageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1192,22 +1211,82 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/mach/Invocation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="31" selection-start-line="47" selection-start-column="31" selection-end-line="47" selection-end-column="31" />
+          <folding>
+            <element signature="e#1128#1129#0" expanded="true" />
+            <element signature="e#1195#1196#0" expanded="true" />
+            <element signature="e#1250#1251#0" expanded="true" />
+            <element signature="e#1302#1303#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/test/mach/InvocationTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.024011299">
-          <caret line="13" column="54" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="119" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="119" selection-end-column="0" />
+          <folding>
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#513#514#0" expanded="true" />
+            <element signature="e#844#845#0" expanded="true" />
+            <element signature="e#905#906#0" expanded="true" />
+            <element signature="e#974#975#0" expanded="true" />
+            <element signature="e#1035#1036#0" expanded="true" />
+            <element signature="e#4705#4706#0" expanded="true" />
+            <element signature="e#4747#4748#0" expanded="true" />
+            <element signature="e#5033#5034#0" expanded="true" />
+            <element signature="e#5068#5069#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.8.0/src.zip!/java/util/Arrays.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33245382">
+          <caret line="3798" column="30" selection-start-line="3798" selection-start-column="30" selection-end-line="3798" selection-end-column="30" />
+          <folding>
+            <element signature="e#177013#177014#0" expanded="true" />
+            <element signature="e#177054#177055#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/test/x/util/ObjectsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#2480#2481#0" expanded="true" />
+            <element signature="e#2518#2519#0" expanded="true" />
+            <element signature="e#3049#3050#0" expanded="true" />
+            <element signature="e#3105#3106#0" expanded="true" />
+            <element signature="e#3600#3601#0" expanded="true" />
+            <element signature="e#3642#3643#0" expanded="true" />
+            <element signature="e#3928#3929#0" expanded="true" />
+            <element signature="e#3963#3964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/x/util/Objects.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7757256">
+          <caret line="36" column="81" selection-start-line="36" selection-start-column="81" selection-end-line="36" selection-end-column="81" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/test/mach/Invocation.java">
+    <entry file="file://$PROJECT_DIR$/OC1/test/x/page/MatchingIndexedPagesCompositePageFactoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84322035">
-          <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="e#1128#1129#0" expanded="true" />
-            <element signature="e#1195#1196#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.18205805">
+          <caret line="10" column="30" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>

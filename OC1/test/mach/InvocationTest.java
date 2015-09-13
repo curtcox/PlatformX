@@ -70,29 +70,60 @@ public class InvocationTest {
 
     @Test
     public void equal_values_are_equals_when_there_are_no_wildcards() {
-        assertEqual(withArgs( args()), withArgs(args()));
-        assertEqual(withArgs(args("")), withArgs(args("")));
+        assertEqual(withArgs( args()),               withArgs(args()));
+        assertEqual(withArgs(args("")),              withArgs(args("")));
         assertEqual(withArgs(args(new ArrayList())), withArgs(args(Collections.emptyList())));
     }
 
     @Test
     public void equal_values_are_equals_when_there_are_wildcards() {
-        assertEqual(withArgsWild(args("x"),      wild("z")),      withArgsWild( args("x"),      wild("y")));
-        assertEqual(withArgsWild(args("x", "y"), wild("*", "*")), withArgsWild( args("x", "y"), wild("", "")));
+        assertEqual(withArgsWild(args("x"),      wild("z")),      withArgsWild(args("x"),      wild("y")));
+        assertEqual(withArgsWild(args("x", "y"), wild("*", "*")), withArgsWild(args("x", "y"), wild("", "")));
     }
 
     @Test
     public void equal_values_are_equals_when_wildcards_are_null() {
-        assertEqual(withArgsWild(args("x"),        wild(null)),          withArgsWild(args("x"),        wild(null)));
-        assertEqual(withArgsWild(args("x","y"),    wild(null,null)),     withArgsWild(args("x","y"),    wild(null,null)));
-        assertEqual(withArgsWild(args("x","y","z"),wild(null,null,null)),withArgsWild(args("x","y","z"),wild(null,null,null)));
+        assertEqual(withArgsWild(args("x"),           wild(null)),            withArgsWild(args("x"),           wild(null)));
+        assertEqual(withArgsWild(args("x", "y"),      wild(null, null)),      withArgsWild(args("x", "y"),      wild(null, null)));
+        assertEqual(withArgsWild(args("x", "y", "z"), wild(null, null, null)),withArgsWild(args("x", "y", "z"), wild(null, null, null)));
     }
 
     @Test
     public void null_values_are_equals_when_wildcards_are_null() {
-        assertEqual(withArgsWild(args("x"),        wild(null)),          withArgsWild(args(null),          wild(null)));
-        assertEqual(withArgsWild(args("x","y"),    wild(null,null)),     withArgsWild(args(null,null),     wild(null,null)));
-        assertEqual(withArgsWild(args("x","y","z"),wild(null,null,null)),withArgsWild(args(null,null,null),wild(null,null,null)));
+        assertEqual(withArgsWild(args("x"),           wild(null)),             withArgsWild(args(null),             wild(null)));
+        assertEqual(withArgsWild(args("x", "y"),      wild(null, null)),       withArgsWild(args(null, null),       wild(null, null)));
+        assertEqual(withArgsWild(args("x", "y", "z"), wild(null, null, null)), withArgsWild(args(null, null, null), wild(null, null, null)));
+    }
+
+    @Test
+    public void equal_values_are_equals_when_wildcards_are_null_and_values_balk_at_null_comparison() {
+        assertEqual(withArgsWild(args(x("x")),                 wild(null)),             withArgsWild(args(x("x")),                 wild(null)));
+        assertEqual(withArgsWild(args(x("x"), x("y")),         wild(null, null)),       withArgsWild(args(x("x"), x("y")),         wild(null, null)));
+        assertEqual(withArgsWild(args(x("x"), x("y"), x("z")), wild(null, null, null)), withArgsWild(args(x("x"), x("y"), x("z")), wild(null, null, null)));
+    }
+
+    @Test
+    public void null_values_are_equals_when_wildcards_are_null_and_values_balk_at_null_comparison() {
+        assertEqual(withArgsWild(args(x("x")),                 wild(null)),             withArgsWild(args(null), wild(null)));
+        assertEqual(withArgsWild(args(x("x"), x("y")),         wild(null, null)),       withArgsWild(args(null, null), wild(null, null)));
+        assertEqual(withArgsWild(args(x("x"), x("y"), x("z")), wild(null, null, null)), withArgsWild(args(null, null, null), wild(null, null, null)));
+    }
+
+    static class X {
+        final Object value;
+        X(Object value) {
+            this.value = value;
+        }
+        @Override
+        public boolean equals(Object o) {
+            // Despite "Effective Java" this is the form of equals implementation I usually want.
+            X that = (X) o;
+            return value.equals(that.value);
+        }
+    }
+
+    private X x(final String value) {
+        return new X(value);
     }
 
     @Test

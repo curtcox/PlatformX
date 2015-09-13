@@ -46,22 +46,12 @@ final class Invocation {
     }
 
     private boolean argValuesMatch(Invocation that) {
-        return areEqual(args,that.args) || sameWithWildcardMatches(that);
-    }
-
-    private boolean areEqual(Object a, Object b) {
-        if (a==null && b==null) {
-            return false;
-        }
-        if (a!=null && b!=null) {
-            return a.equals(b);
-        }
-        return false;
+        return Objects.areEqual(args, that.args) || sameWithWildcardMatches(that);
     }
 
     private boolean sameWithWildcardMatches(Invocation that) {
         for (int i=0; i<args.size(); i++) {
-            if (!isWild(i) && !that.isWild(i) && !areEqual(args.get(i),that.args.get(i))) {
+            if (!isWild(i) && !that.isWild(i) && !Objects.areEqual(args.get(i), that.args.get(i))) {
                 return false;
             }
         }
