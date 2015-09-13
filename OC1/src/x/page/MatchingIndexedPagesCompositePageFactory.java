@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A PageFactory that returns all of the matching pages from the factories it contains.
+ * A PageFactory that returns all of the matching pagesFromAllFactories from the factories it contains.
  */
 final class MatchingIndexedPagesCompositePageFactory
     implements PageFactory
@@ -22,20 +22,19 @@ final class MatchingIndexedPagesCompositePageFactory
 
     @Override
     public Page[] create(PageLink link) {
-        Page[] pages = pages(link);
+        return ensureSinglePage(pagesFromAllFactories(link),link);
+    }
+
+    private Page[] ensureSinglePage(Page[] pages, PageLink link) {
         return pages.length > 1 ? indexPage(indexTags(this,link),link,pages) : pages;
     }
 
-    private Page[] pages(PageLink link) {
+    private Page[] pagesFromAllFactories(PageLink link) {
         List<Page> all = new ArrayList();
         for (PageFactory factory : factories) {
             Page[] pages = factory.create(link);
             if (pages.length>0) {
-                if (pages.length==1) {
-                    all.add(pages[0]);
-                } else {
-                    all.add(indexPage(indexTags(factory,link), link, pages)[0]);
-                }
+                all.add(ensureSinglePage(pages,link)[0]);
             }
         }
         return all.toArray(new Page[0]);
