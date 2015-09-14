@@ -25,7 +25,7 @@ import static org.junit.Assume.assumeTrue;
 public class AnSearchableListTest {
 
     List list = new ArrayList();
-    LiveList items = new XLiveList(list);
+    LiveList items = XLiveList.of(list);
     View action;
     IXListCell.ConfigProducer configurer;
 

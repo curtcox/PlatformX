@@ -38,7 +38,7 @@ public final class Registry
         for (Object object : values.entrySet()) {
             list.add(keyValuePair((Map.Entry) object));
         }
-        return new XLiveList(list);
+        return XLiveList.of(list);
     }
 
     private KeyValuePair keyValuePair(Map.Entry entry) {

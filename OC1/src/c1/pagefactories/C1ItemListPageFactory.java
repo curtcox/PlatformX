@@ -34,7 +34,7 @@ final class C1ItemListPageFactory<T>
     }     
 
     private XSearchableList<T> newSearchableList() {
-        C1SearchableList<T> list = new C1SearchableList(new XLiveList(values),new Label(),new CellConfigurer());
+        C1SearchableList<T> list = new C1SearchableList(XLiveList.of(values),new Label(),new CellConfigurer());
         C1SearchFilterInstaller.c1SpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }

@@ -10,6 +10,8 @@ import org.junit.Test;
 import x.event.XLiveList;
 import x.uilist.ListFilter;
 
+import java.util.ArrayList;
+
 import static mach.Mocks.verify;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -20,7 +22,7 @@ public class C1FilterListModelTest {
     DataChangedListener listDataListener;
     SelectionListener selectionlistener;
 
-    XLiveList listModel = new XLiveList();
+    XLiveList listModel = XLiveList.of(new ArrayList());
     C1FilterListModel testObject = C1FilterListModel.of(listModel);
 
     @Before

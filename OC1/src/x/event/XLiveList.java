@@ -8,12 +8,12 @@ public final class XLiveList<E>
     private final List<E> list;
     private Change.Listener listener;
 
-    public XLiveList(List list) {
+    private XLiveList(List list) {
         this.list = new ArrayList(list);
     }
 
-    public XLiveList() {
-        this(new ArrayList());
+    public static XLiveList of(List list) {
+        return new XLiveList(list);
     }
 
     @Override

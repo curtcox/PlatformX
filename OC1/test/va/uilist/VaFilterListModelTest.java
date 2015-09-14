@@ -18,7 +18,7 @@ import static org.junit.Assume.assumeTrue;
 
 public class VaFilterListModelTest {
 
-    XLiveList listModel = new XLiveList();
+    XLiveList listModel = XLiveList.of(new ArrayList());
 
     IXListCell.ConfigProducer producer;
     VaFilterListModel testObject;

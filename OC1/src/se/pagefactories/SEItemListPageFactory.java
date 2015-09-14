@@ -34,7 +34,7 @@ final class SEItemListPageFactory<T>
     }     
 
     private XSearchableList<T> newSearchableList() {
-        SESearchableList<T> list = SESearchableList.of(new XLiveList(values),new JLabel(),new CellConfigurer());
+        SESearchableList<T> list = SESearchableList.of(XLiveList.of(values),new JLabel(),new CellConfigurer());
         SESearchFilterInstaller.seSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }

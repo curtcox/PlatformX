@@ -36,6 +36,6 @@ public final class XLogWriter
 
     @Override
     public LiveList<KeyValuePair> asKeyValuePairs() {
-        return new XLiveList(log);
+        return XLiveList.of(log);
     }
 }

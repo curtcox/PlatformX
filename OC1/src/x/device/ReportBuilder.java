@@ -4,6 +4,7 @@ import x.event.LiveList;
 import x.event.XLiveList;
 import x.pagefactories.KeyValuePair;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,7 +12,7 @@ import java.util.List;
  */
 public final class ReportBuilder {
 
-    final LiveList list = new XLiveList();
+    final List<KeyValuePair> list = new ArrayList<KeyValuePair>();
     final StringBuilder out = new StringBuilder();
 
     public void value(String key, Object value) {
@@ -34,6 +35,6 @@ public final class ReportBuilder {
     }
 
     public LiveList<KeyValuePair> toKeyValuePairs() {
-        return list;
+        return XLiveList.of(list);
     }
 }

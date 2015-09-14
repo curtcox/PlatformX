@@ -36,7 +36,7 @@ final class AnItemListPageFactory<T>
     }     
 
     private XSearchableList<T> newSearchableList() {
-        AnSearchableList<T> list = AnSearchableList.of(new XLiveList(values),new TextView(context()),new CellConfigurer());
+        AnSearchableList<T> list = AnSearchableList.of(XLiveList.of(values),new TextView(context()),new CellConfigurer());
         AnSearchFilterInstaller.anSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }

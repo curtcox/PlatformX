@@ -16,6 +16,7 @@ import javax.swing.event.ListDataListener;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -25,7 +26,7 @@ public class SESearchFilterInstallerTest {
 
     Change.Listener listener;
     ListDataListener listDataListener;
-    LiveList items = new XLiveList();
+    LiveList items = XLiveList.of(new ArrayList());
     JComponent action =  new JLabel();
     IXListCell.ConfigProducer configurer;
     SESearchableList searchableList = SESearchableList.of(items,action,configurer);

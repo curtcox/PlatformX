@@ -25,7 +25,7 @@ public class VaIndexPageFactoryTest {
     }
 
     static PageFactory indexScreenFactory(String... values) {
-        return IndexPageFactory.of(null,new XLiveList(Arrays.asList(values)));
+        return IndexPageFactory.of(null,XLiveList.of(Arrays.asList(values)));
     }
 
     @Test

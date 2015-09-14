@@ -5,6 +5,8 @@ import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
+
 import static mach.Mocks.verify;
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
@@ -12,7 +14,7 @@ import static org.junit.Assume.assumeTrue;
 public class XLiveListTest {
 
     Change.Listener changeListener;
-    XLiveList testObject = new XLiveList();
+    XLiveList testObject = XLiveList.of(new ArrayList());
 
     @Before
     public void setUp() {

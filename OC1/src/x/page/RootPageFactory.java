@@ -20,7 +20,7 @@ import java.util.Arrays;
  */
 public final class RootPageFactory {
 
-    private static LiveList index = new XLiveList(Arrays.asList(
+    private static LiveList index = XLiveList.of(Arrays.asList(
             "Device_Info",
             "LocationSelection", "ProviderDetails",
             "Filter", "Search", "Custom")

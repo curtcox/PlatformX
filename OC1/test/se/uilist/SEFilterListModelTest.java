@@ -10,6 +10,8 @@ import x.uilist.ListFilter;
 
 import javax.swing.event.ListDataListener;
 
+import java.util.ArrayList;
+
 import static mach.Mocks.*;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -18,7 +20,7 @@ import static org.junit.Assume.assumeTrue;
 public class SEFilterListModelTest {
 
     ListDataListener listDataListener;
-    LiveList listModel = new XLiveList();
+    LiveList listModel = XLiveList.of(new ArrayList());
     SEFilterListModel testObject = SEFilterListModel.of(listModel);
 
     @Before

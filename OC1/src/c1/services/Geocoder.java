@@ -25,7 +25,7 @@ public final class Geocoder
         for (GoogleLocation location : geocoding.searchFor(place)) {
             locations.add(locationFromGoogle(location));
         }
-        return new XLiveList(locations);
+        return XLiveList.of(locations);
     }
 
     private LocationDescription locationFromGoogle(GoogleLocation place) {

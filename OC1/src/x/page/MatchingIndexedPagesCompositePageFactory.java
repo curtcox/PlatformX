@@ -53,7 +53,7 @@ final class MatchingIndexedPagesCompositePageFactory
     }
 
     private XLiveList liveList(Page[] pages) {
-        return new XLiveList(java.util.Arrays.asList(pages));
+        return XLiveList.of(java.util.Arrays.asList(pages));
     }
 
     private static ItemListPageFactoryFactory itemListScreenFactoryFactory() {

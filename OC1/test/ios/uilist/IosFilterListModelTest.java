@@ -10,6 +10,7 @@ import x.event.XLiveList;
 import x.uilist.IXListCell;
 import x.uilist.ListFilter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import static mach.Mocks._;
@@ -18,7 +19,7 @@ import static org.junit.Assume.assumeTrue;
 
 public class IosFilterListModelTest {
 
-    XLiveList listModel = new XLiveList();
+    XLiveList listModel = XLiveList.of(new ArrayList());
     IXListCell.ConfigProducer configurer;
     IosBasicListCellRenderer renderer;
 

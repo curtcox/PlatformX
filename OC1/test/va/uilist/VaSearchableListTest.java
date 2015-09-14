@@ -19,7 +19,7 @@ import static org.junit.Assume.assumeTrue;
 public class VaSearchableListTest {
 
     List list = new ArrayList();
-    LiveList items = new XLiveList(list);
+    LiveList items = XLiveList.of(list);
     UIViewController action;
     IXListCell.ConfigProducer configurer;
 

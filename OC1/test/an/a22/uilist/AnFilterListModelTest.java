@@ -12,6 +12,8 @@ import x.event.XLiveList;
 import x.uilist.IXListCell;
 import x.uilist.ListFilter;
 
+import java.util.ArrayList;
+
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
@@ -21,7 +23,7 @@ public class AnFilterListModelTest {
 
     FakeDataSetObserver listDataListener = new FakeDataSetObserver();
     IXListCell.ConfigProducer configurer;
-    XLiveList listModel = new XLiveList();
+    XLiveList listModel = XLiveList.of(new ArrayList());
     AnFilterListModel testObject;
 
     @Before
