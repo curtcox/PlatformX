@@ -1,19 +1,30 @@
 package x.event;
 
-import java.util.*;
+import x.util.Translator;
+
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
 public final class XLiveList<E>
     implements LiveList<E>
 {
     private final List<E> list;
+    private final Translator translator;
     private Change.Listener listener;
 
-    private XLiveList(List list) {
-        this.list = new ArrayList(list);
+    private XLiveList(List list, Translator translator) {
+        this.list = list;
+        this.translator = translator;
+    }
+
+    public static XLiveList of(List list, Translator translator) {
+        return new XLiveList(list,translator);
     }
 
     public static XLiveList of(List list) {
-        return new XLiveList(list);
+        return new XLiveList(list,Translator.IDENTITY);
     }
 
     @Override
@@ -26,7 +37,7 @@ public final class XLiveList<E>
         if (index<0) {
             return null;
         }
-        return list.get(index);
+        return (E) translator.translate(list.get(index));
     }
 
     @Override
@@ -37,10 +48,14 @@ public final class XLiveList<E>
     @Override
     public boolean add(E object) {
         boolean added = list.add(object);
+        fireChangeEvent();
+        return added;
+    }
+
+    public void fireChangeEvent() {
         if (listener!=null) {
             listener.onChange();
         }
-        return added;
     }
 
     @Override

@@ -5,6 +5,7 @@ import x.event.LiveList;
 import x.event.XLiveList;
 import x.pagefactories.KeyValuePair;
 import x.pagefactories.KeyValuePairListSource;
+import x.util.Translator;
 
 import java.util.LinkedList;
 
@@ -12,8 +13,14 @@ public final class XLogWriter
         implements KeyValuePairListSource
 {
 
-    LinkedList<String> log = new LinkedList<String>();
-    
+    final LinkedList<String> log = new LinkedList<String>();
+    final XLiveList published = XLiveList.of(log, new Translator() {
+        @Override
+        public Object translate(Object o) {
+            return new KeyValuePair("" + o,o);
+        }
+    });
+
     public static XLogWriter of() {
         return Registry.get(XLogWriter.class);
     }
@@ -24,6 +31,7 @@ public final class XLogWriter
         if (log.size()>1000) {
             log.removeFirst();
         }
+        published.fireChangeEvent();
     }
 
     public String dump() {
@@ -36,6 +44,6 @@ public final class XLogWriter
 
     @Override
     public LiveList<KeyValuePair> asKeyValuePairs() {
-        return XLiveList.of(log);
+        return published;
     }
 }
