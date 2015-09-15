@@ -1,7 +1,7 @@
 package x.screen;
 
 import x.Registry;
-import x.command.Command;
+import x.command.XCommand;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.page.Page;
@@ -22,7 +22,7 @@ public final class Screen {
     public final IForm form;
     public final PageLink link;
     private Screen previous; // set once
-    private Command back;    // set once
+    private XCommand back;    // set once
     final Page page;
     private static Screen showing; // the currently showing screen
     
@@ -52,8 +52,8 @@ public final class Screen {
         back = backCommand();
     }
 
-    private Command backCommand() {
-        return new Command("Back") {
+    private XCommand backCommand() {
+        return new XCommand("Back") {
             @Override public void action(Object... args) {
                 back();
             }

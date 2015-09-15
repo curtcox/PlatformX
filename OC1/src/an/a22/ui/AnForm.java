@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import x.Registry;
-import x.command.Command;
+import x.command.XCommand;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
@@ -22,7 +22,7 @@ public final class AnForm
     implements IForm
 {
     final PageLink link;
-    private Command back;
+    private XCommand back;
     private Button backButton;
     TextView address;
 
@@ -98,7 +98,7 @@ public final class AnForm
     }
 
     @Override
-    public void setBackCommand(Command back) {
+    public void setBackCommand(XCommand back) {
         this.back = back;
         backButton.setEnabled(back != null);
     }

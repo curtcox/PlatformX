@@ -7,7 +7,7 @@ import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
 import com.codename1.ui.layouts.FlowLayout;
 import com.codename1.ui.layouts.Layout;
-import x.command.Command;
+import x.command.XCommand;
 import x.page.PageLink;
 import x.screen.Screen;
 import x.ui.IForm;
@@ -31,7 +31,7 @@ public class C1Form
     }
 
     private static com.codename1.ui.Command goHome() {
-        return new C1LoggedCommand(new Command("Home") {
+        return new C1LoggedCommand(new XCommand("Home") {
             @Override public void action(Object...args) {
                 Screen.show(PageLink.of(""));
             }
@@ -69,7 +69,7 @@ public class C1Form
     }
 
     @Override
-    final public void setBackCommand(Command back) {
+    final public void setBackCommand(XCommand back) {
         super.setBackCommand(new C1LoggedCommand(back));
     }
 

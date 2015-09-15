@@ -4,10 +4,10 @@ import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 
-public abstract class Command {
+public abstract class XCommand {
     public final String command;
 
-    public Command(String command) {
+    public XCommand(String command) {
         this.command = command;
     }
     
@@ -28,7 +28,7 @@ public abstract class Command {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(Command.class);
+        return Registry.get(ILogManager.class).getLog(XCommand.class);
     }
 
 }

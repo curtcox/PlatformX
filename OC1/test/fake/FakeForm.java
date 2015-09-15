@@ -1,6 +1,6 @@
 package fake;
 
-import x.command.Command;
+import x.command.XCommand;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
@@ -12,7 +12,7 @@ public class FakeForm
     public boolean showWasCalled;
     public boolean showBackWasCalled;
     public PageLink link;
-    public Command backCommand;
+    public XCommand backCommand;
 
     @Override
     public void layout(XComponent layout) {
@@ -25,7 +25,7 @@ public class FakeForm
     }
 
     @Override
-    public void setBackCommand(Command backCommand) {
+    public void setBackCommand(XCommand backCommand) {
         this.backCommand = backCommand;
     }
 

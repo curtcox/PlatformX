@@ -4,12 +4,12 @@ import se.events.Events;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
 import x.Registry;
-import x.command.Command;
+import x.command.XCommand;
 import x.page.PageLink;
 import x.uiwidget.XComponent;
 
 public final class EditCommand
-    extends Command
+    extends XCommand
 {
 
     EditCommand() {

@@ -7,7 +7,7 @@ import ios.uiwidget.IosLabelViewController;
 import ios.uiwidget.IosPassthruView;
 import org.robovm.apple.uikit.UIViewController;
 import x.Registry;
-import x.command.Command;
+import x.command.XCommand;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.page.PageLink;
@@ -21,7 +21,7 @@ public final class IosForm
         implements IForm
 {
     private final PageLink link;
-    private Command back;
+    private XCommand back;
     private IosButtonViewController backButton;
     private UIViewController rendered;
 
@@ -100,7 +100,7 @@ public final class IosForm
     }
 
     @Override
-    public void setBackCommand(Command back) {
+    public void setBackCommand(XCommand back) {
         this.back = back;
         backButton.setEnabled(back != null);
     }

@@ -3,7 +3,7 @@ package va.ui;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.VerticalLayout;
-import x.command.Command;
+import x.command.XCommand;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
@@ -13,7 +13,7 @@ public final class VaForm
     implements IForm
 {
     private final PageLink link;
-    private Command back;
+    private XCommand back;
     private Button backButton;
 
     VaForm(PageLink link) {
@@ -54,7 +54,7 @@ public final class VaForm
     }
 
     @Override
-    public void setBackCommand(Command back) {
+    public void setBackCommand(XCommand back) {
         this.back = back;
         backButton.setEnabled(back != null);
     }

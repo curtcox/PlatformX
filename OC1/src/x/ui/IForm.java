@@ -1,6 +1,6 @@
 package x.ui;
 
-import x.command.Command;
+import x.command.XCommand;
 import x.page.PageLink;
 import x.uiwidget.XComponent;
 
@@ -28,7 +28,7 @@ public interface IForm {
     /**
      * Set a command that will be executed when the user indicates they want to go back to the previous screen.
      */
-    void setBackCommand(Command back);
+    void setBackCommand(XCommand back);
 
     /**
      * Display the current form. This method may produce a different visual transition than show in order to

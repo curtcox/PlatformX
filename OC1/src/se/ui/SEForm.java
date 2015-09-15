@@ -1,6 +1,6 @@
 package se.ui;
 
-import x.command.Command;
+import x.command.XCommand;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;
@@ -14,13 +14,13 @@ public final class SEForm
     implements IForm
 {
     private final PageLink link;
-    private Command back;
-    private Command edit;
+    private XCommand back;
+    private XCommand edit;
     private JButton backButton;
     private JButton editButton;
     private XComponent layout;
 
-    SEForm(PageLink link, Command edit) {
+    SEForm(PageLink link, XCommand edit) {
         this.link = link;
         this.edit = edit;
     }
@@ -89,7 +89,7 @@ public final class SEForm
     }
 
     @Override
-    public void setBackCommand(Command back) {
+    public void setBackCommand(XCommand back) {
         this.back = back;
         backButton.setEnabled(back!=null);
     }
