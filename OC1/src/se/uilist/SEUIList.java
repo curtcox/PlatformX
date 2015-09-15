@@ -4,12 +4,12 @@ import x.event.Action;
 import x.uilist.IXListCell;
 
 import javax.swing.*;
-import javax.swing.event.ListSelectionEvent;
-import javax.swing.event.ListSelectionListener;
 
 final class SEUIList<T>
     extends JList<T>
 {
+    Action.Listener listener;
+
     SEUIList(ListModel model) {
         super(model);
     }
@@ -21,12 +21,11 @@ final class SEUIList<T>
     }
 
     public void addActionListener(final Action.Listener listener) {
-        addListSelectionListener(new ListSelectionListener() {
-            @Override
-            public void valueChanged(ListSelectionEvent e) {
-                listener.actionPerformed(new Action(SEUIList.this));
-            }
-        });
+        this.listener = listener;
     }
 
+    public void setSelectionInterval(int anchor, int lead) {
+        super.setSelectionInterval(anchor,lead);
+        listener.actionPerformed(new Action(SEUIList.this));
+    }
 }
