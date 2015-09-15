@@ -13,11 +13,12 @@ public final class XLogWriter
         implements KeyValuePairListSource
 {
 
-    final LinkedList<String> log = new LinkedList<String>();
+    final LinkedList<XLogEntry> log = new LinkedList<XLogEntry>();
     final XLiveList published = XLiveList.of(log, new Translator() {
         @Override
         public Object translate(Object o) {
-            return new KeyValuePair("" + o,o);
+            XLogEntry entry = (XLogEntry) o;
+            return new KeyValuePair(entry.time(),entry.message);
         }
     });
 
@@ -25,9 +26,9 @@ public final class XLogWriter
         return Registry.get(XLogWriter.class);
     }
     
-    public void log(String message) {
+    public void log(Class clazz,String message) {
         System.out.println(message);
-        log.add(message);
+        log.add(XLogEntry.of(clazz,message));
         if (log.size()>1000) {
             log.removeFirst();
         }
@@ -36,7 +37,7 @@ public final class XLogWriter
 
     public String dump() {
         StringBuilder out = new StringBuilder();
-        for (String line : log) {
+        for (XLogEntry line : log) {
             out.append(line + "\r\n");
         }
         return out.toString();
