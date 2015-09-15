@@ -2,6 +2,8 @@ package x.pagefactories;
 
 import x.Registry;
 import x.domain.Type;
+import x.event.LiveList;
+import x.event.XLiveList;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
@@ -25,12 +27,12 @@ public final class ServiceProviderFilterPageFactory {
         }
     });
 
-    private static List<Type> getTypes() {
+    private static LiveList<Type> getTypes() {
         List<Type> list = new ArrayList<Type>();
         for (String name : providerTypeNames()) {
             list.add(new Type(name));
         }
-        return list;
+        return XLiveList.of(list);
     }
 
     private static XSearchableList<Type> newSearchableList() {

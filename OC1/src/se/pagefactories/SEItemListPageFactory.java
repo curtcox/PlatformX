@@ -2,7 +2,7 @@ package se.pagefactories;
 
 import se.uilist.SESearchFilterInstaller;
 import se.uilist.SESearchableList;
-import x.event.XLiveList;
+import x.event.LiveList;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
@@ -14,16 +14,15 @@ import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;
 
 import javax.swing.*;
-import java.util.List;
 
 final class SEItemListPageFactory<T>
     implements PageFactory
 {
-    final List<T> values;
+    final LiveList<T> values;
     final ItemToPageLink itemToPageLink;
     final PageTags tags;
 
-    SEItemListPageFactory(PageTags tags,List<T> values, ItemToPageLink itemToPageLink) {
+    SEItemListPageFactory(PageTags tags,LiveList<T> values, ItemToPageLink itemToPageLink) {
         this.tags = tags;
         this.values = values;
         this.itemToPageLink = itemToPageLink;
@@ -34,7 +33,7 @@ final class SEItemListPageFactory<T>
     }     
 
     private XSearchableList<T> newSearchableList() {
-        SESearchableList<T> list = SESearchableList.of(XLiveList.of(values),new JLabel(),new CellConfigurer());
+        SESearchableList<T> list = SESearchableList.of(values,new JLabel(),new CellConfigurer());
         SESearchFilterInstaller.seSpecificInstall(list, StringToListFilter.DEFAULT);
         return list;
     }

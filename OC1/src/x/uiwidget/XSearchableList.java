@@ -1,9 +1,8 @@
 package x.uiwidget;
 
 import x.event.Action;
+import x.event.LiveList;
 import x.uilist.IXListCell;
-
-import java.util.List;
 
 /**
  * A graphical list of items that can be searched.
@@ -27,7 +26,7 @@ public interface XSearchableList<T> {
          * @param configurer produces a cell configuration from an item
          * @return
          */
-        XSearchableList from(List items, XComponent action, IXListCell.ConfigProducer configurer);
+        XSearchableList from(LiveList items, XComponent action, IXListCell.ConfigProducer configurer);
     }
 
     /**
