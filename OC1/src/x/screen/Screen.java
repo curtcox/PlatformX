@@ -67,9 +67,7 @@ public final class Screen {
             showing = this;
             refresh();
             form.show();
-            if (back != null) {
-                form.setBackCommand(back);
-            }
+            setBackOnForm();
         } catch (RuntimeException e) {
             log(e);
         }
@@ -124,8 +122,14 @@ public final class Screen {
         refresh();
         layoutForm();
         form.showBack();
+        setBackOnForm();
     }
 
+    private void setBackOnForm() {
+        if (back != null) {
+            form.setBackCommand(back);
+        }
+    }
     /**
      * This is called whenever the screen is shown.
      * It can also be called when the screen needs to be refreshed to reflect a change.

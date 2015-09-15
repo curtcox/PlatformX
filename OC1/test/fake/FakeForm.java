@@ -12,7 +12,7 @@ public class FakeForm
     public boolean showWasCalled;
     public boolean showBackWasCalled;
     public PageLink link;
-    private Command backCommand;
+    public Command backCommand;
 
     @Override
     public void layout(XComponent layout) {
@@ -27,10 +27,6 @@ public class FakeForm
     @Override
     public void setBackCommand(Command backCommand) {
         this.backCommand = backCommand;
-    }
-
-    public Command getBackCommand() {
-        return backCommand;
     }
 
     @Override

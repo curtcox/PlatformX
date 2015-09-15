@@ -31,6 +31,7 @@ public class XScreenTest {
     PageLink link = PageLink.of(name);
     PageLink link1 = PageLink.of("first");
     PageLink link2 = PageLink.of("second");
+    PageLink link3 = PageLink.of("third");
     PageFactory pageFactory;
     IFormFactory formFactory;
     ILog log;
@@ -163,7 +164,31 @@ public class XScreenTest {
 
         second.back();
 
-        assertEquals("Back", form2.getBackCommand().command);
+        assertNotNull(form2.backCommand);
+        assertEquals("Back", form2.backCommand.command);
+    }
+
+    @Test
+    public void setBackCommand_is_called_after_going_back_twice_when_there_is_still_a_previous_screen() {
+        FakeForm form1 = new FakeForm();
+        FakeForm form2 = new FakeForm();
+        FakeForm form3 = new FakeForm();
+        _(form1); formFactory.newForm(link1);
+        _(form2); formFactory.newForm(link2);
+        _(form3); formFactory.newForm(link3);
+        Screen first = Screen.of(new ExamplePage(link1));
+        Screen second = Screen.of(new ExamplePage(link2));
+        Screen third = Screen.of(new ExamplePage(link3));
+
+        first.show();
+        second.show();
+        third.show();
+
+        form2.backCommand = null;
+        third.back();
+
+        assertNotNull(form2.backCommand);
+        assertEquals("Back", form2.backCommand.command);
     }
 
     private String random(String name) {
