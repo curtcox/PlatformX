@@ -4,6 +4,9 @@ import x.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 
+/**
+ * A platform-independent command abstraction.
+ */
 public abstract class XCommand {
     public final String command;
 
