@@ -1,14 +1,14 @@
 package fake;
 
-import x.pagefactories.NamedValue;
-import x.pagefactories.NamedValueListSource;
+import x.device.XDeviceInfo;
 import x.event.LiveList;
 import x.event.XLiveList;
+import x.pagefactories.NamedValue;
 
 import java.util.ArrayList;
 
 public class FakeDeviceInfo
-    implements NamedValueListSource
+    implements XDeviceInfo
 {
     @Override
     public LiveList<NamedValue> asNamedValues() {
