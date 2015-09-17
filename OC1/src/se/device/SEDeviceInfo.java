@@ -1,9 +1,9 @@
 package se.device;
 
-import x.pagefactories.NamedValue;
-import x.pagefactories.NamedValueListSource;
 import x.device.ReportBuilder;
+import x.device.XDeviceInfo;
 import x.event.LiveList;
+import x.pagefactories.NamedValue;
 
 import java.util.List;
 import java.util.Properties;
@@ -13,7 +13,7 @@ import java.util.TreeSet;
  * For generating a dump of device-specific info.
  */
 public final class SEDeviceInfo
-    implements NamedValueListSource
+    implements XDeviceInfo
 {
 
     public LiveList asNamedValues() {

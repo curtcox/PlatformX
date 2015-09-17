@@ -1,6 +1,7 @@
 package x.pagefactories;
 
 import x.Registry;
+import x.device.XDeviceInfo;
 import x.page.PageFactory;
 import x.page.PageTags;
 
@@ -18,7 +19,7 @@ public final class DeviceInfoPageFactory {
     }
 
     private static NamedValueListSource deviceInfo() {
-        return Registry.get(NamedValueListSource.class);
+        return Registry.get(XDeviceInfo.class);
     }
 
 }

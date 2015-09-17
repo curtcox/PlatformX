@@ -6,7 +6,7 @@ import ios.ui.IosDisplay;
 import ios.ui.IosFormFactory;
 import x.Registry;
 import x.app.CurrentState;
-import x.pagefactories.NamedValueListSource;
+import x.device.XDeviceInfo;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;
@@ -34,7 +34,7 @@ final class IosRegistryLoader {
 
     static void loadIosPlatform() {
         put(IDisplay.class,         IosDisplay.of());
-        put(NamedValueListSource.class,      new IosDeviceInfo());
+        put(XDeviceInfo.class,      new IosDeviceInfo());
     }
 
     static void loadPlatform() {

@@ -10,7 +10,7 @@ import se.util.SERunner;
 import se.util.SimpleTaggedValueStringMap;
 import se.util.TaggedValueStringMap;
 import x.Registry;
-import x.pagefactories.NamedValueListSource;
+import x.device.XDeviceInfo;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;
@@ -36,7 +36,7 @@ final class SERegistryLoader {
     }
 
     private static void loadStandardEditionPlatform() {
-        put(NamedValueListSource.class,new SEDeviceInfo());
+        put(XDeviceInfo.class,new SEDeviceInfo());
     }
 
     static void loadPlatform() {

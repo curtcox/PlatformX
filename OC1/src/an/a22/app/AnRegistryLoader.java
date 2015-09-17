@@ -7,7 +7,7 @@ import an.a22.ui.AnFormFactory;
 import an.a22.util.AnRunner;
 import x.Registry;
 import x.app.CurrentState;
-import x.pagefactories.NamedValueListSource;
+import x.device.XDeviceInfo;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;
@@ -36,7 +36,7 @@ final class AnRegistryLoader {
 
     static void loadAndroidPlatform() {
         put(IDisplay.class,         AnDisplay.of());
-        put(NamedValueListSource.class,      new AnDeviceInfo());
+        put(XDeviceInfo.class,      new AnDeviceInfo());
     }
 
     static void loadPlatform() {

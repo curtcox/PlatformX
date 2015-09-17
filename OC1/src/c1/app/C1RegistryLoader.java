@@ -14,7 +14,7 @@ import c1.ui.C1Icons;
 import com.codename1.ui.Display;
 import x.Registry;
 import x.app.CurrentState;
-import x.pagefactories.NamedValueListSource;
+import x.device.XDeviceInfo;
 import x.domain.ServiceProvider;
 import x.log.ILogManager;
 import x.log.XLogManager;
@@ -56,7 +56,7 @@ final class C1RegistryLoader {
         put(Network.class,          new C1CachedNetwork());
         put(Display.class,          Display.getInstance());
         put(ILocationManager.class, new LocationManager());
-        put(NamedValueListSource.class,      new C1DeviceInfo());
+        put(XDeviceInfo.class,      new C1DeviceInfo());
     }
 
     static void loadPlatform() {
