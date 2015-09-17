@@ -1,25 +1,39 @@
 package x.pagefactories;
 
 import x.Registry;
+import x.page.Page;
 import x.page.PageFactory;
+import x.page.PageLink;
 import x.page.PageTags;
+import x.uiwidget.XSearchableList;
 
-public final class NamedValuePageFactory {
+public final class NamedValuePageFactory
+    implements PageFactory
+{
 
-
-    public static PageFactory of() {
-        return itemListScreenFactoryFactory().newFactory(
-                PageTags.of("NamedValue"),
-                deviceInfo().asNamedValues(),
-                new NamedValueToPageLink());
+    @Override
+    public Page[] create(PageLink link) {
+        return ItemsPage.of(tags(link),link,newSearchableList(link),itemToPageLink(link));
     }
 
-    private static ItemListPageFactoryFactory itemListScreenFactoryFactory() {
-        return Registry.get(ItemListPageFactoryFactory.class);
+    private ItemToPageLink itemToPageLink(PageLink link) {
+        return new ItemToPageLink() {
+            @Override
+            public PageLink pageLink(Object item) {
+                throw new UnsupportedOperationException("item=" + item);
+            }
+        };
     }
 
-    private static NamedValueListSource deviceInfo() {
-        return Registry.get(NamedValueListSource.class);
+    private XSearchableList newSearchableList(PageLink link) {
+        return null;
     }
 
+    private PageTags tags(PageLink link) {
+        return link.tags;
+    }
+
+    XSearchableList.Factory searchableListFactory() {
+        return Registry.get(XSearchableList.Factory.class);
+    }
 }
