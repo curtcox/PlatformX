@@ -22,7 +22,7 @@ public interface XSearchableList<T> {
          * Return a new XSearchableList.
          * @param items in the list
          * @param action an arbitrary component to be displayed at the top of the list.
-         *               The motivating example is a zoom-out/sbroaden-search control.
+         *               The motivating example is a zoom-out/broaden-search control.
          * @param configurer produces a cell configuration from an item
          * @return
          */

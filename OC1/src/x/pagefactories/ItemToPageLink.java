@@ -3,6 +3,10 @@ package x.pagefactories;
 import x.page.Page;
 import x.page.PageLink;
 
+/**
+ * For generating a link to a specific page from an item.
+ * This is generally used when selecting an item from a list of items.
+ */
 public interface ItemToPageLink {
 
     PageLink pageLink(Object item);
