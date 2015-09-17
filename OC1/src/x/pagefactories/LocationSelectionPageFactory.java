@@ -11,7 +11,6 @@ import x.page.dynamic.GlobPageFactory;
 import x.pageparts.LocationListCellConfigurer;
 import x.pages.LocationSelectionPage;
 import x.uilist.IListContentInstaller;
-import x.uiwidget.XLabel;
 import x.uiwidget.XSearchableList;
 
 import java.util.ArrayList;
@@ -31,7 +30,10 @@ public final class LocationSelectionPageFactory {
     }
     
     private static XSearchableList<LocationDescription> newSearchableList(LiveList locations) {
-        return searchableListFactory().from(locations, new XLabel(), new LocationListCellConfigurer());
+        return searchableListBuilder()
+                .items(locations)
+                .configurer(new LocationListCellConfigurer())
+                .build();
     }
 
     private static XSearchableList<LocationDescription> newSearchableList() {
@@ -45,8 +47,8 @@ public final class LocationSelectionPageFactory {
         return Registry.get(SwappableList.Factory.class);
     }
 
-    private static XSearchableList.Builder searchableListFactory() {
-        return Registry.get(XSearchableList.Builder.class);
+    private static XSearchableList.Builder searchableListBuilder() {
+        return Registry.get(XSearchableList.Factory.class).builder();
     }
 
     private static IListContentInstaller contentInstaller() {

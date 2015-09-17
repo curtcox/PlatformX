@@ -15,18 +15,36 @@ import x.uilist.IXListCell;
 public interface XSearchableList<T> {
 
     /**
+     * For getting a builder.
+     */
+    interface Factory {
+        Builder builder();
+    }
+
+    /**
      * Something that can create an XSearchableList.
      */
     interface Builder {
         /**
-         * Return a new XSearchableList.
          * @param items in the list
+         */
+        Builder items(LiveList items);
+
+        /**
          * @param action an arbitrary component to be displayed at the top of the list.
          *               The motivating example is a zoom-out/broaden-search control.
-         * @param configurer produces a cell configuration from an item
-         * @return
          */
-        XSearchableList from(LiveList items, XComponent action, IXListCell.ConfigProducer configurer);
+        Builder action(XComponent action);
+
+        /**
+         * @param configurer produces a cell configuration from an item
+         */
+        Builder configurer(IXListCell.ConfigProducer configurer);
+
+        /**
+         * Return a new XSearchableList.
+         */
+        XSearchableList build();
     }
 
     /**

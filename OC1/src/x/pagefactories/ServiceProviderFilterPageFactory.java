@@ -12,7 +12,6 @@ import x.pageparts.TypeListCellConfigurer;
 import x.pageparts.TypeTextFilter;
 import x.pages.FilterPage;
 import x.uilist.ISearchFilterInstaller;
-import x.uiwidget.XLabel;
 import x.uiwidget.XSearchableList;
 
 import java.util.ArrayList;
@@ -36,13 +35,16 @@ public final class ServiceProviderFilterPageFactory {
     }
 
     private static XSearchableList<Type> newSearchableList() {
-        XSearchableList list = listFactory().from(getTypes(),new XLabel(),new TypeListCellConfigurer());
+        XSearchableList list = listBuilder()
+                .items(getTypes())
+                .configurer(new TypeListCellConfigurer())
+                .build();
         installer().install(list, new TypeTextFilter());
         return list;
     }
 
-    private static XSearchableList.Builder listFactory() {
-        return Registry.get(XSearchableList.Builder.class);
+    private static XSearchableList.Builder listBuilder() {
+        return Registry.get(XSearchableList.Factory.class).builder();
     }
 
     private static ISearchFilterInstaller installer() {
