@@ -45,8 +45,8 @@ public final class LocationSelectionPageFactory {
         return Registry.get(SwappableList.Factory.class);
     }
 
-    private static XSearchableList.Factory searchableListFactory() {
-        return Registry.get(XSearchableList.Factory.class);
+    private static XSearchableList.Builder searchableListFactory() {
+        return Registry.get(XSearchableList.Builder.class);
     }
 
     private static IListContentInstaller contentInstaller() {

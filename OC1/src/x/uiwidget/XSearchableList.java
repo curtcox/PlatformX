@@ -17,7 +17,7 @@ public interface XSearchableList<T> {
     /**
      * Something that can create an XSearchableList.
      */
-    interface Factory {
+    interface Builder {
         /**
          * Return a new XSearchableList.
          * @param items in the list

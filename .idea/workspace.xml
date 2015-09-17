@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/LocationSelectionPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/LocationSelectionPageFactory.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/ServiceProviderFilterPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/ServiceProviderFilterPageFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/uiwidget/XSearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/x/uiwidget/XSearchableList.java" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -67,8 +70,8 @@
           <file leaf-file-name="XSearchableList.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/OC1/src/x/uiwidget/XSearchableList.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.3326613" vertical-offset="0" max-vertical-offset="992">
-                  <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+                <state vertical-scroll-proportion="0.25705644" vertical-offset="0" max-vertical-offset="992">
+                  <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
                   <folding />
                 </state>
               </provider>
@@ -151,7 +154,6 @@
         <option value="$PROJECT_DIR$/OC1/src/x/event/XLiveList.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SEUIList.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/uilist/SESearchableList.java" />
-        <option value="$PROJECT_DIR$/OC1/src/x/uiwidget/XSearchableList.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/pagefactories/SEItemListPageFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/pagefactories/ServiceProviderFilterPageFactory.java" />
         <option value="$PROJECT_DIR$/OC1/test/fake/FakeForm.java" />
@@ -177,6 +179,7 @@
         <option value="$PROJECT_DIR$/OC1/src/ios/app/IosRegistryLoader.java" />
         <option value="$PROJECT_DIR$/OC1/src/va/app/VaRegistryLoader.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/x/uiwidget/XSearchableList.java" />
       </list>
     </option>
   </component>
@@ -906,6 +909,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
           <caret line="34" column="14" selection-start-line="34" selection-start-column="14" selection-end-line="34" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1282,8 +1286,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/x/uiwidget/XSearchableList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3326613" vertical-offset="0" max-vertical-offset="992">
-          <caret line="24" column="85" selection-start-line="24" selection-start-column="85" selection-end-line="24" selection-end-column="85" />
+        <state vertical-scroll-proportion="0.25705644" vertical-offset="0" max-vertical-offset="992">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding />
         </state>
       </provider>

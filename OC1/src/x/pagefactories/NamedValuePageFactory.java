@@ -33,7 +33,7 @@ public final class NamedValuePageFactory
         return link.tags;
     }
 
-    XSearchableList.Factory searchableListFactory() {
-        return Registry.get(XSearchableList.Factory.class);
+    XSearchableList.Builder searchableListFactory() {
+        return Registry.get(XSearchableList.Builder.class);
     }
 }

@@ -41,8 +41,8 @@ public final class ServiceProviderFilterPageFactory {
         return list;
     }
 
-    private static XSearchableList.Factory listFactory() {
-        return Registry.get(XSearchableList.Factory.class);
+    private static XSearchableList.Builder listFactory() {
+        return Registry.get(XSearchableList.Builder.class);
     }
 
     private static ISearchFilterInstaller installer() {
