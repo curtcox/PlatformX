@@ -9,16 +9,16 @@ public final class DeviceInfoPageFactory {
     public static PageFactory of() {
         return itemListScreenFactoryFactory().newFactory(
                 PageTags.of("Device"),
-                deviceInfo().asKeyValuePairs(),
-                new KeyValuePairToPageLink());
+                deviceInfo().asNamedValues(),
+                new NamedValueToPageLink());
     }
 
     private static ItemListPageFactoryFactory itemListScreenFactoryFactory() {
         return Registry.get(ItemListPageFactoryFactory.class);
     }
 
-    private static KeyValuePairListSource deviceInfo() {
-        return Registry.get(KeyValuePairListSource.class);
+    private static NamedValueListSource deviceInfo() {
+        return Registry.get(NamedValueListSource.class);
     }
 
 }

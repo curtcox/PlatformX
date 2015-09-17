@@ -89,8 +89,8 @@ public class MockInvocationHandlerTest {
         Method method = getMethod(Map.class,"get");
         String expected = "value";
         factory.returns(expected);
-        testObject.invoke(proxy,method,args("key"));
-        String actual = (String) testObject.invoke(proxy,method,args("key"));
+        testObject.invoke(proxy,method,args("name"));
+        String actual = (String) testObject.invoke(proxy,method,args("name"));
 
         assertEquals(expected,actual);
     }

@@ -9,7 +9,7 @@ import fake.FakeUIManager;
 import org.junit.Before;
 import org.junit.Test;
 import x.Registry;
-import x.pagefactories.KeyValuePairListSource;
+import x.pagefactories.NamedValueListSource;
 import x.log.ILogManager;
 import x.page.dynamic.StringMapAsTaggedStringSources;
 import x.page.dynamic.TaggedStringSources;
@@ -33,7 +33,7 @@ public class RootPageFactoryTest {
         Registry.put(StringMap.class, stringMap);
         Registry.put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
         Registry.put(ItemListPageFactoryFactory.class, new C1ItemListPageFactoryFactory());
-        Registry.put(KeyValuePairListSource.class, new FakeDeviceInfo());
+        Registry.put(NamedValueListSource.class, new FakeDeviceInfo());
         Registry.put(IFormFactory.class, new FakeFormFactory());
         Registry.put(ILogManager.class, new FakeLogManager());
         FakeUIManager.of();

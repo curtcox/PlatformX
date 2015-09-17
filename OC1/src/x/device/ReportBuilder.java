@@ -2,7 +2,7 @@ package x.device;
 
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.pagefactories.KeyValuePair;
+import x.pagefactories.NamedValue;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,20 +12,20 @@ import java.util.List;
  */
 public final class ReportBuilder {
 
-    final List<KeyValuePair> list = new ArrayList<KeyValuePair>();
+    final List<NamedValue> list = new ArrayList<NamedValue>();
     final StringBuilder out = new StringBuilder();
 
     public void value(String key, Object value) {
-        list.add(new KeyValuePair(key,value));
+        list.add(new NamedValue(key,value));
         out.append("\t" + key + "=" + value);
         out.append("\r\n");
     }
 
-    public void section(String string, List<KeyValuePair> pairs) {
+    public void section(String string, List<NamedValue> pairs) {
         out.append(string);
         out.append("\r\n");
-        for (KeyValuePair pair : pairs) {
-            value(pair.key,pair.value);
+        for (NamedValue pair : pairs) {
+            value(pair.name,pair.value);
         }
     }
 
@@ -34,7 +34,7 @@ public final class ReportBuilder {
         return out.toString();
     }
 
-    public LiveList<KeyValuePair> toKeyValuePairs() {
+    public LiveList<NamedValue> toKeyValuePairs() {
         return XLiveList.of(list);
     }
 }

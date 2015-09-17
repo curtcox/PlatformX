@@ -8,6 +8,6 @@
     <image name="rating.png" type="multi"  />
     <image name="system-search-4.png" type="multi"  />
     <theme name="Theme">
-        <val key="@includeNativeBool" value="true" />
+        <val name="@includeNativeBool" value="true" />
     </theme>
 </resource>

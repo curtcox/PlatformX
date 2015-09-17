@@ -8,7 +8,7 @@ import fake.FakeStorage;
 import org.junit.Before;
 import org.junit.Test;
 import x.Registry;
-import x.pagefactories.KeyValuePairListSource;
+import x.pagefactories.NamedValueListSource;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.ui.IDisplay;
@@ -36,7 +36,7 @@ public class VaRegistryLoaderTest {
     void loadPlatform() {
         Registry.put(Storage.class, new FakeStorage());
         Registry.put(IDisplay.class, new FakeDisplay());
-        Registry.put(KeyValuePairListSource.class, new FakeDeviceInfo());
+        Registry.put(NamedValueListSource.class, new FakeDeviceInfo());
         VaRegistryLoader.loadPlatform();
     }
 

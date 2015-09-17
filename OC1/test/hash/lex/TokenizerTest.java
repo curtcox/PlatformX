@@ -39,8 +39,8 @@ public class TokenizerTest {
 
     @Test
     public void tokenize_returns_right_values_for_key_equals_value() {
-        assertEquals("key",  tokenize("key=y","=")[0]);
-        assertEquals("=",    tokenize("key=y","=")[1]);
+        assertEquals("name",  tokenize("name=y","=")[0]);
+        assertEquals("=",    tokenize("name=y","=")[1]);
         assertEquals("value",tokenize("x=value","=")[2]);
     }
 

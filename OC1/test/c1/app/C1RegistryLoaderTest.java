@@ -10,7 +10,7 @@ import fake.FakeStorage;
 import org.junit.Before;
 import org.junit.Test;
 import x.Registry;
-import x.pagefactories.KeyValuePairListSource;
+import x.pagefactories.NamedValueListSource;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.net.Network;
@@ -42,7 +42,7 @@ public class C1RegistryLoaderTest {
         Registry.put(Network.class, new C1RawNetwork());
         Registry.put(IDisplay.class, new FakeDisplay());
         Registry.put(ILocationManager.class, new FakeLocationManager());
-        Registry.put(KeyValuePairListSource.class, new FakeDeviceInfo());
+        Registry.put(NamedValueListSource.class, new FakeDeviceInfo());
         C1RegistryLoader.loadPlatform();
     }
 

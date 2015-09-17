@@ -694,7 +694,7 @@ is divided into following sections:
                     <jvmarg line="${endorsed.classpath.cmd.line.arg}"/>
                     <jvmarg value="${profiler.info.jvmargs.agent}"/>
                     <jvmarg line="${profiler.info.jvmargs}"/>
-                    <env key="${profiler.info.pathvar}" path="${profiler.info.agentpath}:${profiler.current.path}"/>
+                    <env name="${profiler.info.pathvar}" path="${profiler.info.agentpath}:${profiler.current.path}"/>
                     <arg line="${application.args}"/>
                     <classpath>
                         <path path="${run.classpath}"/>
@@ -891,7 +891,7 @@ is divided into following sections:
         <property file="${built-jar.properties}" prefix="already.built.jar."/>
         <antcall target="-warn-already-built-jar"/>
         <propertyfile file="${built-jar.properties}">
-            <entry key="${basedir}" value=""/>
+            <entry name="${basedir}" value=""/>
         </propertyfile>
     </target>
     <target depends="init,-check-automatic-build,-clean-after-automatic-build" name="-verify-automatic-build"/>
@@ -1133,7 +1133,7 @@ is divided into following sections:
             </classpath>
         </nbprofiledirect>
         <junit dir="${profiler.info.dir}" errorproperty="tests.failed" failureproperty="tests.failed" fork="true" jvm="${profiler.info.jvm}" showoutput="true">
-            <env key="${profiler.info.pathvar}" path="${profiler.info.agentpath}:${profiler.current.path}"/>
+            <env name="${profiler.info.pathvar}" path="${profiler.info.agentpath}:${profiler.current.path}"/>
             <jvmarg value="${profiler.info.jvmargs.agent}"/>
             <jvmarg line="${profiler.info.jvmargs}"/>
             <test name="${profile.class}"/>
@@ -1373,7 +1373,7 @@ is divided into following sections:
         <property file="${built-clean.properties}" prefix="already.built.clean."/>
         <antcall target="-warn-already-built-clean"/>
         <propertyfile file="${built-clean.properties}">
-            <entry key="${basedir}" value=""/>
+            <entry name="${basedir}" value=""/>
         </propertyfile>
     </target>
     <target depends="init" name="-do-clean">

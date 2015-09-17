@@ -3,14 +3,14 @@ package x.log;
 import x.Registry;
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.pagefactories.KeyValuePair;
-import x.pagefactories.KeyValuePairListSource;
+import x.pagefactories.NamedValue;
+import x.pagefactories.NamedValueListSource;
 import x.util.Translator;
 
 import java.util.LinkedList;
 
 public final class XLogWriter
-        implements KeyValuePairListSource
+        implements NamedValueListSource
 {
 
     final LinkedList<XLogEntry> log = new LinkedList<XLogEntry>();
@@ -18,7 +18,7 @@ public final class XLogWriter
         @Override
         public Object translate(Object o) {
             XLogEntry entry = (XLogEntry) o;
-            return new KeyValuePair(entry.time(),entry.message);
+            return new NamedValue(entry.time(),entry.message);
         }
     });
 
@@ -44,7 +44,7 @@ public final class XLogWriter
     }
 
     @Override
-    public LiveList<KeyValuePair> asKeyValuePairs() {
+    public LiveList<NamedValue> asNamedValues() {
         return published;
     }
 }

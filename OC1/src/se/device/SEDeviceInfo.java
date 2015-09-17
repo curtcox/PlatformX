@@ -1,7 +1,7 @@
 package se.device;
 
-import x.pagefactories.KeyValuePair;
-import x.pagefactories.KeyValuePairListSource;
+import x.pagefactories.NamedValue;
+import x.pagefactories.NamedValueListSource;
 import x.device.ReportBuilder;
 import x.event.LiveList;
 
@@ -13,10 +13,10 @@ import java.util.TreeSet;
  * For generating a dump of device-specific info.
  */
 public final class SEDeviceInfo
-    implements KeyValuePairListSource
+    implements NamedValueListSource
 {
 
-    public LiveList asKeyValuePairs() {
+    public LiveList asNamedValues() {
         return buildReport().toKeyValuePairs();
     }
 
@@ -31,7 +31,7 @@ public final class SEDeviceInfo
         return out;
     }
 
-    private static List<KeyValuePair> runtimeInfo() {
+    private static List<NamedValue> runtimeInfo() {
         Runtime runtime = Runtime.getRuntime();
         ReportBuilder out = new ReportBuilder();
         out.value("free memory", runtime.freeMemory());
@@ -40,7 +40,7 @@ public final class SEDeviceInfo
         return out.toKeyValuePairs();
     }
 
-    private static List<KeyValuePair> systemInfo() {
+    private static List<NamedValue> systemInfo() {
         Properties properties = System.getProperties();
         ReportBuilder out = new ReportBuilder();
         for (Object key : new TreeSet(properties.keySet())) {

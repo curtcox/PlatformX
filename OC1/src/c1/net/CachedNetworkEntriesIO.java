@@ -7,7 +7,7 @@ import java.net.URI;
 import java.net.URISyntaxException;
 
 /**
- * PairIO that takes advantage of the fact that the key (URI) is also embedded
+ * PairIO that takes advantage of the fact that the name (URI) is also embedded
  * in the value.
  * @author Curt
  */

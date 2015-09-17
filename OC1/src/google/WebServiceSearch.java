@@ -20,7 +20,7 @@ abstract class WebServiceSearch<T> {
     }
     
     URI getURI(Map<String,String> parameters) {
-        parameters.put("key",Google.API_key);
+        parameters.put("name",Google.API_key);
         return GoogleUrl.of(baseURI,parameters);
     }
     

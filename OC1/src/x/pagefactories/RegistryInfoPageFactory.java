@@ -9,15 +9,15 @@ public final class RegistryInfoPageFactory {
     public static PageFactory of() {
         return itemListScreenFactoryFactory().newFactory(
             PageTags.of("Registry"),
-            registryInfo().asKeyValuePairs(),
-            new KeyValuePairToPageLink());
+            registryInfo().asNamedValues(),
+            new NamedValueToPageLink());
     }
 
     private static ItemListPageFactoryFactory itemListScreenFactoryFactory() {
         return Registry.get(ItemListPageFactoryFactory.class);
     }
 
-    private static KeyValuePairListSource registryInfo() {
+    private static NamedValueListSource registryInfo() {
         return Registry.get(Registry.class);
     }
 

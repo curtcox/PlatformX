@@ -5,8 +5,8 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.LookAndFeel;
 import com.codename1.ui.plaf.UIManager;
-import x.pagefactories.KeyValuePair;
-import x.pagefactories.KeyValuePairListSource;
+import x.pagefactories.NamedValue;
+import x.pagefactories.NamedValueListSource;
 import x.device.ReportBuilder;
 import x.event.LiveList;
 
@@ -16,10 +16,10 @@ import java.util.List;
  * For generating a dump of device-specific info.
  */
 public final class C1DeviceInfo
-    implements KeyValuePairListSource
+    implements NamedValueListSource
 {
 
-    public LiveList asKeyValuePairs() {
+    public LiveList asNamedValues() {
         return buildReport().toKeyValuePairs();
     }
 
@@ -38,7 +38,7 @@ public final class C1DeviceInfo
         return out;
     }
 
-    static private List<KeyValuePair> displayInfo() {
+    static private List<NamedValue> displayInfo() {
         Display display = Display.getInstance();
         ReportBuilder out = new ReportBuilder();
         out.value("platform name"           , display.getPlatformName());
@@ -84,7 +84,7 @@ public final class C1DeviceInfo
         return out.toKeyValuePairs();
     }
 
-    static private List<KeyValuePair> networkInfo() {
+    static private List<NamedValue> networkInfo() {
         NetworkManager network = NetworkManager.getInstance();
         ReportBuilder out = new ReportBuilder();
         out.value("ThreadCount"        , network.getThreadCount());
@@ -94,7 +94,7 @@ public final class C1DeviceInfo
         return out.toKeyValuePairs();
     }
 
-    private static List<KeyValuePair> runtimeInfo() {
+    private static List<NamedValue> runtimeInfo() {
         Runtime runtime = Runtime.getRuntime();
         ReportBuilder out = new ReportBuilder();
         out.value("free memory"  , runtime.freeMemory());
@@ -102,14 +102,14 @@ public final class C1DeviceInfo
         return out.toKeyValuePairs();
     }
 
-    private static List<KeyValuePair> UIManagerInfo() {
+    private static List<NamedValue> UIManagerInfo() {
         UIManager manager = UIManager.getInstance();
         ReportBuilder out = new ReportBuilder();
         out.value("ThemeName="  , manager.getThemeName());
         return out.toKeyValuePairs();
      }
 
-    private static List<KeyValuePair> LookAndFeelInfo() {
+    private static List<NamedValue> LookAndFeelInfo() {
         LookAndFeel laf = UIManager.getInstance().getLookAndFeel();
         ReportBuilder out = new ReportBuilder();
         out.value("isBackgroundImageDetermineSize"  , laf.isBackgroundImageDetermineSize());
@@ -127,7 +127,7 @@ public final class C1DeviceInfo
         return out.toKeyValuePairs();
     }
 
-    private static List<KeyValuePair> AndroidProperties() {
+    private static List<NamedValue> AndroidProperties() {
         ReportBuilder out = new ReportBuilder();
         for (String key : androidPropertyKeys()) {
             String value = System.getProperty(key);

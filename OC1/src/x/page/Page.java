@@ -27,6 +27,9 @@ public abstract class Page {
         link = PageLink.of(this, title);
     }
 
+    /**
+     * Probably best avoided.
+     */
     public static final Page withFixedLayout(final String title, final XComponent layout) {
         return new Page(title) {
             @Override

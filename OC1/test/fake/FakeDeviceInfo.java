@@ -1,17 +1,17 @@
 package fake;
 
-import x.pagefactories.KeyValuePair;
-import x.pagefactories.KeyValuePairListSource;
+import x.pagefactories.NamedValue;
+import x.pagefactories.NamedValueListSource;
 import x.event.LiveList;
 import x.event.XLiveList;
 
 import java.util.ArrayList;
 
 public class FakeDeviceInfo
-    implements KeyValuePairListSource
+    implements NamedValueListSource
 {
     @Override
-    public LiveList<KeyValuePair> asKeyValuePairs() {
+    public LiveList<NamedValue> asNamedValues() {
         return XLiveList.of(new ArrayList());
     }
 }

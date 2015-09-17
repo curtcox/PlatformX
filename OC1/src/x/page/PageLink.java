@@ -20,14 +20,14 @@ public final class PageLink {
     public final PageTags tags;
     public final Object[] args;
 
-    private PageLink(Page page, String screen, Object... args) {
+    private PageLink(Page page, String tags, Object... args) {
         this.page = page;
-        this.tags = PageTags.of(screen);
+        this.tags = PageTags.of(tags);
         this.args = args;
     }
 
-    public static PageLink of(Page page, String name, Object... args) {
-        return new PageLink(page,name);
+    public static PageLink of(Page page, String tags, Object... args) {
+        return new PageLink(page,tags,args);
     }
 
     public static PageLink of(String name, Object... args) {

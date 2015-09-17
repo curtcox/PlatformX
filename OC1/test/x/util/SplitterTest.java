@@ -29,7 +29,7 @@ public class SplitterTest {
 
     @Test
     public void split_returns_right_values_for_key_equals_value() {
-        assertEquals("key",Splitter.split("key=y","=")[0]);
+        assertEquals("name",Splitter.split("name=y","=")[0]);
         assertEquals("value",Splitter.split("x=value","=")[1]);
     }
 

@@ -2,8 +2,8 @@ package x;
 
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.pagefactories.KeyValuePair;
-import x.pagefactories.KeyValuePairListSource;
+import x.pagefactories.NamedValue;
+import x.pagefactories.NamedValueListSource;
 
 import java.util.*;
 
@@ -13,7 +13,7 @@ import java.util.*;
  * without needing to know how to construct them or their exact implementation. 
  */
 public final class Registry
-    implements KeyValuePairListSource
+    implements NamedValueListSource
 {
 
     private static final Map<Class,Object> values = new HashMap<Class,Object>();
@@ -33,7 +33,7 @@ public final class Registry
     }
 
     @Override
-    public LiveList<KeyValuePair> asKeyValuePairs() {
+    public LiveList<NamedValue> asNamedValues() {
         List list = new ArrayList();
         for (Object object : values.entrySet()) {
             list.add(keyValuePair((Map.Entry) object));
@@ -41,7 +41,7 @@ public final class Registry
         return XLiveList.of(list);
     }
 
-    private KeyValuePair keyValuePair(Map.Entry entry) {
-        return new KeyValuePair("" + entry.getKey(), entry.getValue());
+    private NamedValue keyValuePair(Map.Entry entry) {
+        return new NamedValue("" + entry.getKey(), entry.getValue());
     }
 }

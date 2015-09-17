@@ -1,16 +1,16 @@
 package x.pagefactories;
 
 import x.Registry;
-import x.log.XLogWriter;
 import x.page.PageFactory;
 import x.page.PageTags;
 
-public final class LogEntryPageFactory {
+public final class NamedValuePageFactory {
+
 
     public static PageFactory of() {
         return itemListScreenFactoryFactory().newFactory(
-                PageTags.of("Log"),
-                logEntries().asNamedValues(),
+                PageTags.of("NamedValue"),
+                deviceInfo().asNamedValues(),
                 new NamedValueToPageLink());
     }
 
@@ -18,8 +18,8 @@ public final class LogEntryPageFactory {
         return Registry.get(ItemListPageFactoryFactory.class);
     }
 
-    private static NamedValueListSource logEntries() {
-        return Registry.get(XLogWriter.class);
+    private static NamedValueListSource deviceInfo() {
+        return Registry.get(NamedValueListSource.class);
     }
 
 }
