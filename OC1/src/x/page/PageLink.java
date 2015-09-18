@@ -26,12 +26,30 @@ public final class PageLink {
         this.args = args;
     }
 
+    /**
+     * For creating a link when you already know exactly the page that you want to
+     * go to AND want to go there and only there.
+     */
     public static PageLink of(Page page, String tags, Object... args) {
         return new PageLink(page,tags,args);
     }
 
-    public static PageLink of(String name, Object... args) {
-        return new PageLink(null,name,args);
+    /**
+     * For creating a link to a page or pages to be determined later.
+     * Use this when you want the possibility of PageFactories determining the
+     * exact page.
+     */
+    public static PageLink of(String tags, Object... args) {
+        return new PageLink(null,tags,args);
+    }
+
+    /**
+     * For creating a link to a page or pages to be determined later.
+     * Use this when you want the possibility of PageFactories determining the
+     * exact page.
+     */
+    public static PageLink of(PageTags tags, Object... args) {
+        return new PageLink(null,tags.toString(),args);
     }
 
     public String title() {

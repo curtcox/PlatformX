@@ -46,6 +46,7 @@ public final class RootPageFactory {
                 CustomComponentPage.FACTORY,
                 dynamicScreens(layouts),
                 IndexPageFactory.of(PageTags.of("Index"),index),
+                NamedValuePageFactory.of(),
                 new LazyPageFactory(taggedLayouts)
         );
     }

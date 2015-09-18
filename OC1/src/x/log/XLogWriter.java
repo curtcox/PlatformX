@@ -3,24 +3,13 @@ package x.log;
 import x.Registry;
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.pagefactories.NamedValue;
-import x.pagefactories.NamedValueListSource;
-import x.util.Translator;
 
 import java.util.LinkedList;
 
-public final class XLogWriter
-        implements NamedValueListSource
-{
+public final class XLogWriter {
 
     final LinkedList<XLogEntry> log = new LinkedList<XLogEntry>();
-    final XLiveList published = XLiveList.of(log, new Translator() {
-        @Override
-        public Object translate(Object o) {
-            XLogEntry entry = (XLogEntry) o;
-            return new NamedValue(entry.time(),entry.message);
-        }
-    });
+    final XLiveList published = XLiveList.of(log);
 
     public static XLogWriter of() {
         return Registry.get(XLogWriter.class);
@@ -43,8 +32,7 @@ public final class XLogWriter
         return out.toString();
     }
 
-    @Override
-    public LiveList<NamedValue> asNamedValues() {
+    public LiveList<XLogEntry> log() {
         return published;
     }
 }

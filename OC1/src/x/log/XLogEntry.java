@@ -2,7 +2,7 @@ package x.log;
 
 import x.screen.Screen;
 
-final class XLogEntry {
+public final class XLogEntry {
 
     final Class clazz;
     final String message;
@@ -35,7 +35,7 @@ final class XLogEntry {
     }
 
     private String screen() {
-        return screen.toString();
+        return "" + screen;
     }
 
     private String prefix() {
