@@ -6,6 +6,7 @@ import se.events.Events;
 import se.pagefactories.SEItemListPageFactoryFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
+import se.uilist.SESearchableListFactory;
 import se.util.SERunner;
 import se.util.SimpleTaggedValueStringMap;
 import se.util.TaggedValueStringMap;
@@ -22,6 +23,7 @@ import x.page.dynamic.TaggedStringSources;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
+import x.uiwidget.XSearchableList;
 import x.util.Runner;
 import x.util.StringMap;
 
@@ -48,6 +50,7 @@ final class SERegistryLoader {
         put(IDisplay.class,         SEDisplay.of());
         put(Network.class,          new XRawNetwork());
         putTaggedValueStringMap();
+        put(XSearchableList.Factory.class,    new SESearchableListFactory());
         put(ItemListPageFactoryFactory.class, new SEItemListPageFactoryFactory());
         put(PageFactory.class,      RootPageFactory.of());
         put(ScreenEditor.class,     ScreenEditor.of());

@@ -1,19 +1,14 @@
 package se.pagefactories;
 
-import se.uilist.SESearchFilterInstaller;
-import se.uilist.SESearchableList;
+import x.Registry;
 import x.event.LiveList;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.page.PageTags;
-import x.pagefactories.CellConfigurer;
 import x.pagefactories.ItemToPageLink;
 import x.pagefactories.ItemsPage;
-import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;
-
-import javax.swing.*;
 
 final class SEItemListPageFactory<T>
     implements PageFactory
@@ -33,9 +28,10 @@ final class SEItemListPageFactory<T>
     }     
 
     private XSearchableList<T> newSearchableList() {
-        SESearchableList<T> list = SESearchableList.of(values,new JLabel(),new CellConfigurer());
-        SESearchFilterInstaller.seSpecificInstall(list, StringToListFilter.DEFAULT);
-        return list;
+        return listBuilder().items(values).build();
     }
 
+    XSearchableList.Builder listBuilder() {
+        return Registry.get(XSearchableList.Factory.class).builder();
+    }
 }

@@ -26,6 +26,7 @@ public final class NamedValuePageFactory
     }
 
     private XSearchableList newSearchableList(PageLink link) {
+
         return null;
     }
 
@@ -33,7 +34,7 @@ public final class NamedValuePageFactory
         return link.tags;
     }
 
-    XSearchableList.Builder searchableListFactory() {
-        return Registry.get(XSearchableList.Builder.class);
+    XSearchableList.Builder listBuilder() {
+        return Registry.get(XSearchableList.Factory.class).builder();
     }
 }
