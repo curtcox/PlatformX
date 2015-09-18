@@ -13,7 +13,7 @@ import javax.swing.*;
  * A wrapper for a searchable list component.
  * @param <T> list item type
  */
-public final class SESearchableList<T>
+final class SESearchableList<T>
     implements XSearchableList<T>
 {
 
@@ -24,7 +24,7 @@ public final class SESearchableList<T>
     /**
      * The component itself, for embedding in a Screen.
      */
-    public final JComponent component;
+    final JComponent component;
 
     private SESearchableList(LiveList<T> items, JComponent action, IXListCell.ConfigProducer configurer) {
         filterListModel = SEFilterListModel.of(items);

@@ -21,7 +21,7 @@ final class SEFilterListModel<T>
         this.offsets = XListOffsets.of(filtered);
     }
 
-    public static SEFilterListModel of(LiveList filtered) {
+    static SEFilterListModel of(LiveList filtered) {
         SEFilterListModel model = new SEFilterListModel(filtered);
         model.listenForModelChanges();
         return model;
@@ -56,7 +56,7 @@ final class SEFilterListModel<T>
 
     }
 
-    public void setFilter(ListFilter filter) {
+    void setFilter(ListFilter filter) {
         offsets.setFilter(filter);
         dataChanged();
     }

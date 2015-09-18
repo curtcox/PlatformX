@@ -12,11 +12,11 @@ final class SEListCell
     extends JPanel
     implements IXListCell
 {
-    public final JButton firstRow = new JButton();
-    public final JButton secondRow = new JButton();
-    public final IconButton icon = new IconButton();
+    final JButton firstRow = new JButton();
+    final JButton secondRow = new JButton();
+    final IconButton icon = new IconButton();
 
-    public SEListCell() {
+    SEListCell() {
         setLayout(new BorderLayout());
         firstRow.setHorizontalAlignment(SwingConstants.LEFT);
         secondRow.setHorizontalAlignment(SwingConstants.LEFT);

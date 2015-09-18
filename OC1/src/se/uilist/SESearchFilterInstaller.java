@@ -10,11 +10,11 @@ import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-public final class SESearchFilterInstaller
+final class SESearchFilterInstaller
     implements ISearchFilterInstaller
 {
     
-    public static void seSpecificInstall(final SESearchableList list, final StringToListFilter stringToListFilter) {
+    static void seSpecificInstall(final SESearchableList list, final StringToListFilter stringToListFilter) {
         final JTextField search = list.searchTerm;
         search.addKeyListener(new KeyListener() {
             @Override public void keyPressed(KeyEvent e) {}
