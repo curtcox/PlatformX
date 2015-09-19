@@ -1,6 +1,7 @@
 package x.pagefactories;
 
-public final class NamedValue {
+public final class NamedValue
+{
 
     public final String name;
     public final Object value;

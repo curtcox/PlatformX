@@ -1,8 +1,16 @@
 package x.log;
 
+import x.event.LiveList;
+import x.event.XLiveList;
+import x.pagefactories.NamedValue;
+import x.pagefactories.NamedValueListSource;
 import x.screen.Screen;
 
-public final class XLogEntry {
+import java.util.Arrays;
+
+public final class XLogEntry
+    implements NamedValueListSource
+{
 
     final Class clazz;
     final String message;
@@ -46,4 +54,14 @@ public final class XLogEntry {
         return time() + ":" + thread() + ":" + screen() + ":" + prefix() + ":" + message;
     }
 
+    @Override
+    public LiveList<NamedValue> asNamedValues() {
+        return XLiveList.of(Arrays.asList(
+            new NamedValue("clazz",clazz),
+            new NamedValue("message",message),
+            new NamedValue("thread",thread),
+            new NamedValue("screen",screen),
+            new NamedValue("time",time)
+        ));
+    }
 }

@@ -16,6 +16,14 @@ public final class NamedValuePageFactory
 {
     static final PageTags TAG = PageTags.of("NamedValue");
 
+    public static final ItemToPageLink ITEM_TO_PAGELINK =
+        new ItemToPageLink() {
+            @Override
+            public PageLink pageLink(Object item) {
+                return linkTo(namedValue(item));
+            }
+        };
+
     public static PageFactory of() {
         return new NamedValuePageFactory();
     }
@@ -23,21 +31,18 @@ public final class NamedValuePageFactory
     @Override
     public Page[] create(PageLink link) {
         return (link.tags.matches(TAG))
-            ? ItemsPage.of(tags(link),link,newSearchableList(link),itemToPageLink(link))
+            ? ItemsPage.of(tags(link),link,newSearchableList(link),ITEM_TO_PAGELINK)
             : new Page[0];
     }
 
     public static PageLink linkTo(NamedValue value) {
-        return PageLink.of(TAG.plus(value.name),value.value);
+        return PageLink.of(TAG.plus(value.name), value.value);
     }
 
-    private ItemToPageLink itemToPageLink(final PageLink link) {
-        return new ItemToPageLink() {
-            @Override
-            public PageLink pageLink(Object item) {
-                throw new UnsupportedOperationException(link + " item=" + item);
-            }
-        };
+    private static NamedValue namedValue(Object item) {
+        return item instanceof NamedValue
+            ? (NamedValue) item
+            : new NamedValue("value",item);
     }
 
     private XSearchableList newSearchableList(PageLink link) {
@@ -45,7 +50,20 @@ public final class NamedValuePageFactory
     }
 
     private LiveList items(PageLink link) {
-        return XLiveList.of(Arrays.asList(link.args));
+        Object[] args = link.args;
+        if (args.length>1) {
+            return XLiveList.of(Arrays.asList(args));
+        }
+        if (args.length==1) {
+            Object arg = args[0];
+            if (arg instanceof NamedValueListSource) {
+                NamedValueListSource source = (NamedValueListSource) arg;
+                return source.asNamedValues();
+            } else {
+                return XLiveList.of(Arrays.asList(arg));
+            }
+        }
+        throw new IllegalArgumentException();
     }
 
     private PageTags tags(PageLink link) {
