@@ -13,12 +13,12 @@ import java.util.List;
 /**
  * A PageFactory that returns all of the matching pagesFromAllFactories from the factories it contains.
  */
-public final class MatchingIndexedPagesCompositePageFactory
+final class MatchingIndexedPagesCompositePageFactory
     implements PageFactory
 {
     private final PageFactory[] factories;
 
-    public MatchingIndexedPagesCompositePageFactory(PageFactory... factories) {
+    MatchingIndexedPagesCompositePageFactory(PageFactory... factories) {
         this.factories = factories;
     }
 

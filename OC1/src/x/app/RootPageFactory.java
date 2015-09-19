@@ -2,15 +2,15 @@ package x.app;
 
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.pagefactories.IndexPageFactory;
-import x.pagefactories.MatchingIndexedPagesCompositePageFactory;
 import x.page.PageFactory;
 import x.page.PageTags;
 import x.page.dynamic.DynamicPageFactory;
 import x.page.dynamic.LazyPageFactory;
 import x.page.dynamic.StringMapStringSource;
 import x.page.dynamic.TaggedStringSources;
-import x.pagefactories.*;
+import x.pagefactories.IndexPageFactory;
+import x.pagefactories.NamedValuePageFactory;
+import x.pagefactories.PageFactoryBuilder;
 import x.pages.CustomComponentPage;
 import x.pages.Home;
 import x.pages.ProviderDetailsPage;
@@ -30,6 +30,8 @@ public final class RootPageFactory {
             "Filter", "Search", "Custom")
     );
 
+    private RootPageFactory() {}
+
     public static PageFactory of() {
         return pageFactory();
     }
@@ -39,19 +41,21 @@ public final class RootPageFactory {
     }
 
     private static PageFactory pageFactory(StringMap layouts, TaggedStringSources taggedLayouts) {
-        return new MatchingIndexedPagesCompositePageFactory(
-                DeviceInfoPageFactory.of(),
-                LogEntryPageFactory.of(),
-                RegistryInfoPageFactory.of(),
-                LocationSelectionPageFactory.FACTORY,
-                ProviderDetailsPage.FACTORY,
-                ServiceProviderFilterPageFactory.FACTORY,
-                ServiceProviderSearchScreenFactory.FACTORY,
-                CustomComponentPage.FACTORY,
-                dynamicScreens(layouts),
-                IndexPageFactory.of(PageTags.of("Index"), index),
-                NamedValuePageFactory.of(),
-                new LazyPageFactory(taggedLayouts)
+        return PageFactoryBuilder
+        .firstCheck()
+        .thenCheck(
+            DeviceInfoPageFactory.of(),
+            LogEntryPageFactory.of(),
+            RegistryInfoPageFactory.of(),
+            LocationSelectionPageFactory.FACTORY,
+            ProviderDetailsPage.FACTORY,
+            ServiceProviderFilterPageFactory.FACTORY,
+            ServiceProviderSearchScreenFactory.FACTORY,
+            CustomComponentPage.FACTORY,
+            dynamicScreens(layouts),
+            IndexPageFactory.of(PageTags.of("Index"), index),
+            NamedValuePageFactory.of(),
+            new LazyPageFactory(taggedLayouts)
         );
     }
 
