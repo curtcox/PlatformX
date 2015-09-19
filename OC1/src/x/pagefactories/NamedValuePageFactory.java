@@ -9,7 +9,6 @@ import x.page.PageLink;
 import x.page.PageTags;
 import x.uiwidget.XSearchableList;
 import x.util.NamedValue;
-import x.event.NamedValueListSource;
 
 import java.util.Arrays;
 
@@ -57,13 +56,7 @@ public final class NamedValuePageFactory
             return XLiveList.of(Arrays.asList(args));
         }
         if (args.length==1) {
-            Object arg = args[0];
-            if (arg instanceof NamedValueListSource) {
-                NamedValueListSource source = (NamedValueListSource) arg;
-                return source.asNamedValues();
-            } else {
-                return XLiveList.of(Arrays.asList(arg));
-            }
+            return ObjectToLiveList.from(args[0]);
         }
         throw new IllegalArgumentException();
     }
