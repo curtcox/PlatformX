@@ -3,6 +3,7 @@ package x.pagefactories;
 import x.Registry;
 import x.page.PageFactory;
 import x.page.PageTags;
+import x.util.NamedValueListSource;
 
 public final class RegistryInfoPageFactory {
 

@@ -1,6 +1,6 @@
 package x.device;
 
-import x.pagefactories.NamedValueListSource;
+import x.util.NamedValueListSource;
 
 public interface XDeviceInfo
         extends NamedValueListSource

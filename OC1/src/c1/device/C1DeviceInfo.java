@@ -5,8 +5,8 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.plaf.LookAndFeel;
 import com.codename1.ui.plaf.UIManager;
-import x.pagefactories.NamedValue;
-import x.pagefactories.NamedValueListSource;
+import x.util.NamedValue;
+import x.util.NamedValueListSource;
 import x.device.ReportBuilder;
 import x.event.LiveList;
 

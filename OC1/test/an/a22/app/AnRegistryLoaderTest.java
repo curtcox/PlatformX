@@ -5,7 +5,6 @@ import config.ShouldRun;
 import org.junit.Before;
 import x.Registry;
 import x.device.XDeviceInfo;
-import x.pagefactories.NamedValueListSource;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.ui.IDisplay;

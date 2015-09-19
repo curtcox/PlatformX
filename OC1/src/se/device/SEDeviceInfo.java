@@ -3,7 +3,7 @@ package se.device;
 import x.device.ReportBuilder;
 import x.device.XDeviceInfo;
 import x.event.LiveList;
-import x.pagefactories.NamedValue;
+import x.util.NamedValue;
 
 import java.util.List;
 import java.util.Properties;

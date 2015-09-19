@@ -3,7 +3,7 @@ package fake;
 import x.device.XDeviceInfo;
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.pagefactories.NamedValue;
+import x.util.NamedValue;
 
 import java.util.ArrayList;
 

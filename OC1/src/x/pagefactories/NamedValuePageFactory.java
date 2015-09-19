@@ -8,6 +8,8 @@ import x.page.PageFactory;
 import x.page.PageLink;
 import x.page.PageTags;
 import x.uiwidget.XSearchableList;
+import x.util.NamedValue;
+import x.util.NamedValueListSource;
 
 import java.util.Arrays;
 

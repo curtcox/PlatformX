@@ -1,6 +1,7 @@
 package x.pagefactories;
 
 import x.page.PageLink;
+import x.util.NamedValue;
 
 public final class NamedValueToPageLink
     implements ItemToPageLink

@@ -2,9 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/LogEntryPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/LogEntryPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValue.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValue.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValue.java" afterPath="$PROJECT_DIR$/OC1/src/x/util/NamedValue.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValueListSource.java" afterPath="$PROJECT_DIR$/OC1/src/x/util/NamedValueListSource.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/device/AnDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/device/AnDeviceInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/app/AnRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/app/AnRegistryLoaderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/device/C1DeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/c1/device/C1DeviceInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/C1RegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/C1RegistryLoaderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/DeviceInfoPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/DeviceInfoPageFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeDeviceInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/device/IosDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/ios/device/IosDeviceInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/ios/app/IosRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/ios/app/IosRegistryLoaderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValueToPageLink.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValueToPageLink.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/Registry.java" afterPath="$PROJECT_DIR$/OC1/src/x/Registry.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/RegistryInfoPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/RegistryInfoPageFactory.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/device/ReportBuilder.java" afterPath="$PROJECT_DIR$/OC1/src/x/device/ReportBuilder.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/device/SEDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/se/device/SEDeviceInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/device/VaDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/va/device/VaDeviceInfo.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/va/app/VaRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/va/app/VaRegistryLoaderTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/device/XDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/x/device/XDeviceInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/log/XLogEntry.java" afterPath="$PROJECT_DIR$/OC1/src/x/log/XLogEntry.java" />
     </list>
     <ignored path="OysterCracker.iws" />
@@ -45,15 +62,35 @@
     <splitter split-orientation="horizontal" split-proportion="0.46352202">
       <split-first>
         <leaf>
-          <file leaf-file-name="LogEntryPageFactory.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="LogEntryPageFactory.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/LogEntryPageFactory.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.19181585" vertical-offset="0" max-vertical-offset="782">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
                   <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
                   <folding>
                     <element signature="e#604#605#0" expanded="true" />
                     <element signature="e#663#664#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NamedValueListSource.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/x/util/NamedValueListSource.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.094339624" vertical-offset="0" max-vertical-offset="795">
+                  <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="NamedValue.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/OC1/src/x/util/NamedValue.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+                  <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -65,16 +102,16 @@
           <file leaf-file-name="NamedValuePageFactory.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.46035805" vertical-offset="0" max-vertical-offset="1155">
-                  <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
+                <state vertical-scroll-proportion="0.65217394" vertical-offset="360" max-vertical-offset="1185">
+                  <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#449#618#0" expanded="true" />
-                    <element signature="e#617#618#0" expanded="true" />
-                    <element signature="e#976#977#0" expanded="true" />
-                    <element signature="e#1045#1046#0" expanded="true" />
-                    <element signature="e#1290#1291#0" expanded="true" />
-                    <element signature="e#1353#1354#0" expanded="true" />
+                    <element signature="e#511#680#0" expanded="true" />
+                    <element signature="e#679#680#0" expanded="true" />
+                    <element signature="e#1038#1039#0" expanded="true" />
+                    <element signature="e#1107#1108#0" expanded="true" />
+                    <element signature="e#1352#1353#0" expanded="true" />
+                    <element signature="e#1415#1416#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -98,8 +135,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/se/pagefactories/SEIndexPageFactoryTest.java" />
-        <option value="$PROJECT_DIR$/OC1/test/se/uilist/SESearchFilterInstallerTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/va/pagefactories/VaIndexPageFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/va/uilist/VaFilterListModelTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/va/uilist/VaSearchableListTest.java" />
@@ -149,6 +184,8 @@
         <option value="$PROJECT_DIR$/OC1/src/x/log/XLogEntry.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/pagefactories/LogEntryPageFactory.java" />
+        <option value="$PROJECT_DIR$/OC1/src/x/util/NamedValue.java" />
+        <option value="$PROJECT_DIR$/OC1/src/x/util/NamedValueListSource.java" />
       </list>
     </option>
   </component>
@@ -257,7 +294,29 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="event" />
+              <option name="myItemId" value="util" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OysterCracker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="OC1" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="x" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pagefactories" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -340,11 +399,11 @@
       <recent name="c1.ui" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="x.util" />
       <recent name="c1" />
       <recent name="c1.ui" />
       <recent name="se.uiwidget" />
       <recent name="c1.uilist" />
-      <recent name="x.screen" />
     </key>
   </component>
   <component name="RunManager" selected="Application.SEApplication">
@@ -705,7 +764,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -726,7 +785,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.171875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2391094" sideWeight="0.69610935" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.42864582" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -1221,38 +1280,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValueListSource.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="195">
-          <caret line="5" column="9" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46035805" vertical-offset="0" max-vertical-offset="1155">
-          <caret line="24" column="10" selection-start-line="24" selection-start-column="10" selection-end-line="24" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#449#618#0" expanded="true" />
-            <element signature="e#617#618#0" expanded="true" />
-            <element signature="e#976#977#0" expanded="true" />
-            <element signature="e#1045#1046#0" expanded="true" />
-            <element signature="e#1290#1291#0" expanded="true" />
-            <element signature="e#1353#1354#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/x/log/XLogEntry.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28772378" vertical-offset="0" max-vertical-offset="885">
@@ -1265,12 +1292,44 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/LogEntryPageFactory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19181585" vertical-offset="0" max-vertical-offset="782">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
           <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
           <folding>
             <element signature="e#604#605#0" expanded="true" />
             <element signature="e#663#664#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.65217394" vertical-offset="360" max-vertical-offset="1185">
+          <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#511#680#0" expanded="true" />
+            <element signature="e#679#680#0" expanded="true" />
+            <element signature="e#1038#1039#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1352#1353#0" expanded="true" />
+            <element signature="e#1415#1416#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/x/util/NamedValue.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="330">
+          <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/x/util/NamedValueListSource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.094339624" vertical-offset="0" max-vertical-offset="795">
+          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>

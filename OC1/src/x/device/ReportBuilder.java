@@ -2,7 +2,7 @@ package x.device;
 
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.pagefactories.NamedValue;
+import x.util.NamedValue;
 
 import java.util.ArrayList;
 import java.util.List;

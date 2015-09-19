@@ -2,8 +2,8 @@ package x.log;
 
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.pagefactories.NamedValue;
-import x.pagefactories.NamedValueListSource;
+import x.util.NamedValue;
+import x.util.NamedValueListSource;
 import x.screen.Screen;
 
 import java.util.Arrays;

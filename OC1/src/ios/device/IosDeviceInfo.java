@@ -1,7 +1,7 @@
 package ios.device;
 
-import x.pagefactories.NamedValue;
-import x.pagefactories.NamedValueListSource;
+import x.util.NamedValue;
+import x.util.NamedValueListSource;
 import x.device.ReportBuilder;
 import x.event.LiveList;
 

@@ -1,4 +1,4 @@
-package x.pagefactories;
+package x.util;
 
 public final class NamedValue
 {
