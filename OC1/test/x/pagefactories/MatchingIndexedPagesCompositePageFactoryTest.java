@@ -1,4 +1,4 @@
-package x.pagefactorybuilders;
+package x.pagefactories;
 
 import mach.Mocks;
 import org.junit.Before;
@@ -9,8 +9,6 @@ import x.log.ILogManager;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
-import x.pagefactories.ItemListPageFactoryFactory;
-import x.pagefactories.MatchingIndexedPagesCompositePageFactory;
 import x.uiwidget.XComponent;
 
 import static mach.Mocks._;
