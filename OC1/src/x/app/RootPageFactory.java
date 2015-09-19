@@ -2,7 +2,8 @@ package x.app;
 
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.pagefactorybuilders.MatchingIndexedPagesCompositePageFactory;
+import x.pagefactories.IndexPageFactory;
+import x.pagefactories.MatchingIndexedPagesCompositePageFactory;
 import x.page.PageFactory;
 import x.page.PageTags;
 import x.page.dynamic.DynamicPageFactory;
@@ -13,6 +14,7 @@ import x.pagefactories.*;
 import x.pages.CustomComponentPage;
 import x.pages.Home;
 import x.pages.ProviderDetailsPage;
+import x.specificpagefactories.*;
 import x.util.StringMap;
 
 import java.util.Arrays;
@@ -47,7 +49,7 @@ public final class RootPageFactory {
                 ServiceProviderSearchScreenFactory.FACTORY,
                 CustomComponentPage.FACTORY,
                 dynamicScreens(layouts),
-                IndexPageFactory.of(PageTags.of("Index"),index),
+                IndexPageFactory.of(PageTags.of("Index"), index),
                 NamedValuePageFactory.of(),
                 new LazyPageFactory(taggedLayouts)
         );

@@ -1,4 +1,4 @@
-package x.pagefactories;
+package x.specificpagefactories;
 
 import x.domain.ServiceProvider;
 import x.event.SwappableList;

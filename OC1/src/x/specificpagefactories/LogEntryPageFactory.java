@@ -1,10 +1,12 @@
-package x.pagefactories;
+package x.specificpagefactories;
 
 import x.app.Registry;
 import x.event.LiveList;
 import x.log.XLogWriter;
 import x.page.PageFactory;
 import x.page.PageTags;
+import x.pagefactories.NamedValuePageFactory;
+import x.pagefactories.ItemListPageFactoryFactory;
 
 public final class LogEntryPageFactory {
 

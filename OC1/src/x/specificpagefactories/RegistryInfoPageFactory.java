@@ -1,9 +1,11 @@
-package x.pagefactories;
+package x.specificpagefactories;
 
 import x.app.Registry;
 import x.page.PageFactory;
 import x.page.PageTags;
 import x.event.NamedValueListSource;
+import x.pagefactories.NamedValueToPageLink;
+import x.pagefactories.ItemListPageFactoryFactory;
 
 public final class RegistryInfoPageFactory {
 

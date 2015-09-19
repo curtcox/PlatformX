@@ -1,4 +1,4 @@
-package x.pagefactorybuilders;
+package x.pagefactories;
 
 import x.app.Registry;
 import x.event.XLiveList;
@@ -6,8 +6,6 @@ import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.page.PageTags;
-import x.pagefactories.ItemListPageFactoryFactory;
-import x.pagefactories.ItemToPageLink;
 
 import java.util.ArrayList;
 import java.util.List;

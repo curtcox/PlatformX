@@ -1,4 +1,4 @@
-package x.pagefactories;
+package x.specificpagefactories;
 
 import x.app.Registry;
 import x.domain.ServiceProvider;

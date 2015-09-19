@@ -10,6 +10,7 @@ import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.pagefactories.ItemListPageFactoryFactory;
+import x.pagefactories.MatchingIndexedPagesCompositePageFactory;
 import x.uiwidget.XComponent;
 
 import static mach.Mocks._;

@@ -33,7 +33,7 @@ public final class NamedValuePageFactory
     @Override
     public Page[] create(PageLink link) {
         return (link.tags.matches(TAG))
-            ? ItemsPage.of(tags(link),link,newSearchableList(link),ITEM_TO_PAGELINK)
+            ? ItemsPage.of(tags(link), link, newSearchableList(link), ITEM_TO_PAGELINK)
             : new Page[0];
     }
 
