@@ -1,11 +1,11 @@
 package x.specificpagefactories;
 
 import x.app.Registry;
+import x.event.NamedValueListSource;
 import x.page.PageFactory;
 import x.page.PageTags;
-import x.event.NamedValueListSource;
-import x.pagefactories.NamedValueToPageLink;
 import x.pagefactories.ItemListPageFactoryFactory;
+import x.pagefactories.NamedValuePageFactory;
 
 public final class RegistryInfoPageFactory {
 
@@ -13,7 +13,7 @@ public final class RegistryInfoPageFactory {
         return itemListScreenFactoryFactory().newFactory(
             PageTags.of("Registry"),
             registryInfo().asNamedValues(),
-            new NamedValueToPageLink());
+            NamedValuePageFactory.ITEM_TO_PAGELINK);
     }
 
     private static ItemListPageFactoryFactory itemListScreenFactoryFactory() {

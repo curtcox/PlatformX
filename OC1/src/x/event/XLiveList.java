@@ -1,5 +1,6 @@
 package x.event;
 
+import x.util.CollectionAsList;
 import x.util.Translator;
 
 import java.util.Collection;
@@ -25,6 +26,10 @@ public final class XLiveList<E>
 
     public static XLiveList of(List list) {
         return new XLiveList(list,Translator.IDENTITY);
+    }
+
+    public static XLiveList of(Collection collection) {
+        return of(new CollectionAsList(collection));
     }
 
     @Override

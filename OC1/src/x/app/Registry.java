@@ -17,6 +17,7 @@ public final class Registry
 {
 
     private static final Map<Class,Object> values = new HashMap<Class,Object>();
+    private static final LiveList published = XLiveList.of(values.entrySet());
     static {
         put(Registry.class, new Registry());
     }
@@ -34,14 +35,7 @@ public final class Registry
 
     @Override
     public LiveList<NamedValue> asNamedValues() {
-        List list = new ArrayList();
-        for (Object object : values.entrySet()) {
-            list.add(keyValuePair((Map.Entry) object));
-        }
-        return XLiveList.of(list);
+        return published;
     }
 
-    private NamedValue keyValuePair(Map.Entry entry) {
-        return new NamedValue("" + entry.getKey(), entry.getValue());
-    }
 }
