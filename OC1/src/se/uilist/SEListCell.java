@@ -57,8 +57,8 @@ final class SEListCell
     private static class IconButton extends JButton {
         @Override
         public Dimension getPreferredSize() {
-            int width = 100;
             int height = 100;
+            int width = getIcon() == null ? 0 : height;
             return new Dimension(width, height);
         }
 
@@ -81,7 +81,12 @@ final class SEListCell
     @Override
     public void apply(Config config) {
         firstRow.setText(config.first);
-        secondRow.setText(config.second);
+        if (config.second!=null && config.second.length() > 0) {
+            secondRow.setVisible(true);
+            secondRow.setText(config.second);
+        } else {
+            secondRow.setVisible(false);
+        }
     }
 
 }
