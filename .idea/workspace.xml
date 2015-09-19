@@ -2,133 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\x\Registry.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\x\XJSON.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\x\IO.java" afterPath="$PROJECT_DIR$/OC1/src/x/io/IO.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\x\Registry.java" afterPath="$PROJECT_DIR$/OC1/src/x/app/Registry.java" />
-      <change type="MOVED" beforePath="C:\Users\Curt\IdeaProjects\OysterCracker\OC1\src\x\XJSON.java" afterPath="$PROJECT_DIR$/OC1/src/x/io/XJSON.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/app/AnApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/uiwidget/AnBorderContainer.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/uiwidget/AnBorderContainer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/uiwidget/AnBorderContainerTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/uiwidget/AnBorderContainerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/ui/AnDisplay.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/ui/AnDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/ui/AnDisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/ui/AnDisplayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/ui/AnForm.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/ui/AnForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/pagefactories/AnItemListPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/pagefactories/AnItemListPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/uilist/AnListCell.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/uilist/AnListCell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/app/AnRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/app/AnRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/app/AnRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/app/AnRegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/util/AnRunner.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/util/AnRunner.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/uilist/AnSearchFilterInstaller.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/uilist/AnSearchFilterInstaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/uilist/AnSearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/uilist/AnSearchableList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/uilist/AnSearchableListTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/uilist/AnSearchableListTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/uilist/AnUIList.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/uilist/AnUIList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/ui/AnUIRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/ui/AnUIRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/ui/AnUIRendererTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/ui/AnUIRendererTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/net/C1CachedNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/c1/net/C1CachedNetwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/uilist/C1DebugList.java" afterPath="$PROJECT_DIR$/OC1/src/c1/uilist/C1DebugList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/C1ExceptionLogger.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/C1ExceptionLogger.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/C1ExceptionLoggerTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/C1ExceptionLoggerTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/ui/C1Icons.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1Icons.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/log/C1IssueReporter.java" afterPath="$PROJECT_DIR$/OC1/src/c1/log/C1IssueReporter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/services/C1Locations.java" afterPath="$PROJECT_DIR$/OC1/src/c1/services/C1Locations.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/command/C1LoggedCommand.java" afterPath="$PROJECT_DIR$/OC1/src/c1/command/C1LoggedCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/net/C1RawNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/c1/net/C1RawNetwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/C1Reflection.java" afterPath="$PROJECT_DIR$/OC1/src/c1/C1Reflection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/C1RegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/C1RegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/ui/C1UIRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/c1/ui/C1UIRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/hash/CompositeNamedValues.java" afterPath="$PROJECT_DIR$/OC1/src/hash/CompositeNamedValues.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/app/CurrentState.java" afterPath="$PROJECT_DIR$/OC1/src/x/app/CurrentState.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/CurrentStateTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/CurrentStateTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/DeviceInfoPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/DeviceInfoPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/page/dynamic/DynamicScreenLayoutProvider.java" afterPath="$PROJECT_DIR$/OC1/src/x/page/dynamic/DynamicScreenLayoutProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/page/dynamic/DynamicScreenMethodInvocations.java" afterPath="$PROJECT_DIR$/OC1/src/x/page/dynamic/DynamicScreenMethodInvocations.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/ui/EditCommand.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/EditCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/EditCommandTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeAnRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeAnRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeC1RegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeC1RegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeIosRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeIosRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeRegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeSERegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeSERegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeVaRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeVaRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeXRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeXRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/services/Geocoder.java" afterPath="$PROJECT_DIR$/OC1/src/c1/services/Geocoder.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/GeocoderStringToList.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/GeocoderStringToList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/GeocodingTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/GeocodingTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/Heartbeat.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/Heartbeat.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/HeartbeatMonitor.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/HeartbeatMonitor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pages/Home.java" afterPath="$PROJECT_DIR$/OC1/src/x/pages/Home.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pages/HowTo.java" afterPath="$PROJECT_DIR$/OC1/src/x/pages/HowTo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/io/IOTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/io/IOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/IndexPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/IndexPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/app/IosApplication.java" afterPath="$PROJECT_DIR$/OC1/src/ios/app/IosApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/ui/IosDisplay.java" afterPath="$PROJECT_DIR$/OC1/src/ios/ui/IosDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/ios/ui/IosDisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/ios/ui/IosDisplayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uilist/IosFilterListModel.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uilist/IosFilterListModel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java" afterPath="$PROJECT_DIR$/OC1/src/ios/ui/IosForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/ios/pagefactories/IosItemListPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uiwidget/IosPassthruView.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uiwidget/IosPassthruView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/app/IosRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/ios/app/IosRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/ios/app/IosRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/ios/app/IosRegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchFilterInstaller.java" afterPath="$PROJECT_DIR$/OC1/src/ios/uilist/IosSearchFilterInstaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/ui/IosUIRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/ios/ui/IosUIRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/IosUtil.java" afterPath="$PROJECT_DIR$/OC1/src/ios/IosUtil.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/JSON.java" afterPath="$PROJECT_DIR$/OC1/src/c1/JSON.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/net/JsonIndexNetStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/x/net/JsonIndexNetStringMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" afterPath="$PROJECT_DIR$/OC1/src/google/JsonResponseParser.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pages/LocationSelectionPage.java" afterPath="$PROJECT_DIR$/OC1/src/x/pages/LocationSelectionPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/LocationSelectionPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/LocationSelectionPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/LogEntryPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/LogEntryPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/stores/MapStorageIO.java" afterPath="$PROJECT_DIR$/OC1/src/x/stores/MapStorageIO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/page/MatchingIndexedPagesCompositePageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/page/MatchingIndexedPagesCompositePageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/MatchingIndexedPagesCompositePageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/MatchingIndexedPagesCompositePageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java" afterPath="$PROJECT_DIR$/OC1/src/c1/app/MyApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/stores/MyRatings.java" afterPath="$PROJECT_DIR$/OC1/src/x/stores/MyRatings.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/stores/MyRatingsTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/net/NetworkCacheEntry.java" afterPath="$PROJECT_DIR$/OC1/src/c1/net/NetworkCacheEntry.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/page/Page.java" afterPath="$PROJECT_DIR$/OC1/src/x/page/Page.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/page/PageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/page/PageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/google/PlacesSearchTest.java" afterPath="$PROJECT_DIR$/OC1/test/google/PlacesSearchTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pages/Rate.java" afterPath="$PROJECT_DIR$/OC1/src/x/pages/Rate.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/RegistryInfoPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/RegistryInfoPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/RegistryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/RegistryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/app/RootPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/app/RootPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/OC1/src/se/app/SEPageServer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/app/SEApplication.java" afterPath="$PROJECT_DIR$/OC1/src/se/app/SEApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/ui/SEFormTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/pagefactories/SEItemListPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/se/pagefactories/SEItemListPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/app/SERegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/app/SERegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java" afterPath="$PROJECT_DIR$/OC1/src/se/uilist/SESearchFilterInstaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/se/ui/SEUIRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/screen/Screen.java" afterPath="$PROJECT_DIR$/OC1/src/x/screen/Screen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java" afterPath="$PROJECT_DIR$/OC1/src/se/editor/ScreenEditor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java" afterPath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorDemo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" afterPath="$PROJECT_DIR$/OC1/test/se/editor/ScreenEditorTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/SelectionListPageTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/SelectionListPageTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/domain/ServiceProvider.java" afterPath="$PROJECT_DIR$/OC1/src/x/domain/ServiceProvider.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/ServiceProviderFilterPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/ServiceProviderFilterPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pages/ServiceProviderSearchPage.java" afterPath="$PROJECT_DIR$/OC1/src/x/pages/ServiceProviderSearchPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/ServiceProviderSearchScreenFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/ServiceProviderSearchScreenFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/services/ServiceProviders.java" afterPath="$PROJECT_DIR$/OC1/src/x/services/ServiceProviders.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/net/SimpleNetStringMap.java" afterPath="$PROJECT_DIR$/OC1/src/x/net/SimpleNetStringMap.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/app/VaApplication.java" afterPath="$PROJECT_DIR$/OC1/src/va/app/VaApplication.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaDisplay.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/va/ui/VaDisplayTest.java" afterPath="$PROJECT_DIR$/OC1/test/va/ui/VaDisplayTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/va/ui/VaFormTest.java" afterPath="$PROJECT_DIR$/OC1/test/va/ui/VaFormTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/app/VaRegistryLoader.java" afterPath="$PROJECT_DIR$/OC1/src/va/app/VaRegistryLoader.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/va/app/VaRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/va/app/VaRegistryLoaderTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchFilterInstaller.java" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchFilterInstaller.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchableList.java" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaSearchableList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/uilist/VaUIList.java" afterPath="$PROJECT_DIR$/OC1/src/va/uilist/VaUIList.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" afterPath="$PROJECT_DIR$/OC1/src/va/ui/VaUIRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/google/WebServiceSearch.java" afterPath="$PROJECT_DIR$/OC1/src/google/WebServiceSearch.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/command/XCommand.java" afterPath="$PROJECT_DIR$/OC1/src/x/command/XCommand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/log/XLogWriter.java" afterPath="$PROJECT_DIR$/OC1/src/x/log/XLogWriter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/net/XRawNetwork.java" afterPath="$PROJECT_DIR$/OC1/src/x/net/XRawNetwork.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/pageparts/XScreenButtonTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/pageparts/XScreenButtonTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/screen/XScreenTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/screen/XScreenTest.java" />
     </list>
     <ignored path="OysterCracker.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -165,35 +40,15 @@
     <splitter split-orientation="horizontal" split-proportion="0.46352202">
       <split-first>
         <leaf>
-          <file leaf-file-name="LogEntryPageFactory.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/LogEntryPageFactory.java">
+          <file leaf-file-name="SEApplication.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SEApplication.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="14" column="39" selection-start-line="14" selection-start-column="39" selection-end-line="14" selection-end-column="39" />
+                <state vertical-scroll-proportion="0.53825855">
+                  <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
                   <folding>
-                    <element signature="e#608#609#0" expanded="true" />
-                    <element signature="e#667#668#0" expanded="true" />
+                    <element signature="e#847#848#0" expanded="true" />
+                    <element signature="e#891#892#0" expanded="true" />
                   </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NamedValueListSource.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/event/NamedValueListSource.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NamedValue.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/util/NamedValue.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.044854883">
-                  <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
-                  <folding />
                 </state>
               </provider>
             </entry>
@@ -202,102 +57,17 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="Registry.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/app/Registry.java">
+          <file leaf-file-name="SEPageServer.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SEPageServer.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="SEApplication.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SEApplication.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-0.18601583">
-                  <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#771#772#0" expanded="true" />
-                    <element signature="e#798#799#0" expanded="true" />
-                    <element signature="e#874#997#0" expanded="true" />
-                    <element signature="e#996#997#0" expanded="true" />
-                    <element signature="e#1340#1341#0" expanded="true" />
-                    <element signature="e#1384#1385#0" expanded="true" />
-                    <element signature="e#1428#1429#0" expanded="true" />
-                    <element signature="e#1480#1481#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NamedValuePageFactory.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
+                <state vertical-scroll-proportion="0.20184697">
+                  <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="RootPageFactory.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/app/RootPageFactory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="22" column="19" selection-start-line="22" selection-start-column="19" selection-end-line="22" selection-end-column="19" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="IO.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/io/IO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="13" column="19" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="19" />
-                  <folding>
-                    <element signature="e#1046#1047#0" expanded="true" />
-                    <element signature="e#1077#1078#0" expanded="true" />
-                    <element signature="e#1113#1114#0" expanded="true" />
-                    <element signature="e#1184#1185#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="XJSON.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/io/XJSON.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="XDeviceInfo.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/device/XDeviceInfo.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="5" column="8" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="MatchingIndexedPagesCompositePageFactory.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/page/MatchingIndexedPagesCompositePageFactory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0">
-                  <caret line="29" column="28" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
-                  <folding>
-                    <element signature="e#532#533#0" expanded="true" />
-                    <element signature="e#574#575#0" expanded="true" />
+                    <element signature="e#389#390#0" expanded="true" />
+                    <element signature="e#416#417#0" expanded="true" />
+                    <element signature="e#632#633#0" expanded="true" />
+                    <element signature="e#684#685#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -326,8 +96,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/src/x/screen/Screen.java" />
-        <option value="$PROJECT_DIR$/OC1/src/x/command/Command.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/command/XCommand.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/log/XLog.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/pagefactories/KeyValuePair.java" />
@@ -376,7 +144,9 @@
         <option value="$PROJECT_DIR$/OC1/src/x/io/IO.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/io/XJSON.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/app/Registry.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/app/SEServerPageServer.java" />
         <option value="$PROJECT_DIR$/OC1/src/se/app/SEApplication.java" />
+        <option value="$PROJECT_DIR$/OC1/src/se/app/SEPageServer.java" />
       </list>
     </option>
   </component>
@@ -1028,21 +798,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/log/ILogManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="17" selection-start-line="2" selection-start-column="17" selection-end-line="2" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/c1/app/C1RegistryLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="58" column="23" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/ios/app/IosRegistryLoader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1164,14 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1370,7 +1117,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/x/util/NamedValue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.044854883">
+        <state vertical-scroll-proportion="0.0">
           <caret line="2" column="19" selection-start-line="2" selection-start-column="19" selection-end-line="2" selection-end-column="19" />
           <folding />
         </state>
@@ -1444,19 +1191,43 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SERegistryLoader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="54" column="45" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/app/StringMapRequestHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SEApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.18601583">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.53825855">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
           <folding>
-            <element signature="e#771#772#0" expanded="true" />
-            <element signature="e#798#799#0" expanded="true" />
-            <element signature="e#874#997#0" expanded="true" />
-            <element signature="e#996#997#0" expanded="true" />
-            <element signature="e#1340#1341#0" expanded="true" />
-            <element signature="e#1384#1385#0" expanded="true" />
-            <element signature="e#1428#1429#0" expanded="true" />
-            <element signature="e#1480#1481#0" expanded="true" />
+            <element signature="e#847#848#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OC1/src/se/app/SEPageServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20184697">
+          <caret line="9" column="37" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#389#390#0" expanded="true" />
+            <element signature="e#416#417#0" expanded="true" />
+            <element signature="e#632#633#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,14 +1,10 @@
 package se.app;
 
-import mite.MiteHTTPServer;
-import x.app.Registry;
 import x.page.PageLink;
 import x.screen.Screen;
-import x.util.StringMap;
 
 import javax.swing.*;
 import java.awt.*;
-import java.io.IOException;
 
 /**
  * A Java SE application.
@@ -24,14 +20,6 @@ public final class SEApplication {
         UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
     }
 
-    private static void startServer() throws IOException {
-        new MiteHTTPServer(findEmptyPort(), new StringMapRequestHandler(stringMap()));
-    }
-
-    private static int findEmptyPort() {
-        return 8000;
-    }
-
     private static void launchUIOnEDT() {
         EventQueue.invokeLater(new Runnable() {
             @Override
@@ -43,23 +31,12 @@ public final class SEApplication {
 
     private static void launchApp() {
         SERegistryLoader.load();
-        tryToStartServer();
+        SEPageServer.tryToStartServer();
         show();
-    }
-
-    private static void tryToStartServer() {
-        try {
-            startServer();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
     }
 
     private static void show() {
         Screen.show(PageLink.of(""));
     }
 
-    private static StringMap stringMap() {
-        return Registry.get(StringMap.class);
-    }
 }
