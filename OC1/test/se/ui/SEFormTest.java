@@ -1,7 +1,7 @@
 package se.ui;
 
 import config.ShouldRun;
-import x.Registry;
+import x.app.Registry;
 import x.page.PageLink;
 import x.ui.IForm;
 import x.uiwidget.XComponent;

@@ -3,7 +3,7 @@ package ios.ui;
 import ios.uiwidget.IosButtonViewController;
 import ios.uiwidget.IosLabelViewController;
 import org.robovm.apple.uikit.*;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.uiwidget.*;

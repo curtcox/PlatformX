@@ -1,6 +1,6 @@
 package x.pages;
 
-import x.Registry;
+import x.app.Registry;
 import x.domain.ServiceProvider;
 import x.pageparts.ProviderDetailsButton;
 import x.pageparts.ProviderRatingButton;

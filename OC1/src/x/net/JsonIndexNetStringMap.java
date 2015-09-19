@@ -1,6 +1,6 @@
 package x.net;
 
-import x.IO;
+import x.io.IO;
 import x.util.StringMap;
 
 import java.net.URI;

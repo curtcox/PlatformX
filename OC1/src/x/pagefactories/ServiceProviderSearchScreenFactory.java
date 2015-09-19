@@ -1,6 +1,6 @@
 package x.pagefactories;
 
-import x.Registry;
+import x.app.Registry;
 import x.domain.ServiceProvider;
 import x.domain.Type;
 import x.event.SwappableList;

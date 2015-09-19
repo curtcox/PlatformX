@@ -6,7 +6,7 @@ import an.a22.ui.AnFormFactory;
 import android.app.Activity;
 import android.content.Context;
 import org.robolectric.Robolectric;
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import x.domain.ServiceProvider;
 import x.log.ILogManager;

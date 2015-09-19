@@ -1,6 +1,6 @@
 package x.domain;
 
-import x.Registry;
+import x.app.Registry;
 import x.event.StringSource;
 import x.services.LocationReading;
 import x.services.LocationService;

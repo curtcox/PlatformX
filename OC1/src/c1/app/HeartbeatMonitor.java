@@ -1,7 +1,7 @@
 package c1.app;
 
 import com.codename1.ui.Display;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 

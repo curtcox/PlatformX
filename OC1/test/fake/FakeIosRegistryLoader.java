@@ -2,7 +2,7 @@ package fake;
 
 import ios.pagefactories.IosItemListPageFactoryFactory;
 import ios.ui.IosFormFactory;
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import x.domain.ServiceProvider;
 import x.log.ILogManager;

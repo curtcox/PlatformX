@@ -3,7 +3,7 @@ package ios.uiwidget;
 import org.robovm.apple.coregraphics.CGPoint;
 import org.robovm.apple.uikit.UIEvent;
 import org.robovm.apple.uikit.UIView;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 

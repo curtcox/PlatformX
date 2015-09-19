@@ -4,7 +4,7 @@ import an.a22.uiwidget.AnBorderContainer;
 import android.content.Context;
 import android.view.View;
 import android.widget.EditText;
-import x.Registry;
+import x.app.Registry;
 import x.event.Action;
 import x.event.LiveList;
 import x.uilist.IXListCell;

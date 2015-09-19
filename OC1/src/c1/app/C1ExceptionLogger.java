@@ -5,7 +5,7 @@ import com.codename1.ui.Display;
 import com.codename1.ui.Form;
 import com.codename1.ui.events.ActionEvent;
 import com.codename1.ui.events.ActionListener;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 

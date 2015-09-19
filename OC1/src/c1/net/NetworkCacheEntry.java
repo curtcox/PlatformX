@@ -5,7 +5,7 @@ import com.codename1.io.Storage;
 import com.codename1.io.Util;
 import com.codename1.ui.EncodedImage;
 import com.codename1.ui.URLImage;
-import x.Registry;
+import x.app.Registry;
 import x.uiwidget.XImage;
 import x.util.Strings;
 

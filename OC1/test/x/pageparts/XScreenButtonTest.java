@@ -6,7 +6,7 @@ import fake.FakeXRegistryLoader;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
-import x.Registry;
+import x.app.Registry;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.ui.IForm;

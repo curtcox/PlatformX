@@ -3,7 +3,7 @@ package se.ui;
 import se.events.Events;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
-import x.Registry;
+import x.app.Registry;
 import x.command.XCommand;
 import x.page.PageLink;
 import x.uiwidget.XComponent;

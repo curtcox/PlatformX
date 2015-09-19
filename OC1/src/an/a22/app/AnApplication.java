@@ -3,7 +3,7 @@ package an.a22.app;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.page.PageLink;

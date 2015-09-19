@@ -1,6 +1,6 @@
 package se.editor;
 
-import x.Registry;
+import x.app.Registry;
 import x.page.PageLink;
 import x.page.PageTags;
 import x.uiwidget.XComponent;

@@ -4,7 +4,7 @@ import ios.device.IosDeviceInfo;
 import ios.pagefactories.IosItemListPageFactoryFactory;
 import ios.ui.IosDisplay;
 import ios.ui.IosFormFactory;
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import x.device.XDeviceInfo;
 import x.log.ILogManager;

@@ -1,7 +1,7 @@
 package x.net;
 
-import x.IO;
-import x.Registry;
+import x.io.IO;
+import x.app.Registry;
 import x.util.StringMap;
 
 import java.net.URI;

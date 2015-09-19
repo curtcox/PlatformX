@@ -1,6 +1,6 @@
 package fake;
 
-import x.Registry;
+import x.app.Registry;
 import x.log.XLogManager;
 import x.log.XLogWriter;
 import x.log.ILogManager;

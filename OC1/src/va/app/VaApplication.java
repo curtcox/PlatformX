@@ -2,7 +2,7 @@ package va.app;
 
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.UI;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.page.PageLink;

@@ -1,6 +1,6 @@
 package x.stores;
 
-import x.Registry;
+import x.app.Registry;
 import x.domain.ID;
 import x.domain.Rating;
 

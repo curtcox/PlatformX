@@ -1,7 +1,7 @@
 package fake;
 
 import se.pagefactories.SEItemListPageFactoryFactory;
-import x.Registry;
+import x.app.Registry;
 import x.domain.ServiceProvider;
 import x.log.ILogManager;
 import x.log.XLogManager;

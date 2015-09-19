@@ -8,7 +8,7 @@ import c1.ui.C1Icons;
 import com.codename1.impl.ImplementationFactory;
 import com.codename1.io.Storage;
 import com.codename1.ui.Display;
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import x.domain.ServiceProvider;
 import x.log.XLogManager;

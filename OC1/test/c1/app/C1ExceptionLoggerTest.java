@@ -3,7 +3,7 @@ package c1.app;
 import com.codename1.ui.Display;
 import config.ShouldRun;
 import org.junit.Before;
-import x.Registry;
+import x.app.Registry;
 import org.junit.Test;
 
 import static org.junit.Assert.assertNotNull;

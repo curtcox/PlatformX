@@ -1,6 +1,6 @@
 package se.pagefactories;
 
-import x.Registry;
+import x.app.Registry;
 import x.event.LiveList;
 import x.page.Page;
 import x.page.PageFactory;

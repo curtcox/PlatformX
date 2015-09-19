@@ -3,7 +3,7 @@ package an.a22.uilist;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.TextView;
-import x.Registry;
+import x.app.Registry;
 import x.uilist.ISearchFilterInstaller;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;

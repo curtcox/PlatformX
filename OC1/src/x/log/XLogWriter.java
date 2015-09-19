@@ -1,6 +1,6 @@
 package x.log;
 
-import x.Registry;
+import x.app.Registry;
 import x.event.LiveList;
 import x.event.XLiveList;
 

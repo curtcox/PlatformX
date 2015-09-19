@@ -2,7 +2,7 @@ package se.app;
 
 import config.ShouldRun;
 import org.junit.Before;
-import x.Registry;
+import x.app.Registry;
 import x.page.dynamic.TaggedStringSources;
 import x.util.StringMap;
 import org.junit.Test;

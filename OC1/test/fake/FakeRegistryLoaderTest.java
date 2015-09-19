@@ -4,7 +4,7 @@ import com.codename1.io.Storage;
 import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILogManager;
 import x.log.XLogManager;
 

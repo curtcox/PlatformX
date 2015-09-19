@@ -2,7 +2,7 @@ package c1;
 
 import com.codename1.ui.Button;
 import com.codename1.ui.Label;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 

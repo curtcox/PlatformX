@@ -4,7 +4,7 @@ import ios.uiwidget.IosTextController;
 import org.robovm.apple.foundation.NSRange;
 import org.robovm.apple.uikit.UITextField;
 import org.robovm.apple.uikit.UITextFieldDelegateAdapter;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.uilist.ISearchFilterInstaller;

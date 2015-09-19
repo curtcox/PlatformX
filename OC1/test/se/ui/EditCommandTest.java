@@ -4,7 +4,7 @@ import config.ShouldRun;
 import mach.Mocks;
 import org.junit.Before;
 import se.events.Events;
-import x.Registry;
+import x.app.Registry;
 import x.page.PageLink;
 import x.uiwidget.XComponent;
 import x.uiwidget.XLabel;

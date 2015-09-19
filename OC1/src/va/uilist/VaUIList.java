@@ -1,7 +1,7 @@
 package va.uilist;
 
 import com.vaadin.ui.Table;
-import x.Registry;
+import x.app.Registry;
 import x.event.Action;
 import x.log.ILog;
 import x.log.ILogManager;

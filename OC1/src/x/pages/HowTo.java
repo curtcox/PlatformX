@@ -1,6 +1,6 @@
 package x.pages;
 
-import x.Registry;
+import x.app.Registry;
 import x.log.IIssueReporter;
 import x.uiwidget.XButton;
 

@@ -2,7 +2,7 @@ package c1.services;
 
 import google.Geocoding;
 import google.GoogleLocation;
-import x.Registry;
+import x.app.Registry;
 import x.domain.LocationDescription;
 import x.event.LiveList;
 import x.event.XLiveList;

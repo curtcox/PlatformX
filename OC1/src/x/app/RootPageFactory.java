@@ -1,6 +1,5 @@
 package x.app;
 
-import x.Registry;
 import x.event.LiveList;
 import x.event.XLiveList;
 import x.page.MatchingIndexedPagesCompositePageFactory;

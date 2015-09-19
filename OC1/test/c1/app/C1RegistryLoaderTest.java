@@ -9,7 +9,7 @@ import fake.FakeLocationManager;
 import fake.FakeStorage;
 import org.junit.Before;
 import org.junit.Test;
-import x.Registry;
+import x.app.Registry;
 import x.event.NamedValueListSource;
 import x.log.ILog;
 import x.log.ILogManager;

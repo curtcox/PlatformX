@@ -1,6 +1,6 @@
 package x.pagefactories;
 
-import x.Registry;
+import x.app.Registry;
 import x.services.IGeocoder;
 import x.uilist.StringToList;
 

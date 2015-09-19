@@ -1,6 +1,6 @@
 package se.uilist;
 
-import x.Registry;
+import x.app.Registry;
 import x.uilist.ISearchFilterInstaller;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;

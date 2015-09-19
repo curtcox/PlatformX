@@ -4,7 +4,7 @@ import config.ShouldRun;
 import fake.FakeIosRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
-import x.Registry;
+import x.app.Registry;
 import x.page.PageLink;
 import x.ui.IDisplay;
 import x.ui.IForm;

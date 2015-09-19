@@ -1,6 +1,6 @@
 package x.page;
 
-import x.Registry;
+import x.app.Registry;
 import x.event.XLiveList;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.pagefactories.ItemToPageLink;

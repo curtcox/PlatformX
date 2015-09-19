@@ -4,7 +4,7 @@ import se.events.Events;
 import se.ui.EditTaggedValueEvent;
 import se.uiwidget.StringEditor;
 import se.util.TaggedValue;
-import x.Registry;
+import x.app.Registry;
 import x.event.StringChange;
 import x.screen.Screen;
 

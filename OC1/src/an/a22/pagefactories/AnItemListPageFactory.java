@@ -4,7 +4,7 @@ import an.a22.uilist.AnSearchFilterInstaller;
 import an.a22.uilist.AnSearchableList;
 import android.content.Context;
 import android.widget.TextView;
-import x.Registry;
+import x.app.Registry;
 import x.event.XLiveList;
 import x.page.Page;
 import x.page.PageFactory;

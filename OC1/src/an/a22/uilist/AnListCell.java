@@ -2,7 +2,7 @@ package an.a22.uilist;
 
 import android.content.Context;
 import android.widget.TextView;
-import x.Registry;
+import x.app.Registry;
 import x.uilist.IXListCell;
 
 /**

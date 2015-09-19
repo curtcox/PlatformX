@@ -6,7 +6,7 @@ import ios.uiwidget.IosButtonViewController;
 import ios.uiwidget.IosLabelViewController;
 import ios.uiwidget.IosPassthruView;
 import org.robovm.apple.uikit.UIViewController;
-import x.Registry;
+import x.app.Registry;
 import x.command.XCommand;
 import x.log.ILog;
 import x.log.ILogManager;

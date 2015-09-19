@@ -1,7 +1,7 @@
 package va.ui;
 
 import com.vaadin.ui.*;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.uiwidget.*;

@@ -3,7 +3,7 @@ package ios.ui;
 import org.robovm.apple.coregraphics.CGRect;
 import org.robovm.apple.uikit.UIScreen;
 import org.robovm.apple.uikit.UIWindow;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.ui.IDisplay;

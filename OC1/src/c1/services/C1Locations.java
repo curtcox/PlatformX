@@ -2,7 +2,7 @@ package c1.services;
 
 import com.codename1.location.Location;
 import com.codename1.location.LocationListener;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.services.LocationReading;

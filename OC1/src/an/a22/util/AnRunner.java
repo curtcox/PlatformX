@@ -1,7 +1,7 @@
 package an.a22.util;
 
 import android.app.Activity;
-import x.Registry;
+import x.app.Registry;
 import x.util.Runner;
 
 public final class AnRunner

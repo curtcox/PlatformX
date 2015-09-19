@@ -12,7 +12,7 @@ import c1.ui.C1Display;
 import c1.ui.C1FormFactory;
 import c1.ui.C1Icons;
 import com.codename1.ui.Display;
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import x.device.XDeviceInfo;
 import x.domain.ServiceProvider;

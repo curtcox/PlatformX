@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.view.Display;
 import android.view.WindowManager;
-import x.Registry;
+import x.app.Registry;
 import x.ui.IDisplay;
 import x.ui.IForm;
 

@@ -6,7 +6,7 @@ import fake.FakeVaRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 import va.app.VaApplication;
-import x.Registry;
+import x.app.Registry;
 import x.page.PageLink;
 import x.ui.IDisplay;
 import x.ui.IForm;

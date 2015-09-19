@@ -1,7 +1,7 @@
 package google;
 
-import x.Registry;
-import x.XJSON;
+import x.app.Registry;
+import x.io.XJSON;
 import x.log.ILog;
 import x.log.ILogManager;
 

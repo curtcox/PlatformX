@@ -3,7 +3,7 @@ package va.uilist;
 import com.vaadin.ui.Component;
 import com.vaadin.ui.TextField;
 import va.uiwidget.VaBorderContainer;
-import x.Registry;
+import x.app.Registry;
 import x.event.Action;
 import x.event.LiveList;
 import x.log.ILog;

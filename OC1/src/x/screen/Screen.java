@@ -1,6 +1,6 @@
 package x.screen;
 
-import x.Registry;
+import x.app.Registry;
 import x.command.XCommand;
 import x.log.ILog;
 import x.log.ILogManager;

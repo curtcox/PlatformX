@@ -5,7 +5,7 @@ import fake.FakeStorage;
 import fake.FakeXRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
-import x.Registry;
+import x.app.Registry;
 import x.domain.ID;
 import x.domain.Rating;
 

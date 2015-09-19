@@ -1,7 +1,7 @@
 package se.editor;
 
 import config.ShouldRun;
-import x.Registry;
+import x.app.Registry;
 import x.page.Page;
 import x.page.PageLink;
 import x.page.PageTags;

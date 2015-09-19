@@ -6,7 +6,7 @@ import fake.FakeLogManager;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILogManager;
 import x.ui.IFormFactory;
 import x.uiwidget.XPeeredComponent;

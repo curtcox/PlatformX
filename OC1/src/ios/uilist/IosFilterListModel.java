@@ -6,7 +6,7 @@ import org.robovm.apple.uikit.UITableView;
 import org.robovm.apple.uikit.UITableViewCell;
 import org.robovm.apple.uikit.UITableViewCellEditingStyle;
 import org.robovm.apple.uikit.UITableViewDataSource;
-import x.Registry;
+import x.app.Registry;
 import x.event.LiveList;
 import x.log.ILog;
 import x.log.ILogManager;

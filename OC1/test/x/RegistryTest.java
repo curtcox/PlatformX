@@ -3,6 +3,7 @@ package x;
 import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
+import x.app.Registry;
 
 import java.util.*;
 

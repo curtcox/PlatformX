@@ -5,7 +5,7 @@ import an.a22.pagefactories.AnItemListPageFactoryFactory;
 import an.a22.ui.AnDisplay;
 import an.a22.ui.AnFormFactory;
 import an.a22.util.AnRunner;
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import x.device.XDeviceInfo;
 import x.log.ILogManager;

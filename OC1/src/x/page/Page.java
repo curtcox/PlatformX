@@ -1,6 +1,6 @@
 package x.page;
 
-import x.Registry;
+import x.app.Registry;
 import x.ui.IDisplay;
 import x.uiwidget.XComponent;
 

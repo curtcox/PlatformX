@@ -2,7 +2,7 @@ package ios;
 
 import org.robovm.apple.uikit.UIView;
 import org.robovm.apple.uikit.UIViewController;
-import x.Registry;
+import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 

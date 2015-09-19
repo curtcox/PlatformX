@@ -2,7 +2,7 @@ package x.services;
 
 import google.Place;
 import google.PlacesSearch;
-import x.Registry;
+import x.app.Registry;
 import x.domain.*;
 import x.stores.MyRatings;
 

@@ -1,6 +1,6 @@
 package x.page;
 
-import x.Registry;
+import x.app.Registry;
 
 /**
  * For creating PageS from PageLinkS.

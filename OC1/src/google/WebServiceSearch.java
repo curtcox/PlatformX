@@ -1,6 +1,6 @@
 package google;
 
-import x.Registry;
+import x.app.Registry;
 import x.net.Network;
 
 import java.io.InputStream;

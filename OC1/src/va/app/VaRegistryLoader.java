@@ -4,7 +4,7 @@ import va.device.VaDeviceInfo;
 import va.pagefactories.VaItemListPageFactoryFactory;
 import va.ui.VaDisplay;
 import va.ui.VaFormFactory;
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import x.device.XDeviceInfo;
 import x.log.ILogManager;

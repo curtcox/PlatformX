@@ -2,7 +2,7 @@ package fake;
 
 import va.pagefactories.VaItemListPageFactoryFactory;
 import va.ui.VaFormFactory;
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import x.domain.ServiceProvider;
 import x.log.ILogManager;

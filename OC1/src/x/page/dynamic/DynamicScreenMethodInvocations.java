@@ -1,7 +1,7 @@
 package x.page.dynamic;
 
 import hash.NamedExpression;
-import x.Registry;
+import x.app.Registry;
 import x.util.XReflection;
 
 import java.util.HashMap;

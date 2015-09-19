@@ -1,6 +1,6 @@
 package x.pages;
 
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import x.domain.ServiceProvider;
 import x.page.PageLink;

@@ -3,7 +3,7 @@ package c1.app;
 import c1.services.ILocationManager;
 import com.codename1.io.Storage;
 import config.ShouldRun;
-import x.Registry;
+import x.app.Registry;
 import x.app.CurrentState;
 import fake.FakeLocationManager;
 import fake.FakeStorage;

@@ -1,6 +1,6 @@
 package x.pages;
 
-import x.Registry;
+import x.app.Registry;
 import x.domain.LocationDescription;
 import x.page.PageLink;
 import x.page.SelectionListPage;

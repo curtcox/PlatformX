@@ -1,7 +1,7 @@
 package c1.ui;
 
 import com.codename1.ui.util.Resources;
-import x.Registry;
+import x.app.Registry;
 import x.net.Network;
 import x.uiwidget.XImage;
 

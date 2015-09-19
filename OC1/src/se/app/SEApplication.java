@@ -1,7 +1,7 @@
 package se.app;
 
 import mite.MiteHTTPServer;
-import x.Registry;
+import x.app.Registry;
 import x.page.PageLink;
 import x.screen.Screen;
 import x.util.StringMap;
@@ -10,6 +10,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.io.IOException;
 
+/**
+ * A Java SE application.
+ */
 public final class SEApplication {
 
     public static void main(String[] args) throws Exception {

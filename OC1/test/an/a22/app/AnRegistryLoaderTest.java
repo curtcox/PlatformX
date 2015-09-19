@@ -3,7 +3,7 @@ package an.a22.app;
 import com.codename1.io.Storage;
 import config.ShouldRun;
 import org.junit.Before;
-import x.Registry;
+import x.app.Registry;
 import x.device.XDeviceInfo;
 import x.log.ILog;
 import x.log.ILogManager;

@@ -3,7 +3,7 @@ package ios.pagefactories;
 import ios.uilist.IosSearchFilterInstaller;
 import ios.uilist.IosSearchableList;
 import ios.uiwidget.IosLabelViewController;
-import x.Registry;
+import x.app.Registry;
 import x.event.XLiveList;
 import x.log.ILog;
 import x.log.ILogManager;

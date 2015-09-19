@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
-import x.Registry;
+import x.app.Registry;
 
 import static android.view.ViewGroup.LayoutParams.*;
 

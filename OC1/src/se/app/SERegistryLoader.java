@@ -10,7 +10,7 @@ import se.uilist.SESearchableListFactory;
 import se.util.SERunner;
 import se.util.SimpleTaggedValueStringMap;
 import se.util.TaggedValueStringMap;
-import x.Registry;
+import x.app.Registry;
 import x.device.XDeviceInfo;
 import x.log.ILogManager;
 import x.log.XLogManager;

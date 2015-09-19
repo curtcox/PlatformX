@@ -4,7 +4,7 @@ import android.content.Context;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import x.Registry;
+import x.app.Registry;
 import x.event.Action;
 
 final class AnUIList<T>

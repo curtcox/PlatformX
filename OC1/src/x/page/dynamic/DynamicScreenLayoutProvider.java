@@ -3,7 +3,7 @@ package x.page.dynamic;
 import hash.NamedValues;
 import hash.Run;
 import hash.SyntaxError;
-import x.Registry;
+import x.app.Registry;
 import x.event.StringSource;
 import x.log.ILog;
 import x.log.ILogManager;
