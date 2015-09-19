@@ -6,7 +6,9 @@ import x.event.XLiveList;
 
 import java.util.LinkedList;
 
-public final class XLogWriter {
+public final class XLogWriter
+    implements LiveList.Source
+{
 
     final LinkedList<XLogEntry> log = new LinkedList<XLogEntry>();
     final XLiveList published = XLiveList.of(log);
@@ -33,6 +35,11 @@ public final class XLogWriter {
     }
 
     public LiveList<XLogEntry> log() {
+        return published;
+    }
+
+    @Override
+    public LiveList asLiveList() {
         return published;
     }
 }

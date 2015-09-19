@@ -6,5 +6,7 @@ package x.event;
 public interface LiveList<T> 
     extends Change.Source, java.util.List<T>
 {
-    
+    interface Source {
+        LiveList asLiveList();
+    }
 }

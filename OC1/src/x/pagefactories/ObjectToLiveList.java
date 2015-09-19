@@ -13,8 +13,10 @@ final class ObjectToLiveList {
 
     static LiveList from(Object object) {
         if (object instanceof NamedValueListSource) {
-            NamedValueListSource source = (NamedValueListSource) object;
-            return source.asNamedValues();
+            return ((NamedValueListSource) object).asNamedValues();
+        }
+        if (object instanceof LiveList.Source) {
+            return ((LiveList.Source) object).asLiveList();
         }
         if (object instanceof List) {
             return XLiveList.of((List) object);
@@ -27,7 +29,6 @@ final class ObjectToLiveList {
             return XLiveList.of(Arrays.asList(entry.getKey(),entry.getValue()));
         }
         return XLiveList.of(Arrays.asList(object));
-
     }
 
 }
