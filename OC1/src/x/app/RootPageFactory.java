@@ -1,8 +1,11 @@
-package x.page;
+package x.app;
 
 import x.Registry;
 import x.event.LiveList;
 import x.event.XLiveList;
+import x.page.MatchingIndexedPagesCompositePageFactory;
+import x.page.PageFactory;
+import x.page.PageTags;
 import x.page.dynamic.DynamicPageFactory;
 import x.page.dynamic.LazyPageFactory;
 import x.page.dynamic.StringMapStringSource;
