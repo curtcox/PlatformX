@@ -1,6 +1,6 @@
-package x.util;
+package x.event;
 
-import x.event.LiveList;
+import x.util.NamedValue;
 
 public interface NamedValueListSource {
     LiveList<NamedValue> asNamedValues();

@@ -2,23 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e7d98635-a3e8-409c-857f-334f7030550e" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValue.java" afterPath="$PROJECT_DIR$/OC1/src/x/util/NamedValue.java" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValueListSource.java" afterPath="$PROJECT_DIR$/OC1/src/x/util/NamedValueListSource.java" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/OC1/src/x/util/NamedValueListSource.java" afterPath="$PROJECT_DIR$/OC1/src/x/event/NamedValueListSource.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/an/a22/device/AnDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/an/a22/device/AnDeviceInfo.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/an/a22/app/AnRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/an/a22/app/AnRegistryLoaderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/c1/device/C1DeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/c1/device/C1DeviceInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/c1/app/C1RegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/c1/app/C1RegistryLoaderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/DeviceInfoPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/DeviceInfoPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/fake/FakeDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/test/fake/FakeDeviceInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/ios/device/IosDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/ios/device/IosDeviceInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/ios/app/IosRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/ios/app/IosRegistryLoaderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValuePageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValueToPageLink.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/NamedValueToPageLink.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/Registry.java" afterPath="$PROJECT_DIR$/OC1/src/x/Registry.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/pagefactories/RegistryInfoPageFactory.java" afterPath="$PROJECT_DIR$/OC1/src/x/pagefactories/RegistryInfoPageFactory.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/device/ReportBuilder.java" afterPath="$PROJECT_DIR$/OC1/src/x/device/ReportBuilder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java" afterPath="$PROJECT_DIR$/OC1/test/x/page/RootPageFactoryTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/se/device/SEDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/se/device/SEDeviceInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/va/device/VaDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/va/device/VaDeviceInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/test/va/app/VaRegistryLoaderTest.java" afterPath="$PROJECT_DIR$/OC1/test/va/app/VaRegistryLoaderTest.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/OC1/src/x/device/XDeviceInfo.java" afterPath="$PROJECT_DIR$/OC1/src/x/device/XDeviceInfo.java" />
@@ -76,10 +70,10 @@
             </entry>
           </file>
           <file leaf-file-name="NamedValueListSource.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/OC1/src/x/util/NamedValueListSource.java">
+            <entry file="file://$PROJECT_DIR$/OC1/src/x/event/NamedValueListSource.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.094339624" vertical-offset="0" max-vertical-offset="795">
-                  <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+                <state vertical-scroll-proportion="0.0754717" vertical-offset="0" max-vertical-offset="795">
+                  <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -106,12 +100,12 @@
                   <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#511#680#0" expanded="true" />
-                    <element signature="e#679#680#0" expanded="true" />
-                    <element signature="e#1038#1039#0" expanded="true" />
-                    <element signature="e#1107#1108#0" expanded="true" />
-                    <element signature="e#1352#1353#0" expanded="true" />
-                    <element signature="e#1415#1416#0" expanded="true" />
+                    <element signature="e#512#681#0" expanded="true" />
+                    <element signature="e#680#681#0" expanded="true" />
+                    <element signature="e#1039#1040#0" expanded="true" />
+                    <element signature="e#1108#1109#0" expanded="true" />
+                    <element signature="e#1353#1354#0" expanded="true" />
+                    <element signature="e#1416#1417#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -135,7 +129,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/OC1/test/va/pagefactories/VaIndexPageFactoryTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/va/uilist/VaFilterListModelTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/va/uilist/VaSearchableListTest.java" />
         <option value="$PROJECT_DIR$/OC1/test/x/event/XLiveListTest.java" />
@@ -186,6 +179,7 @@
         <option value="$PROJECT_DIR$/OC1/src/x/pagefactories/LogEntryPageFactory.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/util/NamedValue.java" />
         <option value="$PROJECT_DIR$/OC1/src/x/util/NamedValueListSource.java" />
+        <option value="$PROJECT_DIR$/OC1/src/x/event/NamedValueListSource.java" />
       </list>
     </option>
   </component>
@@ -316,7 +310,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pagefactories" />
+              <option name="myItemId" value="event" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -399,11 +393,11 @@
       <recent name="c1.ui" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="x.event" />
       <recent name="x.util" />
       <recent name="c1" />
       <recent name="c1.ui" />
       <recent name="se.uiwidget" />
-      <recent name="c1.uilist" />
     </key>
   </component>
   <component name="RunManager" selected="Application.SEApplication">
@@ -1307,12 +1301,12 @@
           <caret line="60" column="45" selection-start-line="60" selection-start-column="45" selection-end-line="60" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#511#680#0" expanded="true" />
-            <element signature="e#679#680#0" expanded="true" />
-            <element signature="e#1038#1039#0" expanded="true" />
-            <element signature="e#1107#1108#0" expanded="true" />
-            <element signature="e#1352#1353#0" expanded="true" />
-            <element signature="e#1415#1416#0" expanded="true" />
+            <element signature="e#512#681#0" expanded="true" />
+            <element signature="e#680#681#0" expanded="true" />
+            <element signature="e#1039#1040#0" expanded="true" />
+            <element signature="e#1108#1109#0" expanded="true" />
+            <element signature="e#1353#1354#0" expanded="true" />
+            <element signature="e#1416#1417#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1325,10 +1319,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OC1/src/x/util/NamedValueListSource.java">
+    <entry file="file://$PROJECT_DIR$/OC1/src/x/event/NamedValueListSource.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.094339624" vertical-offset="0" max-vertical-offset="795">
-          <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.0754717" vertical-offset="0" max-vertical-offset="795">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
         </state>
       </provider>

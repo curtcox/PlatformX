@@ -10,7 +10,7 @@ import fake.FakeStorage;
 import org.junit.Before;
 import org.junit.Test;
 import x.Registry;
-import x.util.NamedValueListSource;
+import x.event.NamedValueListSource;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.net.Network;

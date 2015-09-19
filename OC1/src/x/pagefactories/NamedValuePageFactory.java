@@ -9,7 +9,7 @@ import x.page.PageLink;
 import x.page.PageTags;
 import x.uiwidget.XSearchableList;
 import x.util.NamedValue;
-import x.util.NamedValueListSource;
+import x.event.NamedValueListSource;
 
 import java.util.Arrays;
 

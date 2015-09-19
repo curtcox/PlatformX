@@ -9,7 +9,7 @@ import fake.FakeUIManager;
 import org.junit.Before;
 import org.junit.Test;
 import x.Registry;
-import x.util.NamedValueListSource;
+import x.event.NamedValueListSource;
 import x.log.ILogManager;
 import x.page.dynamic.StringMapAsTaggedStringSources;
 import x.page.dynamic.TaggedStringSources;

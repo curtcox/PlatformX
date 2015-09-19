@@ -3,7 +3,7 @@ package x.log;
 import x.event.LiveList;
 import x.event.XLiveList;
 import x.util.NamedValue;
-import x.util.NamedValueListSource;
+import x.event.NamedValueListSource;
 import x.screen.Screen;
 
 import java.util.Arrays;

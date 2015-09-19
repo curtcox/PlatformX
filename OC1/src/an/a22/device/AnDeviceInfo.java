@@ -1,7 +1,7 @@
 package an.a22.device;
 
 import x.util.NamedValue;
-import x.util.NamedValueListSource;
+import x.event.NamedValueListSource;
 import x.device.ReportBuilder;
 import x.event.LiveList;
 
