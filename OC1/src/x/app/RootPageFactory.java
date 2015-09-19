@@ -42,20 +42,19 @@ public final class RootPageFactory {
 
     private static PageFactory pageFactory(StringMap layouts, TaggedStringSources taggedLayouts) {
         return PageFactoryBuilder
-        .firstCheck()
+        .firstCheck(NamedValuePageFactory.of())
         .thenCheck(
-            DeviceInfoPageFactory.of(),
-            LogEntryPageFactory.of(),
-            RegistryInfoPageFactory.of(),
-            LocationSelectionPageFactory.FACTORY,
-            ProviderDetailsPage.FACTORY,
-            ServiceProviderFilterPageFactory.FACTORY,
-            ServiceProviderSearchScreenFactory.FACTORY,
-            CustomComponentPage.FACTORY,
-            dynamicScreens(layouts),
-            IndexPageFactory.of(PageTags.of("Index"), index),
-            NamedValuePageFactory.of(),
-            new LazyPageFactory(taggedLayouts)
+                DeviceInfoPageFactory.of(),
+                LogEntryPageFactory.of(),
+                RegistryInfoPageFactory.of(),
+                LocationSelectionPageFactory.FACTORY,
+                ProviderDetailsPage.FACTORY,
+                ServiceProviderFilterPageFactory.FACTORY,
+                ServiceProviderSearchScreenFactory.FACTORY,
+                CustomComponentPage.FACTORY,
+                dynamicScreens(layouts),
+                IndexPageFactory.of(PageTags.of("Index"), index),
+                new LazyPageFactory(taggedLayouts)
         );
     }
 
