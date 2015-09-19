@@ -2,7 +2,7 @@ package x.app;
 
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.page.MatchingIndexedPagesCompositePageFactory;
+import x.pagefactorybuilders.MatchingIndexedPagesCompositePageFactory;
 import x.page.PageFactory;
 import x.page.PageTags;
 import x.page.dynamic.DynamicPageFactory;

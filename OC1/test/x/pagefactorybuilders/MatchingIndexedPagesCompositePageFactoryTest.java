@@ -1,4 +1,4 @@
-package x.page;
+package x.pagefactorybuilders;
 
 import mach.Mocks;
 import org.junit.Before;
@@ -6,14 +6,15 @@ import org.junit.Test;
 import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
+import x.page.Page;
+import x.page.PageFactory;
+import x.page.PageLink;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.uiwidget.XComponent;
 
 import static mach.Mocks._;
 import static mach.Mocks.wild;
 import static org.junit.Assert.*;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertSame;
 
 public class MatchingIndexedPagesCompositePageFactoryTest {
 
@@ -65,7 +66,7 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
     public void can_create() {
         assertNotNull(new MatchingIndexedPagesCompositePageFactory());
         assertNotNull(new MatchingIndexedPagesCompositePageFactory(factory1));
-        assertNotNull(new MatchingIndexedPagesCompositePageFactory(factory1,factory2));
+        assertNotNull(new MatchingIndexedPagesCompositePageFactory(factory1, factory2));
     }
 
     @Test
@@ -81,12 +82,12 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
     public void create_returns_page_from_only_factory_when_it_matches() {
         PageFactory factory = new MatchingIndexedPagesCompositePageFactory(factory1);
 
-        _(new Page[] {page1}); factory1.create(link);
+        _(new Page[]{page1}); factory1.create(link);
 
         Page[] actual = factory.create(link);
 
-        assertEquals(1,actual.length);
-        assertSame(page1,actual[0]);
+        assertEquals(1, actual.length);
+        assertSame(page1, actual[0]);
     }
 
     @Test
@@ -99,7 +100,7 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
         Page[] actual = factory.create(link);
 
         assertEquals(1, actual.length);
-        assertSame(page1,actual[0]);
+        assertSame(page1, actual[0]);
     }
 
     @Test
@@ -107,26 +108,26 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
         PageFactory factory = new MatchingIndexedPagesCompositePageFactory(factory1,factory2);
 
         _(new Page[0]); factory1.create(link);
-        _(new Page[] {page1}); factory2.create(link);
+        _(new Page[]{page1}); factory2.create(link);
 
         Page[] actual = factory.create(link);
 
         assertEquals(1, actual.length);
-        assertSame(page1,actual[0]);
+        assertSame(page1, actual[0]);
     }
 
     @Test
     public void create_returns_page_from_both_factories_when_they_match() {
         PageFactory factory = new MatchingIndexedPagesCompositePageFactory(factory1,factory2);
 
-        _(new Page[] {page1}); factory1.create(link);
-        _(new Page[] {page2}); factory2.create(link);
+        _(new Page[]{page1}); factory1.create(link);
+        _(new Page[]{page2}); factory2.create(link);
         _(itemListPageFactory); wild(null, null, null); itemListPageFactoryFactory.newFactory(null, null, null);
-        _(new Page[] {page1,page2}); itemListPageFactory.create(link);
+        _(new Page[]{page1, page2}); itemListPageFactory.create(link);
 
         Page[] actual = factory.create(link);
 
-        assertEquals(2,actual.length);
+        assertEquals(2, actual.length);
         assertSame(page1, actual[0]);
         assertSame(page2, actual[1]);
     }
@@ -147,24 +148,24 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
 
     @Test
     public void returns_same_page_as_underlying_factory_does_when_1_page() {
-        _(new Page[] {page}); inner.create(link);
+        _(new Page[]{page}); inner.create(link);
 
         Page[] actual = factory.create(link);
 
-        assertEquals(1,actual.length);
+        assertEquals(1, actual.length);
         assertSame(page, actual[0]);
     }
 
     @Test
     public void returns_1_index_page_when_underlying_factory_returns_multiple_pages() {
         _(new Page[2]); inner.create(link);
-        _(itemListPageFactory); wild(null,null,null); itemListPageFactoryFactory.newFactory(null,null,null);
-        _(new Page[] {indexPage}); itemListPageFactory.create(link);
+        _(itemListPageFactory); wild(null, null, null); itemListPageFactoryFactory.newFactory(null,null,null);
+        _(new Page[]{indexPage}); itemListPageFactory.create(link);
 
         Page[] actual = factory.create(link);
 
         assertEquals(1, actual.length);
-        assertSame(indexPage,actual[0]);
+        assertSame(indexPage, actual[0]);
     }
 
 }

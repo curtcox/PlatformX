@@ -1,20 +1,19 @@
-package x;
+package x.app;
 
 import config.ShouldRun;
+import org.junit.Assume;
 import org.junit.Before;
 import org.junit.Test;
-import x.app.Registry;
 
 import java.util.*;
 
 import static org.junit.Assert.*;
-import static org.junit.Assume.assumeTrue;
 
 public class RegistryTest {
 
     @Before
     public void setUp() {
-        assumeTrue(ShouldRun.X);
+        Assume.assumeTrue(ShouldRun.X);
     }
 
     @Test
@@ -24,7 +23,7 @@ public class RegistryTest {
             fail();
         } catch (RuntimeException e) {
             String message = "No registered Set";
-            assertEquals(message,e.getMessage());
+            assertEquals(message, e.getMessage());
         }
     }
 
@@ -32,10 +31,10 @@ public class RegistryTest {
     public void test_get_returns_single_put_item() {
         Map value = new HashMap();
         Class key = Map.class;
+
+        Registry.put(key, value);
         
-        Registry.put(key,value);
-        
-        assertSame(value,Registry.get(key));
+        assertSame(value, Registry.get(key));
     }
 
     @Test
@@ -46,10 +45,10 @@ public class RegistryTest {
         Class key2 = List.class;
         
         Registry.put(key1,value1);
-        Registry.put(key2,value2);
+        Registry.put(key2, value2);
         
-        assertSame(value1,Registry.get(key1));
-        assertSame(value2,Registry.get(key2));
+        assertSame(value1, Registry.get(key1));
+        assertSame(value2, Registry.get(key2));
     }
     
 }
