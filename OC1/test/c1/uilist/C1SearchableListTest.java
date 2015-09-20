@@ -8,6 +8,7 @@ import org.junit.Test;
 import x.event.LiveList;
 import x.event.XLiveList;
 import x.uilist.IXListCell;
+import x.uiwidget.XSearchableList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,14 +23,14 @@ public class C1SearchableListTest {
     Component action;
     IXListCell.ConfigProducer configurer;
 
-    C1SearchableList testObject;
+    XSearchableList testObject;
 
     @Before
     public void setUp() {
         assumeTrue(ShouldRun.CodenameOne);
         FakeUIManager.of();
         action = new Component() {};
-        testObject = new C1SearchableList(items,action,configurer);
+        testObject = C1SearchableList.of(items,action,configurer);
     }
 
     @Test

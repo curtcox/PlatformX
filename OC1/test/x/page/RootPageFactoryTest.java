@@ -1,6 +1,5 @@
 package x.page;
 
-import c1.pagefactories.C1ItemListPageFactoryFactory;
 import config.ShouldRun;
 import fake.FakeDeviceInfo;
 import fake.FakeFormFactory;
@@ -15,6 +14,7 @@ import x.log.ILogManager;
 import x.page.dynamic.StringMapAsTaggedStringSources;
 import x.page.dynamic.TaggedStringSources;
 import x.pagefactories.ItemListPageFactoryFactory;
+import x.pagefactories.XItemListPageFactoryFactory;
 import x.ui.IFormFactory;
 import x.util.SimpleStringMap;
 import x.util.StringMap;
@@ -33,7 +33,7 @@ public class RootPageFactoryTest {
         StringMap stringMap = new SimpleStringMap(null);
         Registry.put(StringMap.class, stringMap);
         Registry.put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
-        Registry.put(ItemListPageFactoryFactory.class, new C1ItemListPageFactoryFactory());
+        Registry.put(ItemListPageFactoryFactory.class, new XItemListPageFactoryFactory());
         Registry.put(NamedValueListSource.class, new FakeDeviceInfo());
         Registry.put(IFormFactory.class, new FakeFormFactory());
         Registry.put(ILogManager.class, new FakeLogManager());
