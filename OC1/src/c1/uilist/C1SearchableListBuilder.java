@@ -1,7 +1,6 @@
 package c1.uilist;
 
 import com.codename1.ui.Label;
-import java.util.ArrayList;
 import x.event.LiveList;
 import x.event.XLiveList;
 import x.pagefactories.CellConfigurer;
@@ -9,6 +8,8 @@ import x.uilist.IXListCell;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XComponent;
 import x.uiwidget.XSearchableList;
+
+import java.util.ArrayList;
 
 final class C1SearchableListBuilder
         implements XSearchableList.Builder
@@ -23,12 +24,12 @@ final class C1SearchableListBuilder
 
     @Override
     public XSearchableList.Builder action(XComponent action) {
-        return null;
+        return this;
     }
 
     @Override
     public XSearchableList.Builder configurer(IXListCell.ConfigProducer configurer) {
-        return null;
+        return this;
     }
 
     @Override

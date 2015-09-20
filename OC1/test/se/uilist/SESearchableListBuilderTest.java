@@ -36,6 +36,16 @@ public class SESearchableListBuilderTest {
     }
 
     @Test
+    public void build_returns_an_SESearchableList_when_null_action_is_specified() {
+        assertTrue(builder.action(null).build() instanceof SESearchableList);
+    }
+
+    @Test
+    public void build_returns_an_SESearchableList_when_null_configurer_is_specified() {
+        assertTrue(builder.configurer(null).build() instanceof SESearchableList);
+    }
+
+    @Test
     public void build_returns_an_empty_list_by_default() {
         SESearchableList list = (SESearchableList) builder.build();
         assertEquals(0, list.filterListModel.getSize());

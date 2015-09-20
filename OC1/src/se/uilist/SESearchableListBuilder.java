@@ -24,12 +24,12 @@ final class SESearchableListBuilder
 
     @Override
     public XSearchableList.Builder action(XComponent action) {
-        return null;
+        return this;
     }
 
     @Override
     public XSearchableList.Builder configurer(IXListCell.ConfigProducer configurer) {
-        return null;
+        return this;
     }
 
     @Override
