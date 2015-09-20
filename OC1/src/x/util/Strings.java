@@ -34,4 +34,8 @@ public final class Strings {
         }
         return title.substring(0,97) + "...";
     }
+    
+    public static CharSequence asChars(String s) {
+        throw new RuntimeException();
+    }
 }
