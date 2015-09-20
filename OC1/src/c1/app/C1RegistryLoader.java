@@ -28,6 +28,7 @@ import x.page.PageFactory;
 import x.page.dynamic.StringMapAsTaggedStringSources;
 import x.page.dynamic.TaggedStringSources;
 import x.pagefactories.ItemListPageFactoryFactory;
+import x.services.LocationService;
 import x.services.ServiceProviders;
 import x.stores.MyRatings;
 import x.stores.XStorage;
@@ -64,7 +65,7 @@ final class C1RegistryLoader {
     static void loadPlatform() {
         put(IFormFactory.class,     new C1FormFactory());
         put(MyRatings.class,        new MyRatings());
-        put(C1Locations.class,      new C1Locations());
+        put(LocationService.class,  new C1Locations());
         put(ServiceProvider.class,  ServiceProvider.NULL);
         put(ServiceProviders.class, new ServiceProviders());
         put(Geocoder.class,         new Geocoder());
