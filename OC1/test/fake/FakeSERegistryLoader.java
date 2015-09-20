@@ -1,6 +1,6 @@
 package fake;
 
-import se.pagefactories.SEItemListPageFactoryFactory;
+import x.pagefactories.XItemListPageFactoryFactory;
 import x.app.Registry;
 import x.domain.ServiceProvider;
 import x.log.ILogManager;
@@ -18,7 +18,7 @@ public class FakeSERegistryLoader {
         put(ServiceProvider.class,            ServiceProvider.NULL);
         put(IDisplay.class,                   new FakeDisplay());
         put(IFormFactory.class,               new FakeFormFactory());
-        put(ItemListPageFactoryFactory.class, new SEItemListPageFactoryFactory());
+        put(ItemListPageFactoryFactory.class, new XItemListPageFactoryFactory());
     }
     
     static void put(Class clazz, Object object) {

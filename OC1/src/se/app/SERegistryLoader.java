@@ -3,7 +3,7 @@ package se.app;
 import se.device.SEDeviceInfo;
 import se.editor.ScreenEditor;
 import se.events.Events;
-import se.pagefactories.SEItemListPageFactoryFactory;
+import x.pagefactories.XItemListPageFactoryFactory;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
 import se.uilist.SESearchableListFactory;
@@ -51,7 +51,7 @@ final class SERegistryLoader {
         put(Network.class,          new XRawNetwork());
         putTaggedValueStringMap();
         put(XSearchableList.Factory.class,    new SESearchableListFactory());
-        put(ItemListPageFactoryFactory.class, new SEItemListPageFactoryFactory());
+        put(ItemListPageFactoryFactory.class, new XItemListPageFactoryFactory());
         put(PageFactory.class,      RootPageFactory.of());
         put(ScreenEditor.class,     ScreenEditor.of());
     }
