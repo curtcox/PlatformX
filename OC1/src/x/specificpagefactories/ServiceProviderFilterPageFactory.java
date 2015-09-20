@@ -9,9 +9,7 @@ import x.page.PageFactory;
 import x.page.PageLink;
 import x.page.dynamic.GlobPageFactory;
 import x.pageparts.TypeListCellConfigurer;
-import x.pageparts.TypeTextFilter;
 import x.pages.FilterPage;
-import x.uilist.ISearchFilterInstaller;
 import x.uiwidget.XSearchableList;
 
 import java.util.ArrayList;
@@ -39,16 +37,11 @@ public final class ServiceProviderFilterPageFactory {
                 .items(getTypes())
                 .configurer(new TypeListCellConfigurer())
                 .build();
-        installer().install(list, new TypeTextFilter());
         return list;
     }
 
     private static XSearchableList.Builder listBuilder() {
         return Registry.get(XSearchableList.Factory.class).builder();
-    }
-
-    private static ISearchFilterInstaller installer() {
-        return Registry.get(ISearchFilterInstaller.class);
     }
 
     private static String[] providerTypeNames() {

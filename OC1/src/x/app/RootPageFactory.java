@@ -42,14 +42,16 @@ public final class RootPageFactory {
 
     private static PageFactory pageFactory(StringMap layouts, TaggedStringSources taggedLayouts) {
         return PageFactoryBuilder
-        .firstCheck(NamedValuePageFactory.of())
+        .firstCheck(
+            NamedValuePageFactory.of(),
+            ServiceProviderFilterPageFactory.FACTORY
+        )
         .thenCheck(
                 DeviceInfoPageFactory.of(),
                 LogEntryPageFactory.of(),
                 RegistryInfoPageFactory.of(),
                 LocationSelectionPageFactory.FACTORY,
                 ProviderDetailsPage.FACTORY,
-                ServiceProviderFilterPageFactory.FACTORY,
                 ServiceProviderSearchScreenFactory.FACTORY,
                 CustomComponentPage.FACTORY,
                 dynamicScreens(layouts),
