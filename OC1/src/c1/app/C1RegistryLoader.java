@@ -1,6 +1,7 @@
 package c1.app;
 
 import c1.device.C1DeviceInfo;
+import c1.event.C1SwappableListFactory;
 import c1.net.C1CachedNetwork;
 import c1.pagefactories.C1ItemListPageFactoryFactory;
 import c1.services.C1Locations;
@@ -12,17 +13,18 @@ import c1.ui.C1Display;
 import c1.ui.C1FormFactory;
 import c1.ui.C1Icons;
 import com.codename1.ui.Display;
-import x.app.Registry;
 import x.app.CurrentState;
+import x.app.Registry;
+import x.app.RootPageFactory;
 import x.device.XDeviceInfo;
 import x.domain.ServiceProvider;
+import x.event.SwappableList;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;
 import x.net.Network;
 import x.net.RootStringMap;
 import x.page.PageFactory;
-import x.app.RootPageFactory;
 import x.page.dynamic.StringMapAsTaggedStringSources;
 import x.page.dynamic.TaggedStringSources;
 import x.pagefactories.ItemListPageFactoryFactory;
@@ -72,7 +74,8 @@ final class C1RegistryLoader {
         put(StringMap.class,        stringMap);
         put(TaggedStringSources.class,        new StringMapAsTaggedStringSources(stringMap));
         put(ItemListPageFactoryFactory.class, new C1ItemListPageFactoryFactory());
-        put(PageFactory.class,      RootPageFactory.of());
+        put(SwappableList.Factory.class,      new C1SwappableListFactory());
+        put(PageFactory.class,                RootPageFactory.of());
     }
 
     static void put(Class clazz, Object object) {
