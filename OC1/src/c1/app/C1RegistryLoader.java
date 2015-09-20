@@ -12,6 +12,7 @@ import c1.storage.C1Storage;
 import c1.ui.C1Display;
 import c1.ui.C1FormFactory;
 import c1.ui.C1Icons;
+import c1.uilist.C1SearchableListFactory;
 import com.codename1.ui.Display;
 import x.app.CurrentState;
 import x.app.Registry;
@@ -34,6 +35,7 @@ import x.stores.MyRatings;
 import x.stores.XStorage;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
+import x.uiwidget.XSearchableList;
 import x.util.StringMap;
 
 /**
@@ -63,16 +65,17 @@ final class C1RegistryLoader {
     }
 
     static void loadPlatform() {
-        put(IFormFactory.class,     new C1FormFactory());
-        put(MyRatings.class,        new MyRatings());
-        put(LocationService.class,  new C1Locations());
-        put(ServiceProvider.class,  ServiceProvider.NULL);
-        put(ServiceProviders.class, new ServiceProviders());
-        put(Geocoder.class,         new Geocoder());
-        put(CurrentState.class,     new CurrentState());
-        put(C1Icons.class,          new C1Icons());
+        put(IFormFactory.class,            new C1FormFactory());
+        put(MyRatings.class,               new MyRatings());
+        put(LocationService.class,         new C1Locations());
+        put(XSearchableList.Factory.class, new C1SearchableListFactory());
+        put(ServiceProvider.class,         ServiceProvider.NULL);
+        put(ServiceProviders.class,        new ServiceProviders());
+        put(Geocoder.class,                new Geocoder());
+        put(CurrentState.class,            new CurrentState());
+        put(C1Icons.class,                 new C1Icons());
         StringMap stringMap = RootStringMap.of();
-        put(StringMap.class,        stringMap);
+        put(StringMap.class,                  stringMap);
         put(TaggedStringSources.class,        new StringMapAsTaggedStringSources(stringMap));
         put(ItemListPageFactoryFactory.class, new C1ItemListPageFactoryFactory());
         put(SwappableList.Factory.class,      new C1SwappableListFactory());

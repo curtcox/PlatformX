@@ -1,29 +1,24 @@
 package c1.pagefactories;
 
-import c1.uilist.C1SearchFilterInstaller;
-import c1.uilist.C1SearchableList;
-import com.codename1.ui.Label;
-import x.event.XLiveList;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.page.PageTags;
-import x.pagefactories.CellConfigurer;
 import x.pagefactories.ItemToPageLink;
 import x.pagefactories.ItemsPage;
-import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;
 
-import java.util.List;
+import x.app.Registry;
+import x.event.LiveList;
 
 final class C1ItemListPageFactory<T>
     implements PageFactory
 {
-    final PageTags tags;
-    final List<T> values;
+    final LiveList<T> values;
     final ItemToPageLink itemToPageLink;
+    final PageTags tags;
 
-    C1ItemListPageFactory(PageTags tags,List<T> values, ItemToPageLink itemToPageLink) {
+    C1ItemListPageFactory(PageTags tags,LiveList<T> values, ItemToPageLink itemToPageLink) {
         this.tags = tags;
         this.values = values;
         this.itemToPageLink = itemToPageLink;
@@ -34,9 +29,10 @@ final class C1ItemListPageFactory<T>
     }     
 
     private XSearchableList<T> newSearchableList() {
-        C1SearchableList<T> list = new C1SearchableList(XLiveList.of(values),new Label(),new CellConfigurer());
-        C1SearchFilterInstaller.c1SpecificInstall(list, StringToListFilter.DEFAULT);
-        return list;
+        return listBuilder().items(values).build();
     }
 
+    XSearchableList.Builder listBuilder() {
+        return Registry.get(XSearchableList.Factory.class).builder();
+    }
 }
