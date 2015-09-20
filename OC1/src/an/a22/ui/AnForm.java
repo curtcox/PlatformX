@@ -72,7 +72,7 @@ public final class AnForm
 
     private TextView address() {
         address = new TextView(context());
-        address.setText(Strings.elided(link.title()));
+        address.setText(Strings.asChars(Strings.elided(link.title())));
         address.setTextSize(20);
         address.setGravity(Gravity.CENTER_HORIZONTAL);
         return address;
@@ -80,7 +80,7 @@ public final class AnForm
 
     private Button backButton() {
         Button button = new Button(context());
-        button.setText("<");
+        button.setText(Strings.asChars("<"));
         button.setEnabled(false);
         button.setOnTouchListener(new OnTouchListener() {
             @Override

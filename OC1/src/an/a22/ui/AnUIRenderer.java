@@ -9,6 +9,7 @@ import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.uiwidget.*;
+import x.util.Strings;
 
 final class AnUIRenderer {
 
@@ -66,7 +67,7 @@ final class AnUIRenderer {
     static Button button(XComponent layout) {
         final XButton button = (XButton) layout;
         Button aButton = new Button(context());
-        aButton.setText(button.text);
+        aButton.setText(Strings.asChars(button.text));
         aButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,7 +81,7 @@ final class AnUIRenderer {
     static TextView label(XComponent layout) {
         XLabel label = (XLabel) layout;
         TextView aLabel = new TextView(context());
-        aLabel.setText(label.text);
+        aLabel.setText(Strings.asChars(label.text));
         log(label + ">" + aLabel);
         return aLabel;
     }
