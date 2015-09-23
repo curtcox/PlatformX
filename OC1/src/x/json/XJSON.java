@@ -1,6 +1,5 @@
-package c1;
+package x.json;
 
-import com.codename1.io.JSONParser;
 import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
@@ -13,7 +12,7 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class JSON {
+public final class XJSON {
 
     public static final StringMap.Parser STRING_MAP_PARSER = new StringMap.Parser() {
         public StringMap parse(String string) {
@@ -24,7 +23,7 @@ public final class JSON {
     static final Map<String,String> parseJsonResponse(InputStreamReader reader) {
         Map<String,String> map = new HashMap<String,String>();
         try {
-            JSONParser parser = new JSONParser();
+            XJSONParser parser = new XJSONParser();
             Map<String,Object> result = parser.parseJSON(reader);
             addAllResultsTo(result,map);
             return map;
@@ -50,7 +49,8 @@ public final class JSON {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(JSON.class);
+        return Registry.get(ILogManager.class).getLog(XJSON.class);
     }
+
 
 }

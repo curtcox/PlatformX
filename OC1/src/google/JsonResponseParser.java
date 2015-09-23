@@ -1,7 +1,7 @@
 package google;
 
 import x.app.Registry;
-import x.io.XJSON;
+import x.json.XJSONParser;
 import x.log.ILog;
 import x.log.ILogManager;
 
@@ -18,7 +18,7 @@ abstract class JsonResponseParser<T>
     final List<T> parseJsonResponse(InputStreamReader reader) {
         List<T> location = new ArrayList<T>();
         try {
-            XJSON parser = json();
+            XJSONParser parser = json();
             for (Map<String,Object> result : results(parser.parseJSON(reader))) {
                 location.add(construct(result));
             }
@@ -71,7 +71,7 @@ abstract class JsonResponseParser<T>
         return Registry.get(ILogManager.class).getLog(JsonResponseParser.class);
     }
 
-    private XJSON json() {
-        return Registry.get(XJSON.class);
+    private XJSONParser json() {
+        return new XJSONParser();
     }
 }

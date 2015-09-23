@@ -6,7 +6,7 @@ import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
-import c1.JSON;
+import x.json.XJSON;
 import config.ShouldRun;
 import x.uiwidget.XImage;
 import org.junit.Test;
@@ -34,7 +34,7 @@ public class JsonIndexNetStringMapTest {
     String relativeValueKey = "Spencer";
     String absoluteValue = "0 Kelvin";
     String relativeValue = "warmish";
-    JsonIndexNetStringMap testObject = new JsonIndexNetStringMap(index,JSON.STRING_MAP_PARSER,network);
+    JsonIndexNetStringMap testObject = new JsonIndexNetStringMap(index, XJSON.STRING_MAP_PARSER,network);
     
     @Before
     public void setUp() {
