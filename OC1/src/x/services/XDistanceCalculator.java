@@ -1,6 +1,6 @@
-package c1.services;
+package x.services;
 
-final class DistanceCalculator {
+final class XDistanceCalculator {
 
     static double distance(double lat1, double lon1, double lat2, double lon2) {
       double theta = lon1 - lon2;

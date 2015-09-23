@@ -2,8 +2,8 @@ package x.domain;
 
 import x.app.Registry;
 import x.event.StringSource;
-import x.services.LocationReading;
-import x.services.LocationService;
+import x.services.XLocation;
+import x.services.XLocationService;
 
 import java.net.URI;
 
@@ -11,7 +11,7 @@ public final class ServiceProvider {
     
     public final ID id;
     public final Name name;
-    public final LocationReading location;
+    public final XLocation location;
     public final Address address;
     public final Double priceLevel;
     public final Double rating;
@@ -22,7 +22,7 @@ public final class ServiceProvider {
     public static final ServiceProvider NULL = new ServiceProvider(null,new Name(""),null,null,null,null,null,null,new Rating(""));
     
     public ServiceProvider(
-        ID id, Name name, LocationReading location, Address address,
+        ID id, Name name, XLocation location, Address address,
         Double priceLevel, Double rating,
         Type[] types, URI icon, Rating myRating)
     {
@@ -51,13 +51,13 @@ public final class ServiceProvider {
     }
 
     public String distanceFromCurrentLocation() {
-        LocationService locations = locationService();
+        XLocationService locations = locationService();
         int miles = (int) locations.calculateDistance(location,locations.getCurrentLocation());
         return miles + " miles";
     }
 
-    private static LocationService locationService() {
-        return Registry.get(LocationService.class);
+    private static XLocationService locationService() {
+        return Registry.get(XLocationService.class);
     }
 
     public static ServiceProvider getSelected() {

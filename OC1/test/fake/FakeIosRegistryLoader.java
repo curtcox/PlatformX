@@ -9,7 +9,7 @@ import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;
 import x.pagefactories.ItemListPageFactoryFactory;
-import x.services.ServiceProviders;
+import x.services.XServiceProviders;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
 
@@ -19,7 +19,7 @@ public class FakeIosRegistryLoader {
         put(ILogManager.class,                new XLogManager());
         put(XLogWriter.class,                 new XLogWriter());
         put(ServiceProvider.class,            ServiceProvider.NULL);
-        put(ServiceProviders.class,           new ServiceProviders());
+        put(XServiceProviders.class,           new XServiceProviders());
         put(CurrentState.class, new CurrentState());
         put(IFormFactory.class,               new IosFormFactory());
         put(IDisplay.class,                   new FakeDisplay());

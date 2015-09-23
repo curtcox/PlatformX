@@ -9,12 +9,12 @@ import x.stores.MyRatings;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class ServiceProviders {
+public final class XServiceProviders {
     
     private final PlacesSearch places = new PlacesSearch();
     
-    public static ServiceProviders of() {
-        return Registry.get(ServiceProviders.class);
+    public static XServiceProviders of() {
+        return Registry.get(XServiceProviders.class);
     }
     
     public List<ServiceProvider> nearby(Type[] types, int radius) {
@@ -26,7 +26,7 @@ public final class ServiceProviders {
     }
 
     private List<Place> placesNearHere(Type[] types, int radius) {
-        LocationReading currentLocation = locations().getCurrentLocation();
+        XLocation currentLocation = locations().getCurrentLocation();
         if (currentLocation==null) {
             return new ArrayList<Place>();
         }
@@ -35,8 +35,8 @@ public final class ServiceProviders {
         return places.nearbySearch(latitude, longitude, radius,asStrings(types));
     }
 
-    private LocationService locations() {
-        return Registry.get(LocationService.class);
+    private XLocationService locations() {
+        return Registry.get(XLocationService.class);
     }
 
     private String[] asStrings(Type[] types) {
@@ -57,8 +57,8 @@ public final class ServiceProviders {
         );
     }
 
-    private LocationReading locationFromPlace(Place place) {
-        return new LocationReading(place.latitude,place.longitude);
+    private XLocation locationFromPlace(Place place) {
+        return new XLocation(place.latitude,place.longitude);
     }
 
     private Type[] typesFromPlace(Place place) {

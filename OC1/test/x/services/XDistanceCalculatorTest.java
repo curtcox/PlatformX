@@ -1,12 +1,13 @@
-package c1.services;
+package x.services;
 
 import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
-import static org.junit.Assert.*;
+
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeTrue;
 
-public class DistanceCalculatorTest {
+public class XDistanceCalculatorTest {
 
     @Before
     public void setUp() {
@@ -24,7 +25,7 @@ public class DistanceCalculatorTest {
     
     private void acos(double x1) {
         double delta = 0.00000001;
-        double y = DistanceCalculator.acos(x1);
+        double y = XDistanceCalculator.acos(x1);
         double x2 = Math.cos(y);
         assertTrue(x1 + " " + x2, Math.abs(x1-x2)<delta);
     }

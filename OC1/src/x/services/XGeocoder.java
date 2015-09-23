@@ -1,4 +1,4 @@
-package c1.services;
+package x.services;
 
 import google.Geocoding;
 import google.GoogleLocation;
@@ -6,18 +6,17 @@ import x.app.Registry;
 import x.domain.LocationDescription;
 import x.event.LiveList;
 import x.event.XLiveList;
-import x.services.IGeocoder;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public final class Geocoder
+public final class XGeocoder
     implements IGeocoder
 {
     private final Geocoding geocoding = new Geocoding();
 
-    public static Geocoder of() {
-        return Registry.get(Geocoder.class);
+    public static XGeocoder of() {
+        return Registry.get(XGeocoder.class);
     }
     
     public LiveList<LocationDescription> searchFor(String place) {

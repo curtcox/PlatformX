@@ -1,9 +1,10 @@
-package c1.services;
+package x.services;
 
 import com.codename1.location.Location;
 import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
+import x.services.LocationQuantizer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;

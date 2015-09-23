@@ -11,7 +11,7 @@ import x.page.dynamic.GlobPageFactory;
 import x.pageparts.ServiceProviderSearchParams;
 import x.pageparts.ServiceProviderTextFilter;
 import x.pages.ServiceProviderSearchPage;
-import x.services.ServiceProviders;
+import x.services.XServiceProviders;
 import x.uilist.ISearchFilterInstaller;
 import x.uiwidget.XSearchableList;
 
@@ -86,10 +86,10 @@ public final class ServiceProviderSearchScreenFactory {
     }
 
     private static List<ServiceProvider> getProviders(ServiceProviderSearchParams searchParams) {
-        return ServiceProviders.of().nearby(searchParams.types,searchParams.radius);
+        return XServiceProviders.of().nearby(searchParams.types,searchParams.radius);
     }
 
-    private static ServiceProviders serviceProviders() {
-        return Registry.get(ServiceProviders.class);
+    private static XServiceProviders serviceProviders() {
+        return Registry.get(XServiceProviders.class);
     }
 }

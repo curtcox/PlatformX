@@ -1,11 +1,11 @@
 package c1.app;
 
 import c1.net.C1RawNetwork;
-import c1.services.ILocationManager;
+import x.services.XLocationProvider;
 import config.ShouldRun;
 import fake.FakeDeviceInfo;
 import fake.FakeDisplay;
-import fake.FakeLocationManager;
+import fake.FakeLocationProvider;
 import fake.FakeStorage;
 import org.junit.Before;
 import org.junit.Test;
@@ -41,7 +41,7 @@ public class C1RegistryLoaderTest {
         Registry.put(XStorage.class, new FakeStorage());
         Registry.put(Network.class, new C1RawNetwork());
         Registry.put(IDisplay.class, new FakeDisplay());
-        Registry.put(ILocationManager.class, new FakeLocationManager());
+        Registry.put(XLocationProvider.class, new FakeLocationProvider());
         Registry.put(NamedValueListSource.class, new FakeDeviceInfo());
         C1RegistryLoader.loadPlatform();
     }

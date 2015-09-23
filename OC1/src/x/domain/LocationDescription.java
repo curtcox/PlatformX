@@ -1,6 +1,6 @@
 package x.domain;
 
-import x.services.LocationReading;
+import x.services.XLocation;
 
 public final class LocationDescription {
 
@@ -14,8 +14,8 @@ public final class LocationDescription {
         this.longitude = longitude;
     }
 
-    public LocationReading toLocation() {
-        return new LocationReading(latitude,longitude);
+    public XLocation toLocation() {
+        return new XLocation(latitude,longitude);
     }
 
     @Override
