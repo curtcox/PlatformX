@@ -1,18 +1,19 @@
 package x.services;
 
 import x.app.Registry;
-import x.log.ILog;
-import x.log.ILogManager;
 
-public final class XLocations
+public final class XLocationService
     implements XLocation.Listener
 {
     private XLocation selected;
     private XLocation current;
 
-    public XLocations() {
-        XLocationProvider manager = Registry.get(XLocationProvider.class);
-        manager.setLocationListener(this);
+    private XLocationService() {}
+
+    public static XLocationService create() {
+        XLocationService service = new XLocationService();
+        getManager().setLocationListener(service);
+        return service;
     }
 
     public void selectLocation(XLocation selected) {
@@ -23,13 +24,11 @@ public final class XLocations
         this.current = quantize(location);
     }
 
-    public void providerStateChanged(int newState) {}
-    
-    public static XLocations of() {
-        return Registry.get(XLocations.class);
+    public static XLocationService of() {
+        return Registry.get(XLocationService.class);
     }
 
-    private XLocationProvider getManager() {
+    private static XLocationProvider getManager() {
         return Registry.get(XLocationProvider.class);
     }
 
@@ -37,13 +36,7 @@ public final class XLocations
         if (selected!=null) {
             return selected;
         }
-        try {
-            return realGetCurrentLocation();
-        } catch (RuntimeException e) {
-            // This can happen.  Set git for more info. 
-            log(e);
-            return null;
-        }
+        return realGetCurrentLocation();
     }
 
     private XLocation realGetCurrentLocation() {
@@ -56,14 +49,6 @@ public final class XLocations
 
     private XLocation quantize(XLocation location) {
         return new XLocationQuantizer().quantize(location);
-    }
-
-    private void log(Throwable t) {
-        getLog().log(t);
-    }
-
-    private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(XLocations.class);
     }
 
 }

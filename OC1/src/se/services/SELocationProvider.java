@@ -4,7 +4,7 @@ import x.services.XLocation;
 import x.services.XLocationProvider;
 
 /**
- * Java SE implementation of LocationService.
+ * Java SE implementation of LocationProvider.
  *
  * Sadly, there doesn't appear to be any readily available hardware or even a relevant JSR to
  * provide the level of support for Java SE that is available to Android and iOS.
@@ -31,7 +31,7 @@ public final class SELocationProvider
 {
     @Override
     public XLocation getLastKnownLocation() {
-        return null;
+        return new XLocation(38.6657,-90.3231);
     }
 
     @Override

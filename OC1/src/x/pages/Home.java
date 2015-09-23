@@ -5,7 +5,7 @@ import x.domain.ConsumerServiceProvider;
 import x.pageparts.ProviderDetailsButton;
 import x.pageparts.ProviderRatingButton;
 import x.pageparts.XScreenButton;
-import x.services.XLocations;
+import x.services.XLocationService;
 import x.ui.TextPosition;
 import x.uiwidget.XButton;
 
@@ -45,8 +45,8 @@ public final class Home {
         };
     }
 
-    XLocations locations() {
-        return Registry.get(XLocations.class);
+    XLocationService locations() {
+        return Registry.get(XLocationService.class);
     }
 
 }

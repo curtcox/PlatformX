@@ -1,20 +1,21 @@
 package c1.app;
 
-import x.services.XLocationProvider;
 import com.codename1.io.Storage;
 import config.ShouldRun;
-import x.app.Registry;
-import x.app.CurrentState;
 import fake.FakeLocationProvider;
 import fake.FakeStorage;
-import x.event.Change;
-import x.services.XLocations;
-import x.services.XConsumerServiceProviders;
-import static org.junit.Assert.*;
-import static org.junit.Assume.assumeTrue;
-
 import org.junit.Before;
 import org.junit.Test;
+import x.app.CurrentState;
+import x.app.Registry;
+import x.event.Change;
+import x.services.XConsumerServiceProviders;
+import x.services.XLocationProvider;
+import x.services.XLocationService;
+
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assume.assumeTrue;
 
 public class CurrentStateTest {
     
@@ -34,7 +35,7 @@ public class CurrentStateTest {
         assumeTrue(ShouldRun.CodenameOne);
         Registry.put(Storage.class, new FakeStorage());
         Registry.put(XLocationProvider.class, new FakeLocationProvider());
-        Registry.put(XLocations.class, new XLocations());
+        Registry.put(XLocationService.class, XLocationService.create());
         Registry.put(XConsumerServiceProviders.class, new XConsumerServiceProviders());
         testObject = new CurrentState();
     }

@@ -4,7 +4,7 @@ import x.app.Registry;
 import x.domain.LocationDescription;
 import x.page.PageLink;
 import x.page.SelectionListPage;
-import x.services.XLocations;
+import x.services.XLocationService;
 import x.uiwidget.XSearchableList;
 
 /**
@@ -24,7 +24,7 @@ public final class LocationSelectionPage
         return PageLink.of("ProviderDetails", item);
     }
 
-    private XLocations locationService() {
-        return Registry.get(XLocations.class);
+    private XLocationService locationService() {
+        return Registry.get(XLocationService.class);
     }
 }

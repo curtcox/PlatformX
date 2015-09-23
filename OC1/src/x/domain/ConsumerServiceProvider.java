@@ -4,7 +4,7 @@ import x.app.Registry;
 import x.event.StringSource;
 import x.services.XDistanceCalculator;
 import x.services.XLocation;
-import x.services.XLocations;
+import x.services.XLocationService;
 
 import java.net.URI;
 
@@ -52,13 +52,13 @@ public final class ConsumerServiceProvider {
     }
 
     public String distanceFromCurrentLocation() {
-        XLocations locations = locationService();
+        XLocationService locations = locationService();
         int miles = XDistanceCalculator.calculateDistance(location, locations.getCurrentLocation());
         return miles + " miles";
     }
 
-    private static XLocations locationService() {
-        return Registry.get(XLocations.class);
+    private static XLocationService locationService() {
+        return Registry.get(XLocationService.class);
     }
 
     public static ConsumerServiceProvider getSelected() {

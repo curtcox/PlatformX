@@ -1,6 +1,6 @@
 package fake;
 
-import x.services.XLocations;
+import x.services.XLocationService;
 import x.services.XLocationProvider;
 import c1.ui.C1FormFactory;
 import c1.ui.C1Icons;
@@ -25,10 +25,10 @@ public class FakeC1RegistryLoader {
         put(ILogManager.class,                new XLogManager());
         put(XLogWriter.class,                 new XLogWriter());
         put(Storage.class,                    new FakeStorage());
-        put(XLocationProvider.class,           new FakeLocationProvider());
-        put(XLocations.class,                new XLocations());
-        put(ConsumerServiceProvider.class,            ConsumerServiceProvider.NULL);
-        put(XConsumerServiceProviders.class,           new XConsumerServiceProviders());
+        put(XLocationProvider.class,          new FakeLocationProvider());
+        put(XLocationService.class,           XLocationService.create());
+        put(ConsumerServiceProvider.class,    ConsumerServiceProvider.NULL);
+        put(XConsumerServiceProviders.class,  new XConsumerServiceProviders());
         put(CurrentState.class,               new CurrentState());
         put(C1Icons.class,                    new C1Icons());
         put(IFormFactory.class,               new C1FormFactory());

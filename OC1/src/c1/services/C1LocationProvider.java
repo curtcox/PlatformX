@@ -2,6 +2,9 @@ package c1.services;
 
 import com.codename1.location.Location;
 import com.codename1.location.LocationListener;
+import x.app.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
 import x.services.XLocation;
 import x.services.XLocationProvider;
 
@@ -10,7 +13,13 @@ public final class C1LocationProvider
 {
     @Override
     public XLocation getLastKnownLocation() {
-        return convert(c1LocationManager().getLastKnownLocation());
+        try {
+            return convert(c1LocationManager().getLastKnownLocation());
+        } catch (RuntimeException e) {
+            // This can happen.  Set git for more info.
+            log(e);
+            return null;
+        }
     }
 
     private XLocation convert(Location lastKnownLocation) {
@@ -29,4 +38,13 @@ public final class C1LocationProvider
     private com.codename1.location.LocationManager c1LocationManager() {
         return com.codename1.location.LocationManager.getLocationManager();
     }
+
+    private void log(Throwable t) {
+        getLog().log(t);
+    }
+
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(C1LocationProvider.class);
+    }
+
 }

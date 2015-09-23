@@ -35,8 +35,8 @@ public final class XConsumerServiceProviders {
         return places.nearbySearch(latitude, longitude, radius,asStrings(types));
     }
 
-    private XLocations locations() {
-        return Registry.get(XLocations.class);
+    private XLocationService locations() {
+        return Registry.get(XLocationService.class);
     }
 
     private String[] asStrings(Type[] types) {
