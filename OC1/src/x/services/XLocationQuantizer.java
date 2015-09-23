@@ -5,7 +5,7 @@ package x.services;
  * but it could easily do something more polar friendly.
  * @author Curt
  */
-final class LocationQuantizer {
+final class XLocationQuantizer {
 
     XLocation quantize(XLocation location) {
         return new XLocation(round(location.latitude),round(location.longitude));

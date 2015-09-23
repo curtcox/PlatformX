@@ -3,7 +3,7 @@ package x.pages;
 import x.app.Registry;
 import x.app.CurrentState;
 import x.domain.Rating;
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.page.PageLink;
 import x.pageparts.ProviderDetailsButton;
 import x.pageparts.XScreenButton;
@@ -59,8 +59,8 @@ public final class Rate {
         return ProviderDetailsButton.of();
     }
     
-    private ServiceProvider provider() {
-        return ServiceProvider.getSelected();
+    private ConsumerServiceProvider provider() {
+        return ConsumerServiceProvider.getSelected();
     }
 
     IDisplay display() {

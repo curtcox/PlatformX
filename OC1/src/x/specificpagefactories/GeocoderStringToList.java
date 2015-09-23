@@ -1,7 +1,7 @@
 package x.specificpagefactories;
 
 import x.app.Registry;
-import x.services.IGeocoder;
+import x.services.XGeocoder;
 import x.uilist.StringToList;
 
 import java.util.List;
@@ -14,7 +14,7 @@ final class GeocoderStringToList
         return geocoder().searchFor(text);
     }
 
-    static IGeocoder geocoder() {
-        return Registry.get(IGeocoder.class);
+    static XGeocoder geocoder() {
+        return Registry.get(XGeocoder.class);
     }
 }

@@ -1,10 +1,8 @@
 package x.services;
 
-import com.codename1.location.Location;
 import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
-import x.services.LocationQuantizer;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -12,7 +10,7 @@ import static org.junit.Assume.assumeTrue;
 
 public class LocationQuantizerTest {
     
-    LocationQuantizer testObject = new LocationQuantizer();
+    XLocationQuantizer testObject = new XLocationQuantizer();
 
     @Before
     public void setUp() {
@@ -21,7 +19,7 @@ public class LocationQuantizerTest {
 
     @Test
     public void test_can_create() {
-        assertNotNull(new LocationQuantizer());
+        assertNotNull(new XLocationQuantizer());
     }
     
     @Test
@@ -44,13 +42,11 @@ public class LocationQuantizerTest {
     }
 
     private void assertConvertedTo(double lat_in, double lon_in, double lat_out, double lon_out) {
-        Location in = new Location();
-        in.setLatitude(lat_in);
-        in.setLongitude(lon_in);
-        Location out = testObject.quantize(in);
+        XLocation in = new XLocation(lat_in,lon_in);
+        XLocation out = testObject.quantize(in);
         
-        assertEquals(lat_out,out.getLatitude(), 0.0000001);
-        assertEquals(lon_out,out.getLongitude(),0.0000001);
+        assertEquals(lat_out,out.latitude, 0.0000001);
+        assertEquals(lon_out,out.longitude,0.0000001);
     }
 
 }

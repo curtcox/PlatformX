@@ -1,15 +1,15 @@
 package se.services;
 
 import org.junit.Test;
-import x.services.XLocationService;
+import x.services.XLocationProvider;
 
 import static org.junit.Assert.assertTrue;
 
-public class SELocationServiceTest {
+public class SELocationProviderTest {
 
     @Test
     public void is_a_LocationService() {
-        assertTrue(new SELocationService() instanceof XLocationService);
+        assertTrue(new SELocationProvider() instanceof XLocationProvider);
     }
 
 

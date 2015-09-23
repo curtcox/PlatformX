@@ -9,16 +9,16 @@ import x.stores.MyRatings;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class XServiceProviders {
+public final class XConsumerServiceProviders {
     
     private final PlacesSearch places = new PlacesSearch();
     
-    public static XServiceProviders of() {
-        return Registry.get(XServiceProviders.class);
+    public static XConsumerServiceProviders of() {
+        return Registry.get(XConsumerServiceProviders.class);
     }
     
-    public List<ServiceProvider> nearby(Type[] types, int radius) {
-        List<ServiceProvider> providers = new ArrayList<ServiceProvider>();
+    public List<ConsumerServiceProvider> nearby(Type[] types, int radius) {
+        List<ConsumerServiceProvider> providers = new ArrayList<ConsumerServiceProvider>();
         for (Place place : placesNearHere(types,radius)) {
             providers.add(serviceProviderFromPlace(place));
         }
@@ -35,8 +35,8 @@ public final class XServiceProviders {
         return places.nearbySearch(latitude, longitude, radius,asStrings(types));
     }
 
-    private XLocationService locations() {
-        return Registry.get(XLocationService.class);
+    private XLocations locations() {
+        return Registry.get(XLocations.class);
     }
 
     private String[] asStrings(Type[] types) {
@@ -47,9 +47,9 @@ public final class XServiceProviders {
         return list.toArray(new String[0]);
     }
     
-    private ServiceProvider serviceProviderFromPlace(Place place) {
+    private ConsumerServiceProvider serviceProviderFromPlace(Place place) {
         ID id = new ID(place.id);
-        return new ServiceProvider(
+        return new ConsumerServiceProvider(
             id, new Name(place.name), locationFromPlace(place),
             new Address(place.vicinity),
             place.price_level,place.rating,typesFromPlace(place),place.icon,

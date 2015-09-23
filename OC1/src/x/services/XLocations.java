@@ -55,7 +55,7 @@ public final class XLocations
     }
 
     private XLocation quantize(XLocation location) {
-        return new LocationQuantizer().quantize(location);
+        return new XLocationQuantizer().quantize(location);
     }
 
     private void log(Throwable t) {

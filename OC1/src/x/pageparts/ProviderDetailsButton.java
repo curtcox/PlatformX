@@ -1,6 +1,6 @@
 package x.pageparts;
 
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.uiwidget.XButton;
 
 /**
@@ -10,7 +10,7 @@ public final class ProviderDetailsButton {
 
     public static XButton of() {
         return XScreenButton.builder()
-                .text(ServiceProvider.getCurrentName())
+                .text(ConsumerServiceProvider.getCurrentName())
                 .leadingTo("ProviderDetails")
                 .build();
     }

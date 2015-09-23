@@ -10,9 +10,8 @@ import x.event.XLiveList;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class XGeocoder
-    implements IGeocoder
-{
+public final class XGeocoder {
+
     private final Geocoding geocoding = new Geocoding();
 
     public static XGeocoder of() {

@@ -2,7 +2,7 @@ package fake;
 
 import x.pagefactories.XItemListPageFactoryFactory;
 import x.app.Registry;
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;
@@ -15,7 +15,7 @@ public class FakeSERegistryLoader {
     public static void load() {
         put(ILogManager.class,                new XLogManager());
         put(XLogWriter.class,                 new XLogWriter());
-        put(ServiceProvider.class,            ServiceProvider.NULL);
+        put(ConsumerServiceProvider.class,            ConsumerServiceProvider.NULL);
         put(IDisplay.class,                   new FakeDisplay());
         put(IFormFactory.class,               new FakeFormFactory());
         put(ItemListPageFactoryFactory.class, new XItemListPageFactoryFactory());

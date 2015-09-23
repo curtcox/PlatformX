@@ -1,7 +1,7 @@
 package se.services;
 
 import x.services.XLocation;
-import x.services.XLocationService;
+import x.services.XLocationProvider;
 
 /**
  * Java SE implementation of LocationService.
@@ -26,21 +26,16 @@ import x.services.XLocationService;
      postal: "63130"
  }
  */
-public final class SELocationService
-    implements XLocationService
+public final class SELocationProvider
+    implements XLocationProvider
 {
     @Override
-    public void selectLocation(XLocation selected) {
-
-    }
-
-    @Override
-    public XLocation getCurrentLocation() {
+    public XLocation getLastKnownLocation() {
         return null;
     }
 
     @Override
-    public int calculateDistance(XLocation location, XLocation currentLocation) {
-        return 0;
+    public void setLocationListener(XLocation.Listener listener) {
+
     }
 }

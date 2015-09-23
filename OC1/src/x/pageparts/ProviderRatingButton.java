@@ -1,6 +1,6 @@
 package x.pageparts;
 
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.event.StringSource;
 import x.uiwidget.XButton;
 
@@ -19,6 +19,6 @@ public final class ProviderRatingButton {
     }
 
     private static StringSource buttonText() {
-        return ServiceProvider.getCurrentRatingSource();
+        return ConsumerServiceProvider.getCurrentRatingSource();
     }
 }

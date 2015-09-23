@@ -8,12 +8,12 @@ import android.content.Context;
 import org.robolectric.Robolectric;
 import x.app.Registry;
 import x.app.CurrentState;
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;
 import x.pagefactories.ItemListPageFactoryFactory;
-import x.services.XServiceProviders;
+import x.services.XConsumerServiceProviders;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
 
@@ -22,8 +22,8 @@ public class FakeAnRegistryLoader {
     public static void load() {
         put(ILogManager.class,                new XLogManager());
         put(XLogWriter.class,                 new XLogWriter());
-        put(ServiceProvider.class,            ServiceProvider.NULL);
-        put(XServiceProviders.class,           new XServiceProviders());
+        put(ConsumerServiceProvider.class,            ConsumerServiceProvider.NULL);
+        put(XConsumerServiceProviders.class,           new XConsumerServiceProviders());
         put(CurrentState.class,               new CurrentState());
         put(IFormFactory.class,               new AnFormFactory());
         put(IDisplay.class,                   new FakeDisplay());

@@ -1,9 +1,9 @@
 package x.specificpagefactories;
 
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.event.SwappableList;
 import x.pageparts.ServiceProviderSearchParams;
-import x.services.XServiceProviders;
+import x.services.XConsumerServiceProviders;
 import x.uiwidget.XButton;
 
 import java.util.List;
@@ -33,8 +33,8 @@ final class ZoomOutSearchButton
         providers.become(getProviders(searchParams));
     }
     
-    private static List<ServiceProvider> getProviders(ServiceProviderSearchParams searchParams) {
-        return XServiceProviders.of().nearby(searchParams.types,searchParams.radius);
+    private static List<ConsumerServiceProvider> getProviders(ServiceProviderSearchParams searchParams) {
+        return XConsumerServiceProviders.of().nearby(searchParams.types,searchParams.radius);
     }
 
 

@@ -1,6 +1,6 @@
 package x.services;
 
-final class XDistanceCalculator {
+public final class XDistanceCalculator {
 
     static double distance(double lat1, double lon1, double lat2, double lon2) {
       double theta = lon1 - lon2;
@@ -50,4 +50,7 @@ final class XDistanceCalculator {
         return y;
     }
 
+    public static int calculateDistance(XLocation location, XLocation currentLocation) {
+        return 0;
+    }
 }

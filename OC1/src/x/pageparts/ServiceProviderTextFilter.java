@@ -1,6 +1,6 @@
 package x.pageparts;
 
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.uilist.ListFilter;
 import x.uilist.StringToListFilter;
 import x.util.Strings;
@@ -13,7 +13,7 @@ public final class ServiceProviderTextFilter
         return new ListFilter() {
             public boolean passes(Object item) {
                 String trimmed = text.trim().toLowerCase();
-                ServiceProvider provider = (ServiceProvider) item;
+                ConsumerServiceProvider provider = (ConsumerServiceProvider) item;
                 return isIn(trimmed, provider.name) || isIn(trimmed, provider.address);
             }
         };

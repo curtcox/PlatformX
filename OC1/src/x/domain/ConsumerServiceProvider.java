@@ -2,12 +2,13 @@ package x.domain;
 
 import x.app.Registry;
 import x.event.StringSource;
+import x.services.XDistanceCalculator;
 import x.services.XLocation;
-import x.services.XLocationService;
+import x.services.XLocations;
 
 import java.net.URI;
 
-public final class ServiceProvider {
+public final class ConsumerServiceProvider {
     
     public final ID id;
     public final Name name;
@@ -19,12 +20,12 @@ public final class ServiceProvider {
     public final URI icon;
     private Rating myRating;
     
-    public static final ServiceProvider NULL = new ServiceProvider(null,new Name(""),null,null,null,null,null,null,new Rating(""));
+    public static final ConsumerServiceProvider NULL = new ConsumerServiceProvider(null,new Name(""),null,null,null,null,null,null,new Rating(""));
     
-    public ServiceProvider(
-        ID id, Name name, XLocation location, Address address,
-        Double priceLevel, Double rating,
-        Type[] types, URI icon, Rating myRating)
+    public ConsumerServiceProvider(
+            ID id, Name name, XLocation location, Address address,
+            Double priceLevel, Double rating,
+            Type[] types, URI icon, Rating myRating)
     {
         this.id = id;
         this.name = name;
@@ -51,23 +52,23 @@ public final class ServiceProvider {
     }
 
     public String distanceFromCurrentLocation() {
-        XLocationService locations = locationService();
-        int miles = (int) locations.calculateDistance(location,locations.getCurrentLocation());
+        XLocations locations = locationService();
+        int miles = XDistanceCalculator.calculateDistance(location, locations.getCurrentLocation());
         return miles + " miles";
     }
 
-    private static XLocationService locationService() {
-        return Registry.get(XLocationService.class);
+    private static XLocations locationService() {
+        return Registry.get(XLocations.class);
     }
 
-    public static ServiceProvider getSelected() {
-        return Registry.get(ServiceProvider.class);
+    public static ConsumerServiceProvider getSelected() {
+        return Registry.get(ConsumerServiceProvider.class);
     }
     
     public static StringSource getCurrentName() {
         return new StringSource() {
             public String getString() {
-                return ServiceProvider.getSelected().name.toString();
+                return ConsumerServiceProvider.getSelected().name.toString();
             }
         };
     }
@@ -82,7 +83,7 @@ public final class ServiceProvider {
     }
 
     public static String getCurrentRating() {
-        return ServiceProvider.getSelected().myRating.toString();
+        return ConsumerServiceProvider.getSelected().myRating.toString();
     }
 
 }

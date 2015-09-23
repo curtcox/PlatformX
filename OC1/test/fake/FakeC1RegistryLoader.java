@@ -9,13 +9,13 @@ import com.codename1.io.Storage;
 import com.codename1.ui.Display;
 import x.app.CurrentState;
 import x.app.Registry;
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.log.ILogManager;
 import x.log.XLogManager;
 import x.log.XLogWriter;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.pagefactories.XItemListPageFactoryFactory;
-import x.services.XServiceProviders;
+import x.services.XConsumerServiceProviders;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
 
@@ -27,8 +27,8 @@ public class FakeC1RegistryLoader {
         put(Storage.class,                    new FakeStorage());
         put(XLocationProvider.class,           new FakeLocationProvider());
         put(XLocations.class,                new XLocations());
-        put(ServiceProvider.class,            ServiceProvider.NULL);
-        put(XServiceProviders.class,           new XServiceProviders());
+        put(ConsumerServiceProvider.class,            ConsumerServiceProvider.NULL);
+        put(XConsumerServiceProviders.class,           new XConsumerServiceProviders());
         put(CurrentState.class,               new CurrentState());
         put(C1Icons.class,                    new C1Icons());
         put(IFormFactory.class,               new C1FormFactory());

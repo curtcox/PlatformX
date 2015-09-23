@@ -9,7 +9,7 @@ import fake.FakeLocationProvider;
 import fake.FakeStorage;
 import x.event.Change;
 import x.services.XLocations;
-import x.services.XServiceProviders;
+import x.services.XConsumerServiceProviders;
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
@@ -35,7 +35,7 @@ public class CurrentStateTest {
         Registry.put(Storage.class, new FakeStorage());
         Registry.put(XLocationProvider.class, new FakeLocationProvider());
         Registry.put(XLocations.class, new XLocations());
-        Registry.put(XServiceProviders.class, new XServiceProviders());
+        Registry.put(XConsumerServiceProviders.class, new XConsumerServiceProviders());
         testObject = new CurrentState();
     }
 

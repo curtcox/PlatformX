@@ -1,6 +1,6 @@
 package x.pages;
 
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.domain.Type;
 import x.page.Page;
 import x.page.PageFactory;
@@ -116,7 +116,7 @@ public final class ProviderDetailsPage
         vicinity.text=provider().address.toString();
     }
 
-    private ServiceProvider provider() {
-        return ServiceProvider.getSelected();
+    private ConsumerServiceProvider provider() {
+        return ConsumerServiceProvider.getSelected();
     }
 }

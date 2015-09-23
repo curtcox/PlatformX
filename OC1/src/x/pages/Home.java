@@ -1,11 +1,11 @@
 package x.pages;
 
 import x.app.Registry;
-import x.domain.ServiceProvider;
+import x.domain.ConsumerServiceProvider;
 import x.pageparts.ProviderDetailsButton;
 import x.pageparts.ProviderRatingButton;
 import x.pageparts.XScreenButton;
-import x.services.XLocationService;
+import x.services.XLocations;
 import x.ui.TextPosition;
 import x.uiwidget.XButton;
 
@@ -15,7 +15,7 @@ import x.uiwidget.XButton;
 public final class Home {
     
     Boolean there_is_a_selected_provider() {
-        return ServiceProvider.getSelected().id != null;
+        return ConsumerServiceProvider.getSelected().id != null;
     }
 
     XButton provider_details() {
@@ -45,8 +45,8 @@ public final class Home {
         };
     }
 
-    XLocationService locations() {
-        return Registry.get(XLocationService.class);
+    XLocations locations() {
+        return Registry.get(XLocations.class);
     }
 
 }
