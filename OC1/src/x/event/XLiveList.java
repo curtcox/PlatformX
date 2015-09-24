@@ -1,7 +1,6 @@
 package x.event;
 
 import x.util.CollectionAsList;
-import x.util.Translator;
 
 import java.util.Collection;
 import java.util.Iterator;
@@ -12,20 +11,14 @@ public final class XLiveList<E>
     implements LiveList<E>
 {
     private final List<E> list;
-    private final Translator translator;
     private Change.Listener listener;
 
-    private XLiveList(List list, Translator translator) {
+    private XLiveList(List list) {
         this.list = list;
-        this.translator = translator;
-    }
-
-    public static XLiveList of(List list, Translator translator) {
-        return new XLiveList(list,translator);
     }
 
     public static XLiveList of(List list) {
-        return new XLiveList(list,Translator.IDENTITY);
+        return new XLiveList(list);
     }
 
     public static XLiveList of(Collection collection) {
@@ -42,7 +35,7 @@ public final class XLiveList<E>
         if (index<0) {
             return null;
         }
-        return (E) translator.translate(list.get(index));
+        return list.get(index);
     }
 
     @Override
