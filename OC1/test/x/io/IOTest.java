@@ -8,9 +8,7 @@ import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 
-import java.io.ByteArrayInputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 import static mach.Mocks._;
 import static mach.Mocks.verify;
@@ -41,6 +39,17 @@ public class IOTest {
     }
 
     @Test
+    public void stringOrEmptyFromReader_returns_expected_string() {
+        String expected = "Stuff in the string";
+        InputStream stream = new ByteArrayInputStream(expected.getBytes());
+        Reader reader = new InputStreamReader(stream);
+
+        String actual = IO.stringOrEmptyFrom(reader);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
     public void stringOrEmptyFrom_returns_empty_when_stream_throws_exception() {
         String expected = "";
         final IOException e = new IOException();
@@ -48,6 +57,18 @@ public class IOTest {
         _(); log.log(e);
 
         String actual = IO.stringOrEmptyFrom(stream);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
+    public void stringOrEmptyFromReader_returns_empty_when_stream_throws_exception() {
+        String expected = "";
+        final IOException e = new IOException();
+        Reader reader = new ErrorThrowingReader(e);
+        _(); log.log(e);
+
+        String actual = IO.stringOrEmptyFrom(reader);
 
         assertEquals(expected,actual);
     }
@@ -75,4 +96,23 @@ public class IOTest {
             throw e;
         }
     }
+
+    static class ErrorThrowingReader extends Reader {
+        final IOException e;
+
+        ErrorThrowingReader(IOException e) {
+            this.e = e;
+        }
+
+        @Override
+        public int read(char[] cbuf, int off, int len) throws IOException {
+            throw e;
+        }
+
+        @Override
+        public void close() throws IOException {
+            throw e;
+        }
+    }
+
 }

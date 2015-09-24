@@ -4,9 +4,7 @@ import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
 
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.InputStream;
+import java.io.*;
 
 /**
  * Static methods that are useful for IO.
@@ -22,8 +20,32 @@ public final class IO {
         }
     }
 
+    public static String stringOrEmptyFrom(Reader reader) {
+        try {
+            return stringFrom(reader);
+        } catch (IOException e) {
+            log(e);
+            return "";
+        }
+    }
+
     private static String stringFrom(InputStream stream) throws IOException {
         return new String(bytesFrom(stream));
+    }
+
+    private static String stringFrom(Reader reader) throws IOException {
+        StringWriter buffer = new StringWriter();
+
+        int numberRead;
+        char[] data = new char[16384];
+
+        while ((numberRead = reader.read(data, 0, data.length)) != -1) {
+            buffer.write(data, 0, numberRead);
+        }
+
+        buffer.flush();
+
+        return buffer.toString();
     }
 
     private static byte[] bytesFrom(InputStream stream) throws IOException {

@@ -30,9 +30,20 @@ public class XJSONParserTest {
     }
 
     @Test
+    public void pair_of_strings_with_spaces() throws IOException {
+        assertEquals(map("Mister","Mr."), parse("{ 'Mister' : 'Mr.' }"));
+    }
+
+    @Test
     public void two_pairs_of_strings() throws IOException {
         assertEquals(map("fred","wilma","barney","betty"),
             parse("{'fred':'wilma','barney':'betty'}"));
+    }
+
+    @Test
+    public void two_pairs_of_strings_with_spaces() throws IOException {
+        assertEquals(map("bob","ted","sue","sally"),
+                parse("{ 'bob' : 'ted' , 'sue' : 'sally' }"));
     }
 
     private static Map map(String...args) {
