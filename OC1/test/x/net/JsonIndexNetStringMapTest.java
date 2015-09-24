@@ -1,19 +1,19 @@
 package x.net;
 
+import config.ShouldRun;
+import org.junit.Before;
+import org.junit.Test;
+import x.json.XJSON;
+import x.uiwidget.XImage;
+
 import java.io.ByteArrayInputStream;
 import java.io.InputStream;
 import java.net.URI;
 import java.util.HashMap;
 import java.util.Map;
 
-import x.json.XJSON;
-import config.ShouldRun;
-import x.uiwidget.XImage;
-import org.junit.Test;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assume.assumeTrue;
-
-import org.junit.Before;
 
 public class JsonIndexNetStringMapTest {
 
@@ -28,8 +28,7 @@ public class JsonIndexNetStringMapTest {
     };
     
     URI index = URI("http://example.com/");
-    URI absoulteUrlValuePage = URI("http://absolute/value_page");
-    URI relativeUrlValuePage = URI("relative_value_page");
+    URI absoluteUrlValuePage = URI("http://absolute/value_page");
     String absoluteValueKey = "Vodka";
     String relativeValueKey = "Spencer";
     String absoluteValue = "0 Kelvin";
@@ -46,7 +45,7 @@ public class JsonIndexNetStringMapTest {
             "}"
         ); 
         pages.put(index, indexJSON);
-        pages.put(absoulteUrlValuePage, absoluteValue);
+        pages.put(absoluteUrlValuePage, absoluteValue);
         pages.put(URI("http://example.com/relative_value_page"), relativeValue);
     }
 

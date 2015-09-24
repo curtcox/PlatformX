@@ -1,8 +1,10 @@
-package hash.lex;
+package x.util;
 
 import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
+import x.util.Tokenizer;
+
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 

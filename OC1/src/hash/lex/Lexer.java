@@ -1,6 +1,7 @@
 package hash.lex;
 
 import hash.Identifier;
+import x.util.Tokenizer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -82,7 +83,7 @@ final class Lexer {
     }
     
     private static String[] parts(String string) {
-        return Tokenizer.tokenize(string,Identifier.SPECIAL);
+        return Tokenizer.tokenize(string, Identifier.SPECIAL);
     }
 
 }

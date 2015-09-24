@@ -1,11 +1,11 @@
-package hash.lex;
+package x.util;
 
 /**
  * For splitting a string into tokens.
  * See also Lexer, which wraps Tokenizer to correctly handle quotes.
  * @author Curt
  */
-final class Tokenizer {
+public final class Tokenizer {
 
     /**
      * Use the separators to split the string into tokens.
