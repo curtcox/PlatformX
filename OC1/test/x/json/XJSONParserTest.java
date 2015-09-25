@@ -46,21 +46,35 @@ public class XJSONParserTest {
                 parse("{ 'bob' : 'ted' , 'sue' : 'sally' }"));
     }
 
-    private static Map map(String...args) {
+    @Test
+    public void multi_level_nested() throws IOException {
+        assertEquals(
+          map("menu",map("id","file","value","File")),
+          parse(
+              "{",
+              "  'menu' :{",
+              "     'id': 'file',",
+              "     'value': 'File'",
+              "  }",
+              "}"
+          )
+        );
+    }
+
+    private static Map map(Object...args) {
         Map map = new HashMap();
         for (int i=0; i<args.length; i++) {
-            String key = args[i];
+            Object key = args[i];
             i++;
-            String value = args[i];
+            Object value = args[i];
             map.put(key,value);
         }
         return map;
     }
 
     private static Map<String,Object> parse(String... lines) throws IOException {
-        XJSONParser parser = new XJSONParser();
         String json = JSON(lines);
-        return parser.parseJSON(new StringReader(json));
+        return XJSONParser.parse(new StringReader(json));
     }
 
     private static String JSON(String... lines) {

@@ -23,8 +23,7 @@ public final class XJSON {
     static final Map<String,String> parseJsonResponse(InputStreamReader reader) {
         Map<String,String> map = new HashMap<String,String>();
         try {
-            XJSONParser parser = new XJSONParser();
-            Map<String,Object> result = parser.parseJSON(reader);
+            Map<String,Object> result = XJSONParser.parse(reader);
             addAllResultsTo(result,map);
             return map;
         } catch (IOException e) {

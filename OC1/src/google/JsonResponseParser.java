@@ -18,8 +18,7 @@ abstract class JsonResponseParser<T>
     final List<T> parseJsonResponse(InputStreamReader reader) {
         List<T> location = new ArrayList<T>();
         try {
-            XJSONParser parser = json();
-            for (Map<String,Object> result : results(parser.parseJSON(reader))) {
+            for (Map<String,Object> result : results(XJSONParser.parse(reader))) {
                 location.add(construct(result));
             }
             return location;
@@ -71,7 +70,4 @@ abstract class JsonResponseParser<T>
         return Registry.get(ILogManager.class).getLog(JsonResponseParser.class);
     }
 
-    private XJSONParser json() {
-        return new XJSONParser();
-    }
 }
