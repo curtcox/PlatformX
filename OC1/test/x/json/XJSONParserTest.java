@@ -47,6 +47,22 @@ public class XJSONParserTest {
     }
 
     @Test
+    public void pair_of_strings_with_url() throws IOException {
+        assertEquals(
+           map(
+               "Vodka","http://absolute/value_page",
+               "Spencer","relative_value_page"
+           ),
+           parse(
+               "{",
+               "'Vodka':'http://absolute/value_page' ,",
+               "'Spencer':'relative_value_page' ",
+               "}"
+           )
+        );
+    }
+
+    @Test
     public void multi_level_nested() throws IOException {
         assertEquals(
           map("menu",map("id","file","value","File")),
