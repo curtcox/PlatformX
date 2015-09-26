@@ -74,7 +74,7 @@ public final class Tokens {
     }
 
     public static String[] split(String string) {
-        return Lexer.split(parts(string));
+        return Lexer.transform(parts(string));
     }
 
     private static String[] parts(String string) {

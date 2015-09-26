@@ -4,8 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * For splitting a source string into tokens.
- * See also Tokenizer, which it uses under-the-covers.
+ * Input : tokens with comments and multiple tokens per quoted string
+ * Output : tokens with no comments and a single token per quoted string
+ * Note: Lexer and Tokenizer could probably be rewritten as a single class that is
+ * both simpler and more efficient.
  * @author Curt
  */
 public final class Lexer {
@@ -17,7 +19,7 @@ public final class Lexer {
 
     private Lexer() {}
     
-    private String[] splitIntoParts(String[] strings) {
+    private String[] transformTokens(String[] strings) {
         for (String part : strings) {
             if (commenting) {
                if (commentEnd(part)) {
@@ -62,9 +64,9 @@ public final class Lexer {
      * Return the given source strings as an array of one-token StringS.
      * The given tokens will not contain any whitespace or comments.
      */
-    public static String[] split(String[] strings) {
+    public static String[] transform(String[] strings) {
         Lexer lexer = new Lexer();
-        return lexer.splitIntoParts(strings);
+        return lexer.transformTokens(strings);
     }
 
     private static boolean quote(String string) {

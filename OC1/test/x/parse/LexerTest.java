@@ -122,7 +122,7 @@ public class LexerTest {
     }
 
     private void split(String original,String... expected) {
-        String[] actual = Lexer.split(Tokens.split(original));
+        String[] actual = Lexer.transform(Tokens.split(original));
         assertEquals(expected.length, actual.length);
         for (int i=0; i<expected.length; i++) {
             assertEquals(expected[i], actual[i]);

@@ -2,16 +2,19 @@ package x.parse;
 
 /**
  * For splitting a string into tokens.
- * See also Lexer, which wraps Tokenizer to correctly handle quotes.
+ * See also Lexer, which can be used to wrap the output of a
+ * Tokenizer to correctly handle quotes and comments.
+ * Note: Lexer and Tokenizer could probably be rewritten as a single class that is
+ * both simpler and more efficient.
  * @author Curt
  */
 public final class Tokenizer {
 
     /**
-     * Use the separators to split the string into tokens.
+     * Use the separators to transform the string into tokens.
      * The separators are included in the returned tokens.
      * @param string the string to be spilt
-     * @param separators the separator tokens to split on
+     * @param separators the separator tokens to transform on
      * @return the separator tokens and the strings between them.
      */
     public static String[] tokenize(String string,String... separators) {

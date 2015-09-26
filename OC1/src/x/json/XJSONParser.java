@@ -16,7 +16,7 @@ public final class XJSONParser {
     int end;
 
     private static final String[] separators = new String[] {
-            ":",",","{","}"
+            ":",",","{","}","\""
     };
 
     private XJSONParser(String[] tokens, int start) {
@@ -70,7 +70,7 @@ public final class XJSONParser {
     }
 
     static String[] split(String string) {
-        return Lexer.split(parts(string));
+        return Lexer.transform(parts(string));
     }
 
     private static String[] parts(String string) {
