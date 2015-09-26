@@ -2,8 +2,8 @@ package x.page.dynamic;
 
 import hash.NamedExpression;
 import x.util.Check;
-import x.util.Mirror;
-import x.util.Mirrors;
+import x.reflect.Mirror;
+import x.reflect.Mirrors;
 
 public final class ScreenController
     implements ScreenContext.Provider

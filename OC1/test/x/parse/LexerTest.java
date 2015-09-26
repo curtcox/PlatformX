@@ -1,18 +1,18 @@
 package x.parse;
 
 import config.ShouldRun;
+import hash.lex.Tokens;
 import org.junit.Before;
 import org.junit.Test;
-import x.parse.Lexer;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assume.assumeTrue;
 
 public class LexerTest {
 
     @Before
     public void setUp() {
-        Assume.assumeTrue(ShouldRun.Hash);
+        assumeTrue(ShouldRun.X);
     }
 
     @Test
@@ -52,7 +52,7 @@ public class LexerTest {
     }
 
     @Test
-    public void split_questionmark_and_colon() {
+    public void split_question_mark_and_colon() {
         split("?:","?",":");    
     }
 
@@ -82,7 +82,7 @@ public class LexerTest {
     }
 
     @Test
-    public void split_empty_parens() {
+    public void split_empty_parenthesis() {
         split("()","(",")");    
     }
 
@@ -122,10 +122,10 @@ public class LexerTest {
     }
 
     private void split(String original,String... expected) {
-        String[] actual = Lexer.split(original);
-        Assert.assertEquals(expected.length, actual.length);
+        String[] actual = Lexer.split(Tokens.split(original));
+        assertEquals(expected.length, actual.length);
         for (int i=0; i<expected.length; i++) {
-            Assert.assertEquals(expected[i], actual[i]);
+            assertEquals(expected[i], actual[i]);
         }
     }
 }

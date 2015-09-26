@@ -1,5 +1,9 @@
 package hash.lex;
 
+import hash.Identifier;
+import x.parse.Lexer;
+import x.parse.Tokenizer;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -19,7 +23,7 @@ public final class Tokens {
     final List<String>tokens;
     
     public static Tokens from(String string) {
-        return new Tokens(Lexer.split(string));
+        return new Tokens(split(string));
     }
 
     private Tokens(String[] tokens) {
@@ -68,4 +72,13 @@ public final class Tokens {
     public String[] toStrings() {
         return tokens.toArray(new String[0]);
     }
+
+    public static String[] split(String string) {
+        return Lexer.split(parts(string));
+    }
+
+    private static String[] parts(String string) {
+        return Tokenizer.tokenize(string, Identifier.SPECIAL);
+    }
+
 }

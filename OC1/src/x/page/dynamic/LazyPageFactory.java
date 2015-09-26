@@ -4,8 +4,8 @@ import x.event.StringSource;
 import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
-import x.util.Mirror;
-import x.util.Mirrors;
+import x.reflect.Mirror;
+import x.reflect.Mirrors;
 
 import java.util.ArrayList;
 import java.util.List;

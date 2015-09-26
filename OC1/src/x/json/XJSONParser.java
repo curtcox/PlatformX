@@ -1,7 +1,8 @@
 package x.json;
 
 import x.io.IO;
-import x.util.Tokenizer;
+import x.parse.Lexer;
+import x.parse.Tokenizer;
 
 import java.io.IOException;
 import java.io.Reader;
@@ -65,7 +66,15 @@ public final class XJSONParser {
     }
 
     private static String[] tokens(Reader reader) {
-        return Tokenizer.tokenize(IO.stringOrEmptyFrom(reader),separators);
+        return split(IO.stringOrEmptyFrom(reader));
+    }
+
+    static String[] split(String string) {
+        return Lexer.split(parts(string));
+    }
+
+    private static String[] parts(String string) {
+        return Tokenizer.tokenize(string, separators);
     }
 
 }

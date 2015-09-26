@@ -1,7 +1,5 @@
 package x.parse;
 
-import hash.Identifier;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,8 +17,8 @@ public final class Lexer {
 
     private Lexer() {}
     
-    private String[] splitIntoParts(String string) {
-        for (String part : parts(string)) {
+    private String[] splitIntoParts(String[] strings) {
+        for (String part : strings) {
             if (commenting) {
                if (commentEnd(part)) {
                    commenting = false;
@@ -61,12 +59,12 @@ public final class Lexer {
     }
     
     /**
-     * Return the given source string as an array of one-token StringS.
+     * Return the given source strings as an array of one-token StringS.
      * The given tokens will not contain any whitespace or comments.
      */
-    public static String[] split(String string) {
+    public static String[] split(String[] strings) {
         Lexer lexer = new Lexer();
-        return lexer.splitIntoParts(string);
+        return lexer.splitIntoParts(strings);
     }
 
     private static boolean quote(String string) {
@@ -79,10 +77,6 @@ public final class Lexer {
 
     private static boolean commentEnd(String string) {
         return string.equals("\r") || string.equals("\n");
-    }
-    
-    private static String[] parts(String string) {
-        return Tokenizer.tokenize(string, Identifier.SPECIAL);
     }
 
 }

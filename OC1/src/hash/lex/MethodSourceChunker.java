@@ -27,8 +27,8 @@ public final class MethodSourceChunker {
         if (out.charAt(out.length()-1)!="}".charAt(0)) {
             return false;
         }
-        String[] parts = Lexer.split(out.toString());
+        String[] parts = Tokens.split(out.toString());
         return parts.length > 0 && parts[parts.length -1].equals("}");
     }
-    
+
 }

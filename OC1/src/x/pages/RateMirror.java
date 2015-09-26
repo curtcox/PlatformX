@@ -1,6 +1,6 @@
 package x.pages;
 
-import x.util.AbstractMirror;
+import x.reflect.AbstractMirror;
 
 public final class RateMirror
     extends AbstractMirror<Rate>

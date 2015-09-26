@@ -2,7 +2,7 @@ package x.page.dynamic;
 
 import hash.NamedExpression;
 import x.app.Registry;
-import x.util.XReflection;
+import x.reflect.XReflection;
 
 import java.util.HashMap;
 
