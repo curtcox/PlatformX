@@ -1,4 +1,4 @@
-package x.util;
+package x.parse;
 
 /**
  * For splitting a string into tokens.

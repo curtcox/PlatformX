@@ -1,7 +1,6 @@
-package hash.lex;
+package x.parse;
 
 import hash.Identifier;
-import x.util.Tokenizer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +10,7 @@ import java.util.List;
  * See also Tokenizer, which it uses under-the-covers.
  * @author Curt
  */
-final class Lexer {
+public final class Lexer {
 
     private final List<String> parts = new ArrayList<String>();
     private boolean quoting = false;
@@ -65,7 +64,7 @@ final class Lexer {
      * Return the given source string as an array of one-token StringS.
      * The given tokens will not contain any whitespace or comments.
      */
-    static String[] split(String string) {
+    public static String[] split(String string) {
         Lexer lexer = new Lexer();
         return lexer.splitIntoParts(string);
     }

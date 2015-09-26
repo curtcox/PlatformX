@@ -1,8 +1,10 @@
-package hash.lex;
+package x.parse;
 
 import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
+import x.parse.Lexer;
+
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
@@ -10,7 +12,7 @@ public class LexerTest {
 
     @Before
     public void setUp() {
-        assumeTrue(ShouldRun.Hash);
+        Assume.assumeTrue(ShouldRun.Hash);
     }
 
     @Test
@@ -121,9 +123,9 @@ public class LexerTest {
 
     private void split(String original,String... expected) {
         String[] actual = Lexer.split(original);
-        assertEquals(expected.length,actual.length);
+        Assert.assertEquals(expected.length, actual.length);
         for (int i=0; i<expected.length; i++) {
-            assertEquals(expected[i],actual[i]);
+            Assert.assertEquals(expected[i], actual[i]);
         }
     }
 }

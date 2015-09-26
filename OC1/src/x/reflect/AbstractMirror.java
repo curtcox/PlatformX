@@ -1,4 +1,6 @@
-package x.util;
+package x.reflect;
+
+import x.reflect.Mirror;
 
 import java.util.Arrays;
 

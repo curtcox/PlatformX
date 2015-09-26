@@ -1,6 +1,8 @@
-package x.util;
+package x.reflect;
 
 import x.pages.*;
+import x.reflect.Mirror;
+import x.util.Check;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -27,7 +29,7 @@ public final class Mirrors {
     
     public static Mirror of(Object o) {
         Mirror mirror = mirrors.get(o.getClass());
-        Check.notNull(mirror,o.getClass() + " not found");
+        Check.notNull(mirror, o.getClass() + " not found");
         mirror.setTarget(o);
         return mirror;
     }
