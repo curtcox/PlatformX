@@ -6,29 +6,22 @@ import x.parse.Tokenizer;
 
 import java.io.IOException;
 import java.io.Reader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
 public final class XJSONParser {
-
-    final String[] tokens;
-    final int start;
 
     private static final String[] separators = new String[] {
             "{","}", "[","]", ":",",","\""
     };
 
-    private XJSONParser(String[] tokens, int start) {
-        this.tokens = tokens;
-        this.start = start;
-    }
-
-    public static Map<String, Object> parse(Reader reader) throws IOException {
+    public static Object parse(Reader reader) throws IOException {
         String[] tokens = tokens(reader);
-        JsonMapParser parser = new JsonMapParser(tokens,0);
-        return parser.parse();
+        if (tokens[0].equals("{")) {
+            JsonMapParser parser = new JsonMapParser(tokens,0);
+            return parser.parse();
+        } else {
+            JsonListParser parser = new JsonListParser(tokens,0);
+            return parser.parse();
+        }
     }
 
     static String unquoted(String value) {

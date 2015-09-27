@@ -124,7 +124,7 @@ public class XJSONParserTest {
         return map;
     }
 
-    private static Map<String,Object> parse(String... lines) throws IOException {
+    private static Object parse(String... lines) throws IOException {
         String json = JSON(lines);
         return XJSONParser.parse(new StringReader(json));
     }

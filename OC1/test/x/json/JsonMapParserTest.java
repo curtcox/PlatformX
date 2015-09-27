@@ -6,8 +6,6 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.io.StringReader;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -83,6 +81,19 @@ public class JsonMapParserTest {
               "}"
           )
         );
+    }
+
+    @Test
+    public void map_containing_a_list() throws IOException {
+        assertEquals(
+                map("menu",list("file")),
+                parse("{ 'menu' : [ 'file' ] }"
+                )
+        );
+    }
+
+    private static List list(Object... args) {
+        return Arrays.asList(args);
     }
 
     private static Map map(Object...args) {

@@ -18,7 +18,7 @@ final class JsonMapParser {
     Map<String, Object> parse() throws IOException {
         Map map = new HashMap<String, Object>();
         String key = null;
-        String value = null;
+        Object value = null;
         for (int i=start; i<tokens.length; i++) {
             String token = tokens[i];
             if (key !=null && token.equals("{")) {
@@ -32,15 +32,21 @@ final class JsonMapParser {
                 return map;
             }
             if (token.equals(":")) {
-                key = value;
+                key = (String) value;
             }
             if (token.equals("}") || token.equals(",")) {
                 if (key!=null) {
-                    map.put(unquoted(key), unquoted(value));
+                    map.put(unquoted(key), unquoted((String)value));
                     key = null;
                 }
             }
-            value = token;
+            if (token.equals("[")) {
+                JsonListParser parser = new JsonListParser(tokens, i + 1);
+                map.put(unquoted(key),parser.parse());
+                i = parser.end + 1;
+            } else {
+                value = token;
+            }
         }
         return map;
     }

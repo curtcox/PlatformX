@@ -18,7 +18,7 @@ abstract class JsonResponseParser<T>
     final List<T> parseJsonResponse(InputStreamReader reader) {
         List<T> location = new ArrayList<T>();
         try {
-            for (Map<String,Object> result : results(XJSONParser.parse(reader))) {
+            for (Map<String,Object> result : results((Map<String, Object>) XJSONParser.parse(reader))) {
                 location.add(construct(result));
             }
             return location;
