@@ -1,12 +1,15 @@
 package x.json;
 
 import config.ShouldRun;
+import edu.emory.mathcs.backport.java.util.Arrays;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.io.IOException;
 import java.io.StringReader;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
@@ -20,17 +23,37 @@ public class XJSONParserTest {
     }
 
     @Test
-    public void empty_json() throws IOException {
+    public void empty_json_map() throws IOException {
         assertEquals(new HashMap(),parse("{ }"));
     }
 
     @Test
-    public void pair_of_strings() throws IOException {
+    public void empty_json_array() throws IOException {
+        assertEquals(new ArrayList(),parse("[]"));
+    }
+
+    @Test
+    public void pair_of_strings_in_a_map() throws IOException {
         assertEquals(map("fred","wilma"), parse("{'fred':'wilma'}"));
     }
 
     @Test
-    public void pair_of_strings_with_spaces() throws IOException {
+    public void pair_of_strings_with_spaces_in_a_map() throws IOException {
+        assertEquals(map("Mister","Mr."), parse("{ 'Mister' : 'Mr.' }"));
+    }
+
+    @Test
+    public void a_string_in_a_list() throws IOException {
+        assertEquals(list("barney"), parse("['barney']"));
+    }
+
+    @Test
+    public void pair_of_strings_in_a_list() throws IOException {
+        assertEquals(list("fred", "wilma"), parse("['fred','wilma']"));
+    }
+
+    @Test
+    public void pair_of_strings_with_spaces_in_a_list() throws IOException {
         assertEquals(map("Mister","Mr."), parse("{ 'Mister' : 'Mr.' }"));
     }
 
@@ -63,7 +86,7 @@ public class XJSONParserTest {
     }
 
     @Test
-    public void multi_level_nested() throws IOException {
+    public void multi_level_nested_maps() throws IOException {
         assertEquals(
           map("menu",map("id","file","value","File")),
           parse(
@@ -75,6 +98,19 @@ public class XJSONParserTest {
               "}"
           )
         );
+    }
+
+    @Test
+    public void map_containing_a_list() throws IOException {
+        assertEquals(
+                map("menu",list("file")),
+                parse("{ 'menu' : [ 'file' ] }"
+                )
+        );
+    }
+
+    private static List list(Object... args) {
+        return Arrays.asList(args);
     }
 
     private static Map map(Object...args) {
