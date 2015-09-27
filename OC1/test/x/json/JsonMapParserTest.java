@@ -15,7 +15,7 @@ import java.util.Map;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assume.assumeTrue;
 
-public class XJSONParserTest {
+public class JsonMapParserTest {
 
     @Before
     public void setUp() {
@@ -28,11 +28,6 @@ public class XJSONParserTest {
     }
 
     @Test
-    public void empty_json_array() throws IOException {
-        assertEquals(new ArrayList(),parse("[]"));
-    }
-
-    @Test
     public void pair_of_strings_in_a_map() throws IOException {
         assertEquals(map("fred","wilma"), parse("{'fred':'wilma'}"));
     }
@@ -40,16 +35,6 @@ public class XJSONParserTest {
     @Test
     public void pair_of_strings_with_spaces_in_a_map() throws IOException {
         assertEquals(map("Mister","Mr."), parse("{ 'Mister' : 'Mr.' }"));
-    }
-
-    @Test
-    public void a_string_in_a_list() throws IOException {
-        assertEquals(list("barney"), parse("['barney']"));
-    }
-
-    @Test
-    public void pair_of_strings_in_a_list() throws IOException {
-        assertEquals(list("fred", "wilma"), parse("['fred','wilma']"));
     }
 
     @Test
@@ -100,19 +85,6 @@ public class XJSONParserTest {
         );
     }
 
-    @Test
-    public void map_containing_a_list() throws IOException {
-        assertEquals(
-                map("menu",list("file")),
-                parse("{ 'menu' : [ 'file' ] }"
-                )
-        );
-    }
-
-    private static List list(Object... args) {
-        return Arrays.asList(args);
-    }
-
     private static Map map(Object...args) {
         Map map = new HashMap();
         for (int i=0; i<args.length; i++) {
@@ -126,15 +98,13 @@ public class XJSONParserTest {
 
     private static Map<String,Object> parse(String... lines) throws IOException {
         String json = JSON(lines);
-        return XJSONParser.parse(new StringReader(json));
+        String[] tokens = XJSONParser.split(json);
+        JsonMapParser parser = new JsonMapParser(tokens,0);
+        return parser.parse();
     }
 
-    static String JSON(String... lines) {
-        StringBuilder out = new StringBuilder();
-        for (String line : lines) {
-            out.append(line);
-        }
-        return out.toString().replaceAll("'", "\"");
+    private static String JSON(String... lines) {
+        return XJSONParserTest.JSON(lines);
     }
 
 }
