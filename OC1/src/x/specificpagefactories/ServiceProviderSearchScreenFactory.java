@@ -8,6 +8,7 @@ import x.page.Page;
 import x.page.PageFactory;
 import x.page.PageLink;
 import x.page.dynamic.GlobPageFactory;
+import x.pageparts.ServiceProviderListCellConfigurer;
 import x.pageparts.ServiceProviderSearchParams;
 import x.pageparts.ServiceProviderTextFilter;
 import x.pages.ServiceProviderSearchPage;
@@ -43,7 +44,7 @@ public final class ServiceProviderSearchScreenFactory {
 
     public static ServiceProviderSearchPage withTypesAndRadius(PageLink link,Type[] types, int radius) {
         ServiceProviderSearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,radius);
-        return new ServiceProviderSearchPage(link,newSearchableList(getProviders(searchParams),searchParams));
+        return new ServiceProviderSearchPage(link,newSearchableList(searchParams));
     }
 
     private static Type[] types(Object[] objects) {
@@ -56,7 +57,7 @@ public final class ServiceProviderSearchScreenFactory {
     
     public static ServiceProviderSearchPage withTypes(PageLink link,Type[] types) {
         ServiceProviderSearchParams searchParams = zoomOutToSmallestRadiusWithMultipleHits(types,STARTING_RADIUS);
-        return new ServiceProviderSearchPage(link,newSearchableList(getProviders(searchParams),searchParams));
+        return new ServiceProviderSearchPage(link,newSearchableList(searchParams));
     }
 
     private static ServiceProviderSearchParams zoomOutToSmallestRadiusWithMultipleHits(Type[] types, int radius) {
@@ -69,20 +70,34 @@ public final class ServiceProviderSearchScreenFactory {
         return searchParams;
     }
     
-    private static XSearchableList<ConsumerServiceProvider> newSearchableList(List<ConsumerServiceProvider> providers,ServiceProviderSearchParams searchParams) {
-        SwappableList<ConsumerServiceProvider> swappable = newSwappableList(providers);
-        ZoomOutSearchButton zoomButton = new ZoomOutSearchButton(searchParams,swappable);
-        XSearchableList list = null;//new SearchableList(swappable,zoomButton,new ServiceProviderListCellConfigurer());
+    private static XSearchableList<ConsumerServiceProvider> newSearchableList(ServiceProviderSearchParams searchParams)
+    {
+        SwappableList<ConsumerServiceProvider> swappable = newSwappableList(searchParams);
+        XSearchableList list = listBuilder()
+            .items(swappable)
+            .action(new ZoomOutSearchButton(searchParams,swappable))
+            .configurer(new ServiceProviderListCellConfigurer())
+            .build();
         installer().install(list, new ServiceProviderTextFilter());
         return list;
     }
 
-    private static SwappableList<ConsumerServiceProvider> newSwappableList(List<ConsumerServiceProvider> providers) {
-        return null;
+    private static SwappableList<ConsumerServiceProvider> newSwappableList(
+        ServiceProviderSearchParams searchParams)
+    {
+        return swappableListFactory().from(serviceProviders().nearby(searchParams.types, searchParams.radius));
     }
 
     private static XSearchFilterInstaller installer() {
         return Registry.get(XSearchFilterInstaller.class);
+    }
+
+    private static XSearchableList.Builder listBuilder() {
+        return Registry.get(XSearchableList.Factory.class).builder();
+    }
+
+    private static SwappableList.Factory swappableListFactory() {
+        return Registry.get(SwappableList.Factory.class);
     }
 
     private static List<ConsumerServiceProvider> getProviders(ServiceProviderSearchParams searchParams) {

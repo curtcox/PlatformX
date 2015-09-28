@@ -9,6 +9,6 @@ public class SESwappableListFactory
 {
     @Override
     public SwappableList from(List list) {
-        return null;
+        return new SESwappableList();
     }
 }

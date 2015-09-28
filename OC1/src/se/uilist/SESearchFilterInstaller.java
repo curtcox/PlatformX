@@ -10,7 +10,7 @@ import javax.swing.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-final class SESearchFilterInstaller
+public final class SESearchFilterInstaller
     implements XSearchFilterInstaller
 {
     
