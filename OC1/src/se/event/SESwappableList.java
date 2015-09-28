@@ -12,24 +12,30 @@ class SESwappableList
     implements SwappableList
 {
 
+    private List list;
+    private Change.Listener listener;
+
     @Override
     public int size() {
-        throw unsupported();
+        return list==null ? 0 : list.size();
     }
 
     @Override
     public Object get(int index) {
-        throw unsupported();
+        return list.get(index);
     }
 
     @Override
     public void become(List list) {
-        throw unsupported();
+        this.list = list;
+        if (listener!=null) {
+            listener.onChange();
+        }
     }
 
     @Override
     public void addListener(Change.Listener listener) {
-        throw unsupported();
+        this.listener = listener;
     }
 
     public boolean                       isEmpty() { throw unsupported(); }
