@@ -4,12 +4,12 @@ import com.vaadin.event.FieldEvents;
 import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
-import x.uilist.ISearchFilterInstaller;
+import x.uilist.XSearchFilterInstaller;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;
 
 public final class VaSearchFilterInstaller
-    implements ISearchFilterInstaller
+    implements XSearchFilterInstaller
 {
     
     public static void vaSpecificInstall(final VaSearchableList list, final StringToListFilter stringToListFilter) {

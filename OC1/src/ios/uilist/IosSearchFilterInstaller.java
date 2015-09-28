@@ -7,12 +7,12 @@ import org.robovm.apple.uikit.UITextFieldDelegateAdapter;
 import x.app.Registry;
 import x.log.ILog;
 import x.log.ILogManager;
-import x.uilist.ISearchFilterInstaller;
+import x.uilist.XSearchFilterInstaller;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;
 
 public final class IosSearchFilterInstaller
-    implements ISearchFilterInstaller
+    implements XSearchFilterInstaller
 {
     
     public static void iosSpecificInstall(final IosSearchableList list, final StringToListFilter stringToListFilter) {

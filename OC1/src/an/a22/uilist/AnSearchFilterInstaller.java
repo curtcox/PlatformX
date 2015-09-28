@@ -4,13 +4,13 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.TextView;
 import x.app.Registry;
-import x.uilist.ISearchFilterInstaller;
+import x.uilist.XSearchFilterInstaller;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;
 import x.util.Runner;
 
 public final class AnSearchFilterInstaller
-    implements ISearchFilterInstaller
+    implements XSearchFilterInstaller
 {
     
     public static void anSpecificInstall(final AnSearchableList list, final StringToListFilter stringToListFilter) {

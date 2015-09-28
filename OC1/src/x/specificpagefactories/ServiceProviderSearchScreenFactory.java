@@ -12,7 +12,7 @@ import x.pageparts.ServiceProviderSearchParams;
 import x.pageparts.ServiceProviderTextFilter;
 import x.pages.ServiceProviderSearchPage;
 import x.services.XConsumerServiceProviders;
-import x.uilist.ISearchFilterInstaller;
+import x.uilist.XSearchFilterInstaller;
 import x.uiwidget.XSearchableList;
 
 import java.util.Arrays;
@@ -81,8 +81,8 @@ public final class ServiceProviderSearchScreenFactory {
         return null;
     }
 
-    private static ISearchFilterInstaller installer() {
-        return Registry.get(ISearchFilterInstaller.class);
+    private static XSearchFilterInstaller installer() {
+        return Registry.get(XSearchFilterInstaller.class);
     }
 
     private static List<ConsumerServiceProvider> getProviders(ServiceProviderSearchParams searchParams) {

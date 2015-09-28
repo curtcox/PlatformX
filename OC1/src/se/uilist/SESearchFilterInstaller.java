@@ -1,7 +1,7 @@
 package se.uilist;
 
 import x.app.Registry;
-import x.uilist.ISearchFilterInstaller;
+import x.uilist.XSearchFilterInstaller;
 import x.uilist.StringToListFilter;
 import x.uiwidget.XSearchableList;
 import x.util.Runner;
@@ -11,7 +11,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 final class SESearchFilterInstaller
-    implements ISearchFilterInstaller
+    implements XSearchFilterInstaller
 {
     
     static void seSpecificInstall(final SESearchableList list, final StringToListFilter stringToListFilter) {
