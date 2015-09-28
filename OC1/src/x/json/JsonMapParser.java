@@ -9,6 +9,9 @@ final class JsonMapParser {
     final String[] tokens;
     final int start;
     int end;
+    Map map = new HashMap<String, Object>();
+    String key = null;
+    Object value = null;
 
     JsonMapParser(String[] tokens, int start) {
         this.tokens = tokens;
@@ -16,19 +19,15 @@ final class JsonMapParser {
     }
 
     Map<String, Object> parse() throws IOException {
-        Map map = new HashMap<String, Object>();
-        String key = null;
-        Object value = null;
-        for (int i=start; i<tokens.length; i++) {
-            String token = tokens[i];
+        for (end=start; end<tokens.length; end++) {
+            String token = tokens[end];
             if (key !=null && token.equals("{")) {
-                JsonMapParser parser = new JsonMapParser(tokens,i + 1);
+                JsonMapParser parser = new JsonMapParser(tokens,end + 1);
                 map.put(unquoted(key),parser.parse());
                 key = null;
-                i = parser.end + 1;
+                end = parser.end + 1;
             }
             if (key == null && token.equals("}")) {
-                end = i;
                 return map;
             }
             if (token.equals(":")) {
@@ -41,9 +40,9 @@ final class JsonMapParser {
                 }
             }
             if (token.equals("[")) {
-                JsonListParser parser = new JsonListParser(tokens, i + 1);
+                JsonListParser parser = new JsonListParser(tokens, end + 1);
                 map.put(unquoted(key),parser.parse());
-                i = parser.end + 1;
+                end = parser.end + 1;
             } else {
                 value = token;
             }

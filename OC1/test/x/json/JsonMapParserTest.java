@@ -3,7 +3,9 @@ package x.json;
 import config.ShouldRun;
 import edu.emory.mathcs.backport.java.util.Arrays;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.Timeout;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -14,6 +16,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assume.assumeTrue;
 
 public class JsonMapParserTest {
+
+    @Rule
+    public Timeout globalTimeout = new Timeout(1000);
 
     @Before
     public void setUp() {
@@ -97,14 +102,7 @@ public class JsonMapParserTest {
     }
 
     private static Map map(Object...args) {
-        Map map = new HashMap();
-        for (int i=0; i<args.length; i++) {
-            Object key = args[i];
-            i++;
-            Object value = args[i];
-            map.put(key,value);
-        }
-        return map;
+        return XJSONParserTest.map(args);
     }
 
     private static Map<String,Object> parse(String... lines) throws IOException {

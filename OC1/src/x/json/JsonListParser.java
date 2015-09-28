@@ -9,6 +9,7 @@ final class JsonListParser {
     final String[] tokens;
     final int start;
     int end;
+    List list = new ArrayList();
 
     JsonListParser(String[] tokens, int start) {
         this.tokens = tokens;
@@ -16,23 +17,27 @@ final class JsonListParser {
     }
 
     List parse() throws IOException {
-        List list = new ArrayList();
-        for (int i=start; i<tokens.length; i++) {
-            String token = tokens[i];
+        for (end=start; end<tokens.length; end++) {
+            String token = tokens[end];
             if (token.equals("[") && list.isEmpty()) {
                 continue;
             }
             if (token.equals("[")) {
-                JsonListParser parser = new JsonListParser(tokens,i + 1);
+                JsonListParser parser = new JsonListParser(tokens,end + 1);
                 list.add(parser.parse());
-                i = parser.end;
+                end = parser.end;
+                continue;
+            }
+            if (token.equals("{")) {
+                JsonMapParser parser = new JsonMapParser(tokens,end + 1);
+                list.add(parser.parse());
+                end = parser.end;
                 continue;
             }
             if (token.equals(",")) {
                 continue;
             }
             if (token.equals("]")) {
-                end = i;
                 return list;
             }
             list.add(unquoted(token));

@@ -3,12 +3,11 @@ package x.json;
 import config.ShouldRun;
 import edu.emory.mathcs.backport.java.util.Arrays;
 import org.junit.Before;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.rules.Timeout;
 
 import java.io.IOException;
-import java.io.StringReader;
-import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -17,6 +16,9 @@ import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeTrue;
 
 public class JsonListParserTest {
+
+    @Rule
+    public Timeout globalTimeout = new Timeout(1000);
 
     @Before
     public void setUp() {
@@ -69,8 +71,24 @@ public class JsonListParserTest {
     }
 
 
+    @Test
+    public void list_that_contains_a_map() throws IOException {
+        assertEquals(
+                list("menu", map("id", "file", "value", "File")),
+                parse(
+                        "[",
+                        "  'menu' , {'id' : 'file','value' : 'File'}",
+                        "]"
+                )
+        );
+    }
+
     private static List list(Object... args) {
         return Arrays.asList(args);
+    }
+
+    private static Map map(Object...args) {
+        return XJSONParserTest.map(args);
     }
 
     private static List parse(String... lines) throws IOException {
