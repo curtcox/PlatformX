@@ -114,6 +114,20 @@ public class XJSONParserTest {
         );
     }
 
+    @Test
+    public void unquoted_returns_unquoted_string() {
+        assertUnquotedEquals("", "");
+        assertUnquotedEquals("a", "a");
+        assertUnquotedEquals("word", "word");
+        assertUnquotedEquals(quoted(""), "");
+        assertUnquotedEquals(quoted("a"), "a");
+        assertUnquotedEquals(quoted("word"), "word");
+    }
+
+    private void assertUnquotedEquals(String input, String output) {
+        assertEquals(output,XJSONParser.unquoted(input));
+    }
+
     private static List list(Object... args) {
         return Arrays.asList(args);
     }
@@ -142,4 +156,7 @@ public class XJSONParserTest {
         return out.toString().replaceAll("'", "\"");
     }
 
+    static String quoted(String string) {
+        return "\"" + string + "\"";
+    }
 }

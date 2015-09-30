@@ -26,7 +26,11 @@ public final class XJSONParser {
 
     static String unquoted(String value) {
         String trimmed = value.trim();
-        return trimmed.substring(1,trimmed.length()-1);
+        if (trimmed.startsWith("\"")) {
+            return trimmed.substring(1, trimmed.length() - 1);
+        } else {
+            return trimmed;
+        }
     }
 
     private static String[] tokens(Reader reader) {
