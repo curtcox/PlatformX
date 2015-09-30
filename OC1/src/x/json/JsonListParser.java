@@ -40,13 +40,13 @@ final class JsonListParser {
             if (token.equals("]")) {
                 return list;
             }
-            list.add(unquoted(token));
+            list.add(value(token));
         }
         return list;
     }
 
-    static String unquoted(String value) {
-        return XJSONParser.unquoted(value);
+    static Object value(String value) {
+        return JsonValueParser.parse(value);
     }
 
 }

@@ -35,7 +35,7 @@ final class JsonMapParser {
             }
             if (token.equals("}") || token.equals(",")) {
                 if (key!=null) {
-                    map.put(unquoted(key), unquoted((String)value));
+                    map.put(unquoted(key), value((String)value));
                     key = null;
                 }
             }
@@ -54,4 +54,7 @@ final class JsonMapParser {
         return XJSONParser.unquoted(value);
     }
 
+    static Object value(String value) {
+        return JsonValueParser.parse(value);
+    }
 }
