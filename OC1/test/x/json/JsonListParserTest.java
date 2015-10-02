@@ -13,6 +13,7 @@ import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 import static org.junit.Assume.assumeTrue;
 
 public class JsonListParserTest {
@@ -23,6 +24,16 @@ public class JsonListParserTest {
     @Before
     public void setUp() {
         assumeTrue(ShouldRun.X);
+    }
+
+    @Test
+    public void parse_throws_exception_when_first_token_is_not_left_square_bracket() throws IOException {
+        try {
+            parse("]");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Expected [ as first token, but got ]",e.getMessage());
+        }
     }
 
     @Test
@@ -81,6 +92,67 @@ public class JsonListParserTest {
                         "]"
                 )
         );
+    }
+
+    @Test
+    public void list_containing_just_a_map() throws IOException {
+        assertEquals(
+                list(map()),
+                parse("[ { } ]"
+                )
+        );
+    }
+
+    @Test
+    public void list_of_empty_maps() throws IOException {
+        assertEquals(
+                list(map(),map()),
+                parse("[ {}, {} ]"
+                )
+        );
+    }
+
+    @Test
+    public void two_level_growing_nested_empty_lists() throws IOException {
+        assertEquals(
+                list( list(), list() ),
+                parse("[ [] , [] ]"
+                )
+        );
+    }
+
+    @Test
+    public void three_level_growing_nested_empty_lists() throws IOException {
+        assertEquals(
+                list( list(list(), list(), list()), list(list(), list(), list()) ),
+                parse("[   [[],[],[]],   [[],[],[]]   ]"
+                )
+        );
+    }
+
+    @Test
+    public void list_of_maps() throws IOException {
+        assertEquals(
+                list(map("a","ape"),map("b","bee")),
+                parse("[ { 'a' : 'ape'},{'b':'bee'} ]"
+                )
+        );
+    }
+
+    @Test
+    public void end_is_index_of_next_token_after_parsing_empty_list() throws IOException {
+        String[] tokens = XJSONParser.split("[],");
+        JsonListParser parser = new JsonListParser(tokens,0);
+        parser.parse();
+        assertEquals(",",tokens[parser.end]);
+    }
+
+    @Test
+    public void end_is_index_of_next_token_after_parsing_list_with_one_item() throws IOException {
+        String[] tokens = XJSONParser.split("['a'],");
+        JsonListParser parser = new JsonListParser(tokens,0);
+        parser.parse();
+        assertEquals(",",tokens[parser.end]);
     }
 
     private static List list(Object... args) {

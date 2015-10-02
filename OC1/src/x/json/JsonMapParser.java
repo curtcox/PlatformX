@@ -28,6 +28,7 @@ final class JsonMapParser {
                 end = parser.end + 1;
             }
             if (key == null && token.equals("}")) {
+                end++;
                 return map;
             }
             if (token.equals(":")) {
@@ -38,6 +39,10 @@ final class JsonMapParser {
                     map.put(unquoted(key), value((String)value));
                     key = null;
                 }
+            }
+            if (key == null && token.equals("}")) {
+                end++;
+                return map;
             }
             if (token.equals("[")) {
                 JsonListParser parser = new JsonListParser(tokens, end + 1);

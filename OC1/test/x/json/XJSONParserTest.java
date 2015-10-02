@@ -115,6 +115,24 @@ public class XJSONParserTest {
     }
 
     @Test
+    public void map_containing_just_a_list() throws IOException {
+        assertEquals(
+                map("stuff",list()),
+                parse("{ 'stuff' : [ ] }"
+                )
+        );
+    }
+
+    @Test
+    public void list_containing_just_a_map() throws IOException {
+        assertEquals(
+                list(map()),
+                parse("[ { } ]"
+                )
+        );
+    }
+
+    @Test
     public void unquoted_returns_unquoted_string() {
         assertUnquotedEquals("", "");
         assertUnquotedEquals("a", "a");

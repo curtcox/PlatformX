@@ -17,19 +17,17 @@ final class JsonListParser {
     }
 
     List parse() throws IOException {
-        for (end=start; end<tokens.length; end++) {
+        checkFirstToken();
+        for (end=start + 1; end<tokens.length; end++) {
             String token = tokens[end];
-            if (token.equals("[") && list.isEmpty()) {
-                continue;
-            }
             if (token.equals("[")) {
-                JsonListParser parser = new JsonListParser(tokens,end + 1);
+                JsonListParser parser = new JsonListParser(tokens,end);
                 list.add(parser.parse());
-                end = parser.end;
+                end = parser.end ;
                 continue;
             }
             if (token.equals("{")) {
-                JsonMapParser parser = new JsonMapParser(tokens,end + 1);
+                JsonMapParser parser = new JsonMapParser(tokens,end);
                 list.add(parser.parse());
                 end = parser.end;
                 continue;
@@ -38,11 +36,20 @@ final class JsonListParser {
                 continue;
             }
             if (token.equals("]")) {
+                end++;
                 return list;
             }
             list.add(value(token));
         }
         return list;
+    }
+
+    private void checkFirstToken() {
+        String token = tokens[start];
+        if (!token.equals("[")) {
+            String message = "Expected [ as first token, but got " + token;
+            throw new IllegalArgumentException(message);
+        }
     }
 
     static Object value(String value) {

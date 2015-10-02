@@ -97,6 +97,41 @@ public class JsonMapParserTest {
         );
     }
 
+    @Test
+    public void map_containing_just_a_list() throws IOException {
+        assertEquals(
+                map("stuff",list()),
+                parse("{ 'stuff' : [ ] }"
+                )
+        );
+    }
+
+
+    @Test
+    public void map_containing_list_of_maps() throws IOException {
+        assertEquals(
+                map("results",list(map("a","ape"),map("b","bee"))),
+                parse("{ 'results' : [ { 'a' : 'ape'},{'b':'bee'} ] }"
+                )
+        );
+    }
+
+    @Test
+    public void end_is_index_of_next_token_after_parsing_empty_map() throws IOException {
+        String[] tokens = XJSONParser.split("{},");
+        JsonMapParser parser = new JsonMapParser(tokens,0);
+        parser.parse();
+        assertEquals(",",tokens[parser.end]);
+    }
+
+    @Test
+    public void end_is_index_of_next_token_after_parsing_map_with_one_item() throws IOException {
+        String[] tokens = XJSONParser.split("{'a':'ape'},");
+        JsonMapParser parser = new JsonMapParser(tokens,0);
+        parser.parse();
+        assertEquals(",",tokens[parser.end]);
+    }
+
     private static List list(Object... args) {
         return Arrays.asList(args);
     }
