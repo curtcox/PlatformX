@@ -80,7 +80,7 @@ public class XJSONParserGoogleNearbysTest {
         assertEquals(3, map.size());
         assertTrue(map.get("html_attributions") instanceof List);
         assertTrue(map.get("results") instanceof List);
-        assertEquals(map.get("next_page_token"), "CoQC8QAAAMWFIlUzCyyxsw");
+        assertEquals("CoQC8QAAAMWFIlUzCyyxsw",map.get("next_page_token"));
     }
 
     @Test

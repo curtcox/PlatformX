@@ -23,13 +23,13 @@ final class JsonListParser {
             if (token.equals("[")) {
                 JsonListParser parser = new JsonListParser(tokens,end);
                 list.add(parser.parse());
-                end = parser.end ;
+                end = parser.end - 1;
                 continue;
             }
             if (token.equals("{")) {
                 JsonMapParser parser = new JsonMapParser(tokens,end);
                 list.add(parser.parse());
-                end = parser.end;
+                end = parser.end - 1;
                 continue;
             }
             if (token.equals(",")) {

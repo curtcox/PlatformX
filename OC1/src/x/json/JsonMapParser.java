@@ -19,10 +19,11 @@ final class JsonMapParser {
     }
 
     Map<String, Object> parse() throws IOException {
+        checkFirstToken();
         for (end=start; end<tokens.length; end++) {
             String token = tokens[end];
             if (key !=null && token.equals("{")) {
-                JsonMapParser parser = new JsonMapParser(tokens,end + 1);
+                JsonMapParser parser = new JsonMapParser(tokens,end);
                 map.put(unquoted(key),parser.parse());
                 key = null;
                 end = parser.end + 1;
@@ -45,7 +46,7 @@ final class JsonMapParser {
                 return map;
             }
             if (token.equals("[")) {
-                JsonListParser parser = new JsonListParser(tokens, end + 1);
+                JsonListParser parser = new JsonListParser(tokens, end);
                 map.put(unquoted(key),parser.parse());
                 end = parser.end + 1;
             } else {
@@ -53,6 +54,14 @@ final class JsonMapParser {
             }
         }
         return map;
+    }
+
+    private void checkFirstToken() {
+        String token = tokens[start];
+        if (!token.equals("{")) {
+            String message = "Expected { as first token, but got " + token;
+            throw new IllegalArgumentException(message);
+        }
     }
 
     static String unquoted(String value) {

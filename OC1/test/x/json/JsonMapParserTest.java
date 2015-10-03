@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import static org.junit.Assume.assumeTrue;
 
 public class JsonMapParserTest {
@@ -23,6 +24,16 @@ public class JsonMapParserTest {
     @Before
     public void setUp() {
         assumeTrue(ShouldRun.X);
+    }
+
+    @Test
+    public void parse_throws_exception_when_first_token_is_not_left_curly_bracket() throws IOException {
+        try {
+            parse("}");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Expected { as first token, but got }",e.getMessage());
+        }
     }
 
     @Test

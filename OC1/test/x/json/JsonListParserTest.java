@@ -32,7 +32,7 @@ public class JsonListParserTest {
             parse("]");
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("Expected [ as first token, but got ]",e.getMessage());
+            assertEquals("Expected [ as first token, but got ]", e.getMessage());
         }
     }
 
@@ -124,8 +124,17 @@ public class JsonListParserTest {
     @Test
     public void three_level_growing_nested_empty_lists() throws IOException {
         assertEquals(
-                list( list(list(), list(), list()), list(list(), list(), list()) ),
-                parse("[   [[],[],[]],   [[],[],[]]   ]"
+                list(  list(list(), list(), list()),  list(list(), list(), list())  ),
+                parse("[   [ [],[],[] ]  ,  [ [],[],[] ]   ]"
+                )
+        );
+    }
+
+    @Test
+    public void three_level_growing_nested_lists() throws IOException {
+        assertEquals(
+                list(  list(list(1L), list(2L), list(3L)),  list(list(4L), list(5L), list(6L))  ),
+                parse("[   [ [1],[2],[3] ]  ,  [ [4],[5],[6] ]   ]"
                 )
         );
     }

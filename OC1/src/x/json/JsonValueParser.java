@@ -1,7 +1,12 @@
 package x.json;
 
 final class JsonValueParser {
-    public static Object parse(String input) {
+    static Object parse(String input) {
+        try {
+            return Long.parseLong(input);
+        } catch (NumberFormatException e) {
+            // It wasn't a long
+        }
         try {
             return Double.parseDouble(input);
         } catch (NumberFormatException e) {
