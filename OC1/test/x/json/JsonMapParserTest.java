@@ -42,7 +42,7 @@ public class JsonMapParserTest {
             parse("{ ,");
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("Expected (key), but found (,)",e.getMessage());
+            assertEquals("Expected (key), but found (,) after ({)",e.getMessage());
         }
     }
 
@@ -52,7 +52,7 @@ public class JsonMapParserTest {
             parse("{ :");
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("Expected (key), but found (:)",e.getMessage());
+            assertEquals("Expected (key), but found (:) after ({)",e.getMessage());
         }
     }
 
@@ -62,7 +62,7 @@ public class JsonMapParserTest {
             parse("{ 'key' : }");
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("Expected (value), but found (})",e.getMessage());
+            assertEquals("Expected (value), but found (}) after (:)",e.getMessage());
         }
     }
 
@@ -179,6 +179,22 @@ public class JsonMapParserTest {
                 map("what",map("the",map("word","bird") ,"make",map("plan","stan") )),
                 parse("{ 'what' : { 'the' : { 'word' : 'bird'} ,  'make' : {'plan' : 'stan' }  } }"
                 //     1          2         3                1             4                2  3 4
+                )
+        );
+    }
+
+
+    @Test
+    public void map_containing_simple_values_after_nested_map() throws IOException {
+        assertEquals(
+                map("r",
+                    list(map("",map("o",map())),
+                    "i","cu")),
+                parse(
+                      "{ 'r' : [ {",
+                      "  'g' : { 'o' : { }  },",
+                      "   'i' : 'cu'",
+                      "} ] }"
                 )
         );
     }

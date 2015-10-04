@@ -65,7 +65,7 @@ final class JsonMapParser {
 
     private void checkKeySet() {
         if (key==null) {
-            String message = "Expected (key), but found (" + tokens[end] + ")";
+            String message = "Expected (key), but found (" + tokens[end] + ") after (" + tokens[end - 1] + ")";
             throw new IllegalArgumentException(message);
         }
     }
@@ -76,7 +76,7 @@ final class JsonMapParser {
 
     private void checkValueSet() {
         if (value==null) {
-            String message = "Expected (value), but found (" + tokens[end] + ")";
+            String message = "Expected (value), but found (" + tokens[end] + ") after (" + tokens[end - 1] + ")";
             throw new IllegalArgumentException(message);
         }
     }
