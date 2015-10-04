@@ -20,46 +20,71 @@ final class JsonMapParser {
 
     Map<String, Object> parse() throws IOException {
         checkFirstToken();
-        for (end=start; end<tokens.length; end++) {
+        for (end=start + 1; end<tokens.length; end++) {
             String token = tokens[end];
-            if (key !=null && token.equals("{")) {
+            if (token.equals("{")) {
                 JsonMapParser parser = new JsonMapParser(tokens,end);
-                map.put(unquoted(key),parser.parse());
+                put(parser.parse());
+                end = parser.end;
                 key = null;
-                end = parser.end + 1;
-            }
-            if (key == null && token.equals("}")) {
-                end++;
-                return map;
+                continue;
             }
             if (token.equals(":")) {
                 key = (String) value;
+                value = null;
+                checkKeySet();
+                continue;
             }
-            if (token.equals("}") || token.equals(",")) {
+            if (token.equals(",")) {
+                put(value(value));
+                continue;
+            }
+            if (token.equals("}")) {
                 if (key!=null) {
-                    map.put(unquoted(key), value((String)value));
-                    key = null;
+                    checkValueSet();
+                    put(value(value));
                 }
-            }
-            if (key == null && token.equals("}")) {
                 end++;
                 return map;
             }
             if (token.equals("[")) {
                 JsonListParser parser = new JsonListParser(tokens, end);
-                map.put(unquoted(key),parser.parse());
-                end = parser.end + 1;
-            } else {
-                value = token;
+                put(parser.parse());
+                end = parser.end;
+                continue;
             }
+            value = token;
         }
         return map;
+    }
+
+    private Object value(Object object) {
+        checkKeySet();
+        return valueOf((String) object);
+    }
+
+    private void checkKeySet() {
+        if (key==null) {
+            String message = "Expected (key), but found (" + tokens[end] + ")";
+            throw new IllegalArgumentException(message);
+        }
+    }
+
+    private void put(Object value) {
+        map.put(unquoted(key),value);
+    }
+
+    private void checkValueSet() {
+        if (value==null) {
+            String message = "Expected (value), but found (" + tokens[end] + ")";
+            throw new IllegalArgumentException(message);
+        }
     }
 
     private void checkFirstToken() {
         String token = tokens[start];
         if (!token.equals("{")) {
-            String message = "Expected { as first token, but got " + token;
+            String message = "Expected ({) as first token, but got (" + token + ")";
             throw new IllegalArgumentException(message);
         }
     }
@@ -68,7 +93,7 @@ final class JsonMapParser {
         return XJSONParser.unquoted(value);
     }
 
-    static Object value(String value) {
+    static Object valueOf(String value) {
         return JsonValueParser.parse(value);
     }
 }

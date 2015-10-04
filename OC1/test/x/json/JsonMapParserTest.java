@@ -32,7 +32,37 @@ public class JsonMapParserTest {
             parse("}");
             fail();
         } catch (IllegalArgumentException e) {
-            assertEquals("Expected { as first token, but got }",e.getMessage());
+            assertEquals("Expected ({) as first token, but got (})",e.getMessage());
+        }
+    }
+
+    @Test
+    public void parse_throws_exception_when_comma_encounterd_with_no_key() throws IOException {
+        try {
+            parse("{ ,");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Expected (key), but found (,)",e.getMessage());
+        }
+    }
+
+    @Test
+    public void parse_throws_exception_when_colon_encounterd_with_no_key() throws IOException {
+        try {
+            parse("{ :");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Expected (key), but found (:)",e.getMessage());
+        }
+    }
+
+    @Test
+    public void parse_throws_exception_when_closing_curly_encounterd_with_no_value() throws IOException {
+        try {
+            parse("{ 'key' : }");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("Expected (value), but found (})",e.getMessage());
         }
     }
 
@@ -117,12 +147,38 @@ public class JsonMapParserTest {
         );
     }
 
-
     @Test
     public void map_containing_list_of_maps() throws IOException {
         assertEquals(
                 map("results",list(map("a","ape"),map("b","bee"))),
                 parse("{ 'results' : [ { 'a' : 'ape'},{'b':'bee'} ] }"
+                )
+        );
+    }
+
+    @Test
+    public void map_containing_list_of_empty_maps() throws IOException {
+        assertEquals(
+                map("results",list(map(),map())),
+                parse("{ 'results' : [ { } , { } ] }"
+                )
+        );
+    }
+    @Test
+    public void map_containing_map_of_maps() throws IOException {
+        assertEquals(
+                map("what",map("the", map("word", "bird"))),
+                parse("{ 'what' : { 'the' : { 'word' : 'bird'} } }"
+                )
+        );
+    }
+
+    @Test
+    public void map_containing_map_of_2_maps() throws IOException {
+        assertEquals(
+                map("what",map("the",map("word","bird") ,"make",map("plan","stan") )),
+                parse("{ 'what' : { 'the' : { 'word' : 'bird'} ,  'make' : {'plan' : 'stan' }  } }"
+                //     1          2         3                1             4                2  3 4
                 )
         );
     }

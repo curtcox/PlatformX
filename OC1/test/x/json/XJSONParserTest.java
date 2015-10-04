@@ -124,6 +124,15 @@ public class XJSONParserTest {
     }
 
     @Test
+    public void map_containing_lists_and_stuff() throws IOException {
+        assertEquals(
+                map("html_attributions",list(), "next_page_token","t","more",list()),
+                parse("{ 'html_attributions' : [], 'next_page_token' : 't', 'more' : [] }"
+                )
+        );
+    }
+
+    @Test
     public void list_containing_just_a_map() throws IOException {
         assertEquals(
                 list(map()),
