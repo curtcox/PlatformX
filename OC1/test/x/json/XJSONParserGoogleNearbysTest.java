@@ -132,14 +132,14 @@ public class XJSONParserGoogleNearbysTest {
            "              },",
            "             'icon' : 'https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png',",
            "             'id' : '247b81c39ff3f929a9e1b6ffbd501fc9ae177950',",
-           "        'name' : 'Business Bank of St Louis',",
-           "        'place_id' : 'ChIJmSGSJivL2IcRzhKez9DcZrE',",
-           "        'reference' : 'CnRtAAAAkSnopbmEo5GVZnrLFcU',",
-           "        'scope' : 'GOOGLE',",
-           "        'types' : [ 'bank', 'atm', 'finance', 'point_of_interest', 'establishment' ],",
-           "        'vicinity' : '8000 Maryland Ave, Saint Louis'",
-           "    }",
-           "]",
+           "             'name' : 'Business Bank of St Louis',",
+           "             'place_id' : 'ChIJmSGSJivL2IcRzhKez9DcZrE',",
+           "             'reference' : 'CnRtAAAAkSnopbmEo5GVZnrLFcU',",
+           "             'scope' : 'GOOGLE',",
+           "             'types' : [ 'bank', 'atm', 'finance', 'point_of_interest', 'establishment' ],",
+           "             'vicinity' : '8000 Maryland Ave, Saint Louis'",
+           "        }",
+           "    ]",
            "}");
     }
 
@@ -172,6 +172,40 @@ public class XJSONParserGoogleNearbysTest {
         List list = (List) map.get("results");
         Map result0 = (Map) list.get(0);
         assertEquals(10, result0.size());
+        assertEquals("229fbe2845c3bc1937f799aa2a48481ba1111b8d",result0.get("id"));
+        assertEquals("First Banks Inc",result0.get("name"));
+        assertEquals("ChIJ3XZe1NQ034cRWbeNNRW9hDM",result0.get("place_id"));
+        assertEquals("CnRiAAlT3oghT7cE",result0.get("reference"));
+        assertEquals("GOOGLE",result0.get("scope"));
+        assertEquals("135 North Meramec Avenue, Clayton",result0.get("vicinity"));
+        assertEquals("https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",result0.get("icon"));
+    }
+
+    @Test
+    public void sample_response_results_1() throws IOException {
+        Map map = (Map) sample1();
+        List list = (List) map.get("results");
+        Map result1 = (Map) list.get(1);
+        assertEquals(9, result1.size());
+        assertEquals("247b81c39ff3f929a9e1b6ffbd501fc9ae177950", result1.get("id"));
+        assertEquals("Business Bank of St Louis",result1.get("name"));
+        assertEquals("ChIJmSGSJivL2IcRzhKez9DcZrE", result1.get("place_id"));
+        assertEquals("CnRtAAAAkSnopbmEo5GVZnrLFcU",result1.get("reference"));
+        assertEquals("GOOGLE", result1.get("scope"));
+        assertEquals("8000 Maryland Ave, Saint Louis",result1.get("vicinity"));
+        assertEquals("https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png", result1.get("icon"));
+    }
+
+    @Test
+    public void sample_response_results_geometry() throws IOException {
+        Map map = (Map) sample1();
+        List list = (List) map.get("results");
+        Map result = (Map) list.get(1);
+        Map geometry = (Map) result.get("geometry");
+        assertEquals(1, geometry.size());
+        Map location = (Map) geometry.get("location");
+        assertEquals(38.651613,location.get("lat"));
+        assertEquals(-90.34013,location.get("lng"));
     }
 
     private static Object parse(String... lines) throws IOException {
