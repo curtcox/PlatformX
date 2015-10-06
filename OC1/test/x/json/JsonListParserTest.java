@@ -150,20 +150,30 @@ public class JsonListParserTest {
 
     @Test
     public void end_is_index_of_next_token_after_parsing_empty_list() throws IOException {
-        String[] tokens = XJSONParser.split("[],");
-        JsonListParser parser = new JsonListParser(tokens,0);
-        parser.parse();
-        assertEquals(",",tokens[parser.end]);
+        assertEquals(",",after("[] ,"));
+        assertEquals("{",after("[] {"));
     }
 
     @Test
     public void end_is_index_of_next_token_after_parsing_list_with_one_item() throws IOException {
-        String[] tokens = XJSONParser.split("['a'],");
-        JsonListParser parser = new JsonListParser(tokens,0);
-        parser.parse();
-        assertEquals(",",tokens[parser.end]);
+        assertEquals(",",after("['a'] ,"));
+        assertEquals("}",after("['a'] }"));
     }
 
+    @Test
+    public void end_is_index_of_next_token_after_parsing_nested_lists() throws IOException {
+        assertEquals(",",after("[ [] ] ,"));
+        assertEquals("}",after("[ [] ] }"));
+        assertEquals(",",after("[ [[]] ] ,"));
+        assertEquals("}",after("[ [[]] ] }"));
+    }
+
+    private String after(String json) throws IOException {
+        String[] tokens = XJSONParser.split(json);
+        JsonListParser parser = new JsonListParser(tokens,0);
+        parser.parse();
+        return tokens[parser.end];
+    }
     private static List list(Object... args) {
         return Arrays.asList(args);
     }
