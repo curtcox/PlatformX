@@ -109,6 +109,18 @@ public class JsonMapParserTest {
     }
 
     @Test
+    public void three_pairs_of_strings() throws IOException {
+        assertEquals(map("a","able","b","baker","c","charlie"),
+                parse("{'a':'able','b':'baker','c':'charlie'}"));
+    }
+
+    @Test
+    public void four_pairs_of_strings() throws IOException {
+        assertEquals(map("a","able","b","baker","c","charlie","d","delta"),
+                parse("{'a':'able','b':'baker','c':'charlie','d':'delta'}"));
+    }
+
+    @Test
     public void pair_of_strings_with_url() throws IOException {
         assertEquals(
            map(
@@ -233,6 +245,15 @@ public class JsonMapParserTest {
                       "              'i' : 'cu'",
                       "            }",
                       "] }"
+                )
+        );
+    }
+
+    @Test
+    public void map_containing_pair_between_empty_lists() throws IOException {
+        assertEquals(
+                map("a",list(), "b","boy","c",list()),
+                parse("{ 'a' : [], 'b' : 'boy', 'c' : [] }"
                 )
         );
     }

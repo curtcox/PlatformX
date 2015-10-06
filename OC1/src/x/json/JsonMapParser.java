@@ -36,10 +36,12 @@ final class JsonMapParser {
                 continue;
             }
             if (token.equals(",")) {
-                if (!map.isEmpty()) {
-                    continue;
+                if (map.isEmpty()) {
+                    checkKeySet();
                 }
-                put(value(value));
+                if (key!=null && value!=null) {
+                    put(value(value));
+                }
                 continue;
             }
             if (token.equals("}")) {

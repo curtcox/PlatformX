@@ -171,7 +171,7 @@ public class XJSONParserGoogleNearbysTest {
         Map map = (Map) sample1();
         List list = (List) map.get("results");
         Map result0 = (Map) list.get(0);
-        assertEquals(2, result0.size());
+        assertEquals(10, result0.size());
     }
 
     private static Object parse(String... lines) throws IOException {
