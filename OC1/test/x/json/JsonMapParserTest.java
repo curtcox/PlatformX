@@ -27,6 +27,16 @@ public class JsonMapParserTest {
     }
 
     @Test
+    public void parse_throws_exception_when_no_closing_curly() throws IOException {
+        try {
+            parse("{");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("No closing (}) found",e.getMessage());
+        }
+    }
+
+    @Test
     public void parse_throws_exception_when_first_token_is_not_left_curly_bracket() throws IOException {
         try {
             parse("}");
@@ -132,8 +142,8 @@ public class JsonMapParserTest {
     @Test
     public void map_containing_a_list() throws IOException {
         assertEquals(
-                map("menu",list("file")),
-                parse("{ 'menu' : [ 'file' ] }"
+                    map("menu",list("file")),
+                    parse("{ 'menu' : [ 'file' ] }"
                 )
         );
     }
@@ -185,34 +195,77 @@ public class JsonMapParserTest {
 
 
     @Test
+    public void map_containing_nested_map() throws IOException {
+        assertEquals(
+                map("r",
+                        map("g",map("o",map()))),
+                parse(
+                        "{ 'r' : {",
+                        "  'g' : { 'o' : { }  },",
+                        "} }"
+                )
+        );
+    }
+
+    @Test
     public void map_containing_simple_values_after_nested_map() throws IOException {
         assertEquals(
                 map("r",
-                    list(map("",map("o",map())),
-                    "i","cu")),
+                        map("g",map("o",map()),"i","c")),
                 parse(
-                      "{ 'r' : [ {",
-                      "  'g' : { 'o' : { }  },",
-                      "   'i' : 'cu'",
-                      "} ] }"
+                        "{ 'r' : {",
+                        "  'g' : { 'o' : { }  } ,",
+                        "  'i' : 'c'",
+                        "} }"
+                )
+        );
+    }
+
+    @Test
+    public void map_containing_list_with_simple_values_after_nested_map() throws IOException {
+        assertEquals(
+                map("r",
+                    list(map("g", map("o", map()), "i", "cu")) ),
+                parse(
+                      "{ 'r' : [",
+                      "            {",
+                      "              'g' : { 'o' : { }  } ,",
+                      "              'i' : 'cu'",
+                      "            }",
+                      "] }"
                 )
         );
     }
 
     @Test
     public void end_is_index_of_next_token_after_parsing_empty_map() throws IOException {
-        String[] tokens = XJSONParser.split("{},");
-        JsonMapParser parser = new JsonMapParser(tokens,0);
-        parser.parse();
-        assertEquals(",",tokens[parser.end]);
+        assertEquals(",",after("{} ,"));
+        assertEquals("}",after("{} }"));
     }
 
     @Test
     public void end_is_index_of_next_token_after_parsing_map_with_one_item() throws IOException {
-        String[] tokens = XJSONParser.split("{'a':'ape'},");
+        assertEquals(",",after("{'a':'ape'} ,"));
+        assertEquals("}",after("{'a':'ape'} }"));
+    }
+
+    @Test
+    public void end_is_index_of_next_token_after_parsing_map_with_empty_map() throws IOException {
+        assertEquals(",",after("{ 'o' : { }  } ,"));
+        assertEquals("}",after("{ 'o' : { }  } }"));
+    }
+
+    @Test
+    public void end_is_index_of_next_token_after_parsing_map_with_map_empty_map() throws IOException {
+        assertEquals(",",after("{ 'g' : { 'o' : { }  } } ,"));
+        assertEquals("}",after("{ 'g' : { 'o' : { }  } } }"));
+    }
+
+    private String after(String json) throws IOException {
+        String[] tokens = XJSONParser.split(json);
         JsonMapParser parser = new JsonMapParser(tokens,0);
         parser.parse();
-        assertEquals(",",tokens[parser.end]);
+        return tokens[parser.end];
     }
 
     private static List list(Object... args) {

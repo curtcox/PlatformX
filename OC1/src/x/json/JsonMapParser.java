@@ -25,7 +25,7 @@ final class JsonMapParser {
             if (token.equals("{")) {
                 JsonMapParser parser = new JsonMapParser(tokens,end);
                 put(parser.parse());
-                end = parser.end;
+                end = parser.end - 1;
                 key = null;
                 continue;
             }
@@ -36,6 +36,9 @@ final class JsonMapParser {
                 continue;
             }
             if (token.equals(",")) {
+                if (!map.isEmpty()) {
+                    continue;
+                }
                 put(value(value));
                 continue;
             }
@@ -50,12 +53,12 @@ final class JsonMapParser {
             if (token.equals("[")) {
                 JsonListParser parser = new JsonListParser(tokens, end);
                 put(parser.parse());
-                end = parser.end;
+                end = parser.end - 1;
                 continue;
             }
             value = token;
         }
-        return map;
+        throw new IllegalArgumentException("No closing (}) found");
     }
 
     private Object value(Object object) {
@@ -72,6 +75,8 @@ final class JsonMapParser {
 
     private void put(Object value) {
         map.put(unquoted(key),value);
+        key = null;
+        this.value = null;
     }
 
     private void checkValueSet() {
