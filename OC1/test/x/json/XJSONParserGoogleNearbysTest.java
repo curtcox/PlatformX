@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeTrue;
 
@@ -167,6 +168,17 @@ public class XJSONParserGoogleNearbysTest {
     }
 
     @Test
+    public void sample_response_opening_hours() throws IOException {
+        Map map = (Map) sample1();
+        List list = (List) map.get("results");
+        Map result = (Map) list.get(0);
+        Map opening_hours = (Map) result.get("opening_hours");
+        assertEquals(2, opening_hours.size());
+        assertFalse((Boolean) opening_hours.get("open_now"));
+        assertTrue(opening_hours.get("weekday_text") instanceof List);
+    }
+
+    @Test
     public void sample_response_results_0() throws IOException {
         Map map = (Map) sample1();
         List list = (List) map.get("results");
@@ -204,8 +216,22 @@ public class XJSONParserGoogleNearbysTest {
         Map geometry = (Map) result.get("geometry");
         assertEquals(1, geometry.size());
         Map location = (Map) geometry.get("location");
-        assertEquals(38.651613,location.get("lat"));
-        assertEquals(-90.34013,location.get("lng"));
+        assertEquals(38.651613, location.get("lat"));
+        assertEquals(-90.34013, location.get("lng"));
+    }
+
+    @Test
+    public void sample_response_results_types() throws IOException {
+        Map map = (Map) sample1();
+        List list = (List) map.get("results");
+        Map result = (Map) list.get(1);
+        List types = (List) result.get("types");
+        assertEquals(5,types.size());
+        assertEquals("bank",types.get(0));
+        assertEquals("atm", types.get(1));
+        assertEquals("finance", types.get(2));
+        assertEquals("point_of_interest", types.get(3));
+        assertEquals("establishment", types.get(4));
     }
 
     private static Object parse(String... lines) throws IOException {
