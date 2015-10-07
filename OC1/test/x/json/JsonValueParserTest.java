@@ -28,6 +28,12 @@ public class JsonValueParserTest {
         assertParseEquals("3", 3L);
     }
 
+    @Test
+    public void parse_returns_boolean_when_boolean() {
+        assertParseEquals("true",true);
+        assertParseEquals("false", false);
+    }
+
     private void assertParseEquals(String input, String output) {
         assertEquals(output,JsonValueParser.parse(input));
     }
@@ -37,6 +43,10 @@ public class JsonValueParserTest {
     }
 
     private void assertParseEquals(String input, Long output) {
+        assertEquals(output,JsonValueParser.parse(input));
+    }
+
+    private void assertParseEquals(String input, Boolean output) {
         assertEquals(output,JsonValueParser.parse(input));
     }
 

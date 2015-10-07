@@ -10,7 +10,7 @@ import java.io.Reader;
 public final class XJSONParser {
 
     private static final String[] separators = new String[] {
-            "{","}", "[","]", ":",",","\""
+            "{","}", "[","]", ":",",","\"", " "
     };
 
     public static Object parse(Reader reader) throws IOException {

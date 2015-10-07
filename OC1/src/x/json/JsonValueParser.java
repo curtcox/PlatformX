@@ -7,6 +7,12 @@ final class JsonValueParser {
         } catch (NumberFormatException e) {
             // It wasn't a long
         }
+        if (input.equals("true")) {
+            return true;
+        }
+        if (input.equals("false")) {
+            return false;
+        }
         try {
             return Double.parseDouble(input);
         } catch (NumberFormatException e) {

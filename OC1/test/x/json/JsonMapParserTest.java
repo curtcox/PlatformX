@@ -12,8 +12,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.fail;
+import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
 public class JsonMapParserTest {
@@ -47,7 +46,7 @@ public class JsonMapParserTest {
     }
 
     @Test
-    public void parse_throws_exception_when_comma_encounterd_with_no_key() throws IOException {
+    public void parse_throws_exception_when_comma_encountered_with_no_key() throws IOException {
         try {
             parse("{ ,");
             fail();
@@ -57,7 +56,7 @@ public class JsonMapParserTest {
     }
 
     @Test
-    public void parse_throws_exception_when_colon_encounterd_with_no_key() throws IOException {
+    public void parse_throws_exception_when_colon_encountered_with_no_key() throws IOException {
         try {
             parse("{ :");
             fail();
@@ -67,7 +66,7 @@ public class JsonMapParserTest {
     }
 
     @Test
-    public void parse_throws_exception_when_closing_curly_encounterd_with_no_value() throws IOException {
+    public void parse_throws_exception_when_closing_curly_encountered_with_no_value() throws IOException {
         try {
             parse("{ 'key' : }");
             fail();
@@ -84,6 +83,27 @@ public class JsonMapParserTest {
     @Test
     public void pair_of_strings_in_a_map() throws IOException {
         assertEquals(map("fred","wilma"), parse("{'fred':'wilma'}"));
+    }
+
+    @Test
+    public void string_that_maps_to_a_number() throws IOException {
+        assertEquals(map("Bond",7L), parse("{'Bond': 7}"));
+        assertEquals(map("Pi",3.14159265358979323), parse("{'Pi': 3.14159265358979323}"));
+    }
+
+    @Test
+    public void string_that_maps_to_true() throws IOException {
+        Map map =  parse("{'yes': true}");
+        assertEquals(1, map.size());
+        Boolean yes = (Boolean) map.get("yes");
+        assertTrue(yes instanceof Boolean);
+        assertTrue(yes.booleanValue());
+        assertEquals(map("yes",Boolean.TRUE), parse("{'yes': true}"));
+    }
+
+    @Test
+    public void string_that_maps_to_false() throws IOException {
+        assertEquals(map("no",Boolean.FALSE), parse("{'no': false}"));
     }
 
     @Test

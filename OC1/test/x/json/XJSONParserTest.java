@@ -151,6 +151,33 @@ public class XJSONParserTest {
         assertUnquotedEquals(quoted("word"), "word");
     }
 
+    @Test
+    public void split_of_empty_string_is_empty_list() {
+        assertEquals(list(), split(""));
+    }
+
+    @Test
+    public void split_returns_separator_tokens() {
+        assertEquals(list("{","}","[","]",":",","), split("{}[]:,"));
+        assertEquals(list("{","}","[","]",":",","), split(" { } [ ] : , "));
+    }
+
+    @Test
+    public void split_returns_unquoted_words_without_separating_whitespace() {
+        assertEquals(list("When","I","say","true","I","mean","it"), split("When I say true I mean it"));
+    }
+
+    @Test
+    public void split_returns_quoted_words_with_internal_whitespace() {
+        String input = "'So called''  ''white space'".replaceAll("'","\"");
+        assertEquals(list("\"So called\"","\"  \"","\"white space\""), split(input));
+    }
+
+    private List split(String string) {
+        return Arrays.asList(XJSONParser.split(string));
+    }
+
+
     private void assertUnquotedEquals(String input, String output) {
         assertEquals(output,XJSONParser.unquoted(input));
     }
