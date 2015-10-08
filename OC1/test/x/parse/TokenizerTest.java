@@ -5,6 +5,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.fail;
 import static org.junit.Assume.assumeTrue;
 
 public class TokenizerTest {
@@ -15,6 +16,26 @@ public class TokenizerTest {
     }
 
     @Test
+    public void tokenize_throws_exception_if_given_a_zero_character_separator() {
+        try {
+            tokenize("stuff to tokenize"," ","");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("All separators must be single characters",e.getMessage());
+        }
+    }
+
+    @Test
+    public void tokenize_throws_exception_if_given_a_multi_character_separator() {
+        try {
+            tokenize("stuff to tokenize","//");
+            fail();
+        } catch (IllegalArgumentException e) {
+            assertEquals("All separators must be single characters",e.getMessage());
+        }
+    }
+
+    @Test
     public void tokenize_returns_right_counts_for_all_delimiters() {
         assertEquals(1, tokenize("=", "=").length);
         assertEquals(1, tokenize(" ", " ").length);
@@ -22,6 +43,35 @@ public class TokenizerTest {
         assertEquals(2, tokenize(" =", " ", "=").length);
         assertEquals(3, tokenize("   ", " ").length);
         assertEquals(4, tokenize("    ", " ").length);
+    }
+
+    @Test
+    public void tokenize_can_handle_100_separators() {
+        assertStringOfAllSeparators(100);
+    }
+
+    @Test
+    public void tokenize_can_handle_1000_separators() {
+        assertStringOfAllSeparators(1000);
+    }
+
+    @Test
+    public void tokenize_can_handle_10000_separators() {
+        assertStringOfAllSeparators(10000);
+    }
+
+    @Test
+    public void tokenize_can_handle_100000_separators() {
+        assertStringOfAllSeparators(100000);
+    }
+
+    void assertStringOfAllSeparators(int size) {
+        String token = "+";
+        StringBuilder tokens = new StringBuilder();
+        for (int i=0; i<size; i++) {
+            tokens.append(token);
+        }
+        assertEquals(size, tokenize(tokens.toString(), token).length);
     }
 
     @Test
@@ -63,7 +113,7 @@ public class TokenizerTest {
         assertEquals("z", tokenize("x y:z", ":", " ")[4]);
     }
 
-    private String[] tokenize(String string,String... tokens) {
-        return Tokenizer.tokenize(string, tokens);
+    private String[] tokenize(String string,String... separators) {
+        return Tokenizer.tokenize(string, separators);
     }
 }

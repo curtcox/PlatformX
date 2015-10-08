@@ -1,5 +1,7 @@
 package x.parse;
 
+import x.util.Strings;
+
 /**
  * For splitting a string into tokens.
  * See also Lexer, which can be used to wrap the output of a
@@ -18,11 +20,21 @@ public final class Tokenizer {
      * @return the separator tokens and the strings between them.
      */
     public static String[] tokenize(String string,String... separators) {
+        checkSeparators(separators);
         int at = startOfFirst(string,separators);
         if (at<0) {
             return (string.length()==0) ? new String[0] : new String[] {string};
         }
         return join(before(string,at),at(string,at),tokenize(after(string,at),separators));
+    }
+
+    private static void checkSeparators(String[] separators) {
+        for (String separator : separators) {
+            if (separator.length()!=1) {
+                String message = "All separators must be single characters";
+                throw new IllegalArgumentException(message);
+            }
+        }
     }
 
     private static int startOfFirst(String string, String... tokens) {
