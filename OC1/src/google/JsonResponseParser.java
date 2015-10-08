@@ -48,6 +48,10 @@ abstract class JsonResponseParser<T>
         return (Double) map.get(key);
     }
 
+    final Long longFrom(Map<String,Object> map, String key) {
+        return (Long) map.get(key);
+    }
+
     final URI uriFrom(Map<String,Object> map, String key) {
         String string = stringFrom(map,key);
         try {
