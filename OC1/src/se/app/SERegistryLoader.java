@@ -5,6 +5,7 @@ import se.editor.ScreenEditor;
 import se.event.SESwappableListFactory;
 import se.events.Events;
 import se.services.SELocationProvider;
+import se.storage.SEStorage;
 import se.ui.SEDisplay;
 import se.ui.SEFormFactory;
 import se.uilist.SESearchFilterInstaller;
@@ -29,6 +30,8 @@ import x.pagefactories.XItemListPageFactoryFactory;
 import x.services.XConsumerServiceProviders;
 import x.services.XLocationProvider;
 import x.services.XLocationService;
+import x.stores.MyRatings;
+import x.stores.XStorage;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
 import x.uilist.XSearchFilterInstaller;
@@ -68,6 +71,8 @@ final class SERegistryLoader {
         put(ItemListPageFactoryFactory.class, new XItemListPageFactoryFactory());
         put(SwappableList.Factory.class,      new SESwappableListFactory());
         put(PageFactory.class,      RootPageFactory.of());
+        put(XStorage.class,                   new SEStorage());
+        put(MyRatings.class,                  new MyRatings());
         put(ScreenEditor.class,     ScreenEditor.of());
     }
 
