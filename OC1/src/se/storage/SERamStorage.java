@@ -2,25 +2,28 @@ package se.storage;
 
 import x.stores.XStorage;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
+import java.io.*;
+import java.util.HashMap;
+import java.util.Map;
 
 public final class SERamStorage
     implements XStorage
 {
+    Map<String,Boolean> streams = new HashMap<String,Boolean>();
+
     @Override
     public OutputStream createOutputStream(String name) throws IOException {
-        return null;
+        streams.put(name,true);
+        return new ByteArrayOutputStream();
     }
 
     @Override
     public InputStream createInputStream(String name) throws IOException {
-        return null;
+        return new ByteArrayInputStream(new byte[0]);
     }
 
     @Override
     public boolean exists(String name) {
-        return false;
+        return streams.containsKey(name);
     }
 }
