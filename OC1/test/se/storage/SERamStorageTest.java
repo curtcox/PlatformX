@@ -1,6 +1,7 @@
 package se.storage;
 
 import org.junit.Test;
+import x.io.IO;
 import x.stores.XStorage;
 
 import java.io.IOException;
@@ -43,4 +44,15 @@ public class SERamStorageTest {
         InputStream input = storage.createInputStream("once");
         assertEquals(-1, input.read());
     }
+
+    @Test
+    public void random_data_written_to_stream_can_then_be_read_from_stream() throws IOException {
+        OutputStream output = storage.createOutputStream("random");
+        String data = toString();
+        IO.write(data,output);
+        output.close();
+        InputStream input = storage.createInputStream("random");
+        assertEquals(data,IO.stringOrEmptyFrom(input));
+    }
+
 }

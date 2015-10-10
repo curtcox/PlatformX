@@ -71,4 +71,7 @@ public final class IO {
         return Registry.get(ILogManager.class).getLog(IO.class);
     }
 
+    public static void write(String string, OutputStream out) throws IOException {
+        out.write(string.getBytes());
+    }
 }

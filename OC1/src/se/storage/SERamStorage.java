@@ -9,17 +9,18 @@ import java.util.Map;
 public final class SERamStorage
     implements XStorage
 {
-    Map<String,Boolean> streams = new HashMap<String,Boolean>();
+    Map<String,ByteArrayOutputStream> streams = new HashMap<String,ByteArrayOutputStream>();
 
     @Override
     public OutputStream createOutputStream(String name) throws IOException {
-        streams.put(name,true);
-        return new ByteArrayOutputStream();
+        ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+        streams.put(name,outputStream);
+        return outputStream;
     }
 
     @Override
     public InputStream createInputStream(String name) throws IOException {
-        return new ByteArrayInputStream(new byte[0]);
+        return new ByteArrayInputStream(streams.get(name).toByteArray());
     }
 
     @Override

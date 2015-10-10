@@ -74,6 +74,18 @@ public class IOTest {
     }
 
     @Test
+    public void write_writes_string_to_the_given_stream() throws IOException {
+        String expected = "Stuff in the string";
+        ByteArrayOutputStream written = new ByteArrayOutputStream();
+        IO.write(expected,written);
+        InputStream in = new ByteArrayInputStream(written.toByteArray());
+
+        String actual = IO.stringOrEmptyFrom(in);
+
+        assertEquals(expected,actual);
+    }
+
+    @Test
     public void stringOrEmptyFrom_logs_exception_when_stream_throws_exception() {
         final IOException e = new IOException();
         InputStream stream = new ErrorThrowingInputStream(e);
