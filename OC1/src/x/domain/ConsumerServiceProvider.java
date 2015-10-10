@@ -14,7 +14,7 @@ public final class ConsumerServiceProvider {
     public final Name name;
     public final XLocation location;
     public final Address address;
-    public final Double priceLevel;
+    public final Long priceLevel;
     public final Double rating;
     public final Type[] types;
     public final URI icon;
@@ -24,7 +24,7 @@ public final class ConsumerServiceProvider {
     
     public ConsumerServiceProvider(
             ID id, Name name, XLocation location, Address address,
-            Double priceLevel, Double rating,
+            Long priceLevel, Double rating,
             Type[] types, URI icon, Rating myRating)
     {
         this.id = id;

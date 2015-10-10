@@ -13,7 +13,7 @@ public final class Place {
     public Double longitude;
     public URI icon;
     public Boolean open_now;
-    public Double price_level;
+    public Long price_level;
     public Double rating;
     public String[] types;
     public String vicinity;

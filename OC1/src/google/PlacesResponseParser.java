@@ -18,7 +18,7 @@ final class PlacesResponseParser
         place.longitude   = geometry.longitude;
         place.open_now    = null;
         place.icon        = uriFrom(map,"icon");
-        place.price_level = Double.valueOf(longFrom(map,"price_level"));
+        place.price_level = longFrom(map,"price_level");
         place.rating      = doubleFrom(map,"rating");
         place.types       = (String[]) ((List) map.get("types")).toArray(new String[0]);
         return place;
