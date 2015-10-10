@@ -6,15 +6,15 @@ import x.stores.XStorage;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
-public class SEStorageTest {
+public class SERamStorageTest {
 
     @Test
     public void can_create() {
-        assertNotNull(new SEStorage());
+        assertNotNull(new SERamStorage());
     }
 
     @Test
     public void is_XStorage() {
-        assertTrue(new SEStorage() instanceof XStorage);
+        assertTrue(new SERamStorage() instanceof XStorage);
     }
 }
