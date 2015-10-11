@@ -44,6 +44,7 @@ public final class RootPageFactory {
         return PageFactoryBuilder
         .firstCheck(
             NamedValuePageFactory.of(),
+            ServiceProviderSearchScreenFactory.FACTORY,
             ServiceProviderFilterPageFactory.FACTORY
         )
         .thenCheck(
@@ -52,7 +53,6 @@ public final class RootPageFactory {
                 RegistryInfoPageFactory.of(),
                 LocationSelectionPageFactory.FACTORY,
                 ProviderDetailsPage.FACTORY,
-                ServiceProviderSearchScreenFactory.FACTORY,
                 CustomComponentPage.FACTORY,
                 dynamicScreens(layouts),
                 IndexPageFactory.of(PageTags.of("Index"), index),
