@@ -9,7 +9,7 @@ final class JsonMapParser {
     final String[] tokens;
     final int start;
     int end;
-    Map map = new HashMap<String, Object>();
+    Map map = new HashMap<String, Json>();
     String key = null;
     Object value = null;
 
@@ -18,7 +18,7 @@ final class JsonMapParser {
         this.start = start;
     }
 
-    Map<String, Object> parse() throws IOException {
+    JsonMap parse() throws IOException {
         checkFirstToken();
         for (end=start + 1; end<tokens.length; end++) {
             String token = tokens[end];
@@ -50,7 +50,7 @@ final class JsonMapParser {
                     put(value(value));
                 }
                 end++;
-                return map;
+                return JsonMap.of(map);
             }
             if (token.equals("[")) {
                 JsonListParser parser = new JsonListParser(tokens, end);

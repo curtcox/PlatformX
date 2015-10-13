@@ -317,7 +317,7 @@ public class JsonMapParserTest {
         return XJSONParserTest.map(args);
     }
 
-    private static Map<String,Object> parse(String... lines) throws IOException {
+    private static Map<String,Json> parse(String... lines) throws IOException {
         String json = JSON(lines);
         String[] tokens = XJSONParser.split(json);
         JsonMapParser parser = new JsonMapParser(tokens,0);
