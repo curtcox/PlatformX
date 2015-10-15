@@ -49,7 +49,7 @@ public class JsonMapTest {
     @Test
     public void is_not_empty_when_size_is_one() {
         HashMap hash = new HashMap();
-        hash.put("key","value");
+        hash.put("key",JsonValue.of("value"));
         JsonMap map = JsonMap.of(hash);
         assertEquals(1,map.size());
         assertFalse(map.isEmpty());
@@ -58,7 +58,7 @@ public class JsonMapTest {
     @Test
     public void containsKey_returns_true_for_keys_in_map() {
         HashMap hash = new HashMap();
-        hash.put("key","value");
+        hash.put("key",JsonValue.of("value"));
         JsonMap map = JsonMap.of(hash);
         assertFalse(map.containsKey("value"));
         assertTrue(map.containsKey("key"));
@@ -67,10 +67,10 @@ public class JsonMapTest {
     @Test
     public void get_returns_value_for_keys_in_map() {
         HashMap hash = new HashMap();
-        hash.put("key","value");
+        hash.put("key",JsonValue.of("value"));
         JsonMap map = JsonMap.of(hash);
-        assertEquals("value",map.get("key"));
-        assertEquals(null,map.get("value"));
+        assertEquals(JsonValue.of("value"),map.get("key"));
+        assertEquals(null, map.get("value"));
     }
 
     @Test

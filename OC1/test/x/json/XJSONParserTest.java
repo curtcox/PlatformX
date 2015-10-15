@@ -192,7 +192,7 @@ public class XJSONParserTest {
             Object key = args[i];
             i++;
             Object value = args[i];
-            map.put(key,value);
+            map.put(key,JsonValue.of(value));
         }
         return map;
     }

@@ -1,22 +1,22 @@
 package x.json;
 
 final class JsonValueParser {
-    static Object parse(String input) {
+    static JsonValue parse(String input) {
         try {
-            return Long.parseLong(input);
+            return JsonValue.of(input,Long.parseLong(input));
         } catch (NumberFormatException e) {
             // It wasn't a long
         }
         if (input.equals("true")) {
-            return true;
+            return JsonValue.of(input,true);
         }
         if (input.equals("false")) {
-            return false;
+            return JsonValue.of(input,false);
         }
         try {
-            return Double.parseDouble(input);
+            return JsonValue.of(input,Double.parseDouble(input));
         } catch (NumberFormatException e) {
-            return XJSONParser.unquoted(input);
+            return JsonValue.of(XJSONParser.unquoted(input));
         }
     }
 }

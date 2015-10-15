@@ -35,19 +35,23 @@ public class JsonValueParserTest {
     }
 
     private void assertParseEquals(String input, String output) {
-        assertEquals(output,JsonValueParser.parse(input));
+        JsonValue json = JsonValueParser.parse(input);
+        assertEquals(output,json.toString());
     }
 
     private void assertParseEquals(String input, Double output) {
-        assertEquals(output,JsonValueParser.parse(input));
+        JsonValue json = JsonValueParser.parse(input);
+        assertEquals(output,json.doubleValue());
     }
 
     private void assertParseEquals(String input, Long output) {
-        assertEquals(output,JsonValueParser.parse(input));
+        JsonValue json = JsonValueParser.parse(input);
+        assertEquals(output,json.longValue());
     }
 
     private void assertParseEquals(String input, Boolean output) {
-        assertEquals(output,JsonValueParser.parse(input));
+        JsonValue json = JsonValueParser.parse(input);
+        assertEquals(output,json.booleanValue());
     }
 
     static String quoted(String string) {
