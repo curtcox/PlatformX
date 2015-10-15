@@ -44,12 +44,12 @@ public final class JsonMap
     }
 
     @Override
-    public Set keySet() {
+    public Set<String> keySet() {
         return map.keySet();
     }
 
     @Override
-    public Collection values() {
+    public Collection<Json> values() {
         return map.values();
     }
 
@@ -58,6 +58,7 @@ public final class JsonMap
         return map.entrySet();
     }
 
+    // ------------- Never --------------
     private UnsupportedOperationException never() {
         return new UnsupportedOperationException();
     }

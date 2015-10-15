@@ -8,6 +8,7 @@ import org.junit.Test;
 import org.junit.rules.Timeout;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -174,8 +175,9 @@ public class JsonListParserTest {
         parser.parse();
         return tokens[parser.end];
     }
+
     private static List list(Object... args) {
-        return Arrays.asList(args);
+        return XJSONParserTest.list(args);
     }
 
     private static Map map(Object...args) {

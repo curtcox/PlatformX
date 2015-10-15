@@ -182,8 +182,8 @@ public class XJSONParserTest {
         assertEquals(output,XJSONParser.unquoted(input));
     }
 
-    private static List list(Object... args) {
-        return Arrays.asList(args);
+    static JsonList list(Object... args) {
+        return JsonRenderer.list(args);
     }
 
     static Map map(Object...args) {
@@ -192,9 +192,9 @@ public class XJSONParserTest {
             Object key = args[i];
             i++;
             Object value = args[i];
-            map.put(key,JsonValue.of(value));
+            map.put(key,value);
         }
-        return map;
+        return JsonRenderer.map(map);
     }
 
     private static Object parse(String... lines) throws IOException {
