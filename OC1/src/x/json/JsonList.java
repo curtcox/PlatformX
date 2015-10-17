@@ -33,17 +33,31 @@ public final class JsonList
         return list.get(index);
     }
 
+    @Override
+    public Iterator<Json> iterator() {
+        return list.iterator();
+    }
+
+    @Override
+    public String toString() {
+        return list.toString();
+    }
+
+    @Override
+    public int hashCode() {
+        return list.hashCode();
+    }
+
+    public boolean equals(Object o) {
+        JsonList that = (JsonList) o;
+        return list.equals(that.list);
+    }
     // ------------- Never --------------
     private UnsupportedOperationException never() {
         return new UnsupportedOperationException();
     }
     @Override
     public boolean contains(Object o) {
-        throw never();
-    }
-
-    @Override
-    public Iterator<Json> iterator() {
         throw never();
     }
 

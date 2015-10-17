@@ -76,10 +76,19 @@ public class JsonMapTest {
     @Test
     public void containsValue_returns_true_for_values_in_map() {
         HashMap hash = new HashMap();
-        hash.put("key","value");
+        hash.put("key",JsonValue.of("value"));
         JsonMap map = JsonMap.of(hash);
         assertFalse(map.containsValue("key"));
-        assertTrue(map.containsValue("value"));
+        assertTrue(map.containsValue(JsonValue.of("value")));
+    }
+
+    @Test
+    public void toString_produces_same_string_as_underlying_map() {
+        HashMap hash = new HashMap();
+        hash.put("key",JsonValue.of("value"));
+        JsonMap map = JsonMap.of(hash);
+
+        assertEquals(hash.toString(), map.toString());
     }
 
 }

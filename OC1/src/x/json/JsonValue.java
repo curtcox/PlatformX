@@ -12,6 +12,19 @@ public final class JsonValue
         this.value = value;
     }
 
+    public Comparable value() {
+        if (doubleValue!=null) {
+            return doubleValue;
+        }
+        if (longValue!=null) {
+            return longValue;
+        }
+        if (booleanValue!=null) {
+            return booleanValue;
+        }
+        return value;
+    }
+
     public static JsonValue of(String value) {
         return new JsonValue(value);
     }

@@ -9,14 +9,14 @@ final class JsonListParser {
     final String[] tokens;
     final int start;
     int end;
-    List list = new ArrayList();
+    List<Json> list = new ArrayList<Json>();
 
     JsonListParser(String[] tokens, int start) {
         this.tokens = tokens;
         this.start = start;
     }
 
-    List parse() throws IOException {
+    JsonList parse() throws IOException {
         checkFirstToken();
         for (end=start + 1; end<tokens.length; end++) {
             String token = tokens[end];
@@ -37,11 +37,11 @@ final class JsonListParser {
             }
             if (token.equals("]")) {
                 end++;
-                return list;
+                return JsonList.of(list);
             }
             list.add(value(token));
         }
-        return list;
+        return JsonList.of(list);
     }
 
     private void checkFirstToken() {
@@ -52,7 +52,7 @@ final class JsonListParser {
         }
     }
 
-    static Object value(String value) {
+    static Json value(String value) {
         return JsonValueParser.parse(value);
     }
 

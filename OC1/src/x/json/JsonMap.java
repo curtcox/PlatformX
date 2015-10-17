@@ -58,6 +58,10 @@ public final class JsonMap
         return map.entrySet();
     }
 
+    @Override
+    public String toString() {
+        return map.toString();
+    }
     // ------------- Never --------------
     private UnsupportedOperationException never() {
         return new UnsupportedOperationException();

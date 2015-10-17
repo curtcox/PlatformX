@@ -50,6 +50,7 @@ public class JsonValueTest {
         JsonValue json = JsonValue.of(input,value);
         assertEquals(value,json.doubleValue());
         assertSame(input,json.toString());
+        assertEquals(value, json.value());
     }
 
     @Test
@@ -58,7 +59,8 @@ public class JsonValueTest {
         Long value = 31415926535L;
         JsonValue json = JsonValue.of(input,value);
         assertEquals(value,json.longValue());
-        assertSame(input,json.toString());
+        assertSame(input, json.toString());
+        assertEquals(value, json.value());
     }
 
     @Test
@@ -67,7 +69,8 @@ public class JsonValueTest {
         Boolean value = true;
         JsonValue json = JsonValue.of(input,value);
         assertEquals(value,json.booleanValue());
-        assertSame(input,json.toString());
+        assertSame(input, json.toString());
+        assertEquals(value, json.value());
     }
 
     @Test

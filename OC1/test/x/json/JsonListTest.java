@@ -1,15 +1,13 @@
 package x.json;
 
-import edu.emory.mathcs.backport.java.util.Arrays;
-import junit.framework.TestCase;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class JsonListTest {
 
@@ -64,6 +62,61 @@ public class JsonListTest {
         assertEquals(one,json.get(0));
         assertEquals(two,json.get(1));
         assertEquals(three,json.get(2));
+    }
+
+    @Test
+    public void toString_gives_the_same_string_as_underlying_list() {
+        Json one = JsonValue.of(toString());
+        List list = new ArrayList();
+        list.add(one);
+        JsonList json = JsonList.of(list);
+
+        assertEquals(list.toString(),json.toString());
+    }
+
+    @Test
+    public void iterator_returns_iterator_with_contents() {
+        Json one = JsonValue.of("1st");
+        Json two = JsonValue.of("2nd");
+        List list = new ArrayList();
+        list.add(one);
+        list.add(two);
+        JsonList json = JsonList.of(list);
+        Iterator iterator = json.iterator();
+        assertTrue(iterator.hasNext());
+        assertEquals(one, iterator.next());
+        assertTrue(iterator.hasNext());
+        assertEquals(two, iterator.next());
+        assertFalse(iterator.hasNext());
+    }
+
+    @Test
+    public void empty_lists_are_equal() {
+        listsAreEqual(new ArrayList());
+    }
+
+    @Test
+    public void lists_with_same_contents_are_equal() {
+        listsAreEqual(Arrays.asList("this"));
+        listsAreEqual(Arrays.asList("that"));
+        listsAreEqual(Arrays.asList("the","other"));
+    }
+
+    @Test
+    public void lists_with_different_contents_are_not_equal() {
+        listsAreNotEqual(Arrays.asList("this"), Arrays.asList("that"));
+    }
+
+    private void listsAreEqual(List list) {
+        JsonList a = JsonList.of(list);
+        JsonList b = JsonList.of(list);
+        assertEquals(a, b);
+        assertEquals(a.hashCode(), b.hashCode());
+    }
+
+    private void listsAreNotEqual(List a, List b) {
+        assertNotEquals(a, b);
+        assertNotEquals(a.hashCode(), b.hashCode());
     }
 
 }
