@@ -2,13 +2,16 @@ package x.json;
 
 import java.util.*;
 
-public final class JsonRenderer {
+/**
+ * For turning objects into Json.
+ */
+final class JsonRenderer {
 
     public static JsonList list(Object... args) {
         return list(Arrays.asList(args));
     }
 
-    public static JsonList list(List list) {
+    static JsonList list(List list) {
         List<Json> json = new ArrayList();
         for (Object arg : list) {
             json.add(object(arg));
@@ -16,7 +19,7 @@ public final class JsonRenderer {
         return JsonList.of(json);
     }
 
-    public static Json object(Object o) {
+    static Json object(Object o) {
         if (o instanceof Json) {
             return (Json) o;
         }
@@ -29,7 +32,7 @@ public final class JsonRenderer {
         return JsonValue.of(o);
     }
 
-    public static JsonMap map(Map map) {
+    static JsonMap map(Map map) {
         Map<String,Json> json = new HashMap();
         for (Object key : map.keySet()) {
             Object value = map.get(key);

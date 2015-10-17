@@ -23,7 +23,7 @@ public final class XJSON {
     static final Map<String,String> parseJsonResponse(InputStreamReader reader) {
         Map<String,String> map = new HashMap<String,String>();
         try {
-            Map<String,Object> result = (Map<String, Object>) XJSONParser.parse(reader);
+            JsonMap result = (JsonMap) XJSONParser.parse(reader);
             addAllResultsTo(result,map);
             return map;
         } catch (IOException e) {
@@ -34,7 +34,7 @@ public final class XJSON {
         return map;
     } 
 
-    private static void addAllResultsTo(Map<String, Object> result, Map<String, String> map) {
+    private static void addAllResultsTo(JsonMap result, Map<String, String> map) {
         for (String key : result.keySet()) {
             Object value = result.get(key);
             if (value!=null) {

@@ -4,6 +4,9 @@ import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
 
+/**
+ * An immutable map from strings to Json.
+ */
 public final class JsonMap
     implements Json, Map<String,Json>
 {

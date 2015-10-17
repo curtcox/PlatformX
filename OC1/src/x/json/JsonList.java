@@ -5,6 +5,9 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 
+/**
+ * An immutable list of Json.
+ */
 public final class JsonList
     implements Json, List<Json>
 {

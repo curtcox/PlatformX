@@ -1,5 +1,8 @@
 package x.json;
 
+/**
+ * A string, double, long, or boolean.
+ */
 public final class JsonValue
     implements Json
 {
@@ -12,7 +15,7 @@ public final class JsonValue
         this.value = value;
     }
 
-    public Comparable value() {
+    Comparable value() {
         if (doubleValue!=null) {
             return doubleValue;
         }
@@ -25,7 +28,7 @@ public final class JsonValue
         return value;
     }
 
-    public static JsonValue of(String value) {
+    static JsonValue of(String value) {
         return new JsonValue(value);
     }
 
@@ -57,7 +60,7 @@ public final class JsonValue
         return value;
     }
 
-    public static JsonValue of(Object o) {
+    static JsonValue of(Object o) {
         if (o instanceof String) {
             return of(o.toString());
         }
@@ -73,19 +76,19 @@ public final class JsonValue
         throw new IllegalArgumentException(o.getClass().toString());
     }
 
-    public static JsonValue of(String input, Double doubleValue) {
+    static JsonValue of(String input, Double doubleValue) {
         JsonValue json = new JsonValue(input);
         json.doubleValue = doubleValue;
         return json;
     }
 
-    public static JsonValue of(String input, Long longValue) {
+    static JsonValue of(String input, Long longValue) {
         JsonValue json = new JsonValue(input);
         json.longValue = longValue;
         return json;
     }
 
-    public static JsonValue of(String input, Boolean booleanValue) {
+    static JsonValue of(String input, Boolean booleanValue) {
         JsonValue json = new JsonValue(input);
         json.booleanValue = booleanValue;
         return json;

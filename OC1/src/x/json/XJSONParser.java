@@ -7,6 +7,9 @@ import x.parse.Tokenizer;
 import java.io.IOException;
 import java.io.Reader;
 
+/**
+ * For parsing into Json.
+ */
 public final class XJSONParser {
 
     private static final String[] separators = new String[] {
