@@ -1,12 +1,14 @@
 package google;
 
+import x.json.JsonMap;
+
 import java.util.List;
 import java.util.Map;
 
 final class GeocodeResponseParser
     extends JsonResponseParser
 {
-    GoogleLocation construct(Map map) {
+    GoogleLocation construct(JsonMap map) {
         GoogleLocation location  = new GoogleLocation();
         location.address   = stringFrom(map,"formatted_address");
         Geometry geometry  = Geometry.of(map);

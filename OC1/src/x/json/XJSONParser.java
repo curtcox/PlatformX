@@ -13,7 +13,7 @@ public final class XJSONParser {
             "{","}", "[","]", ":",",","\"", " "
     };
 
-    public static Object parse(Reader reader) throws IOException {
+    public static Json parse(Reader reader) throws IOException {
         String[] tokens = tokens(reader);
         if (tokens[0].equals("{")) {
             JsonMapParser parser = new JsonMapParser(tokens,0);

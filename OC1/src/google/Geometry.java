@@ -1,18 +1,20 @@
 package google;
 
+import x.json.JsonMap;
+
 import java.util.Map;
 
 final class Geometry {
     Double latitude;
     Double longitude;
     String locationType;
-    static Geometry of(Map<String,Object> map) {
+    static Geometry of(JsonMap map) {
         Geometry geo = new Geometry();
-        map = (Map<String, Object>) map.get("geometry");
+        map = (JsonMap) map.get("geometry");
         Map<String,Object> location = (Map<String,Object>) map.get("location");
         geo.latitude = (Double) location.get("lat");
         geo.longitude = (Double) location.get("lng");
-        geo.locationType = (String) map.get("location_type");
+        geo.locationType = map.get("location_type").toString();
         return geo;
     }
 }

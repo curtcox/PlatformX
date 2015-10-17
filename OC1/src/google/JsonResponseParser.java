@@ -1,6 +1,9 @@
 package google;
 
 import x.app.Registry;
+import x.json.JsonList;
+import x.json.JsonMap;
+import x.json.JsonValue;
 import x.json.XJSONParser;
 import x.log.ILog;
 import x.log.ILogManager;
@@ -16,21 +19,21 @@ import java.util.Map;
 abstract class JsonResponseParser<T>
 {
     final List<T> parseJsonResponse(InputStreamReader reader) {
-        List<T> location = new ArrayList<T>();
+        List<T> list = new ArrayList<T>();
         try {
-            for (Map<String,Object> result : results((Map<String, Object>) XJSONParser.parse(reader))) {
-                location.add(construct(result));
+            for (JsonMap result : results((JsonMap) XJSONParser.parse(reader))) {
+                list.add(construct(result));
             }
-            return location;
+            return list;
         } catch (IOException e) {
             log(e);
         } catch (RuntimeException e) {
             log(e);
         }
-        return location;
+        return list;
     } 
     
-    final Iterable<Map<String,Object>> results(Map<String,Object> tree) {
+    final Iterable<JsonMap> results(JsonMap tree) {
         if (tree.isEmpty()) {
             log("Response Parser -- No results found -- failed request");
             return new ArrayList();
@@ -38,21 +41,23 @@ abstract class JsonResponseParser<T>
         return (List)tree.get("results");
     }
     
-    abstract T construct(Map<String,Object> map);
+    abstract T construct(JsonMap map);
     
-    final String stringFrom(Map<String,Object> map, String key) {
-        return (String) map.get(key);
+    final String stringFrom(JsonMap map, String key) {
+        return map.get(key).toString();
     }
 
-    final Double doubleFrom(Map<String,Object> map, String key) {
-        return (Double) map.get(key);
+    final Double doubleFrom(JsonMap map, String key) {
+        JsonValue value = (JsonValue) map.get(key);
+        return value.doubleValue();
     }
 
-    final Long longFrom(Map<String,Object> map, String key) {
-        return (Long) map.get(key);
+    final Long longFrom(JsonMap map, String key) {
+        JsonValue value = (JsonValue) map.get(key);
+        return value.longValue();
     }
 
-    final URI uriFrom(Map<String,Object> map, String key) {
+    final URI uriFrom(JsonMap map, String key) {
         String string = stringFrom(map,key);
         try {
             return (string==null) ? null : new URI(string);
