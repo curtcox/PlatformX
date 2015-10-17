@@ -11,7 +11,6 @@ import java.io.IOException;
 import java.io.StringReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
@@ -173,10 +172,9 @@ public class XJSONParserTest {
         assertEquals(list("\"So called\"","\"  \"","\"white space\""), split(input));
     }
 
-    private List split(String string) {
-        return Arrays.asList(XJSONParser.split(string));
+    private JsonList split(String string) {
+        return JsonRenderer.list(Arrays.asList(XJSONParser.split(string)));
     }
-
 
     private void assertUnquotedEquals(String input, String output) {
         assertEquals(output,XJSONParser.unquoted(input));

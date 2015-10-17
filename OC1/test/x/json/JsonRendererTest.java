@@ -5,6 +5,7 @@ import org.junit.Test;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.*;
 
@@ -38,6 +39,23 @@ public class JsonRendererTest {
     public void object_returns_object_itself_if_it_is_already_Json() {
         Json value = JsonValue.of("whatever");
         assertSame(value, JsonRenderer.object(value));
+    }
+
+    @Test
+    public void object_returns_JsonList_for_List() {
+        Json value = JsonValue.of("whatever");
+        List list = Arrays.asList(value);
+        JsonList json = (JsonList) JsonRenderer.object(list);
+        assertSame(value,json.get(0));
+    }
+
+    @Test
+    public void object_returns_JsonMap_for_Map() {
+        Json value = JsonValue.of("whatever");
+        Map map = new HashMap();
+        map.put("key",value);
+        JsonMap json = (JsonMap) JsonRenderer.object(map);
+        assertSame(value,json.get("key"));
     }
 
     @Test

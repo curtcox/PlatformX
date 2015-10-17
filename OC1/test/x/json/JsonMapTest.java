@@ -5,9 +5,7 @@ import org.junit.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class JsonMapTest {
 
@@ -89,6 +87,34 @@ public class JsonMapTest {
         JsonMap map = JsonMap.of(hash);
 
         assertEquals(hash.toString(), map.toString());
+    }
+
+    @Test
+    public void equal_maps_are_equal() {
+        mapsAreEqual(new HashMap());
+    }
+
+    @Test
+    public void unequal_maps_are_not_equal() {
+        HashMap a = new HashMap();
+        a.put("k",JsonValue.of("1"));
+        HashMap b = new HashMap();
+        a.put("k", JsonValue.of("2"));
+        mapsAreNotEqual(a,b);
+    }
+
+    void mapsAreEqual(Map map) {
+        JsonMap a = JsonMap.of(map);
+        JsonMap b = JsonMap.of(map);
+        assertEquals(a.hashCode(),b.hashCode());
+        assertEquals(a,b);
+    }
+
+    void mapsAreNotEqual(Map map1,Map map2) {
+        JsonMap a = JsonMap.of(map1);
+        JsonMap b = JsonMap.of(map2);
+        assertNotEquals(a.hashCode(), b.hashCode());
+        assertNotEquals(a, b);
     }
 
 }

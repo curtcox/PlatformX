@@ -59,6 +59,16 @@ public final class JsonMap
     }
 
     @Override
+    public int hashCode() {
+        return map.hashCode();
+    }
+
+    public boolean equals(Object o) {
+        JsonMap that = (JsonMap) o;
+        return map.equals(that.map);
+    }
+
+    @Override
     public String toString() {
         return map.toString();
     }

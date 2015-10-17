@@ -27,8 +27,8 @@ public class XJSONParserGoogleNearbysTest {
     }
 
 
-    Object sample2() throws IOException {
-        return parse(
+    JsonMap sample2() throws IOException {
+        return (JsonMap) parse(
                 "{",
                 "   'html_attributions' : [],",
                 "   'next_page_token' : 'CoQC8QAAAMWFIlUzCyyxsw',",
@@ -44,10 +44,10 @@ public class XJSONParserGoogleNearbysTest {
 
     @Test
     public void sample2_response_top_level() throws IOException {
-        Map map = (Map) sample2();
+        JsonMap map = sample2();
         assertEquals(3, map.size());
         assertTrue(map.get("html_attributions") instanceof List);
-        assertEquals("CoQC8QAAAMWFIlUzCyyxsw",map.get("next_page_token"));
+        assertJsonStringEquals("CoQC8QAAAMWFIlUzCyyxsw", map.get("next_page_token"));
         List results = (List) map.get("results");
         assertTrue(results instanceof List);
         assertEquals(1,results.size());
@@ -59,14 +59,14 @@ public class XJSONParserGoogleNearbysTest {
         assertEquals(0,location.size());
     }
 
-    Object sample3() throws IOException {
-        return parse(
+    JsonMap sample3() throws IOException {
+        return (JsonMap) parse(
                 "{ 'results' : [ { } , { } ]  }");
     }
 
     @Test
     public void sample3_results() throws IOException {
-        Map map = (Map) sample3();
+        JsonMap map = sample3();
         assertEquals(1, map.size());
         List results = (List) map.get("results");
         assertTrue(results instanceof List);
@@ -77,8 +77,8 @@ public class XJSONParserGoogleNearbysTest {
         assertEquals(0,result2.size());
     }
 
-    Object sample4() throws IOException {
-        return parse(
+    JsonMap sample4() throws IOException {
+        return (JsonMap) parse(
                 "{",
                 "   'results' : [",
                 "       {",
@@ -93,13 +93,13 @@ public class XJSONParserGoogleNearbysTest {
 
     @Test
     public void sample4_response() throws IOException {
-        Map map = (Map) sample4();
+        JsonMap map = sample4();
         assertEquals(1, map.size());
         assertTrue(map.get("results") instanceof List);
     }
 
-    Object sample1() throws IOException {
-        return parse(
+    JsonMap sample1() throws IOException {
+        return (JsonMap) parse(
            "{",
            "   'html_attributions' : [],",
            "   'next_page_token' : 'CoQC8QAAAMWFIlUzCyyxsw',",
@@ -146,92 +146,92 @@ public class XJSONParserGoogleNearbysTest {
 
     @Test
     public void sample_response_top_level() throws IOException {
-        Map map = (Map) sample1();
+        JsonMap map = sample1();
         assertEquals(3, map.size());
         assertTrue(map.get("html_attributions") instanceof List);
         assertTrue(map.get("results") instanceof List);
-        assertEquals("CoQC8QAAAMWFIlUzCyyxsw",map.get("next_page_token"));
+        assertJsonStringEquals("CoQC8QAAAMWFIlUzCyyxsw", map.get("next_page_token"));
     }
 
     @Test
     public void sample_response_html_attributions() throws IOException {
-        Map map = (Map) sample1();
+        JsonMap map = sample1();
         List list = (List) map.get("html_attributions");
         assertEquals(0, list.size());
     }
 
     @Test
     public void sample_response_results() throws IOException {
-        Map map = (Map) sample1();
+        JsonMap map = sample1();
         List list = (List) map.get("results");
         assertEquals(2, list.size());
     }
 
     @Test
     public void sample_response_opening_hours() throws IOException {
-        Map map = (Map) sample1();
-        List list = (List) map.get("results");
-        Map result = (Map) list.get(0);
-        Map opening_hours = (Map) result.get("opening_hours");
+        JsonMap map = sample1();
+        JsonList list = (JsonList) map.get("results");
+        JsonMap result = (JsonMap) list.get(0);
+        JsonMap opening_hours = (JsonMap) result.get("opening_hours");
         assertEquals(2, opening_hours.size());
-        assertFalse((Boolean) opening_hours.get("open_now"));
+        assertJsonFalse(opening_hours.get("open_now"));
         assertTrue(opening_hours.get("weekday_text") instanceof List);
     }
 
     @Test
     public void sample_response_results_0() throws IOException {
-        Map map = (Map) sample1();
-        List list = (List) map.get("results");
-        Map result0 = (Map) list.get(0);
+        JsonMap map = sample1();
+        JsonList list = (JsonList) map.get("results");
+        JsonMap result0 = (JsonMap) list.get(0);
         assertEquals(10, result0.size());
-        assertEquals("229fbe2845c3bc1937f799aa2a48481ba1111b8d",result0.get("id"));
-        assertEquals("First Banks Inc",result0.get("name"));
-        assertEquals("ChIJ3XZe1NQ034cRWbeNNRW9hDM",result0.get("place_id"));
-        assertEquals("CnRiAAlT3oghT7cE",result0.get("reference"));
-        assertEquals("GOOGLE",result0.get("scope"));
-        assertEquals("135 North Meramec Avenue, Clayton",result0.get("vicinity"));
-        assertEquals("https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",result0.get("icon"));
+        assertJsonStringEquals("229fbe2845c3bc1937f799aa2a48481ba1111b8d", result0.get("id"));
+        assertJsonStringEquals("First Banks Inc", result0.get("name"));
+        assertJsonStringEquals("ChIJ3XZe1NQ034cRWbeNNRW9hDM", result0.get("place_id"));
+        assertJsonStringEquals("CnRiAAlT3oghT7cE", result0.get("reference"));
+        assertJsonStringEquals("GOOGLE", result0.get("scope"));
+        assertJsonStringEquals("135 North Meramec Avenue, Clayton", result0.get("vicinity"));
+        assertJsonStringEquals("https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png", result0.get("icon"));
     }
 
     @Test
     public void sample_response_results_1() throws IOException {
-        Map map = (Map) sample1();
-        List list = (List) map.get("results");
-        Map result1 = (Map) list.get(1);
+        JsonMap map = sample1();
+        JsonList list = (JsonList) map.get("results");
+        JsonMap result1 = (JsonMap) list.get(1);
         assertEquals(9, result1.size());
-        assertEquals("247b81c39ff3f929a9e1b6ffbd501fc9ae177950", result1.get("id"));
-        assertEquals("Business Bank of St Louis",result1.get("name"));
-        assertEquals("ChIJmSGSJivL2IcRzhKez9DcZrE", result1.get("place_id"));
-        assertEquals("CnRtAAAAkSnopbmEo5GVZnrLFcU",result1.get("reference"));
-        assertEquals("GOOGLE", result1.get("scope"));
-        assertEquals("8000 Maryland Ave, Saint Louis",result1.get("vicinity"));
-        assertEquals("https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png", result1.get("icon"));
+        assertJsonStringEquals("247b81c39ff3f929a9e1b6ffbd501fc9ae177950", result1.get("id"));
+        assertJsonStringEquals("Business Bank of St Louis", result1.get("name"));
+        assertJsonStringEquals("ChIJmSGSJivL2IcRzhKez9DcZrE", result1.get("place_id"));
+        assertJsonStringEquals("CnRtAAAAkSnopbmEo5GVZnrLFcU", result1.get("reference"));
+        assertJsonStringEquals("GOOGLE", result1.get("scope"));
+        assertJsonStringEquals("8000 Maryland Ave, Saint Louis", result1.get("vicinity"));
+        assertJsonStringEquals("https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png", result1.get("icon"));
     }
 
     @Test
     public void sample_response_results_geometry() throws IOException {
-        Map map = (Map) sample1();
-        List list = (List) map.get("results");
-        Map result = (Map) list.get(1);
-        Map geometry = (Map) result.get("geometry");
+        JsonMap map = sample1();
+        JsonList list = (JsonList) map.get("results");
+        JsonMap result = (JsonMap) list.get(1);
+        JsonMap geometry = (JsonMap) result.get("geometry");
         assertEquals(1, geometry.size());
-        Map location = (Map) geometry.get("location");
-        assertEquals(38.651613, location.get("lat"));
-        assertEquals(-90.34013, location.get("lng"));
+        JsonMap location = (JsonMap) geometry.get("location");
+        assertJsonEquals(38.651613, location.get("lat"));
+        assertJsonEquals(-90.34013, location.get("lng"));
     }
 
     @Test
     public void sample_response_results_types() throws IOException {
-        Map map = (Map) sample1();
-        List list = (List) map.get("results");
-        Map result = (Map) list.get(1);
-        List types = (List) result.get("types");
+        JsonMap map = sample1();
+        JsonList list = (JsonList) map.get("results");
+        JsonMap result = (JsonMap) list.get(1);
+        JsonList types = (JsonList) result.get("types");
         assertEquals(5,types.size());
-        assertEquals("bank",types.get(0));
-        assertEquals("atm", types.get(1));
-        assertEquals("finance", types.get(2));
-        assertEquals("point_of_interest", types.get(3));
-        assertEquals("establishment", types.get(4));
+        assertJsonStringEquals("bank", types.get(0));
+        assertJsonStringEquals("atm", types.get(1));
+        assertJsonStringEquals("finance", types.get(2));
+        assertJsonStringEquals("point_of_interest", types.get(3));
+        assertJsonStringEquals("establishment", types.get(4));
     }
 
     private static Object parse(String... lines) throws IOException {
@@ -245,6 +245,21 @@ public class XJSONParserGoogleNearbysTest {
             out.append(line);
         }
         return out.toString().replaceAll("'", "\"");
+    }
+
+    private void assertJsonStringEquals(String string, Json json) {
+        JsonValue value = (JsonValue) json;
+        assertEquals(string,value.toString());
+    }
+
+    private void assertJsonFalse(Json json) {
+        JsonValue value = (JsonValue) json;
+        assertFalse(value.booleanValue());
+    }
+
+    private void assertJsonEquals(double doubleValue, Json json) {
+        JsonValue value = (JsonValue) json;
+        assertEquals("=", doubleValue, value.doubleValue(), 0.000001);
     }
 
 }

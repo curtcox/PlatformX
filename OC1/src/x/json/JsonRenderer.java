@@ -16,11 +16,17 @@ public final class JsonRenderer {
         return JsonList.of(json);
     }
 
-    public static Json object(Object arg) {
-        if (arg instanceof Json) {
-            return (Json) arg;
+    public static Json object(Object o) {
+        if (o instanceof Json) {
+            return (Json) o;
         }
-        return JsonValue.of(arg);
+        if (o instanceof List) {
+            return list((List)o);
+        }
+        if (o instanceof Map) {
+            return map((Map)o);
+        }
+        return JsonValue.of(o);
     }
 
     public static JsonMap map(Map map) {

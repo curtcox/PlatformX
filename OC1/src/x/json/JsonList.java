@@ -39,6 +39,11 @@ public final class JsonList
     }
 
     @Override
+    public ListIterator<Json> listIterator() {
+        return list.listIterator();
+    }
+
+    @Override
     public String toString() {
         return list.toString();
     }
@@ -88,11 +93,6 @@ public final class JsonList
 
     @Override
     public int lastIndexOf(Object o) {
-        throw never();
-    }
-
-    @Override
-    public ListIterator<Json> listIterator() {
         throw never();
     }
 

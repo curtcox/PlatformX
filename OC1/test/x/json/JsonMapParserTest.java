@@ -88,15 +88,15 @@ public class JsonMapParserTest {
     @Test
     public void string_that_maps_to_a_number() throws IOException {
         assertEquals(map("Bond",7L), parse("{'Bond': 7}"));
-        assertEquals(map("Pi",3.14159265358979323), parse("{'Pi': 3.14159265358979323}"));
+        assertEquals(map("Pi",3.141592653589793), parse("{'Pi': 3.141592653589793}"));
     }
 
     @Test
     public void string_that_maps_to_true() throws IOException {
-        Map map =  parse("{'yes': true}");
+        JsonMap map =  parse("{'yes': true}");
         assertEquals(1, map.size());
-        Boolean yes = (Boolean) map.get("yes");
-        assertTrue(yes instanceof Boolean);
+        JsonValue yes = (JsonValue) map.get("yes");
+        assertTrue(yes instanceof JsonValue);
         assertTrue(yes.booleanValue());
         assertEquals(map("yes",Boolean.TRUE), parse("{'yes': true}"));
     }
@@ -317,7 +317,7 @@ public class JsonMapParserTest {
         return XJSONParserTest.map(args);
     }
 
-    private static Map<String,Json> parse(String... lines) throws IOException {
+    private static JsonMap parse(String... lines) throws IOException {
         String json = JSON(lines);
         String[] tokens = XJSONParser.split(json);
         JsonMapParser parser = new JsonMapParser(tokens,0);
