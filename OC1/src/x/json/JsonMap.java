@@ -1,5 +1,6 @@
 package x.json;
 
+import java.net.URI;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
@@ -69,6 +70,34 @@ public final class JsonMap
     public boolean equals(Object o) {
         JsonMap that = (JsonMap) o;
         return map.equals(that.map);
+    }
+
+    public JsonList list(String name) {
+        return null;
+    }
+
+    public JsonMap map(String name) {
+        return null;
+    }
+
+    public String string(String name) {
+        return null;
+    }
+
+    public URI uri(String name) {
+        return null;
+    }
+
+    public Long longValue(String name) {
+        return null;
+    }
+
+    public Double doubleValue(String name) {
+        return null;
+    }
+
+    public Boolean booleanValue(String name) {
+        return null;
     }
 
     @Override

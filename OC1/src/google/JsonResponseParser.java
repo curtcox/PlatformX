@@ -16,13 +16,19 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-abstract class JsonResponseParser<T>
+final class JsonResponseParser<T>
 {
+    final IJsonResponseParser<T> itemParser;
+
+    JsonResponseParser(IJsonResponseParser<T> itemParser) {
+        this.itemParser = itemParser;
+    }
+
     final List<T> parseJsonResponse(InputStreamReader reader) {
         List<T> list = new ArrayList<T>();
         try {
             for (JsonMap result : results((JsonMap) XJSONParser.parse(reader))) {
-                list.add(construct(result));
+                list.add(itemParser.construct(result));
             }
             return list;
         } catch (IOException e) {
@@ -40,32 +46,30 @@ abstract class JsonResponseParser<T>
         }
         return (List)tree.get("results");
     }
-    
-    abstract T construct(JsonMap map);
-    
-    final String stringFrom(JsonMap map, String key) {
-        return map.get(key).toString();
-    }
 
-    final Double doubleFrom(JsonMap map, String key) {
-        JsonValue value = (JsonValue) map.get(key);
-        return value.doubleValue();
-    }
-
-    final Long longFrom(JsonMap map, String key) {
-        JsonValue value = (JsonValue) map.get(key);
-        return value.longValue();
-    }
-
-    final URI uriFrom(JsonMap map, String key) {
-        String string = stringFrom(map,key);
-        try {
-            return (string==null) ? null : new URI(string);
-        } catch (URISyntaxException e) {
-            log(e);
-            return null;
-        }
-    }
+//    final String stringFrom(JsonMap map, String key) {
+//        return map.get(key).toString();
+//    }
+//
+//    final Double doubleFrom(JsonMap map, String key) {
+//        JsonValue value = (JsonValue) map.get(key);
+//        return value.doubleValue();
+//    }
+//
+//    final Long longFrom(JsonMap map, String key) {
+//        JsonValue value = (JsonValue) map.get(key);
+//        return value.longValue();
+//    }
+//
+//    final URI uriFrom(JsonMap map, String key) {
+//        String string = stringFrom(map,key);
+//        try {
+//            return (string==null) ? null : new URI(string);
+//        } catch (URISyntaxException e) {
+//            log(e);
+//            return null;
+//        }
+//    }
     
     private void log(Exception e) {
         getLog().log(e);    

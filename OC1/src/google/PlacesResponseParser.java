@@ -6,23 +6,23 @@ import java.util.List;
 import java.util.Map;
 
 final class PlacesResponseParser
-    extends JsonResponseParser
+    implements IJsonResponseParser<Place>
 {
-    Place construct(JsonMap map) {
+    public Place construct(JsonMap map) {
         Place place = new Place();
-        place.name        = stringFrom(map,"name");
-        place.address     = stringFrom(map,"formatted_address");
-        place.vicinity    = stringFrom(map,"vicinity");
-        place.id          = stringFrom(map,"place_id");
-        place.reference   = stringFrom(map,"reference");
+        place.name        = map.string("name");
+        place.address     = map.string("formatted_address");
+        place.vicinity    = map.string("vicinity");
+        place.id          = map.string("place_id");
+        place.reference   = map.string("reference");
         Geometry geometry = Geometry.of(map);
         place.latitude    = geometry.latitude;
         place.longitude   = geometry.longitude;
-        place.open_now    = null;
-        place.icon        = uriFrom(map,"icon");
-        place.price_level = longFrom(map,"price_level");
-        place.rating      = doubleFrom(map,"rating");
-        place.types       = (String[]) ((List) map.get("types")).toArray(new String[0]);
+        place.open_now    = map.map("opening_hours").booleanValue("open_now");
+        place.icon        = map.uri("icon");
+        place.price_level = map.longValue("price_level");
+        place.rating      = map.doubleValue("rating");
+        place.types       = map.list("types").toArray(new String[0]);
         return place;
     }
     

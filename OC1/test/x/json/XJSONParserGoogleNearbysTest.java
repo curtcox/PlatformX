@@ -234,7 +234,7 @@ public class XJSONParserGoogleNearbysTest {
         assertJsonStringEquals("establishment", types.get(4));
     }
 
-    private static Object parse(String... lines) throws IOException {
+    private static Json parse(String... lines) throws IOException {
         String json = JSON(lines);
         return XJSONParser.parse(new StringReader(json));
     }

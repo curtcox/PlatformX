@@ -6,11 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 final class GeocodeResponseParser
-    extends JsonResponseParser
+    implements IJsonResponseParser<GoogleLocation>
 {
-    GoogleLocation construct(JsonMap map) {
+    public GoogleLocation construct(JsonMap map) {
         GoogleLocation location  = new GoogleLocation();
-        location.address   = stringFrom(map,"formatted_address");
+        location.address   = map.string("formatted_address");
         Geometry geometry  = Geometry.of(map);
         location.type      = geometry.locationType;
         location.latitude  = geometry.latitude;
