@@ -47,7 +47,7 @@ public class PlacesItemConstructorTest {
         Place place = parser.construct(sample());
         assertNotNull(place);
         assertEquals("ChIJ3XZe1NQ034cRWbeNNRW9hDM",place.id);
-        assertEquals("First Banks Inc',",place.name);
+        assertEquals("First Banks Inc",place.name);
         assertEquals("CnRiAAlT3oghT7cE",place.reference);
         assertEquals("135 North Meramec Avenue, Clayton",place.vicinity);
         assertEquals(
@@ -55,7 +55,7 @@ public class PlacesItemConstructorTest {
             place.icon);
         assertEquals(
             Arrays.asList("bank", "atm", "finance", "point_of_interest", "establishment"),
-            place.types);
+            Arrays.asList(place.types));
         assertFalse(place.open_now);
         assertEquals(38.652775, place.latitude, 0.00001);
         assertEquals(-90.339675,place.longitude,0.00001);

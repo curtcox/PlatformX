@@ -1,6 +1,11 @@
 package google;
 
+import x.json.Json;
 import x.json.JsonMap;
+import x.json.JsonValue;
+
+import java.util.ArrayList;
+import java.util.List;
 
 final class PlacesItemConstructor
     implements JsonItemConstructor<Place>
@@ -12,7 +17,7 @@ final class PlacesItemConstructor
         place.vicinity    = map.string("vicinity");
         place.id          = map.string("place_id");
         place.reference   = map.string("reference");
-        Geometry geometry = Geometry.of(map);
+        Geometry geometry = Geometry.of(map.map("geometry"));
         place.latitude    = geometry.latitude;
         place.longitude   = geometry.longitude;
         place.open_now    = map.map("opening_hours").booleanValue("open_now");
@@ -24,7 +29,11 @@ final class PlacesItemConstructor
     }
 
     String[] placeTypes(JsonMap map) {
-        //place.types       = map.list("types").toArray();
-        return null;
+        List<String> list = new ArrayList();
+        for (Object o : map.list("types")) {
+            JsonValue value = (JsonValue) o;
+            list.add(value.toString());
+        }
+        return list.toArray(new String[0]);
     }
 }
