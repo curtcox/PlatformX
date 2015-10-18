@@ -20,8 +20,8 @@ public class JsonRendererTest {
     public void list_returns_JsonList_containing_all_json() {
         JsonList list = JsonRenderer.list("string",true,false,7L,676.6767);
         assertEquals(5,list.size());
-        for (Json json : list) {
-            assertNotNull(json);
+        for (Object json : list) {
+            assertTrue(json instanceof Json);
         }
     }
 

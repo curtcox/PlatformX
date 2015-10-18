@@ -8,7 +8,7 @@ import java.util.ListIterator;
 /**
  * An immutable list of Json.
  */
-public final class JsonList
+public final class JsonList<T extends Json>
     implements Json, List<Json>
 {
     private List<Json> list;
@@ -60,17 +60,18 @@ public final class JsonList
         JsonList that = (JsonList) o;
         return list.equals(that.list);
     }
+
+    @Override
+    public Json[] toArray() {
+        throw never();
+    }
+
     // ------------- Never --------------
     private UnsupportedOperationException never() {
         return new UnsupportedOperationException();
     }
     @Override
     public boolean contains(Object o) {
-        throw never();
-    }
-
-    @Override
-    public Object[] toArray() {
         throw never();
     }
 

@@ -1,7 +1,9 @@
 package google;
 
+import x.json.Json;
 import x.json.JsonMap;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
@@ -22,8 +24,12 @@ final class PlacesResponseParser
         place.icon        = map.uri("icon");
         place.price_level = map.longValue("price_level");
         place.rating      = map.doubleValue("rating");
-        place.types       = map.list("types").toArray(new String[0]);
+        place.types       = placeTypes(map);
         return place;
     }
-    
+
+    String[] placeTypes(JsonMap map) {
+        //place.types       = map.list("types").toArray();
+        return null;
+    }
 }

@@ -12,11 +12,11 @@ import java.util.Map;
 abstract class WebServiceSearch<T> {
     
     final String baseURI;
-    final JsonResponseParser<T> parser;
+    final ResultsListResponseParser<T> parser;
     
     WebServiceSearch(String baseURI,IJsonResponseParser<T> parser) {
         this.baseURI = baseURI;
-        this.parser = new JsonResponseParser<T>(parser);
+        this.parser = new ResultsListResponseParser<T>(parser);
     }
     
     URI getURI(Map<String,String> parameters) {
