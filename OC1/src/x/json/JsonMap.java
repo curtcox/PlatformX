@@ -1,6 +1,7 @@
 package x.json;
 
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.util.Collection;
 import java.util.Map;
 import java.util.Set;
@@ -73,31 +74,39 @@ public final class JsonMap
     }
 
     public JsonList list(String name) {
-        return null;
+        return (JsonList) get(name);
     }
 
     public JsonMap map(String name) {
-        return null;
+        return (JsonMap) get(name);
+    }
+
+    private JsonValue value(String key) {
+        return (JsonValue) get(key);
     }
 
     public String string(String name) {
-        return null;
+        return containsKey(name) ? value(name).toString() : null;
     }
 
     public URI uri(String name) {
-        return null;
+        try {
+            return containsKey(name) ? new URI(value(name).toString()) : null;
+        } catch (URISyntaxException e) {
+            return null;
+        }
     }
 
     public Long longValue(String name) {
-        return null;
+        return containsKey(name) ? value(name).longValue() : null;
     }
 
     public Double doubleValue(String name) {
-        return null;
+        return containsKey(name) ? value(name).doubleValue() : null;
     }
 
     public Boolean booleanValue(String name) {
-        return null;
+        return containsKey(name) ? value(name).booleanValue() : null;
     }
 
     @Override
