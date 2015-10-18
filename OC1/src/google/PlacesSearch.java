@@ -13,7 +13,7 @@ public final class PlacesSearch
     private static final String OR = "%7C";
     
     public PlacesSearch() {
-        super("https://maps.googleapis.com/maps/api/place/nearbysearch/json?",new PlacesResponseParser());    
+        super("https://maps.googleapis.com/maps/api/place/nearbysearch/json?",new PlacesItemConstructor());
     }
     
     public List<Place> nearbySearch(double latitude, double longitude, int radius, String[] types) {

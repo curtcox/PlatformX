@@ -14,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 
-public class PlacesResponseParserTest {
+public class PlacesItemConstructorTest {
 
     JsonMap sample() throws IOException {
         return (JsonMap) parse(
@@ -43,7 +43,7 @@ public class PlacesResponseParserTest {
 
     @Test
     public void can_parse_sample() throws Exception {
-        PlacesResponseParser parser = new PlacesResponseParser();
+        PlacesItemConstructor parser = new PlacesItemConstructor();
         Place place = parser.construct(sample());
         assertNotNull(place);
         assertEquals("ChIJ3XZe1NQ034cRWbeNNRW9hDM",place.id);

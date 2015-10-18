@@ -14,7 +14,7 @@ abstract class WebServiceSearch<T> {
     final String baseURI;
     final ResultsListResponseParser<T> parser;
     
-    WebServiceSearch(String baseURI,IJsonResponseParser<T> parser) {
+    WebServiceSearch(String baseURI, JsonItemConstructor<T> parser) {
         this.baseURI = baseURI;
         this.parser = new ResultsListResponseParser<T>(parser);
     }

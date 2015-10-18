@@ -11,7 +11,7 @@ public final class Geocoding
     extends WebServiceSearch
 {
     public Geocoding() {
-        super("https://maps.googleapis.com/maps/api/geocode/json?",new GeocodeResponseParser());
+        super("https://maps.googleapis.com/maps/api/geocode/json?",new GeocodeItemConstructor());
     }
     
     public List<GoogleLocation> searchFor(String place) {

@@ -3,10 +3,9 @@ package google;
 import x.json.JsonMap;
 
 import java.util.List;
-import java.util.Map;
 
-final class GeocodeResponseParser
-    implements IJsonResponseParser<GoogleLocation>
+final class GeocodeItemConstructor
+    implements JsonItemConstructor<GoogleLocation>
 {
     public GoogleLocation construct(JsonMap map) {
         GoogleLocation location  = new GoogleLocation();

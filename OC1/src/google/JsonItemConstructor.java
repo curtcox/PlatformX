@@ -2,6 +2,6 @@ package google;
 
 import x.json.JsonMap;
 
-interface IJsonResponseParser<T> {
+interface JsonItemConstructor<T> {
     T construct(JsonMap map);
 }

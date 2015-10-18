@@ -15,9 +15,9 @@ import java.util.List;
 
 final class ResultsListResponseParser<T>
 {
-    final IJsonResponseParser<T> itemParser;
+    final JsonItemConstructor<T> itemParser;
 
-    ResultsListResponseParser(IJsonResponseParser<T> itemParser) {
+    ResultsListResponseParser(JsonItemConstructor<T> itemParser) {
         this.itemParser = itemParser;
     }
 

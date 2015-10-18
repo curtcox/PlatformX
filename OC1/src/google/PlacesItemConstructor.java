@@ -1,14 +1,9 @@
 package google;
 
-import x.json.Json;
 import x.json.JsonMap;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-
-final class PlacesResponseParser
-    implements IJsonResponseParser<Place>
+final class PlacesItemConstructor
+    implements JsonItemConstructor<Place>
 {
     public Place construct(JsonMap map) {
         Place place = new Place();
