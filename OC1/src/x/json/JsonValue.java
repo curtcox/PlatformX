@@ -33,7 +33,7 @@ public final class JsonValue
     }
 
     public Double doubleValue() {
-        return doubleValue;
+        return doubleValue !=null ? doubleValue : longValue;
     }
 
     public Long longValue() {

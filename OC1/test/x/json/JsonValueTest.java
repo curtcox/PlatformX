@@ -97,6 +97,13 @@ public class JsonValueTest {
     }
 
     @Test
+    public void doubleValue_is_available_when_long_supplied() {
+        Object value = 2718281828L;
+        JsonValue json = JsonValue.of(value);
+        assertEquals(2718281828.0,json.doubleValue(),0.5);
+    }
+
+    @Test
     public void of_object_uses_boolean_when_boolean() {
         Object value = false;
         JsonValue json = JsonValue.of(value);
