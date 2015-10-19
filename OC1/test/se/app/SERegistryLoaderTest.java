@@ -2,6 +2,7 @@ package se.app;
 
 import config.ShouldRun;
 import org.junit.Before;
+import x.app.CurrentState;
 import x.app.Registry;
 import x.page.dynamic.TaggedStringSources;
 import x.util.StringMap;
@@ -24,6 +25,7 @@ public class SERegistryLoaderTest {
 
         assertNotNull(Registry.get(StringMap.class));
         assertNotNull(Registry.get(TaggedValueStringMap.class));
+        assertNotNull(Registry.get(CurrentState.class));
     }
 
     @Test

@@ -162,6 +162,35 @@ public class SEUIRendererTest {
         assertTrue(actual.getComponent(1) instanceof JLabel);
     }
 
+    @Test
+    public void render_a_1_by_1_table_produces_a_1_by_1_grid_layout() {
+        XTable table = new XTable(1,1);
+        JPanel actual = (JPanel) render(table);
+        assertTrue(actual.getLayout() instanceof GridLayout);
+        GridLayout grid = (GridLayout) actual.getLayout();
+        assertEquals(1,grid.getRows());
+        assertEquals(1,grid.getColumns());
+    }
+
+    @Test
+    public void render_a_table_produces_a_grid_layout_with_the_same_dimensions() {
+        XTable table = new XTable(1,2);
+        JPanel actual = (JPanel) render(table);
+        assertTrue(actual.getLayout() instanceof GridLayout);
+        GridLayout grid = (GridLayout) actual.getLayout();
+        assertEquals(1,grid.getRows());
+        assertEquals(2,grid.getColumns());
+    }
+
+    @Test
+    public void render_a_table_with_a_button_and_a_label() {
+        XTable table = new XTable(1,2,new FakeButton(""),new XLabel());
+        JPanel actual = (JPanel) render(table);
+        assertEquals(2,actual.getComponentCount());
+        assertTrue(actual.getComponent(0) instanceof JButton);
+        assertTrue(actual.getComponent(1) instanceof JLabel);
+    }
+
     private JComponent render(XComponent component) {
         return SEUIRenderer.render(component);
     }

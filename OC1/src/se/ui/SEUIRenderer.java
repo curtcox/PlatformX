@@ -6,6 +6,7 @@ import x.log.ILogManager;
 import x.uiwidget.*;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -21,6 +22,7 @@ final class SEUIRenderer {
         if (layout instanceof XFlow)             { return flow(layout);   }
         if (layout instanceof XColumn)           { return column(layout); }
         if (layout instanceof XRow)              { return row(layout);    }
+        if (layout instanceof XTable)            { return table(layout);  }
         String message = layout == null ? "null" : layout.getClass().getName();
         IllegalArgumentException e = new IllegalArgumentException(message);
         log(e);
@@ -43,18 +45,28 @@ final class SEUIRenderer {
     static JPanel box(XComponent layout,int axis) {
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel,axis));
-        for (XComponent component : ((XContainer) layout).components) {
-            panel.add(render(component));
-        }
+        layoutPanel(layout,panel);
+        return panel;
+    }
+
+    static JPanel table(XComponent layout) {
+        JPanel panel = new JPanel();
+        XTable table = (XTable) layout;
+        panel.setLayout(new GridLayout(table.rows,table.columns));
+        layoutPanel(layout,panel);
         return panel;
     }
 
     static JPanel flow(XComponent layout) {
         JPanel panel = new JPanel();
+        layoutPanel(layout,panel);
+        return panel;
+    }
+
+    static void layoutPanel(XComponent layout, JPanel panel) {
         for (XComponent component : ((XContainer) layout).components) {
             panel.add(render(component));
         }
-        return panel;
     }
 
     static JButton button(XComponent layout) {
