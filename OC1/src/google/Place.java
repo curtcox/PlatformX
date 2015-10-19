@@ -31,10 +31,11 @@ public final class Place {
         vicinity    = map.string("vicinity");
         id          = map.string("place_id");
         reference   = map.string("reference");
-        Geometry geometry = Geometry.of(map.map("geometry"));
-        latitude    = geometry.latitude;
-        longitude   = geometry.longitude;
-        open_now    = map.map("opening_hours").booleanValue("open_now");
+        Geometry geometry = geometry(map);
+        latitude = geometry==null ? null : geometry.latitude;
+        longitude = geometry==null ? null :geometry.longitude;
+        JsonMap openingHours = openingHours(map);
+        open_now    = openingHours==null ? null : openingHours.booleanValue("open_now");
         icon        = map.uri("icon");
         price_level = map.longValue("price_level");
         rating      = map.doubleValue("rating");
@@ -49,11 +50,25 @@ public final class Place {
         }
     }
 
+    static JsonMap openingHours(JsonMap map) {
+        return map.containsKey("opening_hours")
+               ? map.map("opening_hours")
+               : null;
+    }
+
+    static Geometry geometry(JsonMap map) {
+        return map.containsKey("geometry")
+               ? Geometry.of(map.map("geometry"))
+               : null;
+    }
+
     String[] placeTypes(JsonMap map) {
         List<String> list = new ArrayList();
-        for (Object o : map.list("types")) {
-            JsonValue value = (JsonValue) o;
-            list.add(value.toString());
+        if (map.containsKey("types")) {
+            for (Object o : map.list("types")) {
+                JsonValue value = (JsonValue) o;
+                list.add(value.toString());
+            }
         }
         return list.toArray(new String[0]);
     }

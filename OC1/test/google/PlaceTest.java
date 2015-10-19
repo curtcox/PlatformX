@@ -1,7 +1,6 @@
 package google;
 
 import org.junit.Test;
-import x.json.Json;
 import x.json.JsonMap;
 import x.json.XJSONParser;
 
@@ -10,14 +9,12 @@ import java.io.StringReader;
 import java.net.URI;
 import java.util.Arrays;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 public class PlaceTest {
 
     JsonMap sample() throws IOException {
-        return (JsonMap) parse(
+        return parse(
         "{",
         "    'geometry' : {",
         "        'location' : {",
@@ -42,6 +39,13 @@ public class PlaceTest {
     }
 
     @Test
+    public void can_parse_empty_map() throws Exception {
+        Place.Constructor parser = new Place.Constructor();
+        Place place = parser.construct(parse("{}"));
+        assertNotNull(place);
+    }
+
+    @Test
     public void can_parse_sample() throws Exception {
         Place.Constructor parser = new Place.Constructor();
         Place place = parser.construct(sample());
@@ -61,9 +65,9 @@ public class PlaceTest {
         assertEquals(-90.339675,place.longitude,0.00001);
     }
 
-    private static Json parse(String... lines) throws IOException {
+    private static JsonMap parse(String... lines) throws IOException {
         String json = JSON(lines);
-        return XJSONParser.parse(new StringReader(json));
+        return (JsonMap) XJSONParser.parse(new StringReader(json));
     }
 
     static String JSON(String... lines) {
