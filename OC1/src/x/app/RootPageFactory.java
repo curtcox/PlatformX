@@ -45,14 +45,14 @@ public final class RootPageFactory {
         .firstCheck(
             NamedValuePageFactory.of(),
             ServiceProviderSearchScreenFactory.FACTORY,
-            ServiceProviderFilterPageFactory.FACTORY
+            ServiceProviderFilterPageFactory.FACTORY,
+            ProviderDetailsPage.FACTORY
         )
         .thenCheck(
                 DeviceInfoPageFactory.of(),
                 LogEntryPageFactory.of(),
                 RegistryInfoPageFactory.of(),
                 LocationSelectionPageFactory.FACTORY,
-                ProviderDetailsPage.FACTORY,
                 CustomComponentPage.FACTORY,
                 dynamicScreens(layouts),
                 IndexPageFactory.of(PageTags.of("Index"), index),
