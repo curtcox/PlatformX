@@ -5,6 +5,7 @@ import org.junit.Before;
 import x.app.CurrentState;
 import x.app.Registry;
 import x.page.dynamic.TaggedStringSources;
+import x.uilist.XListContentInstaller;
 import x.util.StringMap;
 import org.junit.Test;
 import se.util.TaggedValueStringMap;
@@ -25,6 +26,7 @@ public class SERegistryLoaderTest {
 
         assertNotNull(Registry.get(StringMap.class));
         assertNotNull(Registry.get(TaggedValueStringMap.class));
+        assertNotNull(Registry.get(XListContentInstaller.class));
         assertNotNull(Registry.get(CurrentState.class));
     }
 
