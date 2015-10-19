@@ -13,6 +13,7 @@ import se.uilist.SESearchableListFactory;
 import se.util.SERunner;
 import se.util.SimpleTaggedValueStringMap;
 import se.util.TaggedValueStringMap;
+import x.app.CurrentState;
 import x.app.Registry;
 import x.app.RootPageFactory;
 import x.device.XDeviceInfo;
@@ -74,6 +75,7 @@ final class SERegistryLoader {
         put(XStorage.class,                   new SERamStorage());
         put(MyRatings.class,                  new MyRatings());
         put(ScreenEditor.class,     ScreenEditor.of());
+        put(CurrentState.class,            new CurrentState());
     }
 
     private static void putTaggedValueStringMap() {
