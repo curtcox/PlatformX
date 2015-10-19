@@ -1,7 +1,9 @@
 package google;
 
 import x.json.JsonMap;
+import x.json.JsonValue;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -16,11 +18,26 @@ public final class GoogleLocation {
 
     private GoogleLocation(JsonMap map) {
         address   = map.string("formatted_address");
-        Geometry geometry  = Geometry.of(map);
-        type      = geometry.locationType;
-        latitude  = geometry.latitude;
-        longitude = geometry.longitude;
-        types     = (String[]) ((List) map.get("types")).toArray(new String[0]);
+        Geometry geometry = geometry(map);
+        type      = geometry==null ? null : geometry.locationType;
+        latitude  = geometry==null ? null : geometry.latitude;
+        longitude = geometry==null ? null : geometry.longitude;
+        types     = types(map);
+    }
+
+    static String[] types(JsonMap map) {
+        List<String> list = new ArrayList<String>();
+        if (map.containsKey("types")) {
+            for (Object o : map.list("types")) {
+                JsonValue value = (JsonValue) o;
+                list.add(value.toString());
+            }
+        }
+        return list.toArray(new String[0]);
+    }
+
+    static Geometry geometry(JsonMap map) {
+        return map.containsKey("geometry") ? Geometry.of(map.map("geometry")) : null;
     }
 
     static final class Constructor

@@ -1,6 +1,5 @@
 package google;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 import x.json.JsonMap;
 import x.json.XJSONParser;
@@ -54,8 +53,8 @@ public class GoogleLocationTest {
         assertNotNull(location);
         assertEquals("1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",location.address);
         assertEquals("ROOFTOP",location.type);
-        assertEquals(37.4238253802915,location.latitude,0.0001);
-        assertEquals(-122.0829009197085,location.longitude,0.0001);
+        assertEquals(37.4224764,  location.latitude, 0.000001);
+        assertEquals(-122.0842499,location.longitude,0.000001);
         assertEquals(1,location.types.length);
         assertEquals("street_address",location.types[0]);
     }
