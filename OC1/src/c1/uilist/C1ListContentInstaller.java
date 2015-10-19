@@ -3,12 +3,12 @@ package c1.uilist;
 import com.codename1.ui.TextField;
 import com.codename1.ui.events.DataChangedListener;
 import x.event.SwappableList;
-import x.uilist.IListContentInstaller;
+import x.uilist.XListContentInstaller;
 import x.uilist.StringToList;
 import x.uiwidget.XSearchableList;
 
 final class C1ListContentInstaller
-    implements IListContentInstaller {
+    implements XListContentInstaller {
 
     private static void c1SpecificInstall(final C1SearchableList list, final SwappableList items, final StringToList stringToList) {
         final TextField search = list.searchTerm;

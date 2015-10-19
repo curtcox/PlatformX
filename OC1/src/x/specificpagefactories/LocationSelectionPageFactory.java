@@ -10,7 +10,7 @@ import x.page.PageLink;
 import x.page.dynamic.GlobPageFactory;
 import x.pageparts.LocationListCellConfigurer;
 import x.pages.LocationSelectionPage;
-import x.uilist.IListContentInstaller;
+import x.uilist.XListContentInstaller;
 import x.uiwidget.XSearchableList;
 
 import java.util.ArrayList;
@@ -51,8 +51,8 @@ public final class LocationSelectionPageFactory {
         return Registry.get(XSearchableList.Factory.class).builder();
     }
 
-    private static IListContentInstaller contentInstaller() {
-        return Registry.get(IListContentInstaller.class);
+    private static XListContentInstaller contentInstaller() {
+        return Registry.get(XListContentInstaller.class);
     }
 
 }
