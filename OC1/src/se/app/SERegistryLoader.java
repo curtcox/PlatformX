@@ -30,6 +30,7 @@ import x.page.dynamic.TaggedStringSources;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.pagefactories.XItemListPageFactoryFactory;
 import x.services.XConsumerServiceProviders;
+import x.services.XGeocoder;
 import x.services.XLocationProvider;
 import x.services.XLocationService;
 import x.stores.MyRatings;
@@ -70,6 +71,7 @@ final class SERegistryLoader {
         put(XListContentInstaller.class,      new SEListContentInstaller());
         put(ConsumerServiceProvider.class,    ConsumerServiceProvider.NULL);
         put(XLocationProvider.class,          new SELocationProvider());
+        put(XGeocoder.class,                  new XGeocoder());
         put(XLocationService.class,           XLocationService.create());
         put(XConsumerServiceProviders.class,  new XConsumerServiceProviders());
         put(ItemListPageFactoryFactory.class, new XItemListPageFactoryFactory());

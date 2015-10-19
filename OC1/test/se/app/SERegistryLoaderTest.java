@@ -5,6 +5,7 @@ import org.junit.Before;
 import x.app.CurrentState;
 import x.app.Registry;
 import x.page.dynamic.TaggedStringSources;
+import x.services.XGeocoder;
 import x.uilist.XListContentInstaller;
 import x.util.StringMap;
 import org.junit.Test;
@@ -28,6 +29,7 @@ public class SERegistryLoaderTest {
         assertNotNull(Registry.get(TaggedValueStringMap.class));
         assertNotNull(Registry.get(XListContentInstaller.class));
         assertNotNull(Registry.get(CurrentState.class));
+        assertNotNull(Registry.get(XGeocoder.class));
     }
 
     @Test
