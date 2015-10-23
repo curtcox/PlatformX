@@ -1,7 +1,6 @@
 package x.parse;
 
 import config.ShouldRun;
-import hash.lex.Tokens;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -125,7 +124,7 @@ public class LexerTest {
 
     @Test
     public void split_words_with_tabs_between_them() {
-        split("one\ntwo\nthree","one","two","three");    
+        split("one\ttwo\tthree","one","two","three");
     }
 
     @Test
@@ -134,11 +133,23 @@ public class LexerTest {
     }
 
     private void split(String original,String... expected) {
-        String[] actual = Lexer.transform(Tokens.split(original));
+        String[] actual = Lexer.transform(split(original));
         String message = Arrays.asList(actual) + "!=" + Arrays.asList(expected);
         assertEquals(message, expected.length, actual.length);
         for (int i=0; i<expected.length; i++) {
             assertEquals(expected[i], actual[i]);
         }
+    }
+
+    static String[] split(String string) {
+        return Lexer.transform(parts(string));
+    }
+
+    private static String[] parts(String string) {
+        return Tokenizer.tokenize(string,
+             " ", "\t", "\r", "\n",
+              ".", ",", "^", "?", ":", "{", "}", "(", ")",
+               "\"", "\\",
+                "#");
     }
 }

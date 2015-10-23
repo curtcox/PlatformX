@@ -12,7 +12,7 @@ public final class Identifier {
     public static final String[] SPECIAL = new String[] {
         " ", "\t", "\r", "\n", 
         ".", "?", ":", ",", "^", "{", "}", "(", ")",
-        "\"", "\\",
+        "\"",
         "#"
     };
     

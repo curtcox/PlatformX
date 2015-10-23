@@ -73,7 +73,7 @@ public final class Tokens {
         return tokens.toArray(new String[0]);
     }
 
-    public static String[] split(String string) {
+    static String[] split(String string) {
         return Lexer.transform(parts(string));
     }
 
