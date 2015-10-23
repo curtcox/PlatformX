@@ -34,7 +34,7 @@ public final class ScreenEditor {
 
     void init() {
         frame.getContentPane().add(editor);
-        frame.setSize(500,500);
+        frame.pack();
     }
 
     void register() {

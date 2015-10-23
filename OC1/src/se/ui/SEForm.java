@@ -15,7 +15,7 @@ public final class SEForm
 {
     private final PageLink link;
     private XCommand back;
-    private XCommand edit;
+    private final XCommand edit;
     private JButton backButton;
     private JButton editButton;
     private XComponent layout;
@@ -58,6 +58,7 @@ public final class SEForm
 
     JButton editButton() {
         JButton button = new JButton("#");
+        button.setToolTipText("Edit " + link);
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent actionEvent) {

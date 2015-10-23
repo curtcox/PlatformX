@@ -60,4 +60,23 @@ public final class StringEditor
         textArea.setText(text);
     }
 
+    @Override
+    public Dimension getPreferredSize() {
+        return new Dimension(500, 500);
+    }
+
+    @Override
+    public Dimension getSize() {
+        return getPreferredSize();
+    }
+
+    @Override
+    public Dimension getMinimumSize() {
+        return getPreferredSize();
+    }
+
+    @Override
+    public Dimension getMaximumSize() {
+        return getPreferredSize();
+    }
 }
