@@ -1,6 +1,8 @@
 package google;
 
 import x.app.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
 import x.net.Network;
 
 import java.io.InputStream;
@@ -25,10 +27,28 @@ abstract class WebServiceSearch<T> {
     }
     
     List<T> searchForPlaces(URI url) {
-        return parser.parseJsonResponse(new InputStreamReader(getStreamFor(url)));
+        try {
+            log("url="+url);
+            return parser.parseJsonResponse(new InputStreamReader(getStreamFor(url)));
+        } catch (IllegalArgumentException e) {
+            log(e);
+            throw e;
+        }
     }
     
     InputStream getStreamFor(URI url) {
         return Registry.get(Network.class).getStreamFor(url);
+    }
+
+    private void log(String message) {
+        getLog().log(message);
+    }
+
+    private static void log(Exception e) {
+        getLog().log(e);
+    }
+
+    private static ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(WebServiceSearch.class);
     }
 }

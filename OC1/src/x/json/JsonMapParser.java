@@ -60,6 +60,10 @@ final class JsonMapParser {
             }
             value = token;
         }
+        for (int i=0; i<tokens.length; i++) {
+            System.out.println(i +"=" + tokens[i]);
+        }
+        System.out.println("start="+start);
         throw new IllegalArgumentException("No closing (}) found");
     }
 

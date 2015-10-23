@@ -5,6 +5,8 @@ import hash.lex.Tokens;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.Arrays;
+
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assume.assumeTrue;
 
@@ -37,6 +39,11 @@ public class LexerTest {
     }
 
     @Test
+    public void split_returns_two_double_quotes_containing_escaped_double_quote_as_one_token() {
+        split("\"\\\"\"","\"\"\"");
+    }
+
+    @Test
     public void split_returns_two_double_quotes_with_content_as_one_token() {
         split("\"stuff\"","\"stuff\"");    
     }
@@ -49,6 +56,11 @@ public class LexerTest {
     @Test
     public void split_returns_two_double_quotes_with_content_and_line_feeds_as_one_token() {
         split("\"N\r\nE\"","\"N\r\nE\"");    
+    }
+
+    @Test
+    public void split_returns_two_double_quotes_with_content_and_escaped_double_quote_as_one_token() {
+        split("\"I\\\"M\"","\"I\"M\"");
     }
 
     @Test
@@ -123,7 +135,8 @@ public class LexerTest {
 
     private void split(String original,String... expected) {
         String[] actual = Lexer.transform(Tokens.split(original));
-        assertEquals(expected.length, actual.length);
+        String message = Arrays.asList(actual) + "!=" + Arrays.asList(expected);
+        assertEquals(message, expected.length, actual.length);
         for (int i=0; i<expected.length; i++) {
             assertEquals(expected[i], actual[i]);
         }

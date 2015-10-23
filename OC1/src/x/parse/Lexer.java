@@ -14,6 +14,7 @@ public final class Lexer {
 
     private final List<String> parts = new ArrayList<String>();
     private boolean quoting = false;
+    private boolean escaping = false;
     private boolean commenting = false;
     private StringBuilder quoted = new StringBuilder();
 
@@ -22,27 +23,46 @@ public final class Lexer {
     private String[] transformTokens(String[] strings) {
         for (String part : strings) {
             if (commenting) {
-               if (commentEnd(part)) {
-                   commenting = false;
-               }
+                processComment(part);
             } else if (quoting) {
-                quoted.append(part);
-                if (quote(part)) {
-                    endQuote();
-                }
+                processQuoted(part);
             } else {
-                if (commentStart(part)) {
-                    commenting = true;
-                } else if (quote(part)) {
-                    beginQuote(part);
-                } else {
-                    if (!whitespace(part)) {
-                        parts.add(part);
-                    }
-                }
+                processUnquotedUncommented(part);
             }
         }
         return parts.toArray(new String[0]);
+    }
+
+    private void processUnquotedUncommented(String part) {
+        if (commentStart(part)) {
+            commenting = true;
+        } else if (quote(part)) {
+            beginQuote(part);
+        } else {
+            if (!whitespace(part)) {
+                parts.add(part);
+            }
+        }
+    }
+
+    private void processQuoted(String part) {
+        if (escaping) {
+            escaping = false;
+            quoted.append(part);
+        } else if (escape(part)) {
+            escaping = true;
+        } else {
+            quoted.append(part);
+            if (quote(part)) {
+                endQuote();
+            }
+        }
+    }
+
+    private void processComment(String part) {
+        if (commentEnd(part)) {
+            commenting = false;
+        }
     }
 
     private void beginQuote(String part) {
@@ -71,6 +91,10 @@ public final class Lexer {
 
     private static boolean quote(String string) {
         return string.equals("\"");
+    }
+
+    private static boolean escape(String string) {
+        return string.equals("\\");
     }
 
     private static boolean commentStart(String string) {
