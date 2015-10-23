@@ -52,6 +52,11 @@ public class XJSONParserTest {
     }
 
     @Test
+    public void a_string_with_an_escaped_embedded_quote_in_a_list() throws IOException {
+        assertEquals(list("ba\"ney"), parse("['ba\\'ney']"));
+    }
+
+    @Test
     public void pair_of_strings_in_a_list() throws IOException {
         assertEquals(list("fred", "wilma"), parse("['fred','wilma']"));
     }
