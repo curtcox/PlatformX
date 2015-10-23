@@ -53,7 +53,7 @@ public final class Screen {
     }
 
     private XCommand backCommand() {
-        return new XCommand("Back") {
+        return new XCommand("Back to " + previous.link) {
             @Override public void action(Object... args) {
                 back();
             }

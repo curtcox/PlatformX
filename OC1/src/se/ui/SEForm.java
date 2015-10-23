@@ -92,6 +92,7 @@ public final class SEForm
     public void setBackCommand(XCommand back) {
         this.back = back;
         backButton.setEnabled(back!=null);
+        backButton.setToolTipText(back==null ? null : back.command);
     }
 
     @Override
