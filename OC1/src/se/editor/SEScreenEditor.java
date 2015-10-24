@@ -14,7 +14,7 @@ import x.uiwidget.XComponent;
 import javax.swing.*;
 import java.awt.*;
 
-public final class ScreenEditor {
+public final class SEScreenEditor {
 
     TaggedValue editing;
     Page page;
@@ -24,16 +24,16 @@ public final class ScreenEditor {
     final JLabel layoutLabel = new JLabel();
     final StringEditor editor = new StringEditor(textListener(),null);
 
-    private static ScreenEditor screenEditor;
+    private static SEScreenEditor screenEditor;
 
     /**
      * Only use this for testing.
      */
-    ScreenEditor() {}
+    SEScreenEditor() {}
 
-    public static ScreenEditor of() {
+    public static SEScreenEditor of() {
         if (screenEditor == null) {
-            screenEditor = new ScreenEditor();
+            screenEditor = new SEScreenEditor();
             screenEditor.register();
             screenEditor.init();
         }

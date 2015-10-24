@@ -1,7 +1,7 @@
 package se.app;
 
 import se.device.SEDeviceInfo;
-import se.editor.ScreenEditor;
+import se.editor.SEScreenEditor;
 import se.event.SESwappableListFactory;
 import se.events.Events;
 import se.services.SELocationProvider;
@@ -79,7 +79,7 @@ final class SERegistryLoader {
         put(PageFactory.class,      RootPageFactory.of());
         put(XStorage.class,                   new SERamStorage());
         put(MyRatings.class,                  new MyRatings());
-        put(ScreenEditor.class,     ScreenEditor.of());
+        put(SEScreenEditor.class,     SEScreenEditor.of());
         put(CurrentState.class,            new CurrentState());
     }
 

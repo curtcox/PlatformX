@@ -27,7 +27,7 @@ public class ScreenEditorDemo {
     private static void loadRegistry() {
         Registry.put(SimpleTaggedValueStringMap.class,new SimpleTaggedValueStringMap());
         Registry.put(Events.class,new Events());
-        Registry.put(ScreenEditor.class,ScreenEditor.of());
+        Registry.put(SEScreenEditor.class, SEScreenEditor.of());
     }
 
     private static Events.Event editEvent() {

@@ -20,11 +20,11 @@ import se.util.TaggedValue;
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
-public class ScreenEditorTest {
+public class SEScreenEditorTest {
 
     Events events = new Events();
     SimpleTaggedValueStringMap stringMap = new SimpleTaggedValueStringMap();
-    ScreenEditor testObject;
+    SEScreenEditor testObject;
 
     @Before
     public void setUp() {
@@ -33,17 +33,17 @@ public class ScreenEditorTest {
         Registry.put(Events.class,events);
         Registry.put(SimpleTaggedValueStringMap.class,stringMap);
         Registry.put(IFormFactory.class,new FakeFormFactory());
-        testObject = new ScreenEditor();
+        testObject = new SEScreenEditor();
     }
 
     @Test
     public void can_create() {
-        assertNotNull(ScreenEditor.of());
+        assertNotNull(SEScreenEditor.of());
     }
 
     @Test
     public void is_singleton() {
-        assertSame(ScreenEditor.of(), ScreenEditor.of());
+        assertSame(SEScreenEditor.of(), SEScreenEditor.of());
     }
 
     @Test
