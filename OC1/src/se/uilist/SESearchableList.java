@@ -1,6 +1,6 @@
 package se.uilist;
 
-import se.uiwidget.SEBorderContainer;
+import se.ui.SEBorderContainer;
 import se.uiwidget.SEGhostText;
 import x.event.Action;
 import x.event.LiveList;
@@ -34,8 +34,8 @@ final class SESearchableList<T>
     }
 
     private JComponent component(JComponent action) {
-        return new SEBorderContainer(new JScrollPane(filteredList))
-                .addNorth(newNorthContainer(action));
+        return SEBorderContainer.of(new JScrollPane(filteredList))
+                .north(newNorthContainer(action));
     }
 
     public static SESearchableList of(LiveList items, JComponent action, IXListCell.ConfigProducer configurer) {
@@ -43,7 +43,7 @@ final class SESearchableList<T>
     }
 
     private JComponent newNorthContainer(JComponent action) {
-        return new SEBorderContainer(searchTerm).addEast(action);
+        return SEBorderContainer.of(searchTerm).east(action);
     }
 
     @Override

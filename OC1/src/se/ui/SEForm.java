@@ -38,14 +38,14 @@ public final class SEForm
     }
 
     private JComponent renderedForm() {
-        return new SEBorderContainer(SEUIRenderer.render(layout))
+        return SEBorderContainer.of(SEUIRenderer.render(layout))
                 .north(navigationPanel());
     }
 
     private JPanel navigationPanel() {
         editButton = editButton();
         backButton = backButton();
-        return new SEBorderContainer(address())
+        return SEBorderContainer.of(address())
                 .west(backButton)
                 .east(editButton);
     }

@@ -3,7 +3,7 @@ package x.page;
 import java.util.Arrays;
 
 /**
- * A link to a screen.  This is analogous to an HTML link.
+ * A link to a screen page.  This is analogous to an HTML link.
  */
 public final class PageLink {
 

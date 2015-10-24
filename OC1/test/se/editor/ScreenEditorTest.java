@@ -50,7 +50,9 @@ public class ScreenEditorTest {
     public void sending_an_edit_command_event_causes_a_value_with_the_corresponding_tags_to_be_edited_when_registered() {
         TaggedValue value = stringMap.newValue();
         value.setTags(PageTags.of("whatever"));
-        EditTaggedValueEvent event = new EditTaggedValueEvent(value);
+        XComponent layout = new XComponent();
+        Page page = Page.withFixedLayout("title",layout);
+        EditTaggedValueEvent event = new EditTaggedValueEvent(value,page,layout);
 
         testObject.register();
         events.post(event);

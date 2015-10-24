@@ -3,26 +3,35 @@ package se.ui;
 import javax.swing.*;
 import java.awt.*;
 
-final class SEBorderContainer
+public final class SEBorderContainer
     extends JPanel
 {
-    SEBorderContainer(JComponent center) {
+    private SEBorderContainer(JComponent center) {
         setLayout(new BorderLayout());
         add(center, BorderLayout.CENTER);
     }
 
-    SEBorderContainer east(JComponent east) {
+    public static SEBorderContainer of(JComponent center) {
+        return new SEBorderContainer(center);
+    }
+
+    public SEBorderContainer east(JComponent east) {
         add(east, BorderLayout.EAST);
         return this;
     }
 
-    SEBorderContainer west(JComponent west) {
+    public SEBorderContainer west(JComponent west) {
         add(west,BorderLayout.WEST);
         return this;
     }
 
-    SEBorderContainer north(JComponent north) {
+    public SEBorderContainer north(JComponent north) {
         add(north,BorderLayout.NORTH);
+        return this;
+    }
+
+    public SEBorderContainer south(JComponent south) {
+        add(south,BorderLayout.SOUTH);
         return this;
     }
 

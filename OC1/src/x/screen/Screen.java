@@ -23,7 +23,7 @@ public final class Screen {
     public final PageLink link;
     private Screen previous; // set once
     private XCommand back;    // set once
-    final Page page;
+    public final Page page;
     private static Screen showing; // the currently showing screen
     
     /**

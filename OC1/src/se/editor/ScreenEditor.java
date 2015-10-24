@@ -2,18 +2,26 @@ package se.editor;
 
 import se.events.Events;
 import se.ui.EditTaggedValueEvent;
+import se.ui.SEBorderContainer;
 import se.uiwidget.StringEditor;
 import se.util.TaggedValue;
 import x.app.Registry;
 import x.event.StringChange;
+import x.page.Page;
 import x.screen.Screen;
+import x.uiwidget.XComponent;
 
 import javax.swing.*;
+import java.awt.*;
 
 public final class ScreenEditor {
 
     TaggedValue editing;
+    Page page;
+    XComponent layout;
     final JFrame frame = new JFrame();
+    final JLabel pageLabel = new JLabel();
+    final JLabel layoutLabel = new JLabel();
     final StringEditor editor = new StringEditor(textListener(),null);
 
     private static ScreenEditor screenEditor;
@@ -33,8 +41,13 @@ public final class ScreenEditor {
     }
 
     void init() {
-        frame.getContentPane().add(editor);
+        Container contents = frame.getContentPane();
+        contents.add(SEBorderContainer.of(editor).north(toolbar()));
         frame.pack();
+    }
+
+    private JComponent toolbar() {
+        return SEBorderContainer.of(pageLabel).south(layoutLabel);
     }
 
     void register() {
@@ -47,6 +60,8 @@ public final class ScreenEditor {
             public void onEvent(Events.Event event) {
                 EditTaggedValueEvent editEvent = (EditTaggedValueEvent) event;
                 edit(editEvent.taggedValue);
+                setPage(editEvent.page);
+                setLayout(editEvent.layout);
             }
         };
     }
@@ -66,6 +81,16 @@ public final class ScreenEditor {
         if (screen!=null) {
             screen.refresh();
         }
+    }
+
+    void setPage(Page page) {
+        this.page = page;
+        pageLabel.setText(page.toString());
+    }
+
+    void setLayout(XComponent layout) {
+        this.layout = layout;
+        layoutLabel.setText(layout.toString());
     }
 
     void edit(TaggedValue value) {

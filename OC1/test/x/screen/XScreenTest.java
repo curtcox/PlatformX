@@ -165,7 +165,7 @@ public class XScreenTest {
         second.back();
 
         assertNotNull(form2.backCommand);
-        assertEquals("Back", form2.backCommand.command);
+        assertEquals("Back to first []", form2.backCommand.command);
     }
 
     @Test
@@ -188,7 +188,7 @@ public class XScreenTest {
         third.back();
 
         assertNotNull(form2.backCommand);
-        assertEquals("Back", form2.backCommand.command);
+        assertEquals("Back to first []", form2.backCommand.command);
     }
 
     private String random(String name) {
