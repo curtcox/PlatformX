@@ -26,9 +26,9 @@ public final class XLog
         e.printStackTrace();
     }
 
-    public void log(String message) {
+    public void log(String message, Object... details) {
         //log.info(message);
-        getLogWriter().log(clazz,message);
+        getLogWriter().log(clazz,message,details);
     }
 
     private XLogWriter getLogWriter() {

@@ -37,7 +37,7 @@ public final class Screen {
         this.form = form;
         this.link = link;
         this.page = page;
-        log("created " + link);
+        log("created ",link, page);
     }
 
     private static IFormFactory formFactory() {
@@ -62,7 +62,7 @@ public final class Screen {
 
     public void show() {
         try {
-            log("show " + link.toString());
+            log("show",link);
             setPrevious();
             showing = this;
             refresh();
@@ -111,7 +111,7 @@ public final class Screen {
     }
     
     public final void back() {
-        log("back " + link.toString());
+        log("back",link);
         if (previous!=null) {
             previous.goBackToThisScreen();
         }
@@ -163,8 +163,8 @@ public final class Screen {
         form.layout(layout);
     }
 
-    private void log(String message) {
-        getLog().log(message);
+    private void log(String message, Object... details) {
+        getLog().log(message,details);
     }
 
     private static void log(Exception e) {

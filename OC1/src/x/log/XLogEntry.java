@@ -14,20 +14,22 @@ public final class XLogEntry
 
     final Class clazz;
     final String message;
+    final Object[] details;
     final Thread thread;
     final Screen screen;
     final long time;
 
-    XLogEntry(Class clazz, String message) {
+    XLogEntry(Class clazz, String message, Object... details) {
         this.clazz = clazz;
         this.screen = Screen.getShowing();
         this.message = message;
+        this.details = details;
         this.thread = Thread.currentThread();
         this.time = System.currentTimeMillis();
     }
 
-    public static XLogEntry of(Class clazz,String message) {
-        return new XLogEntry(clazz,message);
+    public static XLogEntry of(Class clazz,String message,Object...details) {
+        return new XLogEntry(clazz,message,details);
     }
 
     String time() {
@@ -61,7 +63,8 @@ public final class XLogEntry
             new NamedValue("message",message),
             new NamedValue("thread",thread),
             new NamedValue("screen",screen),
-            new NamedValue("time",time)
+            new NamedValue("time",time),
+            new NamedValue("details",details)
         ));
     }
 }

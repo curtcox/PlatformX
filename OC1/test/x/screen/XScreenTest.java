@@ -92,7 +92,7 @@ public class XScreenTest {
         screen.show();
 
         verify();
-        log.log("show " + link.toString());
+        log.log("show",link);
     }
 
     @Test

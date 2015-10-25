@@ -11,7 +11,7 @@ public class FakeLog
     }
 
     @Override
-    public void log(String message) {
+    public void log(String message, Object...details) {
 
     }
 }
