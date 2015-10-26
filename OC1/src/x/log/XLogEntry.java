@@ -64,7 +64,7 @@ public final class XLogEntry
             new NamedValue("thread",thread),
             new NamedValue("screen",screen),
             new NamedValue("time",time),
-            new NamedValue("details",details)
+            new NamedValue("details",XLiveList.of(Arrays.asList(details)))
         ));
     }
 }

@@ -2,6 +2,7 @@ package x.log;
 
 import junit.framework.TestCase;
 import org.junit.Test;
+import x.event.LiveList;
 import x.event.NamedValueListSource;
 import x.util.NamedValue;
 
@@ -62,7 +63,14 @@ public class XLogEntryTest {
     public void details_is_named_value_5() {
         NamedValue value = entry.asNamedValues().get(5);
         assertEquals("details",value.name);
-        assertSame(details,value.value);
+    }
+
+    @Test
+    public void details_is_a_LiveList_that_contains_the_given_details() {
+        NamedValue value = entry.asNamedValues().get(5);
+        LiveList list = (LiveList) value.value;
+        assertEquals(1,list.size());
+        assertSame(this,list.get(0));
     }
 
 }
