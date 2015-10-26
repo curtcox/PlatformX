@@ -7,6 +7,7 @@ import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 import x.app.Registry;
+import x.event.NamedValueListSource;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.page.Page;
@@ -15,6 +16,7 @@ import x.page.PageLink;
 import x.ui.IFormFactory;
 import x.uiwidget.XComponent;
 import x.uiwidget.XContainer;
+import x.util.NamedValue;
 
 import static mach.Mocks.*;
 import static org.junit.Assert.*;
@@ -295,6 +297,59 @@ public class XScreenTest {
         } catch (RuntimeException e) {
             assertEquals("Multiple pages (2) found for " + link,e.getMessage());
         }
+    }
+
+    @Test
+    public void screen_is_a_NamedValueListSource() {
+        assertTrue(screen instanceof NamedValueListSource);
+    }
+
+    @Test
+    public void asNamedValues_contains_5_values() {
+        assertEquals(5, screen.asNamedValues().size());
+    }
+
+    @Test
+    public void form_is_named_value_0() {
+        NamedValue namedValue = screen.asNamedValues().get(0);
+        assertEquals("form", namedValue.name);
+        assertSame(form,namedValue.value);
+    }
+
+    @Test
+    public void link_is_named_value_1() {
+        NamedValue namedValue = screen.asNamedValues().get(1);
+        assertEquals("link",namedValue.name);
+        assertSame(link,namedValue.value);
+    }
+
+    @Test
+    public void previous_is_named_value_2() {
+        NamedValue namedValue = screen.asNamedValues().get(2);
+        assertEquals("previous",namedValue.name);
+    }
+
+    @Test
+    public void back_is_named_value_3() {
+        NamedValue namedValue = screen.asNamedValues().get(3);
+        assertEquals("back",namedValue.name);
+    }
+
+    @Test
+    public void page_is_named_value_4() {
+        NamedValue namedValue = screen.asNamedValues().get(4);
+        assertEquals("page",namedValue.name);
+        assertSame(page,namedValue.value);
+    }
+
+    @Test
+    public void toString_contains_page() {
+        assertTrue(screen.toString().contains(page.toString()));
+    }
+
+    @Test
+    public void toString_contains_link() {
+        assertTrue(screen.toString().contains(link.toString()));
     }
 
 }

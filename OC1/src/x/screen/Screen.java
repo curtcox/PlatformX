@@ -2,6 +2,9 @@ package x.screen;
 
 import x.app.Registry;
 import x.command.XCommand;
+import x.event.LiveList;
+import x.event.NamedValueListSource;
+import x.event.XLiveList;
 import x.log.ILog;
 import x.log.ILogManager;
 import x.page.Page;
@@ -11,13 +14,18 @@ import x.ui.IDisplay;
 import x.ui.IForm;
 import x.ui.IFormFactory;
 import x.uiwidget.XComponent;
+import x.util.NamedValue;
+
+import java.util.Arrays;
 
 /**
  * The entire UI, as presented to the user, at a specific time.
  * There is a 1-to-1 relationship between ScreenS and PagesS.
  * Only one Screen is showing at a time.
  */
-public final class Screen {
+public final class Screen
+    implements NamedValueListSource
+{
 
     public final IForm form;
     public final PageLink link;
@@ -175,4 +183,19 @@ public final class Screen {
         return Registry.get(ILogManager.class).getLog(Screen.class);
     }
 
+    @Override
+    public LiveList<NamedValue> asNamedValues() {
+        return XLiveList.of(Arrays.asList(
+                new NamedValue("form", form),
+                new NamedValue("link", link),
+                new NamedValue("previous", previous),
+                new NamedValue("back", back),
+                new NamedValue("page", page)
+        ));
+    }
+
+    @Override
+    public String toString() {
+        return "page=" + page + "link=" +link;
+    }
 }
