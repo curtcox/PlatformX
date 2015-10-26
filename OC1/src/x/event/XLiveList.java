@@ -66,6 +66,15 @@ public final class XLiveList<E>
         return list.iterator();
     }
 
+    @Override
+    public String toString() {
+        return list.toString();
+    }
+    // ----------------------- Never
+    private RuntimeException unsupported() {
+        return new RuntimeException("Not supported yet.");
+    }
+
     public boolean                       isEmpty() { throw unsupported(); }
     public boolean         contains(Object object) { throw unsupported(); }
     public Object[]        toArray(Object[] array) { throw unsupported(); }
@@ -85,7 +94,4 @@ public final class XLiveList<E>
     public boolean            removeAll(Collection collection) { throw unsupported(); }
     public boolean            retainAll(Collection collection) { throw unsupported(); }
     
-    private RuntimeException unsupported() {
-        return new RuntimeException("Not supported yet.");
-    }
 }
