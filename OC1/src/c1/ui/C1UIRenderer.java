@@ -83,6 +83,6 @@ final class C1UIRenderer {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(null,C1UIRenderer.class);
+        return Registry.get(ILogManager.class).getLog(C1UIRenderer.class);
     }
 }

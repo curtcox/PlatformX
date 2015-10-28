@@ -41,7 +41,7 @@ final class CompositeNamedValues
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(CompositeNamedValues.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

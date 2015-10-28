@@ -65,7 +65,7 @@ final class IosUIRenderer {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(null,IosUIRenderer.class);
+        return Registry.get(ILogManager.class).getLog(IosUIRenderer.class);
     }
 
 }

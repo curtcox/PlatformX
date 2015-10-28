@@ -36,7 +36,7 @@ public final class VaApplication
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(VaApplication.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

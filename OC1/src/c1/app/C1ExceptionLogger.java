@@ -22,7 +22,7 @@ final class C1ExceptionLogger
     }
 
     ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(C1ExceptionLogger.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
     static C1ExceptionLogger of() {

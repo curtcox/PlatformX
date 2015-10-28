@@ -104,7 +104,7 @@ public final class IosUtil {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(null,IosUtil.class);
+        return Registry.get(ILogManager.class).getLog(IosUtil.class);
     }
 
 }

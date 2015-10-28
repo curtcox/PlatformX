@@ -37,7 +37,7 @@ public final class IosApplication
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(IosApplication.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
     public static void main(String[] args) {

@@ -44,7 +44,7 @@ public final class C1LocationProvider
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(C1LocationProvider.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

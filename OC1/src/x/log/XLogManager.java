@@ -4,7 +4,7 @@ public final class XLogManager
     implements ILogManager
 {
 
-    public ILog getLog(Class c, Object o) {
+    public ILog getLog(Object o) {
         return XLog.of(o);
     }
 }

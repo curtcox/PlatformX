@@ -111,7 +111,7 @@ public final class MapStorageIO<K,V> {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(MapStorageIO.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

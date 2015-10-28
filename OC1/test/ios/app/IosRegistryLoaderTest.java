@@ -45,7 +45,7 @@ public class IosRegistryLoaderTest {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(IosRegistryLoaderTest.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

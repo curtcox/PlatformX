@@ -88,6 +88,6 @@ public final class C1CachedNetwork
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(C1CachedNetwork.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 }

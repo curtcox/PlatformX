@@ -44,11 +44,11 @@ abstract class WebServiceSearch<T> {
         getLog().log(message);
     }
 
-    private static void log(Exception e) {
+    private void log(Exception e) {
         getLog().log(e);
     }
 
-    private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(null,WebServiceSearch.class);
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(this);
     }
 }

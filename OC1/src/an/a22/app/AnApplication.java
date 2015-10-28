@@ -39,7 +39,7 @@ public class AnApplication extends Activity {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(AnApplication.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

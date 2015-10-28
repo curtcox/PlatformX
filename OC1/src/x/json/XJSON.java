@@ -48,7 +48,7 @@ public final class XJSON {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(null,XJSON.class);
+        return Registry.get(ILogManager.class).getLog(XJSON.class);
     }
 
 

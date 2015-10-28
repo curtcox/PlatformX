@@ -68,7 +68,7 @@ public final class IO {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(null,IO.class);
+        return Registry.get(ILogManager.class).getLog(IO.class);
     }
 
     public static void write(String string, OutputStream out) throws IOException {

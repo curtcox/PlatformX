@@ -49,6 +49,6 @@ final class IosItemListPageFactory<T>
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(IosItemListPageFactory.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 }

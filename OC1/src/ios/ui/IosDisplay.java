@@ -71,6 +71,6 @@ public final class IosDisplay
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(IosDisplay.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 }

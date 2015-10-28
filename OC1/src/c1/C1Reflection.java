@@ -19,7 +19,7 @@ public final class C1Reflection {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(null,C1Reflection.class);
+        return Registry.get(ILogManager.class).getLog(C1Reflection.class);
     }
 
 }

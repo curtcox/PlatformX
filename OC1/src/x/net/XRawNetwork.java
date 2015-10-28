@@ -38,7 +38,7 @@ public final class XRawNetwork
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(XRawNetwork.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

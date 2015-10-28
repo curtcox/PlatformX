@@ -35,7 +35,7 @@ final class FirstMatchingPageCompositePageFactory
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(FirstMatchingPageCompositePageFactory.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

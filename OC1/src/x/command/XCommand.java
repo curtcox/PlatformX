@@ -31,7 +31,7 @@ public abstract class XCommand {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(XCommand.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

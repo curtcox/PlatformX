@@ -75,6 +75,6 @@ public final class IosSearchFilterInstaller
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(null,IosSearchFilterInstaller.class);
+        return Registry.get(ILogManager.class).getLog(IosSearchFilterInstaller.class);
     }
 }

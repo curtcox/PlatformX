@@ -567,7 +567,7 @@ final class C1DebugList<T> extends List<T> {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(C1DebugList.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

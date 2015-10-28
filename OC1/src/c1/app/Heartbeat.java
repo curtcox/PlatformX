@@ -36,7 +36,7 @@ public final class Heartbeat
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(Heartbeat.class,this);
+        return Registry.get(ILogManager.class).getLog(this);
     }
 
 }

@@ -40,7 +40,7 @@ public class FirstMatchingPageCompositePageFactoryTest {
     public void setUp() {
         Mocks.init(this);
         _(log);
-        logManager.getLog(null,FirstMatchingPageCompositePageFactory.class);
+        logManager.getLog(FirstMatchingPageCompositePageFactory.class);
         Registry.put(ILogManager.class, logManager);
     }
 
