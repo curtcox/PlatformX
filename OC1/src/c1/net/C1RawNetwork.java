@@ -47,7 +47,7 @@ public final class C1RawNetwork
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(C1RawNetwork.class);
+        return Registry.get(ILogManager.class).getLog(C1RawNetwork.class,this);
     }
 
 }

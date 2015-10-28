@@ -51,7 +51,7 @@ public class C1RegistryLoaderTest {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(C1RegistryLoaderTest.class);
+        return Registry.get(ILogManager.class).getLog(C1RegistryLoaderTest.class,this);
     }
 
 }

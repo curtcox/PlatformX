@@ -55,6 +55,6 @@ public final class VaDisplay
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(VaDisplay.class);
+        return Registry.get(ILogManager.class).getLog(VaDisplay.class,this);
     }
 }

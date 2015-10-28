@@ -176,11 +176,12 @@ public final class Screen
     }
 
     private static void log(Exception e) {
-        getLog().log(e);
+        ILog log = Registry.get(ILogManager.class).getLog(null,Screen.class);
+        log.log(e);
     }
 
-    private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(Screen.class);
+    private ILog getLog() {
+        return Registry.get(ILogManager.class).getLog(Screen.class,this);
     }
 
     @Override

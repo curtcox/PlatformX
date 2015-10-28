@@ -70,7 +70,7 @@ public final class VaSearchableList<T>
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(VaSearchableList.class);
+        return Registry.get(ILogManager.class).getLog(null,VaSearchableList.class);
     }
 
 }

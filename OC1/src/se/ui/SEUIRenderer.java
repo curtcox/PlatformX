@@ -93,7 +93,7 @@ final class SEUIRenderer {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(SEUIRenderer.class);
+        return Registry.get(ILogManager.class).getLog(null,SEUIRenderer.class);
     }
 
 }

@@ -134,6 +134,6 @@ public final class IosForm
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(IosForm.class);
+        return Registry.get(ILogManager.class).getLog(IosForm.class,this);
     }
 }

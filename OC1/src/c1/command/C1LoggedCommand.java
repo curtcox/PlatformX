@@ -27,7 +27,7 @@ public class C1LoggedCommand
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(C1LoggedCommand.class);
+        return Registry.get(ILogManager.class).getLog(C1LoggedCommand.class,this);
     }
 
 }

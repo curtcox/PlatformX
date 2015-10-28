@@ -36,7 +36,7 @@ public final class VaSearchFilterInstaller
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(VaSearchFilterInstaller.class);
+        return Registry.get(ILogManager.class).getLog(null,VaSearchFilterInstaller.class);
     }
 
 }

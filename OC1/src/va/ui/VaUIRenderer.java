@@ -78,7 +78,7 @@ final class VaUIRenderer {
         getLog().log(message);
     }
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(VaUIRenderer.class);
+        return Registry.get(ILogManager.class).getLog(null,VaUIRenderer.class);
     }
 
 }

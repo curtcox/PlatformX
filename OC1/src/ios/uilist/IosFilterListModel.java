@@ -117,7 +117,7 @@ final class IosFilterListModel<T>
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(IosFilterListModel.class);
+        return Registry.get(ILogManager.class).getLog(IosFilterListModel.class,this);
     }
 
 }

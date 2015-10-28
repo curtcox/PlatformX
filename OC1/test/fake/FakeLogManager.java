@@ -7,7 +7,7 @@ public class FakeLogManager
     implements ILogManager
 {
     @Override
-    public ILog getLog(Class c) {
+    public ILog getLog(Class c, Object o) {
         return new FakeLog();
     }
 }

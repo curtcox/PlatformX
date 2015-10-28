@@ -36,7 +36,7 @@ public class MyApplication {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(MyApplication.class);
+        return Registry.get(ILogManager.class).getLog(MyApplication.class,this);
     }
 
     private void loadTheme() throws IOException {

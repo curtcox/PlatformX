@@ -55,7 +55,7 @@ public class MatchingIndexedPagesCompositePageFactoryTest {
     @Before
     public void setUp() {
         Mocks.init(this);
-        _(log); logManager.getLog(MatchingIndexedPagesCompositePageFactory.class);
+        _(log); logManager.getLog(null,MatchingIndexedPagesCompositePageFactory.class);
         Registry.put(ItemListPageFactoryFactory.class, itemListPageFactoryFactory);
         Registry.put(ILogManager.class,logManager);
         factory = new MatchingIndexedPagesCompositePageFactory(inner);

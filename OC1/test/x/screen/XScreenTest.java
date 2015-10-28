@@ -68,7 +68,7 @@ public class XScreenTest {
         Registry.put(PageFactory.class, pageFactory);
         Registry.put(IFormFactory.class,formFactory);
         _(form); formFactory.newForm(link);
-        _(log); logManager.getLog(Screen.class);
+        _(log); logManager.getLog(Screen.class,null);
         screen = Screen.of(page);
     }
 

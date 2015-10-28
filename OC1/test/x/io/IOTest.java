@@ -24,7 +24,7 @@ public class IOTest {
     public void setUp() {
         assumeTrue(ShouldRun.X);
         Mocks.init(this);
-        _(log); logManager.getLog(IO.class);
+        _(log); logManager.getLog(null,IO.class);
         Registry.put(ILogManager.class,logManager);
     }
 

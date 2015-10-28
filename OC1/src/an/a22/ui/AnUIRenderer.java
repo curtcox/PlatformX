@@ -99,7 +99,7 @@ final class AnUIRenderer {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(AnUIRenderer.class);
+        return Registry.get(ILogManager.class).getLog(null,AnUIRenderer.class);
     }
 
 }

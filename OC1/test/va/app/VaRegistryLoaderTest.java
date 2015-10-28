@@ -45,7 +45,7 @@ public class VaRegistryLoaderTest {
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(VaRegistryLoaderTest.class);
+        return Registry.get(ILogManager.class).getLog(VaRegistryLoaderTest.class,this);
     }
 
 }

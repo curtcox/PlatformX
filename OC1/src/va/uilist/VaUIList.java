@@ -42,7 +42,7 @@ final class VaUIList<T>
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(VaUIList.class);
+        return Registry.get(ILogManager.class).getLog(null,VaUIList.class);
     }
 
 }

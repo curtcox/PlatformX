@@ -26,6 +26,6 @@ public class IosPassthruView
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(IosPassthruView.class);
+        return Registry.get(ILogManager.class).getLog(IosPassthruView.class,this);
     }
 }

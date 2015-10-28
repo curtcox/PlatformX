@@ -59,7 +59,7 @@ final class ResultsListResponseParser<T>
     }
 
     private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(ResultsListResponseParser.class);
+        return Registry.get(ILogManager.class).getLog(ResultsListResponseParser.class,this);
     }
 
 }

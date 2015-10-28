@@ -49,6 +49,6 @@ abstract class WebServiceSearch<T> {
     }
 
     private static ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(WebServiceSearch.class);
+        return Registry.get(ILogManager.class).getLog(null,WebServiceSearch.class);
     }
 }
