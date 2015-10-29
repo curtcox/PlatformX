@@ -1,12 +1,9 @@
 package x.log;
 
-import junit.framework.TestCase;
 import org.junit.Test;
 import x.event.LiveList;
 
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 public class XLogWriterTest {
 
@@ -24,16 +21,18 @@ public class XLogWriterTest {
 
     @Test
     public void log_is_not_empty_when_something_has_been_published() {
-        writer.log(Object.class,"");
+        writer.log(null,Object.class,"");
         assertFalse(writer.log.isEmpty());
     }
 
     @Test
     public void published_log_entry_matches_what_was_logged() {
         Class clazz = getClass();
+        Object target = new Object();
         String message = toString();
-        writer.log(clazz,message,this);
+        writer.log(target,clazz,message,this);
         XLogEntry entry = writer.log().get(0);
+        assertSame(target,entry.target);
         assertSame(clazz,entry.clazz);
         assertSame(message,entry.message);
         assertSame(this,entry.details[0]);

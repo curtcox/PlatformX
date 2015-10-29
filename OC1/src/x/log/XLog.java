@@ -33,7 +33,7 @@ public final class XLog
 
     public void log(String message, Object... details) {
         //log.info(message);
-        getLogWriter().log(clazz,message,details);
+        getLogWriter().log(target,clazz,message,details);
     }
 
     private XLogWriter getLogWriter() {

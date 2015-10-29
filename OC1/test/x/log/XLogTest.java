@@ -1,8 +1,7 @@
 package x.log;
 
-import junit.framework.TestCase;
 import org.junit.Test;
-import org.robovm.objc.ObjCClass;
+import x.app.Registry;
 
 import java.util.List;
 
@@ -29,4 +28,21 @@ public class XLogTest {
         assertSame(List.class,  XLog.of(List.class).clazz);
     }
 
+    @Test
+    public void log_writes_combined_values_to_LogWriter() {
+        Object target = new Object();
+        XLog log = XLog.of(target);
+        String message = toString();
+        Object[] details = new Object[] {"this","that"};
+        XLogWriter writer = new XLogWriter();
+        Registry.put(XLogWriter.class,writer);
+
+        log.log(message,details);
+
+        XLogEntry entry = (XLogEntry) writer.published.get(0);
+        assertSame(target,entry.target);
+        assertSame(message,entry.message);
+        assertSame(details,entry.details);
+        assertSame(target.getClass(),entry.clazz);
+    }
 }

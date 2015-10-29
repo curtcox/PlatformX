@@ -17,9 +17,9 @@ public final class XLogWriter
         return Registry.get(XLogWriter.class);
     }
     
-    public void log(Class clazz,String message,Object...details) {
+    public void log(Object target, Class clazz,String message,Object...details) {
         System.out.println(message);
-        log.add(XLogEntry.of(clazz,message,details));
+        log.add(XLogEntry.of(target,clazz,message,details));
         if (log.size()>1000) {
             log.removeFirst();
         }

@@ -11,7 +11,7 @@ import java.util.Arrays;
 public final class XLogEntry
     implements NamedValueListSource
 {
-
+    final Object target;
     final Class clazz;
     final String message;
     final Object[] details;
@@ -19,7 +19,8 @@ public final class XLogEntry
     final Screen screen;
     final long time;
 
-    XLogEntry(Class clazz, String message, Object... details) {
+    XLogEntry(Object target, Class clazz, String message, Object... details) {
+        this.target = target;
         this.clazz = clazz;
         this.screen = Screen.getShowing();
         this.message = message;
@@ -28,8 +29,8 @@ public final class XLogEntry
         this.time = System.currentTimeMillis();
     }
 
-    public static XLogEntry of(Class clazz,String message,Object...details) {
-        return new XLogEntry(clazz,message,details);
+    public static XLogEntry of(Object target, Class clazz,String message,Object...details) {
+        return new XLogEntry(target,clazz,message,details);
     }
 
     String time() {
@@ -59,6 +60,7 @@ public final class XLogEntry
     @Override
     public LiveList<NamedValue> asNamedValues() {
         return XLiveList.of(Arrays.asList(
+            new NamedValue("target",target),
             new NamedValue("clazz",clazz),
             new NamedValue("message",message),
             new NamedValue("thread",thread),
