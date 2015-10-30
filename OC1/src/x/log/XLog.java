@@ -13,14 +13,33 @@ public final class XLog
     
     private XLog(Object target) {
         this.target = target;
-        this.clazz = target instanceof Class ? (Class) target : target.getClass();
-        name = clazz.getCanonicalName();
+        this.clazz = clazz(target);
+        name = name(target);
         prefix = ":" + name + ":";
-        log = Logger.getLogger(name);
+        log = log(name);
     }
 
     public static XLog of(Object target) {
         return new XLog(target);
+    }
+
+    static Class clazz(Object target) {
+        if (target==null) {
+            return null;
+        }
+        return target instanceof Class ? (Class) target : target.getClass();
+    }
+
+    static String name(Object target) {
+        if (clazz(target)==null) {
+            return "null";
+        }
+        String name = clazz(target).getCanonicalName();
+        return name==null ? "null" : name;
+    }
+
+    static Logger log(String name) {
+        return Logger.getLogger(name);
     }
 
     public void log(Throwable e) {

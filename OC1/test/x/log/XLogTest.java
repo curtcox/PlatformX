@@ -5,6 +5,7 @@ import x.app.Registry;
 
 import java.util.List;
 
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
@@ -19,6 +20,11 @@ public class XLogTest {
     public void target_is_the_target_from_the_factory() {
         Object target = new Object();
         assertSame(target,XLog.of(target).target);
+    }
+
+    @Test
+    public void target_is_null_when_null_given_to_factory() {
+        assertNull(XLog.of(null).target);
     }
 
     @Test
