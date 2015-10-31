@@ -1,4 +1,4 @@
-package se.editor;
+package se.views.editor;
 
 import x.app.Registry;
 import x.page.PageLink;

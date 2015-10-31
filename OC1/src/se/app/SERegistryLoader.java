@@ -1,7 +1,7 @@
 package se.app;
 
 import se.device.SEDeviceInfo;
-import se.editor.SEScreenEditor;
+import se.views.editor.SEScreenEditor;
 import se.event.SESwappableListFactory;
 import se.events.Events;
 import se.services.SELocationProvider;

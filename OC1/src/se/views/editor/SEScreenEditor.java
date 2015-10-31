@@ -1,4 +1,4 @@
-package se.editor;
+package se.views.editor;
 
 import se.events.Events;
 import se.ui.EditTaggedValueEvent;

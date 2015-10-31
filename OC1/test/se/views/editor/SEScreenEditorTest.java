@@ -1,4 +1,4 @@
-package se.editor;
+package se.views.editor;
 
 import config.ShouldRun;
 import x.app.Registry;
