@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * A special map, since ordinary maps don't support multiple
- * equivalent keys.
+ * A special map, since ordinary maps don't support multiple equivalent keys.
  */
 final class InvocationMap {
 
@@ -26,7 +25,7 @@ final class InvocationMap {
     }
 
     public Object getResult(Invocation invocation) {
-        for (int i=0; i<results.size(); i++) {
+        for (int i=results.size()-1; i>=0; i--) {
             if (invocations.get(i).equals(invocation)) {
                 return results.get(i);
             }

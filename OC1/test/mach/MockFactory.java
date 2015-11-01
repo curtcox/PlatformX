@@ -53,7 +53,7 @@ final class MockFactory {
 
     /**
      * Used to specify any wildcards to be used.
-     * The next mock invocation will specify the what method invocation uses it.
+     * The next mock invocation will specify what method invocation uses it.
      */
     void wild(Object... wildcards) {
         if (current==Phase.returns || current==Phase.verify) {

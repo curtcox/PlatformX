@@ -73,4 +73,13 @@ public class InvocationMapTest {
         assertSame(result2,map.getResult(invocation2));
     }
 
+    @Test
+    public void last_mapped_result_wins_for_the_same_invocation() {
+        map.map(invocation,result);
+        Object result2 = new Object();
+        map.map(invocation,result2);
+
+        assertSame(result2,map.getResult(invocation));
+
+    }
 }

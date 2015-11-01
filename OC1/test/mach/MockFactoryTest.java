@@ -184,6 +184,7 @@ public class MockFactoryTest {
 
     @Test
     public void wild_null_is_interpreted_as_an_object_array_with_one_null_value() {
+        testObject.returns("");
         testObject.wild(null);
         assertEquals(1,testObject.wildcards.length);
         assertNull(testObject.wildcards[0]);
