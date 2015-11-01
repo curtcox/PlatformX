@@ -70,6 +70,7 @@ public class XScreenTest {
         _(form); formFactory.newForm(link);
         _(log); logManager.getLog(Screen.class);
         screen = Screen.of(page);
+        _(log); logManager.getLog(screen);
     }
 
     @Test
@@ -120,6 +121,7 @@ public class XScreenTest {
 
     @Test
     public void getShowing_returns_original_screen_after_going_back_to_it() {
+        _(log); wild(null); logManager.getLog(null);
         FakeForm form1 = new FakeForm();
         FakeForm form2 = new FakeForm();
         _(form1); formFactory.newForm(link1);
@@ -137,6 +139,7 @@ public class XScreenTest {
 
     @Test
     public void back_shows_previously_shown_screen() {
+        _(log); wild(null); logManager.getLog(null);
         FakeForm form1 = new FakeForm();
         FakeForm form2 = new FakeForm();
         _(form1); formFactory.newForm(link1);
@@ -154,6 +157,8 @@ public class XScreenTest {
 
     @Test
     public void setBackCommand_is_called_when_there_is_a_previous_screen() {
+        _(log); wild(null); logManager.getLog(null);
+
         FakeForm form1 = new FakeForm();
         FakeForm form2 = new FakeForm();
         _(form1); formFactory.newForm(link1);
@@ -172,6 +177,7 @@ public class XScreenTest {
 
     @Test
     public void setBackCommand_is_called_after_going_back_twice_when_there_is_still_a_previous_screen() {
+        _(log); wild(null); logManager.getLog(null);
         FakeForm form1 = new FakeForm();
         FakeForm form2 = new FakeForm();
         FakeForm form3 = new FakeForm();
@@ -200,6 +206,7 @@ public class XScreenTest {
     @Test
     public void show_makes_page_the_one_showing_when_factory_returns_one_link_for_it() {
         _(new Page[] {page}); pageFactory.create(link);
+        _(log); wild(null); logManager.getLog(null);
 
         Screen.show(link);
 
@@ -221,6 +228,7 @@ public class XScreenTest {
     public void show_logs_exception_if_one_is_thrown_by_screen() {
         RuntimeException e = new RuntimeException();
         _(); log.log(e);
+        _(log); wild(null); logManager.getLog(null);
         Screen screen = Screen.of(new ScreenThatThrowsExceptionOnLayout(link,e));
 
         screen.show();
@@ -280,6 +288,7 @@ public class XScreenTest {
     @Test
     public void show_shows_single_page_when_factory_returns_1_page_for_link() {
         _(new Page[] {page}); pageFactory.create(link);
+        _(log); wild(null); logManager.getLog(null);
 
         Screen.show(link);
 

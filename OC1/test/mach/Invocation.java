@@ -9,6 +9,9 @@ import java.util.List;
 
 /**
  * A method invocation with parameters.
+ * Invocation is unusual in the wildcard equality it supports.
+ * Wildcards make invocation equality intransitive, in violation of the Object contract
+ * for equals.
  */
 final class Invocation {
 

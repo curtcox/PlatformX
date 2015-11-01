@@ -45,7 +45,7 @@ public final class Screen
         this.form = form;
         this.link = link;
         this.page = page;
-        log("created ",link, page);
+        classLog().log("created ", link, page);
     }
 
     private static IFormFactory formFactory() {
@@ -172,16 +172,23 @@ public final class Screen
     }
 
     private void log(String message, Object... details) {
-        getLog().log(message,details);
+        log().log(message, details);
     }
 
     private static void log(Exception e) {
-        ILog log = Registry.get(ILogManager.class).getLog(Screen.class);
-        log.log(e);
+        classLog().log(e);
     }
 
-    private ILog getLog() {
-        return Registry.get(ILogManager.class).getLog(this);
+    private static ILog classLog() {
+        return logManager().getLog(Screen.class);
+    }
+
+    private ILog log() {
+        return logManager().getLog(this);
+    }
+
+    private static ILogManager logManager() {
+        return Registry.get(ILogManager.class);
     }
 
     @Override

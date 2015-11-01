@@ -21,9 +21,9 @@ final class MockInvocationHandler
     Invocation latest;
     final String name;
     final Class clazz;
-    final Map<Invocation,Object> returns = new HashMap();
+    final InvocationMap returns = new InvocationMap();
     final Set<Invocation> nos = new HashSet();
-    final Map<Invocation,Object> invoked = new HashMap();
+    final InvocationMap invoked = new InvocationMap();
     final MockFactory factory;
 
     <T> MockInvocationHandler(MockFactory factory, Class clazz, String name) {
@@ -63,7 +63,11 @@ final class MockInvocationHandler
     }
 
     private Object returns(Invocation invocation) throws Throwable {
-        returns.put(invocation,factory.result);
+        returns.map(invocation, factory.result);
+        return useFactoryValue();
+    }
+
+    private Object useFactoryValue() {
         Object value = factory.result;
         factory.result = null;
         current = invoke;
@@ -72,15 +76,15 @@ final class MockInvocationHandler
     }
 
     private Object verify(Invocation expected) throws Throwable {
-        if (!invoked.containsKey(expected)) {
-            for (Invocation received : invoked.keySet()) {
+        if (!invoked.contains(expected)) {
+            for (Invocation received : invoked.invocations()) {
                 if (received.method.equals(expected.method)) {
                     assertEquals(expected, received);
                 }
             }
             fail("Missing invocation " + expected);
         }
-        return invoked.get(expected);
+        return invoked.getResult(expected);
     }
 
     private Object invoke(Invocation invocation) throws Throwable {
@@ -89,7 +93,7 @@ final class MockInvocationHandler
             fail(message);
         }
         Object result = result(invocation);
-        invoked.put(invocation, result);
+        invoked.map(invocation, result);
         latest = invocation;
         return result;
     }
@@ -98,20 +102,34 @@ final class MockInvocationHandler
         if (invocation.returnsVoid()) {
             return null;
         }
-        if (returns.containsKey(invocation)) {
-            return returns.get(invocation);
+        if (returns.contains(invocation)) {
+            return returns.getResult(invocation);
         }
         if (thereAreMatchesForMethod(invocation)) {
-            Invocation expected = expectedForMethod(invocation.method);
-            String message = "!=";
-            throw new ComparisonFailure(message, expected.toString(),invocation.toString());
+            throw comparisonFailure(invocation);
         }
+        throw undefined(invocation);
+    }
+
+    private ComparisonFailure comparisonFailure(Invocation invocation) throws Throwable {
+        if (matchingInvocationsForMethod(invocation).size()==1) {
+            Invocation expected = expectedForMethod(invocation.method);
+            String message = "Actual invocation is not the one expected";
+            return new ComparisonFailure(message, expected.toString(), invocation.toString());
+        } else {
+            String expected = matchingInvocationsForMethod(invocation).toString();
+            String message = "Actual invocation is not one of the expected invocations";
+            return new ComparisonFailure(message, expected, invocation.toString());
+        }
+    }
+
+    private UnsupportedOperationException undefined(Invocation invocation) throws Throwable {
         String message = String.format("[%s] is not defined for [%s]",invocation.method,this);
-        throw new UnsupportedOperationException(message);
+        return new UnsupportedOperationException(message);
     }
 
     private Invocation expectedForMethod(Method method) {
-        for (Invocation i : returns.keySet()) {
+        for (Invocation i : returns.invocations()) {
             if (i.method == method) {
                 return i;
             }
@@ -120,12 +138,22 @@ final class MockInvocationHandler
     }
 
     private boolean thereAreMatchesForMethod(Invocation invocation) {
-        for (Invocation i : returns.keySet()) {
+        for (Invocation i : returns.invocations()) {
             if (i.method == invocation.method) {
                 return true;
             }
         }
         return false;
+    }
+
+    private List<Invocation> matchingInvocationsForMethod(Invocation invocation) {
+        List<Invocation> matching = new ArrayList<Invocation>();
+        for (Invocation i : returns.invocations()) {
+            if (i.method == invocation.method) {
+                matching.add(i);
+            }
+        }
+        return matching;
     }
 
     private static boolean equals(Method method) {
