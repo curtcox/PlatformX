@@ -1,16 +1,23 @@
 package se.ui;
 
 import config.ShouldRun;
+import fake.FakePage;
 import mach.Mocks;
 import org.junit.Before;
-import se.events.Events;
-import x.app.Registry;
-import x.page.PageLink;
-import x.uiwidget.XComponent;
-import x.uiwidget.XLabel;
 import org.junit.Test;
+import se.events.Events;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
+import x.app.Registry;
+import x.log.ILog;
+import x.log.ILogManager;
+import x.page.Page;
+import x.page.PageLink;
+import x.screen.Screen;
+import x.ui.IForm;
+import x.ui.IFormFactory;
+import x.uiwidget.XComponent;
+import x.uiwidget.XLabel;
 
 import static mach.Mocks.*;
 import static org.junit.Assert.*;
@@ -25,7 +32,12 @@ public class EditCommandTest {
     Events events = new Events();
     TaggedValue taggedValue;
     TaggedValueStringMap taggedValues;
+    Page page = new FakePage(link);
     EditCommand testObject = new EditCommand();
+    IFormFactory formFactory;
+    IForm form;
+    ILogManager logManager;
+    ILog log;
 
     @Before
     public void setUp() {
@@ -33,6 +45,10 @@ public class EditCommandTest {
         Mocks.init(this);
         _(); wild(null); listener.onEvent(null);
         _(); taggedValue.setTags(link.tags);
+        _(form); formFactory.newForm(link);
+        _(log); wild(null); logManager.getLog(null);
+        Registry.put(ILogManager.class,logManager);
+        Registry.put(IFormFactory.class,formFactory);
         Registry.put(TaggedValueStringMap.class,taggedValues);
         Registry.put(Events.class, events);
     }
@@ -60,6 +76,19 @@ public class EditCommandTest {
     }
 
     @Test
+    public void action_posts_EditTaggedValue_page_there_is_one_matching_source() {
+        _(new TaggedValue[] {taggedValue}); taggedValues.getValuesFor(link.tags);
+        events.registerListenerFor(listener, EditTaggedValueEvent.class);
+        Screen.of(page).show();
+
+        testObject.action(link,layout);
+
+        verify();
+        wild(null); listener.onEvent(null);  EditTaggedValueEvent event = arg();
+        assertSame(page, event.page);
+    }
+
+    @Test
     public void action_posts_EditTaggedValueEvent_when_there_is_one_matching_source() {
         _(new TaggedValue[] {taggedValue}); taggedValues.getValuesFor(link.tags);
         events.registerListenerFor(listener, EditTaggedValueEvent.class);
@@ -76,6 +105,7 @@ public class EditCommandTest {
         _(new TaggedValue[0]); taggedValues.getValuesFor(link.tags);
         _(taggedValue);        taggedValues.newValue();
         events.registerListenerFor(listener, EditTaggedValueEvent.class);
+        Screen.of(page).show();
 
         testObject.action(link,layout);
 
