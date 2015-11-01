@@ -39,8 +39,6 @@ public class FirstMatchingPageCompositePageFactoryTest {
     @Before
     public void setUp() {
         Mocks.init(this);
-        _(log);
-        logManager.getLog(FirstMatchingPageCompositePageFactory.class);
         Registry.put(ILogManager.class, logManager);
     }
 
@@ -52,6 +50,7 @@ public class FirstMatchingPageCompositePageFactoryTest {
     @Test
     public void create_return_an_empty_array_when_there_are_no_factories() {
         PageFactory factory = new FirstMatchingPageCompositePageFactory();
+        _(log); logManager.getLog(factory);
 
         Page[] actual = factory.create(link);
 
@@ -61,6 +60,7 @@ public class FirstMatchingPageCompositePageFactoryTest {
     @Test
     public void create_returns_page_from_only_factory_when_it_matches() {
         PageFactory factory = new FirstMatchingPageCompositePageFactory(factory1);
+        _(log); logManager.getLog(factory);
 
         _(pages);
         factory1.create(link);
@@ -74,6 +74,7 @@ public class FirstMatchingPageCompositePageFactoryTest {
     @Test
     public void create_returns_first_page_when_factory_has_multiple_matches() {
         PageFactory factory = new FirstMatchingPageCompositePageFactory(factory1);
+        _(log); logManager.getLog(factory);
 
         _(new Page[]{page, page2});
         factory1.create(link);
@@ -87,6 +88,7 @@ public class FirstMatchingPageCompositePageFactoryTest {
     @Test
     public void create_does_not_consult_more_factories_after_finding_a_match() {
         PageFactory factory = new FirstMatchingPageCompositePageFactory(factory1, factory2);
+        _(log); logManager.getLog(factory);
 
         _(pages);
         factory1.create(link);
@@ -100,6 +102,7 @@ public class FirstMatchingPageCompositePageFactoryTest {
     @Test
     public void create_returns_page_from_2nd_factory_when_it_is_the_only_one_that_matches() {
         PageFactory factory = new FirstMatchingPageCompositePageFactory(factory1, factory2);
+        _(log); logManager.getLog(factory);
 
         _(noPages);
         factory1.create(link);

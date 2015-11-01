@@ -86,7 +86,7 @@ public class MockFactoryTest {
     }
 
     @Test
-    public void last_when_wins_for_the_same_invocation() {
+    public void last_one_wins_for_the_same_invocation() {
         Sample mock = newMockSample();
         String expected = "next";
 
