@@ -1,3 +1,4 @@
 language: java
 sudo: false
+install: mvn --file OC1/pom.xml install:install-file -Dfile=lib/CodenameOne.jar -DgroupId=com.CodenameOne -DartifactId=CodenameOne -Dversion=1.0 -Dpackaging=jar
 script: mvn --file OC1/pom.xml clean verify site install
