@@ -1,0 +1,3 @@
+language: java
+sudo: false
+script: mvn --file OC1/pom.xml clean verify site install
