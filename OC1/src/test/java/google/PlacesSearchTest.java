@@ -1,11 +1,14 @@
 package google;
 
+import config.ShouldRun;
 import fake.FakeC1RegistryLoader;
 import j2se.J2seNetwork;
 import x.app.Registry;
 import x.net.Network;
 import x.util.Strings;
 import static org.junit.Assert.*;
+import static org.junit.Assume.assumeTrue;
+
 import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
@@ -21,6 +24,7 @@ public class PlacesSearchTest {
     
     @Before
     public void setUp() {
+        assumeTrue(ShouldRun.CodenameOne);
         FakeC1RegistryLoader.load();
         Registry.put(Network.class,   new J2seNetwork());
         testObject = new PlacesSearch();

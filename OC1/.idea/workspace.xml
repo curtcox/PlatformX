@@ -2,331 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="756562ef-2af1-477a-86c1-4c0e457a11a5" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_almworks_sqlite4java_sqlite4java_0_282.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_google_android_apps_common_testing_accessibility_framework_accessibility_test_framework_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ibm_icu_icu4j_53_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_ximpleware_vtd_xml_2_11.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_1_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_ant_ant_launcher_1_8_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_maven_maven_ant_tasks_2_1_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk16_1_46.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_analysis_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_commons_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_tree_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_ow2_asm_asm_util_5_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_robolectric_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_robolectric_annotations_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_robolectric_resources_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_robolectric_utils_3_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_robolectric_shadows_core_3_0.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/.name" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/compiler.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/copyright/profiles_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/encodings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/OC1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/android_22.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/javax_servlet_api_3_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/javax_servlet_api_3_0_1__2_.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/jsoup_1_8_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/lib.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/robolectric_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/robolectric_2_4_jar_with_dependencies.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/robovm_cocoatouch_1_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/robovm_cocoatouch_1_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/robovm_objc_1_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/robovm_objc_1_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/robovm_rt_1_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/robovm_rt_1_6_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/vaadin_client_7_4_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/vaadin_client_7_4_8__2_.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/vaadin_client_compiler_7_4_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/vaadin_server_7_4_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/vaadin_shared_7_4_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/libraries/vaadin_widgets_7_4_8.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/misc.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/scopes/scope_settings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/uiDesigner.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/vcs.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../.idea/workspace.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/app/AnApplicationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/app/AnRegistryLoaderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/pagefactories/AnIndexPageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/ui/AnDisplayTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/ui/AnFormTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/ui/AnUIRendererTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/uilist/AnFilterListModelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/uilist/AnListCellTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/uilist/AnSearchableListTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/an/a22/uiwidget/AnBorderContainerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/XJSONTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/app/C1ExceptionLoggerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/app/C1RegistryLoaderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/app/CurrentStateTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/app/HeartbeatTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/app/MyApplicationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/net/C1CachedNetworkEntriesIOTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/net/C1CachedNetworkTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/net/C1RawNetworkTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/pagefactories/C1IndexPageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/screen/C1ScreenTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/ui/C1ActionButtonTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/ui/C1DisplayTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/ui/C1FormTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/ui/C1UIRendererTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/uilist/C1FilterListModelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/uilist/C1ListCellTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/uilist/C1SearchableListBuilderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/c1/uilist/C1SearchableListTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/config/ShouldRun.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/DisplayTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeAnRegistryLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeC1RegistryLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeCodenameOneImplementation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeCodenameOneImplementationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeDataSetObserver.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeDeviceInfo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeDisplay.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeForm.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeFormFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeImplementationFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeImplementationFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeIosRegistryLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeLocationProvider.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeLog.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeLogManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakePage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakePageFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeRegistryLoaderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeRunner.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeSERegistryLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeStorage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeUI.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeUIManager.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeVaRegistryLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/fake/FakeXRegistryLoader.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/google/GeocodingTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/google/GoogleLocationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/google/PlaceTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/google/PlacesSearchTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/google/URLEncoderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/ArgNamesTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/ArgsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/ContextTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/HashInvokerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/HashLines.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/HashObjectMethodsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/HashTests.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/IdentifierTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/IdentityNamedValuesTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/InvocationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/MethodTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/NumberTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/NumericConstantTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/RunTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/SimpleExpressionTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/StringConstantTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/SyntaxErrorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/TernaryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/lex/MethodSourceChunkerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/lex/TokensTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/ArgNamesParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/ArgsParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/CompositeParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/ExpressionParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/HashParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/InvalidMethodParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/InvocationParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/NumericConstantParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/StringConstantParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/TernaryParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/hash/parse/ValidMethodParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/app/IosApplicationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/app/IosRegistryLoaderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/pagefactories/IosIndexPageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/ui/IosDisplayTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/ui/IosFormTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/ui/IosUIRendererTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/uilist/IosFilterListModelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/uilist/IosListCellTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/uilist/IosSearchableListTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/uiwidget/IosBorderDemoController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/ios/uiwidget/IosDemoApplication.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/j2se/J2seNetwork.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/Invocation.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/InvocationMap.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/InvocationMapTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/InvocationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/MockFactory.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/MockFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/MockInvocationHandler.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/MockInvocationHandlerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/Mocks.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/MocksTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mach/Phase.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/mite/handlers/EchoRequestHandlerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/coregraphics/CGRect.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/foundation/NSArray.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/foundation/NSIndexPath.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/foundation/NSObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/foundation/NSObjectTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIButton.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UICollectionView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UICollectionViewController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIColor.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIControl.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIFont.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UILabel.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIResponder.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIScreen.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIScrollView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UITableView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UITableViewCell.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UITableViewController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UITextField.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIView.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIViewController.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/apple/uikit/UIWindow.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/objc/ObjCClass.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/objc/ObjCClassTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/objc/ObjCObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/objc/ObjCObjectTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/objc/ObjCRuntime.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/objc/Selector.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/rt/VM.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/rt/bro/MarshalerLookup.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/rt/bro/NativeObject.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/org/robovm/rt/bro/Struct.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/SwingRunner.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/app/SERegistryLoaderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/app/StringMapRequestHandlerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/event/SESwappableListFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/event/SESwappableListTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/events/EventsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/events/SimpleListener.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/events/SimpleListenerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/pagefactories/SEIndexPageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/services/SELocationProviderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/storage/SERamStorageTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/ui/EditCommandTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/ui/SEDisplayTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/ui/SEFormTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/ui/SEUIRendererTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uilist/SEBasicListCellRendererTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uilist/SEFilterListModelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uilist/SESearchFilterInstallerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uilist/SESearchableListBuilderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uilist/SESearchableListFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uiwidget/SEAttributedStringPartRendererTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uiwidget/SEAttributedTextDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uiwidget/SEAttributedTextTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uiwidget/SEGhostTextDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uiwidget/StringEditorDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/uiwidget/StringEditorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/util/SimpleTaggedValueStringMapTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/util/SimpleTaggedValueTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/views/editor/SEScreenEditorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/se/views/editor/ScreenEditorDemo.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/tests/MainScreenC1Test.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/app/VaApplicationTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/app/VaRegistryLoaderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/pagefactories/VaIndexPageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/ui/VaDisplayTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/ui/VaFormTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/ui/VaUIRendererTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/uilist/VaFilterListModelTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/uilist/VaListCellTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/uilist/VaListItemTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/va/uilist/VaSearchableListTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/app/RegistryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/event/XLiveListTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/io/IOTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/json/JsonListParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/json/JsonListTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/json/JsonMapParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/json/JsonMapTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/json/JsonRendererTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/json/JsonValueParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/json/JsonValueTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/json/XJSONParserGoogleNearbysTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/json/XJSONParserTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/log/XLogEntryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/log/XLogTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/log/XLogWriterTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/net/JsonIndexNetStringMapTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/net/SimpleNetStringMapTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/PageLinkTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/PageTagsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/PageTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/RootPageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/SelectionListPageTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/dynamic/DynamicPageComponentMethodsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/dynamic/DynamicPageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/dynamic/DynamicPageLayoutMethodsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/dynamic/DynamicPageLayoutProviderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/dynamic/GlobPageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/dynamic/LazyPageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/page/dynamic/StringMapAsTaggedStringSourcesTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/pagefactories/FirstMatchingPageCompositePageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/pagefactories/MatchingIndexedPagesCompositePageFactoryTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/pageparts/ProviderRatingButtonTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/pageparts/XScreenButtonTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/pages/ProviderDetailsPageTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/parse/LexerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/parse/TokenizerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/screen/XScreenButtonTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/screen/XScreenTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/services/LocationQuantizerTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/services/XDistanceCalculatorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/stores/MyRatingsIOTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/stores/MyRatingsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/ui/AttributedStringBuilderTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/ui/AttributedStringPartTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/ui/AttributedStringTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/ui/BoxFlowLayoutAssertions.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/ui/ColorTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/ui/ColumnBoxFlowLayoutTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/ui/PointTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/ui/RectangleTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/ui/SimpleAttributedStringRendererTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/uilist/StringToListFilterTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/uiwidget/XPeeredComponentTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/util/CollectionAsListTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/util/GlobStringMapTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/util/GlobTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/util/ObjectsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/util/SplitterTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/test/m2/x/util/StringsTest.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/CodenameOne-1.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/atmosphere-runtime-2.2.7.vaadin1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/flute-1.3.0.gg2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/guava-16.0.1.vaadin1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/js-1.7R2.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/jsoup-1.8.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/robovm-cocoatouch-1.12.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/robovm-objc-1.12.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/robovm-rt-1.12.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/sac-1.3.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/streamhtmlparser-jsilver-0.0.10.vaadin1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/vaadin-push-7.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/vaadin-sass-compiler-0.9.13.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/vaadin-server-7.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/vaadin-shared-7.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/vaadin-slf4j-jdk14-1.6.1.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/vaadin-themes-7.6.0.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/Vaadin-1.0-SNAPSHOT/WEB-INF/lib/yuicompressor-2.4.8.jar" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/dependencies.html" afterPath="$PROJECT_DIR$/target/site/dependencies.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/dependency-convergence.html" afterPath="$PROJECT_DIR$/target/site/dependency-convergence.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/dependency-info.html" afterPath="$PROJECT_DIR$/target/site/dependency-info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/dependency-management.html" afterPath="$PROJECT_DIR$/target/site/dependency-management.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/index.html" afterPath="$PROJECT_DIR$/target/site/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/plugin-management.html" afterPath="$PROJECT_DIR$/target/site/plugin-management.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/plugins.html" afterPath="$PROJECT_DIR$/target/site/plugins.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/project-info.html" afterPath="$PROJECT_DIR$/target/site/project-info.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/site/project-summary.html" afterPath="$PROJECT_DIR$/target/site/project-summary.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/config/ShouldRun.java" afterPath="$PROJECT_DIR$/src/test/java/config/ShouldRun.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/google/GeocodingTest.java" afterPath="$PROJECT_DIR$/src/test/java/google/GeocodingTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/google/PlacesSearchTest.java" afterPath="$PROJECT_DIR$/src/test/java/google/PlacesSearchTest.java" />
     </list>
     <ignored path="cve-app.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -348,29 +26,124 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="AnApplicationTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/an/a22/app/AnApplicationTest.java">
+      <file leaf-file-name="IosUIRendererTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ios/ui/IosUIRendererTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="35" column="47" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+              <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#625#626#0" expanded="true" />
-                <element signature="e#675#676#0" expanded="true" />
+                <element signature="e#1254#1255#0" expanded="true" />
+                <element signature="e#1313#1314#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IosUIRendererTest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ios/ui/IosUIRendererTest.java">
+      <file leaf-file-name="XJSONTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/c1/XJSONTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33280757">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
               <folding>
-                <element signature="e#1254#1255#0" expanded="true" />
-                <element signature="e#1313#1314#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GeocodingTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/google/GeocodingTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="42" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+                <element signature="e#730#731#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PlacesSearchTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/google/PlacesSearchTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+              <folding>
+                <element signature="e#720#721#0" expanded="true" />
+                <element signature="e#769#770#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RootPageFactoryTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/x/page/RootPageFactoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="XScreenButtonTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/x/screen/XScreenButtonTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <folding>
+                <element signature="e#1091#1265#0" expanded="true" />
+                <element signature="e#1264#1265#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GlobPageFactoryTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/x/page/dynamic/GlobPageFactoryTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FakeUIManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/fake/FakeUIManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FakeRegistryLoaderTest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/fake/FakeRegistryLoaderTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="15" column="9" selection-start-line="15" selection-start-column="0" selection-end-line="18" selection-end-column="5" />
+              <folding>
+                <element signature="e#448#449#0" expanded="true" />
+                <element signature="e#491#492#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShouldRun.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/config/ShouldRun.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.27088037">
+              <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -403,6 +176,9 @@
         <option value="$PROJECT_DIR$/src/test/java/x/json/XJSONParserTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/x/json/JsonMapTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/an/a22/app/AnApplicationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/google/GeocodingTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/google/PlacesSearchTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/config/ShouldRun.java" />
       </list>
     </option>
   </component>
@@ -817,10 +593,22 @@
     <history-entry file="All_in_Vaadin - 2016.01.02 at 12h 16m 32s.xml">
       <configuration name="All in Vaadin" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="All_in_Vaadin - 2016.01.02 at 12h 47m 06s.xml">
+      <configuration name="All in Vaadin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Vaadin - 2016.01.02 at 12h 49m 13s.xml">
+      <configuration name="All in Vaadin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Vaadin - 2016.01.02 at 13h 32m 26s.xml">
+      <configuration name="All in Vaadin" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_Vaadin - 2016.01.02 at 13h 34m 04s.xml">
+      <configuration name="All in Vaadin" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -829,7 +617,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3299595" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.52327937" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1014,16 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/fake/FakeUIManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3785489">
-          <caret line="16" column="2" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/fake/FakeImplementationFactory.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.28391168">
@@ -1080,14 +858,105 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/c1/XJSONTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/fake/FakeRegistryLoaderTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="9" selection-start-line="15" selection-start-column="0" selection-end-line="18" selection-end-column="5" />
+          <folding>
+            <element signature="e#448#449#0" expanded="true" />
+            <element signature="e#491#492#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/google/GeocodingTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="42" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+            <element signature="e#730#731#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/google/PlacesSearchTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="42" selection-start-line="26" selection-start-column="42" selection-end-line="26" selection-end-column="42" />
+          <folding>
+            <element signature="e#720#721#0" expanded="true" />
+            <element signature="e#769#770#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/fake/FakeUIManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/x/page/RootPageFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/x/screen/XScreenButtonTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding>
+            <element signature="e#1091#1265#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/x/page/dynamic/GlobPageFactoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ios/ui/IosUIRendererTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33280757">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="33" selection-start-line="32" selection-start-column="33" selection-end-line="32" selection-end-column="33" />
           <folding>
             <element signature="e#1254#1255#0" expanded="true" />
             <element signature="e#1313#1314#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/config/ShouldRun.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27088037">
+          <caret line="8" column="51" selection-start-line="8" selection-start-column="51" selection-end-line="8" selection-end-column="51" />
+          <folding />
         </state>
       </provider>
     </entry>
