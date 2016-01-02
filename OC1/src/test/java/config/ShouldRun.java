@@ -7,9 +7,9 @@ public class ShouldRun {
 
     public static final boolean CodenameOne = false;
     public static final boolean      RoboVM = false;
-    public static final boolean     Android = All || false;
-    public static final boolean      JavaSE = All || false;
-    public static final boolean      Vaadin = All || false;
+    public static final boolean     Android = false;
+    public static final boolean      JavaSE = false;
+    public static final boolean      Vaadin = false;
 
     public static final boolean           X = false;
     public static final boolean      Google = All || false;
