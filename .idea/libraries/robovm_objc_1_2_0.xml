@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="robovm-objc-1.2.0">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/OC1/lib/robovm-objc-1.2.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
