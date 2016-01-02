@@ -9,6 +9,7 @@
 # Generated folders
 build
 build/
+target/
 dist
 bin/
 gen/
