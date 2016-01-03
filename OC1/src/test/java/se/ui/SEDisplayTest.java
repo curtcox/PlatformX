@@ -10,12 +10,14 @@ import static org.junit.Assume.assumeTrue;
 
 public class SEDisplayTest {
 
-    SEForm form = new SEForm(PageLink.of(""));
-    SEDisplay testObject = SEDisplay.of();
+    SEForm form;
+    SEDisplay testObject;
 
     @Before
     public void setUp() {
-        assumeTrue(ShouldRun.JavaSE);
+        assumeTrue(ShouldRun.JavaSE_UI);
+        form = new SEForm(PageLink.of(""));
+        testObject = SEDisplay.of();
     }
 
     @Test
