@@ -1,6 +1,8 @@
 package se.views.editor;
 
 import se.events.Events;
+import se.frame.FrameMeta;
+import se.frame.SEFrame;
 import se.ui.EditTaggedValueEvent;
 import se.ui.SEBorderContainer;
 import se.uiwidget.StringEditor;
@@ -19,7 +21,7 @@ public final class SEScreenEditor {
     TaggedValue editing;
     Page page;
     XComponent layout;
-    final JFrame frame = new JFrame();
+    final JFrame frame = new SEFrame(frameMeta());
     final JLabel pageLabel = new JLabel();
     final JLabel layoutLabel = new JLabel();
     final StringEditor editor = new StringEditor(textListener(),null);
@@ -38,6 +40,14 @@ public final class SEScreenEditor {
             screenEditor.init();
         }
         return screenEditor;
+    }
+
+    private static FrameMeta frameMeta() {
+        return new FrameMeta(
+                "Viewing and editing application source code.",
+                "Inspect and edit the text shown.",
+                SEScreenEditor.class
+        );
     }
 
     void init() {

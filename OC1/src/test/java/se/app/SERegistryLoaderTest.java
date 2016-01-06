@@ -18,7 +18,7 @@ public class SERegistryLoaderTest {
 
     @Before
     public void setUp() {
-        assumeTrue(ShouldRun.JavaSE);
+        assumeTrue(ShouldRun.JavaSE_UI);
     }
 
     @Test

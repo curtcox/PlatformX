@@ -34,7 +34,7 @@ public class SEFormTest {
 
     @Before
     public void setUp() {
-        assumeTrue(ShouldRun.JavaSE);
+        assumeTrue(ShouldRun.JavaSE_UI);
         Mocks.init(this);
         _(); wild(null); listener.onEvent(null);
     }

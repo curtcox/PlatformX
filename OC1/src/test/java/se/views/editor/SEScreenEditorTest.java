@@ -28,7 +28,7 @@ public class SEScreenEditorTest {
 
     @Before
     public void setUp() {
-        assumeTrue(ShouldRun.JavaSE);
+        assumeTrue(ShouldRun.JavaSE_UI);
         FakeSERegistryLoader.load();
         Registry.put(Events.class,events);
         Registry.put(SimpleTaggedValueStringMap.class,stringMap);

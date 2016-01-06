@@ -1,5 +1,7 @@
 package se.ui;
 
+import se.frame.FrameMeta;
+import se.frame.SEFrame;
 import x.ui.IDisplay;
 import x.ui.IForm;
 
@@ -12,7 +14,7 @@ import java.net.URISyntaxException;
 public final class SEDisplay
     implements IDisplay
 {
-    final JFrame frame;
+    final SEFrame frame;
     SEForm form;
     private static SEDisplay singleton;
 
@@ -27,7 +29,7 @@ public final class SEDisplay
         return new SEDisplay(frame());
     }
 
-    private SEDisplay(JFrame frame) {
+    private SEDisplay(SEFrame frame) {
         this.frame = frame;
     }
 
@@ -52,11 +54,19 @@ public final class SEDisplay
         }
     }
 
-    private static JFrame frame() {
-        JFrame frame = new JFrame();
+    private static SEFrame frame() {
+        SEFrame frame = new SEFrame(frameMeta());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         return frame;
+    }
+
+    private static FrameMeta frameMeta() {
+        return new FrameMeta(
+           "For displaying application pages",
+           "Interact directly with the page shown. Use the navigation bar and back button to change pages.",
+           SEDisplay.class
+        );
     }
 
     void show(SEForm form) {
