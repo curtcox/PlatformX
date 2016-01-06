@@ -10,7 +10,7 @@ import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.FutureTask;
 
-public final class FakeUI {
+public final class FakeC1UI {
     
     static {
         try {
@@ -37,7 +37,7 @@ public final class FakeUI {
     
     public static <T> T onEDT(Callable<T> callable) throws InterruptedException, ExecutionException {
         FutureTask<T> future = new FutureTask(callable);
-        FakeUI.display().invokeAndBlock(future);
+        FakeC1UI.display().invokeAndBlock(future);
         return future.get();
     }
 
@@ -51,9 +51,9 @@ public final class FakeUI {
     }
 
     static void init() throws ExecutionException, InterruptedException {
-        FakeUI.onEDT(new Callable(){
+        FakeC1UI.onEDT(new Callable(){
             public Object call() throws Exception {
-                FakeUI.newForm();
+                FakeC1UI.newForm();
                 return null;
             }
         });

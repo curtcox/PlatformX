@@ -2,6 +2,7 @@ package x.page.dynamic;
 
 import config.ShouldRun;
 import fake.FakeC1RegistryLoader;
+import fake.FakeXRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 import x.page.Page;
@@ -26,7 +27,7 @@ public class GlobPageFactoryTest {
     @Before
     public void setUp() {
         assumeTrue(ShouldRun.X);
-        FakeC1RegistryLoader.load();
+        FakeXRegistryLoader.load();
         screen = new Page(PageLink.of("whatever")) {
             @Override
             public XContainer layoutForPortrait() { return null; }
@@ -39,8 +40,8 @@ public class GlobPageFactoryTest {
     }
 
     @Test
-    public void create_returns_null_when_glob_does_not_match() {
-         assertEquals(null,testObject.create(PageLink.of("junk")));
+    public void create_returns_0_pages_when_glob_does_not_match() {
+         assertEquals(0,testObject.create(PageLink.of("junk")).length);
     }
 
 }

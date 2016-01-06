@@ -2,7 +2,7 @@ package c1.screen;
 
 
 import config.ShouldRun;
-import fake.FakeUI;
+import fake.FakeC1UI;
 import x.page.Page;
 import x.screen.Screen;
 import x.page.PageLink;
@@ -46,9 +46,9 @@ public class C1ScreenTest {
     }
     
     private Screen createScreenOnEDT(final Screen previous) throws Exception {
-        return (Screen) FakeUI.onEDT(new Callable(){
+        return (Screen) FakeC1UI.onEDT(new Callable(){
             public Object call() throws Exception {
-                form = FakeUI.newForm();
+                form = FakeC1UI.newForm();
                 return Screen.of(page);
             }
         });

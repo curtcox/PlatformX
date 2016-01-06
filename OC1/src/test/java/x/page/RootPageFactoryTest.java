@@ -1,21 +1,21 @@
 package x.page;
 
 import config.ShouldRun;
-import fake.FakeDeviceInfo;
-import fake.FakeFormFactory;
-import fake.FakeLogManager;
-import fake.FakeUIManager;
+import fake.*;
 import org.junit.Before;
 import org.junit.Test;
 import x.app.Registry;
 import x.app.RootPageFactory;
+import x.device.XDeviceInfo;
 import x.event.NamedValueListSource;
 import x.log.ILogManager;
+import x.log.XLogWriter;
 import x.page.dynamic.StringMapAsTaggedStringSources;
 import x.page.dynamic.TaggedStringSources;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.pagefactories.XItemListPageFactoryFactory;
 import x.ui.IFormFactory;
+import x.uiwidget.XSearchableList;
 import x.util.SimpleStringMap;
 import x.util.StringMap;
 
@@ -34,10 +34,11 @@ public class RootPageFactoryTest {
         Registry.put(StringMap.class, stringMap);
         Registry.put(TaggedStringSources.class, new StringMapAsTaggedStringSources(stringMap));
         Registry.put(ItemListPageFactoryFactory.class, new XItemListPageFactoryFactory());
-        Registry.put(NamedValueListSource.class, new FakeDeviceInfo());
+        Registry.put(XDeviceInfo.class, new FakeDeviceInfo());
         Registry.put(IFormFactory.class, new FakeFormFactory());
         Registry.put(ILogManager.class, new FakeLogManager());
-        FakeUIManager.of();
+        Registry.put(XLogWriter.class, new XLogWriter());
+        Registry.put(XSearchableList.Factory.class, new FakeSearchableListFactory());
         testObject = RootPageFactory.of();
     }
 

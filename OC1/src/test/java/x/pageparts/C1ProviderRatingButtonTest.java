@@ -1,7 +1,7 @@
 package x.pageparts;
 
 import config.ShouldRun;
-import fake.FakeUI;
+import fake.FakeC1UI;
 import fake.FakeXRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,11 +12,11 @@ import java.util.concurrent.Callable;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assume.assumeTrue;
 
-public class ProviderRatingButtonTest {
+public class C1ProviderRatingButtonTest {
 
     @Before
     public void setUp() {
-        assumeTrue(ShouldRun.X);
+        assumeTrue(ShouldRun.CodenameOne);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class ProviderRatingButtonTest {
     }
  
     private XButton createScreenButtonOnEDT() throws Exception {
-        return (XButton) FakeUI.onEDT(new Callable() {
+        return (XButton) FakeC1UI.onEDT(new Callable() {
             public Object call() throws Exception {
                 return ProviderRatingButton.of();
             }

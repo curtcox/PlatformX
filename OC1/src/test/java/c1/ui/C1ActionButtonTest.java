@@ -2,7 +2,7 @@ package c1.ui;
 
 import config.ShouldRun;
 import fake.FakeC1RegistryLoader;
-import fake.FakeUI;
+import fake.FakeC1UI;
 import org.junit.Before;
 import org.junit.Test;
 import x.app.CurrentState;
@@ -28,7 +28,7 @@ public class C1ActionButtonTest {
     }
 
     private XButton createActionButtonOnEDT(final String text) throws Exception {
-        return (XButton) FakeUI.onEDT(new Callable(){
+        return (XButton) FakeC1UI.onEDT(new Callable(){
             public Object call() throws Exception {
                 return new XButton(text) {
                     @Override
@@ -58,7 +58,7 @@ public class C1ActionButtonTest {
         };
         button.updateTextOnChange(change, stringSource());
         listener.onChange();
-        FakeUI.flushEDT();
+        FakeC1UI.flushEDT();
         
         assertEquals(expected,button.getText());
     }
@@ -79,7 +79,7 @@ public class C1ActionButtonTest {
         button.updateTextOnChange(stringSource());
         CurrentState.get().broadcastChange();
         
-        FakeUI.flushEDT();
+        FakeC1UI.flushEDT();
         
         assertEquals(expected,button.getText());
     }

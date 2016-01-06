@@ -1,7 +1,7 @@
 package x.screen;
 
 import config.ShouldRun;
-import fake.FakeUI;
+import fake.FakeC1UI;
 import fake.FakeXRegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -42,7 +42,7 @@ public class XScreenButtonTest {
     }
 
     private XButton createScreenButtonOnEDT(final String text, final Page page) throws Exception {
-        return (XButton) FakeUI.onEDT(new Callable(){
+        return (XButton) FakeC1UI.onEDT(new Callable(){
             public Object call() throws Exception {
                 return XScreenButton.builder().text(text).leadingTo(page).build();
             }
@@ -51,7 +51,7 @@ public class XScreenButtonTest {
 
     @Before
     public void setUp() {
-        assumeTrue(ShouldRun.X);
+        assumeTrue(ShouldRun.CodenameOne);
         FakeXRegistryLoader.load();
     }
 
