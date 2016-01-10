@@ -20,6 +20,7 @@ public final class PageLink {
     public final PageTags tags;
     public final Object[] args;
 
+    // Use one of the factory methods
     private PageLink(Page page, String tags, Object... args) {
         this.page = page;
         this.tags = PageTags.of(tags);

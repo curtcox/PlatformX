@@ -21,7 +21,7 @@ public final class SEScreenEditor {
     TaggedValue editing;
     Page page;
     XComponent layout;
-    final JFrame frame = new SEFrame(frameMeta());
+    final SEFrame frame = new SEFrame(frameMeta());
     final JLabel pageLabel = new JLabel();
     final JLabel layoutLabel = new JLabel();
     final StringEditor editor = new StringEditor(textListener(),null);

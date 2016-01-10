@@ -1,6 +1,9 @@
 package se.views.editor;
 
 import config.ShouldRun;
+import fake.FakePage;
+import se.frame.JavaSourceCodeLookup;
+import se.frame.SEJavaSourceCodeLookup;
 import x.app.Registry;
 import x.page.Page;
 import x.page.PageLink;
@@ -33,6 +36,7 @@ public class SEScreenEditorTest {
         Registry.put(Events.class,events);
         Registry.put(SimpleTaggedValueStringMap.class,stringMap);
         Registry.put(IFormFactory.class,new FakeFormFactory());
+        Registry.put(JavaSourceCodeLookup.class,new SEJavaSourceCodeLookup());
         testObject = new SEScreenEditor();
     }
 
@@ -52,10 +56,8 @@ public class SEScreenEditorTest {
         value.setTags(PageTags.of("whatever"));
         XComponent layout = new XComponent();
         Page page = Page.withFixedLayout("title",layout);
-        EditTaggedValueEvent event = new EditTaggedValueEvent(value,page,layout);
 
-        testObject.register();
-        events.post(event);
+        post(new EditTaggedValueEvent(value,page,layout));
 
         assertEquals(value.getTags(), testObject.editing.getTags());
     }
@@ -80,6 +82,59 @@ public class SEScreenEditorTest {
         testObject.edit(value);
 
         assertEquals("contents", testObject.editor.getText());
+    }
+
+    @Test
+    public void says_it_is_for_viewing_and_editing() {
+        assertEquals(
+            "For viewing and editing application source code.",
+            testObject.frame.meta.what_its_for);
+    }
+
+    @Test
+    public void displays_page_after_EditTaggedValueEvent_is_posted() {
+        TaggedValue value = stringMap.newValue();
+        value.setTags(PageTags.of("whatever"));
+        XComponent layout = new XComponent();
+        Page page = Page.withFixedLayout("title",layout);
+
+        post(new EditTaggedValueEvent(value,page,layout));
+
+        assertSame(page,testObject.page);
+        assertEquals(page.toString(),testObject.pageLabel.getText());
+    }
+
+    @Test
+    public void displays_layout_after_EditTaggedValueEvent_is_posted() {
+        TaggedValue value = stringMap.newValue();
+        value.setTags(PageTags.of("whatever"));
+        XComponent layout = new XComponent();
+        Page page = Page.withFixedLayout("title",layout);
+
+        post(new EditTaggedValueEvent(value,page,layout));
+
+        assertSame(layout,testObject.layout);
+        assertEquals(layout.toString(),testObject.layoutLabel.getText());
+    }
+
+    @Test
+    public void edits_value_after_EditTaggedValueEvent_is_posted() {
+        TaggedValue value = stringMap.newValue();
+        String contents = toString();
+        value.setContents(contents);
+        value.setTags(PageTags.of("whatever"));
+        XComponent layout = new XComponent();
+        Page page = Page.withFixedLayout("title",layout);
+
+        post(new EditTaggedValueEvent(value,page,layout));
+
+        assertSame(value,testObject.editing);
+        assertEquals(contents,testObject.editor.getText());
+    }
+
+    void post(EditTaggedValueEvent event) {
+        testObject.register();
+        events.post(event);
     }
 
     Screen screen() {
