@@ -44,7 +44,7 @@ public final class SEScreenEditor {
 
     private static FrameMeta frameMeta() {
         return new FrameMeta(
-                "Viewing and editing application source code.",
+                "For viewing and editing application source code.",
                 "Inspect and edit the text shown.",
                 SEScreenEditor.class
         );
@@ -106,7 +106,6 @@ public final class SEScreenEditor {
     void edit(TaggedValue value) {
         editing = value;
         editor.setText(value.getContents());
-        frame.setTitle(value.getTags().toString());
         frame.setVisible(true);
     }
 

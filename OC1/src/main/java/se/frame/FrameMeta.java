@@ -1,6 +1,12 @@
 package se.frame;
 
+import x.app.Registry;
+
+/**
+ * For storing information about a UI frame.
+ */
 public final class FrameMeta {
+
     public final String what_its_for;
     public final String how_to_use_it;
     public final String source_code_location;
@@ -18,11 +24,14 @@ public final class FrameMeta {
     }
 
     private static String code(Class clazz) {
-        return null;
+        return lookup().sourceFor(clazz);
     }
 
     private static String location(Class clazz) {
-        return null;
+        return clazz.getName();
     }
 
+    private static JavaSourceCodeLookup lookup() {
+        return Registry.get(JavaSourceCodeLookup.class);
+    }
 }

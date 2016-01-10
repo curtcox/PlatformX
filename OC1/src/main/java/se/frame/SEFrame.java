@@ -9,5 +9,6 @@ public final class SEFrame
 
     public SEFrame(FrameMeta meta) {
         this.meta = meta;
+        setTitle(meta.what_its_for);
     }
 }
