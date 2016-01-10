@@ -1,6 +1,8 @@
 package se.app;
 
 import se.device.SEDeviceInfo;
+import se.frame.JavaSourceCodeLookup;
+import se.frame.SEJavaSourceCodeLookup;
 import se.views.editor.SEScreenEditor;
 import se.event.SESwappableListFactory;
 import se.events.Events;
@@ -63,8 +65,9 @@ final class SERegistryLoader {
         put(Events.class,           new Events());
         put(Runner.class,           new SERunner());
         put(IFormFactory.class,     new SEFormFactory());
-        put(IDisplay.class,         SEDisplay.of());
-        put(Network.class, new XRawNetwork());
+        put(JavaSourceCodeLookup.class,       new SEJavaSourceCodeLookup());
+        put(IDisplay.class,                   SEDisplay.of());
+        put(Network.class,                    new XRawNetwork());
         putTaggedValueStringMap();
         put(XSearchableList.Factory.class,    new SESearchableListFactory());
         put(XSearchFilterInstaller.class,     new SESearchFilterInstaller());
@@ -76,11 +79,11 @@ final class SERegistryLoader {
         put(XConsumerServiceProviders.class,  new XConsumerServiceProviders());
         put(ItemListPageFactoryFactory.class, new XItemListPageFactoryFactory());
         put(SwappableList.Factory.class,      new SESwappableListFactory());
-        put(PageFactory.class,      RootPageFactory.of());
+        put(PageFactory.class,                RootPageFactory.of());
         put(XStorage.class,                   new SERamStorage());
         put(MyRatings.class,                  new MyRatings());
-        put(SEScreenEditor.class,     SEScreenEditor.of());
-        put(CurrentState.class,            new CurrentState());
+        put(SEScreenEditor.class,             SEScreenEditor.of());
+        put(CurrentState.class,               new CurrentState());
     }
 
     private static void putTaggedValueStringMap() {

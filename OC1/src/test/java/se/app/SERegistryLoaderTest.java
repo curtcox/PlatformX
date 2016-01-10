@@ -2,6 +2,7 @@ package se.app;
 
 import config.ShouldRun;
 import org.junit.Before;
+import se.frame.JavaSourceCodeLookup;
 import x.app.CurrentState;
 import x.app.Registry;
 import x.page.dynamic.TaggedStringSources;
@@ -30,6 +31,7 @@ public class SERegistryLoaderTest {
         assertNotNull(Registry.get(XListContentInstaller.class));
         assertNotNull(Registry.get(CurrentState.class));
         assertNotNull(Registry.get(XGeocoder.class));
+        assertNotNull(Registry.get(JavaSourceCodeLookup.class));
     }
 
     @Test
