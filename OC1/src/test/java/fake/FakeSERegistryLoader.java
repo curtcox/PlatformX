@@ -1,5 +1,6 @@
 package fake;
 
+import se.uilist.SESearchableListFactory;
 import x.pagefactories.XItemListPageFactoryFactory;
 import x.app.Registry;
 import x.domain.ConsumerServiceProvider;
@@ -9,6 +10,7 @@ import x.log.XLogWriter;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.ui.IDisplay;
 import x.ui.IFormFactory;
+import x.uiwidget.XSearchableList;
 
 public class FakeSERegistryLoader {
     
@@ -19,6 +21,7 @@ public class FakeSERegistryLoader {
         put(IDisplay.class,                   new FakeDisplay());
         put(IFormFactory.class,               new FakeFormFactory());
         put(ItemListPageFactoryFactory.class, new XItemListPageFactoryFactory());
+        put(XSearchableList.Factory.class,    new SESearchableListFactory());
     }
     
     static void put(Class clazz, Object object) {
