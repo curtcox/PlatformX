@@ -1,5 +1,6 @@
 package se.views.editor;
 
+import se.util.MutableTaggedValue;
 import x.app.Registry;
 import x.page.PageLink;
 import x.page.PageTags;
@@ -19,9 +20,8 @@ public class ScreenEditorDemo {
 
     private static void addSource() {
         SimpleTaggedValueStringMap stringMap = Registry.get(SimpleTaggedValueStringMap.class);
-        TaggedValue taggedValue = stringMap.newValue();
+        MutableTaggedValue taggedValue = (MutableTaggedValue) stringMap.newValue(PageTags.of("test"));
         taggedValue.setContents("existing source");
-        taggedValue.setTags(PageTags.of("test"));
     }
 
     private static void loadRegistry() {

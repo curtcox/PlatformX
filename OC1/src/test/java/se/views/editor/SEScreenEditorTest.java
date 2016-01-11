@@ -4,6 +4,7 @@ import config.ShouldRun;
 import fake.FakePage;
 import se.frame.JavaSourceCodeLookup;
 import se.frame.SEJavaSourceCodeLookup;
+import se.util.MutableTaggedValue;
 import x.app.Registry;
 import x.page.Page;
 import x.page.PageLink;
@@ -52,8 +53,8 @@ public class SEScreenEditorTest {
 
     @Test
     public void sending_an_edit_command_event_causes_a_value_with_the_corresponding_tags_to_be_edited_when_registered() {
-        TaggedValue value = stringMap.newValue();
-        value.setTags(PageTags.of("whatever"));
+        PageTags tags = PageTags.of("whatever");
+        MutableTaggedValue value = (MutableTaggedValue) stringMap.newValue(tags);
         XComponent layout = new XComponent();
         Page page = Page.withFixedLayout("title",layout);
 
@@ -64,8 +65,7 @@ public class SEScreenEditorTest {
 
     @Test
     public void edit_makes_the_editing_frame_visible() {
-        TaggedValue value = stringMap.newValue();
-        value.setTags(PageTags.of("use_for_title"));
+        MutableTaggedValue value = (MutableTaggedValue) stringMap.newValue(PageTags.of("use_for_title"));
 
         testObject.edit(value);
 
@@ -74,8 +74,7 @@ public class SEScreenEditorTest {
 
     @Test
     public void edit_puts_the_edited_text_in_the_editor() {
-        TaggedValue value = stringMap.newValue();
-        value.setTags(PageTags.of("use_for_title"));
+        MutableTaggedValue value = (MutableTaggedValue) stringMap.newValue(PageTags.of("use_for_title"));
         value.setContents("contents");
         screen().show();
 
@@ -93,8 +92,7 @@ public class SEScreenEditorTest {
 
     @Test
     public void displays_page_after_EditTaggedValueEvent_is_posted() {
-        TaggedValue value = stringMap.newValue();
-        value.setTags(PageTags.of("whatever"));
+        MutableTaggedValue value = (MutableTaggedValue) stringMap.newValue(PageTags.of("whatever"));
         XComponent layout = new XComponent();
         Page page = Page.withFixedLayout("title",layout);
 
@@ -106,8 +104,7 @@ public class SEScreenEditorTest {
 
     @Test
     public void displays_layout_after_EditTaggedValueEvent_is_posted() {
-        TaggedValue value = stringMap.newValue();
-        value.setTags(PageTags.of("whatever"));
+        MutableTaggedValue value = (MutableTaggedValue) stringMap.newValue(PageTags.of("whatever"));
         XComponent layout = new XComponent();
         Page page = Page.withFixedLayout("title",layout);
 
@@ -118,11 +115,10 @@ public class SEScreenEditorTest {
     }
 
     @Test
-    public void edits_value_after_EditTaggedValueEvent_is_posted() {
-        TaggedValue value = stringMap.newValue();
+    public void edits_value_contents_after_EditTaggedValueEvent_is_posted() {
+        MutableTaggedValue value = (MutableTaggedValue) stringMap.newValue(PageTags.of("whatever"));
         String contents = toString();
         value.setContents(contents);
-        value.setTags(PageTags.of("whatever"));
         XComponent layout = new XComponent();
         Page page = Page.withFixedLayout("title",layout);
 

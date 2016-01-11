@@ -31,7 +31,7 @@ public class SimpleTaggedValueStringMapTest {
 
     @Test
     public void newValue_returns_a_tagged_value() {
-        assertTrue(testObject.newValue() instanceof TaggedValue);
+        assertTrue(testObject.newValue(PageTags.of("")) instanceof TaggedValue);
     }
 
     @Test
@@ -82,8 +82,7 @@ public class SimpleTaggedValueStringMapTest {
     }
 
     TaggedValue newValue(String tags, String contents) {
-        TaggedValue taggedValue = testObject.newValue();
-        taggedValue.setTags(PageTags.of(tags));
+        MutableTaggedValue taggedValue = (MutableTaggedValue) testObject.newValue(PageTags.of(tags));
         taggedValue.setContents(contents);
         return taggedValue;
     }

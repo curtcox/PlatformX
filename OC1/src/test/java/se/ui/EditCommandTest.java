@@ -44,7 +44,6 @@ public class EditCommandTest {
         assumeTrue(ShouldRun.JavaSE);
         Mocks.init(this);
         _(); wild(null); listener.onEvent(null);
-        _(); taggedValue.setTags(link.tags);
         _(form); formFactory.newForm(link);
         _(log); wild(null); logManager.getLog(null);
         Registry.put(ILogManager.class,logManager);
@@ -103,7 +102,7 @@ public class EditCommandTest {
     @Test
     public void action_posts_EditTaggedValueEvent_when_there_is_no_matching_source() {
         _(new TaggedValue[0]); taggedValues.getValuesFor(link.tags);
-        _(taggedValue);        taggedValues.newValue();
+        _(taggedValue);        taggedValues.newValue(link.tags);
         events.registerListenerFor(listener, EditTaggedValueEvent.class);
         Screen.of(page).show();
 
@@ -112,7 +111,7 @@ public class EditCommandTest {
         verify();
         wild(null); listener.onEvent(null);  EditTaggedValueEvent event = arg();
         assertSame(taggedValue, event.taggedValue);
-        taggedValue.setTags(link.tags);
+        taggedValues.newValue(link.tags);
     }
 
     private String random(String prefix) {

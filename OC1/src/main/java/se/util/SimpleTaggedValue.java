@@ -3,7 +3,7 @@ package se.util;
 import x.page.PageTags;
 
 final class SimpleTaggedValue
-    implements TaggedValue
+    implements MutableTaggedValue
 {
     private PageTags tags;
     private String contents;

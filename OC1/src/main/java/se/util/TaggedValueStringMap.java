@@ -7,6 +7,6 @@ import x.util.StringMap;
 public interface TaggedValueStringMap
     extends StringMap, TaggedStringSources
 {
-    TaggedValue newValue();
+    TaggedValue newValue(PageTags tags);
     TaggedValue[] getValuesFor(PageTags tags);
 }

@@ -16,7 +16,7 @@ public final class PageLink {
      * If the page is null, then the tags and args will be used to find
      * the matching page or pages.
      */
-    public final Page page;
+    public final Page page; // possibly null
     public final PageTags tags;
     public final Object[] args;
 

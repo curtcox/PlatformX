@@ -10,7 +10,7 @@ public final class SimpleTaggedValueStringMap
     implements TaggedValueStringMap
 {
 
-    List<TaggedValue> taggedValues = new ArrayList();
+    List<MutableTaggedValue> taggedValues = new ArrayList();
 
     @Override
     public String get(String key) {
@@ -20,9 +20,10 @@ public final class SimpleTaggedValueStringMap
         return null;
     }
 
-    public TaggedValue newValue() {
-        TaggedValue value = new SimpleTaggedValue();
+    public TaggedValue newValue(PageTags tags) {
+        MutableTaggedValue value = new SimpleTaggedValue();
         taggedValues.add(value);
+        value.setTags(tags);
         return value;
     }
 

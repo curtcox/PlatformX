@@ -6,6 +6,7 @@ import se.frame.SEFrame;
 import se.ui.EditTaggedValueEvent;
 import se.ui.SEBorderContainer;
 import se.uiwidget.StringEditor;
+import se.util.MutableTaggedValue;
 import se.util.TaggedValue;
 import x.app.Registry;
 import x.event.StringChange;
@@ -68,19 +69,23 @@ public final class SEScreenEditor {
         return new Events.Listener() {
             @Override
             public void onEvent(Events.Event event) {
-                EditTaggedValueEvent editEvent = (EditTaggedValueEvent) event;
-                edit(editEvent.taggedValue);
-                setPage(editEvent.page);
-                setLayout(editEvent.layout);
+                onEditTaggedValueEvent((EditTaggedValueEvent) event);
             }
         };
+    }
+
+    private void onEditTaggedValueEvent(EditTaggedValueEvent editEvent) {
+        edit(editEvent.taggedValue);
+        setPage(editEvent.page);
+        setLayout(editEvent.layout);
     }
 
     private StringChange.Listener textListener() {
         return new StringChange.Listener() {
             @Override
             public void onChange(StringChange.Event event) {
-                editing.setContents(editor.getText());
+                MutableTaggedValue editableContent = (MutableTaggedValue) editing;
+                editableContent.setContents(editor.getText());
                 refreshScreen();
             }
         };

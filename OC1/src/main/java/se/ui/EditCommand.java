@@ -40,8 +40,7 @@ public final class EditCommand
     }
 
     private void postEditToNewTaggedValue(PageLink link, XComponent layout) {
-        TaggedValue value = stringMap().newValue();
-        value.setTags(link.tags);
+        TaggedValue value = stringMap().newValue(link.tags);
         postEventToEditSingleSource(value,layout);
     }
 
