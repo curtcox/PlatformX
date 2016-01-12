@@ -6,6 +6,7 @@ import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
 import se.events.Events;
+import se.util.MutableTaggedValue;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
 import x.app.Registry;
@@ -30,7 +31,7 @@ public class EditCommandTest {
     PageLink link = PageLink.of(title);
     Events.Listener listener;
     Events events = new Events();
-    TaggedValue taggedValue;
+    MutableTaggedValue taggedValue;
     TaggedValueStringMap taggedValues;
     Page page = new FakePage(link);
     EditCommand testObject = new EditCommand();

@@ -78,7 +78,7 @@ public class SETaggedValueEditorTest {
 
         testObject.edit(value);
 
-        assertEquals("contents", testObject.editor.getText());
+        assertEquals("contents", testObject.valueString.getText());
     }
 
     @Test
@@ -123,7 +123,7 @@ public class SETaggedValueEditorTest {
         post(new EditTaggedValueEvent(value,page,layout));
 
         assertSame(value,testObject.editing);
-        assertEquals(contents,testObject.editor.getText());
+        assertEquals(contents,testObject.valueString.getText());
     }
 
     void post(EditTaggedValueEvent event) {

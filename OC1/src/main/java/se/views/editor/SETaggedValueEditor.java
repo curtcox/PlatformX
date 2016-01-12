@@ -24,7 +24,7 @@ public final class SETaggedValueEditor {
     final SEFrame frame = new SEFrame(frameMeta());
     final JLabel pageLabel = new JLabel();
     final JLabel layoutLabel = new JLabel();
-    final StringEditor editor = new StringEditor(textListener(),null);
+    final StringEditor valueString = new StringEditor(textListener(),null);
 
     private static SETaggedValueEditor screenEditor;
 
@@ -52,7 +52,7 @@ public final class SETaggedValueEditor {
 
     void init() {
         Container contents = frame.getContentPane();
-        contents.add(SEBorderContainer.of(editor).north(toolbar()));
+        contents.add(SEBorderContainer.of(valueString).north(toolbar()));
         frame.pack();
     }
 
@@ -84,7 +84,7 @@ public final class SETaggedValueEditor {
             @Override
             public void onChange(StringChange.Event event) {
                 MutableTaggedValue editableContent = editing;
-                editableContent.setContents(editor.getText());
+                editableContent.setContents(valueString.getText());
                 refreshScreen();
             }
         };
@@ -109,7 +109,7 @@ public final class SETaggedValueEditor {
 
     void edit(MutableTaggedValue value) {
         editing = value;
-        editor.setText(value.getContents());
+        valueString.setText(value.getContents());
         frame.setVisible(true);
     }
 

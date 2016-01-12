@@ -1,6 +1,7 @@
 package se.ui;
 
 import config.ShouldRun;
+import se.util.MutableTaggedValue;
 import x.app.Registry;
 import x.page.PageLink;
 import x.ui.IForm;
@@ -28,7 +29,7 @@ public class SEFormTest {
     EditCommand editCommand = new EditCommand();
     Events.Listener listener;
     PageLink link = PageLink.of(title);
-    TaggedValue taggedValue;
+    MutableTaggedValue taggedValue;
     TaggedValueStringMap stringMap;
     SEForm testObject = new SEForm(link,editCommand);
 
