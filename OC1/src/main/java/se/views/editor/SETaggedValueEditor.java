@@ -7,7 +7,6 @@ import se.ui.EditTaggedValueEvent;
 import se.ui.SEBorderContainer;
 import se.uiwidget.StringEditor;
 import se.util.MutableTaggedValue;
-import se.util.TaggedValue;
 import x.app.Registry;
 import x.event.StringChange;
 import x.page.Page;
@@ -17,9 +16,9 @@ import x.uiwidget.XComponent;
 import javax.swing.*;
 import java.awt.*;
 
-public final class SEScreenEditor {
+public final class SETaggedValueEditor {
 
-    TaggedValue editing;
+    MutableTaggedValue editing;
     Page page;
     XComponent layout;
     final SEFrame frame = new SEFrame(frameMeta());
@@ -27,16 +26,16 @@ public final class SEScreenEditor {
     final JLabel layoutLabel = new JLabel();
     final StringEditor editor = new StringEditor(textListener(),null);
 
-    private static SEScreenEditor screenEditor;
+    private static SETaggedValueEditor screenEditor;
 
     /**
      * Only use this for testing.
      */
-    SEScreenEditor() {}
+    SETaggedValueEditor() {}
 
-    public static SEScreenEditor of() {
+    public static SETaggedValueEditor of() {
         if (screenEditor == null) {
-            screenEditor = new SEScreenEditor();
+            screenEditor = new SETaggedValueEditor();
             screenEditor.register();
             screenEditor.init();
         }
@@ -47,7 +46,7 @@ public final class SEScreenEditor {
         return new FrameMeta(
                 "For viewing and editing application source code.",
                 "Inspect and edit the text shown.",
-                SEScreenEditor.class
+                SETaggedValueEditor.class
         );
     }
 
@@ -84,7 +83,7 @@ public final class SEScreenEditor {
         return new StringChange.Listener() {
             @Override
             public void onChange(StringChange.Event event) {
-                MutableTaggedValue editableContent = (MutableTaggedValue) editing;
+                MutableTaggedValue editableContent = editing;
                 editableContent.setContents(editor.getText());
                 refreshScreen();
             }
@@ -108,7 +107,7 @@ public final class SEScreenEditor {
         layoutLabel.setText(layout.toString());
     }
 
-    void edit(TaggedValue value) {
+    void edit(MutableTaggedValue value) {
         editing = value;
         editor.setText(value.getContents());
         frame.setVisible(true);

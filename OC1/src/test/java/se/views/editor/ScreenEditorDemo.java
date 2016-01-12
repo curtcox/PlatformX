@@ -7,7 +7,6 @@ import x.page.PageTags;
 import x.uiwidget.XComponent;
 import se.events.Events;
 import se.ui.EditLinkEvent;
-import se.util.TaggedValue;
 import se.util.SimpleTaggedValueStringMap;
 
 public class ScreenEditorDemo {
@@ -27,7 +26,7 @@ public class ScreenEditorDemo {
     private static void loadRegistry() {
         Registry.put(SimpleTaggedValueStringMap.class,new SimpleTaggedValueStringMap());
         Registry.put(Events.class,new Events());
-        Registry.put(SEScreenEditor.class, SEScreenEditor.of());
+        Registry.put(SETaggedValueEditor.class, SETaggedValueEditor.of());
     }
 
     private static Events.Event editEvent() {

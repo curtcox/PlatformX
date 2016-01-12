@@ -3,7 +3,7 @@ package se.frame;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
-import se.views.editor.SEScreenEditor;
+import se.views.editor.SETaggedValueEditor;
 import x.app.Registry;
 
 import static mach.Mocks._;
@@ -18,7 +18,7 @@ public class FrameMetaTest {
         Mocks.init(this);
         _("Object source"); sourceCodeLookup.sourceFor(Object.class);
         _("String source"); sourceCodeLookup.sourceFor(String.class);
-        _("Editor source"); sourceCodeLookup.sourceFor(SEScreenEditor.class);
+        _("Editor source"); sourceCodeLookup.sourceFor(SETaggedValueEditor.class);
         Registry.put(JavaSourceCodeLookup.class,sourceCodeLookup);
     }
 
@@ -45,7 +45,7 @@ public class FrameMetaTest {
     public void location_is_set_from_constructor_as_class_name() {
         assertEquals("java.lang.Object",new FrameMeta("","",Object.class).source_code_location);
         assertEquals("java.lang.String",new FrameMeta("","",String.class).source_code_location);
-        assertEquals("se.views.editor.SEScreenEditor",new FrameMeta("","",SEScreenEditor.class).source_code_location);
+        assertEquals("se.views.editor.SETaggedValueEditor",new FrameMeta("","",SETaggedValueEditor.class).source_code_location);
     }
 
     @Test

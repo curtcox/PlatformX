@@ -1,7 +1,6 @@
 package se.views.editor;
 
 import config.ShouldRun;
-import fake.FakePage;
 import se.frame.JavaSourceCodeLookup;
 import se.frame.SEJavaSourceCodeLookup;
 import se.util.MutableTaggedValue;
@@ -19,16 +18,15 @@ import org.junit.Test;
 import se.events.Events;
 import se.ui.EditTaggedValueEvent;
 import se.util.SimpleTaggedValueStringMap;
-import se.util.TaggedValue;
 
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
-public class SEScreenEditorTest {
+public class SETaggedValueEditorTest {
 
     Events events = new Events();
     SimpleTaggedValueStringMap stringMap = new SimpleTaggedValueStringMap();
-    SEScreenEditor testObject;
+    SETaggedValueEditor testObject;
 
     @Before
     public void setUp() {
@@ -38,17 +36,17 @@ public class SEScreenEditorTest {
         Registry.put(SimpleTaggedValueStringMap.class,stringMap);
         Registry.put(IFormFactory.class,new FakeFormFactory());
         Registry.put(JavaSourceCodeLookup.class,new SEJavaSourceCodeLookup());
-        testObject = new SEScreenEditor();
+        testObject = new SETaggedValueEditor();
     }
 
     @Test
     public void can_create() {
-        assertNotNull(SEScreenEditor.of());
+        assertNotNull(SETaggedValueEditor.of());
     }
 
     @Test
     public void is_singleton() {
-        assertSame(SEScreenEditor.of(), SEScreenEditor.of());
+        assertSame(SETaggedValueEditor.of(), SETaggedValueEditor.of());
     }
 
     @Test

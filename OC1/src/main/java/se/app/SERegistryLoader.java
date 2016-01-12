@@ -3,7 +3,7 @@ package se.app;
 import se.device.SEDeviceInfo;
 import se.frame.JavaSourceCodeLookup;
 import se.frame.SEJavaSourceCodeLookup;
-import se.views.editor.SEScreenEditor;
+import se.views.editor.SETaggedValueEditor;
 import se.event.SESwappableListFactory;
 import se.events.Events;
 import se.services.SELocationProvider;
@@ -82,7 +82,7 @@ final class SERegistryLoader {
         put(PageFactory.class,                RootPageFactory.of());
         put(XStorage.class,                   new SERamStorage());
         put(MyRatings.class,                  new MyRatings());
-        put(SEScreenEditor.class,             SEScreenEditor.of());
+        put(SETaggedValueEditor.class,             SETaggedValueEditor.of());
         put(CurrentState.class,               new CurrentState());
     }
 

@@ -1,6 +1,7 @@
 package se.ui;
 
 import se.events.Events;
+import se.util.MutableTaggedValue;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
 import x.app.Registry;
@@ -33,18 +34,18 @@ public final class EditCommand
         if (values.length==0) {
             postEditToNewTaggedValue(link,layout);
         } else if (values.length==1) {
-            postEventToEditSingleSource(values[0],layout);
+            postEventToEditSingleSource((MutableTaggedValue) values[0],layout);
         } else {
             postEventForAmbiguousSelection(link, layout);
         }
     }
 
     private void postEditToNewTaggedValue(PageLink link, XComponent layout) {
-        TaggedValue value = stringMap().newValue(link.tags);
+        MutableTaggedValue value = (MutableTaggedValue) stringMap().newValue(link.tags);
         postEventToEditSingleSource(value,layout);
     }
 
-    private void postEventToEditSingleSource(TaggedValue value, XComponent layout) {
+    private void postEventToEditSingleSource(MutableTaggedValue value, XComponent layout) {
         events().post(new EditTaggedValueEvent(value,page(),layout));
     }
 
