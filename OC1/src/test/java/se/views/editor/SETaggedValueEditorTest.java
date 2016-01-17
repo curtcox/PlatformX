@@ -16,7 +16,7 @@ import fake.FakeSERegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
 import se.events.Events;
-import se.ui.EditTaggedValueEvent;
+import se.events.EditTaggedValueEvent;
 import se.util.SimpleTaggedValueStringMap;
 
 import static org.junit.Assert.*;
@@ -97,7 +97,7 @@ public class SETaggedValueEditorTest {
         post(new EditTaggedValueEvent(value,page,layout));
 
         assertSame(page,testObject.page);
-        assertEquals(page.toString(),testObject.pageLabel.getText());
+        assertEquals("Page=" + page.toString(),testObject.pageLabel.getText());
     }
 
     @Test
@@ -109,7 +109,7 @@ public class SETaggedValueEditorTest {
         post(new EditTaggedValueEvent(value,page,layout));
 
         assertSame(layout,testObject.layout);
-        assertEquals(layout.toString(),testObject.layoutLabel.getText());
+        assertEquals("Layout=" + layout.toString(),testObject.layoutLabel.getText());
     }
 
     @Test

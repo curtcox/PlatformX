@@ -2,7 +2,7 @@ package se.commands;
 
 import se.events.Events;
 import se.ui.EditLinkEvent;
-import se.ui.EditTaggedValueEvent;
+import se.events.EditTaggedValueEvent;
 import se.util.MutableTaggedValue;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;

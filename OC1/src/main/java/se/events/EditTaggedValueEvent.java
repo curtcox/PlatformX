@@ -1,4 +1,4 @@
-package se.ui;
+package se.events;
 
 import se.events.Events;
 import se.util.MutableTaggedValue;

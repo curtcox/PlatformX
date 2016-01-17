@@ -2,6 +2,7 @@ package se.ui;
 
 import config.ShouldRun;
 import se.commands.EditCommand;
+import se.events.EditTaggedValueEvent;
 import se.util.MutableTaggedValue;
 import x.app.Registry;
 import x.page.PageLink;

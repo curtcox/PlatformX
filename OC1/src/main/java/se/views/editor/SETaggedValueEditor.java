@@ -3,7 +3,7 @@ package se.views.editor;
 import se.events.Events;
 import se.frame.FrameMeta;
 import se.frame.SEFrame;
-import se.ui.EditTaggedValueEvent;
+import se.events.EditTaggedValueEvent;
 import se.ui.SEBorderContainer;
 import se.uiwidget.StringEditor;
 import se.util.MutableTaggedValue;
