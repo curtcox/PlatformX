@@ -1,5 +1,6 @@
 package se.ui;
 
+import se.commands.EditCommand;
 import x.command.XCommand;
 import x.page.PageLink;
 import x.ui.IForm;
@@ -26,7 +27,7 @@ public final class SEForm
     }
 
     SEForm(PageLink link) {
-        this(link,new EditCommand());
+        this(link,EditCommand.of());
     }
 
     @Override

@@ -1,6 +1,7 @@
 package se.ui;
 
 import config.ShouldRun;
+import se.commands.EditCommand;
 import se.util.MutableTaggedValue;
 import x.app.Registry;
 import x.page.PageLink;
@@ -26,7 +27,7 @@ import static org.junit.Assume.assumeTrue;
 public class SEFormTest {
 
     String title = random("link");
-    EditCommand editCommand = new EditCommand();
+    EditCommand editCommand = EditCommand.of();
     Events.Listener listener;
     PageLink link = PageLink.of(title);
     MutableTaggedValue taggedValue;

@@ -1,6 +1,8 @@
-package se.ui;
+package se.commands;
 
 import se.events.Events;
+import se.ui.EditLinkEvent;
+import se.ui.EditTaggedValueEvent;
 import se.util.MutableTaggedValue;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
@@ -18,8 +20,12 @@ public final class EditCommand
     extends XCommand
 {
 
-    EditCommand() {
+    private EditCommand() {
         super("Edit");
+    }
+
+    public static EditCommand of() {
+        return new EditCommand();
     }
 
     @Override

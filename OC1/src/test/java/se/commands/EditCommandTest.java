@@ -1,11 +1,14 @@
-package se.ui;
+package se.commands;
 
 import config.ShouldRun;
 import fake.FakePage;
 import mach.Mocks;
 import org.junit.Before;
 import org.junit.Test;
+import se.commands.EditCommand;
 import se.events.Events;
+import se.ui.EditLinkEvent;
+import se.ui.EditTaggedValueEvent;
 import se.util.MutableTaggedValue;
 import se.util.TaggedValue;
 import se.util.TaggedValueStringMap;
@@ -34,7 +37,7 @@ public class EditCommandTest {
     MutableTaggedValue taggedValue;
     TaggedValueStringMap taggedValues;
     Page page = new FakePage(link);
-    EditCommand testObject = new EditCommand();
+    EditCommand testObject = EditCommand.of();
     IFormFactory formFactory;
     IForm form;
     ILogManager logManager;
@@ -55,7 +58,7 @@ public class EditCommandTest {
 
     @Test
     public void can_create() {
-        assertNotNull(new EditCommand());
+        assertNotNull(EditCommand.of());
     }
 
     @Test
