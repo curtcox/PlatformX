@@ -32,7 +32,7 @@ public final class SEObjectLabel
         addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                ViewObjectCommand.of().go(contents);
+                ViewObjectCommand.of().go(value);
             }
         });
     }

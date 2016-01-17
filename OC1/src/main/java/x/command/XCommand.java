@@ -15,19 +15,23 @@ public abstract class XCommand {
     }
     
     public void go() {
-        log("Executing " + command);
+        log("Executing");
         action();
     }
 
     public void go(Object... args) {
-        log("Executing " + command + args);
+        log("Executing",args);
         action(args);
     }
 
     protected abstract void action(Object... args);
 
     private void log(String message) {
-        getLog().log(message);
+        getLog().log(message,command);
+    }
+
+    private void log(String message,Object... args) {
+        getLog().log(message,command,args);
     }
 
     private ILog getLog() {

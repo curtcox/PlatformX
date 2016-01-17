@@ -4,6 +4,7 @@ import x.app.Registry;
 import x.event.LiveList;
 import x.event.XLiveList;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public final class XLogWriter
@@ -18,12 +19,22 @@ public final class XLogWriter
     }
     
     public void log(Object target, Class clazz,String message,Object...details) {
-        System.out.println(message);
+        sysout(target,clazz,message,details);
         log.add(XLogEntry.of(target,clazz,message,details));
         if (log.size()>1000) {
             log.removeFirst();
         }
         published.fireChangeEvent();
+    }
+
+    void sysout(Object target, Class clazz,String message,Object...details) {
+        if (details.length == 0) {
+            System.out.println(message);
+        } else if (details.length == 1) {
+            System.out.println(message + details[0]);
+        } else {
+            System.out.println(message + Arrays.asList(details));
+        }
     }
 
     public String dump() {
