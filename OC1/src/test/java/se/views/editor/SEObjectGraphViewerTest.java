@@ -7,6 +7,9 @@ import org.junit.Before;
 import org.junit.Test;
 import se.events.Events;
 import se.events.ViewObjectEvent;
+import se.frame.FrameMeta;
+import se.frame.JavaSourceCodeLookup;
+import se.frame.SEJavaSourceCodeLookup;
 import x.app.Registry;
 
 import static org.junit.Assert.*;
@@ -16,13 +19,15 @@ public class SEObjectGraphViewerTest {
 
     Events events = new Events();
     Object target = new Object();
-    SEObjectGraphViewer viewer = new SEObjectGraphViewer();
+    SEObjectGraphViewer viewer;
 
     @Before
     public void setUp() {
         assumeTrue(ShouldRun.JavaSE_UI);
         FakeSERegistryLoader.load();
+        Registry.put(JavaSourceCodeLookup.class,new SEJavaSourceCodeLookup());
         Registry.put(Events.class,events);
+        viewer = new SEObjectGraphViewer();
     }
 
     @Test
@@ -40,6 +45,14 @@ public class SEObjectGraphViewerTest {
         post(new ViewObjectEvent(target));
 
         assertEquals(target, viewer.model.get());
+    }
+
+    @Test
+    public void frame_has_appropriate_meta() {
+        FrameMeta meta = viewer.frame.meta;
+        assertEquals("For examining how an object relates to other objects.",meta.what_its_for);
+        assertEquals("Select objects of interest.",meta.how_to_use_it);
+        assertEquals(SEObjectGraphViewer.class.getName().toString(),meta.source_code_location);
     }
 
     void post(ViewObjectEvent event) {
