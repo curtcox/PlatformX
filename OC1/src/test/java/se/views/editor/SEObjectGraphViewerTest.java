@@ -39,7 +39,7 @@ public class SEObjectGraphViewerTest {
     public void sending_a_view_command_event_causes_target_to_be_viewed_when_registered() {
         post(new ViewObjectEvent(target));
 
-        assertEquals(target, viewer.object);
+        assertEquals(target, viewer.model.get());
     }
 
     void post(ViewObjectEvent event) {

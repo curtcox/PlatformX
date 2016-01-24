@@ -7,7 +7,7 @@ import x.app.Registry;
 public class SEObjectGraphViewer {
 
     static final SEObjectGraphViewer viewer = new SEObjectGraphViewer();
-    Object object;
+    ObjectGraphModel model = new ObjectGraphModel();
 
     SEObjectGraphViewer() {}
 
@@ -24,7 +24,7 @@ public class SEObjectGraphViewer {
             @Override
             public void onEvent(Events.Event event) {
                 ViewObjectEvent viewObjectEvent = (ViewObjectEvent) event;
-                object = viewObjectEvent.object;
+                model.set(viewObjectEvent.object);
             }
         };
     }
