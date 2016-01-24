@@ -36,10 +36,13 @@ public class SEObjectGraphViewer {
         return new Events.Listener() {
             @Override
             public void onEvent(Events.Event event) {
-                ViewObjectEvent viewObjectEvent = (ViewObjectEvent) event;
-                model.set(viewObjectEvent.object);
+                onViewObjectEvent((ViewObjectEvent) event);
             }
         };
+    }
+
+    private void onViewObjectEvent(ViewObjectEvent event) {
+        model.set(event.object);
     }
 
     Events events() {
