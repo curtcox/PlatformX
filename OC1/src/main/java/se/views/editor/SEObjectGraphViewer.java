@@ -4,11 +4,16 @@ import se.events.Events;
 import se.events.ViewObjectEvent;
 import se.frame.FrameMeta;
 import se.frame.SEFrame;
+import se.ui.SEBorderContainer;
 import x.app.Registry;
 
-public class SEObjectGraphViewer {
+import java.awt.*;
 
-    static final SEObjectGraphViewer viewer = new SEObjectGraphViewer();
+public final class SEObjectGraphViewer
+    implements Events.Listener
+{
+
+    static SEObjectGraphViewer viewer;
     ObjectGraphModel model = new ObjectGraphModel();
     final SEFrame frame;
 
@@ -17,6 +22,11 @@ public class SEObjectGraphViewer {
     }
 
     public static SEObjectGraphViewer of() {
+        if (viewer == null) {
+            viewer = new SEObjectGraphViewer();
+            viewer.register();
+            viewer.init();
+        }
         return viewer;
     }
 
@@ -28,24 +38,30 @@ public class SEObjectGraphViewer {
         );
     }
 
-    void register() {
-        events().registerListenerFor(listener(), ViewObjectEvent.class);
+    void init() {
+        frame.pack();
     }
 
-    private Events.Listener listener() {
-        return new Events.Listener() {
-            @Override
-            public void onEvent(Events.Event event) {
-                onViewObjectEvent((ViewObjectEvent) event);
-            }
-        };
+    void register() {
+        events().registerListenerFor(this, ViewObjectEvent.class);
+    }
+
+    @Override
+    public void onEvent(Events.Event event) {
+        onViewObjectEvent((ViewObjectEvent) event);
     }
 
     private void onViewObjectEvent(ViewObjectEvent event) {
-        model.set(event.object);
+        view(event.object);
     }
 
     Events events() {
         return Registry.get(Events.class);
+    }
+
+    void view(Object target) {
+        model.set(target);
+        frame.setVisible(true);
+        System.out.println("???");
     }
 }

@@ -1,7 +1,8 @@
 package se.events;
 
-import java.util.HashMap;
-import java.util.Map;
+import org.w3c.dom.DOMStringList;
+
+import java.util.*;
 
 /**
  * Global event bus.
@@ -20,6 +21,13 @@ public final class Events {
 
     public void registerListenerFor(Listener listener, Class clazz) {
         listeners.put(clazz,listener);
+    }
+
+    public Collection<Listener> getListenersFor(Class clazz) {
+        Listener listener = listeners.get(clazz);
+        return (listener==null)
+            ? Collections.EMPTY_LIST
+            : Collections.singleton(listeners.get(clazz));
     }
 
     public void post(Event event) {

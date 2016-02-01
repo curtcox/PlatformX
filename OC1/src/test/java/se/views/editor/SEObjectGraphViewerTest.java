@@ -1,7 +1,6 @@
 package se.views.editor;
 
 import config.ShouldRun;
-import fake.FakeFormFactory;
 import fake.FakeSERegistryLoader;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,6 +10,8 @@ import se.frame.FrameMeta;
 import se.frame.JavaSourceCodeLookup;
 import se.frame.SEJavaSourceCodeLookup;
 import x.app.Registry;
+
+import java.util.Collection;
 
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
@@ -41,8 +42,15 @@ public class SEObjectGraphViewerTest {
     }
 
     @Test
-    public void sending_a_view_command_event_causes_target_to_be_viewed_when_registered() {
-        post(new ViewObjectEvent(target));
+    public void register_registers_for_view_object_events() {
+        viewer.register();
+        Collection<Events.Listener> listeners = Registry.get(Events.class).getListenersFor(ViewObjectEvent.class);
+        assertTrue(listeners.contains(viewer));
+    }
+
+    @Test
+    public void posting_a_view_command_event_causes_target_to_be_viewed_when_registered() {
+        post();
 
         assertEquals(target, viewer.model.get());
     }
@@ -55,8 +63,15 @@ public class SEObjectGraphViewerTest {
         assertEquals(SEObjectGraphViewer.class.getName().toString(),meta.source_code_location);
     }
 
-    void post(ViewObjectEvent event) {
+    @Test
+    public void view_makes_the_viewing_frame_visible() {
+        viewer.view(target);
+
+        assertTrue(viewer.frame.isVisible());
+    }
+
+    void post() {
         viewer.register();
-        events.post(event);
+        events.post(new ViewObjectEvent(target));
     }
 }

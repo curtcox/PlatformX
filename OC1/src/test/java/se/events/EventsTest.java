@@ -11,6 +11,7 @@ import static mach.Mocks.verify;
 import static mach.Mocks.wild;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertSame;
+import static org.junit.Assert.assertTrue;
 import static org.junit.Assume.assumeTrue;
 
 public class EventsTest {
@@ -35,6 +36,27 @@ public class EventsTest {
         Events.Event expected = new Events.Event() {};
 
         testObject.post(expected);
+    }
+
+    @Test
+    public void getListeners_returns_no_listeners_when_none_are_registered() {
+        assertTrue(testObject.getListenersFor(Events.Event.class).isEmpty());
+    }
+
+    @Test
+    public void getListeners_returns_listener_when_it_is_registered() {
+        testObject.registerListenerFor(listener,Events.Event.class);
+        assertSame(listener,testObject.getListenersFor(Events.Event.class).iterator().next());
+    }
+
+    @Test
+    public void getListeners_does_not_returns_listener_when_it_is_registered_for_a_different_event() {
+        Events.Event expected1 = new Events.Event() {};
+        Events.Event expected2 = new Events.Event() {};
+        testObject.registerListenerFor(listener,expected1.getClass());
+        testObject.registerListenerFor(listener2,expected2.getClass());
+        assertSame(listener,testObject.getListenersFor(expected1.getClass()).iterator().next());
+        assertSame(listener2,testObject.getListenersFor(expected2.getClass()).iterator().next());
     }
 
     @Test
