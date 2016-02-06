@@ -83,6 +83,14 @@ public final class Mocks {
     }
 
     /**
+     * An alternate and sometimes more readable mechanism for declaring null wildcards.
+     */
+    public static <T> T any() {
+        wild(null);
+        return null;
+    }
+
+    /**
      * Specify that the following method will return no value.
      */
     public static void _() {
