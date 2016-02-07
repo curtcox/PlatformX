@@ -70,6 +70,20 @@ public class SEObjectGraphViewerTest {
         assertTrue(viewer.frame.isVisible());
     }
 
+    @Test
+    public void view_sets_the_ObjectGraphModel_target() {
+        viewer.view(target);
+
+        assertSame(target,viewer.model.get());
+    }
+
+    @Test
+    public void view_sets_the_targetLabel_object() {
+        viewer.view(target);
+
+        assertSame(target,viewer.targetLabel.get());
+    }
+
     void post() {
         viewer.register();
         events.post(new ViewObjectEvent(target));

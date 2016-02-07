@@ -36,4 +36,8 @@ public final class SEObjectLabel
             }
         });
     }
+
+    public Object get() {
+        return value;
+    }
 }

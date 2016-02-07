@@ -16,6 +16,7 @@ public final class SEObjectGraphViewer
     static SEObjectGraphViewer viewer;
     ObjectGraphModel model = new ObjectGraphModel();
     final SEFrame frame;
+    final SEObjectLabel targetLabel = SEObjectLabel.of("Page");
 
     SEObjectGraphViewer() {
         frame = new SEFrame(frameMeta());
@@ -61,6 +62,7 @@ public final class SEObjectGraphViewer
 
     void view(Object target) {
         model.set(target);
+        targetLabel.set(target);
         frame.setVisible(true);
         System.out.println("???");
     }

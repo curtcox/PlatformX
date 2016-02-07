@@ -4,7 +4,7 @@ import se.views.editor.SEObjectGraphViewer;
 import se.views.editor.SETaggedValueEditor;
 
 /**
- * For plugging listeners into the event bus
+ * For plugging listeners into the event bus.
  */
 public final class EventListenerRecruiter {
 
