@@ -82,7 +82,6 @@ final class SERegistryLoader {
         put(PageFactory.class,                RootPageFactory.of());
         put(XStorage.class,                   new SERamStorage());
         put(MyRatings.class,                  new MyRatings());
-        put(SETaggedValueEditor.class,             SETaggedValueEditor.of());
         put(CurrentState.class,               new CurrentState());
     }
 

@@ -1,5 +1,6 @@
 package se.app;
 
+import se.events.EventListenerRecruiter;
 import x.page.PageLink;
 import x.screen.Screen;
 
@@ -31,6 +32,7 @@ public final class SEApplication {
 
     private static void launchApp() {
         SERegistryLoader.load();
+        EventListenerRecruiter.recruit();
         SEPageServer.tryToStartServer();
         show();
     }
