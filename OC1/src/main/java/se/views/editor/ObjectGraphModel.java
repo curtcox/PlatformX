@@ -1,5 +1,8 @@
 package se.views.editor;
 
+import se.ref.References;
+import x.app.Registry;
+
 final class ObjectGraphModel {
 
     private Object object;
@@ -10,5 +13,21 @@ final class ObjectGraphModel {
 
     public Object get() {
         return object;
+    }
+
+    public Class getTargetClass() {
+        return object.getClass();
+    }
+
+    public Object[] getIncomingReferences() {
+        return references().to(object);
+    }
+
+    public Object[] getOutgoingReferences() {
+        return null;
+    }
+
+    References references() {
+        return Registry.get(References.class);
     }
 }

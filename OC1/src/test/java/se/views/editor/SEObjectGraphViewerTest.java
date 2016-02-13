@@ -84,6 +84,29 @@ public class SEObjectGraphViewerTest {
         assertSame(target,viewer.targetLabel.get());
     }
 
+    @Test
+    public void view_sets_the_classLabel_object() {
+        viewer.view(target);
+
+        assertSame(target.getClass(),viewer.classLabel.get());
+    }
+
+    @Test
+    public void view_sets_the_incomingReferences_objects() {
+        Object[] incomingReferences = new Object[0];
+        viewer.view(target);
+
+        assertSame(incomingReferences,viewer.incomingReferences.get());
+    }
+
+    @Test
+    public void view_sets_the_outgoingReferences_objects() {
+        Object[] outgoingReferences = new Object[0];
+        viewer.view(target);
+
+        assertSame(outgoingReferences,viewer.outgoingReferences.get());
+    }
+
     void post() {
         viewer.register();
         events.post(new ViewObjectEvent(target));
