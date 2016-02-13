@@ -1,12 +1,30 @@
-OysterCracker
+PlatformX
 =============
 # About
-OysterCracker aims to be "Yelp for disabilities". More concretely, the goal is to provide a way for people to find and rate service providers, that considers disabilities.
-As a starting point, the rating system from [Sage Traveling](http://www.sagetraveling.com/Rating-System-Explanation/) is being used.
+PlatformX aims to provide a platform over the native platform of the device they want to run on. 
+
+#Goals
+* a simple and fast way to do easy things
+* a way to directly use the native platform to do otherwise unsupported things
 
 # Technology
-This repository contains all of the project code.  Right now, that is just a standalone client written using the http://www.codenameone.com framework.
+This repository contains all of the project code.
+
+#Current Platforms
+* Java SE (Swing)
+* Android
+* iOS
+* CodenameOne
+* Vaadin
+
+#Possible Platforms
+* Java FX
+* Dukescript
+* Gluon
+* Windows Phone
 
 # People
-* [Mike Hiles](http://www.linkedin.com/pub/michael-hiles/7/883/32) - founder, ideas, priorities, feedback
 * [Curt Cox](http://www.curtcox.com) - code
+
+# History
+The code in this repo was harvested from the OysterCracker. That project started as a narrowly-focused CodenameOne app. Commits continued there, long after it had morphed into PlatformX.
