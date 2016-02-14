@@ -6,7 +6,7 @@ import static org.junit.Assert.*;
 
 public class SEObjectLabelTest {
 
-    SEObjectLabel label = SEObjectLabel.of("");
+    SEObjectLabel label = SEObjectLabel.twoLine("");
 
     @Test
     public void get_returns_value_that_was_set() {

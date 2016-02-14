@@ -22,8 +22,8 @@ public final class SETaggedValueEditor {
     Page page;
     XComponent layout;
     final SEFrame frame = new SEFrame(frameMeta());
-    final SEObjectLabel pageLabel = SEObjectLabel.of("Page");
-    final SEObjectLabel layoutLabel = SEObjectLabel.of("Layout");
+    final SEObjectLabel pageLabel = SEObjectLabel.oneLine("Page");
+    final SEObjectLabel layoutLabel = SEObjectLabel.oneLine("Layout");
     final StringEditor valueString = new StringEditor(textListener(),null);
 
     private static SETaggedValueEditor screenEditor;
@@ -94,6 +94,7 @@ public final class SETaggedValueEditor {
         Screen screen = Screen.getShowing();
         if (screen!=null) {
             screen.refresh();
+            frame.pack();
         }
     }
 
@@ -105,6 +106,7 @@ public final class SETaggedValueEditor {
     void setLayout(XComponent layout) {
         this.layout = layout;
         layoutLabel.set(layout);
+        frame.pack();
     }
 
     void edit(MutableTaggedValue value) {

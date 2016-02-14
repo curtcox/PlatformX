@@ -16,10 +16,10 @@ public final class SEObjectGraphViewer
     static SEObjectGraphViewer viewer;
     ObjectGraphModel model = new ObjectGraphModel();
     final SEFrame frame;
-    final SEObjectLabel targetLabel = SEObjectLabel.of("Object");
-    final SEObjectLabel classLabel = SEObjectLabel.of("Class");
-    final SEObjectLabel incomingReferences = SEObjectLabel.of("Incoming References");
-    final SEObjectLabel outgoingReferences = SEObjectLabel.of("Outgoing References");
+    final SEObjectLabel targetLabel = SEObjectLabel.twoLine("Object");
+    final SEObjectLabel classLabel = SEObjectLabel.twoLine("Class");
+    final SEObjectLabel incomingReferences = SEObjectLabel.twoLine("Incoming References");
+    final SEObjectLabel outgoingReferences = SEObjectLabel.twoLine("Outgoing References");
 
     SEObjectGraphViewer() {
         frame = new SEFrame(frameMeta());
@@ -81,5 +81,6 @@ public final class SEObjectGraphViewer
         incomingReferences.set(model.getIncomingReferences());
         outgoingReferences.set(model.getOutgoingReferences());
         frame.setVisible(true);
+        frame.pack();
     }
 }
