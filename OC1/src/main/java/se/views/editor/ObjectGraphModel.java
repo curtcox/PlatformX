@@ -24,7 +24,7 @@ final class ObjectGraphModel {
     }
 
     public Object[] getOutgoingReferences() {
-        return null;
+        return references().from(object);
     }
 
     References references() {

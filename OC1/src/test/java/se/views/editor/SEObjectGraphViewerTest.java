@@ -9,6 +9,7 @@ import se.events.ViewObjectEvent;
 import se.frame.FrameMeta;
 import se.frame.JavaSourceCodeLookup;
 import se.frame.SEJavaSourceCodeLookup;
+import se.ref.References;
 import x.app.Registry;
 
 import java.util.Collection;
@@ -93,22 +94,32 @@ public class SEObjectGraphViewerTest {
 
     @Test
     public void view_sets_the_incomingReferences_objects() {
-        Object[] incomingReferences = new Object[0];
+        Object referencing = new Object();
+        references().noteObjectReferences(referencing,target);
         viewer.view(target);
 
-        assertSame(incomingReferences,viewer.incomingReferences.get());
+        Object[] incoming = (Object[]) viewer.incomingReferences.get();
+        assertEquals(1,incoming.length);
+        assertSame(referencing,incoming[0]);
     }
 
     @Test
     public void view_sets_the_outgoingReferences_objects() {
-        Object[] outgoingReferences = new Object[0];
+        Object referenced = new Object();
+        references().noteObjectReferences(target,referenced);
         viewer.view(target);
 
-        assertSame(outgoingReferences,viewer.outgoingReferences.get());
+        Object[] outgoing = (Object[]) viewer.outgoingReferences.get();
+        assertEquals(1,outgoing.length);
+        assertSame(referenced,outgoing[0]);
     }
 
     void post() {
         viewer.register();
         events.post(new ViewObjectEvent(target));
+    }
+
+    References references() {
+        return References.of();
     }
 }

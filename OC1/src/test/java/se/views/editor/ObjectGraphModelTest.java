@@ -42,11 +42,26 @@ public class ObjectGraphModelTest {
 
     @Test
     public void getIncomingReferences_returns_Referencing_object_when_there_is_one() {
-        Object ref = new Object();
-        references.noteObjectReferences(ref,object);
+        Object referencing = new Object();
+        references.noteObjectReferences(referencing,object);
         model.set(object);
         assertEquals(1,model.getIncomingReferences().length);
-        assertSame(ref,model.getIncomingReferences()[0]);
+        assertSame(referencing,model.getIncomingReferences()[0]);
+    }
+
+    @Test
+    public void getOutgoingReferences_returns_no_Referencing_objects_when_there_are_none() {
+        model.set(object);
+        assertEquals(0,model.getOutgoingReferences().length);
+    }
+
+    @Test
+    public void getOutgoingReferences_returns_Referencing_object_when_there_is_one() {
+        Object referenced = new Object();
+        references.noteObjectReferences(object,referenced);
+        model.set(object);
+        assertEquals(1,model.getOutgoingReferences().length);
+        assertSame(referenced,model.getOutgoingReferences()[0]);
     }
 
 }

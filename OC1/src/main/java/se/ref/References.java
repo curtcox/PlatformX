@@ -1,12 +1,11 @@
 package se.ref;
 
-import x.app.Registry;
-
 import java.util.*;
 
 public final class References {
 
-    Map<Object,Object> refs = new HashMap<>();
+    Map<Object,Object> targetToSource = new HashMap<>();
+    Map<Object,Object> sourceToTarget = new HashMap<>();
     private static References singleton = new References();
 
     /** Use the factory */
@@ -17,13 +16,19 @@ public final class References {
     }
 
     public Object[] to(Object object) {
-        return refs.get(object)==null
+        return targetToSource.get(object)==null
             ? new Object[0]
-            : new Object[] { refs.get(object)};
+            : new Object[] { targetToSource.get(object)};
     }
 
-    public void noteObjectReferences(Object ref, Object object) {
-        refs.put(object,ref);
+    public void noteObjectReferences(Object referencing, Object referenced) {
+        sourceToTarget.put(referencing,referenced);
+        targetToSource.put(referenced,referencing);
     }
 
+    public Object[] from(Object object) {
+        return sourceToTarget.get(object)==null
+                ? new Object[0]
+                : new Object[] { sourceToTarget.get(object)};
+    }
 }
