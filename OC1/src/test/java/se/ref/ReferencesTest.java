@@ -1,6 +1,7 @@
 package se.ref;
 
 import org.junit.Test;
+import x.app.Registry;
 
 import static org.junit.Assert.*;
 
@@ -37,4 +38,8 @@ public class ReferencesTest {
         assertSame(ref,to[0]);
     }
 
+    @Test
+    public void of_returns_instance() {
+        assertTrue(References.of() instanceof References);
+    }
 }

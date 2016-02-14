@@ -28,6 +28,6 @@ final class ObjectGraphModel {
     }
 
     References references() {
-        return Registry.get(References.class);
+        return References.of();
     }
 }
