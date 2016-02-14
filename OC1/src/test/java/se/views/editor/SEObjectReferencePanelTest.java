@@ -4,9 +4,9 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-public class SEObjectLabelTest {
+public class SEObjectReferencePanelTest {
 
-    SEObjectLabel label = SEObjectLabel.twoLine("");
+    SEObjectReferencePanel label = SEObjectReferencePanel.twoLine("");
 
     @Test
     public void get_returns_value_that_was_set() {

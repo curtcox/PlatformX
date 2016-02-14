@@ -7,25 +7,25 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public final class SEObjectLabel
+public final class SEObjectReferencePanel
     extends JPanel
 {
     private Object value;
     private final JLabel descriptionOfObject;
     private final JButton buttonToObjectContents = new JButton();
 
-    private SEObjectLabel(String contents) {
+    private SEObjectReferencePanel(String contents) {
         this.descriptionOfObject = new JLabel(contents);
     }
 
-    public static SEObjectLabel oneLine(String contents) {
-        final SEObjectLabel label = new SEObjectLabel(contents);
+    public static SEObjectReferencePanel oneLine(String contents) {
+        final SEObjectReferencePanel label = new SEObjectReferencePanel(contents);
         label.initAsOneLine();
         return label;
     }
 
-    public static SEObjectLabel twoLine(String contents) {
-        final SEObjectLabel label = new SEObjectLabel(contents);
+    public static SEObjectReferencePanel twoLine(String contents) {
+        final SEObjectReferencePanel label = new SEObjectReferencePanel(contents);
         label.initAsTwoLines();
         return label;
     }

@@ -22,8 +22,8 @@ public final class SETaggedValueEditor {
     Page page;
     XComponent layout;
     final SEFrame frame = new SEFrame(frameMeta());
-    final SEObjectLabel pageLabel = SEObjectLabel.oneLine("Page");
-    final SEObjectLabel layoutLabel = SEObjectLabel.oneLine("Layout");
+    final SEObjectReferencePanel pageLabel = SEObjectReferencePanel.oneLine("Page");
+    final SEObjectReferencePanel layoutLabel = SEObjectReferencePanel.oneLine("Layout");
     final StringEditor valueString = new StringEditor(textListener(),null);
 
     private static SETaggedValueEditor screenEditor;

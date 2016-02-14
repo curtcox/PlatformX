@@ -16,10 +16,10 @@ public final class SEObjectGraphViewer
     static SEObjectGraphViewer viewer;
     ObjectGraphModel model = new ObjectGraphModel();
     final SEFrame frame;
-    final SEObjectLabel targetLabel = SEObjectLabel.twoLine("Object");
-    final SEObjectLabel classLabel = SEObjectLabel.twoLine("Class");
-    final SEObjectLabel incomingReferences = SEObjectLabel.twoLine("Incoming References");
-    final SEObjectLabel outgoingReferences = SEObjectLabel.twoLine("Outgoing References");
+    final SEObjectReferencePanel targetLabel = SEObjectReferencePanel.twoLine("Object");
+    final SEObjectReferencePanel classLabel = SEObjectReferencePanel.twoLine("Class");
+    final SEObjectReferencePanel incomingReferences = SEObjectReferencePanel.twoLine("Incoming References");
+    final SEObjectReferencePanel outgoingReferences = SEObjectReferencePanel.twoLine("Outgoing References");
 
     SEObjectGraphViewer() {
         frame = new SEFrame(frameMeta());
