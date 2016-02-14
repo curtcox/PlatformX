@@ -8,11 +8,11 @@ import static org.junit.Assert.*;
 public class ReferencesTest {
 
     Object object = new Object();
-    References references = new References();
+    References references = References.of();
 
     @Test
     public void can_create() {
-        assertNotNull(new References());
+        assertNotNull(References.of());
     }
 
     @Test

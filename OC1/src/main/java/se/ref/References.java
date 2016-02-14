@@ -4,14 +4,13 @@ import x.app.Registry;
 
 import java.util.*;
 
-public class References {
+public final class References {
 
     Map<Object,Object> refs = new HashMap<>();
     private static References singleton = new References();
 
-    static {
-        Registry.put(References.class,singleton);
-    }
+    /** Use the factory */
+    private References() {}
 
     public static References of() {
         return singleton;

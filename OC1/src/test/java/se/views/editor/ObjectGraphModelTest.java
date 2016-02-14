@@ -13,7 +13,7 @@ import static org.junit.Assume.assumeTrue;
 public class ObjectGraphModelTest {
 
     Object object = new Object();
-    References references = new References();
+    References references = References.of();
     ObjectGraphModel model = new ObjectGraphModel();
 
     @Before
