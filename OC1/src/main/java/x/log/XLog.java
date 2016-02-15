@@ -2,6 +2,9 @@ package x.log;
 
 import java.util.logging.Logger;
 
+/**
+ * A log can be associated with a class, an object, or null.
+ */
 public final class XLog
     implements ILog
 {

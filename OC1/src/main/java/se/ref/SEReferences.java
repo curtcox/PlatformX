@@ -1,8 +1,12 @@
 package se.ref;
 
+import x.ref.XReferences;
+
 import java.util.*;
 
-public final class SEReferences {
+public final class SEReferences
+    implements XReferences
+{
 
     final List referencing = new ArrayList();
     final SEReferenceIntrospector referenceIntrospector = new SEReferenceIntrospector();

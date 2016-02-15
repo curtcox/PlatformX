@@ -17,6 +17,7 @@ public class ObjectGraphModelTest {
     static class Referencing {
         Object referenced;
     }
+
     ObjectGraphModel model = new ObjectGraphModel();
 
     @Before

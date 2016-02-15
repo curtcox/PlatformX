@@ -1,6 +1,7 @@
 package se.ref;
 
 import org.junit.Test;
+import x.ref.XReferences;
 
 import static org.junit.Assert.*;
 
@@ -16,6 +17,11 @@ public class SEReferencesTest {
     @Test
     public void can_create() {
         assertNotNull(SEReferences.of());
+    }
+
+    @Test
+    public void implements_XReferences() {
+        assertTrue(references instanceof XReferences);
     }
 
     @Test

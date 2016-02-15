@@ -1,13 +1,26 @@
 package x.log;
 
+import mach.Mocks;
+import org.junit.Before;
 import org.junit.Test;
+import x.app.Registry;
 import x.event.LiveList;
+import x.ref.XReferences;
 
+import static mach.Mocks._;
+import static mach.Mocks.verify;
 import static org.junit.Assert.*;
 
 public class XLogWriterTest {
 
+    XReferences references;
     XLogWriter writer = new XLogWriter();
+
+    @Before
+    public void setUp() {
+        Mocks.init(this);
+        Registry.put(XReferences.class,references);
+    }
 
     @Test
     public void is_a_LiveListSource() {
@@ -30,7 +43,9 @@ public class XLogWriterTest {
         Class clazz = getClass();
         Object target = new Object();
         String message = toString();
+
         writer.log(target,clazz,message,this);
+
         XLogEntry entry = writer.log().get(0);
         assertSame(target,entry.target);
         assertSame(clazz,entry.clazz);
@@ -38,4 +53,17 @@ public class XLogWriterTest {
         assertSame(this,entry.details[0]);
     }
 
+    @Test
+    public void log_notes_parameters_with_References() {
+        Class clazz = getClass();
+        Object target = new Object();
+        String message = toString();
+        Object[] details = new Object[0];
+
+        writer.log(target,clazz,message,details);
+
+        verify();
+        references.noteObject(target);
+        references.noteObject(details);
+    }
 }

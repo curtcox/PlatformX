@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-public final class SEReferenceIntrospector {
+final class SEReferenceIntrospector {
 
     List referencesFrom(Object object) {
         List references = new ArrayList();
