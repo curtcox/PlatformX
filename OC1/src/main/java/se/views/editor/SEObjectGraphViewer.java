@@ -18,8 +18,8 @@ public final class SEObjectGraphViewer
     final SEFrame frame;
     final SEObjectReferencePanel targetLabel = SEObjectReferencePanel.twoLine("Object");
     final SEObjectReferencePanel classLabel = SEObjectReferencePanel.twoLine("Class");
-    final SEObjectReferencePanel incomingReferences = SEObjectReferencePanel.twoLine("Incoming References");
-    final SEObjectReferencePanel outgoingReferences = SEObjectReferencePanel.twoLine("Outgoing References");
+    final SEObjectReferencePanel incomingReferences = SEObjectReferencePanel.twoLine("Incoming SEReferences");
+    final SEObjectReferencePanel outgoingReferences = SEObjectReferencePanel.twoLine("Outgoing SEReferences");
 
     SEObjectGraphViewer() {
         frame = new SEFrame(frameMeta());

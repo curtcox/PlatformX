@@ -1,7 +1,6 @@
 package se.views.editor;
 
-import se.ref.References;
-import x.app.Registry;
+import se.ref.SEReferences;
 
 final class ObjectGraphModel {
 
@@ -27,7 +26,7 @@ final class ObjectGraphModel {
         return references().from(object);
     }
 
-    References references() {
-        return References.of();
+    SEReferences references() {
+        return SEReferences.of();
     }
 }

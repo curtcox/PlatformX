@@ -1,22 +1,21 @@
 package se.ref;
 
 import org.junit.Test;
-import x.app.Registry;
 
 import static org.junit.Assert.*;
 
-public class ReferencesTest {
+public class SEReferencesTest {
 
     Object object = new Object();
     Referencing referencing = new Referencing();
-    References references = References.of();
+    SEReferences references = SEReferences.of();
     static class Referencing {
         Object referenced;
     }
 
     @Test
     public void can_create() {
-        assertNotNull(References.of());
+        assertNotNull(SEReferences.of());
     }
 
     @Test
@@ -44,7 +43,7 @@ public class ReferencesTest {
 
     @Test
     public void of_returns_instance() {
-        assertTrue(References.of() instanceof References);
+        assertTrue(SEReferences.of() instanceof SEReferences);
     }
 
     @Test

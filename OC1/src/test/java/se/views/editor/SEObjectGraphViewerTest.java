@@ -9,7 +9,7 @@ import se.events.ViewObjectEvent;
 import se.frame.FrameMeta;
 import se.frame.JavaSourceCodeLookup;
 import se.frame.SEJavaSourceCodeLookup;
-import se.ref.References;
+import se.ref.SEReferences;
 import x.app.Registry;
 
 import java.util.Collection;
@@ -123,7 +123,7 @@ public class SEObjectGraphViewerTest {
         events.post(new ViewObjectEvent(target));
     }
 
-    References references() {
-        return References.of();
+    SEReferences references() {
+        return SEReferences.of();
     }
 }

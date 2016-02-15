@@ -2,16 +2,16 @@ package se.ref;
 
 import java.util.*;
 
-public final class References {
+public final class SEReferences {
 
     final List referencing = new ArrayList();
-    final ReferenceIntrospector referenceIntrospector = new ReferenceIntrospector();
-    private static final References singleton = new References();
+    final SEReferenceIntrospector referenceIntrospector = new SEReferenceIntrospector();
+    private static final SEReferences singleton = new SEReferences();
 
     /** Use the factory */
-    private References() {}
+    private SEReferences() {}
 
-    public static References of() {
+    public static SEReferences of() {
         return singleton;
     }
 

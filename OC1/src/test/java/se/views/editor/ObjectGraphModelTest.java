@@ -3,7 +3,7 @@ package se.views.editor;
 import config.ShouldRun;
 import org.junit.Before;
 import org.junit.Test;
-import se.ref.References;
+import se.ref.SEReferences;
 import x.app.Registry;
 
 import static org.junit.Assert.*;
@@ -13,7 +13,7 @@ public class ObjectGraphModelTest {
 
     Object object = new Object();
     Referencing referencing = new Referencing();
-    References references = References.of();
+    SEReferences references = SEReferences.of();
     static class Referencing {
         Object referenced;
     }
@@ -22,7 +22,7 @@ public class ObjectGraphModelTest {
     @Before
     public void setUp() {
         assumeTrue(ShouldRun.JavaSE);
-        Registry.put(References.class,references);
+        Registry.put(SEReferences.class,references);
     }
 
     @Test
