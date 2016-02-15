@@ -3,6 +3,7 @@ package se.app;
 import se.device.SEDeviceInfo;
 import se.frame.JavaSourceCodeLookup;
 import se.frame.SEJavaSourceCodeLookup;
+import se.ref.SEReferences;
 import se.views.editor.SETaggedValueEditor;
 import se.event.SESwappableListFactory;
 import se.events.Events;
@@ -31,6 +32,7 @@ import x.page.PageFactory;
 import x.page.dynamic.TaggedStringSources;
 import x.pagefactories.ItemListPageFactoryFactory;
 import x.pagefactories.XItemListPageFactoryFactory;
+import x.ref.XReferences;
 import x.services.XConsumerServiceProviders;
 import x.services.XGeocoder;
 import x.services.XLocationProvider;
@@ -60,6 +62,7 @@ final class SERegistryLoader {
     }
 
     static void loadPlatform() {
+        put(XReferences.class,      SEReferences.of());
         put(ILogManager.class,      new XLogManager());
         put(XLogWriter.class,       new XLogWriter());
         put(Events.class,           new Events());

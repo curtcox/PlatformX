@@ -6,6 +6,7 @@ import se.frame.JavaSourceCodeLookup;
 import x.app.CurrentState;
 import x.app.Registry;
 import x.page.dynamic.TaggedStringSources;
+import x.ref.XReferences;
 import x.services.XGeocoder;
 import x.uilist.XListContentInstaller;
 import x.util.StringMap;
@@ -32,6 +33,7 @@ public class SERegistryLoaderTest {
         assertNotNull(Registry.get(CurrentState.class));
         assertNotNull(Registry.get(XGeocoder.class));
         assertNotNull(Registry.get(JavaSourceCodeLookup.class));
+        assertNotNull(Registry.get(XReferences.class));
     }
 
     @Test
