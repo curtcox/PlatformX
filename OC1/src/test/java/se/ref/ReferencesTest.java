@@ -8,7 +8,11 @@ import static org.junit.Assert.*;
 public class ReferencesTest {
 
     Object object = new Object();
+    Referencing referencing = new Referencing();
     References references = References.of();
+    static class Referencing {
+        Object referenced;
+    }
 
     @Test
     public void can_create() {
@@ -23,16 +27,16 @@ public class ReferencesTest {
 
     @Test
     public void to_object_returns_empty_array_when_incoming_references_to_a_different_object() {
-        Object referencing = new Object();
-        references.noteObjectReferences(referencing,new Object());
+        referencing.referenced = new Object();
+        references.noteObject(referencing);
         Object[] to = references.to(object);
         assertEquals(0,to.length);
     }
 
     @Test
     public void to_object_returns_array_with_referencing_object_when_there_is_one() {
-        Object referencing = new Object();
-        references.noteObjectReferences(referencing,object);
+        referencing.referenced = object;
+        references.noteObject(referencing);
         Object[] to = references.to(object);
         assertEquals(1,to.length);
         assertSame(referencing,to[0]);
@@ -51,18 +55,19 @@ public class ReferencesTest {
 
     @Test
     public void from_object_returns_empty_array_when_outgoing_references_from_a_different_object() {
-        references.noteObjectReferences(new Object(),new Object());
+        referencing.referenced = new Object();
+        references.noteObject(referencing);
         Object[] from = references.from(object);
         assertEquals(0,from.length);
     }
 
     @Test
     public void from_object_returns_array_with_referencing_object_when_there_is_one() {
-        Object referenced = new Object();
-        references.noteObjectReferences(object,referenced);
-        Object[] from = references.from(object);
+        referencing.referenced = object;
+        references.noteObject(referencing);
+        Object[] from = references.from(referencing);
         assertEquals(1,from.length);
-        assertSame(referenced,from[0]);
+        assertSame(object,from[0]);
     }
 
 }

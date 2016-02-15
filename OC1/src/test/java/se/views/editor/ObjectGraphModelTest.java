@@ -6,14 +6,17 @@ import org.junit.Test;
 import se.ref.References;
 import x.app.Registry;
 
-import static mach.Mocks._;
 import static org.junit.Assert.*;
 import static org.junit.Assume.assumeTrue;
 
 public class ObjectGraphModelTest {
 
     Object object = new Object();
+    Referencing referencing = new Referencing();
     References references = References.of();
+    static class Referencing {
+        Object referenced;
+    }
     ObjectGraphModel model = new ObjectGraphModel();
 
     @Before
@@ -42,8 +45,8 @@ public class ObjectGraphModelTest {
 
     @Test
     public void getIncomingReferences_returns_Referencing_object_when_there_is_one() {
-        Object referencing = new Object();
-        references.noteObjectReferences(referencing,object);
+        referencing.referenced = object;
+        references.noteObject(referencing);
         model.set(object);
         assertEquals(1,model.getIncomingReferences().length);
         assertSame(referencing,model.getIncomingReferences()[0]);
@@ -57,11 +60,11 @@ public class ObjectGraphModelTest {
 
     @Test
     public void getOutgoingReferences_returns_Referencing_object_when_there_is_one() {
-        Object referenced = new Object();
-        references.noteObjectReferences(object,referenced);
-        model.set(object);
+        referencing.referenced = object;
+        references.noteObject(referencing);
+        model.set(referencing);
         assertEquals(1,model.getOutgoingReferences().length);
-        assertSame(referenced,model.getOutgoingReferences()[0]);
+        assertSame(object,model.getOutgoingReferences()[0]);
     }
 
 }

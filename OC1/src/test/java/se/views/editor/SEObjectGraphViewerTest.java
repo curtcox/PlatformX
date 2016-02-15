@@ -20,7 +20,11 @@ import static org.junit.Assume.assumeTrue;
 public class SEObjectGraphViewerTest {
 
     Events events = new Events();
+    Referencing referencing = new Referencing();
     Object target = new Object();
+    static class Referencing {
+        Object referenced;
+    }
     SEObjectGraphViewer viewer;
 
     @Before
@@ -94,8 +98,8 @@ public class SEObjectGraphViewerTest {
 
     @Test
     public void view_sets_the_incomingReferences_objects() {
-        Object referencing = new Object();
-        references().noteObjectReferences(referencing,target);
+        referencing.referenced = target;
+        references().noteObject(referencing);
         viewer.view(target);
 
         Object[] incoming = (Object[]) viewer.incomingReferences.get();
@@ -105,13 +109,13 @@ public class SEObjectGraphViewerTest {
 
     @Test
     public void view_sets_the_outgoingReferences_objects() {
-        Object referenced = new Object();
-        references().noteObjectReferences(target,referenced);
-        viewer.view(target);
+        referencing.referenced = target;
+        references().noteObject(referencing);
+        viewer.view(referencing);
 
         Object[] outgoing = (Object[]) viewer.outgoingReferences.get();
         assertEquals(1,outgoing.length);
-        assertSame(referenced,outgoing[0]);
+        assertSame(target,outgoing[0]);
     }
 
     void post() {
