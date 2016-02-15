@@ -1,12 +1,12 @@
 package se.ref;
 
-import java.lang.reflect.Field;
 import java.util.*;
 
 public final class References {
 
-    List referencing = new ArrayList();
-    private static References singleton = new References();
+    final List referencing = new ArrayList();
+    final ReferenceIntrospector referenceIntrospector = new ReferenceIntrospector();
+    private static final References singleton = new References();
 
     /** Use the factory */
     private References() {}
@@ -34,15 +34,6 @@ public final class References {
     }
 
     List referencesFrom(Object object) {
-        List references = new ArrayList();
-        for (Field field :object.getClass().getDeclaredFields()) {
-            try {
-                field.setAccessible(true);
-                references.add(field.get(object));
-            } catch (IllegalAccessException e) {
-
-            }
-        }
-        return references;
+        return referenceIntrospector.referencesFrom(object);
     }
 }
